@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="fr-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PC | ForgePC Mauricie</title>
+<style>
+:root{--orange:#ff6500;--bg:#08090a;--panel:#101214;--muted:#aeb4b9;--max:1180px}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:#fff;font-family:Arial,Helvetica,sans-serif}
+body{min-height:100vh}
+.container{width:min(calc(100% - 40px),var(--max));margin:auto}
+header{background:#08090a;border-bottom:1px solid #292d31;position:relative;z-index:20}
+.nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{width:175px;height:62px;object-fit:contain}
+nav{display:flex;align-items:center;gap:28px}
+nav a{color:#fff;text-decoration:none;font-weight:900;text-transform:uppercase;font-size:.9rem}
+nav a:hover{color:var(--orange)}
+nav .btn{border:1px solid var(--orange);border-radius:6px;padding:13px 16px}
+.menu{display:none;background:#08090a;color:#fff;border:1px solid #555;border-radius:6px;width:46px;height:42px;font-size:24px}
+.page{padding:58px 0 85px;min-height:calc(100vh - 78px);background:radial-gradient(circle at 78% 15%,rgba(255,101,0,.10),transparent 30%),linear-gradient(135deg,#070809,#101315 55%,#070809)}
+.detail-wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:34px;align-items:start}
+.gallery{background:linear-gradient(145deg,#15181b,#0b0d0f);border:1px solid #383d42;border-radius:9px;padding:10px}
+.main-photo{display:block;width:100%;aspect-ratio:4/3;object-fit:contain;background:#08090a;border-radius:7px;cursor:zoom-in}
+.thumbs{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:8px}
+.thumb{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border:1px solid #343a3f;border-radius:6px;cursor:pointer;background:#08090a}
+.info .status{display:inline-block;border:1px solid var(--orange);color:var(--orange);padding:7px 10px;border-radius:5px;font-size:.75rem;font-weight:900;text-transform:uppercase}
+.kicker{color:var(--orange);font-weight:900;letter-spacing:.12em;text-transform:uppercase;font-size:.78rem;margin-top:15px}
+.info h1{font-size:clamp(2.4rem,5vw,4.2rem);line-height:.95;margin:8px 0 15px;letter-spacing:-.04em}
+.intro{color:var(--muted);font-size:1rem;line-height:1.55}
+.box{margin-top:22px;border:1px solid #383d42;border-radius:8px;background:linear-gradient(145deg,#15181b,#0b0d0f);padding:20px}
+.box h2{font-size:1.08rem;text-transform:uppercase;margin:0 0 13px}
+.specs{list-style:none;padding:0;margin:0;display:grid;gap:9px}
+.specs strong{color:#fff}
+.price-box{border-color:var(--orange)}
+.price{font-size:2.15rem;font-weight:900;color:#fff}
+.pc-navigation{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-top:28px}
+.back,.rdv-button{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:12px 18px;border-radius:6px;font-weight:900;text-transform:uppercase;text-decoration:none}
+.back{color:#fff;border:1px solid #555;background:#111315}
+.back:hover{border-color:var(--orange);color:var(--orange)}
+.rdv-button{color:#08090a;background:var(--orange);border:1px solid var(--orange)}
+.rdv-button:hover{filter:brightness(1.08)}
+.error{padding:30px;border:1px solid #383d42;border-radius:8px;background:#101214}
+.lightbox{display:none;position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.92);align-items:center;justify-content:center;padding:25px}
+.lightbox.open{display:flex}
+.lightbox img{max-width:95vw;max-height:90vh;object-fit:contain}
+.close{position:fixed;right:18px;top:15px;border:1px solid #777;background:#111;color:#fff;border-radius:6px;padding:8px 12px;font-size:1.1rem}
+footer{border-top:1px solid #24282c;padding:22px 0;text-align:center;color:#9ea4a9;font-size:.84rem}
+footer strong{color:var(--orange)}
+@media(max-width:900px){
+ .nav{min-height:70px;position:relative}
+ .brand{width:170px;height:58px}
+ nav{display:none;position:absolute;left:0;right:0;top:70px;background:#08090a;border-bottom:1px solid #30353a;flex-direction:column;gap:0;padding:10px 20px}
+ nav.open{display:flex}
+ nav a{width:100%;padding:13px 0}
+ .menu{display:block}
+ .container{width:min(calc(100% - 32px),var(--max))}
+ .detail-wrap{grid-template-columns:1fr}
+ .page{padding:45px 0 65px}
+}
+@media(max-width:560px){
+ .container{width:min(calc(100% - 28px),var(--max))}
+ .thumbs{grid-template-columns:repeat(2,1fr)}
+ .pc-navigation{flex-direction:column;align-items:stretch}
+ .pc-navigation a{width:100%;text-align:center}
+}
+</style>
+</head>
+<body>
+<header>
+ <div class="container nav">
+  <a href="index.html" aria-label="ForgePC Mauricie"><img class="brand" src="Assets/logo.png" alt="ForgePC Mauricie"></a>
+  <button class="menu" aria-label="Ouvrir le menu" onclick="document.querySelector('nav').classList.toggle('open')">☰</button>
+  <nav>
+   <a href="index.html">Accueil</a>
+   <a href="inventaire.html">Inventaire</a>
+   <a class="btn" href="rendez-vous.html">Demander un rendez-vous</a>
+   <a href="index.html#services">Services</a>
+   <a href="index.html#service-domicile">À domicile</a>
+   <a href="index.html#contact">Contact</a>
+  </nav>
+ </div>
+</header>
+
+<main class="page">
+ <div class="container" id="app"><div class="error">Chargement de la fiche…</div></div>
+</main>
+
+<footer>© 2026 ForgePC Mauricie · Votre technologie, <strong>notre expertise.</strong></footer>
+
+<div class="lightbox" id="lightbox">
+ <button class="close" onclick="closeLightbox()">✕</button>
+ <img id="lightboxImg" alt="Photo du PC">
+</div>
+
+<script src="inventaire.js"></script>
+<script>
+document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>document.querySelector('nav').classList.remove('open')));
+const rawId=new URLSearchParams(location.search).get('id')||'001';
+const wantedId=String(rawId).trim().replace(/^pc[- ]?/i,'').replace(/^0+(?=\d)/,'')||'001';
+const app=document.getElementById('app');
+
+function esc(s){
+ return String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+}
+function drivePhotoUrl(value){
+ const s=String(value||"").trim();
+ if(!s)return "";
+ if(s.startsWith("data:")||s.startsWith("blob:"))return s;
+ if(!s.includes("drive.google.com"))return s;
+ let m=s.match(/drive\.google\.com\/file\/d\/([^/?#]+)/i);
+ if(!m)m=s.match(/[?&]id=([^&#]+)/i);
+ if(!m)m=s.match(/drive\.google\.com\/open\?id=([^&#]+)/i);
+ if(!m)return s;
+ return "https://drive.google.com/thumbnail?id="+encodeURIComponent(m[1])+"&sz=w1600";
+}
+function photoList(pc){
+ return [pc.photo1,pc.photo2,pc.photo3,pc.photo4,pc.photo5,pc.photo6]
+   .map(drivePhotoUrl).filter(Boolean);
+}
+function render(pc){
+ document.title=`${pc.nom||'PC'} | ForgePC Mauricie`;
+ const photos=photoList(pc);
+ const main=photos[0]||'';
+ app.innerHTML=`
+ <div class="detail-wrap">
+  <div class="gallery">
+   ${main?`<img class="main-photo" id="mainPhoto" src="${esc(main)}" alt="${esc(pc.nom||'PC')}" onclick="openLightbox(this.src)" onerror="if(this.dataset.fallback!=='1'){this.dataset.fallback='1';const m=this.src.match(/[?&]id=([^&]+)/);if(m)this.src='https://drive.google.com/uc?export=view&id='+m[1];else this.style.display='none';}else{this.style.display='none'}">`:''}
+   <div class="thumbs">
+    ${photos.map((p,i)=>`<img class="thumb" src="${esc(p)}" alt="${esc(pc.nom||'PC')} — photo ${i+1}" onclick="document.getElementById('mainPhoto').src=this.src">`).join('')}
+   </div>
+  </div>
+  <div class="info">
+   <div class="status">${esc(pc.statut||'Disponible')}</div>
+   <div class="kicker">PC remis à neuf · ${esc(pc.id||wantedId)}</div>
+   <h1>${esc(pc.nom||'PC remis à neuf')}</h1>
+   <p class="intro">${esc(pc.description||'')}</p>
+   <div class="box"><h2>Caractéristiques</h2><ul class="specs">
+    <li><strong>Processeur :</strong> ${esc(pc.cpu||'—')}</li>
+    <li><strong>Carte graphique :</strong> ${esc(pc.gpu||'—')}</li>
+    <li><strong>Mémoire :</strong> ${esc(pc.ram||'—')}</li>
+    <li><strong>Stockage :</strong> ${esc(pc.stockage||'—')}</li>
+    <li><strong>Format :</strong> ${esc(pc.format||'—')}</li>
+    <li><strong>Système :</strong> ${esc(pc.os||'—')}</li>
+   </ul></div>
+   <div class="box"><h2>État</h2><p>${esc(pc.etat||'Testé et vérifié.')}</p></div>
+   ${pc.garantie?`<div class="box"><h2>Garantie</h2><p>${esc(pc.garantie)}</p></div>`:''}
+   <div class="box price-box"><h2>Prix</h2><div class="price">${esc(typeof money==='function'?money(pc.prix):(pc.prix||''))}</div></div>
+   <div class="pc-navigation">
+    <a class="back" href="inventaire.html">← Retour à l’inventaire</a>
+    <a class="rdv-button" href="rendez-vous.html">Prendre rendez-vous →</a>
+   </div>
+  </div>
+ </div>`;
+}
+
+function openLightbox(src){
+ if(!src)return;
+ document.getElementById('lightboxImg').src=src;
+ document.getElementById('lightbox').classList.add('open');
+ document.body.style.overflow='hidden';
+}
+function closeLightbox(){
+ document.getElementById('lightbox').classList.remove('open');
+ document.body.style.overflow='';
+}
+document.getElementById('lightbox').addEventListener('click',e=>{if(e.target.id==='lightbox')closeLightbox()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLightbox()});
+
+(async()=>{
+ try{
+  const data=await getInventory();
+  const pc=data.find(x=>{
+   const id=String(x.id??'').trim().replace(/^pc[- ]?/i,'').replace(/^0+(?=\d)/,'');
+   return id===wantedId;
+  });
+  if(!pc) throw new Error('PC introuvable');
+  render(pc);
+ }catch(e){
+  app.innerHTML='<div class="error"><h1>PC introuvable</h1><p>Impossible de charger cette fiche depuis l’inventaire.</p><a class="back" href="inventaire.html">← Retour à l’inventaire</a></div>';
+  console.error(e);
+ }
+})();
+</script>
+</body>
+</html>
