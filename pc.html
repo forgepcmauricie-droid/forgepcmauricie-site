@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="fr-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PC | ForgePC Mauricie</title>
+<style>
+:root{--orange:#ff6500;--bg:#08090a;--panel:#101214;--border:#30353a;--text:#f5f5f5;--muted:#b8bec3;--max:1180px}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif}
+a{color:inherit}
+.container{width:min(calc(100% - 32px),var(--max));margin:auto}
+header{border-bottom:1px solid #24282c;background:#08090a}
+.nav{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand-link{display:flex;align-items:center;text-decoration:none;min-width:175px;height:62px}.brand{width:175px;height:62px;object-fit:contain;display:block}.brand-fallback{display:none;font-weight:900;letter-spacing:1px;font-size:20px}.brand-fallback small{display:block;font-size:9px;letter-spacing:3px;color:var(--orange)}
+nav{display:flex;align-items:center;gap:30px}
+nav a{text-decoration:none;text-transform:uppercase;font-weight:900;font-size:.9rem}
+nav a:hover{color:var(--orange)}
+nav .btn{border:1px solid var(--orange);padding:13px 18px;border-radius:6px}
+.menu{display:none}
+.page{padding:58px 0 75px}
+.detail-wrap{display:grid;grid-template-columns:1.08fr .92fr;gap:34px}
+.gallery{background:linear-gradient(145deg,#15181b,#0b0d0f);border:1px solid var(--border);border-radius:8px;padding:14px}
+.main-photo{width:100%;height:520px;display:block;object-fit:contain;background:#0b0d0f;border-radius:6px}
+.thumbs{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:10px}
+.thumb{width:100%;height:100px;object-fit:cover;background:#0b0d0f;border:1px solid var(--border);border-radius:5px;cursor:pointer}
+.no-photo{min-height:520px;display:flex;align-items:center;justify-content:center;color:#9ea4a9;border:1px solid var(--border);border-radius:6px}
+.kicker{color:var(--orange);font-size:.86rem;font-weight:900;text-transform:uppercase;letter-spacing:.15em}
+h1{font-size:clamp(2.5rem,6vw,4.5rem);line-height:.95;margin:12px 0 18px;letter-spacing:-.04em}
+.intro{color:var(--muted);font-size:1.05rem;line-height:1.55}
+.box{margin-top:22px;border:1px solid var(--border);border-radius:8px;background:linear-gradient(145deg,#15181b,#0b0d0f);padding:20px}
+.box h2{text-transform:uppercase;font-size:1.05rem;margin:0 0 13px}
+.specs{list-style:none;padding:0;margin:0;display:grid;gap:9px}
+.specs li strong{color:#fff}
+.price-box{border-color:var(--orange)}
+.price{font-size:2.15rem;font-weight:900}
+.status{display:inline-block;color:var(--orange);border:1px solid var(--orange);border-radius:5px;padding:9px 12px;font-size:.82rem;font-weight:900;text-transform:uppercase}
+.pc-navigation{display:flex;justify-content:space-between;gap:16px;margin-top:28px}
+.pc-navigation a{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:12px 18px;border-radius:6px;font-weight:900;text-transform:uppercase;text-decoration:none}
+.back{border:1px solid #555;background:#111315}
+.rdv{background:var(--orange);color:#08090a;border:1px solid var(--orange)}
+.error{padding:30px;border:1px solid var(--border);border-radius:8px;background:var(--panel)}
+.error h1{font-size:2.4rem}
+footer{border-top:1px solid #24282c;padding:22px 0;text-align:center;color:#9ea4a9;font-size:.84rem}
+footer strong{color:var(--orange)}
+.lightbox{display:none;position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.94);align-items:center;justify-content:center;padding:25px}
+.lightbox.open{display:flex}
+.lightbox img{max-width:95vw;max-height:90vh;object-fit:contain}
+.close{position:fixed;right:18px;top:15px;background:#111;color:#fff;border:1px solid #777;border-radius:6px;padding:8px 12px;font-size:1.1rem}
+@media(max-width:900px){
+  nav{display:none;position:absolute;left:0;right:0;top:82px;background:#08090a;border-bottom:1px solid var(--border);flex-direction:column;gap:0;padding:10px 20px;z-index:20}
+  nav.open{display:flex}
+  nav a{width:100%;padding:13px 0}
+  nav .btn{border:0;padding:13px 0}
+  .menu{display:block;background:#111;color:#fff;border:1px solid #555;border-radius:6px;padding:8px 11px}
+  .detail-wrap{grid-template-columns:1fr}
+}
+@media(max-width:560px){
+  .container{width:calc(100% - 28px)}
+  .brand{width:160px;height:58px}
+  .main-photo,.no-photo{height:360px;min-height:360px}
+  .thumbs{grid-template-columns:repeat(2,1fr)}
+  .pc-navigation{flex-direction:column}
+  .pc-navigation a{width:100%;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a href="index.html" aria-label="ForgePC Mauricie" class="brand-link">
+      <img class="brand" id="forgepcLogo" src="Assets/logo.png" alt="ForgePC Mauricie"
+           onerror="tryNextLogo(this)">
+      <span class="brand-fallback">FORGEPC <small>MAURICIE</small></span>
+    </a>
+    <button class="menu" aria-label="Ouvrir le menu" onclick="document.querySelector('nav').classList.toggle('open')">☰</button>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="inventaire.html">Inventaire</a>
+      <a class="btn" href="rendez-vous.html">Demander un rendez-vous</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#service-domicile">À domicile</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="page">
+  <div class="container" id="app">
+    <div class="error">Chargement de la fiche…</div>
+  </div>
+</main>
+
+<footer>© 2026 ForgePC Mauricie · Votre technologie, <strong>notre expertise.</strong></footer>
+
+<div class="lightbox" id="lightbox" onclick="if(event.target===this)closeLightbox()">
+  <button class="close" onclick="closeLightbox()">✕</button>
+  <img id="lightboxImg" alt="Photo du PC">
+</div>
+
+<script>
+const SHEET_ID="15llqGhrLL9I6SFxyFrxfbNY2ZuBXDswok_BwxPR7JqU";
+const SHEET_NAME="Inventaire";
+const SHEET_CSV_URL=
+  "https://docs.google.com/spreadsheets/d/"+SHEET_ID+
+  "/gviz/tq?tqx=out:csv&sheet="+encodeURIComponent(SHEET_NAME);
+
+const app=document.getElementById("app");
+const params=new URLSearchParams(location.search);
+const wantedId=cleanId(params.get("pcid")||params.get("id")||"001");
+
+function cleanId(value){
+  let s=String(value??"").trim().replace(/^pc[-_ ]?/i,"");
+  if(/^\d+$/.test(s)) return String(parseInt(s,10));
+  return s.toLowerCase();
+}
+
+function headerKey(value){
+  return String(value??"")
+    .replace(/^\ufeff/,"")
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g,"")
+    .replace(/[^a-z0-9]/g,"");
+}
+
+function esc(value){
+  return String(value??"").replace(/[&<>"]/g,c=>({
+    "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"
+  }[c]));
+}
+
+function get(row,...names){
+  for(const name of names){
+    const key=headerKey(name);
+    if(row[key]!==undefined && String(row[key]).trim()!=="")
+      return String(row[key]).trim();
+  }
+  return "";
+}
+
+function normalize(row){
+  const p={
+    id:cleanId(get(row,"id","id pc","photo 2 id pc","photo2 id pc")),
+    nom:get(row,"nom","nom du pc"),
+    prix:get(row,"prix","prix de vente (cad)","prix de vente"),
+    statut:get(row,"statut"),
+    cpu:get(row,"cpu","processeur"),
+    gpu:get(row,"gpu","carte graphique"),
+    ram:get(row,"ram","mémoire","memoire"),
+    stockage:get(row,"stockage"),
+    format:get(row,"format"),
+    os:get(row,"os","windows","système","systeme"),
+    description:get(row,"description"),
+    etat:get(row,"etat","état"),
+    garantie:get(row,"garantie")
+  };
+
+  for(let i=1;i<=6;i++){
+    p["photo"+i]=normalizeDriveUrl(
+      get(row,"photo"+i,"photo "+i)
+    );
+  }
+  return p;
+}
+
+function driveId(value){
+  const s=String(value||"");
+  let m=s.match(/drive\.google\.com\/file\/d\/([^/?#]+)/i);
+  if(m) return m[1];
+  m=s.match(/[?&]id=([^&#]+)/i);
+  if(m) return m[1];
+  m=s.match(/drive\.google\.com\/open\?id=([^&#]+)/i);
+  return m?m[1]:"";
+}
+
+function normalizeDriveUrl(value){
+  const s=String(value||"").trim();
+  if(!s) return "";
+  if(s.startsWith("data:")||s.startsWith("blob:")) return s;
+  const id=driveId(s);
+  return id
+    ? "https://drive.google.com/thumbnail?id="+encodeURIComponent(id)+"&sz=w1600"
+    : s;
+}
+
+function parseCSV(text){
+  const rows=[];
+  let row=[],cell="",quoted=false;
+  for(let i=0;i<text.length;i++){
+    const c=text[i],n=text[i+1];
+    if(c==='"' && quoted && n==='"'){cell+='"';i++;continue}
+    if(c==='"'){quoted=!quoted;continue}
+    if(c===','&&!quoted){row.push(cell.trim());cell="";continue}
+    if((c==='\n'||c==='\r')&&!quoted){
+      if(c==='\r'&&n==='\n')i++;
+      row.push(cell.trim());cell="";
+      if(row.some(v=>v!==""))rows.push(row);
+      row=[];
+      continue;
+    }
+    cell+=c;
+  }
+  if(cell!==""||row.length){row.push(cell.trim());rows.push(row)}
+  if(!rows.length)return [];
+  const headers=rows[0].map(headerKey);
+  return rows.slice(1)
+    .map(r=>Object.fromEntries(headers.map((h,i)=>[h,r[i]??""])))
+    .filter(r=>Object.values(r).some(v=>String(v).trim()!==""))
+    .map(normalize);
+}
+
+function loadCSV(){
+  return new Promise((resolve,reject)=>{
+    const controller=new AbortController();
+    const timer=setTimeout(()=>controller.abort(),8000);
+    fetch(SHEET_CSV_URL+"&_="+Date.now(),{
+      cache:"no-store",
+      signal:controller.signal
+    }).then(r=>{
+      clearTimeout(timer);
+      if(!r.ok)throw new Error("CSV Google Sheets inaccessible");
+      return r.text();
+    }).then(text=>{
+      const rows=parseCSV(text);
+      if(rows.length)resolve(rows);
+      else reject(new Error("Google Sheets a retourné 0 ligne"));
+    }).catch(e=>{
+      clearTimeout(timer);
+      reject(e);
+    });
+  });
+}
+
+function loadJSONP(){
+  return new Promise((resolve,reject)=>{
+    const callback="forgepc_"+Date.now()+"_"+Math.random().toString(36).slice(2);
+    const script=document.createElement("script");
+    let done=false;
+
+    function cleanup(){
+      if(done)return;
+      done=true;
+      clearTimeout(timer);
+      delete window[callback];
+      script.remove();
+    }
+
+    const timer=setTimeout(()=>{
+      cleanup();
+      reject(new Error("Google Sheets JSONP timeout"));
+    },8000);
+
+    window[callback]=data=>{
+      cleanup();
+      resolve(data);
+    };
+
+    script.onerror=()=>{
+      cleanup();
+      reject(new Error("Google Sheets JSONP error"));
+    };
+
+    script.src=
+      "https://docs.google.com/spreadsheets/d/"+SHEET_ID+
+      "/gviz/tq?sheet="+encodeURIComponent(SHEET_NAME)+
+      "&tqx="+encodeURIComponent("responseHandler:"+callback);
+
+    document.head.appendChild(script);
+  });
+}
+
+function parseGViz(data){
+  const table=data&&data.table;
+  if(!table||!Array.isArray(table.cols)||!Array.isArray(table.rows))
+    return [];
+
+  const headers=table.cols.map(c=>headerKey(c.label||c.id||""));
+
+  return table.rows.map(r=>{
+    const obj={};
+    headers.forEach((h,i)=>{
+      const c=(r.c||[])[i];
+      obj[h]=(c&&c.v!==undefined&&c.v!==null)?String(c.v):"";
+    });
+    return normalize(obj);
+  }).filter(p=>p.id||p.nom);
+}
+
+async function loadInventory(){
+  try{
+    return await loadCSV();
+  }catch(e){
+    console.warn("CSV échoué, essai JSONP",e);
+  }
+
+  try{
+    const rows=parseGViz(await loadJSONP());
+    if(rows.length)return rows;
+    throw new Error("JSONP Google Sheets a retourné 0 PC");
+  }catch(e){
+    console.warn("JSONP échoué",e);
+    throw e;
+  }
+}
+
+function photoList(pc){
+  return [
+    pc.photo1,pc.photo2,pc.photo3,
+    pc.photo4,pc.photo5,pc.photo6
+  ].filter(Boolean);
+}
+
+function render(pc){
+  const photos=photoList(pc);
+
+  document.title=(pc.nom||"PC")+" | ForgePC Mauricie";
+
+  app.innerHTML=`
+    <div class="detail-wrap">
+      <div class="gallery">
+        ${
+          photos[0]
+          ? `<img id="mainPhoto" class="main-photo"
+                src="${esc(photos[0])}"
+                alt="${esc(pc.nom||"PC")}"
+                onclick="openLightbox(this.src)">`
+          : `<div class="no-photo">Aucune photo disponible.</div>`
+        }
+        ${
+          photos.length>1
+          ? `<div class="thumbs">
+              ${photos.map((photo,i)=>`
+                <img class="thumb"
+                     src="${esc(photo)}"
+                     alt="Photo ${i+1}"
+                     onclick="showPhoto('${esc(photo)}')"
+                     onerror="this.style.display='none'">
+              `).join("")}
+            </div>`
+          : ""
+        }
+      </div>
+
+      <div>
+        ${pc.statut?`<div class="status">${esc(pc.statut)}</div>`:""}
+        <div class="kicker" style="margin-top:18px">PC remis à neuf · ${esc(pc.id)}</div>
+        <h1>${esc(pc.nom||"Ordinateur")}</h1>
+        ${pc.description?`<p class="intro">${esc(pc.description)}</p>`:""}
+
+        <div class="box">
+          <h2>Caractéristiques</h2>
+          <ul class="specs">
+            ${pc.cpu?`<li><strong>Processeur :</strong> ${esc(pc.cpu)}</li>`:""}
+            ${pc.gpu?`<li><strong>Carte graphique :</strong> ${esc(pc.gpu)}</li>`:""}
+            ${pc.ram?`<li><strong>Mémoire :</strong> ${esc(pc.ram)}</li>`:""}
+            ${pc.stockage?`<li><strong>Stockage :</strong> ${esc(pc.stockage)}</li>`:""}
+            ${pc.format?`<li><strong>Format :</strong> ${esc(pc.format)}</li>`:""}
+            ${pc.os?`<li><strong>Système :</strong> ${esc(pc.os)}</li>`:""}
+          </ul>
+        </div>
+
+        ${pc.etat?`<div class="box"><h2>État</h2><p>${esc(pc.etat)}</p></div>`:""}
+        ${pc.garantie?`<div class="box"><h2>Garantie</h2><p>${esc(pc.garantie)}</p></div>`:""}
+
+        <div class="box price-box">
+          <h2>Prix</h2>
+          <div class="price">${esc(pc.prix||"Prix à venir")}</div>
+        </div>
+
+        <div class="pc-navigation">
+          <a class="back" href="inventaire.html">← Retour à l'inventaire</a>
+          <a class="rdv" href="rendez-vous.html">Prendre rendez-vous →</a>
+        </div>
+      </div>
+    </div>
+  `;
+
+  const main=document.getElementById("mainPhoto");
+  if(main){
+    main.onerror=function(){
+      const id=driveId(this.src);
+      if(id && !this.src.includes("/uc?export=view")){
+        this.src="https://drive.google.com/uc?export=view&id="+encodeURIComponent(id);
+      }else{
+        this.outerHTML='<div class="no-photo">Photo indisponible.</div>';
+      }
+    };
+  }
+}
+
+function showPhoto(src){
+  if(!src)return;
+  const main=document.getElementById("mainPhoto");
+  if(main)main.src=src;
+}
+
+function openLightbox(src){
+  if(!src)return;
+  document.getElementById("lightboxImg").src=src;
+  document.getElementById("lightbox").classList.add("open");
+}
+
+function closeLightbox(){
+  document.getElementById("lightbox").classList.remove("open");
+}
+
+(async()=>{
+  try{
+    const inventory=await loadInventory();
+    const pc=inventory.find(x=>cleanId(x.id)===wantedId);
+
+    if(!pc){
+      throw new Error(
+        "PC "+wantedId+" introuvable. Vérifie la colonne « Photo 2 ID PC »."
+      );
+    }
+
+    render(pc);
+  }catch(e){
+    console.error(e);
+    app.innerHTML=`
+      <div class="error">
+        <h1>Impossible de charger la fiche</h1>
+        <p>Le PC <strong>${esc(wantedId)}</strong> n'a pas pu être chargé.</p>
+        <p><strong>Erreur :</strong> ${esc(e.message||e)}</p>
+        <a class="back" href="inventaire.html">← Retour à l'inventaire</a>
+      </div>
+    `;
+  }
+})();
+
+document.querySelectorAll("nav a").forEach(a=>{
+  a.addEventListener("click",()=>{
+    document.querySelector("nav").classList.remove("open");
+  });
+});
+function tryNextLogo(img){
+  const candidates = [
+    "Assets/logo.png",
+    "Assets/Logo.png",
+    "assets/logo.png",
+    "assets/Logo.png",
+    "logo.png",
+    "Logo.png"
+  ];
+  const next = candidates.shift();
+  const current = img.dataset.logoTry || "";
+  const remaining = candidates.filter(x => x !== current);
+  const candidate = remaining[0];
+  if(candidate && candidate !== current){
+    img.dataset.logoTry = candidate;
+    img.onerror = function(){ tryNextLogo(this); };
+    img.src = candidate;
+    return;
+  }
+  img.style.display = "none";
+  const fallback = img.parentElement.querySelector(".brand-fallback");
+  if(fallback) fallback.style.display = "block";
+}
+
+</script>
+</body>
+</html>
