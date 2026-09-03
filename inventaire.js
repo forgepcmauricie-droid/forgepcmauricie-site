@@ -8,13 +8,22 @@ const SHEET_NAME = "Inventaire";
 // Le site lit directement l’onglet Inventaire de Google Sheets.
 const SHEET_CSV_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv&sheet=${encodeURIComponent(SHEET_NAME)}`;
 
+const DRIVE_PHOTOS = {
+  "001": [
+    "https://drive.google.com/uc?export=view&id=1X7gHa-J2931albRMSKmQOvmEJGTDkI8C",
+    "https://drive.google.com/uc?export=view&id=1SssNhdq7kWD4QBYVhvU9fTHrZp8XWlt9",
+    "https://drive.google.com/uc?export=view&id=1xTkuL-2kNebvspArwWCj6krRZmFhKyL3",
+    "https://drive.google.com/uc?export=view&id=1K1AjUhxDf1A-uGrfHtih9p0dj4s4HLqN",
+  ]
+};
+
 const INVENTORY_FALLBACK = [{
   id:"001", nom:"Lenovo ThinkCentre M73 Tiny", prix:"169,95 $", statut:"Bientôt disponible",
   cpu:"Intel Core i5-4570T", gpu:"Intel HD Graphics", ram:"8 Go RAM", stockage:"SSD Kingston A400 240 Go",
   format:"ThinkCentre Tiny — très compact", os:"Windows 10",
   description:"Un PC compact, fiable et économique, préparé avec soin par ForgePC Mauricie. Idéal pour la bureautique, Internet, les courriels, les vidéos et les tâches quotidiennes.",
   etat:"Testé et vérifié.", garantie:"30 jours",
-  photo1:"assets/pc-001-1.jpg",photo2:"assets/pc-001-2.jpg",photo3:"assets/pc-001-3.jpg",photo4:"assets/pc-001-4.jpg"
+  photo1:"https://drive.google.com/uc?export=view&id=1X7gHa-J2931albRMSKmQOvmEJGTDkI8C",photo2:"https://drive.google.com/uc?export=view&id=1SssNhdq7kWD4QBYVhvU9fTHrZp8XWlt9",photo3:"https://drive.google.com/uc?export=view&id=1xTkuL-2kNebvspArwWCj6krRZmFhKyL3",photo4:"https://drive.google.com/uc?export=view&id=1K1AjUhxDf1A-uGrfHtih9p0dj4s4HLqN"
 }];
 
 function parseCSV(text){
@@ -44,7 +53,11 @@ function normalize(row){
     photo4:get('photo4','photo 4'), photo5:get('photo5','photo 5'), photo6:get('photo6','photo 6')
   };
   if(out.id) out.id = out.id.replace(/^0+(?=\d)/, '');
-  for(let i=1;i<=6;i++){ if(out['photo'+i]) out['photo'+i]=driveImageUrl(out['photo'+i]); }
+  const defaults = DRIVE_PHOTOS[out.id] || [];
+  for(let i=1;i<=6;i++){
+    if(out['photo'+i]) out['photo'+i]=driveImageUrl(out['photo'+i]);
+    else if(defaults[i-1]) out['photo'+i]=defaults[i-1];
+  }
   return out;
 }
 
@@ -55,7 +68,7 @@ function driveImageUrl(value){
   let m=s.match(/drive\.google\.com\/file\/d\/([^/]+)/i);
   if(!m)m=s.match(/[?&]id=([^&]+)/i);
   if(!m)m=s.match(/drive\.google\.com\/open\?id=([^&]+)/i);
-  if(m)return `https://drive.google.com/thumbnail?id=${encodeURIComponent(m[1])}&sz=w1600`;
+  if(m)return `https://drive.google.com/uc?export=view&id=${encodeURIComponent(m[1])}`;
   return s;
 }
 
