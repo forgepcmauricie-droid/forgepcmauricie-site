@@ -197,12 +197,13 @@ function showError(msg){document.getElementById("productVisual").innerHTML='<div
 document.getElementById("salesForm").addEventListener("submit",function(e){
   e.preventDefault();
   const type=document.querySelector('input[name="type"]:checked')?.value||"Non précisé";
-  const stock=stockRaw||"Non précisé";
-  const subject="Demande de rendez-vous vente - PC-"+stock;
+  const normalizedStock=cleanId(stockRaw);
+  const stock=normalizedStock?("PC-"+normalizedStock):"Non précisé";
+  const subject="Demande de rendez-vous vente - "+stock;
   const body=[
     "Demande de rendez-vous / vente ForgePC Mauricie",
     "",
-    "Numéro de stock : PC-"+stock,
+    "Numéro de stock : "+stock,
     "Nom : "+document.getElementById("name").value.trim(),
     "Téléphone : "+document.getElementById("phone").value.trim(),
     "Courriel : "+document.getElementById("email").value.trim(),
