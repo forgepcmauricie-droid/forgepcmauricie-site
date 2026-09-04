@@ -1,7 +1,0 @@
-ForgePC Mauricie — audit de cohérence final
-
-Pages incluses : index, inventaire, pc, services, a-propos, contact, rdv-service-domicile, mise-a-niveau, forgepc_diagnostic, rdv-vente.
-
-Stock : format canonique PC-### (ou numéro complet si > 3 chiffres), identique entre les vues.
-Mobile : menu hamburger fonctionnel et navigation repliable.
-À propos : photo père/fille sans texte intégré.
