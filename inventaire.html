@@ -6,6 +6,7 @@
 <meta name="description" content="Inventaire des PC remis à neuf — ForgePC Mauricie">
 <title>Inventaire | ForgePC Mauricie</title>
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&display=swap');
 :root{
   --bg:#08090a;--panel:#111315;--panel2:#15181b;--line:#292d31;
   --orange:#ff6500;--text:#f4f5f6;--muted:#b9bec3;--max:1180px;
@@ -81,6 +82,12 @@ footer strong{color:var(--orange)}
   .inventory-list{grid-template-columns:1fr;gap:18px}
   .product-image{aspect-ratio:16/10}
 }
+
+/* Typographie de la maquette */
+h1,h2,h3,.navlinks,.links,.nav,.contact,.btn,.cta,.benefit,.section-title,.card a,.link,.eyebrow,.kicker{
+  font-family:'Barlow Condensed',Arial,Helvetica,sans-serif;
+}
+
 </style>
 </head>
 <body>
@@ -89,7 +96,7 @@ footer strong{color:var(--orange)}
   <div class="container nav">
     <a href="index.html" aria-label="ForgePC Mauricie">
       <img class="brand" src="Assets/logo.png" alt="ForgePC Mauricie"
-           onerror="if(this.dataset.try2!=='1'){this.dataset.try2='1';this.src='assets/logo.png'}else if(this.dataset.try3!=='1'){this.dataset.try3='1';this.src='logo.png'}">
+           onerror="if(this.dataset.try2!=='1'){this.dataset.try2='1';this.src='Assets/logo.png'}else if(this.dataset.try3!=='1'){this.dataset.try3='1';this.src='Assets/logo.png'}">
     </a>
     <button class="menu" aria-label="Ouvrir le menu"
             onclick="document.querySelector('nav').classList.toggle('open')">☰</button>

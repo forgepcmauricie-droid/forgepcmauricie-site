@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>PC | ForgePC Mauricie</title>
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&display=swap');
 :root{--orange:#ff6500;--bg:#08090a;--panel:#101214;--border:#30353a;--text:#f5f5f5;--muted:#b8bec3;--max:1180px}
 *{box-sizing:border-box}
 html,body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif}
@@ -63,6 +64,12 @@ footer strong{color:var(--orange)}
   .pc-navigation{flex-direction:column}
   .pc-navigation a{width:100%;text-align:center}
 }
+
+/* Typographie de la maquette */
+h1,h2,h3,.navlinks,.links,.nav,.contact,.btn,.cta,.benefit,.section-title,.card a,.link,.eyebrow,.kicker{
+  font-family:'Barlow Condensed',Arial,Helvetica,sans-serif;
+}
+
 </style>
 </head>
 <body>
@@ -442,7 +449,7 @@ function tryNextLogo(img){
     "Assets/Logo.png",
     "assets/logo.png",
     "assets/Logo.png",
-    "logo.png",
+    "Assets/logo.png",
     "Logo.png"
   ];
   const next = candidates.shift();

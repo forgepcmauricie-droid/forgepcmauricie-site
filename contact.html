@@ -6,13 +6,14 @@
 <meta name="description" content="Contactez ForgePC Mauricie pour une question générale ou une demande d'information.">
 <title>Contactez-nous | ForgePC Mauricie</title>
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&display=swap');
 :root{--orange:#ff4b00;--orange2:#ff6a00;--bg:#050b0e;--panel:#091419;--panel2:#101f26;--line:#26363d;--white:#f5f5f5;--muted:#b9c3c8}
 *{box-sizing:border-box} body{margin:0;background:#020609;color:var(--white);font-family:Arial,Helvetica,sans-serif}
 a{color:inherit;text-decoration:none}.wrap{max-width:1180px;margin:auto}
 header{height:76px;background:#03090c;border-bottom:1px solid #263238;display:flex;align-items:center;padding:0 28px;gap:34px}
 .logo{width:150px;max-height:64px;object-fit:contain}.nav{display:flex;gap:28px;align-items:center;margin-left:auto;font-weight:700;font-size:13px}.nav a{padding:28px 0}.nav a.active{color:var(--orange);border-bottom:3px solid var(--orange)}
 .cta{background:linear-gradient(90deg,var(--orange),var(--orange2));padding:15px 24px;border-radius:5px;font-weight:800;font-size:13px}
-.hero{padding:42px 52px 32px;background:linear-gradient(90deg,rgba(0,0,0,.96),rgba(0,0,0,.72)),url("forgepc_logo_officiel.png") center/cover no-repeat;border-bottom:1px solid #263238}
+.hero{padding:42px 52px 32px;background:linear-gradient(90deg,rgba(0,0,0,.96),rgba(0,0,0,.72)),url('Assets/index-hero.jpg') right center/auto 100% no-repeat;border-bottom:1px solid #263238}
 .kicker{color:var(--orange);font-weight:800;letter-spacing:1px}.hero h1{font-size:42px;line-height:1.05;margin:8px 0 12px;max-width:650px}.hero h1 span{color:var(--orange)}.hero p{font-size:17px;line-height:1.55;max-width:650px;color:#e4e8ea}
 .points{display:flex;gap:42px;margin-top:25px;flex-wrap:wrap}.point{display:flex;gap:10px;align-items:center;font-weight:700}.ico{color:var(--orange);font-size:25px}
 .content{display:grid;grid-template-columns:360px 1fr;gap:18px;padding:22px}
@@ -29,11 +30,17 @@ input,select,textarea{width:100%;border:1px solid #42555e;background:var(--panel
  .content{display:block;padding:14px}.card{padding:20px;margin-bottom:14px}.row{grid-template-columns:1fr;gap:0}.contact-value{font-size:18px}.actions{flex-wrap:wrap}.actions .btn{flex:1;text-align:center}
  .send{display:block}.send .cta{display:block;text-align:center;margin-top:15px}.footer{padding:20px 16px;display:block;text-align:center}.footer .logo{margin-bottom:12px}
 }
+
+/* Typographie de la maquette */
+h1,h2,h3,.navlinks,.links,.nav,.contact,.btn,.cta,.benefit,.section-title,.card a,.link,.eyebrow,.kicker{
+  font-family:'Barlow Condensed',Arial,Helvetica,sans-serif;
+}
+
 </style>
 </head>
 <body>
 <header class="wrap">
-  <img class="logo" src="forgepc_logo_officiel.png" alt="ForgePC Mauricie">
+  <img class="logo" src="Assets/logo.png" alt="ForgePC Mauricie">
   <nav class="nav">
     <a href="index.html">ACCUEIL</a>
     <a href="services.html">SERVICES</a>
@@ -121,7 +128,7 @@ input,select,textarea{width:100%;border:1px solid #42555e;background:var(--panel
 </main>
 
 <footer class="footer wrap">
-  <div><img class="logo" src="forgepc_logo_officiel.png" alt="ForgePC Mauricie"></div>
+  <div><img class="logo" src="Assets/logo.png" alt="ForgePC Mauricie"></div>
   <div>📍 Shawinigan et toute la Mauricie</div>
   <div class="tag">Votre technologie, notre expertise.</div>
   <div>© 2026 ForgePC Mauricie</div>
