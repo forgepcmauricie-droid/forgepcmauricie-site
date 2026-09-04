@@ -116,6 +116,10 @@ const SHEET_CSV_URL=
 const app=document.getElementById("app");
 const params=new URLSearchParams(location.search);
 const wantedId=cleanId(params.get("pcid")||params.get("id")||"001");
+const salesRdv=document.getElementById("salesRdv");
+if(salesRdv){
+  salesRdv.href="rdv-vente.html?stock="+encodeURIComponent(wantedId);
+}
 
 function cleanId(value){
   let s=String(value??"").trim().replace(/^pc[-_ ]?/i,"");
@@ -378,7 +382,7 @@ function render(pc){
 
         <div class="pc-navigation">
           <a class="back" href="inventaire.html">← Retour à l'inventaire</a>
-          <a class="rdv" href="rdv-service-domicile.html">Prendre rendez-vous →</a>
+          <a class="rdv" id="salesRdv" href="rdv-vente.html">Prendre rendez-vous →</a>
         </div>
       </div>
     </div>
