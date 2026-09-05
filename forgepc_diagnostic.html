@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ForgePC Mauricie — Demande de diagnostic</title>
+<style>
+:root {
+  --bg:#030a0c; --panel:#071316; --panel2:#0b1a1f; --line:#20333a;
+  --orange:#ff5a00; --white:#f5f5f5; --muted:#b8c2c6;
+}
+* { box-sizing:border-box; }
+body { margin:0; background:radial-gradient(circle at top,#11242a 0,#030708 48%,#020405 100%);
+  color:var(--white); font-family:Arial,Helvetica,sans-serif; }
+a { color:inherit; text-decoration:none; }
+.container { width:min(1180px,94%); margin:auto; }
+.menu{display:none;background:transparent;color:#fff;border:1px solid #4a565a;border-radius:6px;width:46px;height:42px;font-size:24px;cursor:pointer}
+header { min-height:76px; display:flex; align-items:center; gap:28px; border-bottom:1px solid var(--line); }
+.logo { width:150px; height:58px; object-fit:contain; object-position:center; filter:drop-shadow(0 0 7px rgba(255,90,0,.18)); }
+nav { display:flex; gap:28px; margin-left:auto; font-weight:700; font-size:14px; }
+nav a.active { color:var(--orange); border-bottom:3px solid var(--orange); padding-bottom:25px; }
+.cta { background:var(--orange); color:#fff; padding:14px 24px; border-radius:4px; font-weight:800; }
+.tagline { width:170px; color:#ddd; font-style:italic; text-align:right; line-height:1.15; }
+.hero { min-height:255px; background:linear-gradient(90deg,rgba(0,0,0,.90) 0%,rgba(0,0,0,.58) 48%,rgba(0,0,0,.18) 100%),url("Assets/diagnostic-hero.jpg") center/cover no-repeat; position:relative; overflow:hidden; border-bottom:1px solid var(--line);
+  background:linear-gradient(90deg,rgba(0,0,0,.95) 0%,rgba(0,0,0,.70) 43%,rgba(0,0,0,.28) 100%),
+  radial-gradient(circle at 72% 50%,#51200c 0,#0a1215 42%,#020405 75%); }
+.hero-inner { padding:36px 8% 28px; position:relative; z-index:2; }
+.kicker { color:var(--orange); font-weight:800; letter-spacing:1px; }
+h1 { font-size:clamp(34px,4vw,54px); margin:8px 0; letter-spacing:1px; }
+h1 span { color:var(--orange); }
+.hero p { max-width:540px; color:#eee; font-size:18px; line-height:1.45; margin:0; }
+.car { position:absolute; right:2%; bottom:2px; width:390px; max-width:40%; opacity:.96; mix-blend-mode:screen; filter:contrast(1.08) saturate(1.05); }
+.values { display:flex; gap:42px; margin-top:22px; font-weight:700; }
+.values span { color:var(--orange); margin-right:7px; }
+.steps { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; padding:20px 0; }
+.step { display:flex; align-items:center; gap:12px; }
+.num { width:44px; height:44px; border-radius:50%; display:grid; place-items:center; background:#33454d; font-weight:900; font-size:20px; }
+.step.active .num { background:var(--orange); }
+.step strong { display:block; }
+.step small { color:var(--muted); }
+.form-grid { display:grid; grid-template-columns:1fr 1.15fr 1.5fr; gap:10px; }
+.card { border:1px solid var(--line); border-radius:6px; background:linear-gradient(145deg,#071215,#041013); padding:18px; }
+.card h2 { margin:0 0 18px; font-size:20px; }
+.icon { color:var(--orange); font-size:24px; margin-right:8px; }
+label { display:block; font-weight:700; margin:12px 0 6px; }
+.req { color:var(--orange); }
+input,select,textarea { width:100%; background:#14252b; border:1px solid #45606a; color:#fff; border-radius:4px; padding:12px; font:inherit; }
+textarea { min-height:112px; resize:vertical; }
+.info { background:#1a2b31; color:#dfe8eb; padding:12px; border-radius:4px; font-size:13px; line-height:1.4; margin-bottom:12px; }
+.radio-list,.checks { display:grid; gap:9px; }
+.radio,.check { display:flex; gap:9px; align-items:flex-start; font-weight:500; }
+.radio input,.check input { width:auto; margin-top:3px; accent-color:var(--orange); }
+.bottom { display:grid; grid-template-columns:1.2fr 1.2fr .9fr; gap:10px; margin-top:10px; }
+.upload { border:1px dashed #71858c; border-radius:5px; padding:28px 14px; text-align:center; color:#d7dfe1; }
+.notice { color:#ddd; line-height:1.6; }
+.notice li::marker { color:var(--orange); }
+.send { display:flex; flex-direction:column; justify-content:center; gap:14px; align-items:stretch; }
+.send button { border:0; background:var(--orange); color:#fff; padding:17px 18px; border-radius:4px; font-size:17px; font-weight:900; cursor:pointer; }
+.privacy { color:#aeb9bd; font-size:13px; text-align:center; }
+footer { margin-top:14px; border-top:1px solid var(--line); padding:18px 0; display:flex; align-items:center; gap:25px; }
+footer .logo { width:135px; height:48px; }
+footer .spacer { flex:1; }
+.orange-panel { background:linear-gradient(115deg,transparent 0 8%,var(--orange) 8%); padding:20px 25px 20px 80px; font-weight:900; font-style:italic; }
+@media (max-width:800px) {
+  .container { width:92%; }
+  header { min-height:70px; }
+  nav,.tagline,header .cta { display:none; }
+  header::after { content:"☰"; margin-left:auto; border:1px solid #44545a; padding:9px 12px; border-radius:5px; font-size:22px; }
+  .logo { width:140px; }
+  .hero { min-height:430px; }
+  .hero-inner { padding:28px 6% 0; }
+  h1 { font-size:31px; line-height:1.05; }
+  .hero p { font-size:15px; }
+  .values { gap:15px; flex-wrap:wrap; font-size:12px; }
+  .car { width:100%; max-width:none; right:0; bottom:0; opacity:.85; }
+  .steps { gap:7px; }
+  .step { gap:5px; font-size:12px; }
+  .num { width:32px; height:32px; font-size:15px; flex:none; }
+  .step small { display:none; }
+  .form-grid,.bottom { grid-template-columns:1fr; }
+  .card { padding:15px; }
+  footer { flex-wrap:wrap; }
+  footer .spacer { display:none; }
+  .orange-panel { margin-left:auto; width:100%; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <a href="index.html"><img class="logo" src="Assets/logo.png" alt="ForgePC Mauricie"></a>
+  <nav>
+    <a href="index.html">ACCUEIL</a>
+    <a href="inventaire.html">INVENTAIRE</a>
+    <a class="active" href="services.html">SERVICES</a>
+    <a href="a-propos.html">À PROPOS</a>
+    <a href="rdv-service-domicile.html">RENDEZ-VOUS</a>
+    <a href="contact.html">CONTACT</a>
+  </nav>
+  <button class="menu" type="button" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+  <a class="cta" href="contact.html">NOUS CONTACTER →</a>
+  <div class="tagline">Votre technologie,<br>notre expertise.</div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="kicker">🔧 RÉPARATIONS</div>
+    <h1>DEMANDE DE <span>DIAGNOSTIC</span></h1>
+    <p>Une solution simple et rapide pour remettre votre ordinateur en état de fonctionner.</p>
+    <div class="values">
+      <div><span>◆</span> Service fiable</div>
+      <div><span>♟</span> Approche humaine</div>
+      <div><span>◒</span> Solutions durables</div>
+    </div>
+  </div>
+  
+</section>
+
+<section class="steps">
+  <div class="step active"><div class="num">1</div><div><strong>Vos informations</strong><small>Quelques renseignements</small></div></div>
+  <div class="step"><div class="num">2</div><div><strong>Détails du problème</strong><small>Décrivez la situation</small></div></div>
+  <div class="step"><div class="num">3</div><div><strong>Confirmation</strong><small>On vous contacte rapidement</small></div></div>
+</section>
+
+<form id="diagnosticForm" data-mailto="info@forgepcmauricie.ca" data-subject="Demande de diagnostic — ForgePC Mauricie">
+<section class="form-grid">
+  <div class="card">
+    <h2><span class="icon">●</span>Vos coordonnées</h2>
+    <label>Nom complet <span class="req">*</span></label>
+    <input name="nom" required placeholder="Votre nom">
+    <label>Téléphone <span class="req">*</span></label>
+    <input name="telephone" required placeholder="(XXX) XXX-XXXX">
+    <label>Courriel <span class="req">*</span></label>
+    <input type="email" name="courriel" required placeholder="votre@courriel.com">
+  </div>
+
+  <div class="card">
+    <h2><span class="icon">▣</span>Votre ordinateur</h2>
+    <div class="info">ⓘ Vous ne connaissez pas la marque ou le modèle ? Aucun problème. Donnez simplement le plus d'informations possible. Nous vous aiderons.</div>
+    <label>Type d'ordinateur <span class="req">*</span></label>
+    <div class="radio-list">
+      <label class="radio"><input type="radio" name="type" value="bureau" required> Ordinateur de bureau (tour)</label>
+      <label class="radio"><input type="radio" name="type" value="portable"> Ordinateur portable (laptop)</label>
+      <label class="radio"><input type="radio" name="type" value="inconnu"> Je ne suis pas certain(e)</label>
+    </div>
+    <label>Âge approximatif</label>
+    <select name="age"><option value="">Sélectionnez</option><option>Moins de 2 ans</option><option>2 à 4 ans</option><option>5 à 7 ans</option><option>8 ans et plus</option><option>Je ne sais pas</option></select>
+    <label>Système d'exploitation (si connu)</label>
+    <select name="os"><option value="">Sélectionnez</option><option>Windows 11</option><option>Windows 10</option><option>Autre</option><option>Je ne sais pas</option></select>
+    <label class="check"><input type="checkbox" name="incertain"> Je ne suis pas certain(e)</label>
+  </div>
+
+  <div class="card">
+    <h2><span class="icon">●</span>Le problème</h2>
+    <label>Quel est le problème ? <span class="req">*</span></label>
+    <textarea name="probleme" required placeholder="Décrivez le problème avec vos mots. Ex. : l'ordinateur est lent, ne démarre plus, écran noir, virus, etc."></textarea>
+    <label>Symptômes courants (cochez tout ce qui s'applique)</label>
+    <div class="checks">
+      <label class="check"><input type="checkbox" name="symptomes" value="lent"> Lent ou qui bloque</label>
+      <label class="check"><input type="checkbox" name="symptomes" value="demarrage"> Ne démarre pas</label>
+      <label class="check"><input type="checkbox" name="symptomes" value="ecran"> Écran noir ou sans image</label>
+      <label class="check"><input type="checkbox" name="symptomes" value="virus"> Virus ou logiciels malveillants</label>
+      <label class="check"><input type="checkbox" name="symptomes" value="internet"> Problème de connexion Internet</label>
+      <label class="check"><input type="checkbox" name="symptomes" value="son"> Problème de son</label>
+      <label class="check"><input type="checkbox" name="symptomes" value="surchauffe"> Surchauffe / bruit anormal</label>
+      <label class="check"><input type="checkbox" name="symptomes" value="erreur"> Erreur ou message d'erreur</label>
+      <label class="check"><input type="checkbox" name="symptomes" value="piece"> Pièce à remplacer (si connu)</label>
+      <label class="check"><input type="checkbox" name="symptomes" value="autre"> Autre</label>
+    </div>
+  </div>
+</section>
+
+<section class="bottom">
+  <div class="card">
+    <h2><span class="icon">📎</span>Pièces jointes <small>(facultatif)</small></h2>
+    <p>Vous pouvez ajouter des photos, captures d'écran ou documents pour nous aider à mieux comprendre le problème.</p>
+    <div class="upload"><strong>☁ +</strong><br>Glissez vos fichiers ici<br>ou cliquez pour parcourir<br><small>Images (JPG, PNG) ou documents (PDF) — Max 10 Mo</small>
+      <input type="file" name="pieces" accept=".jpg,.jpeg,.png,.pdf" style="margin-top:14px;background:transparent;border:0;padding:0">
+    </div>
+  </div>
+  <div class="card notice">
+    <h2><span class="icon">ⓘ</span>Bon à savoir</h2>
+    <ul>
+      <li>Nous analysons votre demande rapidement.</li>
+      <li>Nous vous contactons généralement sous 24 à 48 h.</li>
+      <li>Un diagnostic est toujours effectué avant de proposer une réparation.</li>
+      <li>Aucun engagement de votre part.</li>
+    </ul>
+  </div>
+  <div class="card send">
+    <button type="submit">Envoyer ma demande →</button>
+    <div class="privacy">🔒 Vos informations sont confidentielles.</div>
+  </div>
+</section>
+</form>
+
+<footer>
+  <img class="logo" src="Assets/logo.png" alt="ForgePC Mauricie">
+  <strong>Une entreprise de chez nous.</strong>
+  <div class="spacer"></div>
+  <span>📍 Shawinigan et environs</span>
+  <span>🛡 Service fiable</span>
+  <span>👥 Approche humaine</span>
+  <div class="orange-panel">Votre technologie,<br>notre expertise.</div>
+</footer>
+</div>
+<script>
+document.getElementById('diagnosticForm').addEventListener('submit', function(e) {
+  // Keep the approved visual flow. The final mail destination can be changed
+  // to the confirmed ForgePC service address when wiring the production form.
+});
+</script>
+<script src="Assets/site.js"></script>
+</body>
+</html>
