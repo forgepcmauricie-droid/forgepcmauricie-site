@@ -1,10 +1,11 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="fr-CA">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>ForgePC Mauricie — Votre technologie. Notre expertise.</title>
-<meta name="description" content="ForgePC Mauricie — PC remis à neuf, réparations, mises à niveau et service à domicile dans la Mauricie.">
+<meta content="ForgePC Mauricie — PC remis à neuf, réparations, mises à niveau et service à domicile dans la Mauricie." name="description"/>
 <style>
 :root {
   --bg:#02090b; --panel:#061114; --line:#26353a; --orange:#ff5a00;
@@ -319,99 +320,97 @@ img { max-width:100%; }
 /* Empêche certains calques décoratifs de doubler visuellement le texte */
 .hero, .story, .values, .bottom, main, section { isolation:isolate; }
 </style>
-<link rel="stylesheet" href="/Assets/global-fixes.css">
+<link href="/Assets/global-fixes.css" rel="stylesheet"/>
 </head>
 <body>
-
 <header>
-  <div class="container nav">
-    <a href="#accueil" aria-label="ForgePC Mauricie">
-      <img class="logo" src="/Assets/logo.png" alt="ForgePC Mauricie">
-    </a>
-    <nav class="navlinks" aria-label="Navigation principale">
-      <a class="active" href="index.html">ACCUEIL</a>
-      <a href="inventaire.html">INVENTAIRE</a>
-      <a href="services.html">SERVICES</a>
-      <a href="a-propos.html">À PROPOS</a>
-      <a href="contact.html">CONTACT</a>
-    </nav>
-    <a class="btn primary navcta" href="contact.html">NOUS CONTACTER</a>
-    <button class="menu" type="button" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
-  </div>
+<div class="container nav">
+<a aria-label="ForgePC Mauricie" href="#accueil">
+<img alt="ForgePC Mauricie" class="logo" src="/Assets/logo.png"/>
+</a>
+<nav aria-label="Navigation principale" class="navlinks">
+<a class="active" href="index.html">ACCUEIL</a>
+<a href="inventaire.html">INVENTAIRE</a>
+<div class="nav-services">
+<button aria-expanded="false" class="services-toggle" type="button">SERVICES <span aria-hidden="true">⌄</span></button>
+<div class="services-submenu">
+<a href="forgepc_diagnostic.html">RÉPARATIONS</a>
+<a href="mise-a-niveau.html">MISES À NIVEAU</a>
+<a href="rdv-service-domicile.html">SERVICE À DOMICILE</a>
+</div>
+</div>
+<a href="a-propos.html">À PROPOS</a>
+<a href="contact.html">CONTACT</a>
+</nav>
+<button aria-expanded="false" aria-label="Ouvrir le menu" class="menu" type="button">☰</button>
+</div>
 </header>
-
 <main id="accueil">
 <section class="hero">
-  <div class="container hero-inner">
-    <div>
-      <div class="kicker">SHAWINIGAN · MAURICIE</div>
-      <h1>VOTRE TECHNOLOGIE.<span>NOTRE EXPERTISE.</span></h1>
-      <p>Informatique simple, honnête et accessible.<br>PC remis à neuf, réparations, mises à niveau et service à domicile dans la Mauricie.</p>
-      <div class="actions">
-        <a class="btn primary" href="inventaire.html">▣ &nbsp; VOIR L'INVENTAIRE →</a>
-        <a class="btn secondary" href="contact.html">🔧 &nbsp; NOUS CONTACTER</a>
-      </div>
-    </div>
-  </div>
+<div class="container hero-inner">
+<div>
+<div class="kicker">SHAWINIGAN · MAURICIE</div>
+<h1>VOTRE TECHNOLOGIE.<span>NOTRE EXPERTISE.</span></h1>
+<p>Informatique simple, honnête et accessible.<br/>PC remis à neuf, réparations, mises à niveau et service à domicile dans la Mauricie.</p>
+<div class="actions">
+<a class="btn primary" href="inventaire.html">▣   VOIR L'INVENTAIRE →</a>
+</div>
+</div>
+</div>
 </section>
-
 <section class="section" id="services">
-  <div class="container">
-    <div class="title-line"><h2 class="section-title">NOS SERVICES</h2></div>
-    <div class="section-sub">Des solutions adaptées à vos besoins</div>
-    <div class="services">
-      <article class="card">
-        <img src="/Assets/service-pc.jpg" alt="PC remis à neuf">
-        <div class="card-body"><h3>▣ &nbsp; PC REMIS À NEUF</h3><p>Des ordinateurs sélectionnés, nettoyés, testés et prêts à utiliser.</p><a href="inventaire.html">VOIR L'INVENTAIRE →</a></div>
-      </article>
-      <article class="card">
-        <img src="/Assets/service-repair.jpg" alt="Réparation informatique">
-        <div class="card-body"><h3>🔧 &nbsp; RÉPARATIONS</h3><p>Diagnostic, réparation et solutions durables pour vos appareils.</p><a href="forgepc_diagnostic.html">DEMANDER UN DIAGNOSTIC →</a></div>
-      </article>
-      <article class="card">
-        <img src="/Assets/service-upgrade.jpg" alt="Mise à niveau informatique">
-        <div class="card-body"><h3>⚙ &nbsp; MISES À NIVEAU</h3><p>Améliorer les performances sans dépenser inutilement.</p><a href="mise-a-niveau.html">DEMANDER UNE ÉVALUATION →</a></div>
-      </article>
-      <article class="card">
-        <img src="/Assets/service-home.jpg" alt="Service informatique à domicile">
-        <div class="card-body"><h3>⌂ &nbsp; SERVICE À DOMICILE</h3><p>On se déplace dans la Mauricie selon vos besoins.</p><a href="rdv-service-domicile.html">DEMANDER UN RENDEZ-VOUS →</a></div>
-      </article>
-    </div>
-  </div>
+<div class="container">
+<div class="title-line"><h2 class="section-title">NOS SERVICES</h2></div>
+<div class="section-sub">Des solutions adaptées à vos besoins</div>
+<div class="services">
+<article class="card">
+<img alt="PC remis à neuf" src="/Assets/service-pc.jpg"/>
+<div class="card-body"><h3>▣   PC REMIS À NEUF</h3><p>Des ordinateurs sélectionnés, nettoyés, testés et prêts à utiliser.</p><a href="inventaire.html">VOIR L'INVENTAIRE →</a></div>
+</article>
+<article class="card">
+<img alt="Réparation informatique" src="/Assets/service-repair.jpg"/>
+<div class="card-body"><h3>🔧   RÉPARATIONS</h3><p>Diagnostic, réparation et solutions durables pour vos appareils.</p><a href="forgepc_diagnostic.html">DEMANDER UN DIAGNOSTIC →</a></div>
+</article>
+<article class="card">
+<img alt="Mise à niveau informatique" src="/Assets/service-upgrade.jpg"/>
+<div class="card-body"><h3>⚙   MISES À NIVEAU</h3><p>Améliorer les performances sans dépenser inutilement.</p><a href="mise-a-niveau.html">DEMANDER UNE ÉVALUATION →</a></div>
+</article>
+<article class="card">
+<img alt="Service informatique à domicile" src="/Assets/service-home.jpg"/>
+<div class="card-body"><h3>⌂   SERVICE À DOMICILE</h3><p>On se déplace dans la Mauricie selon vos besoins.</p><a href="rdv-service-domicile.html">DEMANDER UN RENDEZ-VOUS →</a></div>
+</article>
+</div>
+</div>
 </section>
-
 <section class="section" id="apropos">
-  <div class="container about">
-    <img src="/Assets/about.jpg" alt="ForgePC Mauricie — une entreprise de chez nous">
-    <div class="about-copy">
-      <h2>À PROPOS DE FORGEPC</h2>
-      <p>ForgePC Mauricie est née d'une idée simple : offrir une alternative aux ordinateurs neufs souvent coûteux et aux réparations compliquées. L'objectif est de remettre en circulation de bonnes machines, réparer lorsque ça en vaut la peine et proposer des solutions adaptées aux besoins réels de chaque client.</p>
-      <p>Derrière ForgePC, il y a aussi une volonté de bâtir une entreprise humaine et locale, tout en conciliant le travail avec la vie de famille.</p>
-    </div>
-    <div>
-      <div class="quote">« Réparer quand ça vaut la peine.<br>Améliorer quand c'est possible.<br>Remplacer seulement quand c'est nécessaire. »</div>
-      <br><a class="btn secondary" href="a-propos.html">EN SAVOIR PLUS →</a>
-    </div>
-  </div>
+<div class="container about">
+<img alt="ForgePC Mauricie — entreprise locale et familiale" src="/Assets/about.jpg"/>
+<div class="about-copy">
+<h2>À PROPOS DE FORGEPC</h2>
+<p>ForgePC Mauricie est née d'une idée simple : offrir une alternative aux ordinateurs neufs souvent coûteux et aux réparations compliquées. L'objectif est de remettre en circulation de bonnes machines, réparer lorsque ça en vaut la peine et proposer des solutions adaptées aux besoins réels de chaque client.</p>
+<p>Derrière ForgePC, il y a aussi une volonté de bâtir une entreprise humaine et locale, tout en conciliant le travail avec la vie de famille.</p>
+</div>
+<div>
+<div class="quote">« Réparer quand ça vaut la peine.<br/>Améliorer quand c'est possible.<br/>Remplacer seulement quand c'est nécessaire. »</div>
+<br/><a class="btn secondary" href="a-propos.html">EN SAVOIR PLUS →</a>
+</div>
+</div>
 </section>
-
 <section class="section">
-  <div class="container trust">
-    <div class="trust-item"><span class="trust-icon">●</span> Shawinigan et environs</div>
-    <div class="trust-item"><span class="trust-icon">♢</span> Service fiable</div>
-    <div class="trust-item"><span class="trust-icon">●</span> Approche humaine</div>
-    <div class="trust-item"><span class="trust-icon">⌁</span> Informatique plus responsable</div>
-  </div>
+<div class="container trust">
+<div class="trust-item"><span class="trust-icon">●</span> Shawinigan et environs</div>
+<div class="trust-item"><span class="trust-icon">♢</span> Service fiable</div>
+<div class="trust-item"><span class="trust-icon">●</span> Approche humaine</div>
+<div class="trust-item"><span class="trust-icon">⌁</span> Informatique plus responsable</div>
+</div>
 </section>
 </main>
-
 <footer class="site-footer">
-  <div class="footer-logo"><img src="/Assets/logo.png" alt="ForgePC Mauricie"></div>
-  <div class="footer-location">📍 Shawinigan et toute la Mauricie</div>
-  <div class="footer-slogan">Votre technologie, notre expertise.</div>
-  <div class="footer-copy">© 2026 ForgePC Mauricie</div>
+<div class="footer-logo"><img alt="ForgePC Mauricie" src="/Assets/logo.png"/></div>
+<div class="footer-location">📍 Shawinigan et toute la Mauricie</div>
+<div class="footer-slogan">Votre technologie, notre expertise.</div>
+<div class="footer-copy">© 2026 ForgePC Mauricie</div>
 </footer>
-
 <section id="rendezvous" style="display:none"></section>
 <script src="/Assets/site.js"></script>
 </body>

@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Mise à niveau — ForgePC Mauricie</title>
-<meta name="description" content="Demande d'évaluation pour améliorer votre ordinateur avec ForgePC Mauricie.">
+<meta content="Demande d'évaluation pour améliorer votre ordinateur avec ForgePC Mauricie." name="description"/>
 <style>
 :root {
   --bg:#02090c; --panel:#071317; --panel2:#0b1b21; --line:#29414a;
@@ -333,133 +334,131 @@ img { max-width:100%; }
 /* Empêche certains calques décoratifs de doubler visuellement le texte */
 .hero, .story, .values, .bottom, main, section { isolation:isolate; }
 </style>
-<link rel="stylesheet" href="/Assets/global-fixes.css">
+<link href="/Assets/global-fixes.css" rel="stylesheet"/>
 </head>
 <body>
 <div class="page">
 <header>
-  <a href="index.html" aria-label="ForgePC Mauricie"><img class="logo" src="/Assets/logo.png" alt="ForgePC Mauricie"></a>
-  <nav>
-    <a href="index.html">ACCUEIL</a>
-    <a href="inventaire.html">INVENTAIRE</a>
-    <a href="services.html" class="active">SERVICES</a>
-    <a href="a-propos.html">À PROPOS</a>
-    <a href="contact.html">CONTACT</a>
-  </nav>
-  <button class="menu" type="button" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
-  <button class="cta" onclick="document.getElementById('formulaire').scrollIntoView()">NOUS CONTACTER →</button>
-  <div class="tagline">Votre technologie,<br><span class="footer-orange">notre expertise.</span></div>
+<a aria-label="ForgePC Mauricie" href="index.html"><img alt="ForgePC Mauricie" class="logo" src="/Assets/logo.png"/></a>
+<nav>
+<a href="index.html">ACCUEIL</a>
+<a href="inventaire.html">INVENTAIRE</a>
+<div class="nav-services">
+<button aria-expanded="false" class="services-toggle" type="button">SERVICES <span aria-hidden="true">⌄</span></button>
+<div class="services-submenu">
+<a href="forgepc_diagnostic.html">RÉPARATIONS</a>
+<a href="mise-a-niveau.html">MISES À NIVEAU</a>
+<a href="rdv-service-domicile.html">SERVICE À DOMICILE</a>
+</div>
+</div>
+<a href="a-propos.html">À PROPOS</a>
+<a href="contact.html">CONTACT</a>
+</nav>
+<button aria-expanded="false" aria-label="Ouvrir le menu" class="menu" type="button">☰</button>
+
+<div class="tagline">Votre technologie,<br/><span class="footer-orange">notre expertise.</span></div>
 </header>
-
 <section class="hero">
-  <div class="hero-copy">
-    <div class="kicker">⚙ MISES À NIVEAU</div>
-    <h1>PROPULSEZ <span>VOTRE PC</span></h1>
-    <p><b>Plus de performance, plus de possibilités.</b><br>
+<div class="hero-copy">
+<div class="kicker">⚙ MISES À NIVEAU</div>
+<h1>PROPULSEZ <span>VOTRE PC</span></h1>
+<p><b>Plus de performance, plus de possibilités.</b><br/>
     Nous vous conseillons et vous aidons à choisir les meilleurs composants pour améliorer votre ordinateur, selon vos besoins et votre budget.</p>
-  </div>
-  <div class="hero-media" aria-hidden="true"></div>
+</div>
+<div aria-hidden="true" class="hero-media"></div>
 </section>
-
 <section class="features">
-  <div class="feature"><span class="icon">🛡</span> Conseils personnalisés</div>
-  <div class="feature"><span class="icon">⚙</span> Composants compatibles</div>
-  <div class="feature"><span class="icon">▥</span> Meilleure performance</div>
-  <div class="feature"><span class="icon">$</span> Excellent rapport qualité/prix</div>
+<div class="feature"><span class="icon">🛡</span> Conseils personnalisés</div>
+<div class="feature"><span class="icon">⚙</span> Composants compatibles</div>
+<div class="feature"><span class="icon">▥</span> Meilleure performance</div>
+<div class="feature"><span class="icon">$</span> Excellent rapport qualité/prix</div>
 </section>
-
 <section class="steps">
-  <div class="step"><span class="num">1</span><div><strong>Vos informations</strong><small>Quelques renseignements</small></div></div>
-  <div class="step"><span class="num">2</span><div><strong>Détails de votre PC</strong><small>Composants actuels et améliorations</small></div></div>
-  <div class="step"><span class="num">3</span><div><strong>Confirmation</strong><small>On vous contacte rapidement</small></div></div>
+<div class="step"><span class="num">1</span><div><strong>Vos informations</strong><small>Quelques renseignements</small></div></div>
+<div class="step"><span class="num">2</span><div><strong>Détails de votre PC</strong><small>Composants actuels et améliorations</small></div></div>
+<div class="step"><span class="num">3</span><div><strong>Confirmation</strong><small>On vous contacte rapidement</small></div></div>
 </section>
-
 <main class="form-wrap" id="formulaire">
 <form data-mailto="info@forgepcmauricie.ca" data-subject="Demande de mise à niveau — ForgePC Mauricie">
-  <div class="form-grid">
-    <section class="card">
-      <h2>👤 Vos coordonnées</h2>
-      <label>Nom complet <span class="req">*</span></label>
-      <input name="nom" autocomplete="name" required placeholder="Votre nom">
-      <label>Téléphone <span class="req">*</span></label>
-      <input name="telephone" autocomplete="tel" required placeholder="(XXX) XXX-XXXX">
-      <label>Courriel <span class="req">*</span></label>
-      <input name="courriel" type="email" autocomplete="email" required placeholder="votre@courriel.com">
-    </section>
-
-    <section class="card">
-      <h2>🖥 Votre ordinateur actuel</h2>
-      <div class="notice">ℹ️ Vous ne connaissez pas la marque ou le modèle? Aucun problème. Donnez simplement le plus d'informations possible et nous vous aiderons.</div>
-      <label>Marque ou modèle (si connu)</label>
-      <input name="modele" placeholder="Ex. : Acer Nitro, HP Pavilion, PC maison, etc.">
-      <label>Système d'exploitation</label>
-      <select name="os">
-        <option value="">Sélectionnez</option><option>Windows 11</option><option>Windows 10</option>
-        <option>Linux</option><option>Autre</option><option>Je ne sais pas</option>
-      </select>
-      <label>Utilisation principale <span class="req">*</span></label>
-      <select name="utilisation" required>
-        <option value="">Sélectionnez</option><option>Bureautique / études</option><option>Jeux</option>
-        <option>Montage vidéo / création</option><option>Multitâche</option><option>Autre</option>
-      </select>
-      <label>Avez-vous l'ordinateur en main?</label>
-      <div class="check"><input type="radio" name="en_main" value="Oui" checked> Oui</div>
-      <div class="check"><input type="radio" name="en_main" value="Non"> Non, mais je connais les spécifications</div>
-      <div class="check"><input type="radio" name="en_main" value="Inconnu"> Je ne suis pas certain(e)</div>
-    </section>
-
-    <section class="card">
-      <h2>🔧 Quels sont vos objectifs?</h2>
-      <div class="checks">
-        <label class="check"><input type="checkbox" name="objectif" value="Performance générale"> Meilleure performance générale</label>
-        <label class="check"><input type="checkbox" name="objectif" value="Jeux"> Jeux (gaming)</label>
-        <label class="check"><input type="checkbox" name="objectif" value="Création"> Montage vidéo / création de contenu</label>
-        <label class="check"><input type="checkbox" name="objectif" value="Bureautique"> Bureautique et multitâche</label>
-        <label class="check"><input type="checkbox" name="objectif" value="Stockage"> Plus d'espace de stockage (SSD / HDD)</label>
-        <label class="check"><input type="checkbox" name="objectif" value="RAM"> Ajouter de la mémoire vive (RAM)</label>
-        <label class="check"><input type="checkbox" name="objectif" value="GPU"> Changer la carte graphique (GPU)</label>
-        <label class="check"><input type="checkbox" name="objectif" value="Autre"> Autre</label>
-      </div>
-      <label>Détails et attentes</label>
-      <textarea name="details" placeholder="Décrivez vos besoins, ce que vous aimeriez améliorer et toute information pertinente."></textarea>
-    </section>
-  </div>
-
-  <div class="bottom">
-    <div>
-      <h2>📎 Pièces jointes <small>(facultatif)</small></h2>
-      <p>Vous pouvez ajouter des photos de votre PC, des captures d'écran ou des informations sur vos composants.</p>
-      <label class="upload">
-        <input id="fichiers" type="file" accept=".jpg,.jpeg,.png,.pdf" multiple>
-        <span>☁️<br>Glissez vos fichiers ici<br>ou cliquez pour parcourir<br><small>Images (JPG, PNG) ou documents (PDF) — Max 10 Mo</small></span>
-      </label>
-    </div>
-    <div>
-      <h2>ⓘ Bon à savoir</h2>
-      <ul>
-        <li>Nous analysons votre demande rapidement.</li>
-        <li>Nous vous conseillons des composants compatibles.</li>
-        <li>Nous vous contactons généralement sous 24 à 48 h.</li>
-        <li>Aucun engagement de votre part.</li>
-      </ul>
-    </div>
-    <div class="submit-area">
-      <button class="cta submit" type="submit">Envoyer ma demande →</button>
-      <div class="private">🔒 Vos informations sont confidentielles.</div>
-      <div id="status" class="private"></div>
-    </div>
-  </div>
+<div class="form-grid">
+<section class="card">
+<h2>👤 Vos coordonnées</h2>
+<label>Nom complet <span class="req">*</span></label>
+<input autocomplete="name" name="nom" placeholder="Votre nom" required=""/>
+<label>Téléphone <span class="req">*</span></label>
+<input autocomplete="tel" name="telephone" placeholder="(XXX) XXX-XXXX" required=""/>
+<label>Courriel <span class="req">*</span></label>
+<input autocomplete="email" name="courriel" placeholder="votre@courriel.com" required="" type="email"/>
+</section>
+<section class="card">
+<h2>🖥 Votre ordinateur actuel</h2>
+<div class="notice">ℹ️ Vous ne connaissez pas la marque ou le modèle? Aucun problème. Donnez simplement le plus d'informations possible et nous vous aiderons.</div>
+<label>Marque ou modèle (si connu)</label>
+<input name="modele" placeholder="Ex. : Acer Nitro, HP Pavilion, PC maison, etc."/>
+<label>Système d'exploitation</label>
+<select name="os">
+<option value="">Sélectionnez</option><option>Windows 11</option><option>Windows 10</option>
+<option>Linux</option><option>Autre</option><option>Je ne sais pas</option>
+</select>
+<label>Utilisation principale <span class="req">*</span></label>
+<select name="utilisation" required="">
+<option value="">Sélectionnez</option><option>Bureautique / études</option><option>Jeux</option>
+<option>Montage vidéo / création</option><option>Multitâche</option><option>Autre</option>
+</select>
+<label>Avez-vous l'ordinateur en main?</label>
+<div class="check"><input checked="" name="en_main" type="radio" value="Oui"/> Oui</div>
+<div class="check"><input name="en_main" type="radio" value="Non"/> Non, mais je connais les spécifications</div>
+<div class="check"><input name="en_main" type="radio" value="Inconnu"/> Je ne suis pas certain(e)</div>
+</section>
+<section class="card">
+<h2>🔧 Quels sont vos objectifs?</h2>
+<div class="checks">
+<label class="check"><input name="objectif" type="checkbox" value="Performance générale"/> Meilleure performance générale</label>
+<label class="check"><input name="objectif" type="checkbox" value="Jeux"/> Jeux (gaming)</label>
+<label class="check"><input name="objectif" type="checkbox" value="Création"/> Montage vidéo / création de contenu</label>
+<label class="check"><input name="objectif" type="checkbox" value="Bureautique"/> Bureautique et multitâche</label>
+<label class="check"><input name="objectif" type="checkbox" value="Stockage"/> Plus d'espace de stockage (SSD / HDD)</label>
+<label class="check"><input name="objectif" type="checkbox" value="RAM"/> Ajouter de la mémoire vive (RAM)</label>
+<label class="check"><input name="objectif" type="checkbox" value="GPU"/> Changer la carte graphique (GPU)</label>
+<label class="check"><input name="objectif" type="checkbox" value="Autre"/> Autre</label>
+</div>
+<label>Détails et attentes</label>
+<textarea name="details" placeholder="Décrivez vos besoins, ce que vous aimeriez améliorer et toute information pertinente."></textarea>
+</section>
+</div>
+<div class="bottom">
+<div>
+<h2>📎 Pièces jointes <small>(facultatif)</small></h2>
+<p>Vous pouvez ajouter des photos de votre PC, des captures d'écran ou des informations sur vos composants.</p>
+<label class="upload">
+<input accept=".jpg,.jpeg,.png,.pdf" id="fichiers" multiple="" type="file"/>
+<span>☁️<br/>Glissez vos fichiers ici<br/>ou cliquez pour parcourir<br/><small>Images (JPG, PNG) ou documents (PDF) — Max 10 Mo</small></span>
+</label>
+</div>
+<div>
+<h2>ⓘ Bon à savoir</h2>
+<ul>
+<li>Nous analysons votre demande rapidement.</li>
+<li>Nous vous conseillons des composants compatibles.</li>
+<li>Nous vous contactons généralement sous 24 à 48 h.</li>
+<li>Aucun engagement de votre part.</li>
+</ul>
+</div>
+<div class="submit-area">
+<button class="cta submit" type="submit">Envoyer ma demande →</button>
+<div class="private">🔒 Vos informations sont confidentielles.</div>
+<div class="private" id="status"></div>
+</div>
+</div>
 </form>
 </main>
-
 <footer class="site-footer">
-  <div class="footer-logo"><img src="/Assets/logo.png" alt="ForgePC Mauricie"></div>
-  <div class="footer-location">📍 Shawinigan et toute la Mauricie</div>
-  <div class="footer-slogan">Votre technologie, notre expertise.</div>
-  <div class="footer-copy">© 2026 ForgePC Mauricie</div>
+<div class="footer-logo"><img alt="ForgePC Mauricie" src="/Assets/logo.png"/></div>
+<div class="footer-location">📍 Shawinigan et toute la Mauricie</div>
+<div class="footer-slogan">Votre technologie, notre expertise.</div>
+<div class="footer-copy">© 2026 ForgePC Mauricie</div>
 </footer>
 </div>
-
 <script src="/Assets/site.js"></script>
 </body>
 </html>

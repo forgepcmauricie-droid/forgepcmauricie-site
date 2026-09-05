@@ -1,9 +1,10 @@
 <!DOCTYPE html>
+
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Contactez ForgePC Mauricie pour une question générale ou une demande d'information.">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Contactez ForgePC Mauricie pour une question générale ou une demande d'information." name="description"/>
 <title>Contactez-nous | ForgePC Mauricie</title>
 <style>
 :root{--orange:#ff4b00;--orange2:#ff6a00;--bg:#050b0e;--panel:#091419;--panel2:#101f26;--line:#26363d;--white:#f5f5f5;--muted:#b9c3c8}
@@ -245,104 +246,106 @@ img { max-width:100%; }
 /* Empêche certains calques décoratifs de doubler visuellement le texte */
 .hero, .story, .values, .bottom, main, section { isolation:isolate; }
 </style>
-<link rel="stylesheet" href="/Assets/global-fixes.css">
+<link href="/Assets/global-fixes.css" rel="stylesheet"/>
 </head>
 <body>
 <header class="wrap">
-  <a href="index.html" aria-label="ForgePC Mauricie"><img class="logo" src="/Assets/logo.png" alt="ForgePC Mauricie"></a>
-  <nav class="nav">
-    <a href="index.html">ACCUEIL</a>
-    <a href="inventaire.html">INVENTAIRE</a>
-    <a href="services.html">SERVICES</a>
-    <a href="a-propos.html">À PROPOS</a>
-    <a class="active" href="contact.html">CONTACT</a>
-  </nav>
-  <a class="cta" href="rdv-service-domicile.html">DEMANDER UN RENDEZ-VOUS →</a>
-  <button class="menu" type="button" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+<a aria-label="ForgePC Mauricie" href="index.html"><img alt="ForgePC Mauricie" class="logo" src="/Assets/logo.png"/></a>
+<nav class="nav">
+<a href="index.html">ACCUEIL</a>
+<a href="inventaire.html">INVENTAIRE</a>
+<div class="nav-services">
+<button aria-expanded="false" class="services-toggle" type="button">SERVICES <span aria-hidden="true">⌄</span></button>
+<div class="services-submenu">
+<a href="forgepc_diagnostic.html">RÉPARATIONS</a>
+<a href="mise-a-niveau.html">MISES À NIVEAU</a>
+<a href="rdv-service-domicile.html">SERVICE À DOMICILE</a>
+</div>
+</div>
+<a href="a-propos.html">À PROPOS</a>
+<a class="active" href="contact.html">CONTACT</a>
+</nav>
+
+<button aria-expanded="false" aria-label="Ouvrir le menu" class="menu" type="button">☰</button>
 </header>
-
 <section class="hero">
-  <div class="wrap">
-    <div class="kicker">💬 NOUS CONTACTER</div>
-    <h1>UNE QUESTION ?<br>ON EST LÀ <span>POUR VOUS.</span></h1>
-    <p>Que ce soit pour une question générale, une demande d'information ou tout autre sujet, n'hésitez pas à nous écrire. Nous vous répondrons dans les plus brefs délais.</p>
-    <div class="points">
-      <div class="point"><span class="ico">💬</span>Réponse rapide</div>
-      <div class="point"><span class="ico">👥</span>Approche humaine</div>
-      <div class="point"><span class="ico">🛡</span>Service fiable</div>
-    </div>
-  </div>
+<div class="wrap">
+<div class="kicker">💬 NOUS CONTACTER</div>
+<h1>UNE QUESTION ?<br/>ON EST LÀ <span>POUR VOUS.</span></h1>
+<p>Que ce soit pour une question générale, une demande d'information ou tout autre sujet, n'hésitez pas à nous écrire. Nous vous répondrons dans les plus brefs délais.</p>
+<div class="points">
+<div class="point"><span class="ico">💬</span>Réponse rapide</div>
+<div class="point"><span class="ico">👥</span>Approche humaine</div>
+<div class="point"><span class="ico">🛡</span>Service fiable</div>
+</div>
+</div>
 </section>
-
 <main class="wrap content">
-  <aside class="card">
-    <div class="contact-item">
-      <div class="contact-label">✉️ &nbsp; Par courriel</div>
-      <div class="contact-value">info@forgepcmauricie.ca</div>
-      <div class="contact-note">Pour toute question générale, demande d'information ou autre sujet.</div>
-    </div>
-    <div class="contact-item">
-      <div class="contact-label">📱 &nbsp; Par téléphone / SMS</div>
-      <div class="contact-value">819-944-7418</div>
-      <div class="contact-note">Appelez-nous ou envoyez-nous un SMS. Nous vous répondrons rapidement.</div>
-      <div class="actions">
-        <a class="btn primary" href="tel:+18199447418">📞 Appeler</a>
-        <a class="btn" href="sms:+18199447418">💬 Envoyer un SMS</a>
-      </div>
-    </div>
-    <div class="contact-item">
-      <div class="contact-label">📍 &nbsp; Notre région</div>
-      <div class="contact-value">Shawinigan et toute la Mauricie</div>
-      <div class="contact-note">Une entreprise locale, proche de vous.</div>
-    </div>
-  </aside>
-
-  <section class="card">
-    <h2>✎ &nbsp; Formulaire de contact</h2>
-    <form data-mailto="info@forgepcmauricie.ca" data-subject="Demande de contact — ForgePC Mauricie">
-      <div class="row">
-        <div class="field">
-          <label for="nom">Nom complet <span class="req">*</span></label>
-          <input id="nom" name="Nom" type="text" placeholder="Votre nom" required>
-        </div>
-        <div class="field">
-          <label for="courriel">Courriel <span class="req">*</span></label>
-          <input id="courriel" name="Courriel" type="email" placeholder="votre@courriel.com" required>
-        </div>
-      </div>
-      <div class="field">
-        <label for="sujet">Sujet <span class="req">*</span></label>
-        <select id="sujet" name="Sujet" required>
-          <option value="">Sélectionnez un sujet</option>
-          <option>Question générale</option>
-          <option>Information sur un PC</option>
-          <option>Question sur un service</option>
-          <option>Demande d'information</option>
-          <option>Partenariat / entreprise</option>
-          <option>Autre</option>
-        </select>
-      </div>
-      <div class="field">
-        <label for="message">Message <span class="req">*</span></label>
-        <textarea id="message" name="Message" maxlength="1000" placeholder="Écrivez votre message ici..." required></textarea>
-        <div class="counter"><span id="count">0</span> / 1000</div>
-      </div>
-      <div class="notice">ⓘ Nous vous répondrons dans les plus brefs délais.<br>Pour un rendez-vous (réparation, mise à niveau ou service à domicile), utilisez plutôt la fiche de rendez-vous appropriée.</div>
-      <div class="send">
-        <div class="privacy">🔒 Vos informations sont confidentielles.</div>
-        <button class="cta" type="submit" style="border:0;color:white;cursor:pointer">Envoyer mon message →</button>
-      </div>
-    </form>
-  </section>
+<aside class="card">
+<div class="contact-item">
+<div class="contact-label">✉️   Par courriel</div>
+<div class="contact-value">info@forgepcmauricie.ca</div>
+<div class="contact-note">Pour toute question générale, demande d'information ou autre sujet.</div>
+</div>
+<div class="contact-item">
+<div class="contact-label">📱   Par téléphone / SMS</div>
+<div class="contact-value">819-944-7418</div>
+<div class="contact-note">Appelez-nous ou envoyez-nous un SMS. Nous vous répondrons rapidement.</div>
+<div class="actions">
+<a class="btn primary" href="tel:+18199447418">📞 Appeler</a>
+<a class="btn" href="sms:+18199447418">💬 Envoyer un SMS</a>
+</div>
+</div>
+<div class="contact-item">
+<div class="contact-label">📍   Notre région</div>
+<div class="contact-value">Shawinigan et toute la Mauricie</div>
+<div class="contact-note">Une entreprise locale, proche de vous.</div>
+</div>
+</aside>
+<section class="card">
+<h2>✎   Formulaire de contact</h2>
+<form data-mailto="info@forgepcmauricie.ca" data-subject="Demande de contact — ForgePC Mauricie">
+<div class="row">
+<div class="field">
+<label for="nom">Nom complet <span class="req">*</span></label>
+<input id="nom" name="Nom" placeholder="Votre nom" required="" type="text"/>
+</div>
+<div class="field">
+<label for="courriel">Courriel <span class="req">*</span></label>
+<input id="courriel" name="Courriel" placeholder="votre@courriel.com" required="" type="email"/>
+</div>
+</div>
+<div class="field">
+<label for="sujet">Sujet <span class="req">*</span></label>
+<select id="sujet" name="Sujet" required="">
+<option value="">Sélectionnez un sujet</option>
+<option>Question générale</option>
+<option>Information sur un PC</option>
+<option>Question sur un service</option>
+<option>Demande d'information</option>
+<option>Partenariat / entreprise</option>
+<option>Autre</option>
+</select>
+</div>
+<div class="field">
+<label for="message">Message <span class="req">*</span></label>
+<textarea id="message" maxlength="1000" name="Message" placeholder="Écrivez votre message ici..." required=""></textarea>
+<div class="counter"><span id="count">0</span> / 1000</div>
+</div>
+<div class="notice">ⓘ Nous vous répondrons dans les plus brefs délais.<br/>Pour un rendez-vous (réparation, mise à niveau ou service à domicile), utilisez plutôt la fiche de rendez-vous appropriée.</div>
+<div class="send">
+<div class="privacy">🔒 Vos informations sont confidentielles.</div>
+<button class="cta" style="border:0;color:white;cursor:pointer" type="submit">Envoyer mon message →</button>
+</div>
+</form>
+</section>
 </main>
-
 <footer class="site-footer">
-  <div class="footer-logo"><img src="/Assets/logo.png" alt="ForgePC Mauricie"></div>
-  <div class="footer-location">📍 Shawinigan et toute la Mauricie</div>
-  <div class="footer-slogan">Votre technologie, notre expertise.</div>
-  <div class="footer-copy">© 2026 ForgePC Mauricie</div>
+<div class="footer-logo"><img alt="ForgePC Mauricie" src="/Assets/logo.png"/></div>
+<div class="footer-location">📍 Shawinigan et toute la Mauricie</div>
+<div class="footer-slogan">Votre technologie, notre expertise.</div>
+<div class="footer-copy">© 2026 ForgePC Mauricie</div>
 </footer>
-
 <script>
 const message=document.getElementById('message'), count=document.getElementById('count');
 message.addEventListener('input',()=>count.textContent=message.value.length);

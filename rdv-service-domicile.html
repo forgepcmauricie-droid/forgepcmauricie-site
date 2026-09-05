@@ -1,9 +1,10 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="fr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Demande de rendez-vous pour un service informatique à domicile avec ForgePC Mauricie.">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Demande de rendez-vous pour un service informatique à domicile avec ForgePC Mauricie." name="description"/>
 <title>Service à domicile — ForgePC Mauricie</title>
 <style>
 :root{
@@ -353,178 +354,164 @@ img { max-width:100%; }
 /* Empêche certains calques décoratifs de doubler visuellement le texte */
 .hero, .story, .values, .bottom, main, section { isolation:isolate; }
 </style>
-<link rel="stylesheet" href="/Assets/global-fixes.css">
+<link href="/Assets/global-fixes.css" rel="stylesheet"/>
 </head>
 <body>
-
 <header>
-  <div class="container nav">
-    <a href="index.html" aria-label="ForgePC Mauricie">
-      <img class="logo" src="/Assets/logo.png" alt="ForgePC Mauricie">
-    </a>
-    <nav id="mainNav">
-      <a href="index.html">ACCUEIL</a>
-      <a href="inventaire.html">INVENTAIRE</a>
-      <a href="services.html">SERVICES</a>
-      <a href="a-propos.html">À PROPOS</a>
-      <a href="contact.html">CONTACT</a>
-    </nav>
-    <a class="nav-cta" href="#formulaire">NOUS CONTACTER →</a>
-    <button class="menu" id="menuBtn" aria-label="Ouvrir le menu">☰</button>
-  </div>
+<div class="container nav">
+<a aria-label="ForgePC Mauricie" href="index.html">
+<img alt="ForgePC Mauricie" class="logo" src="/Assets/logo.png"/>
+</a>
+<nav id="mainNav">
+<a href="index.html">ACCUEIL</a>
+<a href="inventaire.html">INVENTAIRE</a>
+<div class="nav-services">
+<button aria-expanded="false" class="services-toggle" type="button">SERVICES <span aria-hidden="true">⌄</span></button>
+<div class="services-submenu">
+<a href="forgepc_diagnostic.html">RÉPARATIONS</a>
+<a href="mise-a-niveau.html">MISES À NIVEAU</a>
+<a href="rdv-service-domicile.html">SERVICE À DOMICILE</a>
+</div>
+</div>
+<a href="a-propos.html">À PROPOS</a>
+<a href="contact.html">CONTACT</a>
+</nav>
+<button aria-label="Ouvrir le menu" class="menu" id="menuBtn">☰</button>
+</div>
 </header>
-
 <section class="hero">
-  <div class="container hero-inner">
-    <div class="hero-copy">
-      <div class="kicker">🏠 Service à domicile</div>
-      <h1>L’informatique <span>chez vous</span></h1>
-      <p class="lead">
+<div class="container hero-inner">
+<div class="hero-copy">
+<div class="kicker">🏠 Service à domicile</div>
+<h1>L’informatique <span>chez vous</span></h1>
+<p class="lead">
         Nous nous déplaçons à votre domicile en Mauricie et environs pour vous aider
         avec vos problèmes informatiques, l’installation de vos appareils, la configuration
         ou toute autre demande.
       </p>
-      <div class="features">
-        <div class="feature"><span class="icon">🔧</span>Service professionnel</div>
-        <div class="feature"><span class="icon">📍</span>Mauricie et environs</div>
-        <div class="feature"><span class="icon">👤</span>Service personnalisé</div>
-        <div class="feature"><span class="icon">👍</span>Satisfaction garantie</div>
-      </div>
-    </div>
-    
-  </div>
+<div class="features">
+<div class="feature"><span class="icon">🔧</span>Service professionnel</div>
+<div class="feature"><span class="icon">📍</span>Mauricie et environs</div>
+<div class="feature"><span class="icon">👤</span>Service personnalisé</div>
+<div class="feature"><span class="icon">👍</span>Satisfaction garantie</div>
+</div>
+</div>
+</div>
 </section>
-
 <section class="steps">
-  <div class="container step-row">
-    <div class="step active"><span class="step-num">1</span><div><strong>Vos informations</strong><small>Quelques renseignements</small></div></div>
-    <div class="arrow">›</div>
-    <div class="step"><span class="step-num">2</span><div><strong>Détails du service</strong><small>Votre besoin et l’adresse</small></div></div>
-    <div class="arrow">›</div>
-    <div class="step"><span class="step-num">3</span><div><strong>Confirmation</strong><small>On vous contacte rapidement</small></div></div>
-  </div>
+<div class="container step-row">
+<div class="step active"><span class="step-num">1</span><div><strong>Vos informations</strong><small>Quelques renseignements</small></div></div>
+<div class="arrow">›</div>
+<div class="step"><span class="step-num">2</span><div><strong>Détails du service</strong><small>Votre besoin et l’adresse</small></div></div>
+<div class="arrow">›</div>
+<div class="step"><span class="step-num">3</span><div><strong>Confirmation</strong><small>On vous contacte rapidement</small></div></div>
+</div>
 </section>
-
 <main id="formulaire">
 <div class="container">
 <form data-mailto="service@forgepcmauricie.ca" data-subject="Demande de service à domicile — ForgePC Mauricie">
-
-  <div class="form-grid">
-
-    <section class="card">
-      <h2><span class="icon">👤</span>Vos coordonnées</h2>
-      <div class="field">
-        <label for="nom">Nom complet <span class="req">*</span></label>
-        <input id="nom" name="Nom complet" type="text" autocomplete="name" placeholder="Votre nom" required>
-      </div>
-      <div class="field">
-        <label for="telephone">Téléphone <span class="req">*</span></label>
-        <input id="telephone" name="Téléphone" type="tel" autocomplete="tel" placeholder="(XXX) XXX-XXXX" required>
-      </div>
-      <div class="field">
-        <label for="courriel">Courriel <span class="req">*</span></label>
-        <input id="courriel" name="Courriel" type="email" autocomplete="email" placeholder="votre@courriel.com" required>
-      </div>
-    </section>
-
-    <section class="card service">
-      <h2><span class="icon">🔧</span>Détails du service</h2>
-
-      <div class="field">
-        <label>Type de service demandé <span class="req">*</span></label>
-        <div class="service-list">
-          <label class="check"><input type="checkbox" name="Service" value="Diagnostic / problème informatique">Diagnostic / problème informatique</label>
-          <label class="check"><input type="checkbox" name="Service" value="Installation de Windows">Installation de Windows</label>
-          <label class="check"><input type="checkbox" name="Service" value="Configuration d’un nouvel ordinateur">Configuration d’un nouvel ordinateur</label>
-          <label class="check"><input type="checkbox" name="Service" value="Installation d’imprimante / Wi-Fi">Installation d’imprimante / Wi-Fi</label>
-          <label class="check"><input type="checkbox" name="Service" value="Réseau et Internet à la maison">Réseau et Internet à la maison</label>
-          <label class="check"><input type="checkbox" name="Service" value="Transfert / récupération de données">Transfert / récupération de données</label>
-          <label class="check"><input type="checkbox" name="Service" value="Mise à niveau">Mise à niveau (ajout de mémoire, SSD, etc.)</label>
-          <label class="check"><input type="checkbox" name="Service" value="Nettoyage et optimisation">Nettoyage et optimisation</label>
-          <label class="check"><input type="checkbox" name="Service" value="Support et formation">Support et formation</label>
-          <label class="check"><input type="checkbox" name="Service" value="Autre">Autre (précisez dans la description)</label>
-        </div>
-      </div>
-
-      <div class="field">
-        <label for="description">Description de votre demande <span class="req">*</span></label>
-        <textarea id="description" name="Description de la demande" placeholder="Décrivez votre problème ou votre besoin en détail...&#10;Ex. : ordinateur lent, problème d’impression, installation, etc." required></textarea>
-      </div>
-
-      <div class="field">
-        <label>Moment souhaité <span class="req">*</span></label>
-        <div class="radio-row">
-          <label class="radio"><input type="radio" name="Moment souhaité" value="Matin" required>Matin</label>
-          <label class="radio"><input type="radio" name="Moment souhaité" value="Après-midi">Après-midi</label>
-        </div>
-      </div>
-
-      <div class="field">
-        <label for="supplement">Informations supplémentaires <small>(optionnel)</small></label>
-        <textarea id="supplement" name="Informations supplémentaires" placeholder="Ex. : étage, stationnement, code d’accès, autres détails pertinents, etc."></textarea>
-      </div>
-    </section>
-
-    <section class="card">
-      <h2><span class="icon">📍</span>Adresse du service</h2>
-      <div class="field">
-        <label for="adresse">Adresse complète <span class="req">*</span></label>
-        <input id="adresse" name="Adresse complète" type="text" autocomplete="street-address" placeholder="Ex. : 123 rue Principale" required>
-      </div>
-      <div class="field">
-        <label for="ville">Ville <span class="req">*</span></label>
-        <input id="ville" name="Ville" type="text" autocomplete="address-level2" placeholder="Ex. : Shawinigan" required>
-      </div>
-      <div class="field">
-        <label for="secteur">Secteur <small>(optionnel)</small></label>
-        <input id="secteur" name="Secteur" type="text" placeholder="Ex. : Shawinigan-Sud, Grand-Mère, etc.">
-      </div>
-
-      <div class="note info">
-        <span class="icon">ⓘ</span>
-        <div>
-          <b>Nous desservons Shawinigan et les environs.</b><br>
-          La disponibilité du service dépend de la distance.<br>
+<div class="form-grid">
+<section class="card">
+<h2><span class="icon">👤</span>Vos coordonnées</h2>
+<div class="field">
+<label for="nom">Nom complet <span class="req">*</span></label>
+<input autocomplete="name" id="nom" name="Nom complet" placeholder="Votre nom" required="" type="text"/>
+</div>
+<div class="field">
+<label for="telephone">Téléphone <span class="req">*</span></label>
+<input autocomplete="tel" id="telephone" name="Téléphone" placeholder="(XXX) XXX-XXXX" required="" type="tel"/>
+</div>
+<div class="field">
+<label for="courriel">Courriel <span class="req">*</span></label>
+<input autocomplete="email" id="courriel" name="Courriel" placeholder="votre@courriel.com" required="" type="email"/>
+</div>
+</section>
+<section class="card service">
+<h2><span class="icon">🔧</span>Détails du service</h2>
+<div class="field">
+<label>Type de service demandé <span class="req">*</span></label>
+<div class="service-list">
+<label class="check"><input name="Service" type="checkbox" value="Diagnostic / problème informatique"/>Diagnostic / problème informatique</label>
+<label class="check"><input name="Service" type="checkbox" value="Installation de Windows"/>Installation de Windows</label>
+<label class="check"><input name="Service" type="checkbox" value="Configuration d’un nouvel ordinateur"/>Configuration d’un nouvel ordinateur</label>
+<label class="check"><input name="Service" type="checkbox" value="Installation d’imprimante / Wi-Fi"/>Installation d’imprimante / Wi-Fi</label>
+<label class="check"><input name="Service" type="checkbox" value="Réseau et Internet à la maison"/>Réseau et Internet à la maison</label>
+<label class="check"><input name="Service" type="checkbox" value="Transfert / récupération de données"/>Transfert / récupération de données</label>
+<label class="check"><input name="Service" type="checkbox" value="Mise à niveau"/>Mise à niveau (ajout de mémoire, SSD, etc.)</label>
+<label class="check"><input name="Service" type="checkbox" value="Nettoyage et optimisation"/>Nettoyage et optimisation</label>
+<label class="check"><input name="Service" type="checkbox" value="Support et formation"/>Support et formation</label>
+<label class="check"><input name="Service" type="checkbox" value="Autre"/>Autre (précisez dans la description)</label>
+</div>
+</div>
+<div class="field">
+<label for="description">Description de votre demande <span class="req">*</span></label>
+<textarea id="description" name="Description de la demande" placeholder="Décrivez votre problème ou votre besoin en détail...
+Ex. : ordinateur lent, problème d’impression, installation, etc." required=""></textarea>
+</div>
+<div class="field">
+<label>Moment souhaité <span class="req">*</span></label>
+<div class="radio-row">
+<label class="radio"><input name="Moment souhaité" required="" type="radio" value="Matin"/>Matin</label>
+<label class="radio"><input name="Moment souhaité" type="radio" value="Après-midi"/>Après-midi</label>
+</div>
+</div>
+<div class="field">
+<label for="supplement">Informations supplémentaires <small>(optionnel)</small></label>
+<textarea id="supplement" name="Informations supplémentaires" placeholder="Ex. : étage, stationnement, code d’accès, autres détails pertinents, etc."></textarea>
+</div>
+</section>
+<section class="card">
+<h2><span class="icon">📍</span>Adresse du service</h2>
+<div class="field">
+<label for="adresse">Adresse complète <span class="req">*</span></label>
+<input autocomplete="street-address" id="adresse" name="Adresse complète" placeholder="Ex. : 123 rue Principale" required="" type="text"/>
+</div>
+<div class="field">
+<label for="ville">Ville <span class="req">*</span></label>
+<input autocomplete="address-level2" id="ville" name="Ville" placeholder="Ex. : Shawinigan" required="" type="text"/>
+</div>
+<div class="field">
+<label for="secteur">Secteur <small>(optionnel)</small></label>
+<input id="secteur" name="Secteur" placeholder="Ex. : Shawinigan-Sud, Grand-Mère, etc." type="text"/>
+</div>
+<div class="note info">
+<span class="icon">ⓘ</span>
+<div>
+<b>Nous desservons Shawinigan et les environs.</b><br/>
+          La disponibilité du service dépend de la distance.<br/>
           Nous vous contacterons pour confirmer.
         </div>
-      </div>
-    </section>
-
-  </div>
-
-  <div class="bottom">
-    <section class="card">
-      <h2><span class="icon">✓</span>Bon à savoir</h2>
-      <ul class="bullets">
-        <li>Nous vous contactons rapidement pour confirmer votre demande.</li>
-        <li>Les déplacements sont planifiés selon la distance.</li>
-        <li>Les prix varient selon le type de service et la distance.</li>
-        <li>Aucune obligation après la prise de contact.</li>
-        <li>Service professionnel et courtois.</li>
-      </ul>
-    </section>
-
-    <section class="card private">
+</div>
+</section>
+</div>
+<div class="bottom">
+<section class="card">
+<h2><span class="icon">✓</span>Bon à savoir</h2>
+<ul class="bullets">
+<li>Nous vous contactons rapidement pour confirmer votre demande.</li>
+<li>Les déplacements sont planifiés selon la distance.</li>
+<li>Les prix varient selon le type de service et la distance.</li>
+<li>Aucune obligation après la prise de contact.</li>
+<li>Service professionnel et courtois.</li>
+</ul>
+</section>
+<section class="card private">
       🔒 Vos informations sont confidentielles.
     </section>
-
-    <section class="card actions">
-      <button class="btn primary" type="submit">Envoyer ma demande →</button>
-      <div class="disclaimer">L’envoi de la demande ne confirme pas automatiquement un rendez-vous.</div>
-    </section>
-  </div>
-
+<section class="card actions">
+<button class="btn primary" type="submit">Envoyer ma demande →</button>
+<div class="disclaimer">L’envoi de la demande ne confirme pas automatiquement un rendez-vous.</div>
+</section>
+</div>
 </form>
 </div>
 </main>
-
 <footer class="site-footer">
-  <div class="footer-logo"><img src="/Assets/logo.png" alt="ForgePC Mauricie"></div>
-  <div class="footer-location">📍 Shawinigan et toute la Mauricie</div>
-  <div class="footer-slogan">Votre technologie, notre expertise.</div>
-  <div class="footer-copy">© 2026 ForgePC Mauricie</div>
+<div class="footer-logo"><img alt="ForgePC Mauricie" src="/Assets/logo.png"/></div>
+<div class="footer-location">📍 Shawinigan et toute la Mauricie</div>
+<div class="footer-slogan">Votre technologie, notre expertise.</div>
+<div class="footer-copy">© 2026 ForgePC Mauricie</div>
 </footer>
-
 <script>
 document.querySelector('form').addEventListener('submit', function(e){
   const services=[...document.querySelectorAll('input[name="Service"]:checked')];

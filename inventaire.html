@@ -1,9 +1,10 @@
 <!DOCTYPE html>
+
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Inventaire des PC remis à neuf — ForgePC Mauricie">
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Inventaire des PC remis à neuf — ForgePC Mauricie" name="description"/>
 <title>Inventaire | ForgePC Mauricie</title>
 <style>
 :root{
@@ -298,51 +299,52 @@ img { max-width:100%; }
 /* Empêche certains calques décoratifs de doubler visuellement le texte */
 .hero, .story, .values, .bottom, main, section { isolation:isolate; }
 </style>
-<link rel="stylesheet" href="/Assets/global-fixes.css">
+<link href="/Assets/global-fixes.css" rel="stylesheet"/>
 </head>
 <body>
-
 <header>
-  <div class="container nav">
-    <a href="index.html" aria-label="ForgePC Mauricie">
-      <img class="brand" src="/Assets/logo.png" alt="ForgePC Mauricie">
-    </a>
-    <nav aria-label="Navigation principale">
-      <a href="index.html">ACCUEIL</a>
-      <a class="active" href="inventaire.html">INVENTAIRE</a>
-      <a href="services.html">SERVICES</a>
-      <a href="a-propos.html">À PROPOS</a>
-      <a href="contact.html">CONTACT</a>
-    </nav>
-    <a class="btn primary navcta" href="rdv-service-domicile.html">NOUS CONTACTER →</a>
-    <button class="menu" type="button" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
-  </div>
+<div class="container nav">
+<a aria-label="ForgePC Mauricie" href="index.html">
+<img alt="ForgePC Mauricie" class="brand" src="/Assets/logo.png"/>
+</a>
+<nav aria-label="Navigation principale">
+<a href="index.html">ACCUEIL</a>
+<a class="active" href="inventaire.html">INVENTAIRE</a>
+<div class="nav-services">
+<button aria-expanded="false" class="services-toggle" type="button">SERVICES <span aria-hidden="true">⌄</span></button>
+<div class="services-submenu">
+<a href="forgepc_diagnostic.html">RÉPARATIONS</a>
+<a href="mise-a-niveau.html">MISES À NIVEAU</a>
+<a href="rdv-service-domicile.html">SERVICE À DOMICILE</a>
+</div>
+</div>
+<a href="a-propos.html">À PROPOS</a>
+<a href="contact.html">CONTACT</a>
+</nav>
+<button aria-expanded="false" aria-label="Ouvrir le menu" class="menu" type="button">☰</button>
+</div>
 </header>
-
 <main>
 <section class="inventory-section">
-  <div class="container">
-    <div class="inventory-hero">
-      <div class="kicker">Inventaire</div>
-      <h1>PC remis à neuf</h1>
-      <p>Des ordinateurs préparés avec soin, testés et prêts à utiliser. Cliquez sur une unité pour consulter sa fiche détaillée.</p>
-    </div>
-
-    <!-- VISUEL CONSERVÉ : ne pas modifier ce bloc de chargement. -->
-    <div id="inventory-list">
-      <div class="msg">Chargement de l'inventaire…</div>
-    </div>
-  </div>
+<div class="container">
+<div class="inventory-hero">
+<div class="kicker">Inventaire</div>
+<h1>PC remis à neuf</h1>
+<p>Des ordinateurs préparés avec soin, testés et prêts à utiliser. Cliquez sur une unité pour consulter sa fiche détaillée.</p>
+</div>
+<!-- VISUEL CONSERVÉ : ne pas modifier ce bloc de chargement. -->
+<div id="inventory-list">
+<div class="msg">Chargement de l'inventaire…</div>
+</div>
+</div>
 </section>
 </main>
-
 <footer class="site-footer">
-  <div class="footer-logo"><img src="/Assets/logo.png" alt="ForgePC Mauricie"></div>
-  <div class="footer-location">📍 Shawinigan et toute la Mauricie</div>
-  <div class="footer-slogan">Votre technologie, notre expertise.</div>
-  <div class="footer-copy">© 2026 ForgePC Mauricie</div>
+<div class="footer-logo"><img alt="ForgePC Mauricie" src="/Assets/logo.png"/></div>
+<div class="footer-location">📍 Shawinigan et toute la Mauricie</div>
+<div class="footer-slogan">Votre technologie, notre expertise.</div>
+<div class="footer-copy">© 2026 ForgePC Mauricie</div>
 </footer>
-
 <script>
 const SHEET_ID="15llqGhrLL9I6SFxyFrxfbNY2ZuBXDswok_BwxPR7JqU";
 const SHEET_NAME="Inventaire";

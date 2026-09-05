@@ -1,8 +1,9 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="fr-CA">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
 <title>Prendre rendez-vous — Vente | ForgePC Mauricie</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&display=swap');
@@ -250,101 +251,102 @@ img { max-width:100%; }
 /* Empêche certains calques décoratifs de doubler visuellement le texte */
 .hero, .story, .values, .bottom, main, section { isolation:isolate; }
 </style>
-<link rel="stylesheet" href="/Assets/global-fixes.css">
+<link href="/Assets/global-fixes.css" rel="stylesheet"/>
 </head>
 <body>
 <header>
-  <div class="container nav">
-    <a class="brand-link" href="index.html" aria-label="ForgePC Mauricie">
-      <img class="brand" src="/Assets/logo.png" alt="ForgePC Mauricie">
-    </a>
-    <button class="menu" aria-label="Ouvrir le menu">☰</button>
-    <nav>
-      <a href="index.html">Accueil</a>
-      <a href="inventaire.html">Inventaire</a>
-      <a href="services.html">Services</a>
-      <a href="a-propos.html">À propos</a>
-      <a href="contact.html">Contact</a>
-      <a class="cta" href="inventaire.html">Voir l'inventaire →</a>
-    </nav>
-  </div>
+<div class="container nav">
+<a aria-label="ForgePC Mauricie" class="brand-link" href="index.html">
+<img alt="ForgePC Mauricie" class="brand" src="/Assets/logo.png"/>
+</a>
+<button aria-label="Ouvrir le menu" class="menu">☰</button>
+<nav>
+<a href="index.html">Accueil</a>
+<a href="inventaire.html">Inventaire</a>
+<div class="nav-services">
+<button aria-expanded="false" class="services-toggle" type="button">SERVICES <span aria-hidden="true">⌄</span></button>
+<div class="services-submenu">
+<a href="forgepc_diagnostic.html">RÉPARATIONS</a>
+<a href="mise-a-niveau.html">MISES À NIVEAU</a>
+<a href="rdv-service-domicile.html">SERVICE À DOMICILE</a>
+</div>
+</div>
+<a href="a-propos.html">À propos</a>
+<a href="contact.html">Contact</a>
+
+</nav>
+</div>
 </header>
-
 <section class="hero">
-  <div class="container hero-inner">
-    <div>
-      <div class="crumb">Accueil &nbsp;›&nbsp; Inventaire &nbsp;›&nbsp; <span>Rendez-vous vente</span></div>
-      <div class="kicker">Vente de PC • ForgePC Mauricie</div>
-      <h1>Prendre rendez-vous<br>pour l'achat de <span>ce PC</span></h1>
-      <p>Réservez, posez vos questions ou planifiez une visite pour le PC qui vous intéresse. Nous vous contacterons rapidement.</p>
-      <div class="benefits">
-        <div class="benefit"><b>●</b> Réponse rapide</div>
-        <div class="benefit"><b>♟</b> Approche humaine</div>
-        <div class="benefit"><b>✓</b> Achat en confiance</div>
-      </div>
-    </div>
-  </div>
+<div class="container hero-inner">
+<div>
+<div class="crumb">Accueil  ›  Inventaire  ›  <span>Rendez-vous vente</span></div>
+<div class="kicker">Vente de PC • ForgePC Mauricie</div>
+<h1>Prendre rendez-vous<br/>pour l'achat de <span>ce PC</span></h1>
+<p>Réservez, posez vos questions ou planifiez une visite pour le PC qui vous intéresse. Nous vous contacterons rapidement.</p>
+<div class="benefits">
+<div class="benefit"><b>●</b> Réponse rapide</div>
+<div class="benefit"><b>♟</b> Approche humaine</div>
+<div class="benefit"><b>✓</b> Achat en confiance</div>
+</div>
+</div>
+</div>
 </section>
-
 <main class="page">
-  <div class="container layout">
-    <aside>
-      <section class="card">
-        <h2>PC qui vous intéresse</h2>
-        <div id="productVisual"><div class="no-photo">Chargement du PC…</div></div>
-        <div class="pc-meta" id="productMeta"></div>
-        <a id="productLink" class="back" href="inventaire.html">Voir l'inventaire →</a>
-        <div class="note">
-          <strong>Important</strong>
+<div class="container layout">
+<aside>
+<section class="card">
+<h2>PC qui vous intéresse</h2>
+<div id="productVisual"><div class="no-photo">Chargement du PC…</div></div>
+<div class="pc-meta" id="productMeta"></div>
+<a class="back" href="inventaire.html" id="productLink">Voir l'inventaire →</a>
+<div class="note">
+<strong>Important</strong>
           Ce formulaire ne constitue pas une réservation définitive. Nous vous contacterons pour confirmer la disponibilité du PC, répondre à vos questions et planifier le rendez-vous.
         </div>
-      </section>
-    </aside>
-
-    <section class="card">
-      <h2>Formulaire de rendez-vous (vente)</h2>
-      <div id="success" class="success">
-        <h2>Votre demande est prête.</h2>
-        <p>Votre logiciel de courriel va s'ouvrir avec la demande adressée à <strong>ventes@forgepcmauricie.ca</strong>. Vérifiez le message puis envoyez-le.</p>
-      </div>
-
-      <form id="salesForm">
-        <div class="form-grid">
-          <div class="field"><label for="name">Nom complet <em>*</em></label><input id="name" required placeholder="Votre nom"></div>
-          <div class="field"><label for="phone">Téléphone <em>*</em></label><input id="phone" required placeholder="(819) 123-4567"></div>
-          <div class="field full"><label for="email">Courriel <em>*</em></label><input id="email" type="email" required placeholder="votre@courriel.com"></div>
-          <div class="field full">
-            <label>Type de demande <em>*</em></label>
-            <div class="choice-grid">
-              <label class="choice"><input type="radio" name="type" value="Je veux acheter ce PC" checked> Je veux acheter ce PC</label>
-              <label class="choice"><input type="radio" name="type" value="Je veux venir le voir"> Je veux venir le voir</label>
-              <label class="choice"><input type="radio" name="type" value="J'ai des questions"> J'ai des questions</label>
-              <label class="choice"><input type="radio" name="type" value="Autre"> Autre</label>
-            </div>
-          </div>
-          <div class="field full"><label for="message">Message (optionnel)</label><textarea id="message" maxlength="1000" placeholder="Écrivez votre message ici...&#10;Ex. : disponibilité, accessoires inclus, possibilité d'essai, etc."></textarea></div>
-        </div>
-        <div class="privacy">🔒 Vos informations sont confidentielles.</div>
-        <button class="submit" type="submit">✈ ENVOYER MA DEMANDE →<small>à ventes@forgepcmauricie.ca</small></button>
-      </form>
-    </section>
-  </div>
-
-  <div class="container features">
-    <div class="feature"><b>●</b><strong>Service personnalisé</strong><p>On prend le temps de vous conseiller.</p></div>
-    <div class="feature"><b>✓</b><strong>Achat en confiance</strong><p>Un PC testé et prêt à utiliser.</p></div>
-    <div class="feature"><b>⌖</b><strong>Visite ou rendez-vous</strong><p>À Shawinigan et environs.</p></div>
-    <div class="feature"><b>◉</b><strong>Réponse rapide</strong><p>Nous vous contactons rapidement.</p></div>
-  </div>
+</section>
+</aside>
+<section class="card">
+<h2>Formulaire de rendez-vous (vente)</h2>
+<div class="success" id="success">
+<h2>Votre demande est prête.</h2>
+<p>Votre logiciel de courriel va s'ouvrir avec la demande adressée à <strong>ventes@forgepcmauricie.ca</strong>. Vérifiez le message puis envoyez-le.</p>
+</div>
+<form id="salesForm">
+<div class="form-grid">
+<div class="field"><label for="name">Nom complet <em>*</em></label><input id="name" placeholder="Votre nom" required=""/></div>
+<div class="field"><label for="phone">Téléphone <em>*</em></label><input id="phone" placeholder="(819) 123-4567" required=""/></div>
+<div class="field full"><label for="email">Courriel <em>*</em></label><input id="email" placeholder="votre@courriel.com" required="" type="email"/></div>
+<div class="field full">
+<label>Type de demande <em>*</em></label>
+<div class="choice-grid">
+<label class="choice"><input checked="" name="type" type="radio" value="Je veux acheter ce PC"/> Je veux acheter ce PC</label>
+<label class="choice"><input name="type" type="radio" value="Je veux venir le voir"/> Je veux venir le voir</label>
+<label class="choice"><input name="type" type="radio" value="J'ai des questions"/> J'ai des questions</label>
+<label class="choice"><input name="type" type="radio" value="Autre"/> Autre</label>
+</div>
+</div>
+<div class="field full"><label for="message">Message (optionnel)</label><textarea id="message" maxlength="1000" placeholder="Écrivez votre message ici...
+Ex. : disponibilité, accessoires inclus, possibilité d'essai, etc."></textarea></div>
+</div>
+<div class="privacy">🔒 Vos informations sont confidentielles.</div>
+<button class="submit" type="submit">✈ ENVOYER MA DEMANDE →<small>à ventes@forgepcmauricie.ca</small></button>
+</form>
+</section>
+</div>
+<div class="container features">
+<div class="feature"><b>●</b><strong>Service personnalisé</strong><p>On prend le temps de vous conseiller.</p></div>
+<div class="feature"><b>✓</b><strong>Achat en confiance</strong><p>Un PC testé et prêt à utiliser.</p></div>
+<div class="feature"><b>⌖</b><strong>Visite ou rendez-vous</strong><p>À Shawinigan et environs.</p></div>
+<div class="feature"><b>◉</b><strong>Réponse rapide</strong><p>Nous vous contactons rapidement.</p></div>
+</div>
 </main>
-
 <footer class="site-footer">
-  <div class="footer-logo"><img src="/Assets/logo.png" alt="ForgePC Mauricie"></div>
-  <div class="footer-location">📍 Shawinigan et toute la Mauricie</div>
-  <div class="footer-slogan">Votre technologie, notre expertise.</div>
-  <div class="footer-copy">© 2026 ForgePC Mauricie</div>
+<div class="footer-logo"><img alt="ForgePC Mauricie" src="/Assets/logo.png"/></div>
+<div class="footer-location">📍 Shawinigan et toute la Mauricie</div>
+<div class="footer-slogan">Votre technologie, notre expertise.</div>
+<div class="footer-copy">© 2026 ForgePC Mauricie</div>
 </footer>
-
 <script>
 const SHEET_ID="15llqGhrLL9I6SFxyFrxfbNY2ZuBXDswok_BwxPR7JqU";
 const SHEET_NAME="Inventaire";

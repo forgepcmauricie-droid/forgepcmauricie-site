@@ -1,8 +1,9 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="fr-CA">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
 <title>PC | ForgePC Mauricie</title>
 <style>
 :root{--orange:#ff6500;--bg:#08090a;--panel:#101214;--border:#30353a;--text:#f5f5f5;--muted:#b8bec3;--max:1180px}
@@ -279,46 +280,47 @@ img { max-width:100%; }
 /* Empêche certains calques décoratifs de doubler visuellement le texte */
 .hero, .story, .values, .bottom, main, section { isolation:isolate; }
 </style>
-<link rel="stylesheet" href="/Assets/global-fixes.css">
+<link href="/Assets/global-fixes.css" rel="stylesheet"/>
 </head>
 <body>
-
 <header>
-  <div class="container nav">
-    <a href="index.html" aria-label="ForgePC Mauricie" class="brand-link">
-      <img class="brand" id="forgepcLogo" src="/Assets/logo.png" alt="ForgePC Mauricie"
-           onerror="tryNextLogo(this)">
-      <span class="brand-fallback">FORGEPC <small>MAURICIE</small></span>
-    </a>
-    <button class="menu" aria-label="Ouvrir le menu">☰</button>
-    <nav>
-      <a href="index.html">Accueil</a>
-      <a href="inventaire.html">Inventaire</a>
-      <a href="services.html">Services</a>
-      <a href="a-propos.html">À propos</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
-
-<main class="page">
-  <div class="container" id="app">
-    <div class="error">Chargement de la fiche…</div>
-  </div>
-</main>
-
-<footer class="site-footer">
-  <div class="footer-logo"><img src="/Assets/logo.png" alt="ForgePC Mauricie"></div>
-  <div class="footer-location">📍 Shawinigan et toute la Mauricie</div>
-  <div class="footer-slogan">Votre technologie, notre expertise.</div>
-  <div class="footer-copy">© 2026 ForgePC Mauricie</div>
-</footer>
-
-<div class="lightbox" id="lightbox" onclick="if(event.target===this)closeLightbox()">
-  <button class="close" onclick="closeLightbox()">✕</button>
-  <img id="lightboxImg" alt="Photo du PC">
+<div class="container nav">
+<a aria-label="ForgePC Mauricie" class="brand-link" href="index.html">
+<img alt="ForgePC Mauricie" class="brand" id="forgepcLogo" onerror="tryNextLogo(this)" src="/Assets/logo.png"/>
+<span class="brand-fallback">FORGEPC <small>MAURICIE</small></span>
+</a>
+<button aria-label="Ouvrir le menu" class="menu">☰</button>
+<nav>
+<a href="index.html">Accueil</a>
+<a href="inventaire.html">Inventaire</a>
+<div class="nav-services">
+<button aria-expanded="false" class="services-toggle" type="button">SERVICES <span aria-hidden="true">⌄</span></button>
+<div class="services-submenu">
+<a href="forgepc_diagnostic.html">RÉPARATIONS</a>
+<a href="mise-a-niveau.html">MISES À NIVEAU</a>
+<a href="rdv-service-domicile.html">SERVICE À DOMICILE</a>
 </div>
-
+</div>
+<a href="a-propos.html">À propos</a>
+<a href="contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="page">
+<div class="container" id="app">
+<div class="error">Chargement de la fiche…</div>
+</div>
+</main>
+<footer class="site-footer">
+<div class="footer-logo"><img alt="ForgePC Mauricie" src="/Assets/logo.png"/></div>
+<div class="footer-location">📍 Shawinigan et toute la Mauricie</div>
+<div class="footer-slogan">Votre technologie, notre expertise.</div>
+<div class="footer-copy">© 2026 ForgePC Mauricie</div>
+</footer>
+<div class="lightbox" id="lightbox" onclick="if(event.target===this)closeLightbox()">
+<button class="close" onclick="closeLightbox()">✕</button>
+<img alt="Photo du PC" id="lightboxImg"/>
+</div>
 <script>
 const SHEET_ID="15llqGhrLL9I6SFxyFrxfbNY2ZuBXDswok_BwxPR7JqU";
 const SHEET_NAME="Inventaire";
