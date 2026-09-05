@@ -39,9 +39,9 @@ h1 span{color:var(--orange)}
 .title-line{display:flex;justify-content:center;align-items:center;gap:20px}
 .title-line:before,.title-line:after{content:"";width:95px;height:3px;background:var(--orange)}
 
-.cards{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.cards{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
 .card{background:#041014;border:1px solid #34454b;border-radius:5px;overflow:hidden}
-.card img{width:100%;height:135px;object-fit:cover;display:block}
+.card img{width:100%;height:135px;object-fit:cover;object-position:center;display:block}
 .card-body{padding:11px 14px 13px}
 .card h3{margin:0 0 7px;font-size:16px;text-transform:uppercase}
 .card p{margin:0 0 13px;color:var(--muted);font-size:12px;line-height:1.35;min-height:34px}
@@ -59,12 +59,12 @@ h1 span{color:var(--orange)}
 .info h3{font-size:15px;text-transform:uppercase;margin:0 0 9px}
 .info h3 i{color:var(--orange);font-style:normal;font-size:26px;margin-right:8px}
 .info p{font-size:12px;color:var(--muted);line-height:1.4;margin:0 0 10px}
-.map{height:92px;background:url('/Assets/service-home.jpg') center/cover;border-radius:3px;margin-bottom:8px;opacity:.9}
+.map{height:92px;background:url('/Assets/services-map.jpg') center/cover;border-radius:3px;margin-bottom:8px;opacity:.9}
 .faq{display:grid;gap:0}
 .faq div{border-bottom:1px solid #34454b;padding:5px 0;font-size:11px;display:flex;justify-content:space-between}
 .faq b{color:var(--orange);font-size:18px}
 
-.cta{background:linear-gradient(90deg,rgba(2,9,11,.88),rgba(2,9,11,.68)),url('/Assets/service-pc.jpg') center/cover;border-bottom:1px solid var(--line)}
+.cta{background:linear-gradient(90deg,rgba(2,9,11,.88),rgba(2,9,11,.68)),url('/Assets/services-cta.jpg') center/cover;border-bottom:1px solid var(--line)}
 .cta-inner{min-height:95px;display:flex;align-items:center;gap:30px}
 .cta h2{margin:0;font-size:25px}
 .cta h2 span{color:var(--orange)}
@@ -78,6 +78,7 @@ footer{background:#02090b;padding:10px 0 7px}
 .footer-bottom{border-top:1px solid #18282c;margin-top:7px;padding-top:6px;display:flex;justify-content:space-between;font-size:9px;color:#ddd}
 
 @media(max-width:800px){
+ .cards{grid-template-columns:1fr 1fr}
  .nav{height:82px} .navlinks,.contact{display:none} .menu{display:block}
  .logo{width:140px}
  .hero-inner{min-height:255px;padding:20px 0}
@@ -261,7 +262,7 @@ img { max-width:100%; }
   object-position:center !important;
 }
 .map {
-  background-size:contain !important;
+  background-size:cover !important;
   background-repeat:no-repeat !important;
   background-position:center !important;
 }
@@ -333,15 +334,7 @@ img { max-width:100%; }
 <button aria-expanded="false" aria-label="Ouvrir le menu" class="menu" type="button">☰</button>
 </div>
 </header>
-<section class="hero">
-<div class="container hero-inner">
-<div class="hero-copy" style="display:none">
-<div class="eyebrow">NOS SERVICES</div>
-<h1>DES SOLUTIONS<br/>POUR TOUS<br/><span>VOS BESOINS</span></h1>
-<p>Réparer. Améliorer. Optimiser.<br/>Ici, en Mauricie.</p>
-</div>
-</div>
-</section>
+<section class="hero" aria-label="Nos services"></section>
 <section class="section">
 <div class="container">
 <div class="title-line"><h2 class="section-title">NOS SERVICES</h2></div>
@@ -362,6 +355,10 @@ img { max-width:100%; }
 <article class="card">
 <img alt="Service à domicile" src="/Assets/services-home.jpg"/>
 <div class="card-body"><h3>⌂ SERVICE À DOMICILE</h3><p>On se déplace dans la Mauricie selon vos besoins.</p><a href="rdv-service-domicile.html">DEMANDER UN RENDEZ-VOUS →</a></div>
+</article>
+<article class="card">
+<img alt="PC gaming sur mesure" src="/Assets/services-pc.jpg"/>
+<div class="card-body"><h3>🎮 PC GAMING SUR MESURE</h3><p>Une tour gaming pensée selon vos jeux, vos besoins et votre budget.</p><a href="pc-gaming-sur-mesure.html">PRÉSENTER MON PROJET →</a></div>
 </article>
 </div>
 </div>
