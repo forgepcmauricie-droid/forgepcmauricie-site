@@ -1,10 +1,10 @@
-ForgePC Mauricie — passe finale du 4 septembre 2026
+ForgePC Mauricie — corrections du 4 septembre 2026
 
-- En-tête mobile uniformisé et logo non coupé.
-- Menu mobile uniformisé, sans sous-menu Services.
-- Services est maintenant un lien simple vers la section Services de l’accueil.
-- Fonds généraux forcés vers un noir uniforme.
-- Images de fond recadrées proprement sans débordement.
-- Image de tasse retirée de la section À propos de l’accueil et remplacée par l’image familiale approuvée.
-- Logo du footer centré et protégé contre le rognage.
-- Ancienne logique JavaScript du sous-menu Services retirée.
+- Le lien SERVICES du menu principal pointe vers services.html.
+- Le menu SERVICES conserve son sous-menu : Réparations, Mises à niveau et Service à domicile.
+- Sur mobile, le texte SERVICES mène à services.html et la flèche permet d'ouvrir les sous-liens.
+- Retour de l'image avec la tasse dans la section À propos de l'accueil, comme dans la maquette.
+- Conservation du logo officiel de la maquette : Assets/logo.png.
+- Fond général uniformisé vers le noir ForgePC.
+- Menu mobile opaque pour éviter que l'image du hero transparaisse derrière.
+- Footer renforcé pour empêcher le rognage du logo.

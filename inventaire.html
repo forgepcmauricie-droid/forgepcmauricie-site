@@ -308,7 +308,15 @@ img { max-width:100%; }
 <nav aria-label="Navigation principale" class="navlinks">
 <a href="index.html">ACCUEIL</a>
 <a class="active" href="inventaire.html">INVENTAIRE</a>
-<a href="index.html#services">SERVICES</a>
+<div class="services-nav">
+  <a class="services-link" href="services.html">SERVICES</a>
+  <button class="services-toggle" type="button" aria-expanded="false" aria-label="Afficher les services">⌄</button>
+  <div class="services-dropdown">
+    <a href="forgepc_diagnostic.html">RÉPARATIONS</a>
+    <a href="mise-a-niveau.html">MISES À NIVEAU</a>
+    <a href="rdv-service-domicile.html">SERVICE À DOMICILE</a>
+  </div>
+</div>
 <a href="a-propos.html">À PROPOS</a>
 <a href="contact.html">CONTACT</a>
 </nav>
