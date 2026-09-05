@@ -1,0 +1,15 @@
+ForgePC Mauricie — version finale de livraison
+
+Passe finale effectuée sur l’ensemble du site à partir des fichiers fournis et des maquettes finales.
+
+- Navigation corrigée : Services renvoie maintenant vers index.html#services; aucune navigation principale ne dépend de services.html.
+- Les anciennes URLs services.html restent utilisables grâce à une redirection vers la section Services de l’accueil.
+- À propos : conservation de la photo père-fille complète Assets/apropos-famille-sans-texte.jpg, sans texte intégré dans la photo et sans doublon HTML; suppression d’une fermeture HTML en trop.
+- Inventaire / fiche PC / rendez-vous vente : lecture de Google Sheets à partir de la vraie ligne d’en-têtes A3:X, afin que les numéros de stock et les fiches correspondent aux mêmes données.
+- Numéros de stock normalisés pour accepter PC-1024, 1024, PC-001, etc., sans perdre l’identifiant transmis entre inventaire, fiche PC et rendez-vous.
+- Références locales d’images et de pages vérifiées.
+- Cache-busting ajouté aux images locales pour forcer le navigateur/CDN à prendre les nouveaux visuels lors de la mise en ligne.
+- Sitemap nettoyé pour ne référencer que les pages publiques réellement présentes.
+- Menu mobile et formulaires existants conservés.
+
+Important : les formulaires utilisent mailto; l’envoi final dépend du logiciel de courriel du visiteur. Les pièces jointes ne sont pas envoyées automatiquement par mailto.
