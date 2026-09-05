@@ -1,117 +1,79 @@
-
-/* ForgePC Mauricie — correctifs finaux mobile et cohérence */
-html,body{overflow-x:hidden}
+/* ForgePC Mauricie — correctifs finaux */
+html,body{overflow-x:hidden;}
 img{max-width:100%;}
 
-/* Logo : jamais écrasé/coupé */
-header .logo, header .brand{
-  width:160px !important;
-  height:auto !important;
-  max-width:160px !important;
-  max-height:none !important;
-  object-fit:contain !important;
-  object-position:center !important;
-  display:block !important;
-}
-header .brand-link{
-  display:flex !important;
-  align-items:center !important;
-  justify-content:flex-start !important;
-  width:170px !important;
-  min-width:170px !important;
-  height:auto !important;
-}
-header .container, header .nav{
-  min-width:0 !important;
-}
+/* Header : logo toujours entier et bouton menu stable */
+header .logo,header .brand{display:block !important;width:auto !important;height:auto !important;max-width:132px !important;max-height:72px !important;object-fit:contain !important;object-position:center !important;}
+header .brand-link{display:flex !important;align-items:center !important;flex:0 0 auto !important;}
+header .container,header .nav{min-width:0 !important;}
+header .menu{appearance:none;-webkit-appearance:none;display:none;align-items:center !important;justify-content:center !important;width:46px !important;height:44px !important;min-width:46px !important;padding:0 !important;margin-left:auto !important;border:1px solid #4a565a !important;border-radius:7px !important;background:#02090b !important;color:#fff !important;font-size:25px !important;line-height:1 !important;cursor:pointer !important;position:relative !important;z-index:1002 !important;}
+
+/* Le gros CTA du header est volontairement retiré sur mobile : logo + menu seulement. */
 @media(max-width:900px){
+  header{min-width:0 !important;}
+  header .menu{display:flex !important;}
+  header .logo,header .brand{max-width:132px !important;max-height:72px !important;}
+  header nav,header .navlinks,header .links{display:none !important;position:absolute !important;left:12px !important;right:12px !important;top:calc(100% + 1px) !important;z-index:1001 !important;flex-direction:column !important;align-items:stretch !important;gap:0 !important;margin:0 !important;padding:8px !important;background:#02090b !important;border:1px solid #27363a !important;border-radius:7px !important;box-shadow:0 10px 30px rgba(0,0,0,.45) !important;}
+  header nav.open,header .navlinks.open,header .links.open{display:flex !important;}
+  header nav>a,header .navlinks>a,header .links>a,header nav .nav-services{width:100% !important;min-height:46px !important;box-sizing:border-box !important;}
+  header nav>a,header .navlinks>a,header .links>a{display:flex !important;align-items:center !important;padding:12px 10px !important;border-bottom:1px solid #27363a !important;}
+}
+
+/* Menu SERVICES : sous-menu fonctionnel sur mobile et desktop */
+.nav-services{position:relative !important;}
+.services-toggle{appearance:none;border:0;background:transparent;color:inherit;font:inherit;font-weight:inherit;cursor:pointer;}
+header nav .services-toggle,header .navlinks .services-toggle,header .links .services-toggle{display:flex;align-items:center;gap:6px;min-height:44px;padding:0 !important;}
+.services-submenu{display:none;position:absolute;top:calc(100% + 8px);left:0;min-width:220px;padding:6px;background:#02090b;border:1px solid #27363a;border-radius:7px;box-shadow:0 10px 30px rgba(0,0,0,.45);z-index:1003;}
+.nav-services.open .services-submenu{display:block;}
+.services-submenu a{display:flex;align-items:center;min-height:42px;padding:10px 12px;border-bottom:1px solid #27363a;font-size:12px;font-weight:800;}
+.services-submenu a:last-child{border-bottom:0;}
+.services-submenu a:hover{color:#ff5a00;}
+@media(max-width:900px){
+  .nav-services{display:block !important;border-bottom:1px solid #27363a;}
+  header nav .services-toggle,header .navlinks .services-toggle,header .links .services-toggle{width:100% !important;justify-content:space-between !important;min-height:46px !important;padding:12px 10px !important;}
+  .services-submenu{position:static;min-width:0;margin:0 4px 6px;padding:0;border:0;border-radius:0;box-shadow:none;background:#061114;}
+  .nav-services.open .services-submenu{display:block;}
+  .services-submenu a{padding:10px 14px;min-height:42px;}
+}
+
+/* Images : cadrage propre sans débordement */
+.story-image{background-position:center !important;background-size:cover !important;background-repeat:no-repeat !important;}
+.card img,.service-card img,.services .card img{object-position:center !important;}
+
+/* A-propos : une seule photo familiale, pas de duplication */
+.a-propos-duplicate-fix{display:none !important;}
+
+/* Footer commun */
+.site-footer{width:100% !important;box-sizing:border-box !important;margin:0 !important;padding:32px 16px 24px !important;background:#02090b !important;border-top:1px solid #27363a !important;text-align:center !important;color:#f2f3f3 !important;}
+.site-footer .footer-logo{display:flex !important;align-items:center !important;justify-content:center !important;margin:0 0 16px !important;}
+.site-footer .footer-logo img{display:block !important;width:150px !important;height:auto !important;max-width:150px !important;max-height:80px !important;object-fit:contain !important;}
+.site-footer .footer-location{margin:0 0 5px !important;font-size:16px !important;line-height:1.35 !important;}
+.site-footer .footer-slogan{margin:0 !important;color:#ff5a00 !important;font-size:18px !important;line-height:1.35 !important;font-weight:800 !important;}
+.site-footer .footer-copy{margin:8px 0 0 !important;font-size:13px !important;line-height:1.35 !important;color:#d4d8d7 !important;}
+
+/* Aucun calque décoratif ne doit produire un faux texte en double */
+.quote:before,.quote:after{content:none !important;}
+@media(max-width:520px){.site-footer{padding:28px 14px 22px !important;}.site-footer .footer-logo img{width:145px !important;max-width:145px !important;}.site-footer .footer-location{font-size:15px !important;}.site-footer .footer-slogan{font-size:17px !important;}}
+
+/* ===== Passe finale après vérification mobile ===== */
+@media(max-width:900px){
+  header, header .container, header .nav{
+    min-height:90px !important;
+    height:auto !important;
+  }
   header .logo, header .brand{
-    width:150px !important;
-    max-width:150px !important;
+    width:auto !important;
+    max-width:128px !important;
+    height:auto !important;
+    max-height:70px !important;
   }
-  header .brand-link{
-    width:160px !important;
-    min-width:160px !important;
-  }
+  header .nav-services{border-bottom:1px solid #27363a !important;}
+  header nav .nav-services:last-child{border-bottom:0 !important;}
 }
 
-/* Images de contenu : conserver une composition propre */
-.story-image{
-  background-position:center center !important;
-  background-repeat:no-repeat !important;
-  background-size:cover !important;
-}
-.card img,.service-card img,.services .card img{
-  object-position:center center !important;
-}
-
-/* Évite les arrière-plans qui font croire à un texte dédoublé */
-.quote{
-  background:#030d10 !important;
-}
-.quote:before,.quote:after{
-  content:none !important;
-}
-
-/* Footer unique et uniforme */
-.site-footer{
-  width:100% !important;
-  box-sizing:border-box !important;
-  margin:0 !important;
-  padding:32px 16px 24px !important;
-  background:#02090b !important;
-  border-top:1px solid #27363a !important;
-  text-align:center !important;
-  color:#f2f3f3 !important;
-}
-.site-footer .footer-logo{
-  display:flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-  margin:0 0 16px !important;
-}
-.site-footer .footer-logo img{
-  width:160px !important;
-  height:auto !important;
-  max-width:160px !important;
-  max-height:none !important;
-  object-fit:contain !important;
-  display:block !important;
-}
-.site-footer .footer-location{
-  margin:0 0 5px !important;
-  font-size:16px !important;
-  line-height:1.35 !important;
-}
-.site-footer .footer-slogan{
-  margin:0 !important;
-  color:#ff5a00 !important;
-  font-size:18px !important;
-  line-height:1.35 !important;
-  font-weight:800 !important;
-}
-.site-footer .footer-copy{
-  margin:8px 0 0 !important;
-  font-size:13px !important;
-  line-height:1.35 !important;
-  color:#d4d8d7 !important;
-}
-.site-footer .footer-top,.site-footer .footer-bottom{
-  display:block !important;
-}
-@media(max-width:520px){
-  .site-footer{padding:28px 14px 22px !important;}
-  .site-footer .footer-logo img{width:150px !important;max-width:150px !important;}
-  .site-footer .footer-location{font-size:15px !important;}
-  .site-footer .footer-slogan{font-size:17px !important;}
-}
-
-/* Mobile : aucune section ne doit déborder horizontalement */
-@media(max-width:700px){
-  .hero,.hero-inner,.story,.values,.bottom,.content,.form-grid,.layout,main,section{
-    max-width:100% !important;
-  }
-  .hero-copy,.story-copy{
-    max-width:100% !important;
-  }
+/* Sur desktop aussi, le menu SERVICES s'ouvre au survol/clavier. */
+@media(min-width:901px){
+  .nav-services:hover .services-submenu,
+  .nav-services:focus-within .services-submenu{display:block;}
+  .nav-services{display:flex;align-items:center;}
 }

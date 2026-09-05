@@ -1,9 +1,14 @@
 /* ForgePC Mauricie — navigation mobile + formulaires */
 document.addEventListener('DOMContentLoaded', () => {
   const closeMenu = (header, button, nav) => {
+    if (!nav) return;
     nav.classList.remove('open');
-    button.setAttribute('aria-expanded', 'false');
-    button.setAttribute('aria-label', 'Ouvrir le menu');
+    button?.setAttribute('aria-expanded', 'false');
+    button?.setAttribute('aria-label', 'Ouvrir le menu');
+    header?.querySelectorAll('.nav-services.open').forEach(el => {
+      el.classList.remove('open');
+      el.querySelector('.services-toggle')?.setAttribute('aria-expanded','false');
+    });
   };
 
   document.querySelectorAll('header .menu').forEach(button => {
@@ -24,6 +29,11 @@ document.addEventListener('DOMContentLoaded', () => {
       a.addEventListener('click', () => closeMenu(header, button, nav));
     });
 
+    header.addEventListener('click', (event) => {
+      if (event.target.closest('.services-toggle')) return;
+      if (!header.contains(event.target)) closeMenu(header, button, nav);
+    });
+
     document.addEventListener('click', (event) => {
       if (!header.contains(event.target)) closeMenu(header, button, nav);
     });
@@ -34,6 +44,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('resize', () => {
       if (window.innerWidth > 900) closeMenu(header, button, nav);
+    });
+  });
+
+  document.querySelectorAll('.services-toggle').forEach(toggle => {
+    if (toggle.dataset.ready === 'true') return;
+    toggle.dataset.ready = 'true';
+    toggle.addEventListener('click', event => {
+      event.preventDefault();
+      event.stopPropagation();
+      const wrapper = toggle.closest('.nav-services');
+      const open = wrapper.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(open));
     });
   });
 
@@ -51,8 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const value = field.value.trim();
         if (value) lines.push(`${field.name} : ${value}`);
       });
-      const files = [...form.querySelectorAll('input[type="file"]')]
-        .flatMap(input => [...input.files].map(file => file.name));
+      const files = [...form.querySelectorAll('input[type="file"]')].flatMap(input => [...input.files].map(file => file.name));
       if (files.length) lines.push(`Pièces jointes sélectionnées : ${files.join(', ')}`);
       window.location.href = `mailto:${encodeURIComponent(to)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines.join('\n'))}`;
       const status = form.querySelector('[data-form-status]');
