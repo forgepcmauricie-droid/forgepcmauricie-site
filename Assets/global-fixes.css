@@ -77,3 +77,74 @@ header nav .services-toggle,header .navlinks .services-toggle,header .links .ser
   .nav-services:focus-within .services-submenu{display:block;}
   .nav-services{display:flex;align-items:center;}
 }
+
+/* ===== Corrections demandées — dernière passe ===== */
+/* Les logos doivent rester entièrement visibles et ne pas se perdre dans le fond. */
+header .brand-link,
+header > .container > a,
+header .container > a[aria-label*="ForgePC"],
+.site-footer .footer-logo {
+  overflow: visible !important;
+}
+header .logo,
+header .brand,
+.site-footer .footer-logo img {
+  overflow: visible !important;
+  filter: drop-shadow(0 0 4px rgba(255,255,255,.12));
+}
+
+/* Footer : structure parfaitement centrée et stable sur mobile. */
+.site-footer > * {
+  width:100% !important;
+  max-width:100% !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+  text-align:center !important;
+}
+.site-footer .footer-logo img {
+  width:150px !important;
+  height:auto !important;
+  margin:0 auto !important;
+}
+.site-footer .footer-location,
+.site-footer .footer-slogan,
+.site-footer .footer-copy { display:block !important; }
+
+/* Menu SERVICES : même ligne, même hauteur et même séparation que les autres entrées. */
+@media(max-width:900px){
+  header nav .nav-services,
+  header .navlinks .nav-services,
+  header .links .nav-services {
+    width:100% !important;
+    margin:0 !important;
+    padding:0 !important;
+    border-bottom:1px solid #27363a !important;
+  }
+  header nav .nav-services > .services-toggle,
+  header .navlinks .nav-services > .services-toggle,
+  header .links .nav-services > .services-toggle {
+    display:flex !important;
+    align-items:center !important;
+    justify-content:space-between !important;
+    width:100% !important;
+    min-height:46px !important;
+    height:auto !important;
+    box-sizing:border-box !important;
+    margin:0 !important;
+    padding:12px 10px !important;
+    border:0 !important;
+    border-radius:0 !important;
+    text-align:left !important;
+  }
+  header nav .nav-services.open > .services-toggle,
+  header .navlinks .nav-services.open > .services-toggle,
+  header .links .nav-services.open > .services-toggle {
+    color:#ff5a00 !important;
+  }
+  header nav .services-submenu,
+  header .navlinks .services-submenu,
+  header .links .services-submenu {
+    width:auto !important;
+    margin:0 4px 6px !important;
+  }
+}
