@@ -357,26 +357,17 @@ img { max-width:100%; }
 <link href="/Assets/global-fixes.css" rel="stylesheet"/>
 </head>
 <body>
-<header>
+<header class="site-header">
 <div class="container nav">
-<a aria-label="ForgePC Mauricie" href="index.html">
-<img alt="ForgePC Mauricie" class="logo" src="/Assets/logo.png"/>
-</a>
-<nav id="mainNav">
+<a class="brand-link" aria-label="ForgePC Mauricie" href="index.html"><img alt="ForgePC Mauricie" class="logo" src="/Assets/logo.png"/></a>
+<nav aria-label="Navigation principale" class="navlinks">
 <a href="index.html">ACCUEIL</a>
 <a href="inventaire.html">INVENTAIRE</a>
-<div class="nav-services">
-<button aria-expanded="false" class="services-toggle" type="button">SERVICES <span aria-hidden="true">⌄</span></button>
-<div class="services-submenu">
-<a href="forgepc_diagnostic.html">RÉPARATIONS</a>
-<a href="mise-a-niveau.html">MISES À NIVEAU</a>
-<a href="rdv-service-domicile.html">SERVICE À DOMICILE</a>
-</div>
-</div>
+<a href="index.html#services">SERVICES</a>
 <a href="a-propos.html">À PROPOS</a>
 <a href="contact.html">CONTACT</a>
 </nav>
-<button aria-label="Ouvrir le menu" class="menu" id="menuBtn">☰</button>
+<button aria-expanded="false" aria-label="Ouvrir le menu" class="menu" type="button">☰</button>
 </div>
 </header>
 <section class="hero">
