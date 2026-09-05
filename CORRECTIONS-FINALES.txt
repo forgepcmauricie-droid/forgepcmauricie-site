@@ -13,3 +13,11 @@ Passe finale effectuée sur l’ensemble du site à partir des fichiers fournis 
 - Menu mobile et formulaires existants conservés.
 
 Important : les formulaires utilisent mailto; l’envoi final dépend du logiciel de courriel du visiteur. Les pièces jointes ne sont pas envoyées automatiquement par mailto.
+
+
+--- Passe du 4 septembre 2026 ---
+- Correction contraste/affichage des logos en-tête et footer.
+- Footer uniformisé et centré sur mobile.
+- Menu mobile uniformisé, incluant la page Contact et le sous-menu Services.
+- Suppression des pseudo-éléments pouvant recréer du texte de citation.
+- Image À propos de l’accueil remplacée par la version originale plus nette de la tasse.
