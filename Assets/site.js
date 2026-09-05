@@ -5,8 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
     nav.classList.remove('open');
     button?.setAttribute('aria-expanded', 'false');
     button?.setAttribute('aria-label', 'Ouvrir le menu');
-    nav.querySelectorAll('.services-nav.submenu-open').forEach(item => item.classList.remove('submenu-open'));
-    nav.querySelectorAll('.services-toggle').forEach(toggle => toggle.setAttribute('aria-expanded', 'false'));
   };
 
   document.querySelectorAll('header .menu').forEach(button => {
@@ -27,15 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
       closeMenu(header, button, nav);
     }));
 
-    nav.querySelectorAll('.services-toggle').forEach(toggle => {
-      toggle.addEventListener('click', event => {
-        event.preventDefault();
-        event.stopPropagation();
-        const parent = toggle.closest('.services-nav');
-        const isOpen = parent.classList.toggle('submenu-open');
-        toggle.setAttribute('aria-expanded', String(isOpen));
-      });
-    });
 
     document.addEventListener('click', event => {
       if (!header.contains(event.target)) closeMenu(header, button, nav);

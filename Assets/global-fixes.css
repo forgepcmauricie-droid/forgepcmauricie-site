@@ -181,3 +181,41 @@ body, html { background:#020609 !important; }
   .site-footer .footer-logo { min-height:100px !important; }
   .site-footer .footer-logo img { width:160px !important; max-width:160px !important; max-height:100px !important; }
 }
+
+
+/* ===== Correctif final — 4 septembre 2026 ===== */
+/* Seuls les logos d'en-tête/pied de page sont ajustés. */
+.site-header .brand-link .logo {
+  content:url('/Assets/logo.png') !important;
+  width:180px !important;
+  max-width:180px !important;
+  height:auto !important;
+  max-height:none !important;
+  object-fit:contain !important;
+  object-position:center !important;
+  display:block !important;
+}
+.site-footer .footer-logo img {
+  content:url('/Assets/logo.png') !important;
+  width:180px !important;
+  max-width:180px !important;
+  height:auto !important;
+  max-height:none !important;
+  object-fit:contain !important;
+  object-position:center !important;
+  display:block !important;
+}
+/* Services est un lien direct : aucun sous-menu. */
+.services-nav, .services-toggle, .services-dropdown { display:none !important; }
+@media (max-width:900px) {
+  .site-header .brand-link .logo {
+    width:165px !important;
+    max-width:165px !important;
+    max-height:none !important;
+  }
+  .site-footer .footer-logo img {
+    width:165px !important;
+    max-width:165px !important;
+    max-height:none !important;
+  }
+}
