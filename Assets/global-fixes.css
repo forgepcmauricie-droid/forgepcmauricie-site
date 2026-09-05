@@ -219,3 +219,31 @@ body, html { background:#020609 !important; }
     max-height:none !important;
   }
 }
+
+/* ===== LOGO FINAL — ajustement demandé, sans toucher au reste ===== */
+.site-header .brand-link .logo {
+  content: url('/Assets/forgepc-logo-final.png') !important;
+  width: 130px !important;
+  max-width: 130px !important;
+  max-height: 72px !important;
+  height: auto !important;
+}
+.site-footer .footer-logo img {
+  content: url('/Assets/forgepc-logo-final.png') !important;
+  width: 105px !important;
+  max-width: 105px !important;
+  max-height: 75px !important;
+  height: auto !important;
+}
+@media (max-width: 520px) {
+  .site-header .brand-link .logo {
+    width: 105px !important;
+    max-width: 105px !important;
+    max-height: 64px !important;
+  }
+  .site-footer .footer-logo img {
+    width: 90px !important;
+    max-width: 90px !important;
+    max-height: 65px !important;
+  }
+}
