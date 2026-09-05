@@ -291,7 +291,7 @@ async function getInventory(){
     !SHEET_CSV_URL ||
     SHEET_CSV_URL.includes("COLLER_ICI")
   ){
-    return INVENTORY_FALLBACK;
+    return [];
   }
 
   try{
@@ -346,7 +346,7 @@ async function getInventory(){
 
   }
 
-  return INVENTORY_FALLBACK;
+  return [];
 }
 
 

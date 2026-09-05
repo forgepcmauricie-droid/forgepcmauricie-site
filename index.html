@@ -29,7 +29,7 @@ header { position:sticky; top:0; z-index:20; background:rgba(2,9,11,.96); border
 
 .hero { min-height:304px; background:
   linear-gradient(90deg,rgba(0,0,0,.86) 0%,rgba(0,0,0,.68) 43%,rgba(0,0,0,.08) 100%),
-  url('Assets/index-hero.jpg') center/cover; border-bottom:1px solid #263438; }
+  url('/Assets/index-hero.jpg') center/cover; border-bottom:1px solid #263438; }
 .hero-inner { min-height:304px; display:grid; grid-template-columns:1fr 300px; align-items:center; gap:25px; }
 .kicker { color:var(--orange); letter-spacing:4px; font-weight:900; font-size:16px; }
 h1 { margin:8px 0 10px; font-size:42px; line-height:1.02; letter-spacing:1px; text-transform:uppercase; }
@@ -110,12 +110,12 @@ footer { background:#02090b; border-top:1px solid #263438; padding:14px 0; } .fo
 <header>
   <div class="container nav">
     <a href="#accueil" aria-label="ForgePC Mauricie">
-      <img class="logo" src="Assets/logo.png" alt="ForgePC Mauricie">
+      <img class="logo" src="/Assets/logo.png" alt="ForgePC Mauricie">
     </a>
     <nav class="navlinks" aria-label="Navigation principale">
       <a class="active" href="index.html">ACCUEIL</a>
       <a href="inventaire.html">INVENTAIRE</a>
-      <a href="services.html">SERVICES</a>
+      <a href="index.html#services">SERVICES</a>
       <a href="a-propos.html">À PROPOS</a>
       <a href="contact.html">CONTACT</a>
     </nav>
@@ -145,19 +145,19 @@ footer { background:#02090b; border-top:1px solid #263438; padding:14px 0; } .fo
     <div class="section-sub">Des solutions adaptées à vos besoins</div>
     <div class="services">
       <article class="card">
-        <img src="Assets/service-pc.jpg" alt="PC remis à neuf">
+        <img src="/Assets/service-pc.jpg" alt="PC remis à neuf">
         <div class="card-body"><h3>▣ &nbsp; PC REMIS À NEUF</h3><p>Des ordinateurs sélectionnés, nettoyés, testés et prêts à utiliser.</p><a href="inventaire.html">VOIR L'INVENTAIRE →</a></div>
       </article>
       <article class="card">
-        <img src="Assets/service-repair.jpg" alt="Réparation informatique">
+        <img src="/Assets/service-repair.jpg" alt="Réparation informatique">
         <div class="card-body"><h3>🔧 &nbsp; RÉPARATIONS</h3><p>Diagnostic, réparation et solutions durables pour vos appareils.</p><a href="forgepc_diagnostic.html">DEMANDER UN DIAGNOSTIC →</a></div>
       </article>
       <article class="card">
-        <img src="Assets/service-upgrade.jpg" alt="Mise à niveau informatique">
+        <img src="/Assets/service-upgrade.jpg" alt="Mise à niveau informatique">
         <div class="card-body"><h3>⚙ &nbsp; MISES À NIVEAU</h3><p>Améliorer les performances sans dépenser inutilement.</p><a href="mise-a-niveau.html">DEMANDER UNE ÉVALUATION →</a></div>
       </article>
       <article class="card">
-        <img src="Assets/service-home.jpg" alt="Service informatique à domicile">
+        <img src="/Assets/service-home.jpg" alt="Service informatique à domicile">
         <div class="card-body"><h3>⌂ &nbsp; SERVICE À DOMICILE</h3><p>On se déplace dans la Mauricie selon vos besoins.</p><a href="rdv-service-domicile.html">DEMANDER UN RENDEZ-VOUS →</a></div>
       </article>
     </div>
@@ -166,7 +166,7 @@ footer { background:#02090b; border-top:1px solid #263438; padding:14px 0; } .fo
 
 <section class="section" id="apropos">
   <div class="container about">
-    <img src="Assets/about.jpg" alt="ForgePC Mauricie — une entreprise de chez nous">
+    <img src="/Assets/about.jpg" alt="ForgePC Mauricie — une entreprise de chez nous">
     <div class="about-copy">
       <h2>À PROPOS DE FORGEPC</h2>
       <p>ForgePC Mauricie est née d'une idée simple : offrir une alternative aux ordinateurs neufs souvent coûteux et aux réparations compliquées. L'objectif est de remettre en circulation de bonnes machines, réparer lorsque ça en vaut la peine et proposer des solutions adaptées aux besoins réels de chaque client.</p>
@@ -190,9 +190,9 @@ footer { background:#02090b; border-top:1px solid #263438; padding:14px 0; } .fo
 </main>
 
 <footer id="contact">
-  <div class="container footer-inner"><div class="footer-brand"><img src="Assets/logo.png" alt="ForgePC Mauricie"></div><nav class="footer-nav"><a href="index.html">ACCUEIL</a><a href="inventaire.html">INVENTAIRE</a><a href="services.html">SERVICES</a><a href="a-propos.html">À PROPOS</a><a href="contact.html">CONTACT</a></nav><div class="footer-tag">Votre technologie,<br>notre expertise.</div></div></footer>
+  <div class="container footer-inner"><div class="footer-brand"><img src="/Assets/logo.png" alt="ForgePC Mauricie"></div><nav class="footer-nav"><a href="index.html">ACCUEIL</a><a href="inventaire.html">INVENTAIRE</a><a href="index.html#services">SERVICES</a><a href="a-propos.html">À PROPOS</a><a href="contact.html">CONTACT</a></nav><div class="footer-tag">Votre technologie,<br>notre expertise.</div></div></footer>
 
 <section id="rendezvous" style="display:none"></section>
-<script src="Assets/site.js"></script>
+<script src="/Assets/site.js"></script>
 </body>
 </html>

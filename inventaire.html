@@ -16,17 +16,17 @@ html,body{margin:0;padding:0;background:var(--bg);color:var(--text);
 a{color:inherit;text-decoration:none}
 .container{width:min(calc(100% - 36px),var(--max));margin:auto}
 header{border-bottom:1px solid #202326;background:#08090a;position:relative;z-index:10}
-.nav{min-height:76px;display:flex;align-items:center;gap:22px;position:relative}
-.brand{width:180px;height:58px;object-fit:contain;object-position:left center;display:block}
-nav{margin-left:auto;display:flex;align-items:center;gap:22px}
-nav a{font-size:.9rem;font-weight:700;color:#d7dadd}
+.nav{min-height:76px;display:flex;align-items:center;gap:28px;position:relative}
+.brand{width:150px;height:auto;max-height:64px;object-fit:contain;object-position:left center;display:block}
+nav{margin-left:auto;display:flex;align-items:center;gap:28px}
+nav a{font-size:13px;font-weight:800;color:#f0f1f2;padding:28px 0 24px;text-transform:uppercase}nav a.active{color:#fff;border-bottom:3px solid var(--orange)}
 nav a:hover{color:var(--orange)}
-.btn{border:1px solid var(--orange);padding:11px 15px;border-radius:5px;color:#fff!important}
+.btn{border:1px solid var(--orange);padding:11px 15px;border-radius:5px;color:#fff!important}.btn.primary{background:var(--orange)}.navcta{margin-left:10px;padding:15px 24px;font-weight:900;text-transform:uppercase;font-size:13px;white-space:nowrap}
 .menu{display:none;margin-left:auto;background:#111315;border:1px solid #3b4045;
   color:#fff;border-radius:7px;width:48px;height:46px;font-size:27px;line-height:1;cursor:pointer}
 
 .inventory-section{padding:76px 0 90px;min-height:calc(100vh - 140px)}
-.inventory-hero{padding:34px 0 18px}
+.inventory-hero{padding:44px 42px 28px;border:1px solid #26363d;border-radius:8px;background:linear-gradient(90deg,rgba(0,0,0,.92),rgba(0,0,0,.55)),url('/Assets/services-pc.jpg') center/cover no-repeat}
 .kicker{color:var(--orange);font-weight:900;text-transform:uppercase;letter-spacing:.16em;font-size:.95rem}
 .inventory-hero .kicker{margin-bottom:13px}
 h1{margin:0 0 16px;font-size:clamp(3rem,7vw,5.1rem);line-height:.98;letter-spacing:-.035em}
@@ -67,13 +67,14 @@ footer strong{color:var(--orange)}
     align-items:stretch;gap:0;padding:8px 18px;background:#08090a;border:1px solid var(--line)}
   nav.open{display:flex}
   nav a{padding:14px 4px;border-bottom:1px solid var(--line)}
+  .navcta{display:none}
   .menu{display:block}
   .inventory-list{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 @media(max-width:600px){
   .container{width:calc(100% - 28px)}
   .nav{min-height:68px}
-  .brand{width:170px;height:52px}
+  .brand{width:145px;height:52px}
   nav{top:68px}
   .inventory-section{padding:48px 0 65px}
   h1{font-size:clamp(2.35rem,13vw,4rem)}
@@ -88,18 +89,17 @@ footer strong{color:var(--orange)}
 <header>
   <div class="container nav">
     <a href="index.html" aria-label="ForgePC Mauricie">
-      <img class="brand" src="Assets/logo.png" alt="ForgePC Mauricie">
+      <img class="brand" src="/Assets/logo.png" alt="ForgePC Mauricie">
     </a>
-    <button class="menu" aria-label="Ouvrir le menu"
-            onclick="document.querySelector('nav').classList.toggle('open')">☰</button>
-    <nav>
-      <a href="index.html">Accueil</a>
-      <a class="active" href="inventaire.html">Inventaire</a>
-      <a href="services.html">Services</a>
-      <a href="a-propos.html">À propos</a>
-      <a href="contact.html">Contact</a>
-      <a class="btn" href="rdv-service-domicile.html">Demander un rendez-vous</a>
+    <nav aria-label="Navigation principale">
+      <a href="index.html">ACCUEIL</a>
+      <a class="active" href="inventaire.html">INVENTAIRE</a>
+      <a href="services.html">SERVICES</a>
+      <a href="a-propos.html">À PROPOS</a>
+      <a href="contact.html">CONTACT</a>
     </nav>
+    <a class="btn primary navcta" href="rdv-service-domicile.html">NOUS CONTACTER →</a>
+    <button class="menu" type="button" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
   </div>
 </header>
 
@@ -234,7 +234,7 @@ function card(pc){
   const photo=driveUrl(pc.photo1);
   return `<a class="product-card" href="pc.html?id=${encodeURIComponent(pc.id)}">
     <div class="product-image-wrap">
-      ${photo?`<img class="product-image" src="${esc(photo)}" alt="${esc(pc.nom||"PC remis à neuf")}" loading="lazy" onerror="this.style.display='none'">`:`<div style="aspect-ratio:16/10;display:grid;place-items:center;color:#777">Aucune photo</div>`}
+      ${photo?`<img class="product-image" src="${esc(photo)}" alt="${esc(pc.nom||"PC remis à neuf")}" loading="lazy">`:`<div style="aspect-ratio:16/10;display:grid;place-items:center;color:#777">Aucune photo</div>`}
       <span class="product-badge">${esc(pc.statut)}</span>
     </div>
     <div class="product-body">
@@ -266,6 +266,6 @@ function card(pc){
 
 document.querySelectorAll("nav a").forEach(a=>a.addEventListener("click",()=>document.querySelector("nav").classList.remove("open")));
 </script>
-<script src="Assets/site.js"></script>
+<script src="/Assets/site.js"></script>
 </body>
 </html>

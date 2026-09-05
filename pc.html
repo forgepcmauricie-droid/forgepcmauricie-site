@@ -70,7 +70,7 @@ footer strong{color:var(--orange)}
 <header>
   <div class="container nav">
     <a href="index.html" aria-label="ForgePC Mauricie" class="brand-link">
-      <img class="brand" id="forgepcLogo" src="Assets/logo.png" alt="ForgePC Mauricie"
+      <img class="brand" id="forgepcLogo" src="/Assets/logo.png" alt="ForgePC Mauricie"
            onerror="tryNextLogo(this)">
       <span class="brand-fallback">FORGEPC <small>MAURICIE</small></span>
     </a>
@@ -78,7 +78,7 @@ footer strong{color:var(--orange)}
     <nav>
       <a href="index.html">Accueil</a>
       <a href="inventaire.html">Inventaire</a>
-      <a href="services.html">Services</a>
+      <a href="index.html#services">Services</a>
       <a href="a-propos.html">À propos</a>
       <a href="contact.html">Contact</a>
     </nav>
@@ -442,7 +442,7 @@ document.querySelectorAll("nav a").forEach(a=>{
 });
 function tryNextLogo(img){
   const candidates = [
-    "Assets/logo.png",
+    "/Assets/logo.png",
   ];
   const next = candidates.shift();
   const current = img.dataset.logoTry || "";
@@ -460,6 +460,6 @@ function tryNextLogo(img){
 }
 
 </script>
-<script src="Assets/site.js"></script>
+<script src="/Assets/site.js"></script>
 </body>
 </html>

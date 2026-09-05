@@ -10,9 +10,9 @@
 *{box-sizing:border-box} body{margin:0;background:#020609;color:var(--white);font-family:Arial,Helvetica,sans-serif}
 a{color:inherit;text-decoration:none}.wrap{max-width:1180px;margin:auto}
 header{height:76px;position:relative;background:#03090c;border-bottom:1px solid #263238;display:flex;align-items:center;padding:0 28px;gap:34px}
-.logo{width:150px;max-height:64px;object-fit:contain}.nav{display:flex;gap:28px;align-items:center;margin-left:auto;font-weight:700;font-size:13px}.nav a{padding:28px 0}.nav a.active{color:var(--orange);border-bottom:3px solid var(--orange)}
+.logo{width:150px;max-height:64px;object-fit:contain}.menu{display:none;background:transparent;color:#fff;border:1px solid #4a565a;border-radius:5px;width:45px;height:42px;font-size:24px;margin-left:auto;cursor:pointer}.nav{display:flex;gap:28px;align-items:center;margin-left:auto;font-weight:700;font-size:13px}.nav a{padding:28px 0}.nav a.active{color:var(--orange);border-bottom:3px solid var(--orange)}
 .cta{background:linear-gradient(90deg,var(--orange),var(--orange2));padding:15px 24px;border-radius:5px;font-weight:800;font-size:13px}
-.hero{padding:42px 52px 32px;background:linear-gradient(90deg,rgba(0,0,0,.96),rgba(0,0,0,.72)),url("Assets/contact-hero.jpg") center/cover no-repeat;border-bottom:1px solid #263238}
+.hero{padding:42px 52px 32px;background:linear-gradient(90deg,rgba(0,0,0,.96),rgba(0,0,0,.72)),url("/Assets/contact-hero.jpg") center/cover no-repeat;border-bottom:1px solid #263238}
 .kicker{color:var(--orange);font-weight:800;letter-spacing:1px}.hero h1{font-size:42px;line-height:1.05;margin:8px 0 12px;max-width:650px}.hero h1 span{color:var(--orange)}.hero p{font-size:17px;line-height:1.55;max-width:650px;color:#e4e8ea}
 .points{display:flex;gap:42px;margin-top:25px;flex-wrap:wrap}.point{display:flex;gap:10px;align-items:center;font-weight:700}.ico{color:var(--orange);font-size:25px}
 .content{display:grid;grid-template-columns:360px 1fr;gap:18px;padding:22px}
@@ -33,11 +33,11 @@ input,select,textarea{width:100%;border:1px solid #42555e;background:var(--panel
 </head>
 <body>
 <header class="wrap">
-  <a href="index.html" aria-label="ForgePC Mauricie"><img class="logo" src="Assets/logo.png" alt="ForgePC Mauricie"></a>
+  <a href="index.html" aria-label="ForgePC Mauricie"><img class="logo" src="/Assets/logo.png" alt="ForgePC Mauricie"></a>
   <nav class="nav">
     <a href="index.html">ACCUEIL</a>
     <a href="inventaire.html">INVENTAIRE</a>
-    <a href="services.html">SERVICES</a>
+    <a href="index.html#services">SERVICES</a>
     <a href="a-propos.html">À PROPOS</a>
     <a class="active" href="contact.html">CONTACT</a>
   </nav>
@@ -122,7 +122,7 @@ input,select,textarea{width:100%;border:1px solid #42555e;background:var(--panel
 </main>
 
 <footer class="footer wrap">
-  <div><img class="logo" src="Assets/logo.png" alt="ForgePC Mauricie"></div>
+  <div><img class="logo" src="/Assets/logo.png" alt="ForgePC Mauricie"></div>
   <div>📍 Shawinigan et toute la Mauricie</div>
   <div class="tag">Votre technologie, notre expertise.</div>
   <div>© 2026 ForgePC Mauricie</div>
@@ -132,6 +132,6 @@ input,select,textarea{width:100%;border:1px solid #42555e;background:var(--panel
 const message=document.getElementById('message'), count=document.getElementById('count');
 message.addEventListener('input',()=>count.textContent=message.value.length);
 </script>
-<script src="Assets/site.js"></script>
+<script src="/Assets/site.js"></script>
 </body>
 </html>

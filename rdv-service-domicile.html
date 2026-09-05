@@ -36,7 +36,7 @@ nav a:hover{color:var(--orange)}
   border-bottom:1px solid var(--line);
   background:
     linear-gradient(90deg,rgba(3,8,10,.98) 0%,rgba(3,8,10,.88) 38%,rgba(3,8,10,.25) 68%,rgba(3,8,10,.35) 100%),
-    url("Assets/domicile-hero.jpg") right center/cover no-repeat;
+    url("/Assets/domicile-hero.jpg") right center/cover no-repeat;
 }
 .hero-inner{min-height:390px;display:flex;align-items:center;padding:48px 0}
 .hero-copy{width:min(620px,100%)}
@@ -121,7 +121,7 @@ footer{border-top:1px solid var(--line);padding:25px 0;background:#030708}
   .logo{width:135px}
   .hero{min-height:0;background:
     linear-gradient(180deg,rgba(3,8,10,.80),rgba(3,8,10,.92) 48%,rgba(3,8,10,.97)),
-    url("Assets/domicile-hero.jpg") center top/auto 230px no-repeat}
+    url("/Assets/domicile-hero.jpg") center top/auto 230px no-repeat}
   .hero-inner{min-height:0;padding:245px 0 32px}
   .script{top:170px;right:12px;font-size:1.15rem}
   h1{font-size:2.45rem}
@@ -144,12 +144,12 @@ footer{border-top:1px solid var(--line);padding:25px 0;background:#030708}
 <header>
   <div class="container nav">
     <a href="index.html" aria-label="ForgePC Mauricie">
-      <img class="logo" src="Assets/logo.png" alt="ForgePC Mauricie">
+      <img class="logo" src="/Assets/logo.png" alt="ForgePC Mauricie">
     </a>
     <nav id="mainNav">
       <a href="index.html">ACCUEIL</a>
       <a href="inventaire.html">INVENTAIRE</a>
-      <a href="services.html">SERVICES</a>
+      <a href="index.html#services">SERVICES</a>
       <a href="a-propos.html">À PROPOS</a>
       <a href="contact.html">CONTACT</a>
     </nav>
@@ -304,7 +304,7 @@ footer{border-top:1px solid var(--line);padding:25px 0;background:#030708}
 
 <footer>
   <div class="container footer-grid">
-    <img class="footer-logo" src="Assets/logo.png" alt="ForgePC Mauricie">
+    <img class="footer-logo" src="/Assets/logo.png" alt="ForgePC Mauricie">
     <div class="footer-text">Shawinigan et toute la Mauricie</div>
     <div class="footer-tag">Votre technologie,<br><span>notre expertise.</span></div>
   </div>
@@ -324,6 +324,6 @@ document.querySelector('form').addEventListener('submit', function(e){
   }
 });
 </script>
-<script src="Assets/site.js"></script>
+<script src="/Assets/site.js"></script>
 </body>
 </html>

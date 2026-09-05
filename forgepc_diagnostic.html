@@ -21,7 +21,7 @@ nav { display:flex; gap:28px; margin-left:auto; font-weight:700; font-size:14px;
 nav a.active { color:var(--orange); border-bottom:3px solid var(--orange); padding-bottom:25px; }
 .cta { background:var(--orange); color:#fff; padding:14px 24px; border-radius:4px; font-weight:800; }
 .tagline { width:170px; color:#ddd; font-style:italic; text-align:right; line-height:1.15; }
-.hero { min-height:255px; background:linear-gradient(90deg,rgba(0,0,0,.90) 0%,rgba(0,0,0,.58) 48%,rgba(0,0,0,.18) 100%),url("Assets/diagnostic-hero.jpg") center/cover no-repeat; position:relative; overflow:hidden; border-bottom:1px solid var(--line);
+.hero { min-height:255px; background:linear-gradient(90deg,rgba(0,0,0,.90) 0%,rgba(0,0,0,.58) 48%,rgba(0,0,0,.18) 100%),url("/Assets/diagnostic-hero.jpg") center/cover no-repeat; position:relative; overflow:hidden; border-bottom:1px solid var(--line);
   background:linear-gradient(90deg,rgba(0,0,0,.95) 0%,rgba(0,0,0,.70) 43%,rgba(0,0,0,.28) 100%),
   radial-gradient(circle at 72% 50%,#51200c 0,#0a1215 42%,#020405 75%); }
 .hero-inner { padding:36px 8% 28px; position:relative; z-index:2; }
@@ -88,11 +88,11 @@ footer .spacer { flex:1; }
 <body>
 <div class="container">
 <header>
-  <a href="index.html"><img class="logo" src="Assets/logo.png" alt="ForgePC Mauricie"></a>
+  <a href="index.html"><img class="logo" src="/Assets/logo.png" alt="ForgePC Mauricie"></a>
   <nav>
     <a href="index.html">ACCUEIL</a>
     <a href="inventaire.html">INVENTAIRE</a>
-    <a class="active" href="services.html">SERVICES</a>
+    <a class="active" href="index.html#services">SERVICES</a>
     <a href="a-propos.html">À PROPOS</a>
     <a href="contact.html">CONTACT</a>
   </nav>
@@ -194,7 +194,7 @@ footer .spacer { flex:1; }
 </form>
 
 <footer>
-  <img class="logo" src="Assets/logo.png" alt="ForgePC Mauricie">
+  <img class="logo" src="/Assets/logo.png" alt="ForgePC Mauricie">
   <strong>Une entreprise de chez nous.</strong>
   <div class="spacer"></div>
   <span>📍 Shawinigan et environs</span>
@@ -209,6 +209,6 @@ document.getElementById('diagnosticForm').addEventListener('submit', function(e)
   // to the confirmed ForgePC service address when wiring the production form.
 });
 </script>
-<script src="Assets/site.js"></script>
+<script src="/Assets/site.js"></script>
 </body>
 </html>
