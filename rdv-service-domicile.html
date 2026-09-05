@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Demande de rendez-vous pour un service informatique à domicile avec ForgePC Mauricie." name="description"/>
+<title>Service à domicile — ForgePC Mauricie</title>
+<style>
+:root{
+  --bg:#05090b;--panel:#081216;--panel2:#0d1a20;--line:#26383f;
+  --text:#f4f5f6;--muted:#aeb8bc;--orange:#ff5a00;--orange2:#ff6a16;
+  --max:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:
+  radial-gradient(circle at 70% 10%,rgba(255,90,0,.10),transparent 28%),
+  linear-gradient(180deg,#030607,#071015 55%,#030607);
+  color:var(--text);font-family:Arial,Helvetica,sans-serif;line-height:1.45
+}
+a{color:inherit;text-decoration:none}
+.container{width:min(calc(100% - 32px),var(--max));margin:auto}
+header{position:sticky;top:0;z-index:20;background:rgba(3,7,9,.94);backdrop-filter:blur(10px);border-bottom:1px solid #1c2b30}
+.nav{min-height:78px;display:flex;align-items:center;gap:28px}
+.logo{width:150px;height:auto;object-fit:contain}
+nav{display:flex;align-items:center;gap:28px;margin-left:auto}
+nav a{font-weight:800;font-size:.82rem;letter-spacing:.02em}
+nav a:hover{color:var(--orange)}
+.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:5px;border:1px solid var(--orange);font-weight:900}
+.nav-cta{background:var(--orange);padding:13px 20px;color:#fff}
+.menu{display:none;background:transparent;border:1px solid #526168;color:#fff;border-radius:6px;font-size:1.35rem;padding:7px 10px}
+
+.hero{
+  min-height:390px;position:relative;overflow:hidden;
+  border-bottom:1px solid var(--line);
+  background:
+    linear-gradient(90deg,rgba(3,8,10,.98) 0%,rgba(3,8,10,.88) 38%,rgba(3,8,10,.25) 68%,rgba(3,8,10,.35) 100%),
+    url("/Assets/service-home.jpg") right center/cover no-repeat;
+}
+.hero-inner{min-height:390px;display:flex;align-items:center;padding:48px 0}
+.hero-copy{width:min(620px,100%)}
+.kicker{color:var(--orange);font-size:.95rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
+h1{font-size:clamp(2.3rem,5vw,4.5rem);line-height:.98;margin:10px 0 18px;letter-spacing:.01em;text-transform:uppercase}
+h1 span{color:var(--orange)}
+.lead{font-size:1.12rem;color:#e5e9ea;max-width:590px}
+.features{display:flex;flex-wrap:wrap;gap:20px;margin-top:28px}
+.feature{display:flex;align-items:center;gap:9px;font-weight:800}
+.icon{color:var(--orange);font-size:1.45rem;line-height:1}
+.script{
+  position:absolute;right:6%;top:35px;font-size:clamp(1.3rem,2.5vw,2.1rem);
+  font-style:italic;transform:rotate(-5deg);max-width:230px;text-align:center
+}
+.script:after{content:"";display:block;height:4px;background:var(--orange);width:95px;margin:7px auto 0;transform:rotate(-4deg);border-radius:50%}
+
+.steps{padding:24px 0;border-bottom:1px solid var(--line);background:#071115}
+.step-row{display:grid;grid-template-columns:1fr 40px 1fr 40px 1fr;align-items:center;gap:10px}
+.step{display:flex;align-items:center;gap:13px}
+.step-num{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:#32424a;font-size:1.2rem;font-weight:900;flex:none}
+.step.active .step-num{background:var(--orange)}
+.step strong{display:block}.step small{color:var(--muted)}
+.arrow{color:#65747a;text-align:center;font-size:1.5rem}
+
+main{padding:34px 0 50px}
+.form-grid{display:grid;grid-template-columns:1fr 1.45fr 1.15fr;gap:12px}
+.card{
+  background:linear-gradient(180deg,rgba(13,25,31,.96),rgba(5,14,17,.96));
+  border:1px solid var(--line);border-radius:7px;padding:20px
+}
+.card h2{font-size:1.2rem;margin:0 0 18px;display:flex;gap:10px;align-items:center}
+.card h2 .icon{font-size:1.35rem}
+.field{margin-bottom:15px}
+label{display:block;font-weight:800;font-size:.88rem;margin-bottom:6px}
+.req{color:var(--orange)}
+input,select,textarea{
+  width:100%;border:1px solid #465a62;border-radius:5px;
+  background:#13232a;color:#f7f8f8;padding:12px 13px;font:inherit;outline:none
+}
+input:focus,select:focus,textarea:focus{border-color:var(--orange);box-shadow:0 0 0 2px rgba(255,90,0,.12)}
+textarea{min-height:115px;resize:vertical}
+.service-list{display:grid;gap:8px}
+.check{display:flex;align-items:flex-start;gap:9px;color:#e9edef;font-size:.9rem}
+.check input{width:auto;margin-top:4px;accent-color:var(--orange)}
+.note{
+  border:1px solid #394d54;background:#0d1b20;border-radius:6px;
+  padding:13px;color:#dbe1e3;font-size:.84rem;margin-top:10px
+}
+.note b{color:#fff}.note .orange{color:var(--orange)}
+.radio-row{display:flex;gap:18px;flex-wrap:wrap}
+.radio{display:flex;align-items:center;gap:7px;font-weight:700}
+.radio input{width:auto;accent-color:var(--orange)}
+.info{display:flex;gap:10px;align-items:flex-start}
+.info .icon{font-size:1.35rem}
+.bottom{
+  margin-top:12px;display:grid;grid-template-columns:1.5fr .8fr 1fr;
+  gap:12px;align-items:stretch
+}
+.bullets{margin:0;padding:0;list-style:none;display:grid;gap:8px;color:#dce2e4;font-size:.9rem}
+.bullets li:before{content:"✓";color:var(--orange);font-weight:900;margin-right:8px}
+.private{display:flex;align-items:center;justify-content:center;color:#b8c1c5;text-align:center}
+.actions{display:flex;flex-direction:column;justify-content:center;align-items:stretch;gap:10px}
+.btn{padding:15px 20px;background:transparent;color:#fff;cursor:pointer}
+.btn.primary{background:var(--orange);border-color:var(--orange)}
+.btn:hover{filter:brightness(1.08)}
+.disclaimer{font-size:.78rem;color:#8f9b9f;text-align:center}
+footer{border-top:1px solid var(--line);padding:25px 0;background:#030708}
+.footer-grid{display:flex;align-items:center;gap:24px;justify-content:space-between}
+.footer-logo{width:130px;height:auto}
+.footer-text{color:#aeb7bb;font-size:.85rem}
+.footer-tag{font-style:italic;text-align:right}.footer-tag span{color:var(--orange)}
+
+@media(max-width:900px){
+  .nav{min-height:70px}.menu{display:block;margin-left:auto}nav{display:none;position:absolute;left:16px;right:16px;top:70px;background:#071014;border:1px solid var(--line);padding:16px;border-radius:7px;flex-direction:column;align-items:stretch;gap:14px}
+  nav.open{display:flex}.nav-cta{display:none}
+  .hero{background-position:70% center}.script{right:3%;top:25px}
+  .form-grid{grid-template-columns:1fr 1fr}.card.service{grid-column:1/-1}
+  .bottom{grid-template-columns:1fr 1fr}.actions{grid-column:1/-1}
+}
+@media(max-width:650px){
+  .container{width:min(calc(100% - 22px),var(--max))}
+  .logo{width:135px}
+  .hero{min-height:0;background:
+    linear-gradient(180deg,rgba(3,8,10,.80),rgba(3,8,10,.92) 48%,rgba(3,8,10,.97)),
+    url("/Assets/service-home.jpg") center top/auto 230px no-repeat}
+  .hero-inner{min-height:0;padding:245px 0 32px}
+  .script{top:170px;right:12px;font-size:1.15rem}
+  h1{font-size:2.45rem}
+  .lead{font-size:1rem}
+  .features{gap:12px 18px}.feature{font-size:.82rem}
+  .step-row{grid-template-columns:1fr 18px 1fr 18px 1fr;gap:3px}
+  .step{gap:7px}.step-num{width:34px;height:34px;font-size:.95rem}
+  .step small{display:none}.step strong{font-size:.76rem}
+  main{padding-top:22px}
+  .form-grid{grid-template-columns:1fr}
+  .card.service{grid-column:auto}
+  .bottom{grid-template-columns:1fr}
+  .actions{grid-column:auto}
+  .footer-grid{flex-direction:column;text-align:center}.footer-tag{text-align:center}
+}
+
+/* ForgePC — navigation mobile uniforme */
+@media (max-width: 800px) {
+  header .menu {
+    display:flex !important;
+    align-items:center;
+    justify-content:center;
+    margin-left:auto;
+    width:46px;
+    height:44px;
+    padding:0;
+    border:1px solid #4a565a;
+    border-radius:6px;
+    background:transparent;
+    color:#fff;
+    font-size:25px;
+    line-height:1;
+    cursor:pointer;
+  }
+  header nav {
+    display:none !important;
+    position:absolute !important;
+    top:70px !important;
+    left:12px !important;
+    right:12px !important;
+    z-index:100 !important;
+    flex-direction:column !important;
+    align-items:stretch !important;
+    gap:0 !important;
+    margin:0 !important;
+    padding:8px !important;
+    background:#02090b !important;
+    border:1px solid #27363a !important;
+    border-radius:6px !important;
+  }
+  header nav.open {
+    display:flex !important;
+  }
+  header nav a {
+    display:flex !important;
+    align-items:center !important;
+    min-height:44px !important;
+    height:auto !important;
+    padding:11px 10px !important;
+    border-bottom:1px solid #27363a !important;
+  }
+  header nav a:last-child { border-bottom:0 !important; }
+}
+
+</style>
+<style id="forgepc-mobile-menu-fix">
+@media (max-width: 900px) {
+  header { position: relative; }
+  header .menu { display: block !important; cursor: pointer; }
+  header nav {
+    display: none !important;
+    position: absolute !important;
+    left: 0 !important;
+    right: 0 !important;
+    top: 100% !important;
+    z-index: 999 !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0 !important;
+    background: #03090c !important;
+    border: 1px solid #263238 !important;
+    padding: 10px 16px !important;
+  }
+  header nav.open { display: flex !important; }
+  header nav a {
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 13px 8px !important;
+    border-bottom: 1px solid #263238 !important;
+  }
+  header nav a:last-child { border-bottom: 0 !important; }
+}
+</style>
+<style id="forgepc-final-fixes">
+
+/* ===== ForgePC — correctifs uniformes mobile / images / footer ===== */
+html, body { overflow-x:hidden; }
+header { position:sticky !important; top:0 !important; z-index:1000 !important; }
+header .container, header .nav { position:relative !important; }
+header .logo, header .brand { width:150px !important; height:auto !important; max-height:none !important; object-fit:contain !important; object-position:center !important; display:block !important; }
+
+/* Menu mobile fiable et identique sur toutes les pages */
+header .menu {
+  display:none;
+  appearance:none;
+  -webkit-appearance:none;
+  align-items:center !important;
+  justify-content:center !important;
+  width:46px !important;
+  height:44px !important;
+  min-width:46px !important;
+  padding:0 !important;
+  margin-left:auto !important;
+  border:1px solid #4a565a !important;
+  border-radius:7px !important;
+  background:#02090b !important;
+  color:#fff !important;
+  font-size:26px !important;
+  line-height:1 !important;
+  cursor:pointer !important;
+  position:relative !important;
+  z-index:1002 !important;
+}
+@media (max-width:900px) {
+  header .menu { display:flex !important; }
+  header nav,
+  header .navlinks,
+  header .links {
+    display:none !important;
+    position:absolute !important;
+    left:12px !important;
+    right:12px !important;
+    top:calc(100% + 1px) !important;
+    z-index:1001 !important;
+    flex-direction:column !important;
+    align-items:stretch !important;
+    gap:0 !important;
+    margin:0 !important;
+    padding:8px !important;
+    background:#02090b !important;
+    border:1px solid #27363a !important;
+    border-radius:7px !important;
+    box-shadow:0 10px 30px rgba(0,0,0,.45) !important;
+  }
+  header nav.open,
+  header .navlinks.open,
+  header .links.open { display:flex !important; }
+  header nav a,
+  header .navlinks a,
+  header .links a {
+    display:flex !important;
+    align-items:center !important;
+    width:100% !important;
+    min-height:46px !important;
+    height:auto !important;
+    box-sizing:border-box !important;
+    padding:12px 10px !important;
+    border-bottom:1px solid #27363a !important;
+  }
+  header nav a:last-child,
+  header .navlinks a:last-child,
+  header .links a:last-child { border-bottom:0 !important; }
+}
+
+/* Images : éviter les recadrages agressifs et les débordements */
+img { max-width:100%; }
+.story-image {
+  background-position:center !important;
+  background-size:cover !important;
+  background-repeat:no-repeat !important;
+}
+.card img, .services .card img, .service-card img {
+  object-position:center !important;
+}
+.map {
+  background-size:contain !important;
+  background-repeat:no-repeat !important;
+  background-position:center !important;
+}
+
+/* Footer unique sur toutes les pages */
+.site-footer {
+  width:100%;
+  box-sizing:border-box;
+  margin-top:0;
+  padding:34px 20px 26px;
+  background:#02090b;
+  border-top:1px solid #27363a;
+  text-align:center;
+  color:#f2f3f3;
+}
+.site-footer .footer-logo {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-bottom:18px;
+}
+.site-footer .footer-logo img {
+  width:170px !important;
+  height:auto !important;
+  max-height:none !important;
+  object-fit:contain !important;
+  display:block !important;
+}
+.site-footer .footer-location {
+  font-size:17px;
+  line-height:1.35;
+  margin-bottom:4px;
+}
+.site-footer .footer-slogan {
+  color:#ff5a00;
+  font-size:18px;
+  line-height:1.35;
+  font-weight:800;
+}
+.site-footer .footer-copy {
+  margin-top:8px;
+  font-size:14px;
+  color:#d4d8d7;
+}
+@media (max-width:520px) {
+  .site-footer { padding:30px 16px 24px; }
+  .site-footer .footer-logo img { width:160px !important; }
+  .site-footer .footer-location { font-size:16px; }
+  .site-footer .footer-slogan { font-size:17px; }
+  .site-footer .footer-copy { font-size:13px; }
+}
+
+/* Empêche certains calques décoratifs de doubler visuellement le texte */
+.hero, .story, .values, .bottom, main, section { isolation:isolate; }
+</style>
+<link href="/Assets/global-fixes.css" rel="stylesheet"/>
+</head>
+<body>
+<header class="site-header">
+<div class="container nav">
+<a class="brand-link" aria-label="ForgePC Mauricie" href="index.html"><img alt="ForgePC Mauricie" class="logo" src="/Assets/forgepc-logo-original-v3.png"/></a>
+<nav aria-label="Navigation principale" class="navlinks">
+<a href="index.html">ACCUEIL</a>
+<a href="inventaire.html">INVENTAIRE</a>
+<a href="services.html">SERVICES</a>
+<a href="a-propos.html">À PROPOS</a>
+<a href="contact.html">CONTACT</a>
+</nav>
+<button aria-expanded="false" aria-label="Ouvrir le menu" class="menu" type="button">☰</button>
+</div>
+</header>
+<section class="hero">
+<div class="container hero-inner">
+<div class="hero-copy">
+<div class="kicker">🏠 Service à domicile</div>
+<h1>L’informatique <span>chez vous</span></h1>
+<p class="lead">
+        Nous nous déplaçons à votre domicile en Mauricie et environs pour vous aider
+        avec vos problèmes informatiques, l’installation de vos appareils, la configuration
+        ou toute autre demande.
+      </p>
+<div class="features">
+<div class="feature"><span class="icon">🔧</span>Service professionnel</div>
+<div class="feature"><span class="icon">📍</span>Mauricie et environs</div>
+<div class="feature"><span class="icon">👤</span>Service personnalisé</div>
+<div class="feature"><span class="icon">👍</span>Satisfaction garantie</div>
+</div>
+</div>
+</div>
+</section>
+<section class="steps">
+<div class="container step-row">
+<div class="step active"><span class="step-num">1</span><div><strong>Vos informations</strong><small>Quelques renseignements</small></div></div>
+<div class="arrow">›</div>
+<div class="step"><span class="step-num">2</span><div><strong>Détails du service</strong><small>Votre besoin et l’adresse</small></div></div>
+<div class="arrow">›</div>
+<div class="step"><span class="step-num">3</span><div><strong>Confirmation</strong><small>On vous contacte rapidement</small></div></div>
+</div>
+</section>
+<main id="formulaire">
+<div class="container">
+<form action="https://formsubmit.co/service@forgepcmauricie.ca" method="POST" enctype="multipart/form-data">
+<input type="hidden" name="_subject" value="Demande de service à domicile — ForgePC Mauricie">
+<input type="hidden" name="_captcha" value="false">
+<div class="form-grid">
+<section class="card">
+<h2><span class="icon">👤</span>Vos coordonnées</h2>
+<div class="field">
+<label for="nom">Nom complet <span class="req">*</span></label>
+<input autocomplete="name" id="nom" name="Nom complet" placeholder="Votre nom" required="" type="text"/>
+</div>
+<div class="field">
+<label for="telephone">Téléphone <span class="req">*</span></label>
+<input autocomplete="tel" id="telephone" name="Téléphone" placeholder="(XXX) XXX-XXXX" required="" type="tel"/>
+</div>
+<div class="field">
+<label for="courriel">Courriel <span class="req">*</span></label>
+<input autocomplete="email" id="courriel" name="Courriel" placeholder="votre@courriel.com" required="" type="email"/>
+</div>
+</section>
+<section class="card service">
+<h2><span class="icon">🔧</span>Détails du service</h2>
+<div class="field">
+<label>Type de service demandé <span class="req">*</span></label>
+<div class="service-list">
+<label class="check"><input name="Service" type="checkbox" value="Diagnostic / problème informatique"/>Diagnostic / problème informatique</label>
+<label class="check"><input name="Service" type="checkbox" value="Installation de Windows"/>Installation de Windows</label>
+<label class="check"><input name="Service" type="checkbox" value="Configuration d’un nouvel ordinateur"/>Configuration d’un nouvel ordinateur</label>
+<label class="check"><input name="Service" type="checkbox" value="Installation d’imprimante / Wi-Fi"/>Installation d’imprimante / Wi-Fi</label>
+<label class="check"><input name="Service" type="checkbox" value="Réseau et Internet à la maison"/>Réseau et Internet à la maison</label>
+<label class="check"><input name="Service" type="checkbox" value="Transfert / récupération de données"/>Transfert / récupération de données</label>
+<label class="check"><input name="Service" type="checkbox" value="Mise à niveau"/>Mise à niveau (ajout de mémoire, SSD, etc.)</label>
+<label class="check"><input name="Service" type="checkbox" value="Nettoyage et optimisation"/>Nettoyage et optimisation</label>
+<label class="check"><input name="Service" type="checkbox" value="Support et formation"/>Support et formation</label>
+<label class="check"><input name="Service" type="checkbox" value="Autre"/>Autre (précisez dans la description)</label>
+</div>
+</div>
+<div class="field">
+<label for="description">Description de votre demande <span class="req">*</span></label>
+<textarea id="description" name="Description de la demande" placeholder="Décrivez votre problème ou votre besoin en détail...
+Ex. : ordinateur lent, problème d’impression, installation, etc." required=""></textarea>
+</div>
+<div class="field">
+<label>Moment souhaité <span class="req">*</span></label>
+<div class="radio-row">
+<label class="radio"><input name="Moment souhaité" required="" type="radio" value="Matin"/>Matin</label>
+<label class="radio"><input name="Moment souhaité" type="radio" value="Après-midi"/>Après-midi</label>
+</div>
+</div>
+<div class="field">
+<label for="supplement">Informations supplémentaires <small>(optionnel)</small></label>
+<textarea id="supplement" name="Informations supplémentaires" placeholder="Ex. : étage, stationnement, code d’accès, autres détails pertinents, etc."></textarea>
+</div>
+</section>
+<section class="card">
+<h2><span class="icon">📍</span>Adresse du service</h2>
+<div class="field">
+<label for="adresse">Adresse complète <span class="req">*</span></label>
+<input autocomplete="street-address" id="adresse" name="Adresse complète" placeholder="Ex. : 123 rue Principale" required="" type="text"/>
+</div>
+<div class="field">
+<label for="ville">Ville <span class="req">*</span></label>
+<input autocomplete="address-level2" id="ville" name="Ville" placeholder="Ex. : Shawinigan" required="" type="text"/>
+</div>
+<div class="field">
+<label for="secteur">Secteur <small>(optionnel)</small></label>
+<input id="secteur" name="Secteur" placeholder="Ex. : Shawinigan-Sud, Grand-Mère, etc." type="text"/>
+</div>
+<div class="note info">
+<span class="icon">ⓘ</span>
+<div>
+<b>Nous desservons Shawinigan et les environs.</b><br/>
+          La disponibilité du service dépend de la distance.<br/>
+          Nous vous contacterons pour confirmer.
+        </div>
+</div>
+</section>
+</div>
+<div class="bottom">
+<section class="card">
+<h2><span class="icon">✓</span>Bon à savoir</h2>
+<ul class="bullets">
+<li>Nous vous contactons rapidement pour confirmer votre demande.</li>
+<li>Les déplacements sont planifiés selon la distance.</li>
+<li>Les prix varient selon le type de service et la distance.</li>
+<li>Aucune obligation après la prise de contact.</li>
+<li>Service professionnel et courtois.</li>
+</ul>
+</section>
+<section class="card private">
+      🔒 Vos informations sont confidentielles.
+    </section>
+<section class="card actions">
+<button class="btn primary" type="submit">Envoyer ma demande →</button>
+<div class="disclaimer">L’envoi de la demande ne confirme pas automatiquement un rendez-vous.</div>
+</section>
+</div>
+</form>
+</div>
+</main>
+<footer class="site-footer">
+<div class="footer-logo"><img alt="ForgePC Mauricie" src="/Assets/forgepc-logo-original-v3.png"/></div>
+<div class="footer-location">📍 Shawinigan et toute la Mauricie</div>
+<div class="footer-slogan">Votre technologie, notre expertise.</div>
+<div class="footer-copy">© 2026 ForgePC Mauricie</div>
+</footer>
+<script>
+document.querySelector('form').addEventListener('submit', function(e){
+  const services=[...document.querySelectorAll('input[name="Service"]:checked')];
+  if(!services.length){
+    e.preventDefault();
+    alert('Veuillez sélectionner au moins un type de service.');
+  }
+});
+</script>
+<script src="/Assets/site.js"></script>
+</body>
+</html>

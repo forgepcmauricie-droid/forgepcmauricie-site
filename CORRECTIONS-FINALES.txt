@@ -1,0 +1,10 @@
+ForgePC Mauricie — corrections du 4 septembre 2026
+
+- Le lien SERVICES du menu principal pointe vers services.html.
+- Le menu SERVICES conserve son sous-menu : Réparations, Mises à niveau et Service à domicile.
+- Sur mobile, le texte SERVICES mène à services.html et la flèche permet d'ouvrir les sous-liens.
+- Retour de l'image avec la tasse dans la section À propos de l'accueil, comme dans la maquette.
+- Conservation du logo officiel de la maquette : Assets/logo.png.
+- Fond général uniformisé vers le noir ForgePC.
+- Menu mobile opaque pour éviter que l'image du hero transparaisse derrière.
+- Footer renforcé pour empêcher le rognage du logo.
