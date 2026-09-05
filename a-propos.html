@@ -90,7 +90,7 @@ padding:18px 50px 18px 55px;display:flex;flex-direction:column;justify-content:c
  .hero-sub{font-size:14px}
  .story{grid-template-columns:1fr}
  .story-copy{padding:18px 20px}
- .story-image{min-height:205px;order:-1}
+ .story-image{min-height:0;aspect-ratio:16/9;order:-1;background-size:100% auto;background-position:center center;background-repeat:no-repeat;background-color:#02090b}
  .values{grid-template-columns:1fr}
  .value{padding:18px 20px}
  .value+.value{border-left:0;border-top:1px solid var(--line)}
@@ -108,6 +108,55 @@ padding:18px 50px 18px 55px;display:flex;flex-direction:column;justify-content:c
  .philo small{font-size:11px}
  .footer-bottom{font-size:9px}
 }
+
+/* ForgePC — navigation mobile uniforme */
+@media (max-width: 800px) {
+  header .menu {
+    display:flex !important;
+    align-items:center;
+    justify-content:center;
+    margin-left:auto;
+    width:46px;
+    height:44px;
+    padding:0;
+    border:1px solid #4a565a;
+    border-radius:6px;
+    background:transparent;
+    color:#fff;
+    font-size:25px;
+    line-height:1;
+    cursor:pointer;
+  }
+  header nav {
+    display:none !important;
+    position:absolute !important;
+    top:70px !important;
+    left:12px !important;
+    right:12px !important;
+    z-index:100 !important;
+    flex-direction:column !important;
+    align-items:stretch !important;
+    gap:0 !important;
+    margin:0 !important;
+    padding:8px !important;
+    background:#02090b !important;
+    border:1px solid #27363a !important;
+    border-radius:6px !important;
+  }
+  header nav.open {
+    display:flex !important;
+  }
+  header nav a {
+    display:flex !important;
+    align-items:center !important;
+    min-height:44px !important;
+    height:auto !important;
+    padding:11px 10px !important;
+    border-bottom:1px solid #27363a !important;
+  }
+  header nav a:last-child { border-bottom:0 !important; }
+}
+
 </style>
 </head>
 <body>
@@ -120,12 +169,12 @@ padding:18px 50px 18px 55px;display:flex;flex-direction:column;justify-content:c
     <nav class="links" aria-label="Navigation principale">
       <a href="index.html">ACCUEIL</a>
       <a href="inventaire.html">INVENTAIRE</a>
-      <a href="index.html#services">SERVICES</a>
+      <a href="services.html">SERVICES</a>
       <a class="active" href="a-propos.html">À PROPOS</a>
       <a href="contact.html">CONTACT</a>
     </nav>
     <a class="contact" href="contact.html">NOUS CONTACTER</a>
-    <button class="menu" aria-label="Menu">☰</button>
+    <button class="menu" type="button" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
   </div>
 </header>
 
@@ -187,7 +236,7 @@ padding:18px 50px 18px 55px;display:flex;flex-direction:column;justify-content:c
     <nav class="footer-nav">
       <a href="index.html">ACCUEIL</a>
       <a href="inventaire.html">INVENTAIRE</a>
-      <a href="index.html#services">SERVICES</a>
+      <a href="services.html">SERVICES</a>
       <a href="a-propos.html">À PROPOS</a>
       <a href="contact.html">CONTACT</a>
     </nav>

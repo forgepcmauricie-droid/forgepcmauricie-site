@@ -34,6 +34,55 @@ footer{margin-top:24px;background:#05090b;border-top:1px solid #28343a;padding:2
 .success{display:none;padding:20px;border:1px solid #3b6d49;background:#0d1a12;border-radius:6px}.success.show{display:block}.success h2{color:#79d58c;margin-top:0}
 @media(max-width:900px){.nav{min-height:76px}.brand-link{width:160px}.brand{width:150px}nav{display:none;position:absolute;left:0;right:0;top:76px;background:#05090b;flex-direction:column;gap:0;padding:8px 20px;border-bottom:1px solid var(--border)}nav.open{display:flex}nav a{width:100%;padding:13px 0}.menu{display:block}.hero,.hero-inner{min-height:310px}.layout{grid-template-columns:1fr}.product-photo,.no-photo{height:300px}}
 @media(max-width:560px){.container{width:calc(100% - 24px)}.hero-inner{padding:28px 0}.crumb{font-size:12px}.kicker{font-size:15px}h1{font-size:42px}.hero p{font-size:16px}.benefits{gap:15px}.benefit{font-size:15px}.benefit b{font-size:23px}.page{padding-top:14px}.card{padding:15px}.form-grid,.choice-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.features{grid-template-columns:1fr 1fr}.feature{padding:18px 8px}.feature:nth-child(2){border-right:0}.feature:nth-child(-n+2){border-bottom:1px solid var(--border)}.footer-inner{flex-direction:column;text-align:center}.footer-brand{flex-direction:column;gap:5px}}
+
+/* ForgePC — navigation mobile uniforme */
+@media (max-width: 800px) {
+  header .menu {
+    display:flex !important;
+    align-items:center;
+    justify-content:center;
+    margin-left:auto;
+    width:46px;
+    height:44px;
+    padding:0;
+    border:1px solid #4a565a;
+    border-radius:6px;
+    background:transparent;
+    color:#fff;
+    font-size:25px;
+    line-height:1;
+    cursor:pointer;
+  }
+  header nav {
+    display:none !important;
+    position:absolute !important;
+    top:70px !important;
+    left:12px !important;
+    right:12px !important;
+    z-index:100 !important;
+    flex-direction:column !important;
+    align-items:stretch !important;
+    gap:0 !important;
+    margin:0 !important;
+    padding:8px !important;
+    background:#02090b !important;
+    border:1px solid #27363a !important;
+    border-radius:6px !important;
+  }
+  header nav.open {
+    display:flex !important;
+  }
+  header nav a {
+    display:flex !important;
+    align-items:center !important;
+    min-height:44px !important;
+    height:auto !important;
+    padding:11px 10px !important;
+    border-bottom:1px solid #27363a !important;
+  }
+  header nav a:last-child { border-bottom:0 !important; }
+}
+
 </style>
 </head>
 <body>
@@ -46,7 +95,7 @@ footer{margin-top:24px;background:#05090b;border-top:1px solid #28343a;padding:2
     <nav>
       <a href="index.html">Accueil</a>
       <a href="inventaire.html">Inventaire</a>
-      <a href="index.html#services">Services</a>
+      <a href="services.html">Services</a>
       <a href="a-propos.html">À propos</a>
       <a href="contact.html">Contact</a>
       <a class="cta" href="inventaire.html">Voir l'inventaire →</a>

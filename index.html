@@ -103,6 +103,55 @@ footer { background:#02090b; border-top:1px solid #263438; padding:14px 0; } .fo
   .card h3 { font-size:14px; }
   .card p { font-size:12px; }
 }
+
+/* ForgePC — navigation mobile uniforme */
+@media (max-width: 800px) {
+  header .menu {
+    display:flex !important;
+    align-items:center;
+    justify-content:center;
+    margin-left:auto;
+    width:46px;
+    height:44px;
+    padding:0;
+    border:1px solid #4a565a;
+    border-radius:6px;
+    background:transparent;
+    color:#fff;
+    font-size:25px;
+    line-height:1;
+    cursor:pointer;
+  }
+  header nav {
+    display:none !important;
+    position:absolute !important;
+    top:70px !important;
+    left:12px !important;
+    right:12px !important;
+    z-index:100 !important;
+    flex-direction:column !important;
+    align-items:stretch !important;
+    gap:0 !important;
+    margin:0 !important;
+    padding:8px !important;
+    background:#02090b !important;
+    border:1px solid #27363a !important;
+    border-radius:6px !important;
+  }
+  header nav.open {
+    display:flex !important;
+  }
+  header nav a {
+    display:flex !important;
+    align-items:center !important;
+    min-height:44px !important;
+    height:auto !important;
+    padding:11px 10px !important;
+    border-bottom:1px solid #27363a !important;
+  }
+  header nav a:last-child { border-bottom:0 !important; }
+}
+
 </style>
 </head>
 <body>
@@ -115,7 +164,7 @@ footer { background:#02090b; border-top:1px solid #263438; padding:14px 0; } .fo
     <nav class="navlinks" aria-label="Navigation principale">
       <a class="active" href="index.html">ACCUEIL</a>
       <a href="inventaire.html">INVENTAIRE</a>
-      <a href="index.html#services">SERVICES</a>
+      <a href="services.html">SERVICES</a>
       <a href="a-propos.html">À PROPOS</a>
       <a href="contact.html">CONTACT</a>
     </nav>
@@ -190,7 +239,7 @@ footer { background:#02090b; border-top:1px solid #263438; padding:14px 0; } .fo
 </main>
 
 <footer id="contact">
-  <div class="container footer-inner"><div class="footer-brand"><img src="/Assets/logo.png" alt="ForgePC Mauricie"></div><nav class="footer-nav"><a href="index.html">ACCUEIL</a><a href="inventaire.html">INVENTAIRE</a><a href="index.html#services">SERVICES</a><a href="a-propos.html">À PROPOS</a><a href="contact.html">CONTACT</a></nav><div class="footer-tag">Votre technologie,<br>notre expertise.</div></div></footer>
+  <div class="container footer-inner"><div class="footer-brand"><img src="/Assets/logo.png" alt="ForgePC Mauricie"></div><nav class="footer-nav"><a href="index.html">ACCUEIL</a><a href="inventaire.html">INVENTAIRE</a><a href="services.html">SERVICES</a><a href="a-propos.html">À PROPOS</a><a href="contact.html">CONTACT</a></nav><div class="footer-tag">Votre technologie,<br>notre expertise.</div></div></footer>
 
 <section id="rendezvous" style="display:none"></section>
 <script src="/Assets/site.js"></script>
