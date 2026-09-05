@@ -1,24 +1,39 @@
-/* ForgePC Mauricie — navigation mobile + formulaires sans serveur */
+/* ForgePC Mauricie — navigation mobile + formulaires */
 document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.menu').forEach(button => {
-    if (button.dataset.menuReady === 'true') return;
+  const closeMenu = (header, button, nav) => {
+    nav.classList.remove('open');
+    button.setAttribute('aria-expanded', 'false');
+    button.setAttribute('aria-label', 'Ouvrir le menu');
+  };
+
+  document.querySelectorAll('header .menu').forEach(button => {
     const header = button.closest('header');
     const nav = header ? header.querySelector('nav') : null;
-    if (!nav) return;
-
+    if (!nav || button.dataset.menuReady === 'true') return;
     button.dataset.menuReady = 'true';
+
     button.addEventListener('click', (event) => {
       event.preventDefault();
       event.stopPropagation();
       const isOpen = nav.classList.toggle('open');
-      button.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      button.setAttribute('aria-expanded', String(isOpen));
+      button.setAttribute('aria-label', isOpen ? 'Fermer le menu' : 'Ouvrir le menu');
     });
 
     nav.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        nav.classList.remove('open');
-        button.setAttribute('aria-expanded', 'false');
-      });
+      a.addEventListener('click', () => closeMenu(header, button, nav));
+    });
+
+    document.addEventListener('click', (event) => {
+      if (!header.contains(event.target)) closeMenu(header, button, nav);
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') closeMenu(header, button, nav);
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 900) closeMenu(header, button, nav);
     });
   });
 
@@ -39,8 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const files = [...form.querySelectorAll('input[type="file"]')]
         .flatMap(input => [...input.files].map(file => file.name));
       if (files.length) lines.push(`Pièces jointes sélectionnées : ${files.join(', ')}`);
-      const url = `mailto:${encodeURIComponent(to)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines.join('\n'))}`;
-      window.location.href = url;
+      window.location.href = `mailto:${encodeURIComponent(to)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines.join('\n'))}`;
       const status = form.querySelector('[data-form-status]');
       if (status) status.textContent = 'Votre logiciel de courriel va s’ouvrir avec votre demande. Vérifiez le message puis envoyez-le.';
     });
