@@ -247,3 +247,16 @@ body, html { background:#020609 !important; }
     max-height: 65px !important;
   }
 }
+
+/* PC Gaming — correctif maquette finale */
+.pc-gaming-page .hero,
+.hero{overflow:hidden!important;}
+@media(max-width:900px){
+  .navlinks.open{display:flex!important;}
+  .hero{min-height:285px!important;}
+  .hero-inner{min-height:285px!important;}
+  .hero-copy{width:100%!important;}
+  .benefits{max-width:100%!important;}
+  .card img{display:block!important;width:100%!important;}
+  .content,.approach{width:100%!important;max-width:100%!important;}
+}
