@@ -302,11 +302,14 @@ img { max-width:100%; }
 <h2>Votre demande est prête.</h2>
 <p>Votre logiciel de courriel va s'ouvrir avec la demande adressée à <strong>ventes@forgepcmauricie.ca</strong>. Vérifiez le message puis envoyez-le.</p>
 </div>
-<form id="salesForm">
+<form id="salesForm" action="https://formsubmit.co/ventes@forgepcmauricie.ca" method="POST" enctype="multipart/form-data">
+<input type="hidden" name="_subject" id="salesSubject" value="Demande de rendez-vous vente - PC">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="Numéro de stock" id="salesStock" value="Non précisé">
 <div class="form-grid">
-<div class="field"><label for="name">Nom complet <em>*</em></label><input id="name" placeholder="Votre nom" required=""/></div>
-<div class="field"><label for="phone">Téléphone <em>*</em></label><input id="phone" placeholder="(819) 123-4567" required=""/></div>
-<div class="field full"><label for="email">Courriel <em>*</em></label><input id="email" placeholder="votre@courriel.com" required="" type="email"/></div>
+<div class="field"><label for="name">Nom complet <em>*</em></label><input id="name" name="Nom" placeholder="Votre nom" required=""/></div>
+<div class="field"><label for="phone">Téléphone <em>*</em></label><input id="phone" name="Téléphone" placeholder="(819) 123-4567" required=""/></div>
+<div class="field full"><label for="email">Courriel <em>*</em></label><input id="email" name="Courriel" placeholder="votre@courriel.com" required="" type="email"/></div>
 <div class="field full">
 <label>Type de demande <em>*</em></label>
 <div class="choice-grid">
@@ -316,7 +319,7 @@ img { max-width:100%; }
 <label class="choice"><input name="type" type="radio" value="Autre"/> Autre</label>
 </div>
 </div>
-<div class="field full"><label for="message">Message (optionnel)</label><textarea id="message" maxlength="1000" placeholder="Écrivez votre message ici...
+<div class="field full"><label for="message">Message (optionnel)</label><textarea id="message" name="Message" maxlength="1000" placeholder="Écrivez votre message ici...
 Ex. : disponibilité, accessoires inclus, possibilité d'essai, etc."></textarea></div>
 </div>
 <div class="privacy">🔒 Vos informations sont confidentielles.</div>
@@ -398,30 +401,17 @@ function render(pc){
     '<div><div class="meta-label">Prix</div><div class="price">'+(pc.prix||"À confirmer")+'</div></div>';
   document.getElementById("productLink").href="pc.html?id="+encodeURIComponent(pc.id);
   document.title="Rendez-vous vente PC-"+pc.id+" | ForgePC Mauricie";
+  updateSalesHiddenFields();
 }
 function showError(msg){document.getElementById("productVisual").innerHTML='<div class="no-photo">'+msg+'</div>'}
-document.getElementById("salesForm").addEventListener("submit",function(e){
-  e.preventDefault();
-  const type=document.querySelector('input[name="type"]:checked')?.value||"Non précisé";
+function updateSalesHiddenFields(){
   const normalizedStock=cleanId(stockRaw);
   const stock=normalizedStock?("PC-"+formatStockId(normalizedStock)):"Non précisé";
-  const subject="Demande de rendez-vous vente - "+stock;
-  const body=[
-    "Demande de rendez-vous / vente ForgePC Mauricie",
-    "",
-    "Numéro de stock : "+stock,
-    "Nom : "+document.getElementById("name").value.trim(),
-    "Téléphone : "+document.getElementById("phone").value.trim(),
-    "Courriel : "+document.getElementById("email").value.trim(),
-    "Type de demande : "+type,
-    "",
-    "Message :",
-    document.getElementById("message").value.trim()||"Aucun message"
-  ].join("\n");
-  document.getElementById("success").classList.add("show");
-  window.location.href="mailto:ventes@forgepcmauricie.ca?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(body);
-});
+  document.getElementById("salesStock").value=stock;
+  document.getElementById("salesSubject").value="Demande de rendez-vous vente - "+stock;
+}
 load();
+updateSalesHiddenFields();
 </script>
 <script src="/Assets/site.js"></script>
 </body>

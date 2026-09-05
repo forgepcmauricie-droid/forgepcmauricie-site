@@ -298,7 +298,9 @@ img { max-width:100%; }
 </aside>
 <section class="card">
 <h2>✎   Formulaire de contact</h2>
-<form data-mailto="info@forgepcmauricie.ca" data-subject="Demande de contact — ForgePC Mauricie">
+<form action="https://formsubmit.co/info@forgepcmauricie.ca" method="POST" enctype="multipart/form-data">
+<input type="hidden" name="_subject" value="Demande de contact — ForgePC Mauricie">
+<input type="hidden" name="_captcha" value="false">
 <div class="row">
 <div class="field">
 <label for="nom">Nom complet <span class="req">*</span></label>

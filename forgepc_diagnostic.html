@@ -334,7 +334,9 @@ img { max-width:100%; }
 <div class="step"><div class="num">2</div><div><strong>Détails du problème</strong><small>Décrivez la situation</small></div></div>
 <div class="step"><div class="num">3</div><div><strong>Confirmation</strong><small>On vous contacte rapidement</small></div></div>
 </section>
-<form data-mailto="info@forgepcmauricie.ca" data-subject="Demande de diagnostic — ForgePC Mauricie" id="diagnosticForm">
+<form action="https://formsubmit.co/service@forgemauricie.ca" method="POST" enctype="multipart/form-data" id="diagnosticForm">
+<input type="hidden" name="_subject" value="Demande de diagnostic — ForgePC Mauricie">
+<input type="hidden" name="_captcha" value="false">
 <section class="form-grid">
 <div class="card">
 <h2><span class="icon">●</span>Vos coordonnées</h2>

@@ -372,7 +372,9 @@ img { max-width:100%; }
 <div class="step"><span class="num">3</span><div><strong>Confirmation</strong><small>On vous contacte rapidement</small></div></div>
 </section>
 <main class="form-wrap" id="formulaire">
-<form data-mailto="info@forgepcmauricie.ca" data-subject="Demande de mise à niveau — ForgePC Mauricie">
+<form action="https://formsubmit.co/service@forgemauricie.ca" method="POST" enctype="multipart/form-data">
+<input type="hidden" name="_subject" value="Demande de mise à niveau — ForgePC Mauricie">
+<input type="hidden" name="_captcha" value="false">
 <div class="form-grid">
 <section class="card">
 <h2>👤 Vos coordonnées</h2>
@@ -424,7 +426,7 @@ img { max-width:100%; }
 <h2>📎 Pièces jointes <small>(facultatif)</small></h2>
 <p>Vous pouvez ajouter des photos de votre PC, des captures d'écran ou des informations sur vos composants.</p>
 <label class="upload">
-<input accept=".jpg,.jpeg,.png,.pdf" id="fichiers" multiple="" type="file"/>
+<input accept=".jpg,.jpeg,.png,.pdf" id="fichiers" multiple="" name="pieces" type="file"/>
 <span>☁️<br/>Glissez vos fichiers ici<br/>ou cliquez pour parcourir<br/><small>Images (JPG, PNG) ou documents (PDF) — Max 10 Mo</small></span>
 </label>
 </div>
