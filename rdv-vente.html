@@ -112,180 +112,143 @@ footer{margin-top:24px;background:#05090b;border-top:1px solid #28343a;padding:2
   header nav a:last-child { border-bottom: 0 !important; }
 }
 </style>
-<style id="forgepc-mobile-corrections">
+<style id="forgepc-final-fixes">
 
-/* ForgePC — correctifs mobile uniformes */
-@media (max-width: 900px) {
-  header,
-  header .nav {
-    position: relative;
-    box-sizing: border-box;
-  }
+/* ===== ForgePC — correctifs uniformes mobile / images / footer ===== */
+html, body { overflow-x:hidden; }
+header { position:sticky !important; top:0 !important; z-index:1000 !important; }
+header .container, header .nav { position:relative !important; }
+header .logo, header .brand { width:150px !important; height:auto !important; max-height:none !important; object-fit:contain !important; object-position:center !important; display:block !important; }
 
-  header .nav {
-    min-height: 76px !important;
-    height: auto !important;
-    padding: 10px 18px !important;
-    display: flex !important;
-    align-items: center !important;
-    gap: 12px !important;
-  }
-
-  header > .nav > a:first-child,
-  header .nav > a:first-child {
-    display: flex !important;
-    align-items: center !important;
-    flex: 0 0 auto !important;
-    min-width: 0 !important;
-  }
-
-  header .logo,
-  header .brand,
-  header .nav > a:first-child img {
-    width: 145px !important;
-    height: auto !important;
-    max-height: none !important;
-    object-fit: contain !important;
-    display: block !important;
-  }
-
-  /* Un seul CTA/menu visible dans l'entête mobile */
-  header .nav > .contact,
-  header .nav > .navcta,
-  header > .cta {
-    display: none !important;
-  }
-
-  header .menu {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    flex: 0 0 46px !important;
-    width: 46px !important;
-    height: 44px !important;
-    min-width: 46px !important;
-    margin-left: auto !important;
-    padding: 0 !important;
-    box-sizing: border-box !important;
-    border: 1px solid #4a565a !important;
-    border-radius: 6px !important;
-    background: transparent !important;
-    color: #fff !important;
-    font-size: 25px !important;
-    line-height: 1 !important;
-    cursor: pointer !important;
-  }
-
+/* Menu mobile fiable et identique sur toutes les pages */
+header .menu {
+  display:none;
+  appearance:none;
+  -webkit-appearance:none;
+  align-items:center !important;
+  justify-content:center !important;
+  width:46px !important;
+  height:44px !important;
+  min-width:46px !important;
+  padding:0 !important;
+  margin-left:auto !important;
+  border:1px solid #4a565a !important;
+  border-radius:7px !important;
+  background:#02090b !important;
+  color:#fff !important;
+  font-size:26px !important;
+  line-height:1 !important;
+  cursor:pointer !important;
+  position:relative !important;
+  z-index:1002 !important;
+}
+@media (max-width:900px) {
+  header .menu { display:flex !important; }
   header nav,
   header .navlinks,
   header .links {
-    display: none !important;
-    position: absolute !important;
-    top: 100% !important;
-    left: 12px !important;
-    right: 12px !important;
-    z-index: 9999 !important;
-    flex-direction: column !important;
-    align-items: stretch !important;
-    gap: 0 !important;
-    margin: 0 !important;
-    padding: 8px !important;
-    box-sizing: border-box !important;
-    background: #02090b !important;
-    border: 1px solid #27363a !important;
-    border-radius: 6px !important;
+    display:none !important;
+    position:absolute !important;
+    left:12px !important;
+    right:12px !important;
+    top:calc(100% + 1px) !important;
+    z-index:1001 !important;
+    flex-direction:column !important;
+    align-items:stretch !important;
+    gap:0 !important;
+    margin:0 !important;
+    padding:8px !important;
+    background:#02090b !important;
+    border:1px solid #27363a !important;
+    border-radius:7px !important;
+    box-shadow:0 10px 30px rgba(0,0,0,.45) !important;
   }
-
   header nav.open,
   header .navlinks.open,
-  header .links.open {
-    display: flex !important;
-  }
-
+  header .links.open { display:flex !important; }
   header nav a,
   header .navlinks a,
   header .links a {
-    display: flex !important;
-    align-items: center !important;
-    width: 100% !important;
-    min-height: 44px !important;
-    height: auto !important;
-    padding: 11px 10px !important;
-    box-sizing: border-box !important;
-    border-bottom: 1px solid #27363a !important;
+    display:flex !important;
+    align-items:center !important;
+    width:100% !important;
+    min-height:46px !important;
+    height:auto !important;
+    box-sizing:border-box !important;
+    padding:12px 10px !important;
+    border-bottom:1px solid #27363a !important;
   }
-
   header nav a:last-child,
   header .navlinks a:last-child,
-  header .links a:last-child {
-    border-bottom: 0 !important;
-  }
-
-  /* Images de cartes : garder l'image complète plutôt que la recadrer */
-  .card img,
-  .service-card img,
-  .product-image,
-  .product-card img {
-    object-fit: contain !important;
-    object-position: center !important;
-    background: #08090a !important;
-  }
-
-  .product-image {
-    width: 100% !important;
-    height: auto !important;
-    aspect-ratio: 4 / 3 !important;
-    display: block !important;
-  }
-
-  /* Cartes de services de l'accueil */
-  .card {
-    overflow: hidden !important;
-  }
-
-  .card img {
-    width: 100% !important;
-    height: 100% !important;
-    min-height: 0 !important;
-  }
-
-  /* Éviter les héros excessivement recadrés sur petits écrans */
-  .hero {
-    background-position: center center !important;
-  }
-
-  .inventory-hero {
-    background-position: center center !important;
-  }
+  header .links a:last-child { border-bottom:0 !important; }
 }
 
-@media (max-width: 520px) {
-  header .nav {
-    min-height: 76px !important;
-    padding: 9px 14px !important;
-  }
-
-  header .logo,
-  header .brand,
-  header .nav > a:first-child img {
-    width: 140px !important;
-  }
-
-  header .menu {
-    width: 46px !important;
-    min-width: 46px !important;
-    height: 44px !important;
-  }
-
-  .product-image {
-    aspect-ratio: 3 / 2 !important;
-  }
-
-  .card {
-    grid-template-columns: 125px 1fr !important;
-  }
+/* Images : éviter les recadrages agressifs et les débordements */
+img { max-width:100%; }
+.story-image {
+  background-position:center !important;
+  background-size:cover !important;
+  background-repeat:no-repeat !important;
+}
+.card img, .services .card img, .service-card img {
+  object-position:center !important;
+}
+.map {
+  background-size:contain !important;
+  background-repeat:no-repeat !important;
+  background-position:center !important;
 }
 
+/* Footer unique sur toutes les pages */
+.site-footer {
+  width:100%;
+  box-sizing:border-box;
+  margin-top:0;
+  padding:34px 20px 26px;
+  background:#02090b;
+  border-top:1px solid #27363a;
+  text-align:center;
+  color:#f2f3f3;
+}
+.site-footer .footer-logo {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-bottom:18px;
+}
+.site-footer .footer-logo img {
+  width:170px !important;
+  height:auto !important;
+  max-height:none !important;
+  object-fit:contain !important;
+  display:block !important;
+}
+.site-footer .footer-location {
+  font-size:17px;
+  line-height:1.35;
+  margin-bottom:4px;
+}
+.site-footer .footer-slogan {
+  color:#ff5a00;
+  font-size:18px;
+  line-height:1.35;
+  font-weight:800;
+}
+.site-footer .footer-copy {
+  margin-top:8px;
+  font-size:14px;
+  color:#d4d8d7;
+}
+@media (max-width:520px) {
+  .site-footer { padding:30px 16px 24px; }
+  .site-footer .footer-logo img { width:160px !important; }
+  .site-footer .footer-location { font-size:16px; }
+  .site-footer .footer-slogan { font-size:17px; }
+  .site-footer .footer-copy { font-size:13px; }
+}
+
+/* Empêche certains calques décoratifs de doubler visuellement le texte */
+.hero, .story, .values, .bottom, main, section { isolation:isolate; }
 </style>
 </head>
 <body>
@@ -375,15 +338,11 @@ footer{margin-top:24px;background:#05090b;border-top:1px solid #28343a;padding:2
   </div>
 </main>
 
-<footer>
-  <div class="container footer-inner">
-    <div class="footer-brand">
-      <img src="/Assets/logo.png" alt="ForgePC Mauricie">
-      <div class="footer-text">ForgePC Mauricie<br>Des solutions informatiques pour aujourd'hui et demain.</div>
-    </div>
-    <div class="social">f&nbsp;&nbsp;◎&nbsp;&nbsp;✉</div>
-    <div class="footer-text">© 2026 ForgePC Mauricie · Votre technologie, notre expertise.</div>
-  </div>
+<footer class="site-footer">
+  <div class="footer-logo"><img src="/Assets/logo.png" alt="ForgePC Mauricie"></div>
+  <div class="footer-location">📍 Shawinigan et toute la Mauricie</div>
+  <div class="footer-slogan">Votre technologie, notre expertise.</div>
+  <div class="footer-copy">© 2026 ForgePC Mauricie</div>
 </footer>
 
 <script>
