@@ -1,0 +1,35 @@
+/* ForgePC Mauricie — navigation mobile + formulaires sans serveur */
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.menu').forEach(button => {
+    const header = button.closest('header');
+    const nav = header ? header.querySelector('nav') : document.querySelector('nav');
+    if (!nav) return;
+    button.addEventListener('click', () => {
+      nav.classList.toggle('open');
+      button.setAttribute('aria-expanded', nav.classList.contains('open') ? 'true' : 'false');
+    });
+    nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
+  });
+
+  document.querySelectorAll('form[data-mailto]').forEach(form => {
+    form.addEventListener('submit', event => {
+      event.preventDefault();
+      const to = form.dataset.mailto;
+      const subject = form.dataset.subject || 'Demande ForgePC Mauricie';
+      const lines = [];
+      form.querySelectorAll('input, select, textarea').forEach(field => {
+        if (!field.name || field.type === 'submit' || field.type === 'button' || field.type === 'file') return;
+        if ((field.type === 'checkbox' || field.type === 'radio') && !field.checked) return;
+        const value = field.value.trim();
+        if (value) lines.push(`${field.name} : ${value}`);
+      });
+      const files = [...form.querySelectorAll('input[type="file"]')]
+        .flatMap(input => [...input.files].map(file => file.name));
+      if (files.length) lines.push(`Pièces jointes sélectionnées : ${files.join(', ')}`);
+      const url = `mailto:${encodeURIComponent(to)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines.join('\n'))}`;
+      window.location.href = url;
+      const status = form.querySelector('[data-form-status]');
+      if (status) status.textContent = 'Votre logiciel de courriel va s’ouvrir avec votre demande. Vérifiez le message puis envoyez-le.';
+    });
+  });
+});
