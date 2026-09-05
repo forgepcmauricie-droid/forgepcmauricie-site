@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mise à niveau — ForgePC Mauricie</title>
+<meta name="description" content="Demande d'évaluation pour améliorer votre ordinateur avec ForgePC Mauricie.">
+<style>
+:root {
+  --bg:#02090c; --panel:#071317; --panel2:#0b1b21; --line:#29414a;
+  --orange:#ff5a00; --orange2:#ff6a00; --white:#f4f5f5; --muted:#b7c2c6;
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  margin:0; background:#071015; color:var(--white);
+  font-family:Arial,Helvetica,sans-serif; line-height:1.4;
+}
+.page { max-width:1280px; margin:0 auto; background:var(--bg); min-height:100vh; box-shadow:0 0 45px #000; }
+.menu{display:none;background:transparent;color:#fff;border:1px solid #4a565a;border-radius:6px;width:46px;height:42px;font-size:24px;cursor:pointer}
+header {
+  height:82px; display:flex; align-items:center; gap:28px; padding:8px 34px;
+  border-bottom:1px solid #24363d; background:#02080b; position:sticky; top:0; z-index:10;
+}
+.logo { width:150px; max-height:68px; object-fit:contain; }
+nav { display:flex; gap:30px; margin-left:auto; align-items:center; }
+nav a { color:#fff; text-decoration:none; font-weight:700; font-size:14px; }
+nav a.active { color:var(--orange); border-bottom:3px solid var(--orange); padding-bottom:10px; }
+.cta { background:var(--orange); color:#fff; border:0; padding:15px 25px; border-radius:5px; font-weight:800; cursor:pointer; }
+.tagline { font-style:italic; font-size:14px; max-width:150px; text-align:center; }
+.hero {
+  min-height:280px;
+  background:linear-gradient(90deg,rgba(2,9,12,.88) 0%,rgba(2,9,12,.38) 48%,rgba(2,9,12,.08) 100%),url("Assets/mise-hero.jpg") center/cover no-repeat; display:grid; grid-template-columns:1.05fr 1fr; align-items:center;
+  background:radial-gradient(circle at 70% 50%,#3a180b 0,#0b171b 43%,#02090c 80%);
+  border-bottom:1px solid #263b42; overflow:hidden;
+}
+.hero-copy { padding:38px 55px; position:relative; z-index:2; }
+.kicker { color:var(--orange); font-weight:900; letter-spacing:1px; text-transform:uppercase; }
+h1 { font-size:43px; line-height:1.05; margin:8px 0 10px; text-transform:uppercase; letter-spacing:.5px; }
+h1 span { color:var(--orange); }
+.hero p { font-size:18px; max-width:650px; margin:0 0 18px; color:#e1e6e7; }
+.hero-media { min-height:280px; }
+.hero-media img { width:100%; max-height:270px; object-fit:contain; filter:drop-shadow(0 15px 20px #000); }
+.features { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; padding:18px 55px; border-bottom:1px solid #263b42; }
+.feature { display:flex; align-items:center; gap:10px; font-weight:700; font-size:14px; }
+.icon { color:var(--orange); font-size:27px; }
+.steps { display:grid; grid-template-columns:repeat(3,1fr); gap:25px; padding:24px 55px; border-bottom:1px solid #263b42; }
+.step { display:flex; align-items:center; gap:14px; }
+.num { width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:#394c55;font-weight:900;font-size:20px; }
+.step:first-child .num { background:var(--orange); }
+.step strong { display:block; font-size:16px; }
+.step small { color:var(--muted); }
+.form-wrap { padding:25px 30px 30px; }
+.form-grid { display:grid; grid-template-columns:1fr 1.15fr 1.35fr; gap:12px; }
+.card { border:1px solid #29414a; border-radius:6px; padding:20px; background:linear-gradient(180deg,#061217,#030b0e); }
+.card h2 { margin:0 0 18px; font-size:19px; }
+.card h2::first-letter { color:var(--orange); }
+label { display:block; font-weight:700; margin:12px 0 6px; font-size:14px; }
+.req { color:var(--orange); }
+input, select, textarea {
+  width:100%; border:1px solid #49606a; border-radius:5px; padding:12px 13px;
+  background:#132229; color:#fff; outline:none; font:inherit;
+}
+input:focus,select:focus,textarea:focus { border-color:var(--orange); box-shadow:0 0 0 2px #ff5a0030; }
+textarea { min-height:125px; resize:vertical; }
+.notice {
+  border:1px solid #334c55; background:#102026; padding:12px; border-radius:5px;
+  color:#d8e0e2; font-size:13px; margin-bottom:10px;
+}
+.checks { display:grid; grid-template-columns:1fr 1fr; gap:8px 20px; margin-top:8px; }
+.check { display:flex; gap:9px; align-items:flex-start; font-weight:500; }
+.check input { width:auto; margin-top:3px; accent-color:var(--orange); }
+.bottom { display:grid; grid-template-columns:1.1fr 1.2fr .9fr; margin-top:12px; border:1px solid #29414a; border-radius:6px; overflow:hidden; }
+.bottom > div { padding:20px; border-right:1px solid #29414a; }
+.bottom > div:last-child { border-right:0; }
+.upload {
+  border:1px dashed #687a81; min-height:95px; border-radius:5px; display:grid; place-items:center;
+  text-align:center; color:#d5dcde; padding:12px; cursor:pointer;
+}
+.upload input { display:none; }
+ul { margin:8px 0 0 20px; padding:0; color:#d6dfe1; }
+li { margin:7px 0; }
+.submit-area { display:flex; flex-direction:column; justify-content:center; gap:12px; }
+.submit { font-size:16px; width:100%; padding:17px; }
+.private { color:#aeb9bd; text-align:center; font-size:12px; }
+footer { display:flex; align-items:center; justify-content:space-between; gap:20px; padding:18px 34px; border-top:1px solid #29414a; color:#c0c9cc; }
+.footer-orange { color:var(--orange); }
+@media(max-width:900px) {
+  .menu{display:block;margin-left:auto}
+  header{position:relative}
+  header nav.open{display:flex;position:absolute;left:18px;right:18px;top:76px;z-index:50;flex-direction:column;align-items:stretch;gap:0;padding:10px 18px;background:#02080b;border:1px solid #29414a}
+  header nav.open a{padding:13px 0;border-bottom:1px solid #29414a}
+
+  header { height:auto; padding:12px 18px; }
+  nav { display:none; }
+  .tagline { margin-left:auto; }
+  .hero { grid-template-columns:1fr; }
+  .hero-copy { padding:28px 24px 10px; }
+  h1 { font-size:32px; }
+  .hero-media { min-height:190px; padding:0 20px 20px; }
+  .features { grid-template-columns:repeat(2,1fr); padding:18px 24px; }
+  .steps { padding:20px 24px; }
+  .form-grid { grid-template-columns:1fr; }
+  .bottom { grid-template-columns:1fr; }
+  .bottom > div { border-right:0; border-bottom:1px solid #29414a; }
+  .bottom > div:last-child { border-bottom:0; }
+}
+@media(max-width:560px) {
+  .logo { width:125px; }
+  .tagline { display:none; }
+  .features { grid-template-columns:1fr 1fr; padding:16px; gap:10px; }
+  .feature { font-size:12px; }
+  .steps { grid-template-columns:1fr; gap:10px; padding:18px 16px; }
+  .step { gap:10px; }
+  .form-wrap { padding:16px; }
+  .card { padding:16px; }
+  .checks { grid-template-columns:1fr; }
+  footer { flex-direction:column; text-align:center; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+<header>
+  <a href="index.html" aria-label="ForgePC Mauricie"><img class="logo" src="Assets/logo.png" alt="ForgePC Mauricie"></a>
+  <nav>
+    <a href="index.html">ACCUEIL</a>
+    <a href="inventaire.html">INVENTAIRE</a>
+    <a href="index.html#services" class="active">SERVICES</a>
+    <a href="a-propos.html">À PROPOS</a>
+    <a href="contact.html">CONTACT</a>
+  </nav>
+  <button class="menu" type="button" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+  <button class="cta" onclick="document.getElementById('formulaire').scrollIntoView()">NOUS CONTACTER →</button>
+  <div class="tagline">Votre technologie,<br><span class="footer-orange">notre expertise.</span></div>
+</header>
+
+<section class="hero">
+  <div class="hero-copy">
+    <div class="kicker">⚙ MISES À NIVEAU</div>
+    <h1>PROPULSEZ <span>VOTRE PC</span></h1>
+    <p><b>Plus de performance, plus de possibilités.</b><br>
+    Nous vous conseillons et vous aidons à choisir les meilleurs composants pour améliorer votre ordinateur, selon vos besoins et votre budget.</p>
+  </div>
+  <div class="hero-media" aria-hidden="true"></div>
+</section>
+
+<section class="features">
+  <div class="feature"><span class="icon">🛡</span> Conseils personnalisés</div>
+  <div class="feature"><span class="icon">⚙</span> Composants compatibles</div>
+  <div class="feature"><span class="icon">▥</span> Meilleure performance</div>
+  <div class="feature"><span class="icon">$</span> Excellent rapport qualité/prix</div>
+</section>
+
+<section class="steps">
+  <div class="step"><span class="num">1</span><div><strong>Vos informations</strong><small>Quelques renseignements</small></div></div>
+  <div class="step"><span class="num">2</span><div><strong>Détails de votre PC</strong><small>Composants actuels et améliorations</small></div></div>
+  <div class="step"><span class="num">3</span><div><strong>Confirmation</strong><small>On vous contacte rapidement</small></div></div>
+</section>
+
+<main class="form-wrap" id="formulaire">
+<form data-mailto="info@forgepcmauricie.ca" data-subject="Demande de mise à niveau — ForgePC Mauricie">
+  <div class="form-grid">
+    <section class="card">
+      <h2>👤 Vos coordonnées</h2>
+      <label>Nom complet <span class="req">*</span></label>
+      <input name="nom" autocomplete="name" required placeholder="Votre nom">
+      <label>Téléphone <span class="req">*</span></label>
+      <input name="telephone" autocomplete="tel" required placeholder="(XXX) XXX-XXXX">
+      <label>Courriel <span class="req">*</span></label>
+      <input name="courriel" type="email" autocomplete="email" required placeholder="votre@courriel.com">
+    </section>
+
+    <section class="card">
+      <h2>🖥 Votre ordinateur actuel</h2>
+      <div class="notice">ℹ️ Vous ne connaissez pas la marque ou le modèle? Aucun problème. Donnez simplement le plus d'informations possible et nous vous aiderons.</div>
+      <label>Marque ou modèle (si connu)</label>
+      <input name="modele" placeholder="Ex. : Acer Nitro, HP Pavilion, PC maison, etc.">
+      <label>Système d'exploitation</label>
+      <select name="os">
+        <option value="">Sélectionnez</option><option>Windows 11</option><option>Windows 10</option>
+        <option>Linux</option><option>Autre</option><option>Je ne sais pas</option>
+      </select>
+      <label>Utilisation principale <span class="req">*</span></label>
+      <select name="utilisation" required>
+        <option value="">Sélectionnez</option><option>Bureautique / études</option><option>Jeux</option>
+        <option>Montage vidéo / création</option><option>Multitâche</option><option>Autre</option>
+      </select>
+      <label>Avez-vous l'ordinateur en main?</label>
+      <div class="check"><input type="radio" name="en_main" value="Oui" checked> Oui</div>
+      <div class="check"><input type="radio" name="en_main" value="Non"> Non, mais je connais les spécifications</div>
+      <div class="check"><input type="radio" name="en_main" value="Inconnu"> Je ne suis pas certain(e)</div>
+    </section>
+
+    <section class="card">
+      <h2>🔧 Quels sont vos objectifs?</h2>
+      <div class="checks">
+        <label class="check"><input type="checkbox" name="objectif" value="Performance générale"> Meilleure performance générale</label>
+        <label class="check"><input type="checkbox" name="objectif" value="Jeux"> Jeux (gaming)</label>
+        <label class="check"><input type="checkbox" name="objectif" value="Création"> Montage vidéo / création de contenu</label>
+        <label class="check"><input type="checkbox" name="objectif" value="Bureautique"> Bureautique et multitâche</label>
+        <label class="check"><input type="checkbox" name="objectif" value="Stockage"> Plus d'espace de stockage (SSD / HDD)</label>
+        <label class="check"><input type="checkbox" name="objectif" value="RAM"> Ajouter de la mémoire vive (RAM)</label>
+        <label class="check"><input type="checkbox" name="objectif" value="GPU"> Changer la carte graphique (GPU)</label>
+        <label class="check"><input type="checkbox" name="objectif" value="Autre"> Autre</label>
+      </div>
+      <label>Détails et attentes</label>
+      <textarea name="details" placeholder="Décrivez vos besoins, ce que vous aimeriez améliorer et toute information pertinente."></textarea>
+    </section>
+  </div>
+
+  <div class="bottom">
+    <div>
+      <h2>📎 Pièces jointes <small>(facultatif)</small></h2>
+      <p>Vous pouvez ajouter des photos de votre PC, des captures d'écran ou des informations sur vos composants.</p>
+      <label class="upload">
+        <input id="fichiers" type="file" accept=".jpg,.jpeg,.png,.pdf" multiple>
+        <span>☁️<br>Glissez vos fichiers ici<br>ou cliquez pour parcourir<br><small>Images (JPG, PNG) ou documents (PDF) — Max 10 Mo</small></span>
+      </label>
+    </div>
+    <div>
+      <h2>ⓘ Bon à savoir</h2>
+      <ul>
+        <li>Nous analysons votre demande rapidement.</li>
+        <li>Nous vous conseillons des composants compatibles.</li>
+        <li>Nous vous contactons généralement sous 24 à 48 h.</li>
+        <li>Aucun engagement de votre part.</li>
+      </ul>
+    </div>
+    <div class="submit-area">
+      <button class="cta submit" type="submit">Envoyer ma demande →</button>
+      <div class="private">🔒 Vos informations sont confidentielles.</div>
+      <div id="status" class="private"></div>
+    </div>
+  </div>
+</form>
+</main>
+
+<footer>
+  <img class="logo" src="Assets/logo.png" alt="ForgePC Mauricie">
+  <div>Shawinigan et environs · Service fiable · Approche humaine</div>
+  <div class="footer-orange">Votre technologie, notre expertise.</div>
+</footer>
+</div>
+
+<script src="Assets/site.js"></script>
+</body>
+</html>
