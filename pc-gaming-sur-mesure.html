@@ -7,17 +7,17 @@
 <meta name="description" content="Projet de PC gaming sur mesure : configuration, assemblage, tests et suivi par ForgePC Mauricie.">
 <style>
 :root{--bg:#02090b;--panel:#061216;--line:#2a3b40;--orange:#ff5a00;--white:#f5f5f2;--muted:#d0d5d3;--max:1180px}
-*{box-sizing:border-box}html{scroll-behavior:smooth}
+*{box-sizing:border-box}body{overflow-x:hidden}html{scroll-behavior:smooth;overflow-x:hidden}
 body{margin:0;background:#02090b;color:var(--white);font-family:Arial,Helvetica,sans-serif}
 a{color:inherit;text-decoration:none}.container{width:min(calc(100% - 32px),var(--max));margin:auto}
 header{position:sticky;top:0;z-index:20;background:rgba(2,9,11,.98);border-bottom:1px solid var(--line)}
 .nav{min-height:70px;display:flex;align-items:center}.logo{width:150px;max-height:62px;object-fit:contain}
-.navlinks{display:flex;align-items:center;gap:28px;margin-left:auto;font-size:13px;font-weight:900}
+.navlinks{display:flex;align-items:center;gap:28px;margin-left:auto;font-size:13px;font-weight:900}.navlinks.open{display:flex}
 .navlinks a{height:70px;display:flex;align-items:center;border-bottom:3px solid transparent}
 .navlinks a:hover,.navlinks .active{color:var(--orange);border-bottom-color:var(--orange)}
 .location{margin-left:28px;color:#ddd;font-size:12px;font-weight:700}
 .menu{display:none;margin-left:auto;width:45px;height:42px;border:1px solid #536067;border-radius:5px;background:transparent;color:#fff;font-size:24px}
-.hero{min-height:330px;background:linear-gradient(90deg,rgba(0,0,0,.92),rgba(0,0,0,.60) 48%,rgba(0,0,0,.20)),url('/Assets/service-pc.jpg') center/cover;border-bottom:1px solid #64290e}
+.hero{min-height:330px;background:linear-gradient(90deg,rgba(0,0,0,.92),rgba(0,0,0,.60) 48%,rgba(0,0,0,.20)),url('/Assets/pc-gaming-hero-ancienne-photo.jpg') center center/cover;border-bottom:1px solid #64290e}
 .hero-inner{min-height:320px;display:flex;align-items:center}.hero-copy{max-width:720px}
 .eyebrow{color:var(--orange);font-size:15px;font-weight:900;text-transform:uppercase}
 h1{font-size:52px;line-height:.98;margin:8px 0 12px;text-transform:uppercase;letter-spacing:1px}
@@ -40,29 +40,35 @@ textarea{min-height:115px;resize:vertical}.submit{width:100%;margin-top:13px;bor
 .cta{background:linear-gradient(90deg,rgba(2,9,11,.9),rgba(2,9,11,.62)),url('/Assets/services-map.jpg') center/cover;border-bottom:1px solid var(--line)}
 .cta-inner{min-height:100px;display:flex;align-items:center;gap:25px}.cta h2{margin:0;font-size:25px}.cta h2 span{color:var(--orange)}
 .btn{margin-left:auto;background:var(--orange);padding:14px 24px;border-radius:4px;font-weight:900}
-footer{background:#02090b;padding:12px 0}.footer{display:flex;align-items:center;justify-content:space-between;gap:20px}.footer img{width:115px}.footer small{color:#ddd}
+footer.site-footer{width:100%;box-sizing:border-box;background:#02090b;border-top:1px solid #27363a;padding:30px 16px 26px;text-align:center;clear:both;position:relative;z-index:2}
+.site-footer .footer-logo{display:flex;justify-content:center;align-items:center;margin-bottom:16px}
+.site-footer .footer-logo img{width:160px;height:auto;display:block;object-fit:contain}
+.site-footer .footer-location{font-size:16px;line-height:1.35;margin-bottom:5px}
+.site-footer .footer-slogan{color:#ff5a00;font-size:18px;font-weight:800;line-height:1.35}
+.site-footer .footer-copy{margin-top:8px;font-size:14px;color:#d4d8d7}
+.footer{display:none}
 @media(max-width:900px){
 .approach{grid-template-columns:1fr 1fr}
-.container{width:min(calc(100% - 24px),680px)}.nav{min-height:68px}.logo{width:135px}.navlinks,.location{display:none}.menu{display:block}
+.container{width:min(calc(100% - 24px),680px)}.nav{min-height:68px}.logo{width:135px}.navlinks,.location{display:none}.navlinks.open{display:flex!important}.menu{display:block}
 .hero,.hero-inner{min-height:285px}.hero-copy{padding:28px 0}h1{font-size:39px}.hero p{font-size:16px}
 .benefits{gap:15px}.content{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}.full{grid-column:auto}
-.title{font-size:23px}.title-line:before,.title-line:after{width:45px}.cta-inner{padding:18px 0;display:block}.btn{display:inline-flex;margin-top:12px}.footer{display:grid;grid-template-columns:1fr auto}
+.title{font-size:23px}.title-line:before,.title-line:after{width:45px}.cta-inner{padding:18px 0;display:block}.btn{display:inline-flex;margin-top:12px}.footer{display:none}
 }
 @media(max-width:600px){
   .approach{grid-template-columns:1fr}
   h1{font-size:34px}
   .hero p{font-size:15px}
-  .hero{background-position:center center!important;}
+  .hero{background-position:60% center!important;}
   .benefits{gap:12px}
   .panel{padding:15px}
 }
 </style>
 <link rel="stylesheet" href="/Assets/global-fixes.css">
 </head>
-<body>
+<body class="pc-gaming-page">
 <header>
 <div class="container nav">
-<a href="index.html"><img class="logo" src="/Assets/forgepc-logo-original-v3.png" alt="ForgePC Mauricie"></a>
+<a class="brand-link" href="index.html"><img class="logo" src="/Assets/forgepc-logo-officiel.png" alt="ForgePC Mauricie"></a>
 <nav class="navlinks">
 <a href="index.html">ACCUEIL</a><a class="active" href="services.html">SERVICES</a><a href="inventaire.html">INVENTAIRE</a><a href="a-propos.html">À PROPOS</a><a href="contact.html">CONTACT</a>
 </nav>
@@ -82,10 +88,10 @@ footer{background:#02090b;padding:12px 0}.footer{display:flex;align-items:center
 <section class="section"><div class="container">
 <div class="title-line"><h2 class="title">NOTRE APPROCHE</h2></div><p class="sub">Un PC conçu pour vous, sans compromis.</p>
 <div class="approach">
-<div class="card"><img src="/Assets/service-pc.jpg" alt="Tour PC gaming"><div class="card-body"><h3><span class="num">1</span>DISCUSSION</h3><p>On discute de vos besoins, de vos jeux, de votre budget et de vos préférences.</p></div></div>
+<div class="card"><img src="/Assets/pc-gaming-hero-ancienne-photo.jpg" alt="Tour PC gaming"><div class="card-body"><h3><span class="num">1</span>DISCUSSION</h3><p>On discute de vos besoins, de vos jeux, de votre budget et de vos préférences.</p></div></div>
 <div class="card"><img src="/Assets/service-repair.jpg" alt="Composants PC"><div class="card-body"><h3><span class="num">2</span>CONFIGURATION</h3><p>On vous propose une configuration adaptée où chaque composant est bien choisi.</p></div></div>
-<div class="card"><img src="/Assets/mise-hero.jpg" alt="Assemblage de PC"><div class="card-body"><h3><span class="num">3</span>ASSEMBLAGE</h3><p>Montage professionnel, gestion des câbles et vérification complète.</p></div></div>
-<div class="card"><img src="/Assets/index-hero.jpg" alt="PC gaming assemblé"><div class="card-body"><h3><span class="num">4</span>TESTS ET SUIVI</h3><p>On teste la stabilité et les performances et on vous offre un soutien après la vente.</p></div></div>
+<div class="card"><img src="/Assets/service-upgrade.jpg" alt="Assemblage de PC"><div class="card-body"><h3><span class="num">3</span>ASSEMBLAGE</h3><p>Montage professionnel, gestion des câbles et vérification complète.</p></div></div>
+<div class="card"><img src="/Assets/mise-hero.jpg" alt="PC gaming assemblé"><div class="card-body"><h3><span class="num">4</span>TESTS ET SUIVI</h3><p>On teste la stabilité et les performances et on vous offre un soutien après la vente.</p></div></div>
 </div></div></section>
 
 <section class="section"><div class="container content">
@@ -108,9 +114,9 @@ footer{background:#02090b;padding:12px 0}.footer{display:flex;align-items:center
 </div>
 <div class="panel">
 <h2>UN PC QUI <span style="color:var(--orange)">VOUS RESSEMBLE</span></h2>
-<img src="/Assets/service-pc.jpg" alt="Tour PC gaming ForgePC" style="width:100%;height:220px;object-fit:cover;border-radius:4px;border:1px solid #34454b">
+<img src="/Assets/pc-gaming-rgb-forgepc.jpg" alt="Tour PC gaming ForgePC construite par ForgePC" style="width:100%;height:220px;object-fit:cover;border-radius:4px;border:1px solid #34454b">
 <p>Que ce soit pour le jeu compétitif, le simracing, la création de contenu ou un usage polyvalent, on vous aide à obtenir un PC performant, stable et durable.</p>
-<h2>FOIRE AUX QUESTIONS</h2>
+<h2>FOIRE AUX QUESTIONS (FAQ)</h2>
 <div class="faq">
 <div>Quel budget faut-il pour un bon PC gaming ? <b>+</b></div>
 <div>Combien de temps prends l’assemblage ? <b>+</b></div>
@@ -122,7 +128,12 @@ footer{background:#02090b;padding:12px 0}.footer{display:flex;align-items:center
 </div></section>
 
 <section class="cta"><div class="container cta-inner"><h2>Un projet de PC gaming ?<br><span>Parlons-en.</span></h2><a class="btn" href="contact.html">NOUS CONTACTER →</a></div></section>
-<footer><div class="container footer"><img src="/Assets/logo-footer-v2.png" alt="ForgePC Mauricie"><small>© 2026 ForgePC Mauricie. Tous droits réservés.</small><small>📍 Shawinigan et toute la Mauricie</small></div></footer>
+<footer class="site-footer">
+<div class="footer-logo"><img alt="ForgePC Mauricie" src="/Assets/forgepc-logo-officiel.png"/></div>
+<div class="footer-location">📍 Shawinigan et toute la Mauricie</div>
+<div class="footer-slogan">Votre technologie, notre expertise.</div>
+<div class="footer-copy">© 2026 ForgePC Mauricie</div>
+</footer>
 
 <script src="/Assets/site.js"></script>
 </body>
