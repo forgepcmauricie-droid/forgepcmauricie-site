@@ -1,8 +1,0 @@
-ForgePC Mauricie — correctifs mobile
-
-- Header mobile uniformisé : logo non coupé + un seul bouton menu.
-- CTA « Nous contacter » du header masqué sur mobile pour éviter les headers différents.
-- Menus mobiles conservés fonctionnels via Assets/site.js.
-- Images des cartes et fiches PC : object-fit contain pour éviter les recadrages agressifs.
-- Logo : hauteur automatique afin d'éviter le rognage du fichier 218x128.
-- Les fichiers images dans Assets n'ont pas été modifiés.
