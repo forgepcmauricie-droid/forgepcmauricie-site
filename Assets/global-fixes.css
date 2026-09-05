@@ -1,321 +1,47 @@
-/* ForgePC Mauricie — correctifs finaux */
-html,body{overflow-x:hidden;}
-img{max-width:100%;}
+/* ForgePC Mauricie — correctifs finaux propres — 2026-09-04 */
+html,body{overflow-x:hidden!important;}
+html{background:#020609!important;}
+body{margin:0!important;background:#020609!important;color:#f5f5f2;}
 
-/* Header : logo toujours entier et bouton menu stable */
-header .logo,header .brand{display:block !important;width:auto !important;height:auto !important;max-width:132px !important;max-height:72px !important;object-fit:contain !important;object-position:center !important;}
-header .brand-link{display:flex !important;align-items:center !important;flex:0 0 auto !important;}
-header .container,header .nav{min-width:0 !important;}
-header .menu{appearance:none;-webkit-appearance:none;display:none;align-items:center !important;justify-content:center !important;width:46px !important;height:44px !important;min-width:46px !important;padding:0 !important;margin-left:auto !important;border:1px solid #4a565a !important;border-radius:7px !important;background:#02090b !important;color:#fff !important;font-size:25px !important;line-height:1 !important;cursor:pointer !important;position:relative !important;z-index:1002 !important;}
+/* EN-TÊTE UNIFORME */
+.site-header{position:sticky!important;top:0!important;z-index:1000!important;width:100%!important;min-height:76px!important;height:auto!important;background:#02090b!important;border-bottom:1px solid #27363a!important;box-sizing:border-box!important;}
+.site-header .container.nav{width:min(calc(100% - 32px),1180px)!important;min-height:76px!important;height:76px!important;margin:0 auto!important;padding:0!important;display:flex!important;align-items:center!important;gap:28px!important;position:relative!important;box-sizing:border-box!important;}
+.site-header .brand-link{display:flex!important;align-items:center!important;justify-content:center!important;flex:0 0 auto!important;width:auto!important;height:auto!important;padding:2px 4px!important;margin:0!important;overflow:visible!important;}
+.site-header .logo{display:block!important;width:150px!important;height:auto!important;max-width:150px!important;max-height:88px!important;object-fit:contain!important;object-position:center!important;margin:0!important;filter:drop-shadow(0 2px 7px rgba(0,0,0,.95)) drop-shadow(0 0 4px rgba(255,90,0,.22))!important;}
+.site-header .navlinks{display:flex!important;align-items:center!important;justify-content:flex-end!important;gap:30px!important;margin-left:auto!important;padding:0!important;font-weight:800!important;font-size:14px!important;}
+.site-header .navlinks a{display:flex!important;align-items:center!important;min-height:76px!important;padding:0!important;margin:0!important;border:0!important;color:inherit!important;text-decoration:none!important;white-space:nowrap!important;}
+.site-header .navlinks a.active{color:#ff5a00!important;border-bottom:3px solid #ff5a00!important;}
+.site-header .menu{display:none!important;appearance:none!important;-webkit-appearance:none!important;width:46px!important;height:44px!important;min-width:46px!important;padding:0!important;margin-left:auto!important;border:1px solid #4a565a!important;border-radius:7px!important;background:#02090b!important;color:#fff!important;font-size:26px!important;line-height:1!important;cursor:pointer!important;align-items:center!important;justify-content:center!important;}
 
-/* Le gros CTA du header est volontairement retiré sur mobile : logo + menu seulement. */
+/* MOBILE — menu simple, sans sous-menu Services */
 @media(max-width:900px){
-  header{min-width:0 !important;}
-  header .menu{display:flex !important;}
-  header .logo,header .brand{max-width:132px !important;max-height:72px !important;}
-  header nav,header .navlinks,header .links{display:none !important;position:absolute !important;left:12px !important;right:12px !important;top:calc(100% + 1px) !important;z-index:1001 !important;flex-direction:column !important;align-items:stretch !important;gap:0 !important;margin:0 !important;padding:8px !important;background:#02090b !important;border:1px solid #27363a !important;border-radius:7px !important;box-shadow:0 10px 30px rgba(0,0,0,.45) !important;}
-  header nav.open,header .navlinks.open,header .links.open{display:flex !important;}
-  header nav>a,header .navlinks>a,header .links>a,header nav .nav-services{width:100% !important;min-height:46px !important;box-sizing:border-box !important;}
-  header nav>a,header .navlinks>a,header .links>a{display:flex !important;align-items:center !important;padding:12px 10px !important;border-bottom:1px solid #27363a !important;}
+ .site-header{position:relative!important;min-height:90px!important;}
+ .site-header .container.nav{width:calc(100% - 24px)!important;min-height:90px!important;height:90px!important;}
+ .site-header .logo{width:132px!important;max-width:132px!important;max-height:78px!important;}
+ .site-header .menu{display:flex!important;}
+ .site-header .navlinks{display:none!important;position:absolute!important;top:calc(100% + 1px)!important;left:0!important;right:0!important;width:100%!important;z-index:1001!important;flex-direction:column!important;align-items:stretch!important;gap:0!important;margin:0!important;padding:8px!important;background:#02090b!important;border:1px solid #27363a!important;border-radius:7px!important;box-shadow:0 10px 30px rgba(0,0,0,.5)!important;box-sizing:border-box!important;}
+ .site-header .navlinks.open{display:flex!important;}
+ .site-header .navlinks a{width:100%!important;min-height:46px!important;height:46px!important;display:flex!important;align-items:center!important;padding:0 12px!important;border-bottom:1px solid #27363a!important;box-sizing:border-box!important;}
+ .site-header .navlinks a:last-child{border-bottom:0!important;}
+ .site-header .navlinks a.active{border-bottom:1px solid #27363a!important;color:#ff5a00!important;}
 }
 
-/* Menu SERVICES : sous-menu fonctionnel sur mobile et desktop */
-.nav-services{position:relative !important;}
-.services-toggle{appearance:none;border:0;background:transparent;color:inherit;font:inherit;font-weight:inherit;cursor:pointer;}
-header nav .services-toggle,header .navlinks .services-toggle,header .links .services-toggle{display:flex;align-items:center;gap:6px;min-height:44px;padding:0 !important;}
-.services-submenu{display:none;position:absolute;top:calc(100% + 8px);left:0;min-width:220px;padding:6px;background:#02090b;border:1px solid #27363a;border-radius:7px;box-shadow:0 10px 30px rgba(0,0,0,.45);z-index:1003;}
-.nav-services.open .services-submenu{display:block;}
-.services-submenu a{display:flex;align-items:center;min-height:42px;padding:10px 12px;border-bottom:1px solid #27363a;font-size:12px;font-weight:800;}
-.services-submenu a:last-child{border-bottom:0;}
-.services-submenu a:hover{color:#ff5a00;}
-@media(max-width:900px){
-  .nav-services{display:block !important;border-bottom:1px solid #27363a;}
-  header nav .services-toggle,header .navlinks .services-toggle,header .links .services-toggle{width:100% !important;justify-content:space-between !important;min-height:46px !important;padding:12px 10px !important;}
-  .services-submenu{position:static;min-width:0;margin:0 4px 6px;padding:0;border:0;border-radius:0;box-shadow:none;background:#061114;}
-  .nav-services.open .services-submenu{display:block;}
-  .services-submenu a{padding:10px 14px;min-height:42px;}
-}
+/* FONDS ET IMAGES — éviter les zones grisâtres et les cadrages agressifs */
+main,section{background-color:transparent;}
+.hero,.story-image{background-repeat:no-repeat!important;background-position:center center!important;background-size:cover!important;background-color:#020609!important;}
+.hero:before,.hero:after{pointer-events:none;}
+.card img,.service-card img,.services .card img{object-position:center!important;}
 
-/* Images : cadrage propre sans débordement */
-.story-image{background-position:center !important;background-size:cover !important;background-repeat:no-repeat !important;}
-.card img,.service-card img,.services .card img{object-position:center !important;}
+/* À propos — image familiale approuvée, sans image de tasse */
+.about img{object-position:center!important;}
 
-/* A-propos : une seule photo familiale, pas de duplication */
-.a-propos-duplicate-fix{display:none !important;}
-
-/* Footer commun */
-.site-footer{width:100% !important;box-sizing:border-box !important;margin:0 !important;padding:32px 16px 24px !important;background:#02090b !important;border-top:1px solid #27363a !important;text-align:center !important;color:#f2f3f3 !important;}
-.site-footer .footer-logo{display:flex !important;align-items:center !important;justify-content:center !important;margin:0 0 16px !important;}
-.site-footer .footer-logo img{display:block !important;width:150px !important;height:auto !important;max-width:150px !important;max-height:80px !important;object-fit:contain !important;}
-.site-footer .footer-location{margin:0 0 5px !important;font-size:16px !important;line-height:1.35 !important;}
-.site-footer .footer-slogan{margin:0 !important;color:#ff5a00 !important;font-size:18px !important;line-height:1.35 !important;font-weight:800 !important;}
-.site-footer .footer-copy{margin:8px 0 0 !important;font-size:13px !important;line-height:1.35 !important;color:#d4d8d7 !important;}
-
-/* Aucun calque décoratif ne doit produire un faux texte en double */
-.quote:before,.quote:after{content:none !important;}
-@media(max-width:520px){.site-footer{padding:28px 14px 22px !important;}.site-footer .footer-logo img{width:145px !important;max-width:145px !important;}.site-footer .footer-location{font-size:15px !important;}.site-footer .footer-slogan{font-size:17px !important;}}
-
-/* ===== Passe finale après vérification mobile ===== */
-@media(max-width:900px){
-  header, header .container, header .nav{
-    min-height:90px !important;
-    height:auto !important;
-  }
-  header .logo, header .brand{
-    width:auto !important;
-    max-width:128px !important;
-    height:auto !important;
-    max-height:70px !important;
-  }
-  header .nav-services{border-bottom:1px solid #27363a !important;}
-  header nav .nav-services:last-child{border-bottom:0 !important;}
-}
-
-/* Sur desktop aussi, le menu SERVICES s'ouvre au survol/clavier. */
-@media(min-width:901px){
-  .nav-services:hover .services-submenu,
-  .nav-services:focus-within .services-submenu{display:block;}
-  .nav-services{display:flex;align-items:center;}
-}
-
-/* ===== Corrections demandées — dernière passe ===== */
-/* Les logos doivent rester entièrement visibles et ne pas se perdre dans le fond. */
-header .brand-link,
-header > .container > a,
-header .container > a[aria-label*="ForgePC"],
-.site-footer .footer-logo {
-  overflow: visible !important;
-}
-header .logo,
-header .brand,
-.site-footer .footer-logo img {
-  overflow: visible !important;
-  filter: drop-shadow(0 0 4px rgba(255,255,255,.12));
-}
-
-/* Footer : structure parfaitement centrée et stable sur mobile. */
-.site-footer > * {
-  width:100% !important;
-  max-width:100% !important;
-  margin-left:auto !important;
-  margin-right:auto !important;
-  text-align:center !important;
-}
-.site-footer .footer-logo img {
-  width:150px !important;
-  height:auto !important;
-  margin:0 auto !important;
-}
-.site-footer .footer-location,
-.site-footer .footer-slogan,
-.site-footer .footer-copy { display:block !important; }
-
-/* Menu SERVICES : même ligne, même hauteur et même séparation que les autres entrées. */
-@media(max-width:900px){
-  header nav .nav-services,
-  header .navlinks .nav-services,
-  header .links .nav-services {
-    width:100% !important;
-    margin:0 !important;
-    padding:0 !important;
-    border-bottom:1px solid #27363a !important;
-  }
-  header nav .nav-services > .services-toggle,
-  header .navlinks .nav-services > .services-toggle,
-  header .links .nav-services > .services-toggle {
-    display:flex !important;
-    align-items:center !important;
-    justify-content:space-between !important;
-    width:100% !important;
-    min-height:46px !important;
-    height:auto !important;
-    box-sizing:border-box !important;
-    margin:0 !important;
-    padding:12px 10px !important;
-    border:0 !important;
-    border-radius:0 !important;
-    text-align:left !important;
-  }
-  header nav .nav-services.open > .services-toggle,
-  header .navlinks .nav-services.open > .services-toggle,
-  header .links .nav-services.open > .services-toggle {
-    color:#ff5a00 !important;
-  }
-  header nav .services-submenu,
-  header .navlinks .services-submenu,
-  header .links .services-submenu {
-    width:auto !important;
-    margin:0 4px 6px !important;
-  }
-}
-
-
-/* ===== CORRECTIONS 2026-09-04 — passe propre finale ===== */
-/* Logos : conserver toute l'image et augmenter légèrement le contraste avec le fond. */
-header > .container > a:first-child,
-header.site-header > .container > a:first-child,
-header.wrap > a:first-child {
-  display:flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-  flex:0 0 auto !important;
-  overflow:visible !important;
-  padding:3px 5px !important;
-  border-radius:8px !important;
-}
-header .logo {
-  width:132px !important;
-  height:auto !important;
-  max-width:132px !important;
-  max-height:none !important;
-  object-fit:contain !important;
-  filter:drop-shadow(0 2px 7px rgba(0,0,0,.95)) drop-shadow(0 0 4px rgba(255,90,0,.22)) !important;
-}
-
-/* Menu mobile : même structure sur toutes les pages, y compris Contact. */
-@media (max-width:900px) {
-  header { position:relative !important; z-index:1000 !important; }
-  header .container.nav,
-  header.wrap {
-    min-height:90px !important;
-    height:auto !important;
-  }
-  header nav,
-  header .nav,
-  header .navlinks,
-  header .links {
-    display:none !important;
-    position:absolute !important;
-    top:calc(100% + 1px) !important;
-    left:12px !important;
-    right:12px !important;
-    width:auto !important;
-    height:auto !important;
-    z-index:1001 !important;
-    box-sizing:border-box !important;
-    flex-direction:column !important;
-    align-items:stretch !important;
-    gap:0 !important;
-    margin:0 !important;
-    padding:8px !important;
-    background:#02090b !important;
-    border:1px solid #27363a !important;
-    border-radius:7px !important;
-    box-shadow:0 10px 30px rgba(0,0,0,.45) !important;
-  }
-  header nav.open,
-  header .nav.open,
-  header .navlinks.open,
-  header .links.open { display:flex !important; }
-
-  header nav > a,
-  header .nav > a,
-  header .navlinks > a,
-  header .links > a {
-    display:flex !important;
-    align-items:center !important;
-    width:100% !important;
-    min-height:46px !important;
-    box-sizing:border-box !important;
-    padding:12px 10px !important;
-    margin:0 !important;
-    border-bottom:1px solid #27363a !important;
-  }
-
-  header nav > a:last-child,
-  header .nav > a:last-child,
-  header .navlinks > a:last-child,
-  header .links > a:last-child { border-bottom:0 !important; }
-
-  header .nav-services {
-    width:100% !important;
-    margin:0 !important;
-    padding:0 !important;
-    border-bottom:1px solid #27363a !important;
-    box-sizing:border-box !important;
-  }
-  header .nav-services > .services-toggle {
-    display:flex !important;
-    align-items:center !important;
-    justify-content:space-between !important;
-    width:100% !important;
-    min-height:46px !important;
-    padding:12px 10px !important;
-    margin:0 !important;
-    box-sizing:border-box !important;
-    border:0 !important;
-    border-radius:0 !important;
-    background:transparent !important;
-    color:#fff !important;
-    text-align:left !important;
-  }
-  header .nav-services.open > .services-toggle { color:#ff5a00 !important; }
-  header .services-submenu {
-    position:static !important;
-    width:auto !important;
-    min-width:0 !important;
-    margin:0 4px 6px !important;
-    padding:0 !important;
-    border:0 !important;
-    border-radius:0 !important;
-    box-shadow:none !important;
-    background:#061114 !important;
-  }
-  header .services-submenu a {
-    display:flex !important;
-    align-items:center !important;
-    width:100% !important;
-    min-height:42px !important;
-    box-sizing:border-box !important;
-    padding:10px 14px !important;
-    border-bottom:1px solid #27363a !important;
-  }
-  header .services-submenu a:last-child { border-bottom:0 !important; }
-}
-
-/* Footer : bloc unique, centré et stable sur mobile. */
-.site-footer {
-  display:block !important;
-  width:100% !important;
-  box-sizing:border-box !important;
-  margin:0 !important;
-  padding:30px 16px 24px !important;
-  text-align:center !important;
-  overflow:visible !important;
-}
-.site-footer .footer-logo {
-  display:flex !important;
-  width:100% !important;
-  align-items:center !important;
-  justify-content:center !important;
-  margin:0 0 16px !important;
-  padding:0 !important;
-}
-.site-footer .footer-logo img {
-  display:block !important;
-  width:145px !important;
-  height:auto !important;
-  max-width:145px !important;
-  max-height:none !important;
-  margin:0 auto !important;
-  object-fit:contain !important;
-  filter:drop-shadow(0 2px 7px rgba(0,0,0,.95)) drop-shadow(0 0 4px rgba(255,90,0,.22)) !important;
-}
-.site-footer .footer-location,
-.site-footer .footer-slogan,
-.site-footer .footer-copy {
-  display:block !important;
-  width:100% !important;
-  margin-left:auto !important;
-  margin-right:auto !important;
-  text-align:center !important;
-  box-sizing:border-box !important;
-}
-.site-footer .footer-location { margin-bottom:5px !important; }
-.site-footer .footer-copy { margin-top:8px !important; }
-
-/* Citation : aucun pseudo-élément ne doit recréer du texte derrière la citation. */
-.quote::before,
-.quote::after,
-.quote-mark::before,
-.quote-mark::after { content:none !important; display:none !important; }
+/* FOOTER — logo complet et fond noir */
+.site-footer{width:100%!important;box-sizing:border-box!important;margin:0!important;padding:30px 16px 24px!important;background:#02090b!important;border-top:1px solid #27363a!important;text-align:center!important;color:#f2f3f3!important;overflow:visible!important;}
+.site-footer .footer-logo{display:flex!important;align-items:center!important;justify-content:center!important;width:100%!important;height:auto!important;margin:0 0 16px!important;padding:0!important;overflow:visible!important;}
+.site-footer .footer-logo img{display:block!important;width:155px!important;height:auto!important;max-width:155px!important;max-height:100px!important;margin:0 auto!important;object-fit:contain!important;object-position:center!important;filter:drop-shadow(0 2px 7px rgba(0,0,0,.95)) drop-shadow(0 0 4px rgba(255,90,0,.22))!important;}
+.site-footer .footer-location,.site-footer .footer-slogan,.site-footer .footer-copy{display:block!important;width:100%!important;margin-left:auto!important;margin-right:auto!important;text-align:center!important;box-sizing:border-box!important;}
+.site-footer .footer-location{margin-bottom:5px!important;font-size:16px!important;line-height:1.35!important;}
+.site-footer .footer-slogan{color:#ff5a00!important;font-size:18px!important;line-height:1.35!important;font-weight:800!important;}
+.site-footer .footer-copy{margin-top:8px!important;font-size:13px!important;line-height:1.35!important;color:#d4d8d7!important;}
+.quote:before,.quote:after,.quote-mark:before,.quote-mark:after{content:none!important;display:none!important;}
+@media(max-width:520px){.site-footer{padding:28px 14px 22px!important}.site-footer .footer-logo img{width:150px!important;max-width:150px!important}.site-footer .footer-location{font-size:15px!important}.site-footer .footer-slogan{font-size:17px!important}}

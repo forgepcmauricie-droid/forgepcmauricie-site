@@ -5,10 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
     nav.classList.remove('open');
     button?.setAttribute('aria-expanded', 'false');
     button?.setAttribute('aria-label', 'Ouvrir le menu');
-    header?.querySelectorAll('.nav-services.open').forEach(el => {
-      el.classList.remove('open');
-      el.querySelector('.services-toggle')?.setAttribute('aria-expanded','false');
-    });
   };
 
   document.querySelectorAll('header .menu').forEach(button => {
@@ -17,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!nav || button.dataset.menuReady === 'true') return;
     button.dataset.menuReady = 'true';
 
-    button.addEventListener('click', (event) => {
+    button.addEventListener('click', event => {
       event.preventDefault();
       event.stopPropagation();
       const isOpen = nav.classList.toggle('open');
@@ -25,37 +21,15 @@ document.addEventListener('DOMContentLoaded', () => {
       button.setAttribute('aria-label', isOpen ? 'Fermer le menu' : 'Ouvrir le menu');
     });
 
-    nav.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => closeMenu(header, button, nav));
-    });
-
-    header.addEventListener('click', (event) => {
-      if (event.target.closest('.services-toggle')) return;
+    nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => closeMenu(header, button, nav)));
+    document.addEventListener('click', event => {
       if (!header.contains(event.target)) closeMenu(header, button, nav);
     });
-
-    document.addEventListener('click', (event) => {
-      if (!header.contains(event.target)) closeMenu(header, button, nav);
-    });
-
-    document.addEventListener('keydown', (event) => {
+    document.addEventListener('keydown', event => {
       if (event.key === 'Escape') closeMenu(header, button, nav);
     });
-
     window.addEventListener('resize', () => {
       if (window.innerWidth > 900) closeMenu(header, button, nav);
-    });
-  });
-
-  document.querySelectorAll('.services-toggle').forEach(toggle => {
-    if (toggle.dataset.ready === 'true') return;
-    toggle.dataset.ready = 'true';
-    toggle.addEventListener('click', event => {
-      event.preventDefault();
-      event.stopPropagation();
-      const wrapper = toggle.closest('.nav-services');
-      const open = wrapper.classList.toggle('open');
-      toggle.setAttribute('aria-expanded', String(open));
     });
   });
 
