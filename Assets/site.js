@@ -1,17 +1,30 @@
 /* ForgePC Mauricie — navigation mobile + formulaires sans serveur */
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.menu').forEach(button => {
+    if (button.dataset.menuReady === 'true') return;
     const header = button.closest('header');
-    const nav = header ? header.querySelector('nav') : document.querySelector('nav');
+    const nav = header ? header.querySelector('nav') : null;
     if (!nav) return;
-    button.addEventListener('click', () => {
-      nav.classList.toggle('open');
-      button.setAttribute('aria-expanded', nav.classList.contains('open') ? 'true' : 'false');
+
+    button.dataset.menuReady = 'true';
+    button.addEventListener('click', (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      const isOpen = nav.classList.toggle('open');
+      button.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     });
-    nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
+
+    nav.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        nav.classList.remove('open');
+        button.setAttribute('aria-expanded', 'false');
+      });
+    });
   });
 
   document.querySelectorAll('form[data-mailto]').forEach(form => {
+    if (form.dataset.mailReady === 'true') return;
+    form.dataset.mailReady = 'true';
     form.addEventListener('submit', event => {
       event.preventDefault();
       const to = form.dataset.mailto;
