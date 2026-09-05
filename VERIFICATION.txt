@@ -1,6 +1,0 @@
-Corrections ciblées :
-- Logos PNG : fonds très clairs rendus transparents.
-- Navigation mobile basse : masquée lorsqu'elle correspond aux classes identifiées.
-- Dossier Assets conservé; aucune image non-logo remplacée.
-- Liens HTML locaux manquants détectés : 1
-rendez-vous.html -> https://forgepcmauricie.ca/rdv-service-domicile.html
