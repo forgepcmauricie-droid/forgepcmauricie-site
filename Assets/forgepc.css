@@ -296,3 +296,19 @@ footer{background:#02090b;border-top:1px solid #27363a}.footer-main{min-height:7
   .services-page .services-cta{background:#02090b!important;}
   .services-page .services-cta:after{display:none!important;}
 }
+
+/* MOBILE FINAL — images keep their full composition while the 45% panel remains fully filled. */
+@media (max-width:900px){
+  .services-page .services-cards{grid-template-columns:45% 55%!important;}
+  .services-page .services-card{height:166px!important;min-height:166px!important;overflow:hidden!important;}
+  .services-page .services-card .img{position:relative!important;width:100%!important;height:166px!important;min-height:166px!important;overflow:hidden!important;background-position:center!important;background-repeat:no-repeat!important;background-size:cover!important;}
+  .services-page .services-card .img img{position:relative!important;z-index:1!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important;}
+
+  /* Gaming: full source image visible, with the same image filling the small ratio difference behind it. */
+  .services-page .services-card:nth-child(4) .img{background-image:url('service-gaming-maquette.jpg')!important;}
+  .services-page .services-card:nth-child(4) .img img{object-fit:contain!important;}
+
+  /* Subaru: full car visible, with the same source filling the ratio difference behind it. */
+  .services-page .services-card:nth-child(5) .img{background-image:url('service-home.jpg')!important;}
+  .services-page .services-card:nth-child(5) .img img{object-fit:contain!important;}
+}
