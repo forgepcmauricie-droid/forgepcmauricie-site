@@ -1,87 +1,20 @@
-/* ForgePC Mauricie — correction finale SERVICES
-   Mobile : image 45 % / contenu 55 %. Ne pas modifier la maquette desktop. */
+/* ForgePC Mauricie — SERVICES FINAL
+   Desktop verrouillé. Mobile uniquement: 45% image / 55% texte.
+*/
 
-/* DESKTOP */
-.services-page .services-cards{
-  display:grid;
-  grid-template-columns:repeat(5,minmax(0,1fr));
-  gap:10px;
-  align-items:stretch;
-}
-.services-page .services-card{
-  display:flex;
-  flex-direction:column;
-  height:100%;
-  min-width:0;
-  overflow:hidden;
-  box-sizing:border-box;
-}
-.services-page .services-card .img{
-  width:100%;
-  height:126px;
-  flex:0 0 126px;
-  overflow:hidden;
-}
-.services-page .services-card .img img{
-  display:block;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  object-position:center;
-}
-.services-page .services-card .body{
-  min-width:0;
-  flex:1;
-  display:flex;
-  flex-direction:column;
-  box-sizing:border-box;
-  padding:11px 12px 12px;
-}
-.services-page .services-card h3{
-  font-size:13px;
-  line-height:1.05;
-  margin:0 0 8px;
-}
-.services-page .services-card h3 a{
-  display:block;
-  color:inherit;
-  text-decoration:none;
-}
-.services-page .services-card p{
-  font-size:10.5px;
-  line-height:1.3;
-  min-height:39px;
-  margin:0 0 10px;
-}
-.services-page .services-card .orange-link{
-  margin-top:auto;
-  font-size:10px;
-  font-weight:900;
-  white-space:nowrap;
+/* Desktop — ne pas modifier */
+@media (min-width:901px){
+  .services-page .services-cards{display:grid!important;grid-template-columns:repeat(5,1fr)!important;gap:10px!important;align-items:stretch!important;}
+  .services-page .services-card{display:flex!important;flex-direction:column!important;height:100%!important;min-height:0!important;overflow:hidden!important;}
+  .services-page .services-card .img{width:100%!important;height:126px!important;flex:0 0 126px!important;overflow:hidden!important;}
+  .services-page .services-card .img img{width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important;display:block!important;}
+  .services-page .services-card .body{padding:11px 12px 12px!important;display:flex!important;flex-direction:column!important;flex:1!important;}
+  .services-page .services-card h3{font-size:13px!important;line-height:1.05!important;margin:0 0 8px!important;}
+  .services-page .services-card p{font-size:10.5px!important;line-height:1.3!important;min-height:39px!important;margin:0 0 10px!important;}
+  .services-page .services-card .orange-link{font-size:10px!important;margin-top:auto!important;}
 }
 
-/* NOTRE SECTEUR : une seule image, sans filtre. */
-.services-page .info-grid .info-box:nth-child(2) .sector{
-  filter:none!important;
-}
-
-/* CTA inférieur. */
-.services-page .services-cta{
-  position:relative;
-  overflow:hidden;
-  height:82px;
-  min-height:82px;
-}
-.services-page .services-cta:after{display:none!important;}
-.services-page .services-cta .container{
-  height:100%;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:20px;
-}
-
-/* MOBILE : EXACTEMENT 45 % IMAGE / 55 % TEXTE. */
+/* Mobile — seule correction demandée */
 @media (max-width:900px){
   .services-page .services-cards{
     display:grid!important;
@@ -93,98 +26,29 @@
   .services-page .services-card{
     display:grid!important;
     grid-template-columns:45% 55%!important;
-    grid-template-rows:1fr!important;
+    grid-template-rows:110px!important;
     width:100%!important;
-    height:145px!important;
-    min-height:145px!important;
-    max-height:145px!important;
+    height:110px!important;
+    min-height:110px!important;
+    max-height:110px!important;
     padding:0!important;
-    box-sizing:border-box!important;
     overflow:hidden!important;
+    box-sizing:border-box!important;
   }
 
-  /* La colonne image occupe réellement les 45 % de la vignette. */
   .services-page .services-card > .img{
     grid-column:1!important;
     grid-row:1!important;
     width:100%!important;
-    height:145px!important;
-    min-height:145px!important;
-    max-height:145px!important;
+    height:110px!important;
+    min-height:110px!important;
+    max-height:110px!important;
     margin:0!important;
     padding:0!important;
     overflow:hidden!important;
     box-sizing:border-box!important;
   }
 
-  .services-page .services-card > .img img{
-    display:block!important;
-    width:100%!important;
-    height:100%!important;
-    margin:0!important;
-    padding:0!important;
-    object-fit:cover!important;
-    object-position:center!important;
-  }
-
-  .services-page .services-card > .body{
-    grid-column:2!important;
-    grid-row:1!important;
-    width:100%!important;
-    height:145px!important;
-    min-width:0!important;
-    min-height:145px!important;
-    margin:0!important;
-    box-sizing:border-box!important;
-    padding:11px 12px 10px!important;
-    display:flex!important;
-    flex-direction:column!important;
-    overflow:hidden!important;
-  }
-
-  .services-page .services-card h3{
-    font-size:14px!important;
-    line-height:1.05!important;
-    margin:0 0 7px!important;
-    white-space:nowrap!important;
-    overflow:hidden!important;
-    text-overflow:ellipsis!important;
-  }
-  .services-page .services-card p{
-    font-size:11.5px!important;
-    line-height:1.22!important;
-    min-height:0!important;
-    margin:0 0 7px!important;
-  }
-  .services-page .services-card .orange-link{
-    margin-top:auto!important;
-    font-size:10.5px!important;
-    white-space:nowrap!important;
-  }
-}
-
-
-/* MOBILE — correction image uniquement : 45 % image / 55 % texte, sans déformation */
-@media (max-width:900px){
-  .services-page .services-card{
-    display:grid!important;
-    grid-template-columns:45% 55%!important;
-    grid-template-rows:1fr!important;
-    height:166px!important;
-    min-height:166px!important;
-    max-height:166px!important;
-  }
-  .services-page .services-card > .img{
-    grid-column:1!important;
-    grid-row:1!important;
-    width:100%!important;
-    height:166px!important;
-    min-height:166px!important;
-    max-height:166px!important;
-    padding:0!important;
-    margin:0!important;
-    overflow:hidden!important;
-  }
   .services-page .services-card > .img img{
     display:block!important;
     width:100%!important;
@@ -194,60 +58,52 @@
     margin:0!important;
     padding:0!important;
     object-fit:cover!important;
-    object-position:center center!important;
+    object-position:center!important;
   }
-  .services-page .services-card:nth-child(5) > .img img{
-    object-fit:cover!important;
-    object-position:center center!important;
-  }
-}
 
-/* FINAL MOBILE IMAGE FRAMING — desktop untouched */
-@media (max-width:900px){
-  .services-page .services-cards{
-    grid-template-columns:1fr!important;
-  }
-  .services-page .services-card{
-    grid-template-columns:45% 55%!important;
-    grid-template-rows:145px!important;
-    height:145px!important;
-    min-height:145px!important;
-    max-height:145px!important;
-  }
-  .services-page .services-card > .img{
-    width:100%!important;
-    height:145px!important;
-    min-height:145px!important;
-    max-height:145px!important;
-    overflow:hidden!important;
-  }
-  .services-page .services-card > .img img{
-    width:100%!important;
-    height:100%!important;
-    object-fit:cover!important;
-    object-position:center!important;
-  }
-  /* Use the full existing car photo on mobile so the vehicle is not cut off. */
-  .services-page .services-card:nth-child(5) > .img img{
-    content:url('service-home.jpg')!important;
-    object-fit:cover!important;
-    object-position:center!important;
-  }
-  /* The approved gaming image already matches the mobile card ratio. */
+  /* Ces deux sources sont cadrées pour conserver le sujet visible tout en remplissant la zone. */
   .services-page .services-card:nth-child(4) > .img img{
     content:url('service-gaming-maquette-exact.jpg')!important;
     object-fit:cover!important;
     object-position:center!important;
   }
-}
-
-/* CORRECTION FINALE MOBILE — Gaming et Subaru entièrement visibles.
-   On conserve 45/55 et on ne recadre pas ces deux photos. Desktop inchangé. */
-@media (max-width:900px){
-  .services-page .services-card:nth-child(4) > .img img,
   .services-page .services-card:nth-child(5) > .img img{
-    object-fit:contain!important;
+    content:url('service-home.jpg')!important;
+    object-fit:cover!important;
     object-position:center!important;
-    background:#020b0f!important;
+  }
+
+  .services-page .services-card > .body{
+    grid-column:2!important;
+    grid-row:1!important;
+    width:100%!important;
+    height:110px!important;
+    min-width:0!important;
+    min-height:110px!important;
+    margin:0!important;
+    padding:10px 11px!important;
+    box-sizing:border-box!important;
+    display:flex!important;
+    flex-direction:column!important;
+    overflow:hidden!important;
+  }
+  .services-page .services-card h3{
+    font-size:14px!important;
+    line-height:1.05!important;
+    margin:0 0 5px!important;
+    white-space:nowrap!important;
+    overflow:hidden!important;
+    text-overflow:ellipsis!important;
+  }
+  .services-page .services-card p{
+    font-size:11.5px!important;
+    line-height:1.2!important;
+    min-height:0!important;
+    margin:0!important;
+  }
+  .services-page .services-card .orange-link{
+    margin-top:auto!important;
+    font-size:10.5px!important;
+    white-space:nowrap!important;
   }
 }
