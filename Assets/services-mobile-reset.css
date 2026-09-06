@@ -74,3 +74,63 @@
   .services-page .footer-social{font-size:16px!important}
   .services-page .footer-bottom{font-size:7px!important;gap:4px!important}
 }
+
+/* FINAL MOBILE CARD LAYOUT — fix buttons so they never overlap text */
+@media (max-width:900px){
+  .services-page .services-cards{gap:10px!important;}
+  .services-page .services-card{
+    grid-template-columns:30% 70%!important;
+    grid-template-rows:155px!important;
+    height:155px!important;
+    min-height:155px!important;
+    max-height:155px!important;
+    overflow:hidden!important;
+  }
+  .services-page .services-card>.img{
+    height:155px!important;
+    min-height:155px!important;
+  }
+  .services-page .services-card>.body{
+    height:155px!important;
+    min-height:155px!important;
+    padding:10px 12px 10px 12px!important;
+    overflow:hidden!important;
+  }
+  .services-page .services-card h3{
+    margin:0 0 7px!important;
+    font-size:13px!important;
+    line-height:1.1!important;
+  }
+  .services-page .services-card h3 a{
+    gap:8px!important;
+  }
+  .services-page .services-card .service-icon{
+    flex:0 0 50px!important;
+    width:50px!important;
+    height:50px!important;
+    border-width:4px!important;
+    font-size:24px!important;
+  }
+  .services-page .services-card p{
+    font-size:10px!important;
+    line-height:1.2!important;
+    margin:0!important;
+  }
+  .services-page .services-card .orange-link{
+    flex:0 0 auto!important;
+    width:calc(100% - 2px)!important;
+    height:32px!important;
+    min-height:32px!important;
+    margin-top:auto!important;
+    padding:7px 5px!important;
+    border:2px solid #ff5a00!important;
+    box-sizing:border-box!important;
+    display:flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    text-align:center!important;
+    font-size:9px!important;
+    line-height:1!important;
+    white-space:nowrap!important;
+  }
+}
