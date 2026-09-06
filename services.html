@@ -540,6 +540,49 @@ img { max-width:100%; }
 }
 </style>
 
+
+<style id="forgepc-final-maquette-lock">
+/* FINAL — correspondance directe avec les maquettes approuvées */
+.services-page .location{display:block;margin-left:28px;color:#ddd;font-size:12px;font-weight:700}
+@media (min-width:901px){
+  .services-page .nav{height:70px!important}
+  .services-page .logo{width:150px!important}
+  .services-page .hero,.services-page .hero-inner{min-height:280px!important}
+  .services-page .cards .card img{height:135px!important}
+  .services-page .info{min-height:210px!important}
+}
+@media (max-width:900px){
+  .services-page .location{display:none!important}
+  .services-page .nav{height:68px!important;min-height:68px!important}
+  .services-page header .logo{width:145px!important;max-height:60px!important}
+  .services-page header .menu{width:46px!important;height:44px!important}
+  .services-page header nav{top:69px!important}
+  .services-page .hero,.services-page .hero-inner{min-height:285px!important}
+  .services-page .hero-inner{padding:18px 0!important;align-items:center!important}
+  .services-page .hero-copy{max-width:360px!important}
+  .services-page .eyebrow{font-size:13px!important;margin-bottom:5px!important}
+  .services-page h1{font-size:34px!important;line-height:1.02!important}
+  .services-page .hero p{font-size:15px!important;line-height:1.28!important;margin:8px 0 0!important}
+  .services-page .cards{grid-template-columns:1fr!important;gap:10px!important}
+  .services-page .cards .card{display:grid!important;grid-template-columns:115px minmax(0,1fr)!important;min-height:122px!important;height:122px!important}
+  .services-page .cards .card img{width:115px!important;height:122px!important;min-height:122px!important;object-fit:cover!important}
+  .services-page .cards .card-body{padding:12px 14px!important}
+  .services-page .cards .card h3{font-size:16px!important;line-height:1.15!important;margin:0 0 6px!important}
+  .services-page .cards .card p{font-size:12px!important;line-height:1.35!important;margin:0 0 8px!important}
+  .services-page .cards .card a{font-size:11px!important}
+  .services-page .steps-grid{grid-template-columns:1fr!important;gap:8px!important;margin-top:12px!important}
+  .services-page .step{gap:14px!important;min-height:58px!important}
+  .services-page .num{width:54px!important;height:54px!important;font-size:24px!important}
+  .services-page .step strong{font-size:13px!important}
+  .services-page .step span{font-size:11px!important;line-height:1.25!important}
+  .services-page .info-grid{grid-template-columns:1fr!important;gap:0!important;margin-top:12px!important}
+  .services-page .info{height:60px!important;min-height:60px!important;padding:0 14px!important;display:flex!important;align-items:center!important}
+  .services-page .info.open{height:auto!important;display:block!important;padding:12px 14px!important}
+  .services-page .cta-inner{min-height:150px!important;padding:18px 0!important;display:block!important}
+  .services-page .cta h2{font-size:27px!important;line-height:1.08!important}
+  .services-page .cta .btn{display:flex!important;width:100%!important;margin-top:14px!important}
+}
+</style>
 </head>
 <body class="services-page">
 <header class="site-header">
@@ -552,6 +595,7 @@ img { max-width:100%; }
 <a href="a-propos.html">À PROPOS</a>
 <a href="contact.html">CONTACT</a>
 </nav>
+<div class="location">📍 Shawinigan et toute la Mauricie</div>
 <button aria-expanded="false" aria-label="Ouvrir le menu" class="menu" type="button">☰</button>
 </div>
 </header>
