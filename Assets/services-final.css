@@ -201,3 +201,42 @@
     object-position:center center!important;
   }
 }
+
+/* FINAL MOBILE IMAGE FRAMING — desktop untouched */
+@media (max-width:900px){
+  .services-page .services-cards{
+    grid-template-columns:1fr!important;
+  }
+  .services-page .services-card{
+    grid-template-columns:45% 55%!important;
+    grid-template-rows:145px!important;
+    height:145px!important;
+    min-height:145px!important;
+    max-height:145px!important;
+  }
+  .services-page .services-card > .img{
+    width:100%!important;
+    height:145px!important;
+    min-height:145px!important;
+    max-height:145px!important;
+    overflow:hidden!important;
+  }
+  .services-page .services-card > .img img{
+    width:100%!important;
+    height:100%!important;
+    object-fit:cover!important;
+    object-position:center!important;
+  }
+  /* Use the full existing car photo on mobile so the vehicle is not cut off. */
+  .services-page .services-card:nth-child(5) > .img img{
+    content:url('service-home.jpg')!important;
+    object-fit:cover!important;
+    object-position:center!important;
+  }
+  /* The approved gaming image already matches the mobile card ratio. */
+  .services-page .services-card:nth-child(4) > .img img{
+    content:url('service-gaming-maquette-exact.jpg')!important;
+    object-fit:cover!important;
+    object-position:center!important;
+  }
+}
