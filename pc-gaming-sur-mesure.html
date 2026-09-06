@@ -17,8 +17,8 @@ header{position:sticky;top:0;z-index:20;background:rgba(2,9,11,.98);border-botto
 .navlinks a:hover,.navlinks .active{color:var(--orange);border-bottom-color:var(--orange)}
 .location{margin-left:28px;color:#ddd;font-size:12px;font-weight:700}
 .menu{display:none;margin-left:auto;width:45px;height:42px;border:1px solid #536067;border-radius:5px;background:transparent;color:#fff;font-size:24px}
-.hero{min-height:330px;background:linear-gradient(90deg,rgba(0,0,0,.92),rgba(0,0,0,.60) 48%,rgba(0,0,0,.20)),url('/Assets/pc-gaming-hero-approved-clean.jpg') center center/cover;border-bottom:1px solid #64290e}
-.hero-inner{min-height:320px;display:flex;align-items:center;gap:28px}.hero-copy{max-width:650px;flex:1}.hero-side{width:260px;display:grid;gap:14px}.hero-side-item{display:flex;align-items:center;gap:12px;font-size:13px;font-weight:900;text-transform:uppercase;line-height:1.15}.hero-side-item b{color:var(--orange);font-size:27px;min-width:30px;text-align:center}
+.hero{min-height:330px;background:linear-gradient(90deg,rgba(0,0,0,.92),rgba(0,0,0,.60) 48%,rgba(0,0,0,.20)),url('/Assets/pc-gaming-hero-ancienne-photo.jpg') center center/cover;border-bottom:1px solid #64290e}
+.hero-inner{min-height:320px;display:flex;align-items:center}.hero-copy{max-width:720px}
 .eyebrow{color:var(--orange);font-size:15px;font-weight:900;text-transform:uppercase}
 h1{font-size:52px;line-height:.98;margin:8px 0 12px;text-transform:uppercase;letter-spacing:1px}
 h1 span{color:var(--orange)}.hero p{font-size:18px;line-height:1.35;max-width:650px;margin:0 0 18px}
@@ -28,16 +28,16 @@ h1 span{color:var(--orange)}.hero p{font-size:18px;line-height:1.35;max-width:65
 .title{text-align:center;text-transform:uppercase;margin:0;font-size:28px}.sub{text-align:center;color:#ddd;margin:3px 0 15px}
 .title-line{display:flex;justify-content:center;align-items:center;gap:18px}.title-line:before,.title-line:after{content:"";width:85px;height:3px;background:var(--orange)}
 .approach{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}.card{background:#041014;border:1px solid #34454b;border-radius:5px;overflow:hidden}
-.card img{width:100%;height:120px;object-fit:cover;object-position:center}.card-body{padding:13px}.card h3{margin:0 0 7px;font-size:15px;text-transform:uppercase}
+.card img{width:100%;height:135px;object-fit:cover;object-position:center}.card-body{padding:13px}.card h3{margin:0 0 7px;font-size:15px;text-transform:uppercase}
 .card p{margin:0;color:var(--muted);font-size:12px;line-height:1.4}.num{color:var(--orange);font-weight:900;font-size:20px;margin-right:7px}
 .content{display:grid;grid-template-columns:1.2fr .8fr;gap:14px}.panel{background:#041014;border:1px solid #34454b;border-radius:5px;padding:20px}
-.panel h2{margin:0 0 15px;text-transform:uppercase;font-size:22px}.project-image{object-position:center;width:100%;height:220px;object-fit:cover;object-position:center;border-radius:4px;border:1px solid #34454b;display:block}.panel h2:before{content:"";display:inline-block;width:28px;height:4px;background:var(--orange);vertical-align:middle;margin-right:10px}
+.panel h2{margin:0 0 15px;text-transform:uppercase;font-size:22px}.panel h2:before{content:"";display:inline-block;width:28px;height:4px;background:var(--orange);vertical-align:middle;margin-right:10px}
 .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.full{grid-column:1/-1}
 label{display:block;font-weight:700;font-size:13px;margin:0 0 6px}label span{color:var(--orange)}
 input,select,textarea{width:100%;border:1px solid #49606a;border-radius:5px;padding:11px 12px;background:#132229;color:#fff;font:14px Arial,Helvetica,sans-serif}
 textarea{min-height:115px;resize:vertical}.submit{width:100%;margin-top:13px;border:0;border-radius:5px;background:var(--orange);color:#fff;padding:14px;font-weight:900;font-size:14px;cursor:pointer}
 .faq{display:grid}.faq div{border-bottom:1px solid #34454b;padding:9px 0;font-size:12px;display:flex;justify-content:space-between}.faq b{color:var(--orange);font-size:18px}
-.cta{background:linear-gradient(90deg,rgba(2,9,11,.92),rgba(2,9,11,.72)),url('/Assets/mauricie-landscape-clean.jpg') center/cover;border-bottom:1px solid var(--line)}
+.cta{background:linear-gradient(90deg,rgba(2,9,11,.9),rgba(2,9,11,.62)),url('/Assets/services-map.jpg') center/cover;border-bottom:1px solid var(--line)}
 .cta-inner{min-height:100px;display:flex;align-items:center;gap:25px}.cta h2{margin:0;font-size:25px}.cta h2 span{color:var(--orange)}
 .btn{margin-left:auto;background:var(--orange);padding:14px 24px;border-radius:4px;font-weight:900}
 footer.site-footer{width:100%;box-sizing:border-box;background:#02090b;border-top:1px solid #27363a;padding:30px 16px 26px;text-align:center;clear:both;position:relative;z-index:2}
@@ -50,329 +50,20 @@ footer.site-footer{width:100%;box-sizing:border-box;background:#02090b;border-to
 @media(max-width:900px){
 .approach{grid-template-columns:1fr 1fr}
 .container{width:min(calc(100% - 24px),680px)}.nav{min-height:68px}.logo{width:135px}.navlinks,.location{display:none}.navlinks.open{display:flex!important}.menu{display:block}
-.hero,.hero-inner{min-height:285px}.hero-copy{padding:28px 0}.hero-side{display:none}h1{font-size:39px}.hero p{font-size:16px}
+.hero,.hero-inner{min-height:285px}.hero-copy{padding:28px 0}h1{font-size:39px}.hero p{font-size:16px}
 .benefits{gap:15px}.content{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}.full{grid-column:auto}
-.title{font-size:23px}.title-line:before,.title-line:after{width:45px}.cta-inner{padding:18px 0;display:block}.btn{display:inline-flex;margin-top:12px}.cta{background-position:center}.footer{display:none}
+.title{font-size:23px}.title-line:before,.title-line:after{width:45px}.cta-inner{padding:18px 0;display:block}.btn{display:inline-flex;margin-top:12px}.footer{display:none}
 }
 @media(max-width:600px){
   .approach{grid-template-columns:1fr}
-  .approach .card{display:grid;grid-template-columns:118px 1fr;align-items:stretch}
-  .approach .card img{height:100%;min-height:112px}
-  .approach .card-body{padding:11px 12px}
-  .approach .card h3{font-size:14px}
-  .approach .card p{font-size:12px}
   h1{font-size:34px}
   .hero p{font-size:15px}
   .hero{background-position:60% center!important;}
   .benefits{gap:12px}
   .panel{padding:15px}
-  .project-panel .project-feature{display:grid;grid-template-columns:118px 1fr;gap:12px;align-items:start}
-  .project-panel .project-feature .project-image{object-position:center;height:145px;object-fit:cover;margin:0}
-  .project-panel .project-feature p{margin:0;font-size:12px;line-height:1.4}
-  .project-image{object-position:center;height:205px}
-}
-
-/* ===== V6 — alignement strict avec la maquette approuvée ===== */
-.pc-gaming-page .approach .card img{
-  width:100% !important;
-  height:102px !important;
-  object-fit:cover !important;
-  object-position:center !important;
-}
-.pc-gaming-page .project-image{object-position:center;
-  object-fit:cover !important;
-  object-position:center !important;
-}
-@media(max-width:900px){
-  .pc-gaming-page .approach{grid-template-columns:1fr !important;gap:8px !important;}
-  .pc-gaming-page .approach .card{
-    display:grid !important;
-    grid-template-columns:82px minmax(0,1fr) !important;
-    min-height:92px !important;
-  }
-  .pc-gaming-page .approach .card img{
-    width:82px !important;
-    height:100% !important;
-    min-height:92px !important;
-    object-fit:cover !important;
-    object-position:center !important;
-  }
-  .pc-gaming-page .approach .card-body{padding:9px 10px !important;}
-  .pc-gaming-page .approach .card h3{font-size:14px !important;}
-  .pc-gaming-page .approach .card p{font-size:11.5px !important;line-height:1.32 !important;}
-  .pc-gaming-page .project-panel .project-feature{
-    grid-template-columns:118px minmax(0,1fr) !important;
-  }
-  .pc-gaming-page .project-panel .project-feature .project-image{object-position:center;
-    width:118px !important;
-    height:125px !important;
-  }
-  .pc-gaming-page .cta{
-    background-position:center !important;
-    background-size:cover !important;
-  }
-}
-
-/* ===== V7 — correspondance maquette approuvée, images propres ===== */
-@media(max-width:900px){
-  .pc-gaming-page .approach{grid-template-columns:1fr!important;gap:10px!important;}
-  .pc-gaming-page .approach .card{
-    display:grid!important;
-    grid-template-columns:118px minmax(0,1fr)!important;
-    min-height:112px!important;
-    overflow:hidden!important;
-  }
-  .pc-gaming-page .approach .card img{
-    width:118px!important;
-    height:112px!important;
-    min-height:112px!important;
-    object-fit:cover!important;
-    object-position:center!important;
-    align-self:stretch!important;
-  }
-  .pc-gaming-page .approach .card-body{padding:12px 14px!important;}
-  .pc-gaming-page .approach .card h3{font-size:16px!important;line-height:1.15!important;}
-  .pc-gaming-page .approach .card p{font-size:13px!important;line-height:1.35!important;}
-  .pc-gaming-page .project-panel .project-feature{
-    grid-template-columns:118px minmax(0,1fr)!important;
-  }
-  .pc-gaming-page .project-panel .project-feature .project-image{object-position:center;
-    width:118px!important;height:145px!important;object-fit:cover!important;
-  }
-}
-@media(max-width:520px){
-  .pc-gaming-page h1{font-size:34px!important;line-height:1.02!important;letter-spacing:.2px!important;}
-  .pc-gaming-page .hero-inner{min-height:285px!important;}
-  .pc-gaming-page .approach .card{grid-template-columns:118px minmax(0,1fr)!important;min-height:112px!important;}
-  .pc-gaming-page .approach .card img{width:118px!important;height:112px!important;}
 }
 </style>
 <link rel="stylesheet" href="/Assets/global-fixes.css">
-
-<style id="forgepc-v7-final-gaming">
-/* V7 FINAL — visuels propres et cadrage de la maquette */
-.pc-gaming-page .approach .card img{
-  width:100%!important;height:102px!important;object-fit:cover!important;object-position:center!important;display:block!important;
-}
-.pc-gaming-page .project-image{object-position:center;
-  width:100%!important;height:205px!important;object-fit:cover!important;object-position:center!important;display:block!important;
-}
-@media(max-width:900px){
-  .pc-gaming-page .hero{background-position:62% center!important;}
-  .pc-gaming-page .approach{display:grid!important;grid-template-columns:1fr!important;gap:10px!important;}
-  .pc-gaming-page .approach .card{
-    display:grid!important;grid-template-columns:118px minmax(0,1fr)!important;min-height:112px!important;overflow:hidden!important;
-  }
-  .pc-gaming-page .approach .card img{
-    width:118px!important;height:112px!important;min-height:112px!important;object-fit:cover!important;object-position:center!important;
-  }
-  .pc-gaming-page .approach .card-body{padding:12px 14px!important;}
-  .pc-gaming-page .approach .card h3{font-size:16px!important;line-height:1.15!important;}
-  .pc-gaming-page .approach .card p{font-size:13px!important;line-height:1.35!important;}
-  .pc-gaming-page .project-panel .project-feature{display:grid!important;grid-template-columns:118px minmax(0,1fr)!important;gap:12px!important;}
-  .pc-gaming-page .project-panel .project-feature .project-image{object-position:center;
-    width:118px!important;height:145px!important;object-fit:cover!important;object-position:center!important;
-  }
-}
-@media(max-width:520px){
-  .pc-gaming-page h1{font-size:34px!important;line-height:1.02!important;letter-spacing:0!important;}
-  .pc-gaming-page .hero-inner{min-height:285px!important;}
-}
-</style>
-
-<style id="forgepc-maquette-v9-gaming">
-/* Reproduction maquette approuvée — visuels propres dédiés */
-.pc-gaming-page .approach .card img{object-fit:cover!important;object-position:center!important;}
-.pc-gaming-page .project-image{object-position:center;object-fit:cover!important;object-position:center!important;}
-@media(max-width:900px){
- .pc-gaming-page .approach .card img{object-fit:cover!important;object-position:center!important;}
- .pc-gaming-page .project-panel .project-image{object-position:center;object-fit:cover!important;object-position:center!important;}
-}
-</style>
-
-<style id="maquette-final-overrides">
-@media (max-width:800px){
-  header .nav{height:82px!important;}
-  header .logo{width:145px!important;}
-  header .menu{width:46px!important;height:44px!important;}
-  .pc-gaming-page .hero{background-size:100% 100%!important;background-position:center center!important;}
-  .pc-gaming-page .project-panel .project-feature .project-image{object-fit:cover!important;object-position:center center!important;}
-  .pc-gaming-page .cta{background-size:100% 100%!important;background-position:center center!important;}
-}
-</style>
-
-<style id="forgepc-v12-maquette-gaming">
-/* V12 — reproduction des proportions de la maquette, desktop + mobile */
-@media (min-width:901px){
-  .pc-gaming-page .hero,.pc-gaming-page .hero-inner{min-height:350px!important}
-  .pc-gaming-page .approach .card img{height:102px!important}
-  .pc-gaming-page .panel{min-height:300px!important}
-}
-@media (max-width:900px){
-  .pc-gaming-page .container{width:calc(100% - 20px)!important;max-width:none!important}
-  .pc-gaming-page .nav{height:58px!important;min-height:58px!important}
-  .pc-gaming-page header .logo{width:112px!important;max-height:52px!important}
-  .pc-gaming-page header .menu{width:44px!important;height:42px!important}
-  .pc-gaming-page header nav{top:58px!important}
-  .pc-gaming-page .hero,.pc-gaming-page .hero-inner{min-height:330px!important}
-  .pc-gaming-page .hero-inner{padding:12px 0!important;display:block!important}
-  .pc-gaming-page .hero-copy{max-width:100%!important;padding:12px 0!important}
-  .pc-gaming-page .eyebrow{font-size:11px!important}
-  .pc-gaming-page h1{font-size:34px!important;line-height:.98!important;letter-spacing:0!important;margin:7px 0 10px!important}
-  .pc-gaming-page .hero p{font-size:13px!important;line-height:1.25!important;margin-bottom:10px!important}
-  .pc-gaming-page .tagline{font-size:14px!important}
-  .pc-gaming-page .benefits{gap:8px 16px!important;margin-top:12px!important}
-  .pc-gaming-page .benefit{font-size:10px!important}
-  .pc-gaming-page .benefit b{font-size:17px!important;margin-right:3px!important}
-  .pc-gaming-page .section{padding:10px 0!important}
-  .pc-gaming-page .title{font-size:22px!important;line-height:1!important}
-  .pc-gaming-page .sub{font-size:11px!important;margin:3px 0 8px!important}
-  .pc-gaming-page .title-line{gap:12px!important}
-  .pc-gaming-page .title-line:before,.pc-gaming-page .title-line:after{width:42px!important;height:3px!important}
-  /* La maquette mobile transforme les 4 étapes en lignes compactes */
-  .pc-gaming-page .approach{grid-template-columns:1fr!important;gap:0!important}
-  .pc-gaming-page .approach .card{
-    display:grid!important;
-    grid-template-columns:42px minmax(0,1fr) 18px!important;
-    min-height:57px!important;height:57px!important;
-    border-radius:0!important;
-    border-left:0!important;border-right:0!important;
-    align-items:center!important;
-  }
-  .pc-gaming-page .approach .card img{display:none!important}
-  .pc-gaming-page .approach .card:after{
-    content:"⌄";color:var(--orange);font-size:20px;font-weight:900;text-align:center;
-  }
-  .pc-gaming-page .approach .card-body{padding:6px 4px!important}
-  .pc-gaming-page .approach .card h3{font-size:12px!important;line-height:1!important;margin:0 0 3px!important}
-  .pc-gaming-page .approach .card p{font-size:9.5px!important;line-height:1.15!important;margin:0!important}
-  .pc-gaming-page .approach .num{font-size:20px!important;margin-right:5px!important}
-  .pc-gaming-page .content{grid-template-columns:1fr!important;gap:8px!important}
-  .pc-gaming-page .panel{padding:12px!important}
-  .pc-gaming-page .panel h2{font-size:18px!important;margin-bottom:9px!important}
-  .pc-gaming-page .form-grid{grid-template-columns:1fr 1fr!important;gap:7px!important}
-  .pc-gaming-page label{font-size:10px!important;margin-bottom:3px!important}
-  .pc-gaming-page input,.pc-gaming-page select,.pc-gaming-page textarea{padding:8px!important;font-size:11px!important}
-  .pc-gaming-page textarea{min-height:75px!important}
-  .pc-gaming-page .submit{padding:11px!important;font-size:11px!important;margin-top:8px!important}
-  .pc-gaming-page .project-panel .project-feature{
-    display:grid!important;
-    grid-template-columns:95px minmax(0,1fr)!important;
-    gap:9px!important;
-    align-items:start!important;
-  }
-  .pc-gaming-page .project-panel .project-feature .project-image{
-    width:95px!important;height:105px!important;margin:0!important;
-    object-fit:cover!important;
-  }
-  .pc-gaming-page .project-panel .project-feature p{font-size:10px!important;line-height:1.25!important}
-  .pc-gaming-page .project-panel .faq div{font-size:10px!important;padding:6px 0!important}
-  .pc-gaming-page .project-panel .faq b{font-size:16px!important}
-  .pc-gaming-page .cta-inner{min-height:115px!important;padding:15px 0!important;display:block!important}
-  .pc-gaming-page .cta h2{font-size:23px!important;line-height:1.05!important}
-  .pc-gaming-page .cta .btn{display:inline-flex!important;margin-top:10px!important}
-  .pc-gaming-page footer.site-footer{padding:28px 16px 22px!important}
-  .pc-gaming-page .site-footer .footer-logo img{width:145px!important}
-  .pc-gaming-page .site-footer .footer-location{font-size:14px!important}
-  .pc-gaming-page .site-footer .footer-slogan{font-size:16px!important}
-  .pc-gaming-page .site-footer .footer-copy{font-size:12px!important}
-}
-</style>
-
-
-<style id="forgepc-v12-footer">
-.footer-top-v12{display:grid;grid-template-columns:1.1fr 2fr auto;align-items:center;gap:20px;max-width:1180px;margin:auto}
-.footer-brand-v12{display:flex;align-items:center;gap:12px;font-size:11px;font-weight:700}
-.footer-brand-v12 img{width:110px;height:auto}
-.footer-contact-v12{display:flex;justify-content:center;gap:25px;font-size:11px}
-.footer-social-v12{display:flex;gap:12px;font-size:22px}
-.footer-bottom-v12{max-width:1180px;margin:8px auto 0;padding-top:7px;border-top:1px solid #18282c;display:flex;justify-content:space-between;font-size:9px;color:#ddd}
-@media(max-width:900px){
- .footer-top-v12{display:block;text-align:center}
- .footer-brand-v12{display:flex;flex-direction:column;gap:6px;font-size:12px}
- .footer-brand-v12 img{width:145px}
- .footer-contact-v12{display:none}
- .footer-social-v12{justify-content:center;margin-top:12px}
- .footer-bottom-v12{display:block;text-align:center;font-size:10px;line-height:1.6}
-}
-</style>
-
-
-<style id="forgepc-v12-final-lock">
-/* V12 FINAL — verrouillage du rendu approuvé desktop + mobile */
-@media (max-width:900px){
-  .pc-gaming-page .approach .card{
-    display:grid!important;
-    grid-template-columns:42px minmax(0,1fr) 18px!important;
-    min-height:58px!important;
-    height:auto!important;
-    overflow:visible!important;
-    align-items:center!important;
-    border-radius:0!important;
-  }
-  .pc-gaming-page .approach .card-body{
-    display:block!important;
-    min-width:0!important;
-    padding:9px 4px!important;
-  }
-  .pc-gaming-page .approach .card h3{
-    display:flex!important; align-items:center!important;
-    margin:0 0 3px!important; font-size:12px!important; line-height:1.15!important;
-  }
-  .pc-gaming-page .approach .card p{
-    display:block!important; margin:0!important; font-size:9.5px!important;
-    line-height:1.2!important; white-space:normal!important;
-  }
-  .pc-gaming-page .approach .card:after{content:"⌄"!important; display:block!important;}
-  .pc-gaming-page .footer-contact-v12{display:flex!important; justify-content:center!important; gap:0!important; margin-top:10px!important;}
-  .pc-gaming-page .footer-contact-v12 span{display:none!important;}
-  .pc-gaming-page .footer-contact-v12 span:first-child{display:block!important; font-size:11px!important;}
-  .pc-gaming-page .footer-social-v12{display:flex!important; justify-content:center!important; margin-top:10px!important;}
-}
-</style>
-
-
-<style id="forgepc-final-maquette-lock-gaming">
-/* FINAL — correspondance directe avec la maquette Gaming approuvée */
-@media (min-width:901px){
-  .pc-gaming-page .hero,.pc-gaming-page .hero-inner{min-height:350px!important}
-  .pc-gaming-page .hero-copy{max-width:650px!important}
-  .pc-gaming-page .hero-side{width:260px!important;display:grid!important;align-self:center!important}
-  .pc-gaming-page .approach{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:10px!important}
-  .pc-gaming-page .approach .card img{height:102px!important}
-  .pc-gaming-page .content{grid-template-columns:1.2fr .8fr!important}
-}
-@media (max-width:900px){
-  .pc-gaming-page .nav{height:68px!important;min-height:68px!important}
-  .pc-gaming-page header .logo{width:145px!important;max-height:60px!important}
-  .pc-gaming-page header .menu{width:46px!important;height:44px!important}
-  .pc-gaming-page header nav{top:69px!important}
-  .pc-gaming-page .hero,.pc-gaming-page .hero-inner{min-height:350px!important}
-  .pc-gaming-page .hero-inner{padding:12px 0!important;display:block!important}
-  .pc-gaming-page .hero-copy{max-width:100%!important;padding:10px 0 0!important}
-  .pc-gaming-page h1{font-size:34px!important;line-height:1.0!important;margin:7px 0 12px!important}
-  .pc-gaming-page .hero p{font-size:15px!important;line-height:1.25!important;margin-bottom:12px!important}
-  .pc-gaming-page .tagline{font-size:15px!important}
-  .pc-gaming-page .benefits{gap:10px 17px!important;margin-top:16px!important}
-  .pc-gaming-page .benefit{font-size:11px!important}
-  .pc-gaming-page .benefit b{font-size:18px!important}
-  .pc-gaming-page .hero-side{display:none!important}
-  .pc-gaming-page .approach{grid-template-columns:1fr!important;gap:0!important}
-  .pc-gaming-page .approach .card{display:grid!important;grid-template-columns:42px minmax(0,1fr) 18px!important;min-height:68px!important;height:auto!important;overflow:visible!important;border-radius:0!important;border-left:0!important;border-right:0!important;align-items:center!important}
-  .pc-gaming-page .approach .card img{display:none!important}
-  .pc-gaming-page .approach .card-body{padding:8px 4px!important;min-width:0!important}
-  .pc-gaming-page .approach .card h3{display:flex!important;align-items:center!important;margin:0 0 3px!important;font-size:13px!important;line-height:1.1!important}
-  .pc-gaming-page .approach .card p{display:block!important;margin:0!important;font-size:10.5px!important;line-height:1.2!important;white-space:normal!important}
-  .pc-gaming-page .approach .num{width:34px!important;height:34px!important;min-width:34px!important;border:2.5px solid var(--orange)!important;border-radius:50%!important;display:inline-grid!important;place-items:center!important;color:var(--orange)!important;font-size:18px!important;margin-right:7px!important}
-  .pc-gaming-page .approach .card:after{content:"⌄"!important;color:var(--orange)!important;font-size:19px!important;font-weight:900!important}
-  .pc-gaming-page .content{grid-template-columns:1fr!important;gap:8px!important}
-  .pc-gaming-page .form-grid{grid-template-columns:1fr 1fr!important;gap:7px!important}
-  .pc-gaming-page .project-panel .project-feature{display:grid!important;grid-template-columns:95px minmax(0,1fr)!important;gap:9px!important;align-items:start!important}
-  .pc-gaming-page .project-panel .project-feature .project-image{width:95px!important;height:105px!important;object-fit:cover!important}
-  .pc-gaming-page .project-panel .project-feature p{font-size:10px!important;line-height:1.25!important}
-  .pc-gaming-page .cta-inner{min-height:115px!important}
-}
-</style>
 </head>
 <body class="pc-gaming-page">
 <header>
@@ -392,15 +83,15 @@ footer.site-footer{width:100%;box-sizing:border-box;background:#02090b;border-to
 <p>Des performances adaptées à vos jeux, à vos besoins et à votre budget.</p>
 <div class="tagline">Votre technologie,<br>notre expertise.</div>
 <div class="benefits"><div class="benefit"><b>🎮</b>JEUX VIDÉO</div><div class="benefit"><b>⚙</b>PERFORMANCE</div><div class="benefit"><b>🔧</b>FIABILITÉ</div><div class="benefit"><b>$</b>QUALITÉ/PRIX</div><div class="benefit"><b>⌂</b>SERVICE LOCAL</div></div>
-</div><div class="hero-side"><div class="hero-side-item"><b>🔧</b><span>CONCEPTION<br>PERSONNALISÉE</span></div><div class="hero-side-item"><b>⚙</b><span>ASSEMBLAGE<br>PROFESSIONNEL</span></div><div class="hero-side-item"><b>🛡</b><span>TESTS COMPLETS<br>ET OPTIMISATION</span></div><div class="hero-side-item"><b>👥</b><span>SOUTIEN LOCAL<br>APRÈS-VENTE</span></div></div></div></section>
+</div></div></section>
 
 <section class="section"><div class="container">
 <div class="title-line"><h2 class="title">NOTRE APPROCHE</h2></div><p class="sub">Un PC conçu pour vous, sans compromis.</p>
 <div class="approach">
-<div class="card"><img src="/Assets/gaming-step1-clean.jpg" alt="Discussion autour d’un projet de PC gaming"><div class="card-body"><h3><span class="num">1</span>DISCUSSION</h3><p>On discute de vos besoins, de vos jeux, de votre budget et de vos préférences.</p></div></div>
-<div class="card"><img src="/Assets/gaming-step2-clean.jpg" alt="Configuration d’un composant PC"><div class="card-body"><h3><span class="num">2</span>CONFIGURATION</h3><p>On vous propose une configuration adaptée où chaque composant est bien choisi.</p></div></div>
-<div class="card"><img src="/Assets/gaming-step3-clean.jpg" alt="Assemblage d’un PC gaming"><div class="card-body"><h3><span class="num">3</span>ASSEMBLAGE</h3><p>Montage professionnel, gestion des câbles et vérification complète.</p></div></div>
-<div class="card"><img src="/Assets/gaming-step4-clean.jpg" alt="Tests et suivi d’un PC gaming"><div class="card-body"><h3><span class="num">4</span>TESTS ET SUIVI</h3><p>On teste la stabilité et les performances et on vous offre un soutien après la vente.</p></div></div>
+<div class="card"><img src="/Assets/pc-gaming-hero-ancienne-photo.jpg" alt="Tour PC gaming"><div class="card-body"><h3><span class="num">1</span>DISCUSSION</h3><p>On discute de vos besoins, de vos jeux, de votre budget et de vos préférences.</p></div></div>
+<div class="card"><img src="/Assets/service-repair.jpg" alt="Composants PC"><div class="card-body"><h3><span class="num">2</span>CONFIGURATION</h3><p>On vous propose une configuration adaptée où chaque composant est bien choisi.</p></div></div>
+<div class="card"><img src="/Assets/service-upgrade.jpg" alt="Assemblage de PC"><div class="card-body"><h3><span class="num">3</span>ASSEMBLAGE</h3><p>Montage professionnel, gestion des câbles et vérification complète.</p></div></div>
+<div class="card"><img src="/Assets/mise-hero.jpg" alt="PC gaming assemblé"><div class="card-body"><h3><span class="num">4</span>TESTS ET SUIVI</h3><p>On teste la stabilité et les performances et on vous offre un soutien après la vente.</p></div></div>
 </div></div></section>
 
 <section class="section"><div class="container content">
@@ -421,10 +112,10 @@ footer.site-footer{width:100%;box-sizing:border-box;background:#02090b;border-to
 <button class="submit" type="submit">✉ ENVOYER MA DEMANDE →</button>
 </form>
 </div>
-<div class="panel project-panel">
+<div class="panel">
 <h2>UN PC QUI <span style="color:var(--orange)">VOUS RESSEMBLE</span></h2>
-<div class="project-feature"><img class="project-image" src="/Assets/gaming-rgb-tower-maquette.jpg" alt="Tour PC gaming ForgePC">
-<p>Que ce soit pour le jeu compétitif, le simracing, la création de contenu ou un usage polyvalent, on vous aide à obtenir un PC performant, stable et durable.</p></div>
+<img src="/Assets/pc-gaming-rgb-forgepc.jpg" alt="Tour PC gaming ForgePC construite par ForgePC" style="width:100%;height:220px;object-fit:cover;border-radius:4px;border:1px solid #34454b">
+<p>Que ce soit pour le jeu compétitif, le simracing, la création de contenu ou un usage polyvalent, on vous aide à obtenir un PC performant, stable et durable.</p>
 <h2>FOIRE AUX QUESTIONS (FAQ)</h2>
 <div class="faq">
 <div>Quel budget faut-il pour un bon PC gaming ? <b>+</b></div>
@@ -438,12 +129,10 @@ footer.site-footer{width:100%;box-sizing:border-box;background:#02090b;border-to
 
 <section class="cta"><div class="container cta-inner"><h2>Un projet de PC gaming ?<br><span>Parlons-en.</span></h2><a class="btn" href="contact.html">NOUS CONTACTER →</a></div></section>
 <footer class="site-footer">
-<div class="footer-top-v12">
-  <div class="footer-brand-v12"><img alt="ForgePC Mauricie" src="/Assets/forgepc-logo-officiel.png"><span>Votre technologie, notre expertise.</span></div>
-  <div class="footer-contact-v12"><span>📍 Shawinigan et toute la Mauricie</span><span>☎ 819 555-0123</span><span>✉ info@forgepcmauricie.ca</span></div>
-  <div class="footer-social-v12"><span>●</span><span>◎</span></div>
-</div>
-<div class="footer-bottom-v12"><span>© 2026 ForgePC Mauricie. Tous droits réservés.</span><span>Politique de confidentialité&nbsp;&nbsp;&nbsp; Mentions légales</span></div>
+<div class="footer-logo"><img alt="ForgePC Mauricie" src="/Assets/forgepc-logo-officiel.png"/></div>
+<div class="footer-location">📍 Shawinigan et toute la Mauricie</div>
+<div class="footer-slogan">Votre technologie, notre expertise.</div>
+<div class="footer-copy">© 2026 ForgePC Mauricie</div>
 </footer>
 
 <script src="/Assets/site.js"></script>

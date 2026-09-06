@@ -1,690 +1,98 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="fr-CA">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Services — ForgePC Mauricie</title>
-<meta content="Réparations, PC remis à neuf, mises à niveau et service à domicile dans la Mauricie." name="description"/>
+<meta name="description" content="Réparations, PC remis à neuf, mises à niveau, PC gaming sur mesure et service à domicile en Mauricie.">
 <style>
-:root{--bg:#02090b;--panel:#061216;--line:#2a3b40;--orange:#ff5a00;--white:#f5f5f2;--muted:#d0d5d3;--max:1180px}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:#02090b;color:var(--white);font-family:Arial,Helvetica,sans-serif}
-a{color:inherit;text-decoration:none}
-.container{width:min(calc(100% - 32px),var(--max));margin:auto}
-header{position:sticky;top:0;z-index:20;background:rgba(2,9,11,.98);border-bottom:1px solid var(--line)}
-.nav{height:70px;display:flex;align-items:center}
-.logo{width:150px;display:block}
-.navlinks{display:flex;align-items:center;gap:28px;margin-left:auto;font-size:13px;font-weight:900}
-.navlinks a{height:70px;display:flex;align-items:center;border-bottom:3px solid transparent}
-.navlinks a:hover,.navlinks .active{color:var(--orange);border-bottom-color:var(--orange)}
-.contact{margin-left:28px;background:var(--orange);padding:16px 22px;border-radius:4px;font-size:13px;font-weight:900}
-.menu{display:none;margin-left:auto;width:45px;height:42px;border:1px solid #536067;border-radius:5px;background:transparent;color:#fff;font-size:24px}
-
-.hero{background:linear-gradient(90deg,rgba(0,0,0,.94),rgba(0,0,0,.68) 48%,rgba(0,0,0,.18)),url('/Assets/services-hero-approved-clean.jpg') center/cover;border-bottom:1px solid #64290e}
-.hero-inner{min-height:248px;display:flex;align-items:center}
-.hero-copy{max-width:700px}
-.eyebrow{color:var(--orange);font-size:15px;font-weight:900;text-transform:uppercase;margin-bottom:6px}
-h1{font-size:43px;line-height:1.02;margin:0;text-transform:uppercase;letter-spacing:1px}
-h1 span{color:var(--orange)}
-.hero p{font-size:17px;line-height:1.25;margin:8px 0 18px}
-.benefits{display:flex;gap:35px;flex-wrap:wrap;font-size:13px;font-weight:900}
-.benefit{display:flex;align-items:center;gap:8px}
-.benefit i{color:var(--orange);font-size:27px;font-style:normal}
-
-.section{background:var(--bg);border-bottom:1px solid var(--line);padding:12px 0 14px}
-.section-title{text-align:center;margin:0;font-size:28px;text-transform:uppercase}
-.section-sub{text-align:center;color:#ddd;margin:2px 0 10px}
-.title-line{display:flex;justify-content:center;align-items:center;gap:20px}
-.title-line:before,.title-line:after{content:"";width:95px;height:3px;background:var(--orange)}
-
-.cards{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
-.card{background:#041014;border:1px solid #34454b;border-radius:5px;overflow:hidden}
-.card img{width:100%;height:135px;object-fit:cover;object-position:center;display:block}
-.card-body{padding:11px 14px 13px}
-.card h3{margin:0 0 7px;font-size:16px;text-transform:uppercase}
-.card p{margin:0 0 13px;color:var(--muted);font-size:12px;line-height:1.35;min-height:34px}
-.card a,.link{color:var(--orange);font-weight:900;font-size:12px;text-transform:uppercase}
-
-.steps{padding-top:12px}
-.steps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:15px}
-.step{display:flex;align-items:center;gap:12px}
-.num{width:48px;height:48px;border:3px solid var(--orange);border-radius:50%;display:grid;place-items:center;color:var(--orange);font-weight:900;font-size:23px;flex:none}
-.step strong{display:block;font-size:12px}
-.step span{display:block;color:#ddd;font-size:11px;line-height:1.3;margin-top:3px}
-
-.info-grid{display:grid;grid-template-columns:1fr 1.15fr 1.05fr;gap:10px;margin-top:14px}
-.info{background:#041014;border:1px solid #34454b;border-radius:4px;padding:14px;min-height:185px}
-.info h3{font-size:15px;text-transform:uppercase;margin:0 0 9px}
-.info h3 i{color:var(--orange);font-style:normal;font-size:26px;margin-right:8px}
-.info p{font-size:12px;color:var(--muted);line-height:1.4;margin:0 0 10px}
-.map{height:110px;position:relative;overflow:hidden;border:1px solid #34454b;border-radius:4px;margin-bottom:8px;background:radial-gradient(circle at 65% 35%,rgba(255,90,0,.22),transparent 20%),linear-gradient(145deg,#061216,#02090b 65%)}.map:before{content:'';position:absolute;inset:12px 18px;border:1px solid rgba(255,90,0,.32);border-radius:48% 42% 55% 38%;transform:rotate(-8deg)}.map-title{position:absolute;top:10px;left:14px;color:#ff5a00;font-weight:900;font-size:13px;letter-spacing:1px}.pin{position:absolute;color:#f5f5f2;font-size:10px;font-weight:700}.pin::first-letter{color:#ff5a00}.pin1{left:24px;top:42px}.pin2{right:22px;top:63px}.pin3{left:72px;bottom:13px;color:#ff5a00}
-.faq{display:grid;gap:0}
-.faq div{border-bottom:1px solid #34454b;padding:5px 0;font-size:11px;display:flex;justify-content:space-between}
-.faq b{color:var(--orange);font-size:18px}
-
-.cta{background:linear-gradient(90deg,rgba(2,9,11,.88),rgba(2,9,11,.68)),url('/Assets/services-cta-maquette-exact.jpg') center/100% 100%;border-bottom:1px solid var(--line)}
-.cta-inner{min-height:95px;display:flex;align-items:center;gap:30px}
-.cta h2{margin:0;font-size:25px}
-.cta h2 span{color:var(--orange)}
-.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--orange);padding:14px 25px;border-radius:4px;font-weight:900;font-size:13px;margin-left:auto}
-
-footer{background:#02090b;padding:10px 0 7px}
-.footer-top{display:grid;grid-template-columns:180px 1fr 120px;align-items:center}
-.footer-logo{width:115px}
-.footer-nav{display:flex;justify-content:center;gap:30px;font-size:11px;font-weight:900}
-.social{display:flex;justify-content:flex-end;gap:14px;font-size:22px}
-.footer-bottom{border-top:1px solid #18282c;margin-top:7px;padding-top:6px;display:flex;justify-content:space-between;font-size:9px;color:#ddd}
-
-@media(max-width:800px){
- .cards{grid-template-columns:1fr 1fr}
- .nav{height:82px} .navlinks,.contact{display:none} .menu{display:block}
- .logo{width:145px}
- .hero{background-size:100% 100%;background-position:center} .hero-inner{min-height:255px;padding:20px 0}
- h1{font-size:34px} .hero p{font-size:14px}
- .benefits{gap:12px 22px}
- .cards{grid-template-columns:1fr 1fr}
- .card img{height:120px}
- .steps-grid{grid-template-columns:1fr 1fr}
- .info-grid{grid-template-columns:1fr}
- .cta-inner{padding:15px 0;display:grid;gap:10px}
- .btn{margin:0;width:100%}
- .footer-top{grid-template-columns:1fr 1fr}
- .footer-nav{display:none}
-}
-@media(max-width:500px){
- .container{width:calc(100% - 20px)}
- .cards{grid-template-columns:1fr}
- .card{display:grid;grid-template-columns:115px 1fr}
- .card img{height:100%;min-height:112px;object-fit:cover;object-position:center}
- .steps-grid{grid-template-columns:1fr}
- .title-line:before,.title-line:after{width:40px}
- h1{font-size:30px}
-}
-
-/* ForgePC — navigation mobile uniforme */
-@media (max-width: 800px) {
-  header .menu {
-    display:flex !important;
-    align-items:center;
-    justify-content:center;
-    margin-left:auto;
-    width:46px;
-    height:44px;
-    padding:0;
-    border:1px solid #4a565a;
-    border-radius:6px;
-    background:transparent;
-    color:#fff;
-    font-size:25px;
-    line-height:1;
-    cursor:pointer;
-  }
-  header nav {
-    display:none !important;
-    position:absolute !important;
-    top:70px !important;
-    left:12px !important;
-    right:12px !important;
-    z-index:100 !important;
-    flex-direction:column !important;
-    align-items:stretch !important;
-    gap:0 !important;
-    margin:0 !important;
-    padding:8px !important;
-    background:#02090b !important;
-    border:1px solid #27363a !important;
-    border-radius:6px !important;
-  }
-  header nav.open {
-    display:flex !important;
-  }
-  header nav a {
-    display:flex !important;
-    align-items:center !important;
-    min-height:44px !important;
-    height:auto !important;
-    padding:11px 10px !important;
-    border-bottom:1px solid #27363a !important;
-  }
-  header nav a:last-child { border-bottom:0 !important; }
-}
-
-
-/* ===== V6 — Services conforme à la maquette approuvée ===== */
-.map-image{
-  display:block !important;
-  width:100% !important;
-  height:110px !important;
-  object-fit:cover !important;
-  object-position:center !important;
-  border:1px solid #34454b !important;
-  border-radius:4px !important;
-  margin-bottom:8px !important;
-}
-@media(max-width:800px){
-  .cards{grid-template-columns:1fr !important;gap:8px !important;}
-  .services-page .cards .card{display:grid !important;grid-template-columns:82px minmax(0,1fr) !important;min-height:92px !important;}
-  .services-page .cards .card img{width:82px !important;height:100% !important;min-height:92px !important;object-fit:cover !important;object-position:center !important;}
-  .card-body{padding:9px 10px !important;}
-  .card h3{font-size:14px !important;margin-bottom:5px !important;}
-  .card p{font-size:11.5px !important;line-height:1.3 !important;margin-bottom:7px !important;}
-  .card a{font-size:10.5px !important;}
-  .steps-grid{grid-template-columns:1fr 1fr !important;}
-  .info-grid{grid-template-columns:1fr !important;gap:8px !important;}
-  .info{min-height:0 !important;padding:12px !important;}
-  .map-image{height:115px !important;}
-}
-@media(max-width:500px){
-  .hero-inner{min-height:205px !important;padding:14px 0 !important;}
-  h1{font-size:29px !important;}
-  .hero p{font-size:14px !important;}
-  .steps-grid{grid-template-columns:1fr !important;}
-  .services-page .cards .card{grid-template-columns:78px minmax(0,1fr) !important;}
-  .services-page .cards .card img{width:78px !important;min-height:90px !important;}
-}
-
-/* ===== V7 — Services : cadrage fidèle à la maquette ===== */
+:root{--bg:#020a0d;--panel:#061318;--line:#26383e;--orange:#ff5a00;--white:#f5f5f3;--muted:#d5d8d8;--max:1180px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--white);font-family:Arial,Helvetica,sans-serif}a{color:inherit;text-decoration:none}img{max-width:100%}
+.wrap{width:min(calc(100% - 28px),var(--max));margin:auto}
+header{height:76px;background:#020a0d;border-bottom:1px solid var(--line);position:relative;z-index:100}.nav{height:76px;display:flex;align-items:center}.logo{width:154px;height:64px;object-fit:contain;display:block}.navlinks{margin-left:auto;display:flex;align-items:center;height:100%;gap:32px;font-size:13px;font-weight:900;text-transform:uppercase}.navlinks a{height:100%;display:flex;align-items:center;border-bottom:3px solid transparent}.navlinks a.active{color:var(--orange);border-bottom-color:var(--orange)}.nav-location{margin-left:28px;display:flex;align-items:center;gap:9px;font-size:13px;font-weight:700}.nav-location .pin{color:var(--orange);font-size:31px;line-height:1}.menu{display:none;margin-left:auto;width:46px;height:44px;border:1px solid #53636a;border-radius:6px;background:transparent;color:#fff;font-size:28px;line-height:1}
+.hero{min-height:282px;background:linear-gradient(90deg,rgba(0,8,11,.96) 0%,rgba(0,8,11,.75) 38%,rgba(0,8,11,.12) 80%),url('/Assets/services-hero-approved-clean.jpg') center/cover no-repeat;border-bottom:1px solid #67300f}.hero .wrap{min-height:282px;display:flex;align-items:center}.hero-copy{max-width:520px}.eyebrow{color:var(--orange);font-size:17px;font-weight:900;text-transform:uppercase;margin-bottom:6px}.hero h1{font-size:45px;line-height:.99;margin:0 0 10px;text-transform:uppercase;letter-spacing:.3px}.hero h1 span{color:var(--orange)}.hero p{font-size:18px;line-height:1.18;margin:0 0 17px}.script{font-style:italic;font-size:21px;line-height:1.05;transform:rotate(-4deg);display:inline-block;margin-left:4px}.hero-bullets{display:flex;gap:30px;flex-wrap:wrap;margin-top:20px}.hero-bullets div{display:flex;align-items:center;gap:9px;font-weight:900;font-size:13px;text-transform:uppercase}.hero-bullets b{color:var(--orange);font-size:29px}
+section{border-bottom:1px solid var(--line)}.services{padding:17px 0 14px}.title{display:flex;align-items:center;justify-content:center;gap:18px;text-align:center}.title:before,.title:after{content:"";width:82px;height:3px;background:var(--orange);flex:none}.title h2{font-size:27px;margin:0;text-transform:uppercase}.subtitle{text-align:center;color:#ddd;font-size:15px;margin:2px 0 14px}
+.cards{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}.card{background:#041115;border:1px solid #33464c;border-radius:5px;overflow:hidden;min-width:0}.card img{display:block;width:100%;height:126px;object-fit:cover}.card-body{padding:10px 11px 12px}.card h3{font-size:14px;line-height:1.05;margin:0 0 8px;text-transform:uppercase}.card h3 .ico{color:var(--orange);font-size:19px}.card p{font-size:12px;line-height:1.28;color:var(--muted);margin:0 0 10px;min-height:46px}.card .link{color:var(--orange);font-size:11px;font-weight:900;text-transform:uppercase}
+.how{padding:12px 0 14px}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:13px}.step{display:grid;grid-template-columns:50px 1fr;gap:10px;align-items:center}.num{width:50px;height:50px;border:3px solid var(--orange);border-radius:50%;display:grid;place-items:center;color:var(--orange);font-size:23px;font-weight:900}.step strong{font-size:13px;line-height:1.05;display:block}.step p{font-size:11px;line-height:1.25;color:#ddd;margin:4px 0 0}
+.info-grid{display:grid;grid-template-columns:1fr 1.15fr 1.05fr;gap:10px;margin-top:14px}.info{background:#041115;border:1px solid #33464c;border-radius:5px;padding:12px 13px;min-height:185px}.info h3{font-size:15px;margin:0 0 10px;text-transform:uppercase}.info h3 .ico{color:var(--orange);font-size:23px;margin-right:8px}.info p{font-size:11.5px;line-height:1.4;color:var(--muted);margin:0 0 9px}.info .link{display:inline-block;color:var(--orange);font-size:10.5px;font-weight:900;text-transform:uppercase}.map-img{display:block;width:100%;height:105px;object-fit:cover;border:1px solid #33464c;border-radius:4px;margin:4px 0 8px}.faq-row{border-bottom:1px solid #33464c;padding:5px 0;display:flex;justify-content:space-between;gap:10px;font-size:10.5px}.faq-row b{color:var(--orange);font-size:18px;line-height:12px}
+.cta{background:linear-gradient(90deg,rgba(2,9,11,.84),rgba(2,9,11,.25)),url('/Assets/services-cta-maquette-exact.jpg') center/cover no-repeat}.cta .wrap{min-height:86px;display:flex;align-items:center;gap:25px}.cta h2{margin:0;font-size:24px;line-height:1.03}.cta h2 span{display:block;color:var(--orange)}.cta .btn{margin-left:auto;background:var(--orange);padding:14px 25px;border-radius:4px;font-size:12px;font-weight:900;text-transform:uppercase;white-space:nowrap}
+footer{background:#020a0d;padding:11px 0 8px}.footer-main{display:grid;grid-template-columns:150px 1fr auto;align-items:center;gap:20px}.footer-logo{width:118px;height:62px;object-fit:contain}.footer-tag{font-size:12px;color:#ddd}.footer-contact{display:flex;gap:20px;align-items:center;font-size:10.5px;font-weight:700}.footer-contact span:first-child{color:var(--orange)}.footer-bottom{border-top:1px solid #1a2b30;margin-top:7px;padding-top:6px;display:flex;justify-content:space-between;color:#ddd;font-size:9px}
 @media(max-width:900px){
-  .services-page .hero{min-height:285px!important;background-position:65% center!important;background-size:cover!important;}
-  .services-page .hero-inner{min-height:285px!important;padding:20px 0!important;}
-  .services-page .hero-copy{max-width:360px!important;width:100%!important;}
-  .services-page h1{font-size:34px!important;line-height:1.02!important;letter-spacing:.2px!important;overflow-wrap:normal!important;}
-  .services-page .hero p{font-size:15px!important;line-height:1.3!important;}
-  .services-page .cards{grid-template-columns:1fr!important;gap:10px!important;}
-  .services-page .cards .card{
-    display:grid!important;
-    grid-template-columns:115px minmax(0,1fr)!important;
-    min-height:122px!important;
-    overflow:hidden!important;
-  }
-  .services-page .cards .card img{
-    width:115px!important;
-    height:122px!important;
-    min-height:122px!important;
-    object-fit:cover!important;
-    object-position:center!important;
-  }
-  .services-page .cards .card-body{padding:12px 14px!important;}
-  .services-page .cards .card h3{font-size:16px!important;line-height:1.15!important;}
-  .services-page .cards .card p{font-size:12px!important;line-height:1.35!important;}
-  .services-page .cards .card a{font-size:11px!important;}
-  .services-page .map-image{height:150px!important;object-fit:cover!important;object-position:center!important;}
+ header,.nav{height:78px}.logo{width:145px;height:64px}.navlinks,.nav-location{display:none}.menu{display:flex;align-items:center;justify-content:center}.wrap{width:calc(100% - 20px)}
+ .hero{min-height:350px;background-position:68% center}.hero .wrap{min-height:350px;align-items:flex-start;padding-top:38px}.hero-copy{max-width:390px}.hero h1{font-size:36px}.hero p{font-size:16px}.script{font-size:20px}.hero-bullets{gap:13px 23px}.hero-bullets div{font-size:11px}.hero-bullets b{font-size:25px}
+ .cards{grid-template-columns:1fr;gap:9px}.card{display:grid;grid-template-columns:115px 1fr;min-height:118px}.card img{height:100%;min-height:118px}.card-body{padding:11px 13px}.card h3{font-size:15px}.card p{font-size:12px;min-height:0}.steps{grid-template-columns:1fr;gap:14px}.step{grid-template-columns:50px 1fr}.info-grid{grid-template-columns:1fr;gap:8px}.info{min-height:0}.map-img{height:145px}.cta .wrap{min-height:150px;padding:18px 0;display:block}.cta h2{font-size:29px}.cta .btn{display:block;margin:17px 0 0;width:100%;text-align:center;padding:16px}.footer-main{grid-template-columns:1fr;text-align:center}.footer-logo{margin:auto}.footer-contact{justify-content:center;flex-wrap:wrap}.footer-tag{display:none}.footer-bottom{font-size:9px;gap:10px;text-align:center;justify-content:center;flex-wrap:wrap}
 }
 @media(max-width:520px){
-  .services-page .hero{min-height:285px!important;background-position:62% center!important;}
-  .services-page .hero-inner{min-height:285px!important;}
-  .services-page h1{font-size:32px!important;}
-}
-</style>
-<style id="forgepc-mobile-menu-fix">
-@media (max-width: 900px) {
-  header { position: relative; }
-  header .menu { display: block !important; cursor: pointer; }
-  header nav {
-    display: none !important;
-    position: absolute !important;
-    left: 0 !important;
-    right: 0 !important;
-    top: 100% !important;
-    z-index: 999 !important;
-    flex-direction: column !important;
-    align-items: stretch !important;
-    gap: 0 !important;
-    background: #03090c !important;
-    border: 1px solid #263238 !important;
-    padding: 10px 16px !important;
-  }
-  header nav.open { display: flex !important; }
-  header nav a {
-    width: 100% !important;
-    box-sizing: border-box !important;
-    padding: 13px 8px !important;
-    border-bottom: 1px solid #263238 !important;
-  }
-  header nav a:last-child { border-bottom: 0 !important; }
-}
-</style>
-<style id="forgepc-final-fixes">
-
-/* ===== ForgePC — correctifs uniformes mobile / images / footer ===== */
-html, body { overflow-x:hidden; }
-header { position:sticky !important; top:0 !important; z-index:1000 !important; }
-header .container, header .nav { position:relative !important; }
-header .logo, header .brand { width:150px !important; height:auto !important; max-height:none !important; object-fit:contain !important; object-position:center !important; display:block !important; }
-
-/* Menu mobile fiable et identique sur toutes les pages */
-header .menu {
-  display:none;
-  appearance:none;
-  -webkit-appearance:none;
-  align-items:center !important;
-  justify-content:center !important;
-  width:46px !important;
-  height:44px !important;
-  min-width:46px !important;
-  padding:0 !important;
-  margin-left:auto !important;
-  border:1px solid #4a565a !important;
-  border-radius:7px !important;
-  background:#02090b !important;
-  color:#fff !important;
-  font-size:26px !important;
-  line-height:1 !important;
-  cursor:pointer !important;
-  position:relative !important;
-  z-index:1002 !important;
-}
-@media (max-width:900px) {
-  header .menu { display:flex !important; }
-  header nav,
-  header .navlinks,
-  header .links {
-    display:none !important;
-    position:absolute !important;
-    left:12px !important;
-    right:12px !important;
-    top:calc(100% + 1px) !important;
-    z-index:1001 !important;
-    flex-direction:column !important;
-    align-items:stretch !important;
-    gap:0 !important;
-    margin:0 !important;
-    padding:8px !important;
-    background:#02090b !important;
-    border:1px solid #27363a !important;
-    border-radius:7px !important;
-    box-shadow:0 10px 30px rgba(0,0,0,.45) !important;
-  }
-  header nav.open,
-  header .navlinks.open,
-  header .links.open { display:flex !important; }
-  header nav a,
-  header .navlinks a,
-  header .links a {
-    display:flex !important;
-    align-items:center !important;
-    width:100% !important;
-    min-height:46px !important;
-    height:auto !important;
-    box-sizing:border-box !important;
-    padding:12px 10px !important;
-    border-bottom:1px solid #27363a !important;
-  }
-  header nav a:last-child,
-  header .navlinks a:last-child,
-  header .links a:last-child { border-bottom:0 !important; }
-}
-
-/* Images : éviter les recadrages agressifs et les débordements */
-img { max-width:100%; }
-.story-image {
-  background-position:center !important;
-  background-size:cover !important;
-  background-repeat:no-repeat !important;
-}
-.card img, .services .card img, .service-card img {
-  object-position:center !important;
-}
-.map {
-  background-size:cover !important;
-  background-repeat:no-repeat !important;
-  background-position:center !important;
-}
-
-/* Footer unique sur toutes les pages */
-.site-footer {
-  width:100%;
-  box-sizing:border-box;
-  margin-top:0;
-  padding:34px 20px 26px;
-  background:#02090b;
-  border-top:1px solid #27363a;
-  text-align:center;
-  color:#f2f3f3;
-}
-.site-footer .footer-logo {
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  margin-bottom:18px;
-}
-.site-footer .footer-logo img {
-  width:170px !important;
-  height:auto !important;
-  max-height:none !important;
-  object-fit:contain !important;
-  display:block !important;
-}
-.site-footer .footer-location {
-  font-size:17px;
-  line-height:1.35;
-  margin-bottom:4px;
-}
-.site-footer .footer-slogan {
-  color:#ff5a00;
-  font-size:18px;
-  line-height:1.35;
-  font-weight:800;
-}
-.site-footer .footer-copy {
-  margin-top:8px;
-  font-size:14px;
-  color:#d4d8d7;
-}
-@media (max-width:520px) {
-  .site-footer { padding:30px 16px 24px; }
-  .site-footer .footer-logo img { width:160px !important; }
-  .site-footer .footer-location { font-size:16px; }
-  .site-footer .footer-slogan { font-size:17px; }
-  .site-footer .footer-copy { font-size:13px; }
-}
-
-/* Empêche certains calques décoratifs de doubler visuellement le texte */
-.hero, .story, .values, .bottom, main, section { isolation:isolate; }
-</style>
-<link href="/Assets/global-fixes.css" rel="stylesheet"/>
-
-<style id="forgepc-v7-final-services">
-/* V7 FINAL — Services conforme à la maquette, sans recadrage agressif */
-.services-page .hero{background-image:linear-gradient(90deg,rgba(0,0,0,.94),rgba(0,0,0,.68) 48%,rgba(0,0,0,.18)),url('/Assets/services-hero-approved-clean.jpg')!important;background-repeat:no-repeat!important;background-position:center!important;background-size:cover!important;}
-.services-page .cards .card img{object-fit:cover!important;object-position:center!important;}
-@media(max-width:900px){
-  .services-page .hero{min-height:285px!important;}
-  .services-page .hero-inner{min-height:285px!important;padding:18px 0!important;}
-  .services-page .hero-copy{width:100%!important;max-width:360px!important;}
-  .services-page h1{font-size:34px!important;line-height:1.02!important;letter-spacing:0!important;}
-  .services-page .hero p{font-size:15px!important;line-height:1.3!important;}
-  .services-page .cards{grid-template-columns:1fr!important;gap:10px!important;}
-  .services-page .cards .card{display:grid!important;grid-template-columns:115px minmax(0,1fr)!important;min-height:122px!important;}
-  .services-page .cards .card img{width:115px!important;height:122px!important;min-height:122px!important;object-fit:cover!important;}
-  .services-page .cards .card-body{padding:12px 14px!important;}
-  .services-page .cards .card h3{font-size:16px!important;line-height:1.15!important;}
-  .services-page .cards .card p{font-size:12px!important;line-height:1.35!important;}
-  .services-page .cards .card a{font-size:11px!important;}
-}
-@media(max-width:520px){
-  .services-page .hero{min-height:285px!important;background-position:62% center!important;}
-  .services-page .hero-inner{min-height:285px!important;}
-  .services-page h1{font-size:32px!important;}
-}
-</style>
-
-<style id="forgepc-maquette-v9-services">
-/* Reproduction maquette approuvée — images dédiées, aucun visuel de capture */
-.services-page .cards .card img{object-fit:cover;object-position:center;}
-@media(max-width:900px){
- .services-page .cards .card{grid-template-columns:115px minmax(0,1fr)!important;min-height:122px!important;}
- .services-page .cards .card img{width:115px!important;height:122px!important;min-height:122px!important;object-fit:cover!important;}
- .services-page .hero{background-position:center center!important;}
-}
-</style>
-
-<style id="maquette-final-overrides">
-@media (max-width:800px){
-  header .nav{height:82px!important;}
-  header .logo{width:145px!important;}
-  header .menu{width:46px!important;height:44px!important;}
-  .services-page .hero{background-size:100% 100%!important;background-position:center center!important;}
-  .services-page .cta{background-size:100% 100%!important;background-position:center center!important;}
-}
-</style>
-
-<style id="forgepc-v12-maquette-services">
-/* V12 — reproduction des proportions de la maquette, desktop + mobile */
-@media (min-width:901px){
-  .services-page .hero{min-height:280px!important}
-  .services-page .hero-inner{min-height:280px!important}
-  .services-page .cards .card img{height:135px!important}
-  .services-page .info{min-height:210px!important}
-}
-@media (max-width:900px){
-  .services-page .container{width:calc(100% - 20px)!important;max-width:none!important}
-  .services-page .nav{height:58px!important;min-height:58px!important}
-  .services-page header .logo{width:112px!important;max-height:52px!important}
-  .services-page header .menu{width:44px!important;height:42px!important}
-  .services-page header nav{top:58px!important}
-  .services-page .hero,
-  .services-page .hero-inner{min-height:184px!important}
-  .services-page .hero-inner{padding:12px 0!important;align-items:center!important}
-  .services-page .hero-copy{max-width:300px!important}
-  .services-page .eyebrow{font-size:11px!important;margin-bottom:4px!important}
-  .services-page h1{font-size:27px!important;line-height:1.0!important;letter-spacing:0!important}
-  .services-page .hero p{font-size:12px!important;line-height:1.22!important;margin:6px 0 8px!important}
-  .services-page .cards{grid-template-columns:1fr!important;gap:6px!important}
-  .services-page .cards .card{
-    display:grid!important;
-    grid-template-columns:62px minmax(0,1fr)!important;
-    min-height:72px!important;
-    height:72px!important;
-  }
-  .services-page .cards .card img{
-    width:62px!important;height:72px!important;min-height:72px!important;
-    object-fit:cover!important;
-  }
-  .services-page .cards .card-body{padding:7px 9px!important;min-width:0!important}
-  .services-page .cards .card h3{font-size:12px!important;line-height:1.05!important;margin:0 0 3px!important;white-space:normal!important}
-  .services-page .cards .card p{font-size:9.5px!important;line-height:1.18!important;margin:0 0 3px!important;min-height:0!important}
-  .services-page .cards .card a{font-size:9px!important;line-height:1!important}
-  .services-page .section{padding:10px 0 11px!important}
-  .services-page .section-title{font-size:25px!important;line-height:1.0!important}
-  .services-page .section-sub{font-size:12px!important;margin:3px 0 7px!important}
-  .services-page .title-line{gap:12px!important}
-  .services-page .title-line:before,.services-page .title-line:after{width:42px!important;height:3px!important}
-  .services-page .steps-grid{
-    grid-template-columns:1fr!important;
-    gap:8px!important;
-    margin-top:8px!important;
-  }
-  .services-page .step{gap:12px!important;min-height:54px!important}
-  .services-page .num{width:54px!important;height:54px!important;font-size:24px!important;border-width:3px!important}
-  .services-page .step strong{font-size:13px!important}
-  .services-page .step span{font-size:10.5px!important;line-height:1.2!important;margin-top:2px!important}
-  .services-page .info-grid{grid-template-columns:1fr!important;gap:0!important;margin-top:10px!important}
-  .services-page .info{
-    min-height:0!important;
-    height:58px!important;
-    padding:0 12px!important;
-    border-radius:0!important;
-    display:flex!important;
-    align-items:center!important;
-    cursor:pointer!important;
-  }
-  .services-page .info:first-child{border-radius:4px 4px 0 0!important}
-  .services-page .info:last-child{border-radius:0 0 4px 4px!important}
-  .services-page .info h3{font-size:13px!important;margin:0!important;display:flex!important;align-items:center!important;width:100%!important}
-  .services-page .info h3 i{font-size:23px!important;margin-right:10px!important;width:20px!important}
-  .services-page .info > p,.services-page .info > .map,.services-page .info > .faq,.services-page .info > a{display:none!important}
-  .services-page .info.open{height:auto!important;display:block!important;padding:12px!important}
-  .services-page .info.open h3{margin-bottom:9px!important}
-  .services-page .info.open > p,.services-page .info.open > .map,.services-page .info.open > .faq,.services-page .info.open > a{display:block!important}
-  .services-page .info.open .map{height:105px!important}
-  .services-page .cta-inner{min-height:150px!important;padding:18px 0!important;display:block!important}
-  .services-page .cta h2{font-size:27px!important;line-height:1.08!important}
-  .services-page .cta .btn{display:flex!important;width:100%!important;margin-top:14px!important}
-  .services-page footer.site-footer{padding:28px 16px 22px!important}
-  .services-page .site-footer .footer-logo img{width:145px!important}
-  .services-page .site-footer .footer-location{font-size:14px!important}
-  .services-page .site-footer .footer-slogan{font-size:16px!important}
-  .services-page .site-footer .footer-copy{font-size:12px!important}
-}
-</style>
-
-
-<style id="forgepc-v12-footer">
-.footer-top-v12{display:grid;grid-template-columns:1.1fr 2fr auto;align-items:center;gap:20px;max-width:1180px;margin:auto}
-.footer-brand-v12{display:flex;align-items:center;gap:12px;font-size:11px;font-weight:700}
-.footer-brand-v12 img{width:110px;height:auto}
-.footer-contact-v12{display:flex;justify-content:center;gap:25px;font-size:11px}
-.footer-social-v12{display:flex;gap:12px;font-size:22px}
-.footer-bottom-v12{max-width:1180px;margin:8px auto 0;padding-top:7px;border-top:1px solid #18282c;display:flex;justify-content:space-between;font-size:9px;color:#ddd}
-@media(max-width:900px){
- .footer-top-v12{display:block;text-align:center}
- .footer-brand-v12{display:flex;flex-direction:column;gap:6px;font-size:12px}
- .footer-brand-v12 img{width:145px}
- .footer-contact-v12{display:none}
- .footer-social-v12{justify-content:center;margin-top:12px}
- .footer-bottom-v12{display:block;text-align:center;font-size:10px;line-height:1.6}
-}
-</style>
-
-
-<style id="forgepc-v12-final-services-lock">
-/* V12 FINAL — footer mobile conforme à la maquette */
-@media(max-width:900px){
-  .services-page .footer-contact-v12{display:flex!important;justify-content:center!important;gap:0!important;margin-top:10px!important;}
-  .services-page .footer-contact-v12 span{display:none!important;}
-  .services-page .footer-contact-v12 span:first-child{display:block!important;font-size:11px!important;}
-  .services-page .footer-social-v12{display:flex!important;justify-content:center!important;margin-top:10px!important;}
-}
-</style>
-
-
-<style id="forgepc-final-maquette-lock">
-/* FINAL — correspondance directe avec les maquettes approuvées */
-.services-page .location{display:block;margin-left:28px;color:#ddd;font-size:12px;font-weight:700}
-@media (min-width:901px){
-  .services-page .nav{height:70px!important}
-  .services-page .logo{width:150px!important}
-  .services-page .hero,.services-page .hero-inner{min-height:280px!important}
-  .services-page .cards .card img{height:135px!important}
-  .services-page .info{min-height:210px!important}
-}
-@media (max-width:900px){
-  .services-page .location{display:none!important}
-  .services-page .nav{height:68px!important;min-height:68px!important}
-  .services-page header .logo{width:145px!important;max-height:60px!important}
-  .services-page header .menu{width:46px!important;height:44px!important}
-  .services-page header nav{top:69px!important}
-  .services-page .hero,.services-page .hero-inner{min-height:285px!important}
-  .services-page .hero-inner{padding:18px 0!important;align-items:center!important}
-  .services-page .hero-copy{max-width:360px!important}
-  .services-page .eyebrow{font-size:13px!important;margin-bottom:5px!important}
-  .services-page h1{font-size:34px!important;line-height:1.02!important}
-  .services-page .hero p{font-size:15px!important;line-height:1.28!important;margin:8px 0 0!important}
-  .services-page .cards{grid-template-columns:1fr!important;gap:10px!important}
-  .services-page .cards .card{display:grid!important;grid-template-columns:115px minmax(0,1fr)!important;min-height:122px!important;height:122px!important}
-  .services-page .cards .card img{width:115px!important;height:122px!important;min-height:122px!important;object-fit:cover!important}
-  .services-page .cards .card-body{padding:12px 14px!important}
-  .services-page .cards .card h3{font-size:16px!important;line-height:1.15!important;margin:0 0 6px!important}
-  .services-page .cards .card p{font-size:12px!important;line-height:1.35!important;margin:0 0 8px!important}
-  .services-page .cards .card a{font-size:11px!important}
-  .services-page .steps-grid{grid-template-columns:1fr!important;gap:8px!important;margin-top:12px!important}
-  .services-page .step{gap:14px!important;min-height:58px!important}
-  .services-page .num{width:54px!important;height:54px!important;font-size:24px!important}
-  .services-page .step strong{font-size:13px!important}
-  .services-page .step span{font-size:11px!important;line-height:1.25!important}
-  .services-page .info-grid{grid-template-columns:1fr!important;gap:0!important;margin-top:12px!important}
-  .services-page .info{height:60px!important;min-height:60px!important;padding:0 14px!important;display:flex!important;align-items:center!important}
-  .services-page .info.open{height:auto!important;display:block!important;padding:12px 14px!important}
-  .services-page .cta-inner{min-height:150px!important;padding:18px 0!important;display:block!important}
-  .services-page .cta h2{font-size:27px!important;line-height:1.08!important}
-  .services-page .cta .btn{display:flex!important;width:100%!important;margin-top:14px!important}
+ .hero{min-height:350px;background-position:66% center}.hero .wrap{min-height:350px;padding-top:34px}.hero h1{font-size:33px}.eyebrow{font-size:14px}.hero p{font-size:15px}.hero-bullets{gap:12px 18px}.hero-bullets div{font-size:10.5px}.hero-bullets b{font-size:23px}.title{gap:10px}.title:before,.title:after{width:55px}.title h2{font-size:27px}.subtitle{font-size:14px}.card{grid-template-columns:115px 1fr}.card img{min-height:118px}.card-body{padding:10px 12px}.card h3{font-size:14px}.card p{font-size:11.5px}.card .link{font-size:10.5px}.step strong{font-size:13px}.step p{font-size:11px}.info h3{font-size:15px}.faq-row{font-size:11px}.cta h2{font-size:28px}.footer-contact{font-size:10px}
 }
 </style>
 </head>
 <body class="services-page">
-<header class="site-header">
-<div class="container nav">
-<a class="brand-link" aria-label="ForgePC Mauricie" href="index.html"><img alt="ForgePC Mauricie" class="logo" src="/Assets/forgepc-logo-officiel.png"/></a>
-<nav aria-label="Navigation principale" class="navlinks">
-<a href="index.html">ACCUEIL</a>
-<a class="active" href="services.html">SERVICES</a>
-<a href="inventaire.html">INVENTAIRE</a>
-<a href="a-propos.html">À PROPOS</a>
-<a href="contact.html">CONTACT</a>
-</nav>
-<div class="location">📍 Shawinigan et toute la Mauricie</div>
-<button aria-expanded="false" aria-label="Ouvrir le menu" class="menu" type="button">☰</button>
-</div>
+<header>
+ <div class="wrap nav">
+  <a href="index.html" aria-label="ForgePC Mauricie"><img class="logo" src="/Assets/forgepc-logo-officiel.png" alt="ForgePC Mauricie"></a>
+  <nav class="navlinks" aria-label="Navigation principale">
+   <a href="index.html">Accueil</a><a class="active" href="services.html">Services</a><a href="inventaire.html">Inventaire</a><a href="a-propos.html">À propos</a><a href="contact.html">Contact</a>
+  </nav>
+  <div class="nav-location"><span class="pin">●</span><span>Shawinigan et<br>toute la Mauricie</span></div>
+  <button class="menu" type="button" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+ </div>
 </header>
-<section class="hero" aria-label="Nos services"><div class="container hero-inner"><div class="hero-copy">
-<div class="eyebrow">NOS SERVICES</div>
-<h1>DES SOLUTIONS POUR <span>TOUS VOS BESOINS</span></h1>
-<p>Réparer. Améliorer. Optimiser.<br>Simplement, ici en Mauricie.</p>
-</div></div></section>
-<section class="section">
-<div class="container">
-<div class="title-line"><h2 class="section-title">NOS SERVICES</h2></div>
-<div class="section-sub">Des solutions adaptées à vos besoins</div>
-<div class="cards">
-<article class="card">
-<img alt="PC remis à neuf" src="/Assets/service-pc.jpg"/>
-<div class="card-body"><h3>▣ PC REMIS À NEUF</h3><p>Des ordinateurs sélectionnés, nettoyés, testés et prêts à utiliser.</p><a href="inventaire.html">VOIR L'INVENTAIRE →</a></div>
-</article>
-<article class="card">
-<img alt="Réparations" src="/Assets/service-repair.jpg"/>
-<div class="card-body"><h3>🔧 RÉPARATIONS</h3><p>Diagnostic, réparation et solutions durables pour vos appareils.</p><a href="forgepc_diagnostic.html">DEMANDER UN DIAGNOSTIC →</a></div>
-</article>
-<article class="card">
-<img alt="Mises à niveau" src="/Assets/service-upgrade.jpg"/>
-<div class="card-body"><h3>⚙ MISES À NIVEAU</h3><p>Améliorer les performances sans dépenser inutilement.</p><a href="mise-a-niveau.html">DEMANDER UNE ÉVALUATION →</a></div>
-</article>
-<article class="card">
-<img alt="PC gaming sur mesure" src="/Assets/service-gaming-card-fit.jpg"/>
-<div class="card-body"><h3>🎮 PC GAMING SUR MESURE</h3><p>Une tour gaming pensée selon vos jeux, vos besoins et votre budget.</p><a href="pc-gaming-sur-mesure.html">PRÉSENTER MON PROJET →</a></div>
-</article>
-<article class="card">
-<img alt="Service à domicile" src="/Assets/service-home.jpg"/>
-<div class="card-body"><h3>⌂ SERVICE À DOMICILE</h3><p>On se déplace dans la Mauricie selon vos besoins.</p><a href="rdv-service-domicile.html">DEMANDER UN RENDEZ-VOUS →</a></div>
-</article>
-</div>
-</div>
+<main>
+<section class="hero">
+ <div class="wrap">
+  <div class="hero-copy">
+   <div class="eyebrow">— Nos services —</div>
+   <h1>Des solutions<br>pour <span>tous vos besoins</span></h1>
+   <p>Réparer. Améliorer. Optimiser.<br>Simplement, ici en Mauricie.</p>
+   <div class="script">Votre technologie,<br>notre expertise.</div>
+   <div class="hero-bullets">
+    <div><b>⌂</b> Fiabilité</div><div><b>●</b> Performance</div><div><b>⌁</b> Économie</div><div><b>◆</b> Service local</div>
+   </div>
+  </div>
+ </div>
 </section>
-<section class="section steps">
-<div class="container">
-<div class="title-line"><h2 class="section-title">COMMENT ÇA FONCTIONNE ?</h2></div>
-<div class="section-sub">Simple, transparent et sans surprises.</div>
-<div class="steps-grid">
-<div class="step"><div class="num">1</div><div><strong>Vous nous contactez</strong><span>Vous nous expliquez votre problème ou votre besoin.</span></div></div>
-<div class="step"><div class="num">2</div><div><strong>On évalue la situation</strong><span>On fait un diagnostic et on vérifie ce qui est nécessaire.</span></div></div>
-<div class="step"><div class="num">3</div><div><strong>On vous propose une solution</strong><span>On vous explique les options et les coûts.</span></div></div>
-<div class="step"><div class="num">4</div><div><strong>Votre ordinateur repart prêt à fonctionner</strong><span>Un service fiable et honnête.</span></div></div>
-</div>
-<div class="info-grid">
-<article class="info">
-<h3><i>⌕</i> LE DIAGNOSTIC</h3>
-<p><strong>Un problème informatique ?<br/>On commence par chercher la cause.</strong></p>
-<p>Avant de vous conseiller une réparation ou un remplacement, nous évaluons la situation afin de déterminer ce qui vaut réellement la peine d'être fait.</p>
-<a class="link" href="forgepc_diagnostic.html">DEMANDER UN DIAGNOSTIC →</a>
-</article>
-<article class="info">
-<h3><i>●</i> NOTRE SECTEUR</h3>
-<p><strong>Shawinigan et toute la Mauricie</strong></p>
-<div class="map" aria-label="Carte stylisée de la Mauricie"><div class="map-title">MAURICIE</div><span class="pin pin1">● Shawinigan</span><span class="pin pin2">● Trois-Rivières</span><span class="pin pin3">● Mauricie</span></div>
-<p>Nous offrons nos services à Shawinigan et dans les environs, incluant Trois-Rivières et les municipalités de la Mauricie (selon la distance et la disponibilité).</p>
-<a class="link" href="contact.html">EN SAVOIR PLUS →</a>
-</article>
-<article class="info">
-<h3><i>?</i> FOIRE AUX QUESTIONS</h3>
-<div class="faq">
-<div>Combien coûte un diagnostic ? <b>+</b></div>
-<div>Est-ce que vous vous déplacez à domicile ? <b>+</b></div>
-<div>Pouvez-vous récupérer mes données ? <b>+</b></div>
-<div>Réparez-vous les ordinateurs portables ? <b>+</b></div>
-<div>Est-ce que vous installez Windows ? <b>+</b></div>
-<div>Une mise à niveau vaut-elle le coup sur un vieux PC ? <b>+</b></div>
-</div>
-<a class="link" href="contact.html">VOIR TOUTES LES FAQ →</a>
-</article>
-</div>
-</div>
+<section class="services">
+ <div class="wrap">
+  <div class="title"><h2>Nos services</h2></div><div class="subtitle">Des solutions adaptées à vos besoins</div>
+  <div class="cards">
+   <article class="card"><img src="/Assets/service-pc.jpg" alt="PC remis à neuf"><div class="card-body"><h3><span class="ico">▣</span> PC remis à neuf</h3><p>Des ordinateurs sélectionnés, nettoyés, testés et prêts à utiliser.</p><a class="link" href="inventaire.html">Voir l'inventaire →</a></div></article>
+   <article class="card"><img src="/Assets/service-repair.jpg" alt="Réparations informatiques"><div class="card-body"><h3><span class="ico">⌕</span> Réparations</h3><p>Diagnostic, réparation et solutions durables pour vos appareils.</p><a class="link" href="forgepc_diagnostic.html">Demander un diagnostic →</a></div></article>
+   <article class="card"><img src="/Assets/service-upgrade.jpg" alt="Mises à niveau"><div class="card-body"><h3><span class="ico">⚙</span> Mises à niveau</h3><p>Améliorer les performances sans dépenser inutilement.</p><a class="link" href="mise-a-niveau.html">Demander une évaluation →</a></div></article>
+   <article class="card"><img src="/Assets/service-gaming-card-fit.jpg" alt="PC gaming sur mesure"><div class="card-body"><h3><span class="ico">⌁</span> PC gaming sur mesure</h3><p>Des configurations adaptées à vos besoins et à votre budget.</p><a class="link" href="pc-gaming-sur-mesure.html">Discuter de votre projet →</a></div></article>
+   <article class="card"><img src="/Assets/service-home.jpg" alt="Service à domicile"><div class="card-body"><h3><span class="ico">⌂</span> Service à domicile</h3><p>On se déplace dans la Mauricie selon vos besoins.</p><a class="link" href="rdv-service-domicile.html">Demander un rendez-vous →</a></div></article>
+  </div>
+ </div>
 </section>
-<section class="cta">
-<div class="container cta-inner">
-<div><h2>Vous avez un projet ou un problème informatique ?<br/><span>Parlons-en.</span></h2></div>
-<a class="btn" href="contact.html">NOUS CONTACTER →</a>
-</div>
+<section class="how">
+ <div class="wrap">
+  <div class="title"><h2>Comment ça fonctionne ?</h2></div><div class="subtitle">Simple, transparent et sans surprises.</div>
+  <div class="steps">
+   <div class="step"><div class="num">1</div><div><strong>Vous nous contactez</strong><p>Vous nous expliquez votre problème ou votre besoin.</p></div></div>
+   <div class="step"><div class="num">2</div><div><strong>On évalue la situation</strong><p>On fait un diagnostic et on vérifie ce qui est nécessaire.</p></div></div>
+   <div class="step"><div class="num">3</div><div><strong>On vous propose une solution</strong><p>On vous explique les options et les coûts.</p></div></div>
+   <div class="step"><div class="num">4</div><div><strong>Votre ordinateur repart prêt à fonctionner</strong><p>Un service fiable et honnête.</p></div></div>
+  </div>
+  <div class="info-grid">
+   <article class="info"><h3><span class="ico">⌕</span> Le diagnostic</h3><p><b>Un problème informatique ?</b><br>On commence par chercher la cause.</p><p>Avant de vous conseiller une réparation ou un remplacement, nous évaluons la situation afin de déterminer ce qui vaut réellement la peine d'être fait.</p><a class="link" href="forgepc_diagnostic.html">Demander un diagnostic →</a></article>
+   <article class="info"><h3><span class="ico">●</span> Notre secteur</h3><p>Shawinigan et toute la Mauricie</p><img class="map-img" src="/Assets/services-map.jpg" alt="Mauricie — Shawinigan, Mauricie et Trois-Rivières"><p>Nous offrons nos services à Shawinigan et dans les environs, incluant Trois-Rivières et les municipalités de la Mauricie (selon la distance et la disponibilité).</p><a class="link" href="contact.html">En savoir plus →</a></article>
+   <article class="info"><h3><span class="ico">?</span> Foire aux questions</h3><div class="faq-row"><span>Combien coûte un diagnostic ?</span><b>+</b></div><div class="faq-row"><span>Est-ce que vous vous déplacez à domicile ?</span><b>+</b></div><div class="faq-row"><span>Pouvez-vous récupérer mes données ?</span><b>+</b></div><div class="faq-row"><span>Réparez-vous les ordinateurs portables ?</span><b>+</b></div><div class="faq-row"><span>Est-ce que vous installez Windows ?</span><b>+</b></div><div class="faq-row"><span>Une mise à niveau vaut-elle le coup sur un vieux PC ?</span><b>+</b></div><a class="link" href="contact.html" style="margin-top:8px">Voir toutes les FAQ →</a></article>
+  </div>
+ </div>
 </section>
-<footer class="site-footer">
-<div class="footer-top-v12">
-  <div class="footer-brand-v12"><img alt="ForgePC Mauricie" src="/Assets/forgepc-logo-officiel.png"><span>Votre technologie, notre expertise.</span></div>
-  <div class="footer-contact-v12"><span>📍 Shawinigan et toute la Mauricie</span><span>☎ 819 555-0123</span><span>✉ info@forgepcmauricie.ca</span></div>
-  <div class="footer-social-v12"><span>●</span><span>◎</span></div>
-</div>
-<div class="footer-bottom-v12"><span>© 2026 ForgePC Mauricie. Tous droits réservés.</span><span>Politique de confidentialité&nbsp;&nbsp;&nbsp; Mentions légales</span></div>
+<section class="cta"><div class="wrap"><h2>Vous avez un projet ou un problème informatique ?<span>Parlons-en.</span></h2><a class="btn" href="contact.html">Nous contacter →</a></div></section>
+</main>
+<footer>
+ <div class="wrap">
+  <div class="footer-main"><img class="footer-logo" src="/Assets/forgepc-logo-officiel.png" alt="ForgePC Mauricie"><div class="footer-tag">Votre technologie, notre expertise.</div><div class="footer-contact"><span>●</span> Shawinigan et toute la Mauricie <span>☎</span> 819 555-0123 <span>✉</span> info@forgepcmauricie.ca</div></div>
+  <div class="footer-bottom"><span>© 2026 ForgePC Mauricie. Tous droits réservés.</span><span>Politique de confidentialité　|　Mentions légales</span></div>
+ </div>
 </footer>
-<script src="/Assets/site.js"></script>
+<script>
+(function(){const btn=document.querySelector('.menu'),nav=document.querySelector('.navlinks');if(!btn||!nav)return;btn.addEventListener('click',()=>{const open=nav.classList.toggle('open');btn.setAttribute('aria-expanded',open?'true':'false');});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));})();
+</script>
+<style>
+@media(max-width:900px){.navlinks.open{display:flex;position:absolute;top:78px;left:10px;right:10px;height:auto;margin:0;padding:8px;background:#020a0d;border:1px solid #26383e;border-radius:6px;flex-direction:column;align-items:stretch;gap:0}.navlinks.open a{height:44px;padding:0 12px;border-bottom:1px solid #26383e}.navlinks.open a:last-child{border-bottom:0}}
+</style>
 </body>
 </html>
