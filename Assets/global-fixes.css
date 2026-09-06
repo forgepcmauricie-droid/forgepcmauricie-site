@@ -260,3 +260,108 @@ body, html { background:#020609 !important; }
   .card img{display:block!important;width:100%!important;}
   .content,.approach{width:100%!important;max-width:100%!important;}
 }
+
+/* ===== V11 — alignement visuel maquette mobile, sans toucher au contenu ===== */
+@media (max-width:900px){
+  /* En-tête : proportions de la maquette */
+  .site-header .container.nav{min-height:70px!important;height:70px!important;}
+  .site-header{min-height:70px!important;}
+  .site-header .brand-link .logo{width:120px!important;max-width:120px!important;max-height:70px!important;}
+  .site-header .menu{width:42px!important;height:42px!important;font-size:24px!important;}
+}
+
+/* SERVICES — cartes exactement en miniature gauche + texte droite */
+@media (max-width:900px){
+  .services-page .cards{grid-template-columns:1fr!important;gap:8px!important;}
+  .services-page .cards .card{
+    display:grid!important;
+    grid-template-columns:92px minmax(0,1fr)!important;
+    min-height:94px!important;
+    height:94px!important;
+    overflow:hidden!important;
+  }
+  .services-page .cards .card img{
+    display:block!important;
+    width:92px!important;
+    height:94px!important;
+    min-height:94px!important;
+    object-fit:cover!important;
+    object-position:center!important;
+  }
+  .services-page .cards .card-body{padding:7px 9px!important;min-width:0!important;}
+  .services-page .cards .card h3{font-size:12.5px!important;line-height:1.1!important;margin:0 0 4px!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important;}
+  .services-page .cards .card p{font-size:10px!important;line-height:1.18!important;margin:0 0 5px!important;min-height:0!important;}
+  .services-page .cards .card a{font-size:9.5px!important;line-height:1!important;white-space:nowrap!important;}
+
+  /* La maquette mobile montre 3 étapes, puis les 3 blocs repliés. */
+  .services-page .steps-grid{grid-template-columns:1fr!important;gap:8px!important;margin-top:12px!important;}
+  .services-page .steps-grid .step:nth-child(4){display:none!important;}
+  .services-page .steps-grid .step{gap:10px!important;}
+  .services-page .steps-grid .num{width:50px!important;height:50px!important;min-width:50px!important;font-size:23px!important;}
+  .services-page .steps-grid .step strong{font-size:12px!important;}
+  .services-page .steps-grid .step span{font-size:10.5px!important;line-height:1.25!important;}
+
+  /* Blocs diagnostic / secteur / FAQ : repliés comme dans la maquette. */
+  .services-page .info-grid{grid-template-columns:1fr!important;gap:0!important;margin-top:12px!important;}
+  .services-page .info-grid .info{
+    min-height:48px!important;height:48px!important;padding:0 12px!important;
+    display:flex!important;align-items:center!important;border-radius:0!important;border-left:1px solid #34454b!important;border-right:1px solid #34454b!important;
+  }
+  .services-page .info-grid .info:first-child{border-radius:4px 4px 0 0!important;}
+  .services-page .info-grid .info:last-child{border-radius:0 0 4px 4px!important;}
+  .services-page .info-grid .info h3{margin:0!important;font-size:12px!important;line-height:1!important;white-space:nowrap!important;}
+  .services-page .info-grid .info h3 i{font-size:24px!important;margin-right:9px!important;color:#ff5a00!important;}
+  .services-page .info-grid .info > p,
+  .services-page .info-grid .info > a,
+  .services-page .info-grid .info .map,
+  .services-page .info-grid .info .map-image,
+  .services-page .info-grid .info .faq{display:none!important;}
+
+  .services-page .hero{min-height:205px!important;}
+  .services-page .hero-inner{min-height:205px!important;padding:12px 0!important;}
+  .services-page .hero-copy{max-width:350px!important;}
+  .services-page h1{font-size:31px!important;line-height:1.02!important;}
+  .services-page .hero p{font-size:13px!important;line-height:1.25!important;margin:6px 0 12px!important;}
+  .services-page .benefits{gap:9px 16px!important;font-size:10px!important;}
+
+  .services-page .cta-inner{min-height:125px!important;padding:15px 0!important;display:block!important;}
+  .services-page .cta h2{font-size:25px!important;line-height:1.05!important;}
+  .services-page .cta .btn{width:100%!important;margin-top:12px!important;}
+}
+
+/* GAMING — cadrage du hero et miniatures de la maquette */
+@media (max-width:900px){
+  .pc-gaming-page .hero{min-height:360px!important;background-size:cover!important;background-position:78% center!important;}
+  .pc-gaming-page .hero-inner{min-height:360px!important;padding:16px 0!important;}
+  .pc-gaming-page .hero-copy{max-width:360px!important;padding:0!important;}
+  .pc-gaming-page h1{font-size:35px!important;line-height:1.02!important;}
+  .pc-gaming-page .hero p{font-size:15px!important;line-height:1.3!important;}
+  .pc-gaming-page .benefits{gap:10px 16px!important;}
+
+  .pc-gaming-page .approach{grid-template-columns:1fr!important;gap:8px!important;}
+  .pc-gaming-page .approach .card{
+    display:grid!important;grid-template-columns:118px minmax(0,1fr)!important;
+    min-height:112px!important;height:112px!important;overflow:hidden!important;
+  }
+  .pc-gaming-page .approach .card img{
+    display:block!important;width:118px!important;height:112px!important;min-height:112px!important;
+    object-fit:cover!important;object-position:center!important;
+  }
+  .pc-gaming-page .approach .card-body{padding:12px 14px!important;}
+  .pc-gaming-page .approach .card h3{font-size:16px!important;line-height:1.1!important;}
+  .pc-gaming-page .approach .card p{font-size:12px!important;line-height:1.3!important;}
+
+  .pc-gaming-page .project-panel .project-feature{
+    display:grid!important;grid-template-columns:118px minmax(0,1fr)!important;gap:12px!important;align-items:start!important;
+  }
+  .pc-gaming-page .project-panel .project-feature .project-image{
+    display:block!important;width:118px!important;height:145px!important;min-height:145px!important;
+    object-fit:cover!important;object-position:center!important;margin:0!important;
+  }
+  .pc-gaming-page .cta{background-size:cover!important;background-position:center!important;}
+}
+@media (max-width:520px){
+  .pc-gaming-page .hero{min-height:350px!important;background-position:80% center!important;}
+  .pc-gaming-page .hero-inner{min-height:350px!important;}
+  .pc-gaming-page .project-panel .project-feature .project-image{width:118px!important;height:145px!important;}
+}
