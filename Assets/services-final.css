@@ -14,7 +14,7 @@
   .services-page .services-card .orange-link{font-size:10px!important;margin-top:auto!important;}
 }
 
-/* Mobile — seule correction demandée */
+/* Mobile — 45% image / 55% texte, sans couper les sujets */
 @media (max-width:900px){
   .services-page .services-cards{
     display:grid!important;
@@ -39,6 +39,7 @@
   .services-page .services-card > .img{
     grid-column:1!important;
     grid-row:1!important;
+    position:relative!important;
     width:100%!important;
     height:130px!important;
     min-height:130px!important;
@@ -47,9 +48,25 @@
     padding:0!important;
     overflow:hidden!important;
     box-sizing:border-box!important;
+    background:#02090b!important;
+  }
+
+  /* Le fond remplit tout le panneau; l'image nette reste entière au-dessus. */
+  .services-page .services-card > .img:before{
+    content:""!important;
+    position:absolute!important;
+    inset:-12px!important;
+    background-image:url("service-gaming-maquette-mobile.jpg")!important;
+    background-size:cover!important;
+    background-position:center!important;
+    filter:blur(12px)!important;
+    transform:scale(1.08)!important;
+    opacity:.55!important;
   }
 
   .services-page .services-card > .img img{
+    position:relative!important;
+    z-index:1!important;
     display:block!important;
     width:100%!important;
     height:100%!important;
@@ -57,20 +74,23 @@
     max-height:none!important;
     margin:0!important;
     padding:0!important;
-    object-fit:cover!important;
+    object-fit:contain!important;
     object-position:center!important;
+    background:transparent!important;
   }
 
-  /* Ces deux sources sont cadrées pour conserver le sujet visible tout en remplissant la zone. */
+  .services-page .services-card:nth-child(4) > .img:before{
+    background-image:url("service-gaming-maquette-mobile.jpg")!important;
+  }
   .services-page .services-card:nth-child(4) > .img img{
-    content:url('service-gaming-mobile-maquette.jpg')!important;
-    object-fit:cover!important;
-    object-position:center!important;
+    content:url("service-gaming-maquette-mobile.jpg")!important;
+  }
+
+  .services-page .services-card:nth-child(5) > .img:before{
+    background-image:url("subaru-wrx-card-cropped.jpg")!important;
   }
   .services-page .services-card:nth-child(5) > .img img{
-    content:url('service-home.jpg')!important;
-    object-fit:cover!important;
-    object-position:center!important;
+    content:url("subaru-wrx-card-cropped.jpg")!important;
   }
 
   .services-page .services-card > .body{
