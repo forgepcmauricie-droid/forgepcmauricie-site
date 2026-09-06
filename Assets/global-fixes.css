@@ -408,3 +408,118 @@ body, html { background:#020609 !important; }
     line-height:1.3!important;
   }
 }
+
+/* =========================================================
+   FORGEPC — FINAL MAQUETTES
+   Dernier correctif visuel Services + PC Gaming
+   ========================================================= */
+.services-page .cards .card:nth-child(4) img{
+  content:url('/Assets/service-gaming-maquette.jpg') !important;
+  object-fit:cover !important;
+  object-position:center !important;
+}
+.services-page .cta{
+  background-image:linear-gradient(90deg,rgba(2,9,11,.88),rgba(2,9,11,.68)),url('/Assets/mauricie-landscape-clean.jpg') !important;
+  background-position:center center !important;
+  background-size:cover !important;
+}
+
+.pc-gaming-page .approach .card img{
+  display:block !important;
+  object-fit:cover !important;
+  object-position:center !important;
+}
+.pc-gaming-page .project-panel .project-feature .project-image{
+  content:url('/Assets/gaming-rgb-tower-maquette.jpg') !important;
+  object-fit:cover !important;
+  object-position:center center !important;
+}
+.pc-gaming-page .cta{
+  background-image:linear-gradient(90deg,rgba(2,9,11,.92),rgba(2,9,11,.72)),url('/Assets/mauricie-landscape-clean.jpg') !important;
+  background-position:center center !important;
+  background-size:cover !important;
+}
+
+@media(max-width:900px){
+  /* Services : carte gaming avec le visuel approuvé */
+  .services-page .cards .card:nth-child(4) img{
+    width:92px !important;
+    height:94px !important;
+    min-height:94px !important;
+    object-fit:cover !important;
+    object-position:center !important;
+  }
+
+  /* Gaming : les 4 vignettes de Notre approche sont visibles sur mobile,
+     comme dans la maquette approuvée. */
+  .pc-gaming-page .approach{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    gap:8px !important;
+  }
+  .pc-gaming-page .approach .card{
+    display:grid !important;
+    grid-template-columns:118px minmax(0,1fr) !important;
+    min-height:112px !important;
+    height:auto !important;
+    overflow:hidden !important;
+    align-items:stretch !important;
+  }
+  .pc-gaming-page .approach .card img{
+    display:block !important;
+    width:118px !important;
+    height:112px !important;
+    min-height:112px !important;
+    object-fit:cover !important;
+    object-position:center !important;
+  }
+  .pc-gaming-page .approach .card-body{
+    padding:11px 12px !important;
+    min-width:0 !important;
+  }
+  .pc-gaming-page .approach .card h3{
+    display:flex !important;
+    align-items:center !important;
+    gap:7px !important;
+    margin:0 0 5px !important;
+    font-size:15px !important;
+    line-height:1.1 !important;
+  }
+  .pc-gaming-page .approach .card p{
+    display:block !important;
+    margin:0 !important;
+    font-size:11.5px !important;
+    line-height:1.28 !important;
+    white-space:normal !important;
+  }
+  .pc-gaming-page .approach .card h3 .num{
+    width:32px !important;
+    height:32px !important;
+    min-width:32px !important;
+    border:2px solid var(--orange) !important;
+    border-radius:50% !important;
+    display:inline-grid !important;
+    place-items:center !important;
+    color:var(--orange) !important;
+    font-size:17px !important;
+    margin:0 !important;
+  }
+  .pc-gaming-page .approach .card:after{display:none !important;content:none !important;}
+
+  /* Photo « Un PC qui vous ressemble » : cadrage vertical de la maquette. */
+  .pc-gaming-page .project-panel .project-feature{
+    display:grid !important;
+    grid-template-columns:118px minmax(0,1fr) !important;
+    gap:12px !important;
+    align-items:start !important;
+  }
+  .pc-gaming-page .project-panel .project-feature .project-image{
+    display:block !important;
+    width:118px !important;
+    height:145px !important;
+    min-height:145px !important;
+    object-fit:cover !important;
+    object-position:center center !important;
+    margin:0 !important;
+  }
+}
