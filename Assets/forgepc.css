@@ -253,3 +253,14 @@ footer{background:#02090b;border-top:1px solid #27363a}.footer-main{min-height:7
   .services-page .services-cta h2{max-width:none!important;font-size:20px!important;}
   .services-page .services-cta .btn{display:block!important;width:100%!important;margin:10px 0 0!important;}
 }
+
+
+/* FINAL FIX — services mobile: keep the approved Subaru fully visible and use one sharp Mauricie image. */
+.services-page .services-card:nth-child(5) .img img{object-fit:cover!important;object-position:center!important;}
+.services-page .info-grid .info-box:nth-child(2) .sector{filter:none!important;}
+.services-page .services-cta{background-image:linear-gradient(90deg,rgba(2,11,15,.78),rgba(2,11,15,.28)),url('mauricie-landscape-approved.jpg')!important;background-position:center!important;background-size:cover!important;background-repeat:no-repeat!important;}
+@media(max-width:900px){
+  .services-page .services-card:nth-child(5) .img img{object-fit:cover!important;object-position:center!important;}
+  .services-page .info-grid .info-box:nth-child(2) .sector{object-fit:cover!important;object-position:center!important;}
+  .services-page .services-cta{height:auto!important;min-height:150px!important;background-image:linear-gradient(90deg,rgba(2,11,15,.76),rgba(2,11,15,.30)),url('mauricie-landscape-approved.jpg')!important;background-position:center!important;background-size:cover!important;}
+}
