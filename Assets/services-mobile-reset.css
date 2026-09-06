@@ -139,6 +139,6 @@
 @media (max-width:900px){
   .services-page .services-card:nth-child(5)>.img img{
     object-fit:cover!important;
-    object-position:center bottom!important;
+    object-position:left center!important;
   }
 }
