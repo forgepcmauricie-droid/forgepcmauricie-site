@@ -1,6 +1,7 @@
-Corrections ciblées :
-- Logos PNG : fonds très clairs rendus transparents.
-- Navigation mobile basse : masquée lorsqu'elle correspond aux classes identifiées.
-- Dossier Assets conservé; aucune image non-logo remplacée.
-- Liens HTML locaux manquants détectés : 1
-rendez-vous.html -> https://forgepcmauricie.ca/rdv-service-domicile.html
+V8 — CORRECTION BASEE SUR LES MAQUETTES APPROUVEES
+- Gaming: 4 visuels d'approche remplacés par les 4 images propres fournies.
+- Gaming: image "Un PC qui vous ressemble" remplacée par une vraie photo du PC, sans texte incrusté.
+- Gaming: CTA utilise le paysage Mauricie propre.
+- Services: hero remplacé par un visuel propre extrait de la maquette approuvée, sans texte incrusté.
+- Services: cartes utilisent les visuels propres (PC, réparation, RAM, Subaru).
+- Aucun recadrage de capture de maquette utilisé dans les cartes.
