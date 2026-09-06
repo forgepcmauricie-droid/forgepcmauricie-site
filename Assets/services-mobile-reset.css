@@ -142,3 +142,22 @@
     object-position:left center!important;
   }
 }
+
+
+/* FINAL Subaru mobile framing: use the reference image as a square tile so the full front grille stays visible. */
+@media (max-width:900px){
+  .services-page .services-card:nth-child(5)>.img{
+    height:100%!important; min-height:0!important; align-self:center!important;
+    display:flex!important; align-items:center!important; justify-content:center!important;
+    overflow:hidden!important; background:#071116!important;
+  }
+  .services-page .services-card:nth-child(5)>.img picture{
+    width:100%!important; height:auto!important; aspect-ratio:1/1!important;
+    display:block!important; flex:0 0 auto!important; overflow:hidden!important;
+  }
+  .services-page .services-card:nth-child(5)>.img picture img,
+  .services-page .services-card:nth-child(5)>.img>img{
+    width:100%!important; height:100%!important; object-fit:cover!important; object-position:center!important;
+    display:block!important;
+  }
+}
