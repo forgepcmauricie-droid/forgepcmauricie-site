@@ -175,3 +175,14 @@
     padding:0!important;
   }
 }
+
+/* V6 — mobile vignette images: use the exact approved framing, centered and full-height. */
+@media (max-width:900px){
+  .services-page .services-card>.img img{
+    object-fit:cover!important;
+    object-position:center center!important;
+    width:100%!important;
+    height:100%!important;
+    display:block!important;
+  }
+}
