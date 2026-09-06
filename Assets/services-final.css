@@ -127,3 +127,37 @@
     white-space:nowrap!important;
   }
 }
+
+
+/* CORRECTION FINALE MOBILE — garder Gaming et Subaru entiers tout en remplissant le panneau */
+@media (max-width:900px){
+  .services-page .services-card:nth-child(4) > .img{
+    background:#02090b url("service-gaming-maquette.jpg") center/cover no-repeat!important;
+  }
+  .services-page .services-card:nth-child(4) > .img:before{
+    background-image:url("service-gaming-maquette.jpg")!important;
+    filter:blur(10px)!important;
+    opacity:.45!important;
+  }
+  .services-page .services-card:nth-child(4) > .img img{
+    content:url("service-gaming-maquette.jpg")!important;
+    object-fit:contain!important;
+    object-position:center!important;
+    background:transparent!important;
+  }
+
+  .services-page .services-card:nth-child(5) > .img{
+    background:#02090b url("service-home.jpg") center/cover no-repeat!important;
+  }
+  .services-page .services-card:nth-child(5) > .img:before{
+    background-image:url("service-home.jpg")!important;
+    filter:blur(10px)!important;
+    opacity:.35!important;
+  }
+  .services-page .services-card:nth-child(5) > .img img{
+    content:url("service-home.jpg")!important;
+    object-fit:cover!important;
+    object-position:center!important;
+    background:transparent!important;
+  }
+}
