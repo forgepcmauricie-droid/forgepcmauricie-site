@@ -66,3 +66,24 @@ footer{background:#02090b;border-top:1px solid #27363a}.footer-main{min-height:7
   .services-page .services-card .img img{width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important;display:block!important;}
   .services-page .services-card .body{min-width:0!important;padding:10px 12px!important;}
 }
+
+/* SERVICES FINAL FIX — uniform thumbnails, official Subaru framing, no duplicated Mauricie landscape */
+.services-page .services-cards{align-items:stretch}
+.services-page .services-card{display:flex;flex-direction:column;height:100%}
+.services-page .services-card .img{aspect-ratio:3/2;height:auto;flex:0 0 auto;overflow:hidden}
+.services-page .services-card .body{flex:1;display:flex;flex-direction:column}
+.services-page .services-card .orange-link{margin-top:auto}
+.services-page .services-card img{object-fit:cover;object-position:center}
+.services-page .services-card:nth-child(5) img{object-fit:contain;background:#02090b}
+/* The sector photo is the single Mauricie landscape. The CTA keeps the approved visual structure without repeating it. */
+.services-page .services-cta{background:linear-gradient(90deg,#02090b 0%,#061216 65%,#0a171b 100%);position:relative;overflow:hidden}
+.services-page .services-cta:after{content:"";position:absolute;right:-40px;top:0;width:42%;height:100%;background:var(--orange);clip-path:polygon(20% 0,100% 0,100% 100%,0 100%);opacity:.96}
+.services-page .services-cta .container{position:relative;z-index:1}
+@media(max-width:900px){
+  .services-page .services-card{display:grid!important;grid-template-columns:45% 55%!important;flex-direction:initial;height:170px!important;min-height:170px!important;}
+  .services-page .services-card .img{width:100%!important;height:170px!important;aspect-ratio:auto!important;}
+  .services-page .services-card .body{display:block!important;min-width:0!important;}
+  .services-page .services-card .orange-link{margin-top:0!important;}
+  .services-page .services-card:nth-child(5) img{object-fit:contain!important;background:#02090b!important;}
+  .services-page .services-cta:after{width:30%;opacity:.9}
+}
