@@ -31,7 +31,7 @@ h1 span{color:var(--orange)}.hero p{font-size:18px;line-height:1.35;max-width:65
 .card img{width:100%;height:120px;object-fit:cover;object-position:center}.card-body{padding:13px}.card h3{margin:0 0 7px;font-size:15px;text-transform:uppercase}
 .card p{margin:0;color:var(--muted);font-size:12px;line-height:1.4}.num{color:var(--orange);font-weight:900;font-size:20px;margin-right:7px}
 .content{display:grid;grid-template-columns:1.2fr .8fr;gap:14px}.panel{background:#041014;border:1px solid #34454b;border-radius:5px;padding:20px}
-.panel h2{margin:0 0 15px;text-transform:uppercase;font-size:22px}.project-image{width:100%;height:220px;object-fit:cover;object-position:center;border-radius:4px;border:1px solid #34454b;display:block}.panel h2:before{content:"";display:inline-block;width:28px;height:4px;background:var(--orange);vertical-align:middle;margin-right:10px}
+.panel h2{margin:0 0 15px;text-transform:uppercase;font-size:22px}.project-image{object-position:center;width:100%;height:220px;object-fit:cover;object-position:center;border-radius:4px;border:1px solid #34454b;display:block}.panel h2:before{content:"";display:inline-block;width:28px;height:4px;background:var(--orange);vertical-align:middle;margin-right:10px}
 .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.full{grid-column:1/-1}
 label{display:block;font-weight:700;font-size:13px;margin:0 0 6px}label span{color:var(--orange)}
 input,select,textarea{width:100%;border:1px solid #49606a;border-radius:5px;padding:11px 12px;background:#132229;color:#fff;font:14px Arial,Helvetica,sans-serif}
@@ -67,9 +67,9 @@ footer.site-footer{width:100%;box-sizing:border-box;background:#02090b;border-to
   .benefits{gap:12px}
   .panel{padding:15px}
   .project-panel .project-feature{display:grid;grid-template-columns:118px 1fr;gap:12px;align-items:start}
-  .project-panel .project-feature .project-image{height:145px;object-fit:cover;margin:0}
+  .project-panel .project-feature .project-image{object-position:center;height:145px;object-fit:cover;margin:0}
   .project-panel .project-feature p{margin:0;font-size:12px;line-height:1.4}
-  .project-image{height:205px}
+  .project-image{object-position:center;height:205px}
 }
 
 /* ===== V6 — alignement strict avec la maquette approuvée ===== */
@@ -79,7 +79,7 @@ footer.site-footer{width:100%;box-sizing:border-box;background:#02090b;border-to
   object-fit:cover !important;
   object-position:center !important;
 }
-.pc-gaming-page .project-image{
+.pc-gaming-page .project-image{object-position:center;
   object-fit:cover !important;
   object-position:center !important;
 }
@@ -103,7 +103,7 @@ footer.site-footer{width:100%;box-sizing:border-box;background:#02090b;border-to
   .pc-gaming-page .project-panel .project-feature{
     grid-template-columns:118px minmax(0,1fr) !important;
   }
-  .pc-gaming-page .project-panel .project-feature .project-image{
+  .pc-gaming-page .project-panel .project-feature .project-image{object-position:center;
     width:118px !important;
     height:125px !important;
   }
@@ -136,7 +136,7 @@ footer.site-footer{width:100%;box-sizing:border-box;background:#02090b;border-to
   .pc-gaming-page .project-panel .project-feature{
     grid-template-columns:118px minmax(0,1fr)!important;
   }
-  .pc-gaming-page .project-panel .project-feature .project-image{
+  .pc-gaming-page .project-panel .project-feature .project-image{object-position:center;
     width:118px!important;height:145px!important;object-fit:cover!important;
   }
 }
@@ -154,7 +154,7 @@ footer.site-footer{width:100%;box-sizing:border-box;background:#02090b;border-to
 .pc-gaming-page .approach .card img{
   width:100%!important;height:102px!important;object-fit:cover!important;object-position:center!important;display:block!important;
 }
-.pc-gaming-page .project-image{
+.pc-gaming-page .project-image{object-position:center;
   width:100%!important;height:205px!important;object-fit:cover!important;object-position:center!important;display:block!important;
 }
 @media(max-width:900px){
@@ -170,7 +170,7 @@ footer.site-footer{width:100%;box-sizing:border-box;background:#02090b;border-to
   .pc-gaming-page .approach .card h3{font-size:16px!important;line-height:1.15!important;}
   .pc-gaming-page .approach .card p{font-size:13px!important;line-height:1.35!important;}
   .pc-gaming-page .project-panel .project-feature{display:grid!important;grid-template-columns:118px minmax(0,1fr)!important;gap:12px!important;}
-  .pc-gaming-page .project-panel .project-feature .project-image{
+  .pc-gaming-page .project-panel .project-feature .project-image{object-position:center;
     width:118px!important;height:145px!important;object-fit:cover!important;object-position:center!important;
   }
 }
@@ -183,13 +183,23 @@ footer.site-footer{width:100%;box-sizing:border-box;background:#02090b;border-to
 <style id="forgepc-maquette-v9-gaming">
 /* Reproduction maquette approuvée — visuels propres dédiés */
 .pc-gaming-page .approach .card img{object-fit:cover!important;object-position:center!important;}
-.pc-gaming-page .project-image{object-fit:cover!important;object-position:center!important;}
+.pc-gaming-page .project-image{object-position:center;object-fit:cover!important;object-position:center!important;}
 @media(max-width:900px){
  .pc-gaming-page .approach .card img{object-fit:cover!important;object-position:center!important;}
- .pc-gaming-page .project-panel .project-image{object-fit:cover!important;object-position:center!important;}
+ .pc-gaming-page .project-panel .project-image{object-position:center;object-fit:cover!important;object-position:center!important;}
 }
 </style>
 
+<style id="maquette-final-overrides">
+@media (max-width:800px){
+  header .nav{height:82px!important;}
+  header .logo{width:145px!important;}
+  header .menu{width:46px!important;height:44px!important;}
+  .pc-gaming-page .hero{background-size:100% 100%!important;background-position:center center!important;}
+  .pc-gaming-page .project-panel .project-feature .project-image{object-fit:cover!important;object-position:center center!important;}
+  .pc-gaming-page .cta{background-size:100% 100%!important;background-position:center center!important;}
+}
+</style>
 </head>
 <body class="pc-gaming-page">
 <header>
@@ -214,10 +224,10 @@ footer.site-footer{width:100%;box-sizing:border-box;background:#02090b;border-to
 <section class="section"><div class="container">
 <div class="title-line"><h2 class="title">NOTRE APPROCHE</h2></div><p class="sub">Un PC conçu pour vous, sans compromis.</p>
 <div class="approach">
-<div class="card"><img src="/Assets/gaming-approche-discussion.jpg" alt="Discussion autour d’un projet de PC gaming"><div class="card-body"><h3><span class="num">1</span>DISCUSSION</h3><p>On discute de vos besoins, de vos jeux, de votre budget et de vos préférences.</p></div></div>
-<div class="card"><img src="/Assets/gaming-approche-configuration.jpg" alt="Configuration d’un composant PC"><div class="card-body"><h3><span class="num">2</span>CONFIGURATION</h3><p>On vous propose une configuration adaptée où chaque composant est bien choisi.</p></div></div>
-<div class="card"><img src="/Assets/gaming-approche-assemblage.jpg" alt="Assemblage d’un PC gaming"><div class="card-body"><h3><span class="num">3</span>ASSEMBLAGE</h3><p>Montage professionnel, gestion des câbles et vérification complète.</p></div></div>
-<div class="card"><img src="/Assets/gaming-approche-tests.jpg" alt="Tests et suivi d’un PC gaming"><div class="card-body"><h3><span class="num">4</span>TESTS ET SUIVI</h3><p>On teste la stabilité et les performances et on vous offre un soutien après la vente.</p></div></div>
+<div class="card"><img src="/Assets/gaming-step1-clean.jpg" alt="Discussion autour d’un projet de PC gaming"><div class="card-body"><h3><span class="num">1</span>DISCUSSION</h3><p>On discute de vos besoins, de vos jeux, de votre budget et de vos préférences.</p></div></div>
+<div class="card"><img src="/Assets/gaming-step2-clean.jpg" alt="Configuration d’un composant PC"><div class="card-body"><h3><span class="num">2</span>CONFIGURATION</h3><p>On vous propose une configuration adaptée où chaque composant est bien choisi.</p></div></div>
+<div class="card"><img src="/Assets/gaming-step3-clean.jpg" alt="Assemblage d’un PC gaming"><div class="card-body"><h3><span class="num">3</span>ASSEMBLAGE</h3><p>Montage professionnel, gestion des câbles et vérification complète.</p></div></div>
+<div class="card"><img src="/Assets/gaming-step4-clean.jpg" alt="Tests et suivi d’un PC gaming"><div class="card-body"><h3><span class="num">4</span>TESTS ET SUIVI</h3><p>On teste la stabilité et les performances et on vous offre un soutien après la vente.</p></div></div>
 </div></div></section>
 
 <section class="section"><div class="container content">
@@ -240,7 +250,7 @@ footer.site-footer{width:100%;box-sizing:border-box;background:#02090b;border-to
 </div>
 <div class="panel project-panel">
 <h2>UN PC QUI <span style="color:var(--orange)">VOUS RESSEMBLE</span></h2>
-<div class="project-feature"><img class="project-image" src="/Assets/pc-gaming-rgb-forgepc.jpg" alt="Tour PC gaming ForgePC">
+<div class="project-feature"><img class="project-image" src="/Assets/gaming-project-feature.jpg" alt="Tour PC gaming ForgePC">
 <p>Que ce soit pour le jeu compétitif, le simracing, la création de contenu ou un usage polyvalent, on vous aide à obtenir un PC performant, stable et durable.</p></div>
 <h2>FOIRE AUX QUESTIONS (FAQ)</h2>
 <div class="faq">

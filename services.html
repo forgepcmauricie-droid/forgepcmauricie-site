@@ -80,8 +80,8 @@ footer{background:#02090b;padding:10px 0 7px}
 @media(max-width:800px){
  .cards{grid-template-columns:1fr 1fr}
  .nav{height:82px} .navlinks,.contact{display:none} .menu{display:block}
- .logo{width:140px}
- .hero-inner{min-height:255px;padding:20px 0}
+ .logo{width:145px}
+ .hero{background-size:100% 100%;background-position:center} .hero-inner{min-height:255px;padding:20px 0}
  h1{font-size:34px} .hero p{font-size:14px}
  .benefits{gap:12px 22px}
  .cards{grid-template-columns:1fr 1fr}
@@ -421,6 +421,15 @@ img { max-width:100%; }
 }
 </style>
 
+<style id="maquette-final-overrides">
+@media (max-width:800px){
+  header .nav{height:82px!important;}
+  header .logo{width:145px!important;}
+  header .menu{width:46px!important;height:44px!important;}
+  .services-page .hero{background-size:100% 100%!important;background-position:center center!important;}
+  .services-page .cta{background-size:100% 100%!important;background-position:center center!important;}
+}
+</style>
 </head>
 <body class="services-page">
 <header class="site-header">
@@ -489,7 +498,7 @@ img { max-width:100%; }
 <article class="info">
 <h3><i>●</i> NOTRE SECTEUR</h3>
 <p><strong>Shawinigan et toute la Mauricie</strong></p>
-<img class="map-image" src="/Assets/mauricie-landscape-clean.jpg" alt="Paysage de la Mauricie, secteur desservi par ForgePC"/>
+<div class="map" aria-label="Carte stylisée de la Mauricie"><div class="map-title">MAURICIE</div><span class="pin pin1">● Shawinigan</span><span class="pin pin2">● Trois-Rivières</span><span class="pin pin3">● Mauricie</span></div>
 <p>Nous offrons nos services à Shawinigan et dans les environs, incluant Trois-Rivières et les municipalités de la Mauricie (selon la distance et la disponibilité).</p>
 <a class="link" href="contact.html">EN SAVOIR PLUS →</a>
 </article>
