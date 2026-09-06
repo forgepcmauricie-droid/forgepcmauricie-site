@@ -26,11 +26,11 @@
   .services-page .services-card{
     display:grid!important;
     grid-template-columns:45% 55%!important;
-    grid-template-rows:110px!important;
+    grid-template-rows:130px!important;
     width:100%!important;
-    height:110px!important;
-    min-height:110px!important;
-    max-height:110px!important;
+    height:130px!important;
+    min-height:130px!important;
+    max-height:130px!important;
     padding:0!important;
     overflow:hidden!important;
     box-sizing:border-box!important;
@@ -40,9 +40,9 @@
     grid-column:1!important;
     grid-row:1!important;
     width:100%!important;
-    height:110px!important;
-    min-height:110px!important;
-    max-height:110px!important;
+    height:130px!important;
+    min-height:130px!important;
+    max-height:130px!important;
     margin:0!important;
     padding:0!important;
     overflow:hidden!important;
@@ -63,7 +63,7 @@
 
   /* Ces deux sources sont cadrées pour conserver le sujet visible tout en remplissant la zone. */
   .services-page .services-card:nth-child(4) > .img img{
-    content:url('service-gaming-maquette-exact.jpg')!important;
+    content:url('service-gaming-mobile-maquette.jpg')!important;
     object-fit:cover!important;
     object-position:center!important;
   }
@@ -77,9 +77,9 @@
     grid-column:2!important;
     grid-row:1!important;
     width:100%!important;
-    height:110px!important;
+    height:130px!important;
     min-width:0!important;
-    min-height:110px!important;
+    min-height:130px!important;
     margin:0!important;
     padding:10px 11px!important;
     box-sizing:border-box!important;
