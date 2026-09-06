@@ -200,6 +200,103 @@ footer.site-footer{width:100%;box-sizing:border-box;background:#02090b;border-to
   .pc-gaming-page .cta{background-size:100% 100%!important;background-position:center center!important;}
 }
 </style>
+
+<style id="forgepc-v12-maquette-gaming">
+/* V12 — reproduction des proportions de la maquette, desktop + mobile */
+@media (min-width:901px){
+  .pc-gaming-page .hero,.pc-gaming-page .hero-inner{min-height:350px!important}
+  .pc-gaming-page .approach .card img{height:102px!important}
+  .pc-gaming-page .panel{min-height:300px!important}
+}
+@media (max-width:900px){
+  .pc-gaming-page .container{width:calc(100% - 20px)!important;max-width:none!important}
+  .pc-gaming-page .nav{height:58px!important;min-height:58px!important}
+  .pc-gaming-page header .logo{width:112px!important;max-height:52px!important}
+  .pc-gaming-page header .menu{width:44px!important;height:42px!important}
+  .pc-gaming-page header nav{top:58px!important}
+  .pc-gaming-page .hero,.pc-gaming-page .hero-inner{min-height:330px!important}
+  .pc-gaming-page .hero-inner{padding:12px 0!important;display:block!important}
+  .pc-gaming-page .hero-copy{max-width:100%!important;padding:12px 0!important}
+  .pc-gaming-page .eyebrow{font-size:11px!important}
+  .pc-gaming-page h1{font-size:34px!important;line-height:.98!important;letter-spacing:0!important;margin:7px 0 10px!important}
+  .pc-gaming-page .hero p{font-size:13px!important;line-height:1.25!important;margin-bottom:10px!important}
+  .pc-gaming-page .tagline{font-size:14px!important}
+  .pc-gaming-page .benefits{gap:8px 16px!important;margin-top:12px!important}
+  .pc-gaming-page .benefit{font-size:10px!important}
+  .pc-gaming-page .benefit b{font-size:17px!important;margin-right:3px!important}
+  .pc-gaming-page .section{padding:10px 0!important}
+  .pc-gaming-page .title{font-size:22px!important;line-height:1!important}
+  .pc-gaming-page .sub{font-size:11px!important;margin:3px 0 8px!important}
+  .pc-gaming-page .title-line{gap:12px!important}
+  .pc-gaming-page .title-line:before,.pc-gaming-page .title-line:after{width:42px!important;height:3px!important}
+  /* La maquette mobile transforme les 4 étapes en lignes compactes */
+  .pc-gaming-page .approach{grid-template-columns:1fr!important;gap:0!important}
+  .pc-gaming-page .approach .card{
+    display:grid!important;
+    grid-template-columns:42px minmax(0,1fr) 18px!important;
+    min-height:57px!important;height:57px!important;
+    border-radius:0!important;
+    border-left:0!important;border-right:0!important;
+    align-items:center!important;
+  }
+  .pc-gaming-page .approach .card img{display:none!important}
+  .pc-gaming-page .approach .card:after{
+    content:"⌄";color:var(--orange);font-size:20px;font-weight:900;text-align:center;
+  }
+  .pc-gaming-page .approach .card-body{padding:6px 4px!important}
+  .pc-gaming-page .approach .card h3{font-size:12px!important;line-height:1!important;margin:0 0 3px!important}
+  .pc-gaming-page .approach .card p{font-size:9.5px!important;line-height:1.15!important;margin:0!important}
+  .pc-gaming-page .approach .num{font-size:20px!important;margin-right:5px!important}
+  .pc-gaming-page .content{grid-template-columns:1fr!important;gap:8px!important}
+  .pc-gaming-page .panel{padding:12px!important}
+  .pc-gaming-page .panel h2{font-size:18px!important;margin-bottom:9px!important}
+  .pc-gaming-page .form-grid{grid-template-columns:1fr 1fr!important;gap:7px!important}
+  .pc-gaming-page label{font-size:10px!important;margin-bottom:3px!important}
+  .pc-gaming-page input,.pc-gaming-page select,.pc-gaming-page textarea{padding:8px!important;font-size:11px!important}
+  .pc-gaming-page textarea{min-height:75px!important}
+  .pc-gaming-page .submit{padding:11px!important;font-size:11px!important;margin-top:8px!important}
+  .pc-gaming-page .project-panel .project-feature{
+    display:grid!important;
+    grid-template-columns:95px minmax(0,1fr)!important;
+    gap:9px!important;
+    align-items:start!important;
+  }
+  .pc-gaming-page .project-panel .project-feature .project-image{
+    width:95px!important;height:105px!important;margin:0!important;
+    object-fit:cover!important;
+  }
+  .pc-gaming-page .project-panel .project-feature p{font-size:10px!important;line-height:1.25!important}
+  .pc-gaming-page .project-panel .faq div{font-size:10px!important;padding:6px 0!important}
+  .pc-gaming-page .project-panel .faq b{font-size:16px!important}
+  .pc-gaming-page .cta-inner{min-height:115px!important;padding:15px 0!important;display:block!important}
+  .pc-gaming-page .cta h2{font-size:23px!important;line-height:1.05!important}
+  .pc-gaming-page .cta .btn{display:inline-flex!important;margin-top:10px!important}
+  .pc-gaming-page footer.site-footer{padding:28px 16px 22px!important}
+  .pc-gaming-page .site-footer .footer-logo img{width:145px!important}
+  .pc-gaming-page .site-footer .footer-location{font-size:14px!important}
+  .pc-gaming-page .site-footer .footer-slogan{font-size:16px!important}
+  .pc-gaming-page .site-footer .footer-copy{font-size:12px!important}
+}
+</style>
+
+
+<style id="forgepc-v12-footer">
+.footer-top-v12{display:grid;grid-template-columns:1.1fr 2fr auto;align-items:center;gap:20px;max-width:1180px;margin:auto}
+.footer-brand-v12{display:flex;align-items:center;gap:12px;font-size:11px;font-weight:700}
+.footer-brand-v12 img{width:110px;height:auto}
+.footer-contact-v12{display:flex;justify-content:center;gap:25px;font-size:11px}
+.footer-social-v12{display:flex;gap:12px;font-size:22px}
+.footer-bottom-v12{max-width:1180px;margin:8px auto 0;padding-top:7px;border-top:1px solid #18282c;display:flex;justify-content:space-between;font-size:9px;color:#ddd}
+@media(max-width:900px){
+ .footer-top-v12{display:block;text-align:center}
+ .footer-brand-v12{display:flex;flex-direction:column;gap:6px;font-size:12px}
+ .footer-brand-v12 img{width:145px}
+ .footer-contact-v12{display:none}
+ .footer-social-v12{justify-content:center;margin-top:12px}
+ .footer-bottom-v12{display:block;text-align:center;font-size:10px;line-height:1.6}
+}
+</style>
+
 </head>
 <body class="pc-gaming-page">
 <header>
@@ -265,10 +362,12 @@ footer.site-footer{width:100%;box-sizing:border-box;background:#02090b;border-to
 
 <section class="cta"><div class="container cta-inner"><h2>Un projet de PC gaming ?<br><span>Parlons-en.</span></h2><a class="btn" href="contact.html">NOUS CONTACTER →</a></div></section>
 <footer class="site-footer">
-<div class="footer-logo"><img alt="ForgePC Mauricie" src="/Assets/forgepc-logo-officiel.png"/></div>
-<div class="footer-location">📍 Shawinigan et toute la Mauricie</div>
-<div class="footer-slogan">Votre technologie, notre expertise.</div>
-<div class="footer-copy">© 2026 ForgePC Mauricie</div>
+<div class="footer-top-v12">
+  <div class="footer-brand-v12"><img alt="ForgePC Mauricie" src="/Assets/forgepc-logo-officiel.png"><span>Votre technologie, notre expertise.</span></div>
+  <div class="footer-contact-v12"><span>📍 Shawinigan et toute la Mauricie</span><span>☎ 819 555-0123</span><span>✉ info@forgepcmauricie.ca</span></div>
+  <div class="footer-social-v12"><span>●</span><span>◎</span></div>
+</div>
+<div class="footer-bottom-v12"><span>© 2026 ForgePC Mauricie. Tous droits réservés.</span><span>Politique de confidentialité&nbsp;&nbsp;&nbsp; Mentions légales</span></div>
 </footer>
 
 <script src="/Assets/site.js"></script>
