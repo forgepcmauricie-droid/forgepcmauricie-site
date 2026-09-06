@@ -134,3 +134,11 @@
     white-space:nowrap!important;
   }
 }
+
+/* MOBILE — Subaru: keep the front grille visible, matching the approved mockup. */
+@media (max-width:900px){
+  .services-page .services-card:nth-child(5)>.img img{
+    object-fit:cover!important;
+    object-position:center bottom!important;
+  }
+}
