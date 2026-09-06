@@ -1,34 +1,6 @@
-FORGEPC MAURICIE — VERIFICATION V3
-
-Pages corrigees selon les maquettes approuvees :
-- index.html : Accueil desktop/mobile
-- services.html : Services desktop/mobile
-- pc-gaming-sur-mesure.html : PC Gaming sur mesure desktop/mobile
-
-Elements verrouilles :
-- Logo ForgePC officiel conserve
-- Subaru WRX 2023 officielle conservee
-- Numero reel : 819-944-7418
-
-Corrections V3 :
-- Hero Services : image approuvee repositionnee a droite, sans recadrage cover
-- Hero Gaming : image approuvee repositionnee a droite, sans recadrage cover
-- Ajout de la localisation desktop sur Services et Gaming
-- CTA Services et Gaming passes en orange plein comme la maquette
-- Hero Services mobile ramene a la hauteur de la maquette
-- Bande signature orange ajoutee a l'Accueil desktop/mobile
-- Icônes de confiance corrigees pour eviter les glyphes emoji bleus
-- Accueil : 4 cartes de services
-- Services : 5 cartes de services
-- Gaming : 4 etapes d'approche
-
-Verification finale effectuee apres les corrections :
-- HTML des 3 pages parse correctement
-- Tous les liens internes des 3 pages pointent vers des fichiers presents
-- Nombre de cartes/etapes conforme aux maquettes
-- Les 3 pages chargent la meme feuille CSS
-- Les images utilisees par les 3 pages existent dans Assets/
-- Aucun changement effectue aux autres pages du site
-- Archive reconstruite et testee par extraction
-
-Note : la verification structurelle et CSS a ete refaite apres les dernieres corrections. Le moteur de rendu navigateur disponible dans l'environnement de travail n'a pas pu etre lance de facon fiable; je ne presente donc pas un nouveau rendu navigateur comme s'il avait ete obtenu.
+ForgePC Services — vérification V3
+- 5 cartes services.
+- Sources mobiles exactes utilisées: service-pc-mobile-exact.jpg, service-repair-mobile-exact.jpg,
+  service-upgrade-mobile-exact.jpg, gaming-rgb-mobile-exact.jpg, subaru-mobile-card-exact.jpg.
+- Règle mobile finale: object-fit: fill afin d'éviter tout zoom/cadrage automatique.
+- Aucun dossier render/render3b inclus.
