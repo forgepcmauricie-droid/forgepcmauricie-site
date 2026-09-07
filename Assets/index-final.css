@@ -1,3 +1,5 @@
+@font-face{font-family:ForgeFA;src:url('fontawesome-webfont.ttf') format('truetype');font-weight:normal;font-style:normal;font-display:block;}
+.fa{font-family:ForgeFA!important;font-style:normal;font-weight:normal!important;}
 
 /* ForgePC Mauricie — Accueil final basé sur la maquette approuvée */
 .home-page{
@@ -19,27 +21,27 @@
   min-height:76px;
 }
 .home-page .nav-phone,.home-page .nav-social{
-  display:flex;
+  display:none;
   align-items:center;
   font-size:11px;
   font-weight:800;
   white-space:nowrap;
 }
-.home-page .nav-phone{color:#dfe4e4;margin-left:6px}
-.home-page .nav-social{font-size:18px;margin-left:0}
+.home-page .nav-phone{display:none}
+.home-page .nav-social{display:none}
 .home-page .nav-location{order:10}
 .mobile-location{display:none}
 
 /* Hero */
 .home-page .home-hero{
-  min-height:400px;
+  min-height:338px;
   border-bottom:1px solid #29383d;
   background:
     linear-gradient(90deg,rgba(0,8,10,.95) 0%,rgba(0,8,10,.78) 38%,rgba(0,8,10,.22) 67%,rgba(0,8,10,.10) 100%),
     url('service-gaming-maquette.jpg') center/cover no-repeat;
 }
 .home-page .home-hero-inner{
-  min-height:400px;
+  min-height:338px;
   display:flex;
   align-items:center;
   justify-content:space-between;
@@ -78,7 +80,7 @@
   display:inline-block;
 }
 .home-page .home-points{
-  width:310px;
+  width:300px;
   display:grid;
   grid-template-columns:1fr;
   gap:18px;
@@ -365,15 +367,15 @@
   .mobile-location:first-letter{color:#ff5a00}
 
   .home-page .home-hero{
-    min-height:385px;
+    min-height:338px;
     background:
       linear-gradient(90deg,rgba(0,8,10,.93),rgba(0,8,10,.66) 58%,rgba(0,8,10,.18)),
       url('service-gaming-maquette.jpg') center/cover no-repeat;
   }
   .home-page .home-hero-inner{
-    min-height:385px;
-    padding-top:30px;
-    padding-bottom:25px;
+    min-height:338px;
+    padding-top:27px;
+    padding-bottom:18px;
     box-sizing:border-box;
     display:block;
   }
@@ -387,7 +389,7 @@
     display:grid;
     grid-template-columns:1fr 1fr;
     gap:12px 20px;
-    margin-top:22px;
+    margin-top:16px;
   }
   .home-page .home-point{grid-template-columns:34px 1fr;gap:6px}
   .home-page .home-point .icon{font-size:27px}
@@ -416,9 +418,9 @@
     grid-template-columns:1fr;
     gap:12px;
   }
-  .home-about .about img{height:175px}
-  .home-about .about-copy .title-line{justify-content:center}
-  .home-about .about-copy h2{font-size:21px}
+  .home-about .about img{height:142px}
+  .home-about .about-copy .title-line{justify-content:center; margin-bottom:8px}
+  .home-about .about-copy h2{font-size:19px}
   .home-about .about-copy p{font-size:11.5px;line-height:1.35}
   .home-about .about-copy .btn{min-height:40px;font-size:10px}
 
@@ -503,8 +505,8 @@
   .home-page .site-header .container.nav{padding:0 28px}
   .home-page .home-copy h1{font-size:34px}
   .home-page .home-copy p{font-size:14px}
-  .home-page .home-hero{min-height:365px}
-  .home-page .home-hero-inner{min-height:365px}
+  .home-page .home-hero{min-height:338px}
+  .home-page .home-hero-inner{min-height:338px}
   .home-page .home-points{gap:10px 14px}
   .home-page .home-point strong{font-size:10px}
   .home-page .home-point small{font-size:8.5px}
