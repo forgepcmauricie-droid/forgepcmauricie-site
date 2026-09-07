@@ -629,3 +629,19 @@
   .home-page .home-point strong{font-size:8.5px;}
   .home-page .home-point small{font-size:7.3px;}
 }
+
+/* MOBILE — logo central dans le Hero, conforme à la maquette approuvée */
+@media (max-width:900px){
+  .home-page .home-hero{position:relative;overflow:hidden;}
+  .home-page .home-hero-logo-mobile{
+    display:block!important;
+    position:absolute!important;
+    width:78px!important;
+    height:auto!important;
+    left:50%!important;
+    bottom:9px!important;
+    transform:translateX(-50%)!important;
+    z-index:2!important;
+    object-fit:contain!important;
+  }
+}
