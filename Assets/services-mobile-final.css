@@ -165,3 +165,21 @@
   .services-page footer .footer-contact span{display:inline-flex!important;white-space:nowrap!important;}
   .services-page footer .footer-bottom{width:100%!important;min-height:36px!important;height:36px!important;padding:6px 12px!important;display:flex!important;align-items:center!important;justify-content:space-between!important;gap:8px!important;text-align:left!important;font-size:8.5px!important;line-height:1.2!important;}
 }
+
+/* LOCKED MOBILE REFERENCE — vignettes untouched; hide Notre secteur on mobile. */
+@media (max-width:900px){
+  .services-page .info-grid .info-box:nth-child(2){display:none!important;}
+  .services-page .info-grid{grid-template-columns:1fr!important;}
+  .services-page footer .footer-logo{object-fit:contain!important;object-position:left center!important;}
+}
+
+
+/* FINAL LOCK — mobile approved structure: cards -> Comment ça fonctionne -> accordions.
+   The large Notre secteur panel is desktop-only; the mobile reference keeps only its accordion row. */
+@media (max-width:900px){
+  .services-page .how{display:block!important;}
+  .services-page .info-grid .info-box:nth-child(2){display:none!important;}
+  .services-page .info-grid .info-box:nth-child(1),
+  .services-page .info-grid .info-box:nth-child(3){display:flex!important;}
+  .services-page footer .footer-logo{content:url('logo-footer-v2.png')!important;}
+}
