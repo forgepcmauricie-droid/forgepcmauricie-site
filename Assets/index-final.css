@@ -370,7 +370,7 @@
     min-height:338px;
     background:
       linear-gradient(90deg,rgba(0,8,10,.93),rgba(0,8,10,.66) 58%,rgba(0,8,10,.18)),
-      url('service-gaming-maquette.jpg') center/cover no-repeat;
+      url('service-gaming-maquette.jpg') left center/cover no-repeat;
   }
   .home-page .home-hero-inner{
     min-height:338px;
@@ -414,15 +414,17 @@
   .why-grid p{font-size:10px}
 
   .home-about .about{
-    display:grid;
-    grid-template-columns:1fr;
-    gap:12px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    position:relative;
   }
-  .home-about .about img{height:142px}
-  .home-about .about-copy .title-line{justify-content:center; margin-bottom:8px}
+  .home-about .about-copy{display:contents}
+  .home-about .about-copy .title-line{order:0;justify-content:center;margin-bottom:0}
   .home-about .about-copy h2{font-size:19px}
-  .home-about .about-copy p{font-size:11.5px;line-height:1.35}
-  .home-about .about-copy .btn{min-height:40px;font-size:10px}
+  .home-about .about img{display:block!important;order:1;width:100%;height:142px;object-fit:cover}
+  .home-about .about-copy p{display:none}
+  .home-about .about-copy .btn{order:2;position:absolute;right:12px;top:calc(23px + 10px + 142px - 40px);min-height:40px;font-size:10px;background:transparent}
 
   .home-project{
     height:118px;
@@ -513,4 +515,117 @@
   .home-page .section-title{font-size:20px}
   .home-page .home-project h2{font-size:17px}
   .home-page .home-project .btn{min-width:135px;font-size:9.5px}
+}
+
+
+/* =========================================================
+   ACCUEIL MOBILE — CALAGE SUR LA MAQUETTE APPROUVÉE
+   Cible principale : largeur mobile ~305px.
+   Desktop volontairement laissé intact pour la prochaine passe.
+   ========================================================= */
+@media (max-width:900px){
+  .home-page .container{padding-left:13px;padding-right:13px;}
+
+  /* HEADER */
+  .home-page .site-header{height:80px;min-height:80px;}
+  .home-page .site-header .container.nav{height:80px;min-height:80px;padding:0 25px;}
+  .home-page .site-header .brand-link{height:80px;}
+  .home-page .site-header .logo{width:105px;height:64px;max-width:105px;}
+  .home-page .site-header .menu{width:42px;height:42px;font-size:28px;border-radius:8px;}
+
+  /* LOCALISATION */
+  .home-page .mobile-location{height:38px;padding:0 28px;gap:7px;font-size:13px;}
+
+  /* HERO */
+  .home-page .home-hero,
+  .home-page .home-hero-inner{min-height:287px;height:287px;}
+  .home-page .home-hero{
+    background:
+      linear-gradient(90deg,rgba(0,8,10,.90) 0%,rgba(0,8,10,.63) 56%,rgba(0,8,10,.16) 100%),
+      url('service-gaming-maquette.jpg') center center/cover no-repeat;
+  }
+  .home-page .home-hero-inner{padding:12px 27px 10px;}
+  .home-page .kicker{font-size:11px;letter-spacing:2.5px;}
+  .home-page .home-copy h1{font-size:27px;line-height:.98;margin:6px 0 9px;letter-spacing:0;}
+  .home-page .home-copy p{font-size:12px;line-height:1.25;max-width:265px;}
+  .home-page .script{font-size:15px;line-height:1.02;margin-top:11px;}
+  .home-page .home-points{gap:8px 13px;margin-top:11px;}
+  .home-page .home-point{grid-template-columns:30px 1fr;gap:5px;}
+  .home-page .home-point .icon{font-size:25px;}
+  .home-page .home-point strong{font-size:9px;line-height:1.05;}
+  .home-page .home-point small{font-size:7.5px;line-height:1.15;margin-top:2px;}
+
+  /* WHY */
+  .home-page .home-why{padding:10px 0 12px;}
+  .home-page .home-why .container{padding-left:13px;padding-right:13px;}
+  .home-page .title-line{gap:8px;}
+  .home-page .title-line:before,.home-page .title-line:after{width:29px;flex:0 0 29px;height:3px;}
+  .home-page .section-title{font-size:18px;letter-spacing:0;}
+  .home-page .why-grid{border-radius:0;}
+  .home-page .why-grid article{min-height:72px;height:72px;padding:8px 4px;}
+  .home-page .why-icon{font-size:24px;}
+  .home-page .why-grid h3{font-size:11px;margin:5px 0 2px;}
+  .home-page .why-grid p{font-size:8px;line-height:1.15;}
+
+  /* ABOUT */
+  .home-page .home-about{padding:9px 0 0;}
+  .home-page .home-about .about{gap:6px;}
+  .home-page .home-about .about-copy .title-line{margin-bottom:0;}
+  .home-page .home-about .about-copy h2{font-size:16px;}
+  .home-page .home-about .about img{width:100%;height:111px;object-fit:cover;display:block!important;}
+  .home-page .home-about .about-copy p{display:none;}
+  .home-page .home-about .about-copy .btn{
+    top:auto;right:8px;bottom:8px;z-index:2;
+    min-height:32px;height:32px;padding:0 10px;font-size:8px;
+    background:rgba(2,9,11,.30);color:#fff;
+  }
+
+  /* CTA */
+  .home-page .home-project{height:130px;min-height:130px;background:
+    linear-gradient(90deg,rgba(2,11,15,.76),rgba(2,11,15,.35)),
+    url('about-mug-original.jpg') center/cover no-repeat;}
+  .home-page .home-project .container{height:100%;padding-left:27px;padding-right:27px;}
+  .home-page .home-project-copy{height:100%;padding:11px 0 9px;display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:5px;}
+  .home-page .home-project h2{font-size:16px;line-height:1.02;max-width:100%;}
+  .home-page .home-project .btn{width:172px;min-width:172px;height:39px;min-height:39px;font-size:9px;padding:0 8px;align-self:center;margin-top:auto;margin-bottom:1px;}
+
+  /* FOOTER — même composition que la maquette mobile */
+  .home-page .site-footer{border-top:1px solid #26383e;}
+  .home-page .site-footer .container{padding:0;}
+  .home-page .footer-main{
+    min-height:126px;height:126px;padding:8px 14px 6px;
+    display:grid!important;
+    grid-template-columns:1fr auto;
+    grid-template-rows:55px 1fr;
+    grid-template-areas:"logo social" "contact contact";
+    gap:3px 10px;
+    align-items:center;
+  }
+  .home-page .footer-logo{
+    grid-area:logo;flex:initial!important;
+    width:108px!important;height:55px!important;
+    margin:0!important;object-fit:contain;object-position:left center;
+    content:url('logo-footer-final.png')!important;
+  }
+  .home-page .footer-social{grid-area:social;display:flex!important;justify-content:flex-end;align-items:center;gap:14px;margin:0!important;letter-spacing:0!important;}
+  .home-page .footer-social .social-facebook{width:25px;height:25px;font-size:17px;}
+  .home-page .footer-social .social-instagram{width:24px;height:24px;font-size:19px;}
+  .home-page .footer-contact{
+    grid-area:contact;width:100%!important;margin:0!important;
+    display:grid!important;grid-template-columns:1fr auto;grid-template-rows:repeat(2,auto);
+    justify-content:initial;align-items:center;gap:4px 8px;
+    font-size:8.5px!important;line-height:1.15;text-align:left!important;
+  }
+  .home-page .footer-contact span{display:inline-flex!important;white-space:nowrap;justify-content:flex-start;}
+  .home-page .footer-contact span:nth-child(1){grid-column:1/-1;}
+  .home-page .footer-contact span:nth-child(2){grid-column:1;}
+  .home-page .footer-contact span:nth-child(3){grid-column:2;}
+  .home-page .footer-bottom{height:38px;min-height:38px;padding:5px 7px;display:flex!important;justify-content:center;align-items:center;gap:3px 7px;text-align:center;font-size:7px;line-height:1.15;}
+}
+@media(max-width:520px){
+  .home-page .home-copy h1{font-size:27px;}
+  .home-page .home-copy p{font-size:12px;}
+  .home-page .home-points{gap:8px 11px;}
+  .home-page .home-point strong{font-size:8.5px;}
+  .home-page .home-point small{font-size:7.3px;}
 }
