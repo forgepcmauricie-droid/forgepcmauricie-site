@@ -645,3 +645,96 @@
     object-fit:contain!important;
   }
 }
+
+/* =========================================================
+   ACCUEIL MOBILE — DERNIÈRE PASSE / RÉFÉRENCE MAQUETTE
+   Desktop volontairement inchangé.
+   ========================================================= */
+@media (max-width:900px){
+  html,body{overflow-x:hidden;background:#02090b;}
+
+  /* HEADER — même identité visuelle que Services approuvé */
+  .home-page .site-header{height:80px!important;min-height:80px!important;background:#02090b!important;position:sticky!important;top:0!important;z-index:6000!important;}
+  .home-page .site-header .container.nav{width:100%!important;height:80px!important;min-height:80px!important;padding:0 25px!important;}
+  .home-page .site-header .brand-link{height:80px!important;display:flex!important;align-items:center!important;}
+  .home-page .site-header .logo{content:url('forgepc-logo-web.png')!important;width:105px!important;height:64px!important;max-width:105px!important;object-fit:contain!important;}
+  .home-page .site-header .menu{display:flex!important;align-items:center!important;justify-content:center!important;width:42px!important;height:42px!important;margin-left:auto!important;border:1px solid #314047!important;border-radius:8px!important;background:#02090b!important;color:#fff!important;font-size:28px!important;line-height:1!important;}
+  .home-page .site-header .navlinks,.home-page .site-header .nav-location{display:none!important;}
+  .home-page .mobile-only{display:none!important;}
+  .home-page .mobile-only.open{display:flex!important;position:fixed!important;top:80px!important;left:10px!important;right:10px!important;z-index:5999!important;flex-direction:column!important;}
+
+  /* LOCALISATION */
+  .home-page .mobile-location{height:38px!important;min-height:38px!important;padding:0 28px!important;display:flex!important;align-items:center!important;gap:7px!important;box-sizing:border-box!important;background:#02090b!important;border-bottom:1px solid #27383e!important;color:#e8eded!important;font-size:13px!important;}
+
+  /* HERO */
+  .home-page .home-hero{height:288px!important;min-height:288px!important;overflow:hidden!important;position:relative!important;background:
+    linear-gradient(90deg,rgba(0,8,10,.82) 0%,rgba(0,8,10,.48) 58%,rgba(0,8,10,.10) 100%),
+    url('service-gaming-maquette.jpg') center center/cover no-repeat!important;border-bottom:1px solid #29383d!important;}
+  .home-page .home-hero-inner{height:288px!important;min-height:288px!important;padding:12px 27px 8px!important;box-sizing:border-box!important;display:block!important;position:relative!important;}
+  .home-page .home-copy{max-width:none!important;padding:0!important;position:relative!important;z-index:3!important;}
+  .home-page .kicker{font-size:11px!important;letter-spacing:2.5px!important;line-height:1!important;}
+  .home-page .home-copy h1{font-size:27px!important;line-height:.98!important;letter-spacing:0!important;margin:7px 0 9px!important;}
+  .home-page .home-copy p{font-size:12px!important;line-height:1.25!important;max-width:270px!important;margin:0!important;}
+  .home-page .script{font-size:15px!important;line-height:1.02!important;margin-top:11px!important;}
+  .home-page .home-points{width:100%!important;display:grid!important;grid-template-columns:1fr 1fr!important;gap:8px 13px!important;margin-top:11px!important;position:relative!important;z-index:4!important;}
+  .home-page .home-point{grid-template-columns:30px 1fr!important;gap:5px!important;align-items:center!important;}
+  .home-page .home-point .icon{font-size:25px!important;line-height:1!important;color:#ff5a00!important;}
+  .home-page .home-point strong{font-size:9px!important;line-height:1.05!important;display:block!important;}
+  .home-page .home-point small{font-size:7.5px!important;line-height:1.15!important;margin-top:2px!important;display:block!important;}
+  .home-page .home-hero-logo-mobile{display:block!important;position:absolute!important;width:55px!important;height:auto!important;left:50%!important;bottom:7px!important;transform:translateX(-50%)!important;z-index:5!important;object-fit:contain!important;content:url('forgepc-logo-web.png')!important;}
+
+  /* WHY */
+  .home-page .home-why{padding:10px 0 12px!important;border-bottom:1px solid #25363c!important;}
+  .home-page .home-why .container{padding-left:18px!important;padding-right:18px!important;}
+  .home-page .home-why .title-line{gap:8px!important;}
+  .home-page .home-why .title-line:before,.home-page .home-why .title-line:after{width:29px!important;flex:0 0 29px!important;height:3px!important;}
+  .home-page .home-why .section-title{font-size:18px!important;letter-spacing:0!important;white-space:nowrap!important;}
+  .home-page .why-grid{grid-template-columns:repeat(2,1fr)!important;border:1px solid #26383e!important;border-radius:0!important;overflow:hidden!important;}
+  .home-page .why-grid article{min-height:66px!important;height:66px!important;padding:8px 4px!important;background:#020b0f!important;border-right:1px solid #26383e!important;border-bottom:1px solid #26383e!important;}
+  .home-page .why-grid article:nth-child(2n){border-right:0!important;}
+  .home-page .why-grid article:nth-child(n+3){border-bottom:0!important;}
+  .home-page .why-icon{font-size:24px!important;line-height:1!important;color:#ff5a00!important;}
+  .home-page .why-grid h3{font-size:11px!important;line-height:1!important;margin:5px 0 2px!important;}
+  .home-page .why-grid p{font-size:8px!important;line-height:1.15!important;margin:0!important;}
+
+  /* ABOUT — titre puis image pleine largeur avec bouton posé dessus */
+  .home-page .home-about{padding:9px 0 0!important;border-bottom:1px solid #25363c!important;}
+  .home-page .home-about .about{display:flex!important;flex-direction:column!important;gap:6px!important;position:relative!important;padding:0 18px!important;}
+  .home-page .home-about .about-copy{display:contents!important;}
+  .home-page .home-about .about-copy .title-line{order:0!important;justify-content:center!important;gap:8px!important;margin:0!important;}
+  .home-page .home-about .about-copy .title-line:before,.home-page .home-about .about-copy .title-line:after{width:29px!important;flex:0 0 29px!important;}
+  .home-page .home-about .about-copy h2{font-size:16px!important;line-height:1!important;margin:0!important;white-space:nowrap!important;}
+  .home-page .home-about .about img{display:block!important;order:1!important;width:100%!important;height:111px!important;object-fit:cover!important;object-position:center!important;border-radius:0!important;}
+  .home-page .home-about .about-copy p{display:none!important;}
+  .home-page .home-about .about-copy .btn{order:2!important;position:absolute!important;right:8px!important;bottom:8px!important;z-index:6!important;height:32px!important;min-height:32px!important;padding:0 10px!important;font-size:8px!important;background:rgba(2,9,11,.30)!important;color:#fff!important;border-color:#ff5a00!important;}
+
+  /* CTA */
+  .home-page .home-project{height:131px!important;min-height:131px!important;background:
+    linear-gradient(90deg,rgba(2,11,15,.76),rgba(2,11,15,.32)),
+    url('about-mug-original.jpg') center/cover no-repeat!important;border-bottom:1px solid #26383e!important;}
+  .home-page .home-project .container{height:100%!important;padding-left:27px!important;padding-right:27px!important;box-sizing:border-box!important;}
+  .home-page .home-project-copy{height:100%!important;padding:11px 0 9px!important;display:flex!important;flex-direction:column!important;align-items:flex-start!important;justify-content:flex-start!important;gap:5px!important;box-sizing:border-box!important;}
+  .home-page .home-project h2{font-size:16px!important;line-height:1.02!important;max-width:100%!important;margin:0!important;}
+  .home-page .home-project .btn{width:172px!important;min-width:172px!important;height:39px!important;min-height:39px!important;font-size:9px!important;padding:0 8px!important;align-self:center!important;margin-top:auto!important;margin-bottom:1px!important;background:#ff5a00!important;border-color:#ff5a00!important;}
+
+  /* FOOTER — même structure que la maquette mobile */
+  .home-page .site-footer{border-top:1px solid #26383e!important;background:#020b0f!important;}
+  .home-page .site-footer .container{padding:0!important;width:100%!important;}
+  .home-page .footer-main{min-height:136px!important;height:136px!important;padding:8px 18px 7px!important;display:grid!important;grid-template-columns:1fr auto!important;grid-template-rows:56px 1fr!important;grid-template-areas:"logo social" "contact contact"!important;gap:4px 10px!important;align-items:center!important;box-sizing:border-box!important;}
+  .home-page .footer-logo{grid-area:logo!important;width:108px!important;height:55px!important;margin:0!important;object-fit:contain!important;object-position:left center!important;content:url('logo-footer-final.png')!important;}
+  .home-page .footer-tag{display:none!important;}
+  .home-page .footer-social{grid-area:social!important;display:flex!important;justify-content:flex-end!important;align-items:center!important;gap:14px!important;margin:0!important;}
+  .home-page .footer-social .social-facebook{width:25px!important;height:25px!important;font-size:17px!important;}
+  .home-page .footer-social .social-instagram{width:24px!important;height:24px!important;font-size:19px!important;}
+  .home-page .footer-contact{grid-area:contact!important;width:100%!important;margin:0!important;display:grid!important;grid-template-columns:1fr!important;grid-template-rows:repeat(3,auto)!important;gap:4px!important;font-size:8.5px!important;line-height:1.15!important;text-align:left!important;justify-items:start!important;}
+  .home-page .footer-contact span{display:inline-flex!important;white-space:nowrap!important;justify-content:flex-start!important;}
+  .home-page .footer-contact span:nth-child(1),.home-page .footer-contact span:nth-child(2),.home-page .footer-contact span:nth-child(3){grid-column:1!important;}
+  .home-page .footer-bottom{height:38px!important;min-height:38px!important;padding:5px 7px!important;display:flex!important;justify-content:center!important;align-items:center!important;gap:3px 7px!important;text-align:center!important;font-size:7px!important;line-height:1.15!important;box-sizing:border-box!important;}
+}
+@media(max-width:520px){
+  .home-page .home-copy h1{font-size:27px!important;}
+  .home-page .home-copy p{font-size:12px!important;}
+  .home-page .home-points{gap:8px 11px!important;}
+  .home-page .home-point strong{font-size:8.5px!important;}
+  .home-page .home-point small{font-size:7.3px!important;}
+}
