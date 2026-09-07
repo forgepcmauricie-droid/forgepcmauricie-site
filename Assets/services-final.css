@@ -78,3 +78,18 @@
     font-weight:700!important; white-space:nowrap!important; text-decoration:none!important;
   }
 }
+
+
+/* FINAL — MOBILE VIGNETTES: use the exact mobile source framing.
+   The source files are already prepared in the same portrait composition
+   as the approved mockup, so do NOT crop/zoom them with object-fit: cover. */
+@media (max-width:900px){
+  .services-page .services-card > .img picture img,
+  .services-page .services-card > .img > img{
+    width:100%!important;
+    height:100%!important;
+    object-fit:fill!important;
+    object-position:center center!important;
+    display:block!important;
+  }
+}
