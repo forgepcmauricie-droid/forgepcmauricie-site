@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="fr-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ForgePC Mauricie — Votre technologie. Notre expertise.</title>
+<meta name="description" content="ForgePC Mauricie : informatique simple, honnête et accessible. PC remis à neuf, solutions adaptées et service local en Mauricie.">
+<link rel="stylesheet" href="Assets/forgepc.css">
+<link rel="stylesheet" href="Assets/index-final.css?v=8">
+</head>
+<body class="home-page">
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand-link" href="index.html" aria-label="ForgePC Mauricie">
+      <img class="logo" src="Assets/forgepc-logo-web.png" alt="ForgePC Mauricie">
+    </a>
+    <nav class="navlinks" aria-label="Navigation principale">
+      <a class="active" href="index.html">Accueil</a>
+      <a href="services.html">Services</a>
+      <a href="inventaire.html">Inventaire</a>
+      <a href="a-propos.html">À propos</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-location">📍&nbsp; Shawinigan et toute la Mauricie</div>
+    <button class="menu" type="button" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+  </div>
+</header>
+<nav class="navlinks mobile-only" aria-label="Navigation mobile">
+  <a class="active" href="index.html">Accueil</a><a href="inventaire.html">Inventaire</a><a href="services.html">Services</a><a href="a-propos.html">À propos</a><a href="rendez-vous.html">Rendez-vous</a><a href="contact.html">Contact</a>
+</nav>
+
+<div class="mobile-location">📍 <span>Shawinigan et toute la Mauricie</span></div>
+
+<main>
+<section class="home-hero">
+  <div class="container home-hero-inner">
+    <div class="home-copy">
+      <div class="kicker">SHAWINIGAN · MAURICIE</div>
+      <h1>VOTRE TECHNOLOGIE.<span>NOTRE EXPERTISE.</span></h1>
+      <p>Réparer. Améliorer. Optimiser.<br>Des solutions informatiques simples, fiables et accessibles, ici en Mauricie.</p>
+      <div class="script">Votre technologie,<br>notre expertise.</div>
+    </div>
+    <div class="home-points-desktop">
+      <div class="home-point"><div class="icon fa">&#xf132;</div><div><strong>FIABILITÉ</strong><small>Des solutions durables et bien faites.</small></div></div>
+      <div class="home-point"><div class="icon fa">&#xf080;</div><div><strong>PERFORMANCE</strong><small>Des systèmes optimisés selon vos besoins.</small></div></div>
+      <div class="home-point"><div class="icon fa">&#xf155;</div><div><strong>ÉCONOMIE</strong><small>Plus de valeur pour votre budget.</small></div></div>
+      <div class="home-point"><div class="icon fa">&#xf0c0;</div><div><strong>SERVICE LOCAL</strong><small>Ici, en Mauricie.</small></div></div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section home-why">
+  <div class="container">
+    <div class="title-line"><h2 class="section-title">POURQUOI CHOISIR FORGEPC ?</h2></div>
+    <div class="why-grid">
+      <article><div class="why-icon fa">&#xf132;</div><h3>Fiabilité</h3><p>Du matériel testé<br>et des solutions durables.</p></article>
+      <article><div class="why-icon fa">&#xf080;</div><h3>Performance</h3><p>Des systèmes optimisés<br>selon vos besoins.</p></article>
+      <article><div class="why-icon fa">&#xf155;</div><h3>Économie</h3><p>Plus de valeur pour<br>votre budget.</p></article>
+      <article><div class="why-icon fa">&#xf0c0;</div><h3>Service local</h3><p>Ici, en Mauricie.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="section home-about">
+  <div class="container about">
+    <img src="Assets/about-mug-original.jpg" alt="ForgePC Mauricie — atelier">
+    <div class="about-copy">
+      <div class="title-line"><h2>À PROPOS DE FORGEPC</h2></div>
+      <p>ForgePC Mauricie est née d’une idée simple : offrir une alternative aux ordinateurs neufs souvent coûteux et aux réparations compliquées. Notre objectif est de remettre en circulation de bonnes machines, de réparer lorsque ça en vaut la peine et de proposer des solutions adaptées aux besoins réels de chaque client.</p>
+      <a class="btn" href="a-propos.html">EN SAVOIR PLUS →</a>
+    </div>
+  </div>
+</section>
+
+<section class="home-project">
+  <div class="container">
+    <div class="home-project-copy">
+      <h2>Vous avez un projet ou un problème informatique ?<span>Parlons-en.</span></h2>
+      <a class="btn primary" href="contact.html">NOUS CONTACTER →</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-main">
+      <img alt="ForgePC Mauricie" class="footer-logo" src="Assets/forgepc-logo-web.png">
+      <div class="footer-tag">Votre technologie, notre expertise.</div>
+      <div class="footer-social" aria-label="Réseaux sociaux">
+        <span class="social-facebook">f</span>
+        <span class="social-instagram">◎</span>
+      </div>
+      <div class="footer-contact">
+        <span>📍 Shawinigan et toute la Mauricie</span>
+        <span>☎ 819-944-7418</span>
+        <span>✉ info@forgepcmauricie.ca</span>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 ForgePC Mauricie. Tous droits réservés.</span>
+      <span>Politique de confidentialité&nbsp;&nbsp; | &nbsp;&nbsp;Mentions légales</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  const button=document.querySelector('.menu');
+  const nav=document.querySelector('.mobile-only');
+  if(button && nav){
+    button.addEventListener('click',function(){
+      const open=nav.classList.toggle('open');
+      button.setAttribute('aria-expanded',open?'true':'false');
+    });
+    nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+  }
+});
+</script>
+</body>
+</html>
