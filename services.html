@@ -35,5 +35,23 @@
 <span>📍 Shawinigan et toute la Mauricie</span><span>☎ 819-944-7418</span><span>✉ info@forgepcmauricie.ca</span>
 </div>
 </div><div class="footer-bottom"><span>© 2026 ForgePC Mauricie. Tous droits réservés.</span><span>Politique de confidentialité　|　Mentions légales</span></div></div></footer>
-<script>const b=document.querySelector('.menu'),m=document.querySelector('.mobile-only');b.addEventListener('click',()=>{const o=m.classList.toggle('open');b.setAttribute('aria-expanded',o)});document.querySelectorAll('.faq-row').forEach(x=>x.addEventListener('click',()=>x.classList.toggle('open')));</script>
+<script>
+const b=document.querySelector('.menu'),m=document.querySelector('.mobile-only');
+b.addEventListener('click',()=>{const o=m.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+
+document.querySelectorAll('.faq-row').forEach(x=>x.addEventListener('click',e=>{
+  e.stopPropagation();
+  x.classList.toggle('open');
+}));
+
+document.querySelectorAll('.info-box').forEach(box=>{
+  const title=box.querySelector('h3');
+  if(!title) return;
+  title.addEventListener('click',()=>{
+    if(window.matchMedia('(max-width:900px)').matches){
+      box.classList.toggle('is-open');
+    }
+  });
+});
+</script>
 </body></html>
