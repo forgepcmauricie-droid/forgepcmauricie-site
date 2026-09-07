@@ -785,3 +785,30 @@
   /* Match the approved compact icon treatment. */
   .services-page .info-icon{flex:0 0 32px!important;width:32px!important;height:28px!important;margin-right:5px!important;}
 }
+
+/* =========================================================
+   FINAL MOBILE ACCORDION BEHAVIOR — approved reference
+   One panel at a time; tapping the open panel closes it.
+   ========================================================= */
+@media (max-width:900px){
+  .services-page .info-grid .info-box.is-open{
+    /* Open only after an explicit tap; never force another panel open. */
+    display:block!important;
+    height:auto!important;
+    max-height:none!important;
+    overflow:visible!important;
+  }
+  .services-page .info-grid .info-box:not(.is-open)>p,
+  .services-page .info-grid .info-box:not(.is-open)>a,
+  .services-page .info-grid .info-box:not(.is-open)>.sector,
+  .services-page .info-grid .info-box:not(.is-open)>.faq-wrap{
+    display:none!important;
+  }
+  .services-page .info-grid .info-box.is-open>p,
+  .services-page .info-grid .info-box.is-open>a,
+  .services-page .info-grid .info-box.is-open>.sector,
+  .services-page .info-grid .info-box.is-open>.faq-wrap{
+    display:block!important;
+  }
+  .services-page .info-grid .info-box.is-open h3::after{content:'−'!important;}
+}
