@@ -247,136 +247,11 @@ img { max-width:100%; }
 .hero, .story, .values, .bottom, main, section { isolation:isolate; }
 </style>
 <link href="/Assets/global-fixes.css" rel="stylesheet"/>
-
-<style id="contact-mobile-final-pass1">
-/* Contact — mobile fidèle à la maquette finale */
-@media (max-width:800px){
-  body{background:#020609}
-  header.site-header{position:relative !important;height:70px !important;padding:8px 14px !important;background:#03090c !important}
-  header.site-header .container.nav{width:100%;max-width:none;margin:0;display:flex;align-items:center}
-  header.site-header .logo{width:126px !important;height:auto !important}
-  header.site-header .menu{width:42px !important;height:42px !important;min-width:42px !important;font-size:24px !important;border-radius:6px !important}
-
-  .hero{padding:18px 18px 12px !important;background:linear-gradient(90deg,rgba(0,0,0,.90),rgba(0,0,0,.58)),url("/Assets/about-mug-original.jpg") 64% center/cover no-repeat !important}
-  .hero .wrap{max-width:none}
-  .kicker{font-size:12px;line-height:1.1;letter-spacing:.6px;margin-bottom:6px}
-  .hero h1{font-size:27px !important;line-height:1.00 !important;margin:5px 0 9px !important;max-width:325px !important;letter-spacing:.2px}
-  .hero p{font-size:12.5px !important;line-height:1.42 !important;max-width:330px !important;margin:0}
-  .points{display:grid !important;grid-template-columns:repeat(4,1fr) !important;gap:6px !important;margin-top:14px !important;align-items:start}
-  .point{display:block !important;max-width:none !important;text-align:center !important;font-size:9.5px !important;line-height:1.12 !important;font-weight:700}
-  .point .ico{display:block !important;font-size:22px !important;line-height:1;margin:0 0 4px !important}
-
-  main.wrap.content{display:block !important;padding:10px 12px 12px !important;max-width:none}
-  .card{border-radius:6px !important;padding:14px 14px !important;margin:0 0 10px !important;background:linear-gradient(145deg,#081216,#061014) !important}
-  aside.card{padding-top:10px !important;padding-bottom:10px !important}
-  .contact-item{padding:8px 0 11px !important;margin:0 0 2px !important}
-  .contact-item:last-child{padding-bottom:6px !important}
-  .contact-label{font-size:12px !important;margin-bottom:3px !important}
-  .contact-value{font-size:15px !important;line-height:1.15 !important}
-  .contact-note{font-size:11px !important;line-height:1.3 !important;margin-top:4px !important}
-  .actions{gap:8px !important;margin-top:8px !important;flex-wrap:nowrap !important}
-  .actions .btn{padding:8px 9px !important;font-size:10.5px !important;line-height:1 !important;white-space:nowrap}
-
-  main.content>section.card{padding:14px !important}
-  main.content>section.card h2{font-size:19px !important;line-height:1.1 !important;margin:0 0 13px !important}
-  .row{display:grid !important;grid-template-columns:1fr !important;gap:0 !important}
-  .field{margin-bottom:10px !important}
-  label{font-size:11.5px !important;line-height:1.2 !important;margin:0 0 4px !important}
-  input,select,textarea{font-size:11.5px !important;border-radius:4px !important;padding:8px 9px !important;min-height:34px !important}
-  textarea{min-height:92px !important;height:92px !important;resize:vertical}
-  .counter{font-size:9.5px !important;margin-top:3px !important}
-  .notice{padding:9px 10px !important;margin:7px 0 10px !important;font-size:10px !important;line-height:1.35 !important}
-  .send{display:flex !important;flex-direction:column !important;align-items:stretch !important;gap:8px !important}
-  .privacy{font-size:10px !important;order:2}
-  .send .cta{order:1;margin:0 !important;padding:10px 12px !important;font-size:11px !important;text-align:center !important}
-
-  .site-footer{padding:14px 16px 12px !important;text-align:left !important;display:grid !important;grid-template-columns:auto 1fr !important;grid-template-areas:"logo social" "loc loc" "copy copy" !important;align-items:center !important;column-gap:14px !important;row-gap:5px !important}
-  .site-footer .footer-logo{grid-area:logo;margin:0 !important;justify-content:flex-start !important}
-  .site-footer .footer-logo img{width:92px !important}
-  .site-footer .footer-social{grid-area:social;justify-self:end;font-size:17px;display:flex;align-items:center;gap:10px;color:#fff}
-  .site-footer .footer-social span{width:19px;height:19px;border:1px solid #fff;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:7px}
-  .site-footer .footer-location{grid-area:loc;font-size:10px !important;margin:0 !important;text-align:center}
-  .site-footer .footer-slogan{display:none !important}
-  .site-footer .footer-copy{grid-area:copy;font-size:9px !important;margin:0 !important;text-align:left !important;color:#c7cdcf !important}
-}
-</style>
-
-
-<style id="contact-mobile-pass2">
-@media (max-width:800px){
-  /* PASS 2 — coordonnées et formulaire plus compacts comme la maquette */
-  main.wrap.content{padding:7px 12px 8px !important}
-  aside.card{padding:7px 14px !important;margin-bottom:7px !important}
-  .contact-item{padding:5px 0 7px !important;margin:0 !important}
-  .contact-label{font-size:11px !important;margin-bottom:2px !important}
-  .contact-value{font-size:14px !important}
-  .contact-note{font-size:9.5px !important;line-height:1.22 !important;margin-top:2px !important}
-  .actions{margin-top:5px !important;gap:7px !important}
-  .actions .btn{padding:6px 7px !important;font-size:9.5px !important}
-
-  main.content>section.card{padding:10px 14px 9px !important;margin-bottom:7px !important}
-  main.content>section.card h2{font-size:17px !important;margin:0 0 9px !important}
-  .field{margin-bottom:6px !important}
-  label{font-size:10px !important;margin-bottom:3px !important}
-  input,select,textarea{font-size:10px !important;padding:6px 8px !important;min-height:29px !important}
-  textarea{height:68px !important;min-height:68px !important}
-  .counter{font-size:8.5px !important;margin-top:2px !important}
-  .notice{padding:6px 8px !important;margin:4px 0 6px !important;font-size:8.5px !important;line-height:1.28 !important}
-  .send{gap:5px !important}
-  .send .cta{padding:8px 10px !important;font-size:10px !important;border-radius:4px !important}
-  .privacy{font-size:8.5px !important}
-
-  /* Footer calé sur la maquette mobile */
-  .site-footer{min-height:0 !important;padding:8px 14px 7px !important;grid-template-columns:96px 1fr auto !important;grid-template-areas:"logo loc social" "copy copy copy" !important;column-gap:8px !important;row-gap:3px !important;border-top:1px solid #243238 !important}
-  .site-footer .footer-logo img{width:88px !important;display:block !important}
-  .site-footer .footer-location{font-size:8.5px !important;text-align:left !important;white-space:nowrap !important}
-  .site-footer .footer-social{font-size:12px !important;gap:7px !important}
-  .site-footer .footer-social span{width:17px !important;height:17px !important;font-size:10px !important;font-weight:800 !important}
-  .site-footer .footer-copy{font-size:7.5px !important;text-align:left !important}
-}
-</style>
-
-<style id="contact-mobile-icons-final">
-@font-face{font-family:ForgeFA;src:url('/Assets/fontawesome-webfont.ttf') format('truetype');font-weight:normal;font-style:normal}
-.fa{font-family:ForgeFA!important;font-style:normal!important;font-weight:normal!important}
-@media(max-width:800px){
- header.site-header .logo{width:118px!important;object-fit:contain!important}
- .kicker .fa{color:#ff4b0b;font-size:17px;margin-right:5px}
- .point .ico{color:#ff4b0b!important;font-size:23px!important}
- .contact-ico{display:inline-block;color:#ff4b0b;font-size:18px;width:25px;text-align:center;margin-right:5px}
- main.content>section.card h2 .form-ico{color:#ff4b0b;font-size:18px;margin-right:5px}
- .site-footer .footer-logo img{width:82px!important;height:auto!important;filter:none!important}
- .site-footer .footer-location .fa{color:#ff4b0b;margin-right:3px}
- .site-footer .footer-social{gap:8px!important}
- .site-footer .footer-social .fb{width:18px!important;height:18px!important;border:0!important;border-radius:50%!important;background:#287be0!important;color:#fff!important;font-size:11px!important;display:inline-flex!important;align-items:center!important;justify-content:center!important}
- .site-footer .footer-social .mail{color:#fff!important;font-size:17px!important;text-decoration:none!important;line-height:1!important}
-}
-</style>
-
-
-
-<style id="contact-logo-final-clean">
-@media(max-width:800px){
-  header.site-header{height:70px!important;min-height:70px!important;padding:0!important;background:#02090b!important;}
-  header.site-header .container.nav{width:100%!important;max-width:none!important;height:70px!important;padding:0 18px!important;margin:0!important;display:flex!important;align-items:center!important;}
-  header.site-header .brand-link{display:flex!important;align-items:center!important;height:70px!important;margin:0!important;padding:0!important;}
-  header.site-header .logo{width:132px!important;height:64px!important;max-width:132px!important;max-height:64px!important;object-fit:contain!important;object-position:center!important;display:block!important;margin:0!important;}
-  header.site-header .menu{margin-left:auto!important;}
-  .site-footer .footer-logo img{width:112px!important;height:50px!important;max-width:112px!important;max-height:50px!important;object-fit:contain!important;object-position:center!important;display:block!important;}
-}
-</style>
-
-<style id="contact-logo-match-apropos-visual">
-@media(max-width:800px){
-  header.site-header .logo{width:112px!important;height:54px!important;max-width:112px!important;max-height:54px!important;object-fit:contain!important;}
-  .site-footer .footer-logo img{width:96px!important;height:44px!important;max-width:96px!important;max-height:44px!important;object-fit:contain!important;}
-}
-</style>
 </head>
 <body>
 <header class="site-header">
 <div class="container nav">
-<a class="brand-link" aria-label="ForgePC Mauricie" href="index.html"><img alt="ForgePC Mauricie" class="logo" src="Assets/forgepc-logo-web.png"/></a>
+<a class="brand-link" aria-label="ForgePC Mauricie" href="index.html"><img alt="ForgePC Mauricie" class="logo" src="/Assets/forgepc-logo-original-v3.png"/></a>
 <nav aria-label="Navigation principale" class="navlinks">
 <a href="index.html">ACCUEIL</a>
 <a href="inventaire.html">INVENTAIRE</a>
@@ -389,41 +264,40 @@ img { max-width:100%; }
 </header>
 <section class="hero">
 <div class="wrap">
-<div class="kicker"><span class="fa">&#xf075;</span> NOUS CONTACTER</div>
+<div class="kicker">💬 NOUS CONTACTER</div>
 <h1>UNE QUESTION ?<br/>ON EST LÀ <span>POUR VOUS.</span></h1>
 <p>Que ce soit pour une question générale, une demande d'information ou tout autre sujet, n'hésitez pas à nous écrire. Nous vous répondrons dans les plus brefs délais.</p>
 <div class="points">
-<div class="point"><span class="ico fa">&#xf075;</span>Réponse rapide</div>
-<div class="point"><span class="ico fa">&#xf0c0;</span>Approche humaine</div>
-<div class="point"><span class="ico fa">&#xf132;</span>Service fiable</div>
-<div class="point"><span class="ico fa">&#xf06c;</span>Plus responsable</div>
+<div class="point"><span class="ico">💬</span>Réponse rapide</div>
+<div class="point"><span class="ico">👥</span>Approche humaine</div>
+<div class="point"><span class="ico">🛡</span>Service fiable</div>
 </div>
 </div>
 </section>
 <main class="wrap content">
 <aside class="card">
 <div class="contact-item">
-<div class="contact-label"><span class="contact-ico fa">&#xf0e0;</span> Par courriel</div>
+<div class="contact-label">✉️   Par courriel</div>
 <div class="contact-value">info@forgepcmauricie.ca</div>
 <div class="contact-note">Pour toute question générale, demande d'information ou autre sujet.</div>
 </div>
 <div class="contact-item">
-<div class="contact-label"><span class="contact-ico fa">&#xf095;</span> Par téléphone / SMS</div>
+<div class="contact-label">📱   Par téléphone / SMS</div>
 <div class="contact-value">819-944-7418</div>
 <div class="contact-note">Appelez-nous ou envoyez-nous un SMS. Nous vous répondrons rapidement.</div>
 <div class="actions">
-<a class="btn primary" href="tel:+18199447418"><span class="fa">&#xf095;</span> Appeler</a>
-<a class="btn" href="sms:+18199447418"><span class="fa">&#xf075;</span> Envoyer un SMS</a>
+<a class="btn primary" href="tel:+18199447418">📞 Appeler</a>
+<a class="btn" href="sms:+18199447418">💬 Envoyer un SMS</a>
 </div>
 </div>
 <div class="contact-item">
-<div class="contact-label"><span class="contact-ico fa">&#xf041;</span> Notre région</div>
+<div class="contact-label">📍   Notre région</div>
 <div class="contact-value">Shawinigan et toute la Mauricie</div>
 <div class="contact-note">Une entreprise locale, proche de vous.</div>
 </div>
 </aside>
 <section class="card">
-<h2><span class="form-ico fa">&#xf040;</span> Formulaire de contact</h2>
+<h2>✎   Formulaire de contact</h2>
 <form action="https://formsubmit.co/info@forgepcmauricie.ca" method="POST" enctype="multipart/form-data">
 <input type="hidden" name="_subject" value="Demande de contact — ForgePC Mauricie">
 <input type="hidden" name="_captcha" value="false">
@@ -463,9 +337,8 @@ img { max-width:100%; }
 </section>
 </main>
 <footer class="site-footer">
-<div class="footer-logo"><img alt="ForgePC Mauricie" src="Assets/forgepc-logo-web.png"/></div>
-<div class="footer-social"><span class="fb fa" aria-label="Facebook">&#xf09a;</span><a class="mail fa" href="mailto:info@forgepcmauricie.ca" aria-label="Courriel">&#xf0e0;</a></div>
-<div class="footer-location"><span class="fa">&#xf041;</span> Shawinigan et toute la Mauricie</div>
+<div class="footer-logo"><img alt="ForgePC Mauricie" src="/Assets/forgepc-logo-original-v3.png"/></div>
+<div class="footer-location">📍 Shawinigan et toute la Mauricie</div>
 <div class="footer-slogan">Votre technologie, notre expertise.</div>
 <div class="footer-copy">© 2026 ForgePC Mauricie</div>
 </footer>
