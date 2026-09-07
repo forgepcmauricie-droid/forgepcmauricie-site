@@ -657,3 +657,41 @@
     display:block!important;
   }
 }
+
+/* =========================================================
+   MOBILE APPROVED MOCKUP — INFO ACCORDIONS PIXEL LOCK
+   Reference: approved mobile mockup. Closed by default.
+   ========================================================= */
+@media (max-width:900px){
+  .services-page main>.section:has(.info-grid){padding:0 0 7px!important;margin:0!important;}
+  .services-page .info-grid{display:grid!important;grid-template-columns:1fr!important;gap:0!important;margin:0!important;padding:0!important;}
+  .services-page .info-box,
+  .services-page .info-box.is-open{
+    position:relative!important;display:flex!important;box-sizing:border-box!important;width:100%!important;
+    height:36px!important;min-height:36px!important;max-height:36px!important;margin:0!important;padding:0 8px!important;
+    overflow:hidden!important;align-items:center!important;background:#071216!important;border:1px solid #26383e!important;
+    border-bottom:0!important;border-radius:0!important;
+  }
+  .services-page .info-box:first-child{border-radius:5px 5px 0 0!important;}
+  .services-page .info-box:last-child{border-bottom:1px solid #26383e!important;border-radius:0 0 5px 5px!important;}
+  .services-page .info-box h3,
+  .services-page .info-box.is-open h3{
+    display:flex!important;align-items:center!important;width:100%!important;height:34px!important;min-height:34px!important;
+    margin:0!important;padding:0!important;box-sizing:border-box!important;color:#f2f2f2!important;font-size:10px!important;
+    line-height:1!important;font-weight:800!important;text-transform:uppercase!important;white-space:nowrap!important;
+  }
+  .services-page .info-box h3::after{content:'+'!important;display:block!important;margin-left:auto!important;padding-left:8px!important;
+    color:#ff5a00!important;font-family:Arial,sans-serif!important;font-size:22px!important;line-height:1!important;font-weight:400!important;}
+  .services-page .info-box.is-open h3::after{content:'−'!important;}
+  .services-page .info-icon{position:relative!important;flex:0 0 32px!important;width:32px!important;height:28px!important;margin-right:5px!important;
+    color:#ff5a00!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;box-sizing:border-box!important;}
+  .services-page .info-icon-search::before{content:''!important;width:12px!important;height:12px!important;border:3px solid #ff5a00!important;border-radius:50%!important;box-sizing:border-box!important;transform:translate(-2px,-2px)!important;}
+  .services-page .info-icon-search::after{content:''!important;position:absolute!important;width:9px!important;height:3px!important;background:#ff5a00!important;border-radius:2px!important;transform:rotate(-45deg) translate(-1px,8px)!important;}
+  .services-page .info-icon-pin::before{content:''!important;width:15px!important;height:19px!important;border:3px solid #ff5a00!important;border-radius:50% 50% 50% 0!important;box-sizing:border-box!important;transform:rotate(-45deg) translate(1px,1px)!important;}
+  .services-page .info-icon-pin::after{content:''!important;position:absolute!important;width:4px!important;height:4px!important;border-radius:50%!important;background:#ff5a00!important;transform:translate(0,-2px)!important;}
+  .services-page .info-icon-question{font-family:Arial,sans-serif!important;font-size:26px!important;font-weight:700!important;line-height:1!important;}
+  .services-page .info-box>p,.services-page .info-box>a,.services-page .info-box>.sector,.services-page .info-box>.faq-wrap{display:none!important;}
+  .services-page .info-box.is-open{height:auto!important;min-height:36px!important;max-height:none!important;display:block!important;padding:0 8px 8px!important;overflow:visible!important;}
+  .services-page .info-box.is-open h3{height:36px!important;}
+  .services-page .info-box.is-open>p,.services-page .info-box.is-open>a,.services-page .info-box.is-open>.sector,.services-page .info-box.is-open>.faq-wrap{display:block!important;}
+}
