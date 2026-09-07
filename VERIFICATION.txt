@@ -1,6 +1,0 @@
-ForgePC Services — vérification V3
-- 5 cartes services.
-- Sources mobiles exactes utilisées: service-pc-mobile-exact.jpg, service-repair-mobile-exact.jpg,
-  service-upgrade-mobile-exact.jpg, gaming-rgb-mobile-exact.jpg, subaru-mobile-card-exact.jpg.
-- Règle mobile finale: object-fit: fill afin d'éviter tout zoom/cadrage automatique.
-- Aucun dossier render/render3b inclus.
