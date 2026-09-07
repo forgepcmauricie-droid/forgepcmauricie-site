@@ -25,6 +25,49 @@
 <article class="info-box"><h3><span class="info-icon info-icon-pin" aria-hidden="true"></span><span>NOTRE SECTEUR</span></h3><p>Shawinigan et toute la Mauricie</p><img alt="La Mauricie" class="sector" src="Assets/mauricie-landscape-approved.jpg"/><p>Nous offrons nos services à Shawinigan et dans les environs, incluant Trois-Rivières et les municipalités de la Mauricie.</p><a class="orange-link" href="contact.html">En savoir plus →</a></article>
 <article class="info-box"><h3><span class="info-icon info-icon-question" aria-hidden="true">?</span><span>FOIRE AUX QUESTIONS</span></h3><div class="faq-wrap"><div class="faq-row">Combien coûte un diagnostic ?<b>+</b></div><div class="faq-answer">Le coût dépend du type de diagnostic demandé. Nous vous expliquons les coûts avant toute intervention.</div><div class="faq-row">Est-ce que vous vous déplacez à domicile ?<b>+</b></div><div class="faq-answer">Oui, selon le secteur, la disponibilité et le type de service.</div><div class="faq-row">Pouvez-vous récupérer mes données ?<b>+</b></div><div class="faq-answer">Nous pouvons évaluer les options de récupération selon l'état du support.</div><div class="faq-row">Réparez-vous les ordinateurs portables ?<b>+</b></div><div class="faq-answer">Oui, après évaluation du problème et de la faisabilité.</div><div class="faq-row">Est-ce que vous installez Windows ?<b>+</b></div><div class="faq-answer">Oui, lorsque le matériel et la licence le permettent.</div><div class="faq-row">Une mise à niveau vaut-elle le coup sur un vieux PC ?<b>+</b></div><div class="faq-answer">Nous évaluons d'abord le PC afin d'éviter de dépenser inutilement.</div><a class="orange-link" href="contact.html" style="display:inline-block;margin-top:7px">Voir toutes les FAQ →</a></div></article>
 </div></section>
+<section class="mobile-info-accordion" aria-label="Informations ForgePC">
+  <div class="mobile-info-item">
+    <button class="mobile-info-toggle" type="button" aria-expanded="false">
+      <span class="mobile-info-icon search" aria-hidden="true"></span><span>LE DIAGNOSTIC</span><b aria-hidden="true">+</b>
+    </button>
+    <div class="mobile-info-panel">
+      <p>Un problème informatique ? On commence par chercher la cause.</p>
+      <p>Avant de vous conseiller une réparation ou un remplacement, nous évaluons la situation afin de déterminer ce qui vaut réellement la peine d'être fait.</p>
+      <a class="orange-link" href="forgepc_diagnostic.html">Demander un diagnostic →</a>
+    </div>
+  </div>
+  <div class="mobile-info-item">
+    <button class="mobile-info-toggle" type="button" aria-expanded="false">
+      <span class="mobile-info-icon pin" aria-hidden="true"></span><span>NOTRE SECTEUR</span><b aria-hidden="true">+</b>
+    </button>
+    <div class="mobile-info-panel">
+      <p class="mobile-sector-title">Shawinigan et toute la Mauricie</p>
+      <img alt="La Mauricie" class="sector" src="Assets/mauricie-landscape-approved.jpg"/>
+      <p>Nous offrons nos services à Shawinigan et dans les environs, incluant Trois-Rivières et les municipalités de la Mauricie.</p>
+      <a class="orange-link" href="contact.html">En savoir plus →</a>
+    </div>
+  </div>
+  <div class="mobile-info-item">
+    <button class="mobile-info-toggle" type="button" aria-expanded="false">
+      <span class="mobile-info-icon question" aria-hidden="true">?</span><span>FOIRE AUX QUESTIONS</span><b aria-hidden="true">+</b>
+    </button>
+    <div class="mobile-info-panel faq-panel">
+      <div class="faq-row">Combien coûte un diagnostic ?<b>+</b></div>
+      <div class="faq-answer">Le coût dépend du type de diagnostic demandé. Nous vous expliquons les coûts avant toute intervention.</div>
+      <div class="faq-row">Est-ce que vous vous déplacez à domicile ?<b>+</b></div>
+      <div class="faq-answer">Oui, selon le secteur, la disponibilité et le type de service.</div>
+      <div class="faq-row">Pouvez-vous récupérer mes données ?<b>+</b></div>
+      <div class="faq-answer">Nous pouvons évaluer les options de récupération selon l'état du support.</div>
+      <div class="faq-row">Réparez-vous les ordinateurs portables ?<b>+</b></div>
+      <div class="faq-answer">Oui, après évaluation du problème et de la faisabilité.</div>
+      <div class="faq-row">Est-ce que vous installez Windows ?<b>+</b></div>
+      <div class="faq-answer">Oui, lorsque le matériel et la licence le permettent.</div>
+      <div class="faq-row">Une mise à niveau vaut-elle le coup sur un vieux PC ?<b>+</b></div>
+      <div class="faq-answer">Nous évaluons d'abord le PC afin d'éviter de dépenser inutilement.</div>
+      <a class="orange-link" href="contact.html">Voir toutes les FAQ →</a>
+    </div>
+  </div>
+</section>
 <section class="services-cta"><div class="container"><h2>Vous avez un projet ou un problème informatique ?<span>Parlons-en.</span></h2><a class="btn" href="contact.html">Nous contacter →</a></div></section>
 </main>
 <footer><div class="container"><div class="footer-main">
@@ -44,32 +87,23 @@ document.querySelectorAll('.faq-row').forEach(x=>x.addEventListener('click',e=>{
   x.classList.toggle('open');
 }));
 
-document.querySelectorAll('.info-box').forEach(box=>{
-  const title=box.querySelector('h3');
-  if(!title) return;
-  title.setAttribute('role','button');
-  title.setAttribute('tabindex','0');
-  title.setAttribute('aria-expanded','false');
-
-  const toggleBox=()=>{
-    if(!window.matchMedia('(max-width:900px)').matches) return;
-    const wasOpen=box.classList.contains('is-open');
-    // Un seul panneau ouvert à la fois sur mobile.
-    document.querySelectorAll('.info-box.is-open').forEach(other=>{
-      if(other!==box){
-        other.classList.remove('is-open');
-        const otherTitle=other.querySelector('h3');
-        if(otherTitle) otherTitle.setAttribute('aria-expanded','false');
-      }
+document.querySelectorAll('.mobile-info-toggle').forEach(toggle=>{
+  toggle.addEventListener('click', ()=>{
+    const item=toggle.closest('.mobile-info-item');
+    const wasOpen=item.classList.contains('is-open');
+    document.querySelectorAll('.mobile-info-item.is-open').forEach(other=>{
+      other.classList.remove('is-open');
+      const btn=other.querySelector('.mobile-info-toggle');
+      if(btn) btn.setAttribute('aria-expanded','false');
     });
-    box.classList.toggle('is-open', !wasOpen);
-    title.setAttribute('aria-expanded', String(!wasOpen));
-  };
-
-  title.addEventListener('click', e=>{ e.preventDefault(); e.stopPropagation(); toggleBox(); });
-  title.addEventListener('keydown', e=>{
-    if(e.key==='Enter' || e.key===' '){ e.preventDefault(); toggleBox(); }
+    if(!wasOpen){
+      item.classList.add('is-open');
+      toggle.setAttribute('aria-expanded','true');
+    }
   });
 });
+
+// Always start the three main mobile panels closed.
+document.querySelectorAll('.mobile-info-item').forEach(item=>item.classList.remove('is-open'));
 </script>
 </body></html>
