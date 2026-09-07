@@ -552,3 +552,108 @@
     box-sizing:border-box!important;
   }
 }
+
+
+/* =========================================================
+   MOBILE PIXEL LOCK — footer logo + info accordions
+   Reference: approved mobile mockup
+   ========================================================= */
+@media (max-width:900px){
+  /* Footer: use the exact same logo artwork as the mobile header. */
+  .services-page footer .footer-logo{
+    content:url('forgepc-logo-web.png')!important;
+    width:112px!important;
+    max-width:112px!important;
+    height:48px!important;
+    object-fit:contain!important;
+    object-position:left center!important;
+  }
+
+  /* Info rows: all closed by default, with a visible + at right. */
+  .services-page .info-box{
+    position:relative!important;
+    overflow:hidden!important;
+    height:36px!important;
+    min-height:36px!important;
+    max-height:36px!important;
+    cursor:pointer!important;
+    transition:none!important;
+  }
+  .services-page .info-box h3{
+    width:100%!important;
+    box-sizing:border-box!important;
+  }
+  .services-page .info-box h3::after{
+    content:'+'!important;
+    margin-left:auto!important;
+    padding-left:8px!important;
+    color:#ff5a00!important;
+    font-size:22px!important;
+    line-height:1!important;
+    font-weight:400!important;
+  }
+
+  /* Open state for Diagnostic / Sector / FAQ. */
+  .services-page .info-box.is-open{
+    height:auto!important;
+    min-height:36px!important;
+    max-height:none!important;
+    display:block!important;
+    padding:0 8px 8px!important;
+  }
+  .services-page .info-box.is-open h3{
+    height:36px!important;
+    display:flex!important;
+    align-items:center!important;
+  }
+  .services-page .info-box.is-open h3::after{
+    content:'−'!important;
+  }
+  .services-page .info-box.is-open > p,
+  .services-page .info-box.is-open > a,
+  .services-page .info-box.is-open > .sector,
+  .services-page .info-box.is-open > .faq-wrap{
+    display:block!important;
+  }
+  .services-page .info-box.is-open > p{
+    margin:7px 0!important;
+    font-size:9px!important;
+    line-height:1.2!important;
+  }
+  .services-page .info-box.is-open > .sector{
+    width:100%!important;
+    height:auto!important;
+    max-height:130px!important;
+    object-fit:cover!important;
+    margin:4px 0 6px!important;
+  }
+  .services-page .info-box.is-open > .orange-link{
+    display:inline-flex!important;
+    width:auto!important;
+    height:28px!important;
+    min-height:28px!important;
+    padding:0 10px!important;
+    font-size:9px!important;
+  }
+  .services-page .info-box.is-open > .faq-wrap{
+    width:100%!important;
+  }
+  .services-page .info-box.is-open .faq-row{
+    display:flex!important;
+    justify-content:space-between!important;
+    align-items:center!important;
+    padding:6px 0!important;
+    font-size:9px!important;
+    line-height:1.15!important;
+    border-top:1px solid #26383e!important;
+  }
+  .services-page .info-box.is-open .faq-answer{
+    display:none!important;
+    font-size:8px!important;
+    line-height:1.2!important;
+    padding:4px 0 6px!important;
+  }
+  .services-page .info-box.is-open .faq-row.open + .faq-answer{
+    display:block!important;
+  }
+}
