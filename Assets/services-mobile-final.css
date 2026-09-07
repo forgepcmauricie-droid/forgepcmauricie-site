@@ -183,3 +183,21 @@
   .services-page .info-grid .info-box:nth-child(3){display:flex!important;}
   .services-page footer .footer-logo{content:url('logo-footer-v2.png')!important;}
 }
+
+/* FINAL VERIFIED MOBILE FIX — approved reference: keep all 3 accordion rows. */
+@media (max-width:900px){
+  .services-page .info-grid .info-box:nth-child(1),
+  .services-page .info-grid .info-box:nth-child(2),
+  .services-page .info-grid .info-box:nth-child(3){display:flex!important;}
+  .services-page .info-grid .info-box:nth-child(2)>p,
+  .services-page .info-grid .info-box:nth-child(2)>a,
+  .services-page .info-grid .info-box:nth-child(2)>.sector{display:none!important;}
+  .services-page .info-grid .info-box:nth-child(2) h3{display:flex!important;}
+  .services-page footer .footer-logo{
+    content:url('logo-footer-final.png')!important;
+    width:132px!important;
+    height:58px!important;
+    object-fit:contain!important;
+    object-position:left center!important;
+  }
+}
