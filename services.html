@@ -47,10 +47,28 @@ document.querySelectorAll('.faq-row').forEach(x=>x.addEventListener('click',e=>{
 document.querySelectorAll('.info-box').forEach(box=>{
   const title=box.querySelector('h3');
   if(!title) return;
-  title.addEventListener('click',()=>{
-    if(window.matchMedia('(max-width:900px)').matches){
-      box.classList.toggle('is-open');
-    }
+  title.setAttribute('role','button');
+  title.setAttribute('tabindex','0');
+  title.setAttribute('aria-expanded','false');
+
+  const toggleBox=()=>{
+    if(!window.matchMedia('(max-width:900px)').matches) return;
+    const wasOpen=box.classList.contains('is-open');
+    // Un seul panneau ouvert à la fois sur mobile.
+    document.querySelectorAll('.info-box.is-open').forEach(other=>{
+      if(other!==box){
+        other.classList.remove('is-open');
+        const otherTitle=other.querySelector('h3');
+        if(otherTitle) otherTitle.setAttribute('aria-expanded','false');
+      }
+    });
+    box.classList.toggle('is-open', !wasOpen);
+    title.setAttribute('aria-expanded', String(!wasOpen));
+  };
+
+  title.addEventListener('click', e=>{ e.preventDefault(); e.stopPropagation(); toggleBox(); });
+  title.addEventListener('keydown', e=>{
+    if(e.key==='Enter' || e.key===' '){ e.preventDefault(); toggleBox(); }
   });
 });
 </script>
