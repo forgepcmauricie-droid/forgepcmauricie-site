@@ -40,7 +40,7 @@
   .services-page .services-card>.img{grid-column:1!important;grid-row:1!important;width:100%!important;height:96px!important;min-height:96px!important;max-height:96px!important;margin:0!important;padding:0!important;overflow:hidden!important;background:#02090b!important;}
   .services-page .services-card>.img img{display:block!important;width:100%!important;height:100%!important;margin:0!important;padding:0!important;border:0!important;object-fit:cover!important;object-position:center center!important;}
   .services-page .services-card:nth-child(4)>.img img{content:url('gaming-rgb-tower-maquette.jpg')!important;object-position:center center!important;}
-  .services-page .services-card:nth-child(5)>.img img{content:url('service-home.jpg')!important;object-position:center center!important;}
+  .services-page .services-card:nth-child(5)>.img img{content:none!important;object-position:center center!important;}
   .services-page .services-card>.body{grid-column:2!important;grid-row:1!important;width:100%!important;height:96px!important;min-height:96px!important;margin:0!important;padding:5px 7px 5px 8px!important;box-sizing:border-box!important;display:flex!important;flex-direction:column!important;overflow:hidden!important;}
   .services-page .services-card h3{font-size:11px!important;line-height:1!important;margin:0 0 3px!important;padding:0!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important;font-weight:900!important;}
   .services-page .services-card h3 a{display:flex!important;align-items:center!important;gap:6px!important;min-width:0!important;color:#f2f2f2!important;text-decoration:none!important;}
@@ -86,4 +86,70 @@
   .services-page .footer-contact{grid-column:1/-1!important;width:100%!important;margin:0!important;display:flex!important;justify-content:flex-start!important;gap:4px 9px!important;flex-wrap:wrap!important;font-size:8px!important;line-height:1.2!important;}
   .services-page .footer-social{margin-left:auto!important;font-size:16px!important;letter-spacing:4px!important;}
   .services-page .footer-bottom{min-height:34px!important;padding:5px 7px!important;display:flex!important;justify-content:space-between!important;gap:5px!important;font-size:7px!important;line-height:1.1!important;text-align:left!important;box-sizing:border-box!important;}
+}
+
+/* FINAL MOBILE CORRECTIONS — exact approved reference assets */
+@media (max-width:900px){
+  .services-page .services-card:nth-child(5)>.img img{
+    content:url('subaru-mobile-grille-final.jpg')!important;
+    object-fit:cover!important;
+    object-position:center center!important;
+  }
+
+  /* CTA strip matches the approved mobile reference */
+  .services-page .services-cta{
+    height:96px!important;
+    min-height:96px!important;
+    background-image:linear-gradient(90deg,rgba(2,11,15,.55),rgba(2,11,15,.18)),url('services-cta-maquette-clean.jpg')!important;
+    background-position:center!important;
+    background-size:cover!important;
+    background-repeat:no-repeat!important;
+  }
+
+  /* Footer matches the mobile mockup: logo + socials, then contact row */
+  .services-page footer{border-top:1px solid #26383e!important;background:#020b0f!important;}
+  .services-page .footer-main{
+    min-height:0!important;
+    padding:8px 12px 7px!important;
+    display:grid!important;
+    grid-template-columns:1fr auto!important;
+    grid-template-rows:auto auto!important;
+    gap:4px 8px!important;
+    text-align:left!important;
+    box-sizing:border-box!important;
+  }
+  .services-page .footer-logo{
+    grid-column:1!important;grid-row:1!important;
+    width:112px!important;height:48px!important;
+    margin:0!important;object-fit:contain!important;object-position:left center!important;
+  }
+  .services-page .footer-tag{
+    display:none!important;
+  }
+  .services-page .footer-social{
+    grid-column:2!important;grid-row:1!important;
+    display:flex!important;align-items:center!important;justify-content:flex-end!important;
+    align-self:center!important;
+    margin:0!important;
+    font-size:20px!important;line-height:1!important;
+    letter-spacing:7px!important;
+    color:#f2f2f2!important;
+  }
+  .services-page .footer-contact{
+    grid-column:1/-1!important;grid-row:2!important;
+    width:100%!important;margin:0!important;
+    display:flex!important;align-items:center!important;justify-content:flex-start!important;
+    gap:3px 9px!important;flex-wrap:wrap!important;
+    font-size:8px!important;line-height:1.2!important;
+    color:#d2d8da!important;
+  }
+  .services-page .footer-contact .footer-social{display:none!important;}
+  .services-page .footer-bottom{
+    min-height:31px!important;
+    padding:5px 12px!important;
+    display:flex!important;align-items:center!important;justify-content:space-between!important;
+    gap:5px!important;font-size:7px!important;line-height:1.1!important;
+    text-align:left!important;box-sizing:border-box!important;
+    border-top:1px solid #26383e!important;
+  }
 }
