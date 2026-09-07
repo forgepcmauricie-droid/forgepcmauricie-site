@@ -1,7 +1,10 @@
 <!doctype html>
 <html lang="fr-CA">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>PC Gaming sur mesure | ForgePC Mauricie</title><meta name="description" content="PC gaming sur mesure : discussion, configuration, assemblage professionnel, tests et suivi par ForgePC Mauricie."><link rel="stylesheet" href="Assets/forgepc.css"></head>
-<body class="pc-gaming-page">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>PC Gaming sur mesure | ForgePC Mauricie</title><meta name="description" content="PC gaming sur mesure : discussion, configuration, assemblage professionnel, tests et suivi par ForgePC Mauricie."><link rel="stylesheet" href="Assets/forgepc.css"><link rel="stylesheet" href="Assets/footer-shared.css">
+<link rel="stylesheet" href="Assets/mobile-approved.css">
+<script src="Assets/mobile-approved.js" defer></script>
+</head>
+<body data-mobile-page="pc-gaming-sur-mesure" class="pc-gaming-page">
 <header class="site-header"><div class="container nav"><a class="brand-link" href="index.html"><img class="logo" src="Assets/forgepc-logo-web.png" alt="ForgePC Mauricie"></a><nav class="navlinks"><a href="index.html">Accueil</a><a class="active" href="services.html">Services</a><a href="inventaire.html">Inventaire</a><a href="a-propos.html">À propos</a><a href="contact.html">Contact</a></nav><div class="nav-location">📍 <span>Shawinigan et<br>toute la Mauricie</span></div><button class="menu" type="button" aria-label="Ouvrir le menu" aria-expanded="false">☰</button></div></header>
 <nav class="navlinks mobile-only"><a href="index.html">Accueil</a><a class="active" href="services.html">Services</a><a href="inventaire.html">Inventaire</a><a href="a-propos.html">À propos</a><a href="contact.html">Contact</a></nav>
 <main>
@@ -18,6 +21,16 @@
 </div></section>
 <section class="gaming-cta"><div class="container"><h2>Un projet de PC gaming ?<span>Parlons-en.</span></h2><a class="btn" href="contact.html">Nous contacter →</a></div></section>
 </main>
-<footer><div class="container"><div class="footer-main"><img class="footer-logo" src="Assets/forgepc-logo-web.png" alt="ForgePC Mauricie"><div class="footer-tag">Votre technologie, notre expertise.</div><div class="footer-contact"><span>📍 Shawinigan et toute la Mauricie</span><span>☎ 819-944-7418</span><span>✉ info@forgepcmauricie.ca</span><span class="footer-social">● ◎</span></div></div><div class="footer-bottom"><span>© 2026 ForgePC Mauricie. Tous droits réservés.</span><span>Politique de confidentialité　|　Mentions légales</span></div></div></footer>
+<footer id="forgepc-footer">
+  <div class="fp-wrap">
+    <div class="fp-main">
+      <img alt="ForgePC Mauricie" class="fp-logo" src="Assets/forgepc-logo-web.png">
+      <div class="fp-tag">Votre technologie, notre expertise.</div>
+      <div class="fp-social" aria-label="Réseaux sociaux"><span>ⓕ</span><span>◎</span></div>
+      <div class="fp-contact"><span>📍 Shawinigan et toute la Mauricie</span><span>☎ 819-944-7418</span><span>✉ info@forgepcmauricie.ca</span></div>
+    </div>
+    <div class="fp-bottom"><span>© 2026 ForgePC Mauricie. Tous droits réservés.</span><span>Politique de confidentialité&nbsp;&nbsp; | &nbsp;&nbsp;Mentions légales</span></div>
+  </div>
+</footer>
 <script>const b=document.querySelector('.menu'),m=document.querySelector('.mobile-only');b.addEventListener('click',()=>{const o=m.classList.toggle('open');b.setAttribute('aria-expanded',o)});</script>
 </body></html>

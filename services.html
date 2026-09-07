@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 
 <html lang="fr-CA">
-<head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/><title>Services | ForgePC Mauricie</title><meta content="Réparations, mises à niveau, PC remis à neuf, PC gaming sur mesure et service à domicile en Mauricie." name="description"/><link href="Assets/forgepc.css" rel="stylesheet"/><link href="Assets/services-mobile-final.css" rel="stylesheet"/></head>
-<body class="services-page">
+<head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/><title>Services | ForgePC Mauricie</title><meta content="Réparations, mises à niveau, PC remis à neuf, PC gaming sur mesure et service à domicile en Mauricie." name="description"/><link href="Assets/forgepc.css" rel="stylesheet"/><link href="Assets/services-mobile-final.css" rel="stylesheet"/><link rel="stylesheet" href="Assets/footer-shared.css">
+<link rel="stylesheet" href="Assets/mobile-approved.css">
+<script src="Assets/mobile-approved.js" defer></script>
+</head>
+<body data-mobile-page="services" class="services-page">
 <header class="site-header"><div class="container nav"><a class="brand-link" href="index.html"><img alt="ForgePC Mauricie" class="logo" src="Assets/forgepc-logo-web.png"/></a><nav class="navlinks"><a href="index.html">Accueil</a><a class="active" href="services.html">Services</a><a href="inventaire.html">Inventaire</a><a href="a-propos.html">À propos</a><a href="contact.html">Contact</a></nav><div class="nav-location">📍 <span>Shawinigan et<br/>toute la Mauricie</span></div><button aria-expanded="false" aria-label="Ouvrir le menu" class="menu" type="button">☰</button></div></header>
 <nav class="navlinks mobile-only"><a href="index.html">Accueil</a><a class="active" href="services.html">Services</a><a href="inventaire.html">Inventaire</a><a href="a-propos.html">À propos</a><a href="contact.html">Contact</a></nav>
 <main>
@@ -70,14 +73,17 @@
 </section>
 <section class="services-cta"><div class="container"><h2>Vous avez un projet ou un problème informatique ?<span>Parlons-en.</span></h2><a class="btn" href="contact.html">Nous contacter →</a></div></section>
 </main>
-<footer><div class="container"><div class="footer-main">
-<img alt="ForgePC Mauricie" class="footer-logo" src="Assets/forgepc-logo-officiel.png"/>
-<div class="footer-tag">Votre technologie, notre expertise.</div>
-<div class="footer-social" aria-label="Réseaux sociaux"><span class="social-facebook">f</span><span class="social-instagram">◎</span></div>
-<div class="footer-contact">
-<span>📍 Shawinigan et toute la Mauricie</span><span>☎ 819-944-7418</span><span>✉ info@forgepcmauricie.ca</span>
-</div>
-</div><div class="footer-bottom"><span>© 2026 ForgePC Mauricie. Tous droits réservés.</span><span>Politique de confidentialité　|　Mentions légales</span></div></div></footer>
+<footer id="forgepc-footer">
+  <div class="fp-wrap">
+    <div class="fp-main">
+      <img alt="ForgePC Mauricie" class="fp-logo" src="Assets/forgepc-logo-web.png">
+      <div class="fp-tag">Votre technologie, notre expertise.</div>
+      <div class="fp-social" aria-label="Réseaux sociaux"><span>ⓕ</span><span>◎</span></div>
+      <div class="fp-contact"><span>📍 Shawinigan et toute la Mauricie</span><span>☎ 819-944-7418</span><span>✉ info@forgepcmauricie.ca</span></div>
+    </div>
+    <div class="fp-bottom"><span>© 2026 ForgePC Mauricie. Tous droits réservés.</span><span>Politique de confidentialité&nbsp;&nbsp; | &nbsp;&nbsp;Mentions légales</span></div>
+  </div>
+</footer>
 <script>
 const b=document.querySelector('.menu'),m=document.querySelector('.mobile-only');
 b.addEventListener('click',()=>{const o=m.classList.toggle('open');b.setAttribute('aria-expanded',o)});

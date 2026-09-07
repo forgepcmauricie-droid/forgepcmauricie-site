@@ -372,8 +372,21 @@ img { max-width:100%; }
   .site-footer .footer-logo img{width:96px!important;height:44px!important;max-width:96px!important;max-height:44px!important;object-fit:contain!important;}
 }
 </style>
+<style id="contact-approved-about-logos">
+header.site-header .brand-link img.logo,
+.site-footer .footer-logo img{content:normal!important;filter:none!important;object-fit:contain!important;object-position:center!important;}
+header.site-header .brand-link img.logo{width:158px!important;height:66px!important;max-width:none!important;max-height:none!important;}
+.site-footer .footer-logo img{width:130px!important;height:58px!important;max-width:none!important;max-height:none!important;}
+@media(max-width:800px){
+ header.site-header .brand-link img.logo{width:132px!important;height:64px!important;position:relative;left:calc(max(10px, (100vw - 680px)/2) - 18px);}
+ .site-footer .footer-logo img{width:150px!important;height:64px!important;flex-shrink:0!important;margin:-10px -27px!important;}
+}
+</style>
+<link rel="stylesheet" href="Assets/footer-shared.css">
+<link rel="stylesheet" href="Assets/mobile-approved.css">
+<script src="Assets/mobile-approved.js" defer></script>
 </head>
-<body>
+<body data-mobile-page="contact">
 <header class="site-header">
 <div class="container nav">
 <a class="brand-link" aria-label="ForgePC Mauricie" href="index.html"><img alt="ForgePC Mauricie" class="logo" src="Assets/forgepc-logo-web.png"/></a>
@@ -462,12 +475,16 @@ img { max-width:100%; }
 </form>
 </section>
 </main>
-<footer class="site-footer">
-<div class="footer-logo"><img alt="ForgePC Mauricie" src="Assets/forgepc-logo-web.png"/></div>
-<div class="footer-social"><span class="fb fa" aria-label="Facebook">&#xf09a;</span><a class="mail fa" href="mailto:info@forgepcmauricie.ca" aria-label="Courriel">&#xf0e0;</a></div>
-<div class="footer-location"><span class="fa">&#xf041;</span> Shawinigan et toute la Mauricie</div>
-<div class="footer-slogan">Votre technologie, notre expertise.</div>
-<div class="footer-copy">© 2026 ForgePC Mauricie</div>
+<footer id="forgepc-footer">
+  <div class="fp-wrap">
+    <div class="fp-main">
+      <img alt="ForgePC Mauricie" class="fp-logo" src="Assets/forgepc-logo-web.png">
+      <div class="fp-tag">Votre technologie, notre expertise.</div>
+      <div class="fp-social" aria-label="Réseaux sociaux"><span>ⓕ</span><span>◎</span></div>
+      <div class="fp-contact"><span>📍 Shawinigan et toute la Mauricie</span><span>☎ 819-944-7418</span><span>✉ info@forgepcmauricie.ca</span></div>
+    </div>
+    <div class="fp-bottom"><span>© 2026 ForgePC Mauricie. Tous droits réservés.</span><span>Politique de confidentialité&nbsp;&nbsp; | &nbsp;&nbsp;Mentions légales</span></div>
+  </div>
 </footer>
 <script>
 const message=document.getElementById('message'), count=document.getElementById('count');

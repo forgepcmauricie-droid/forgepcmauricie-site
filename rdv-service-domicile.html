@@ -355,8 +355,11 @@ img { max-width:100%; }
 .hero, .story, .values, .bottom, main, section { isolation:isolate; }
 </style>
 <link href="/Assets/global-fixes.css" rel="stylesheet"/>
+<link rel="stylesheet" href="Assets/footer-shared.css">
+<link rel="stylesheet" href="Assets/mobile-approved.css">
+<script src="Assets/mobile-approved.js" defer></script>
 </head>
-<body>
+<body data-mobile-page="rdv-service-domicile">
 <header class="site-header">
 <div class="container nav">
 <a class="brand-link" aria-label="ForgePC Mauricie" href="index.html"><img alt="ForgePC Mauricie" class="logo" src="/Assets/forgepc-logo-original-v3.png"/></a>
@@ -499,11 +502,16 @@ Ex. : ordinateur lent, problème d’impression, installation, etc." required=""
 </form>
 </div>
 </main>
-<footer class="site-footer">
-<div class="footer-logo"><img alt="ForgePC Mauricie" src="/Assets/forgepc-logo-original-v3.png"/></div>
-<div class="footer-location">📍 Shawinigan et toute la Mauricie</div>
-<div class="footer-slogan">Votre technologie, notre expertise.</div>
-<div class="footer-copy">© 2026 ForgePC Mauricie</div>
+<footer id="forgepc-footer">
+  <div class="fp-wrap">
+    <div class="fp-main">
+      <img alt="ForgePC Mauricie" class="fp-logo" src="Assets/forgepc-logo-web.png">
+      <div class="fp-tag">Votre technologie, notre expertise.</div>
+      <div class="fp-social" aria-label="Réseaux sociaux"><span>ⓕ</span><span>◎</span></div>
+      <div class="fp-contact"><span>📍 Shawinigan et toute la Mauricie</span><span>☎ 819-944-7418</span><span>✉ info@forgepcmauricie.ca</span></div>
+    </div>
+    <div class="fp-bottom"><span>© 2026 ForgePC Mauricie. Tous droits réservés.</span><span>Politique de confidentialité&nbsp;&nbsp; | &nbsp;&nbsp;Mentions légales</span></div>
+  </div>
 </footer>
 <script>
 document.querySelector('form').addEventListener('submit', function(e){
