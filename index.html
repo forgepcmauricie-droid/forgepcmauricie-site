@@ -12,9 +12,37 @@
 <script src="Assets/mobile-approved.js" defer></script>
 <link rel="stylesheet" href="Assets/mobile-header-uniform.css?v=1">
 <link rel="stylesheet" href="Assets/desktop-final.css?v=1">
-<link rel="stylesheet" href="Assets/qa-owner-fixes.css?v=1">
+<link rel="stylesheet" href="Assets/qa-owner-fixes.css?v=2">
+<link rel="stylesheet" href="Assets/index-desktop-rebuild.css?v=1">
+<link rel="stylesheet" href="Assets/index-pixel-desktop.css?v=2">
+
+<style id="pc-pixel-force-hide">
+@media (min-width:901px){
+  body.home-page > header.site-header,
+  body.home-page > nav.mobile-only,
+  body.home-page > main,
+  body.home-page > footer#forgepc-footer{display:none !important;}
+  body.home-page > .pc-pixel-page{display:block !important;}
+}
+</style>
 </head>
 <body data-mobile-page="index" class="home-page">
+<div class="pc-pixel-page" aria-label="ForgePC Mauricie — Accueil">
+  <div class="pc-pixel-stage">
+    <img src="Assets/index-desktop-approved-2x.png" alt="ForgePC Mauricie — accueil">
+    <a class="pc-hotspot" href="index.html" aria-label="Accueil" style="left:3.7%;top:0.7%;width:12.4%;height:6.0%;"></a>
+    <a class="pc-hotspot" href="index.html" aria-label="Accueil" style="left:26.8%;top:1.5%;width:8.0%;height:5.3%;"></a>
+    <a class="pc-hotspot" href="services.html" aria-label="Services" style="left:34.4%;top:1.5%;width:8.0%;height:5.3%;"></a>
+    <a class="pc-hotspot" href="inventaire.html" aria-label="Inventaire" style="left:42.7%;top:1.5%;width:9.0%;height:5.3%;"></a>
+    <a class="pc-hotspot" href="a-propos.html" aria-label="À propos" style="left:51.9%;top:1.5%;width:8.6%;height:5.3%;"></a>
+    <a class="pc-hotspot" href="contact.html" aria-label="Contact" style="left:60.8%;top:1.5%;width:8.0%;height:5.3%;"></a>
+    <a class="pc-hotspot" href="a-propos.html" aria-label="En savoir plus" style="left:41.6%;top:72.2%;width:15.6%;height:4.4%;"></a>
+    <a class="pc-hotspot" href="contact.html" aria-label="Nous contacter" style="left:81.2%;top:77.4%;width:16.7%;height:6.2%;"></a>
+    <a class="pc-hotspot" href="contact.html" aria-label="Courriel" style="left:51.7%;top:88.8%;width:19.0%;height:5.0%;"></a>
+    <a class="pc-hotspot" href="tel:8199447418" aria-label="Téléphone" style="left:38.1%;top:88.8%;width:12.5%;height:5.0%;"></a>
+  </div>
+</div>
+
 <header class="site-header">
   <div class="container nav">
     <a class="brand-link" href="index.html" aria-label="ForgePC Mauricie">
@@ -27,7 +55,7 @@
       <a href="a-propos.html">À propos</a>
       <a href="contact.html">Contact</a>
     </nav>
-    <div class="nav-location">📍&nbsp; Shawinigan et toute la Mauricie</div>
+    <div class="nav-location"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.1 7 13 7 13s7-7.9 7-13a7 7 0 0 0-7-7Zm0 9.6A2.6 2.6 0 1 1 12 6a2.6 2.6 0 0 1 0 5.6Z"/></svg><span>Shawinigan et<br>toute la Mauricie</span></div>
     <button class="menu" type="button" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
   </div>
 </header>
@@ -59,10 +87,10 @@
   <div class="container">
     <div class="title-line"><h2 class="section-title">POURQUOI CHOISIR FORGEPC ?</h2></div>
     <div class="why-grid">
-      <article><div class="why-icon fa">&#xf132;</div><h3>Fiabilité</h3><p>Du matériel testé<br>et des solutions durables.</p></article>
-      <article><div class="why-icon fa">&#xf080;</div><h3>Performance</h3><p>Des systèmes optimisés<br>selon vos besoins.</p></article>
-      <article><div class="why-icon fa">&#xf155;</div><h3>Économie</h3><p>Plus de valeur pour<br>votre budget.</p></article>
-      <article><div class="why-icon fa">&#xf0c0;</div><h3>Service local</h3><p>Ici, en Mauricie.</p></article>
+      <article><div class="why-icon"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 5 53 13v15c0 14-8 24-21 31C19 52 11 42 11 28V13L32 5Z"/><path class="cut" d="m22 31 7 7 14-17"/></svg></div><h3>Fiabilité</h3><p>Du matériel testé<br>et des solutions durables.</p></article>
+      <article><div class="why-icon"><svg viewBox="0 0 64 64" aria-hidden="true"><rect x="9" y="35" width="9" height="18"/><rect x="24" y="25" width="9" height="28"/><rect x="39" y="14" width="9" height="39"/><rect x="54" y="7" width="5" height="46"/></svg></div><h3>Performance</h3><p>Des systèmes optimisés<br>selon vos besoins.</p></article>
+      <article><div class="why-icon"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="24"/><path class="cut" d="M38 21c-2-2-5-3-8-3-5 0-9 3-9 7 0 5 4 6 10 8 5 2 9 3 9 8s-4 8-10 8c-4 0-8-1-11-4M32 14v36"/></svg></div><h3>Économie</h3><p>Plus de valeur pour<br>votre budget.</p></article>
+      <article><div class="why-icon"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="20" r="8"/><circle cx="17" cy="24" r="7"/><circle cx="47" cy="24" r="7"/><path d="M18 54c1-13 6-21 14-21s13 8 14 21H18Z"/><path d="M3 54c1-10 5-16 12-16 4 0 7 2 9 5-2 3-3 7-3 11H3Z"/><path d="M43 54c0-4-1-8-3-11 2-3 5-5 9-5 7 0 11 6 12 16H43Z"/></svg></div><h3>Service local</h3><p>Ici, en Mauricie.</p></article>
     </div>
   </div>
 </section>
@@ -93,8 +121,8 @@
     <div class="fp-main">
       <img alt="ForgePC Mauricie" class="fp-logo" src="Assets/forgepc-logo-web.png">
       <div class="fp-tag">Votre technologie, notre expertise.</div>
-      <div class="fp-social" aria-label="Réseaux sociaux"><span>ⓕ</span><span>◎</span></div>
-      <div class="fp-contact"><span>📍 Shawinigan et toute la Mauricie</span><span>☎ 819-944-7418</span><span>✉ info@forgepcmauricie.ca</span></div>
+      <div class="fp-social" aria-label="Réseaux sociaux"><span class="social-circle">f</span><span class="social-circle">◎</span></div>
+      <div class="fp-contact"><span><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.1 7 13 7 13s7-7.9 7-13a7 7 0 0 0-7-7Zm0 9.6A2.6 2.6 0 1 1 12 6a2.6 2.6 0 0 1 0 5.6Z"/></svg>Shawinigan et toute la Mauricie</span><span><svg viewBox="0 0 24 24"><path d="M6.6 2.8 10 8.1 7.8 10c1.6 3.3 3.9 5.6 7.2 7.2l1.9-2.2 5.3 3.4c-.5 2.1-2.1 3.6-4.2 3.6C9.2 22 2 14.8 2 6c0-2.1 1.5-3.7 4.6-3.2Z"/></svg>819-944-7418</span><span><svg viewBox="0 0 24 24"><path d="M3 5h18v14H3V5Zm2 2 7 5 7-5H5Z"/></svg>info@forgepcmauricie.ca</span></div>
     </div>
     <div class="fp-bottom"><span>© 2026 ForgePC Mauricie. Tous droits réservés.</span><span>Politique de confidentialité&nbsp;&nbsp; | &nbsp;&nbsp;Mentions légales</span></div>
   </div>

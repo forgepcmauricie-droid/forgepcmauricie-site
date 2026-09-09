@@ -1,15 +1,89 @@
 <!DOCTYPE html>
 
 <html lang="fr-CA">
-<head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/><title>Services | ForgePC Mauricie</title><meta content="Réparations, mises à niveau, PC remis à neuf, PC gaming sur mesure et service à domicile en Mauricie." name="description"/><link href="Assets/forgepc.css" rel="stylesheet"/><link href="Assets/services-mobile-final.css" rel="stylesheet"/><link rel="stylesheet" href="Assets/footer-shared.css">
-<link rel="stylesheet" href="Assets/mobile-approved.css">
-<script src="Assets/mobile-approved.js" defer></script>
-<link rel="stylesheet" href="Assets/mobile-header-uniform.css?v=1">
-<link rel="stylesheet" href="Assets/desktop-final.css?v=2">
-<link rel="stylesheet" href="Assets/qa-owner-fixes.css?v=1">
+<head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/><title>Services | ForgePC Mauricie</title><meta content="Réparations, mises à niveau, PC remis à neuf, PC gaming sur mesure et service à domicile en Mauricie." name="description"/><link href="Assets/forgepc.css" rel="stylesheet"/><link href="Assets/services-mobile-final.css" rel="stylesheet"/><link href="Assets/footer-shared.css" rel="stylesheet"/>
+<link href="Assets/mobile-approved.css" rel="stylesheet"/>
+<script defer="" src="Assets/mobile-approved.js"></script>
+<link href="Assets/mobile-header-uniform.css?v=1" rel="stylesheet"/>
+<link href="Assets/desktop-final.css?v=2" rel="stylesheet"/>
+<link href="Assets/qa-owner-fixes.css?v=2" rel="stylesheet"/>
+
+
+<link href="Assets/index-shell-copy.css?v=2" rel="stylesheet"/><link rel="stylesheet" href="Assets/index-footer-lock.css?v=10">
+
+<style id="footer-dedup-final-v11">
+@media (min-width:901px){
+  .legacy-footer-mobile-only{display:none !important;}
+  .index-footer-desktop-copy{display:block !important;width:100vw !important;margin:0 calc(50% - 50vw) !important;line-height:0 !important;background:#02090b !important;}
+  .index-footer-desktop-copy img{display:block !important;width:100% !important;height:auto !important;margin:0 !important;padding:0 !important;}
+}
+@media (max-width:900px){
+  .index-footer-desktop-copy{display:none !important;}
+  .legacy-footer-mobile-only{display:block !important;}
+}
+</style>
+
+<style id="services-pixel-approved-v28">
+@media (min-width:901px){
+  /* Header et footer verrouillés : aucune règle ne les cible. */
+  body > .services-pixel-page{
+    display:block!important;width:100vw!important;max-width:none!important;
+    margin:0!important;padding:0!important;background:#03151b!important;line-height:0!important;
+  }
+  .services-pixel-stage{position:relative!important;width:100%!important;margin:0!important;padding:0!important;line-height:0!important}
+  .services-pixel-stage>img{display:block!important;width:100%!important;height:auto!important;margin:0!important;padding:0!important}
+  .svc-hotspot{position:absolute!important;display:block!important;z-index:10!important;background:transparent!important}
+
+  .hs-inventory{left:3%;top:45%;width:17%;height:5%}
+  .hs-diagnostic{left:21%;top:45%;width:18%;height:5%}
+  .hs-upgrade{left:40%;top:45%;width:18%;height:5%}
+  .hs-gaming{left:59%;top:45%;width:18%;height:5%}
+  .hs-home{left:78%;top:45%;width:19%;height:5%}
+  .hs-contact{left:78%;top:91%;width:18%;height:6%}
+
+  /* Ancien contenu desktop seulement. */
+  body > .services-pixel-page ~ main,
+  body > .services-pixel-page ~ .page-main,
+  body > .services-pixel-page ~ .hero,
+  body > .services-pixel-page ~ section:not(.legacy-footer-mobile-only){
+    display:none!important;
+  }
+}
+@media (max-width:900px){.services-pixel-page{display:none!important}}
+</style>
+
 </head>
-<body data-mobile-page="services" class="services-page">
-<header class="site-header"><div class="container nav"><a class="brand-link" href="index.html"><img alt="ForgePC Mauricie" class="logo" src="Assets/forgepc-logo-web.png"/></a><nav class="navlinks"><a href="index.html">Accueil</a><a class="active" href="services.html">Services</a><a href="inventaire.html">Inventaire</a><a href="a-propos.html">À propos</a><a href="contact.html">Contact</a></nav><div class="nav-location">📍 <span>Shawinigan et<br/>toute la Mauricie</span></div><button aria-expanded="false" aria-label="Ouvrir le menu" class="menu" type="button">☰</button></div></header>
+<body class="services-page fp-index-shell-copy" data-mobile-page="services"><header class="site-header">
+<div class="container nav">
+<a aria-label="ForgePC Mauricie" class="brand-link" href="index.html">
+<img alt="ForgePC Mauricie" class="logo" src="Assets/forgepc-logo-web.png"/>
+</a>
+<nav aria-label="Navigation principale" class="navlinks">
+<a href="index.html">Accueil</a>
+<a class="active" href="services.html">Services</a>
+<a href="inventaire.html">Inventaire</a>
+<a href="a-propos.html">À propos</a>
+<a href="contact.html">Contact</a>
+</nav>
+<div class="nav-location"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.1 7 13 7 13s7-7.9 7-13a7 7 0 0 0-7-7Zm0 9.6A2.6 2.6 0 1 1 12 6a2.6 2.6 0 0 1 0 5.6Z"></path></svg><span>Shawinigan et<br/>toute la Mauricie</span></div>
+<button aria-expanded="false" aria-label="Ouvrir le menu" class="menu" type="button">☰</button>
+</div>
+</header>
+
+<div class="services-pixel-page" aria-label="Services — ForgePC Mauricie">
+  <div class="services-pixel-stage">
+    <img src="Assets/services-content-approved.png" alt="Nos services — ForgePC Mauricie">
+    <a class="svc-hotspot hs-inventory" href="inventaire.html" aria-label="Voir l'inventaire"></a>
+    <a class="svc-hotspot hs-diagnostic" href="forgepc_diagnostic.html" aria-label="Demander un diagnostic"></a>
+    <a class="svc-hotspot hs-upgrade" href="mise-a-niveau.html" aria-label="Demander une évaluation"></a>
+    <a class="svc-hotspot hs-gaming" href="pc-gaming-sur-mesure.html" aria-label="Discuter de votre projet"></a>
+    <a class="svc-hotspot hs-home" href="service-a-domicile.html" aria-label="Service à domicile"></a>
+    <a class="svc-hotspot hs-contact" href="contact.html" aria-label="Nous contacter"></a>
+  </div>
+</div>
+
+
+
 <nav class="navlinks mobile-only"><a href="index.html">Accueil</a><a class="active" href="services.html">Services</a><a href="inventaire.html">Inventaire</a><a href="a-propos.html">À propos</a><a href="contact.html">Contact</a></nav>
 <main>
 <section class="services-hero"><div class="container"><div class="services-copy"><div class="services-eyebrow">— NOS SERVICES —</div><h1>DES SOLUTIONS<br/>POUR TOUS <span>VOS BESOINS</span></h1><p>Réparer. Améliorer. Optimiser.<br/>Ici, en Mauricie.</p><div class="script">Votre technologie,<br/>notre expertise.</div><div class="benefits"><span><b>✓</b>Fiabilité</span><span><b>⚙</b>Performance</span><span><b>●</b>Économie</span><span><b>⌂</b>Service local</span></div></div></div></section>
@@ -18,7 +92,7 @@
 <article class="services-card"><div class="img"><img alt="Réparations" src="Assets/service-repair.jpg"/></div><div class="body"><h3><a href="forgepc_diagnostic.html"><span class="service-icon">⚒</span> RÉPARATIONS</a></h3><p>Diagnostic, réparation et solutions durables pour vos appareils.</p><a class="orange-link" href="forgepc_diagnostic.html">Demander un diagnostic →</a></div></article>
 <article class="services-card"><div class="img"><img alt="Mises à niveau" src="Assets/service-upgrade.jpg"/></div><div class="body"><h3><a href="mise-a-niveau.html"><span class="service-icon">⚙</span> MISES À NIVEAU</a></h3><p>Améliorer les performances sans dépenser inutilement.</p><a class="orange-link" href="mise-a-niveau.html">Demander une évaluation →</a></div></article>
 <article class="services-card"><div class="img"><img alt="PC gaming sur mesure" src="Assets/gaming-rgb-tower-maquette.jpg"/></div><div class="body"><h3><a href="pc-gaming-sur-mesure.html"><span class="service-icon">◉</span> PC GAMING SUR MESURE</a></h3><p>Des configurations adaptées à vos besoins et à votre budget.</p><a class="orange-link" href="pc-gaming-sur-mesure.html">Discuter de votre projet →</a></div></article>
-<article class="services-card"><div class="img"><img alt="Service à domicile ForgePC" src="Assets/subaru-wrx-officiel-crop.jpg"/></div><div class="body"><h3><a href="rdv-service-domicile.html"><span class="service-icon">⌂</span> SERVICE À DOMICILE</a></h3><p>On se déplace dans la Mauricie selon vos besoins.</p><a class="orange-link" href="rdv-service-domicile.html">Demander un rendez-vous →</a></div></article>
+<article class="services-card"><div class="img"><img alt="Service à domicile ForgePC" src="Assets/subaru-wrx-officiel-crop.jpg"/></div><div class="body"><h3><a href="service-a-domicile.html"><span class="service-icon">⌂</span> SERVICE À DOMICILE</a></h3><p>On se déplace dans la Mauricie selon vos besoins.</p><a class="orange-link" href="service-a-domicile.html">Demander un rendez-vous →</a></div></article>
 </div></div></section>
 <section class="section how"><div class="container"><div class="title-line"><h2 class="section-title">Comment ça fonctionne ?</h2></div><div class="section-sub">Simple, transparent et sans surprises.</div><div class="steps">
 <div class="step"><div class="num">1</div><div><strong>Vous nous contactez</strong><p>Vous nous expliquez votre problème ou votre besoin.</p></div></div>
@@ -27,67 +101,68 @@
 <div class="step"><div class="num">4</div><div><strong>Votre ordinateur repart prêt à fonctionner</strong><p>Un service fiable et honnête.</p></div></div>
 </div></div></section>
 <section class="section"><div class="container info-grid">
-<article class="info-box"><h3><span class="info-icon info-icon-search" aria-hidden="true"></span><span>LE DIAGNOSTIC</span></h3><p>Un problème informatique ? On commence par chercher la cause.</p><p>Avant de vous conseiller une réparation ou un remplacement, nous évaluons la situation afin de déterminer ce qui vaut réellement la peine d'être fait.</p><a class="orange-link" href="forgepc_diagnostic.html">Demander un diagnostic →</a></article>
-<article class="info-box"><h3><span class="info-icon info-icon-pin" aria-hidden="true"></span><span>NOTRE SECTEUR</span></h3><p>Shawinigan et toute la Mauricie</p><img alt="La Mauricie" class="sector" src="Assets/mauricie-landscape-approved.jpg"/><p>Nous offrons nos services à Shawinigan et dans les environs, incluant Trois-Rivières et les municipalités de la Mauricie.</p><a class="orange-link" href="contact.html">En savoir plus →</a></article>
-<article class="info-box"><h3><span class="info-icon info-icon-question" aria-hidden="true">?</span><span>FOIRE AUX QUESTIONS</span></h3><div class="faq-wrap"><div class="faq-row">Combien coûte un diagnostic ?<b>+</b></div><div class="faq-answer">Le coût dépend du type de diagnostic demandé. Nous vous expliquons les coûts avant toute intervention.</div><div class="faq-row">Est-ce que vous vous déplacez à domicile ?<b>+</b></div><div class="faq-answer">Oui, selon le secteur, la disponibilité et le type de service.</div><div class="faq-row">Pouvez-vous récupérer mes données ?<b>+</b></div><div class="faq-answer">Nous pouvons évaluer les options de récupération selon l'état du support.</div><div class="faq-row">Réparez-vous les ordinateurs portables ?<b>+</b></div><div class="faq-answer">Oui, après évaluation du problème et de la faisabilité.</div><div class="faq-row">Est-ce que vous installez Windows ?<b>+</b></div><div class="faq-answer">Oui, lorsque le matériel et la licence le permettent.</div><div class="faq-row">Une mise à niveau vaut-elle le coup sur un vieux PC ?<b>+</b></div><div class="faq-answer">Nous évaluons d'abord le PC afin d'éviter de dépenser inutilement.</div><a class="orange-link" href="contact.html" style="display:inline-block;margin-top:7px">Voir toutes les FAQ →</a></div></article>
+<article class="info-box"><h3><span aria-hidden="true" class="info-icon info-icon-search"></span><span>LE DIAGNOSTIC</span></h3><p>Un problème informatique ? On commence par chercher la cause.</p><p>Avant de vous conseiller une réparation ou un remplacement, nous évaluons la situation afin de déterminer ce qui vaut réellement la peine d'être fait.</p><a class="orange-link" href="forgepc_diagnostic.html">Demander un diagnostic →</a></article>
+<article class="info-box"><h3><span aria-hidden="true" class="info-icon info-icon-pin"></span><span>NOTRE SECTEUR</span></h3><p>Shawinigan et toute la Mauricie</p><img alt="La Mauricie" class="sector" src="Assets/mauricie-landscape-approved.jpg"/><p>Nous offrons nos services à Shawinigan et dans les environs, incluant Trois-Rivières et les municipalités de la Mauricie.</p><a class="orange-link" href="contact.html">En savoir plus →</a></article>
+<article class="info-box"><h3><span aria-hidden="true" class="info-icon info-icon-question">?</span><span>FOIRE AUX QUESTIONS</span></h3><div class="faq-wrap"><div class="faq-row">Combien coûte un diagnostic ?<b>+</b></div><div class="faq-answer">Le coût dépend du type de diagnostic demandé. Nous vous expliquons les coûts avant toute intervention.</div><div class="faq-row">Est-ce que vous vous déplacez à domicile ?<b>+</b></div><div class="faq-answer">Oui, selon le secteur, la disponibilité et le type de service.</div><div class="faq-row">Pouvez-vous récupérer mes données ?<b>+</b></div><div class="faq-answer">Nous pouvons évaluer les options de récupération selon l'état du support.</div><div class="faq-row">Réparez-vous les ordinateurs portables ?<b>+</b></div><div class="faq-answer">Oui, après évaluation du problème et de la faisabilité.</div><div class="faq-row">Est-ce que vous installez Windows ?<b>+</b></div><div class="faq-answer">Oui, lorsque le matériel et la licence le permettent.</div><div class="faq-row">Une mise à niveau vaut-elle le coup sur un vieux PC ?<b>+</b></div><div class="faq-answer">Nous évaluons d'abord le PC afin d'éviter de dépenser inutilement.</div><a class="orange-link" href="contact.html" style="display:inline-block;margin-top:7px">Voir toutes les FAQ →</a></div></article>
 </div></section>
-<section class="mobile-info-accordion" aria-label="Informations ForgePC">
-  <div class="mobile-info-item">
-    <button class="mobile-info-toggle" type="button" aria-expanded="false">
-      <span class="mobile-info-icon search" aria-hidden="true"></span><span>LE DIAGNOSTIC</span><b aria-hidden="true">+</b>
-    </button>
-    <div class="mobile-info-panel">
-      <p>Un problème informatique ? On commence par chercher la cause.</p>
-      <p>Avant de vous conseiller une réparation ou un remplacement, nous évaluons la situation afin de déterminer ce qui vaut réellement la peine d'être fait.</p>
-      <a class="orange-link" href="forgepc_diagnostic.html">Demander un diagnostic →</a>
-    </div>
-  </div>
-  <div class="mobile-info-item">
-    <button class="mobile-info-toggle" type="button" aria-expanded="false">
-      <span class="mobile-info-icon pin" aria-hidden="true"></span><span>NOTRE SECTEUR</span><b aria-hidden="true">+</b>
-    </button>
-    <div class="mobile-info-panel">
-      <p class="mobile-sector-title">Shawinigan et toute la Mauricie</p>
-      <img alt="La Mauricie" class="sector" src="Assets/mauricie-landscape-approved.jpg"/>
-      <p>Nous offrons nos services à Shawinigan et dans les environs, incluant Trois-Rivières et les municipalités de la Mauricie.</p>
-      <a class="orange-link" href="contact.html">En savoir plus →</a>
-    </div>
-  </div>
-  <div class="mobile-info-item">
-    <button class="mobile-info-toggle" type="button" aria-expanded="false">
-      <span class="mobile-info-icon question" aria-hidden="true">?</span><span>FOIRE AUX QUESTIONS</span><b aria-hidden="true">+</b>
-    </button>
-    <div class="mobile-info-panel faq-panel">
-      <div class="faq-row">Combien coûte un diagnostic ?<b>+</b></div>
-      <div class="faq-answer">Le coût dépend du type de diagnostic demandé. Nous vous expliquons les coûts avant toute intervention.</div>
-      <div class="faq-row">Est-ce que vous vous déplacez à domicile ?<b>+</b></div>
-      <div class="faq-answer">Oui, selon le secteur, la disponibilité et le type de service.</div>
-      <div class="faq-row">Pouvez-vous récupérer mes données ?<b>+</b></div>
-      <div class="faq-answer">Nous pouvons évaluer les options de récupération selon l'état du support.</div>
-      <div class="faq-row">Réparez-vous les ordinateurs portables ?<b>+</b></div>
-      <div class="faq-answer">Oui, après évaluation du problème et de la faisabilité.</div>
-      <div class="faq-row">Est-ce que vous installez Windows ?<b>+</b></div>
-      <div class="faq-answer">Oui, lorsque le matériel et la licence le permettent.</div>
-      <div class="faq-row">Une mise à niveau vaut-elle le coup sur un vieux PC ?<b>+</b></div>
-      <div class="faq-answer">Nous évaluons d'abord le PC afin d'éviter de dépenser inutilement.</div>
-      <a class="orange-link" href="contact.html">Voir toutes les FAQ →</a>
-    </div>
-  </div>
+<section aria-label="Informations ForgePC" class="mobile-info-accordion">
+<div class="mobile-info-item">
+<button aria-expanded="false" class="mobile-info-toggle" type="button">
+<span aria-hidden="true" class="mobile-info-icon search"></span><span>LE DIAGNOSTIC</span><b aria-hidden="true">+</b>
+</button>
+<div class="mobile-info-panel">
+<p>Un problème informatique ? On commence par chercher la cause.</p>
+<p>Avant de vous conseiller une réparation ou un remplacement, nous évaluons la situation afin de déterminer ce qui vaut réellement la peine d'être fait.</p>
+<a class="orange-link" href="forgepc_diagnostic.html">Demander un diagnostic →</a>
+</div>
+</div>
+<div class="mobile-info-item">
+<button aria-expanded="false" class="mobile-info-toggle" type="button">
+<span aria-hidden="true" class="mobile-info-icon pin"></span><span>NOTRE SECTEUR</span><b aria-hidden="true">+</b>
+</button>
+<div class="mobile-info-panel">
+<p class="mobile-sector-title">Shawinigan et toute la Mauricie</p>
+<img alt="La Mauricie" class="sector" src="Assets/mauricie-landscape-approved.jpg"/>
+<p>Nous offrons nos services à Shawinigan et dans les environs, incluant Trois-Rivières et les municipalités de la Mauricie.</p>
+<a class="orange-link" href="contact.html">En savoir plus →</a>
+</div>
+</div>
+<div class="mobile-info-item">
+<button aria-expanded="false" class="mobile-info-toggle" type="button">
+<span aria-hidden="true" class="mobile-info-icon question">?</span><span>FOIRE AUX QUESTIONS</span><b aria-hidden="true">+</b>
+</button>
+<div class="mobile-info-panel faq-panel">
+<div class="faq-row">Combien coûte un diagnostic ?<b>+</b></div>
+<div class="faq-answer">Le coût dépend du type de diagnostic demandé. Nous vous expliquons les coûts avant toute intervention.</div>
+<div class="faq-row">Est-ce que vous vous déplacez à domicile ?<b>+</b></div>
+<div class="faq-answer">Oui, selon le secteur, la disponibilité et le type de service.</div>
+<div class="faq-row">Pouvez-vous récupérer mes données ?<b>+</b></div>
+<div class="faq-answer">Nous pouvons évaluer les options de récupération selon l'état du support.</div>
+<div class="faq-row">Réparez-vous les ordinateurs portables ?<b>+</b></div>
+<div class="faq-answer">Oui, après évaluation du problème et de la faisabilité.</div>
+<div class="faq-row">Est-ce que vous installez Windows ?<b>+</b></div>
+<div class="faq-answer">Oui, lorsque le matériel et la licence le permettent.</div>
+<div class="faq-row">Une mise à niveau vaut-elle le coup sur un vieux PC ?<b>+</b></div>
+<div class="faq-answer">Nous évaluons d'abord le PC afin d'éviter de dépenser inutilement.</div>
+<a class="orange-link" href="contact.html">Voir toutes les FAQ →</a>
+</div>
+</div>
 </section>
 <section class="services-cta"><div class="container"><h2>Vous avez un projet ou un problème informatique ?<span>Parlons-en.</span></h2><a class="btn" href="contact.html">Nous contacter →</a></div></section>
 </main>
-<footer id="forgepc-footer">
-  <div class="fp-wrap">
-    <div class="fp-main">
-      <img alt="ForgePC Mauricie" class="fp-logo" src="Assets/forgepc-logo-web.png">
-      <div class="fp-tag">Votre technologie, notre expertise.</div>
-      <div class="fp-social" aria-label="Réseaux sociaux"><span>ⓕ</span><span>◎</span></div>
-      <div class="fp-contact"><span>📍 Shawinigan et toute la Mauricie</span><span>☎ 819-944-7418</span><span>✉ info@forgepcmauricie.ca</span></div>
-    </div>
-    <div class="fp-bottom"><span>© 2026 ForgePC Mauricie. Tous droits réservés.</span><span>Politique de confidentialité&nbsp;&nbsp; | &nbsp;&nbsp;Mentions légales</span></div>
-  </div>
-</footer>
-<script>
+
+<div class="index-footer-desktop-copy" aria-hidden="true"><img src="Assets/index-footer-approved-2x.png?v=2" alt=""></div>
+<div class="legacy-footer-mobile-only"><footer id="forgepc-footer">
+<div class="fp-wrap">
+<div class="fp-main">
+<img alt="ForgePC Mauricie" class="fp-logo" src="Assets/forgepc-logo-web.png"/>
+<div class="fp-tag">Votre technologie, notre expertise.</div>
+<div aria-label="Réseaux sociaux" class="fp-social"><span class="social-circle">f</span><span class="social-circle">◎</span></div>
+<div class="fp-contact"><span><svg viewbox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.1 7 13 7 13s7-7.9 7-13a7 7 0 0 0-7-7Zm0 9.6A2.6 2.6 0 1 1 12 6a2.6 2.6 0 0 1 0 5.6Z"></path></svg>Shawinigan et toute la Mauricie</span><span><svg viewbox="0 0 24 24"><path d="M6.6 2.8 10 8.1 7.8 10c1.6 3.3 3.9 5.6 7.2 7.2l1.9-2.2 5.3 3.4c-.5 2.1-2.1 3.6-4.2 3.6C9.2 22 2 14.8 2 6c0-2.1 1.5-3.7 4.6-3.2Z"></path></svg>819-944-7418</span><span><svg viewbox="0 0 24 24"><path d="M3 5h18v14H3V5Zm2 2 7 5 7-5H5Z"></path></svg>info@forgepcmauricie.ca</span></div>
+</div>
+<div class="fp-bottom"><span>© 2026 ForgePC Mauricie. Tous droits réservés.</span><span>Politique de confidentialité   |   Mentions légales</span></div>
+</div>
+</footer></div><script>
 const b=document.querySelector('.menu'),m=document.querySelector('.mobile-only');
 b.addEventListener('click',()=>{const o=m.classList.toggle('open');b.setAttribute('aria-expanded',o)});
 

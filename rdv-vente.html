@@ -252,11 +252,10 @@ img { max-width:100%; }
 .hero, .story, .values, .bottom, main, section { isolation:isolate; }
 </style>
 <link href="/Assets/global-fixes.css" rel="stylesheet"/>
-<link rel="stylesheet" href="Assets/footer-shared.css">
-<link rel="stylesheet" href="Assets/mobile-approved.css">
-<script src="Assets/mobile-approved.js" defer></script>
-<link rel="stylesheet" href="Assets/mobile-header-uniform.css?v=1">
-
+<link href="Assets/footer-shared.css" rel="stylesheet"/>
+<link href="Assets/mobile-approved.css" rel="stylesheet"/>
+<script defer="" src="Assets/mobile-approved.js"></script>
+<link href="Assets/mobile-header-uniform.css?v=1" rel="stylesheet"/>
 <style>
 /* RDV VENTE — ajustements desktop selon maquette finale. Mobile inchangé. */
 @media (min-width:901px){
@@ -297,22 +296,88 @@ img { max-width:100%; }
   body[data-mobile-page="rdv-vente"] #forgepc-footer .fp-bottom{min-height:32px!important;font-size:9px!important}
 }
 </style>
-<link rel="stylesheet" href="Assets/qa-owner-fixes.css?v=1">
+<link href="Assets/qa-owner-fixes.css?v=2" rel="stylesheet"/>
+
+
+<link href="Assets/forgepc.css" rel="stylesheet"/><link href="Assets/index-shell-copy.css?v=2" rel="stylesheet"/><link rel="stylesheet" href="Assets/index-footer-lock.css?v=10">
+
+<style id="footer-dedup-final-v11">
+@media (min-width:901px){
+  .legacy-footer-mobile-only{display:none !important;}
+  .index-footer-desktop-copy{display:block !important;width:100vw !important;margin:0 calc(50% - 50vw) !important;line-height:0 !important;background:#02090b !important;}
+  .index-footer-desktop-copy img{display:block !important;width:100% !important;height:auto !important;margin:0 !important;padding:0 !important;}
+}
+@media (max-width:900px){
+  .index-footer-desktop-copy{display:none !important;}
+  .legacy-footer-mobile-only{display:block !important;}
+}
+</style>
+
+<style id="rdv-sale-pixel-approved-v25">
+@media (min-width:901px){
+  /* Header et footer verrouillés : aucune règle ne les cible. */
+  body > .rdv-sale-pixel-page{
+    display:block!important;
+    width:100vw!important;
+    max-width:none!important;
+    margin:0!important;
+    padding:0!important;
+    background:#03151b!important;
+    line-height:0!important;
+  }
+  .rdv-sale-pixel-stage{
+    position:relative!important;
+    width:100%!important;
+    margin:0!important;
+    padding:0!important;
+    line-height:0!important;
+  }
+  .rdv-sale-pixel-stage>img{
+    display:block!important;
+    width:100%!important;
+    height:auto!important;
+    margin:0!important;
+    padding:0!important;
+  }
+  /* Masquer uniquement l'ancien contenu desktop. */
+  body > .rdv-sale-pixel-page ~ main,
+  body > .rdv-sale-pixel-page ~ .page-main,
+  body > .rdv-sale-pixel-page ~ .hero,
+  body > .rdv-sale-pixel-page ~ section:not(.legacy-footer-mobile-only){
+    display:none!important;
+  }
+}
+@media (max-width:900px){
+  .rdv-sale-pixel-page{display:none!important}
+}
+</style>
+
 </head>
-<body data-mobile-page="rdv-vente">
-<header class="site-header">
+<body class="rdv-sale-page fp-index-shell-copy" data-mobile-page="rdv-vente"><header class="site-header">
 <div class="container nav">
-<a class="brand-link" aria-label="ForgePC Mauricie" href="index.html"><img alt="ForgePC Mauricie" class="logo" src="/Assets/forgepc-logo-original-v3.png"/></a>
+<a aria-label="ForgePC Mauricie" class="brand-link" href="index.html">
+<img alt="ForgePC Mauricie" class="logo" src="Assets/forgepc-logo-web.png"/>
+</a>
 <nav aria-label="Navigation principale" class="navlinks">
-<a href="index.html">ACCUEIL</a>
-<a href="inventaire.html">INVENTAIRE</a>
-<a href="services.html">SERVICES</a>
-<a href="a-propos.html">À PROPOS</a>
-<a href="contact.html">CONTACT</a>
+<a href="index.html">Accueil</a>
+<a href="services.html">Services</a>
+<a class="active" href="inventaire.html">Inventaire</a>
+<a href="a-propos.html">À propos</a>
+<a href="contact.html">Contact</a>
 </nav>
+<div class="nav-location"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.1 7 13 7 13s7-7.9 7-13a7 7 0 0 0-7-7Zm0 9.6A2.6 2.6 0 1 1 12 6a2.6 2.6 0 0 1 0 5.6Z"></path></svg><span>Shawinigan et<br/>toute la Mauricie</span></div>
 <button aria-expanded="false" aria-label="Ouvrir le menu" class="menu" type="button">☰</button>
 </div>
 </header>
+
+<div class="rdv-sale-pixel-page" aria-label="Rendez-vous vente — ForgePC Mauricie">
+  <div class="rdv-sale-pixel-stage">
+    <img src="Assets/rdv-vente-content-approved.png" alt="Prendre rendez-vous pour l'achat de ce PC — ForgePC Mauricie">
+  </div>
+</div>
+
+
+
 <section class="hero">
 <div class="container hero-inner">
 <div>
@@ -348,10 +413,10 @@ img { max-width:100%; }
 <h2>Votre demande est prête.</h2>
 <p>Votre logiciel de courriel va s'ouvrir avec la demande adressée à <strong>ventes@forgepcmauricie.ca</strong>. Vérifiez le message puis envoyez-le.</p>
 </div>
-<form id="salesForm" action="https://formsubmit.co/ventes@forgepcmauricie.ca" method="POST" enctype="multipart/form-data">
-<input type="hidden" name="_subject" id="salesSubject" value="Demande de rendez-vous vente - PC">
-<input type="hidden" name="_captcha" value="false">
-<input type="hidden" name="Numéro de stock" id="salesStock" value="Non précisé">
+<form action="https://formsubmit.co/ventes@forgepcmauricie.ca" enctype="multipart/form-data" id="salesForm" method="POST">
+<input id="salesSubject" name="_subject" type="hidden" value="Demande de rendez-vous vente - PC"/>
+<input name="_captcha" type="hidden" value="false"/>
+<input id="salesStock" name="Numéro de stock" type="hidden" value="Non précisé"/>
 <div class="form-grid">
 <div class="field"><label for="name">Nom complet <em>*</em></label><input id="name" name="Nom" placeholder="Votre nom" required=""/></div>
 <div class="field"><label for="phone">Téléphone <em>*</em></label><input id="phone" name="Téléphone" placeholder="(819) 123-4567" required=""/></div>
@@ -365,7 +430,7 @@ img { max-width:100%; }
 <label class="choice"><input name="type" type="radio" value="Autre"/> Autre</label>
 </div>
 </div>
-<div class="field full"><label for="message">Message (optionnel)</label><textarea id="message" name="Message" maxlength="1000" placeholder="Écrivez votre message ici...
+<div class="field full"><label for="message">Message (optionnel)</label><textarea id="message" maxlength="1000" name="Message" placeholder="Écrivez votre message ici...
 Ex. : disponibilité, accessoires inclus, possibilité d'essai, etc."></textarea></div>
 </div>
 <div class="privacy">🔒 Vos informations sont confidentielles.</div>
@@ -380,18 +445,19 @@ Ex. : disponibilité, accessoires inclus, possibilité d'essai, etc."></textarea
 <div class="feature"><b>◉</b><strong>Réponse rapide</strong><p>Nous vous contactons rapidement.</p></div>
 </div>
 </main>
-<footer id="forgepc-footer">
-  <div class="fp-wrap">
-    <div class="fp-main">
-      <img alt="ForgePC Mauricie" class="fp-logo" src="Assets/forgepc-logo-web.png">
-      <div class="fp-tag">Votre technologie, notre expertise.</div>
-      <div class="fp-social" aria-label="Réseaux sociaux"><span>ⓕ</span><span>◎</span></div>
-      <div class="fp-contact"><span>📍 Shawinigan et toute la Mauricie</span><span>☎ 819-944-7418</span><span>✉ info@forgepcmauricie.ca</span></div>
-    </div>
-    <div class="fp-bottom"><span>© 2026 ForgePC Mauricie. Tous droits réservés.</span><span>Politique de confidentialité&nbsp;&nbsp; | &nbsp;&nbsp;Mentions légales</span></div>
-  </div>
-</footer>
-<script>
+
+<div class="index-footer-desktop-copy" aria-hidden="true"><img src="Assets/index-footer-approved-2x.png?v=2" alt=""></div>
+<div class="legacy-footer-mobile-only"><footer id="forgepc-footer">
+<div class="fp-wrap">
+<div class="fp-main">
+<img alt="ForgePC Mauricie" class="fp-logo" src="Assets/forgepc-logo-web.png"/>
+<div class="fp-tag">Votre technologie, notre expertise.</div>
+<div aria-label="Réseaux sociaux" class="fp-social"><span class="social-circle">f</span><span class="social-circle">◎</span></div>
+<div class="fp-contact"><span><svg viewbox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.1 7 13 7 13s7-7.9 7-13a7 7 0 0 0-7-7Zm0 9.6A2.6 2.6 0 1 1 12 6a2.6 2.6 0 0 1 0 5.6Z"></path></svg>Shawinigan et toute la Mauricie</span><span><svg viewbox="0 0 24 24"><path d="M6.6 2.8 10 8.1 7.8 10c1.6 3.3 3.9 5.6 7.2 7.2l1.9-2.2 5.3 3.4c-.5 2.1-2.1 3.6-4.2 3.6C9.2 22 2 14.8 2 6c0-2.1 1.5-3.7 4.6-3.2Z"></path></svg>819-944-7418</span><span><svg viewbox="0 0 24 24"><path d="M3 5h18v14H3V5Zm2 2 7 5 7-5H5Z"></path></svg>info@forgepcmauricie.ca</span></div>
+</div>
+<div class="fp-bottom"><span>© 2026 ForgePC Mauricie. Tous droits réservés.</span><span>Politique de confidentialité   |   Mentions légales</span></div>
+</div>
+</footer></div><script>
 const SHEET_ID="15llqGhrLL9I6SFxyFrxfbNY2ZuBXDswok_BwxPR7JqU";
 const SHEET_NAME="Inventaire";
 const SHEET_CSV_URL="https://docs.google.com/spreadsheets/d/"+SHEET_ID+"/gviz/tq?tqx=out:csv&sheet="+encodeURIComponent(SHEET_NAME)+"&range=Inventaire!A3:X";
