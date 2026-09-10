@@ -15,7 +15,7 @@
   width:min(1400px, calc(100% - 40px));
 }
 .home-page .site-header .logo{
-  content:url('forgepc-logo-web.webp') !important;
+  content:url('forgepc-logo-web.png') !important;
 }
 .home-page .site-header .nav{
   min-height:76px;
@@ -449,7 +449,7 @@
   .home-page .footer-logo{
     grid-area:logo;width:112px;max-width:112px;height:48px;margin:0;
     object-fit:contain;object-position:left center;
-    content:url('forgepc-logo-web.webp') !important;
+    content:url('forgepc-logo-web.png') !important;
   }
   .home-page .footer-tag{display:none}
   .home-page .footer-social{
@@ -575,7 +575,7 @@
     grid-area:logo;flex:initial!important;
     width:108px!important;height:55px!important;
     margin:0!important;object-fit:contain;object-position:left center;
-    content:url('forgepc-logo-web.webp')!important;
+    content:url('forgepc-logo-web.png')!important;
   }
   .home-page .footer-social{grid-area:social;display:flex!important;justify-content:flex-end;align-items:center;gap:14px;margin:0!important;letter-spacing:0!important;}
   .home-page .footer-social .social-facebook{width:25px;height:25px;font-size:17px;}
@@ -657,7 +657,7 @@
     margin:0!important;
     object-fit:contain!important;
     object-position:left center!important;
-    content:url('forgepc-logo-web.webp')!important;
+    content:url('forgepc-logo-web.png')!important;
   }
   .home-page .site-footer .footer-tag{display:none!important;}
   .home-page .site-footer .footer-social{
@@ -766,7 +766,7 @@
     max-height:52px!important;
     object-fit:contain!important;
     object-position:left center!important;
-    content:url('forgepc-logo-web.webp')!important;
+    content:url('forgepc-logo-web.png')!important;
   }
   .home-page .site-footer .footer-social{
     gap:15px!important;

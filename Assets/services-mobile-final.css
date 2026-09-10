@@ -72,7 +72,7 @@
   .services-page .info-box>p,.services-page .info-box>a,.services-page .sector,.services-page .faq-wrap{display:none!important;}
 
   /* CTA */
-  .services-page .services-cta{height:96px!important;min-height:96px!important;margin:0!important;background-image:linear-gradient(90deg,rgba(2,11,15,.72),rgba(2,11,15,.30)),url('services-cta-maquette-exact.jpg')!important;background-position:center!important;background-size:cover!important;background-repeat:no-repeat!important;}
+  .services-page .services-cta{height:96px!important;min-height:96px!important;margin:0!important;background-image:linear-gradient(90deg,rgba(2,11,15,.72),rgba(2,11,15,.30)),url('services-cta-maquette-clean.jpg')!important;background-position:center!important;background-size:cover!important;background-repeat:no-repeat!important;}
   .services-page .services-cta .container{height:100%!important;padding:9px 8px!important;box-sizing:border-box!important;display:flex!important;align-items:center!important;justify-content:space-between!important;gap:7px!important;}
   .services-page .services-cta h2{font-size:13px!important;line-height:1.02!important;max-width:60%!important;margin:0!important;font-weight:900!important;}
   .services-page .services-cta h2 span{display:inline!important;color:#ff5a00!important;}
@@ -194,7 +194,7 @@
   .services-page .info-grid .info-box:nth-child(2)>.sector{display:none!important;}
   .services-page .info-grid .info-box:nth-child(2) h3{display:flex!important;}
   .services-page footer .footer-logo{
-    content:url('logo-footer-final.png')!important;
+    content:url('forgepc-logo-officiel.png')!important;
     width:132px!important;
     height:58px!important;
     object-fit:contain!important;
@@ -561,7 +561,7 @@
 @media (max-width:900px){
   /* Footer: use the exact same logo artwork as the mobile header. */
   .services-page footer .footer-logo{
-    content:url('forgepc-logo-web.webp')!important;
+    content:url('forgepc-logo-web.png')!important;
     width:112px!important;
     max-width:112px!important;
     height:48px!important;
