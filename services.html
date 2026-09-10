@@ -1,130 +1,168 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="fr-CA">
-<head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/><title>Services | ForgePC Mauricie</title><meta content="Réparations, mises à niveau, PC remis à neuf, PC gaming sur mesure et service à domicile en Mauricie." name="description"/><link href="Assets/forgepc.css" rel="stylesheet"/><link href="Assets/services-mobile-final.css" rel="stylesheet"/><link href="Assets/footer-shared.css" rel="stylesheet"/>
-<link href="Assets/mobile-approved.css" rel="stylesheet"/>
-<script defer="" src="Assets/mobile-approved.js"></script>
-<link href="Assets/mobile-header-uniform.css?v=1" rel="stylesheet"/>
-<link href="Assets/desktop-final.css?v=2" rel="stylesheet"/>
-<link href="Assets/qa-owner-fixes.css?v=2" rel="stylesheet"/>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Services | ForgePC Mauricie</title>
 
+<link rel="stylesheet" href="Assets/forgepc.css">
+<link rel="stylesheet" href="Assets/services-mobile-final.css">
+<link rel="stylesheet" href="Assets/footer-shared.css">
+<link rel="stylesheet" href="Assets/mobile-approved.css">
+<link rel="stylesheet" href="Assets/mobile-header-uniform.css?v=1">
+<script src="Assets/mobile-approved.js" defer></script>
 
-<link href="Assets/index-shell-copy.css?v=2" rel="stylesheet"/><link rel="stylesheet" href="Assets/index-footer-lock.css?v=10">
-
-<style id="footer-dedup-final-v11">
-@media (min-width:901px){
-  .legacy-footer-mobile-only{display:none !important;}
-  .index-footer-desktop-copy{display:block !important;width:100vw !important;margin:0 calc(50% - 50vw) !important;line-height:0 !important;background:#02090b !important;}
-  .index-footer-desktop-copy img{display:block !important;width:100% !important;height:auto !important;margin:0 !important;padding:0 !important;}
-}
-@media (max-width:900px){
-  .index-footer-desktop-copy{display:none !important;}
-  .legacy-footer-mobile-only{display:block !important;}
-}
-</style>
-
-<style id="services-pixel-approved-v28">
-@media (min-width:901px){
-  /* Header et footer verrouillés : aucune règle ne les cible. */
-  body > .services-pixel-page{
-    display:block!important;width:100vw!important;max-width:none!important;
-    margin:0!important;padding:0!important;background:#03151b!important;line-height:0!important;
-  }
-  .services-pixel-stage{position:relative!important;width:100%!important;margin:0!important;padding:0!important;line-height:0!important}
-  .services-pixel-stage>img{display:block!important;width:100%!important;height:auto!important;margin:0!important;padding:0!important}
-  .svc-hotspot{position:absolute!important;display:block!important;z-index:10!important;background:transparent!important}
-
-  .hs-inventory{left:3%;top:45%;width:17%;height:5%}
-  .hs-diagnostic{left:21%;top:45%;width:18%;height:5%}
-  .hs-upgrade{left:40%;top:45%;width:18%;height:5%}
-  .hs-gaming{left:59%;top:45%;width:18%;height:5%}
-  .hs-home{left:78%;top:45%;width:19%;height:5%}
-  .hs-contact{left:78%;top:91%;width:18%;height:6%}
-
-  /* Ancien contenu desktop seulement. */
-  body > .services-pixel-page ~ main,
-  body > .services-pixel-page ~ .page-main,
-  body > .services-pixel-page ~ .hero,
-  body > .services-pixel-page ~ section:not(.legacy-footer-mobile-only){
-    display:none!important;
-  }
-}
-@media (max-width:900px){.services-pixel-page{display:none!important}}
-</style>
-
-<link rel="stylesheet" href="Assets/shell-index-strict-v41.css?v=41">
-
-<style id="services-v41-fix">
-@media(min-width:901px){
-  .services-pixel-page{
-    width:100%!important;
-    max-width:1124px!important;
-    margin:0 auto!important;
-    padding:0!important;
-    line-height:0!important;
-    background:#061419!important;
-  }
-  .services-pixel-stage{
-    position:relative!important;
-    width:100%!important;
-    max-width:1124px!important;
-    margin:0 auto!important;
-    line-height:0!important;
-  }
-  .services-pixel-stage>img{
-    display:block!important;
-    width:100%!important;
-    height:auto!important;
-    image-rendering:auto!important;
-    pointer-events:none!important;
-  }
-  .services-pixel-stage .pc-hotspot{
-    position:absolute!important;
-    display:block!important;
-    z-index:20!important;
-    pointer-events:auto!important;
-    cursor:pointer!important;
-  }
-  .hs-inventory{left:2.5%!important;top:42.5%!important;width:17.5%!important;height:8%!important}
-  .hs-diagnostic{left:20.5%!important;top:42.5%!important;width:18.5%!important;height:8%!important}
-  .hs-upgrade{left:39.5%!important;top:42.5%!important;width:18.5%!important;height:8%!important}
-  .hs-gaming{left:58.5%!important;top:42.5%!important;width:18.5%!important;height:8%!important}
-  .hs-home{left:77.5%!important;top:42.5%!important;width:20%!important;height:8%!important}
-  .hs-contact{left:76.5%!important;top:91.5%!important;width:19.5%!important;height:6.5%!important}
-}
-</style>
-
-<link rel="stylesheet" href="Assets/real-pages-v43.css?v=43">
-<script defer src="Assets/real-pages-v43.js?v=43"></script>
+<link rel="stylesheet" href="Assets/services-v1-reset.css?v=1">
+<script src="Assets/services-v1-reset.js?v=1" defer></script>
 </head>
-<body class="services-page fp-index-shell-copy" data-mobile-page="services"><header class="site-header">
-  <div class="container nav">
-    <a class="brand-link" href="index.html" aria-label="ForgePC Mauricie">
-      <img class="logo" src="Assets/forgepc-logo-web.webp" alt="ForgePC Mauricie">
-    </a>
-    <nav class="navlinks" aria-label="Navigation principale">
-      <a href="index.html">Accueil</a>
-      <a class="active" href="services.html">Services</a>
-      <a href="inventaire.html">Inventaire</a>
-      <a href="a-propos.html">À propos</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <div class="nav-location"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.1 7 13 7 13s7-7.9 7-13a7 7 0 0 0-7-7Zm0 9.6A2.6 2.6 0 1 1 12 6a2.6 2.6 0 0 1 0 5.6Z"/></svg><span>Shawinigan et<br>toute la Mauricie</span></div>
-    <button class="menu" type="button" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
-  </div>
-</header>
+<body class="services-v1-reset">
 
-<div class="services-pixel-page" aria-label="Services — ForgePC Mauricie">
-  <div class="services-pixel-stage">
-    <img src="Assets/services-content-approved.webp" alt="Nos services — ForgePC Mauricie">
-    <a class="svc-hotspot hs-inventory" href="inventaire.html" aria-label="Voir l'inventaire"></a>
-    <a class="svc-hotspot hs-diagnostic" href="forgepc_diagnostic.html" aria-label="Demander un diagnostic"></a>
-    <a class="svc-hotspot hs-upgrade" href="mise-a-niveau.html" aria-label="Demander une évaluation"></a>
-    <a class="svc-hotspot hs-gaming" href="pc-gaming-sur-mesure.html" aria-label="Discuter de votre projet"></a>
-    <a class="svc-hotspot hs-home" href="service-a-domicile.html" aria-label="Service à domicile"></a>
-    <a class="svc-hotspot hs-contact" href="contact.html" aria-label="Nous contacter"></a>
+<div class="v1-desktop-viewport">
+  <div class="v1-canvas">
+
+    <header class="v1-index-header">
+      <img src="Assets/v1-header-index.png" alt="">
+      <a class="nav-logo" href="index.html" aria-label="ForgePC Mauricie"></a>
+      <a class="nav-home" href="index.html">Accueil</a>
+      <a class="nav-services" href="services.html">Services</a>
+      <a class="nav-inventory" href="inventaire.html">Inventaire</a>
+      <a class="nav-about" href="a-propos.html">À propos</a>
+      <a class="nav-contact" href="contact.html">Contact</a>
+    </header>
+
+    <main class="v1-main">
+      <section class="v1-hero">
+        <div class="hero-copy">
+          <div class="kicker">— NOS SERVICES —</div>
+          <h1>DES SOLUTIONS<br>POUR TOUS<br><span>VOS BESOINS</span></h1>
+          <p>Réparer. Améliorer. Optimiser.<br>Ici, en Mauricie.</p>
+          <div class="signature">Votre technologie,<br>notre expertise.</div>
+        </div>
+        <div class="hero-img"></div>
+      </section>
+
+      <section class="v1-services">
+        <div class="title-row"><i></i><div><h2>NOS SERVICES</h2><p>Des solutions adaptées à vos besoins</p></div><i></i></div>
+        <div class="cards">
+          <article class="card">
+            <img class="photo" src="Assets/v1-photo-1.jpg" alt="PC remis à neuf">
+            <div class="body">
+              <h3><img src="Assets/v1-icon-1.png" alt="">PC REMIS À NEUF</h3>
+              <p>Des ordinateurs sélectionnés, nettoyés, testés et prêts à utiliser.</p>
+              <a href="inventaire.html">VOIR L'INVENTAIRE →</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img class="photo" src="Assets/v1-photo-2.jpg" alt="Réparations">
+            <div class="body">
+              <h3><img src="Assets/v1-icon-2.png" alt="">RÉPARATIONS</h3>
+              <p>Diagnostic, réparation et solutions durables pour vos appareils.</p>
+              <a href="forgepc_diagnostic.html">DEMANDER UN DIAGNOSTIC →</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img class="photo" src="Assets/v1-photo-3.jpg" alt="Mises à niveau">
+            <div class="body">
+              <h3><img src="Assets/v1-icon-3.png" alt="">MISES À NIVEAU</h3>
+              <p>Améliorer les performances sans dépenser inutilement.</p>
+              <a href="mise-a-niveau.html">DEMANDER UNE ÉVALUATION →</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img class="photo" src="Assets/v1-photo-4.jpg" alt="PC gaming sur mesure">
+            <div class="body">
+              <h3><img src="Assets/v1-icon-4.png" alt="">PC GAMING SUR MESURE</h3>
+              <p>Des configurations adaptées à vos besoins et à votre budget.</p>
+              <a href="pc-gaming-sur-mesure.html">DISCUTER DE VOTRE PROJET →</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img class="photo" src="Assets/v1-photo-5.jpg" alt="Service à domicile">
+            <div class="body">
+              <h3><img src="Assets/v1-icon-5.png" alt="">SERVICE À DOMICILE</h3>
+              <p>On se déplace dans la Mauricie selon vos besoins.</p>
+              <a href="service-a-domicile.html">DEMANDER UN RENDEZ-VOUS →</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="v1-how">
+        <div class="title-row small"><i></i><div><h2>COMMENT ÇA FONCTIONNE ?</h2><p>Simple, transparent et sans surprises.</p></div><i></i></div>
+        <div class="steps">
+          <div class="step"><b>1</b><div><strong>Vous nous contactez</strong><span>Vous nous expliquez votre problème ou votre besoin.</span></div></div>
+          <div class="step"><b>2</b><div><strong>On évalue la situation</strong><span>On fait un diagnostic et on vérifie ce qui est nécessaire.</span></div></div>
+          <div class="step"><b>3</b><div><strong>On vous propose une solution</strong><span>On vous explique les options et les coûts.</span></div></div>
+          <div class="step"><b>4</b><div><strong>Votre ordinateur repart prêt à fonctionner</strong><span>Un service fiable et honnête.</span></div></div>
+        </div>
+      </section>
+
+      <section class="v1-info">
+        <article class="info diagnostic">
+          <h3><span>⌕</span> LE DIAGNOSTIC</h3>
+          <p class="lead">Un problème informatique ?<br><strong>On commence par chercher la cause.</strong></p>
+          <p>Avant de vous conseiller une réparation ou un remplacement, nous évaluons la situation afin de déterminer ce qui vaut réellement la peine d'être fait.</p>
+          <a href="forgepc_diagnostic.html">DEMANDER UN DIAGNOSTIC →</a>
+        </article>
+
+        <article class="info">
+          <h3><span>⌖</span> NOTRE SECTEUR</h3>
+          <p>Shawinigan et toute la Mauricie</p>
+          <img class="sector" src="Assets/mauricie-landscape-approved.jpg" alt="Mauricie">
+          <p>Nous offrons nos services à Shawinigan et dans les environs, incluant Trois-Rivières et les municipalités de la Mauricie.</p>
+          <a href="contact.html">EN SAVOIR PLUS →</a>
+        </article>
+
+        <article class="info faq">
+          <h3><span>?</span> FOIRE AUX QUESTIONS</h3>
+          <div class="faq-item"><button type="button">Combien coûte un diagnostic ?<b>+</b></button><div>Le coût dépend du type de diagnostic demandé. Les coûts sont expliqués avant l’intervention.</div></div>
+          <div class="faq-item"><button type="button">Est-ce que vous vous déplacez à domicile ?<b>+</b></button><div>Oui, selon le secteur, la disponibilité et le type de service.</div></div>
+          <div class="faq-item"><button type="button">Pouvez-vous récupérer mes données ?<b>+</b></button><div>Nous évaluons les possibilités selon l’état du support.</div></div>
+          <div class="faq-item"><button type="button">Réparez-vous les ordinateurs portables ?<b>+</b></button><div>Oui, lorsque la réparation est réaliste et que les pièces sont disponibles.</div></div>
+          <div class="faq-item"><button type="button">Est-ce que vous installez Windows ?<b>+</b></button><div>Oui, lorsque le matériel et la licence le permettent.</div></div>
+          <div class="faq-item"><button type="button">Une mise à niveau vaut-elle le coup sur un vieux PC ?<b>+</b></button><div>Nous évaluons d’abord le PC afin d’éviter de dépenser inutilement.</div></div>
+          <a class="more" href="contact.html">VOIR TOUTES LES FAQ →</a>
+        </article>
+      </section>
+
+      <section class="v1-cta">
+        <div><p>Vous avez un projet ou un problème informatique ?</p><h2>Parlons-en.</h2></div>
+        <a href="contact.html">NOUS CONTACTER →</a>
+      </section>
+    </main>
+
+    <footer class="v1-index-footer">
+      <img src="Assets/v1-footer-index.png" alt="">
+      <a class="footer-phone" href="tel:8199447418" aria-label="819-944-7418"></a>
+      <a class="footer-mail" href="mailto:info@forgepcmauricie.ca" aria-label="info@forgepcmauricie.ca"></a>
+    </footer>
+
   </div>
 </div>
+
+<div class="v1-mobile-original">
+<header class="site-header">
+<div class="container nav">
+<a aria-label="ForgePC Mauricie" class="brand-link" href="index.html">
+<img alt="ForgePC Mauricie" class="logo" src="Assets/forgepc-logo-web.png"/>
+</a>
+<nav aria-label="Navigation principale" class="navlinks">
+<a href="index.html">Accueil</a>
+<a class="active" href="services.html">Services</a>
+<a href="inventaire.html">Inventaire</a>
+<a href="a-propos.html">À propos</a>
+<a href="contact.html">Contact</a>
+</nav>
+<div class="nav-location"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.1 7 13 7 13s7-7.9 7-13a7 7 0 0 0-7-7Zm0 9.6A2.6 2.6 0 1 1 12 6a2.6 2.6 0 0 1 0 5.6Z"></path></svg><span>Shawinigan et<br/>toute la Mauricie</span></div>
+<button aria-expanded="false" aria-label="Ouvrir le menu" class="menu" type="button">☰</button>
+</div>
+</header>
+
+
 
 
 
@@ -195,17 +233,17 @@
 <section class="services-cta"><div class="container"><h2>Vous avez un projet ou un problème informatique ?<span>Parlons-en.</span></h2><a class="btn" href="contact.html">Nous contacter →</a></div></section>
 </main>
 
-
+<div class="index-footer-desktop-copy" aria-hidden="true"><img src="Assets/index-footer-approved-2x.png?v=2" alt=""></div>
 <div class="legacy-footer-mobile-only"><footer id="forgepc-footer">
-  <div class="fp-wrap">
-    <div class="fp-main">
-      <img alt="ForgePC Mauricie" class="fp-logo" src="Assets/forgepc-logo-web.webp">
-      <div class="fp-tag">Votre technologie, notre expertise.</div>
-      <div class="fp-social" aria-label="Réseaux sociaux"><span class="social-circle">f</span><span class="social-circle">◎</span></div>
-      <div class="fp-contact"><span><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.1 7 13 7 13s7-7.9 7-13a7 7 0 0 0-7-7Zm0 9.6A2.6 2.6 0 1 1 12 6a2.6 2.6 0 0 1 0 5.6Z"/></svg>Shawinigan et toute la Mauricie</span><span><svg viewBox="0 0 24 24"><path d="M6.6 2.8 10 8.1 7.8 10c1.6 3.3 3.9 5.6 7.2 7.2l1.9-2.2 5.3 3.4c-.5 2.1-2.1 3.6-4.2 3.6C9.2 22 2 14.8 2 6c0-2.1 1.5-3.7 4.6-3.2Z"/></svg>819-944-7418</span><span><svg viewBox="0 0 24 24"><path d="M3 5h18v14H3V5Zm2 2 7 5 7-5H5Z"/></svg>info@forgepcmauricie.ca</span></div>
-    </div>
-    <div class="fp-bottom"><span>© 2026 ForgePC Mauricie. Tous droits réservés.</span><span>Politique de confidentialité&nbsp;&nbsp; | &nbsp;&nbsp;Mentions légales</span></div>
-  </div>
+<div class="fp-wrap">
+<div class="fp-main">
+<img alt="ForgePC Mauricie" class="fp-logo" src="Assets/forgepc-logo-web.png"/>
+<div class="fp-tag">Votre technologie, notre expertise.</div>
+<div aria-label="Réseaux sociaux" class="fp-social"><span class="social-circle">f</span><span class="social-circle">◎</span></div>
+<div class="fp-contact"><span><svg viewbox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.1 7 13 7 13s7-7.9 7-13a7 7 0 0 0-7-7Zm0 9.6A2.6 2.6 0 1 1 12 6a2.6 2.6 0 0 1 0 5.6Z"></path></svg>Shawinigan et toute la Mauricie</span><span><svg viewbox="0 0 24 24"><path d="M6.6 2.8 10 8.1 7.8 10c1.6 3.3 3.9 5.6 7.2 7.2l1.9-2.2 5.3 3.4c-.5 2.1-2.1 3.6-4.2 3.6C9.2 22 2 14.8 2 6c0-2.1 1.5-3.7 4.6-3.2Z"></path></svg>819-944-7418</span><span><svg viewbox="0 0 24 24"><path d="M3 5h18v14H3V5Zm2 2 7 5 7-5H5Z"></path></svg>info@forgepcmauricie.ca</span></div>
+</div>
+<div class="fp-bottom"><span>© 2026 ForgePC Mauricie. Tous droits réservés.</span><span>Politique de confidentialité   |   Mentions légales</span></div>
+</div>
 </footer></div><script>
 const b=document.querySelector('.menu'),m=document.querySelector('.mobile-only');
 b.addEventListener('click',()=>{const o=m.classList.toggle('open');b.setAttribute('aria-expanded',o)});
@@ -235,7 +273,6 @@ document.querySelectorAll('.mobile-info-toggle').forEach(toggle=>{
 document.querySelectorAll('.mobile-info-item').forEach(item=>item.classList.remove('is-open'));
 </script>
 
-
-
-<div class="index-footer-desktop-copy" aria-hidden="true"><img src="Assets/index-footer-approved-2x.png" alt=""></div>
-</body></html>
+</div>
+</body>
+</html>
