@@ -1,0 +1,92 @@
+{
+  "source_zip": "forgepc-services-v1-bandeau-final.zip",
+  "before_total_files": 150,
+  "before_assets": 128,
+  "removed_unused_assets": 14,
+  "after_total_files": 136,
+  "after_assets": 114,
+  "broken_local_references": [
+    [
+      "inventaire.html",
+      "${esc(photo)}"
+    ],
+    [
+      "inventaire.html",
+      "value"
+    ],
+    [
+      "inventaire.html",
+      "pc.photo1"
+    ],
+    [
+      "worker.js",
+      "request.url"
+    ],
+    [
+      "worker.js",
+      "url"
+    ],
+    [
+      "contact.html",
+      "sms:8199447418"
+    ],
+    [
+      "contact.html",
+      "sms:+18199447418"
+    ],
+    [
+      "pc.html",
+      "${esc(photos[0])}"
+    ],
+    [
+      "pc.html",
+      "${esc(photo)}"
+    ],
+    [
+      "pc.html",
+      "value"
+    ],
+    [
+      "rdv-vente.html",
+      "v"
+    ]
+  ],
+  "removed_files": [
+    "Assets/a-propos-desktop-approved.png",
+    "Assets/diagnostic-desktop.png",
+    "Assets/diagnostic-mobile.png",
+    "Assets/forgepc-logo-original-v3.png",
+    "Assets/home-cta-clean-pc.jpg",
+    "Assets/home-hero-approved.jpg",
+    "Assets/index-pc-approved.css",
+    "Assets/inventaire.js",
+    "Assets/locked-desktop-shell.css",
+    "Assets/mise-a-niveau-desktop.png",
+    "Assets/mise-a-niveau-mobile.png",
+    "Assets/service-domicile-desktop.png",
+    "Assets/service-domicile-mobile.png",
+    "Assets/services-content-approved.png"
+  ],
+  "exact_duplicate_pairs_still_present_if_referenced": [
+    [
+      "index-hero-mobile.jpg",
+      "index-hero.jpg"
+    ],
+    [
+      "services-cta-maquette-exact.jpg",
+      "services-cta-maquette-clean.jpg"
+    ],
+    [
+      "forgepc-logo-officiel.png",
+      "logo-footer-final.png"
+    ]
+  ],
+  "exact_duplicates_consolidated": [
+    "Assets/services-cta-maquette-exact.jpg",
+    "Assets/logo-footer-final.png",
+    "Assets/index-hero-mobile.jpg"
+  ],
+  "additional_unused_removed": [],
+  "final_total_files_before_report_count": 134,
+  "final_assets": 111
+}

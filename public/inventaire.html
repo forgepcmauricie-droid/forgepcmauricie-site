@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html lang="fr-CA">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Inventaire ForgePC Mauricie — PC remis à neuf, testés et prêts à utiliser." name="description"/>
+<title>Inventaire | ForgePC Mauricie</title>
+<link href="Assets/forgepc.css" rel="stylesheet"/>
+<style>
+:root{--bg:#02090b;--panel:#0b1215;--panel2:#11191d;--line:#2a3a40;--orange:#ff5a00;--orange2:#ff6a00;--text:#f5f6f7;--muted:#c0c6ca;--max:1180px}
+*{box-sizing:border-box}html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif;overflow-x:hidden}a{color:inherit;text-decoration:none}.container{width:min(calc(100% - 40px),var(--max));margin:0 auto}
+/* HEADER — même langage visuel que l'accueil */
+.site-header{height:70px;background:#02090b;border-bottom:1px solid #2a383d;position:sticky;top:0;z-index:1000}.site-header .container.nav{height:70px;display:flex;align-items:center;position:relative}.brand-link{display:flex;align-items:center;height:70px}.site-header .logo{width:145px;height:62px;object-fit:contain;display:block}.navlinks{margin-left:auto;display:flex;align-items:stretch;height:100%;gap:36px}.site-header .navlinks a{display:flex;align-items:center;padding:3px 0 0;color:#f3f4f4;font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.01em;border-bottom:3px solid transparent}.site-header .navlinks a:hover,.site-header .navlinks a.active{color:#fff;border-bottom-color:var(--orange)}.nav-location{margin-left:auto;padding-left:42px;color:#f1f2f2;font-size:12px;line-height:1.25;max-width:180px}.menu{display:none}
+.mobile-location{display:none}
+/* HERO */
+.inventory-page{background:#02090b}.inventory-hero{min-height:246px;border-bottom:1px solid #2a3a40;background:linear-gradient(90deg,rgba(2,9,11,.98) 0%,rgba(2,9,11,.83) 38%,rgba(2,9,11,.25) 72%,rgba(2,9,11,.68) 100%),url('Assets/inventory-hero-approved.jpg') center/cover no-repeat}.inventory-hero-inner{min-height:246px;display:grid;grid-template-columns:minmax(0,1fr) 230px;gap:30px;align-items:center;padding:28px 0}.kicker{color:var(--orange);font-size:15px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;margin-bottom:10px}.kicker:before{content:'— ';letter-spacing:0}.inventory-hero h1{font-size:54px;line-height:.98;text-transform:uppercase;margin:0 0 12px;font-weight:900;letter-spacing:-.035em}.inventory-hero h1 span{color:var(--orange)}.inventory-hero p{max-width:620px;color:#e0e3e5;font-size:17px;line-height:1.35;margin:0}.script{margin-top:10px;font-size:19px;font-style:italic;line-height:1.05;color:#fff;max-width:250px}.hero-points{display:grid;gap:15px}.hero-point{display:grid;grid-template-columns:32px 1fr;gap:10px;align-items:center}.hero-point .fa{font-size:27px;color:var(--orange)}.hero-point strong{display:block;font-size:13px;text-transform:uppercase}.hero-point span{display:block;color:#d4d9db;font-size:12px;line-height:1.2}
+/* FILTERS */
+.inventory-controls{padding:15px 0 17px;border-bottom:1px solid #26373c}.controls-row{display:grid;grid-template-columns:minmax(280px,1fr) 140px 160px 160px;gap:14px}.control{height:40px;border:1px solid #486068;background:#071014;border-radius:20px;color:#dfe4e6;padding:0 15px;font-size:13px;outline:none}.control:focus{border-color:var(--orange)}select.control{appearance:auto}.search-wrap{position:relative}.search-wrap .control{width:100%;padding-left:42px}.search-icon{position:absolute;left:15px;top:9px;font-size:20px;color:#fff;pointer-events:none}
+/* INVENTAIRE */
+.inventory-content{padding:17px 0 34px}.inventory-list{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}.msg{padding:22px;border:1px solid var(--line);background:var(--panel);border-radius:8px;color:var(--muted)}.product-card{display:flex;flex-direction:column;background:linear-gradient(150deg,#11191d,#071014);border:1px solid #33464d;border-radius:7px;overflow:hidden;min-width:0;transition:transform .15s ease,border-color .15s ease}.product-card:hover{transform:translateY(-2px);border-color:#65787e}.product-image-wrap{position:relative;background:#060a0c}.product-image{display:block;width:100%;aspect-ratio:1.55/1;object-fit:cover}.product-badge{position:absolute;top:8px;left:0;background:var(--orange);color:#fff;border-radius:0 4px 4px 0;padding:7px 9px;font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.02em}.product-badge.available{background:#00c766}.product-body{padding:12px 12px 13px;display:flex;flex-direction:column;flex:1}.product-code{font-size:11px;font-weight:900;color:#fff;margin-bottom:4px}.product-body h2{font-size:16px;line-height:1.15;margin:0 0 6px}.product-body p{font-size:12px;line-height:1.28;color:#bfc6c9;margin:0 0 11px;min-height:31px}.specs{display:grid;grid-template-columns:1fr 1fr;gap:6px 9px;border:0;margin:0;padding:0}.spec{font-size:10px;line-height:1.25;color:#d0d5d7;min-width:0}.spec strong{display:block;color:#fff;font-size:9px;text-transform:uppercase;margin-bottom:1px}.product-bottom{margin-top:auto;padding-top:12px;display:flex;align-items:center;justify-content:space-between;gap:8px}.price{color:var(--orange);font-size:21px;font-weight:900;white-space:nowrap}.product-action{border:1px solid var(--orange);border-radius:5px;padding:8px 9px;color:var(--orange);font-size:10px;font-weight:900;text-transform:uppercase;white-space:nowrap}.empty-filter{display:none;padding:24px;border:1px solid var(--line);text-align:center;color:var(--muted)}
+/* CTA */
+.inventory-cta{border:1px solid #41545b;border-left:5px solid var(--orange);border-radius:7px;min-height:105px;background:linear-gradient(90deg,rgba(2,9,11,.72),rgba(2,9,11,.35)),url('Assets/mauricie-landscape-approved.jpg') center/cover no-repeat;margin-top:16px;padding:19px 22px;display:flex;align-items:center;justify-content:space-between;gap:24px}.cta-copy{display:flex;align-items:center;gap:18px}.cta-icon{font-size:38px;color:var(--orange)}.cta-copy h2{margin:0 0 3px;font-size:18px}.cta-copy p{margin:0;color:#d5dadc;font-size:13px;line-height:1.3}.cta-copy strong{display:block;color:var(--orange);font-size:23px}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:0 23px;border:1px solid var(--orange);border-radius:5px;font-size:12px;font-weight:900;text-transform:uppercase}.btn.primary{background:var(--orange);color:#fff}
+/* FOOTER — même structure que l'accueil */
+.site-footer{border-top:1px solid #27363a;background:#02090b}.footer-main{min-height:86px;padding:10px 0 8px;display:grid;grid-template-columns:170px 1fr auto;grid-template-rows:1fr;align-items:center;gap:20px}.footer-logo{width:125px;height:58px;object-fit:contain;object-position:left center}.footer-tag{color:#cbd1d3;font-size:11px}.footer-social{display:flex;justify-content:flex-end;align-items:center;gap:18px;font-size:0}.footer-social span{display:flex;align-items:center;justify-content:center;color:#f2f2f2;font-weight:700;font-family:Arial,sans-serif}.social-facebook{width:28px;height:28px;border:2px solid #f2f2f2;border-radius:50%;font-size:19px}.social-instagram{width:27px;height:27px;border:2px solid #f2f2f2;border-radius:7px;font-size:21px}.footer-contact{display:flex;align-items:center;gap:20px;font-size:11px;color:#e2e5e6}.footer-bottom{border-top:1px solid #27363a;min-height:34px;padding:7px 0;display:flex;align-items:center;justify-content:space-between;gap:15px;font-size:10px;color:#b6bdc0}.footer-bottom span:last-child{text-align:right}
+.fa{font-family:FontAwesome,Arial,sans-serif}@font-face{font-family:FontAwesome;src:url('Assets/fontawesome-webfont.ttf') format('truetype')}
+/* MOBILE */
+@media(max-width:900px){
+ .container{width:calc(100% - 28px)}
+ .site-header{height:72px;min-height:72px}.site-header .container.nav{height:72px;min-height:72px;width:100%;padding:0 12px}.brand-link{height:72px}.site-header .logo{width:108px;max-width:108px;height:56px;max-height:56px;object-fit:contain}.site-header .navlinks,.nav-location{display:none}.menu{display:flex;align-items:center;justify-content:center;margin-left:auto;width:42px;height:42px;border:1px solid #4a565a;border-radius:8px;background:#02090b;color:#fff;font-size:28px;line-height:1;appearance:none;cursor:pointer;position:relative;z-index:1002}.mobile-location{display:flex;height:38px;align-items:center;padding:0 28px;gap:7px;background:#02090b;border-bottom:1px solid #27363a;font-size:13px}.mobile-nav{display:none;position:absolute;top:72px;left:12px;right:12px;z-index:1001;background:#02090b;border:1px solid #27363a;border-radius:7px;padding:8px}.mobile-nav.open{display:flex;flex-direction:column}.mobile-nav a{padding:12px 10px;border-bottom:1px solid #27363a;font-size:13px;font-weight:800;text-transform:uppercase}.mobile-nav a:last-child{border-bottom:0}
+ .inventory-hero{min-height:246px}.inventory-hero-inner{min-height:246px;display:block;padding:25px 0 18px;background:linear-gradient(90deg,rgba(2,9,11,.98),rgba(2,9,11,.45)),url('Assets/inventory-hero-approved.jpg') center/cover no-repeat}.inventory-hero h1{font-size:38px;line-height:.98;margin-bottom:11px}.inventory-hero p{font-size:14px;line-height:1.35;max-width:350px}.kicker{font-size:13px;margin-bottom:8px}.script{font-size:16px;margin-top:8px}.hero-points{display:none}
+ .inventory-controls{padding:11px 0 12px}.controls-row{grid-template-columns:1fr;gap:8px}.control{height:38px;border-radius:19px}.search-wrap .control{padding-left:39px}.filters-mobile{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:8px}.filters-mobile .control{width:100%;padding:0 10px;font-size:11px}.desktop-filter{display:none}
+ .inventory-content{padding:13px 0 25px}.inventory-list{grid-template-columns:1fr;gap:14px}.product-card{display:flex;flex-direction:column}.product-image-wrap{position:relative;width:100%;height:auto}.product-image{display:block;width:100%;height:auto;min-height:0;aspect-ratio:1.65/1;object-fit:cover;background:#060a0c}.product-badge{top:10px;font-size:10px;padding:7px 9px}.product-body{padding:13px 14px 14px}.product-code{font-size:10px;margin-bottom:4px}.product-body h2{font-size:17px;line-height:1.15;margin-bottom:6px}.product-body p{font-size:12px;line-height:1.3;min-height:0;margin-bottom:11px}.specs{gap:7px 12px}.spec{font-size:10px;line-height:1.25}.spec strong{font-size:9px;margin-bottom:2px}.product-bottom{padding-top:11px}.price{font-size:21px}.product-action{font-size:10px;padding:8px 10px}.inventory-cta{min-height:92px;padding:13px 14px;margin-top:14px;gap:10px}.cta-copy{gap:9px}.cta-icon{font-size:28px}.cta-copy h2{font-size:13px}.cta-copy strong{font-size:19px}.cta-copy p{font-size:10px;display:none}.inventory-cta .btn{min-height:36px;padding:0 12px;font-size:9px;white-space:nowrap}
+ .footer-main{height:104px;min-height:104px;padding:10px 0 8px;display:grid;grid-template-columns:1fr auto;grid-template-rows:54px 42px;grid-template-areas:'logo social' 'contact contact';gap:4px 12px;align-items:center}.footer-logo{grid-area:logo;width:94px;max-width:94px;height:48px;max-height:48px;object-fit:contain;object-position:left center}.footer-tag{display:none}.footer-social{grid-area:social;gap:16px}.social-facebook{width:25px;height:25px;font-size:17px}.social-instagram{width:24px;height:24px;font-size:19px}.footer-contact{grid-area:contact;display:grid;grid-template-columns:1fr;grid-template-rows:repeat(3,12px);gap:1px;align-content:center;justify-items:start;font-size:7.8px;line-height:12px}.footer-contact span,.footer-contact span:first-child{grid-column:1;white-space:nowrap}.footer-bottom{height:34px;min-height:34px;padding:6px 0;font-size:7.5px;line-height:1.2}.footer-bottom span:last-child{white-space:nowrap}
+}
+@media(min-width:901px){.mobile-nav{display:none!important}.filters-mobile{display:none}}
+@media(max-width:390px){.site-header .container.nav{padding:0 12px}.site-header .logo{width:108px;max-width:108px}.mobile-location{padding:0 22px}.container{width:calc(100% - 24px)}.footer-bottom{font-size:7px}}
+
+/* FORGEPC INVENTAIRE — MOBILE APPROUVÉ: cartes compactes horizontales */
+@media(max-width:900px){
+  .inventory-content{padding:12px 0 24px}
+  .inventory-list{display:grid;grid-template-columns:1fr;gap:12px}
+  .product-card{
+    display:grid !important;
+    grid-template-columns:42% 58%;
+    min-height:190px;
+    border-radius:7px;
+    overflow:hidden;
+    align-items:stretch;
+  }
+  .product-image-wrap{
+    width:100% !important;
+    height:100% !important;
+    min-height:190px;
+    background:#060a0c;
+  }
+  .product-image{
+    width:100% !important;
+    height:100% !important;
+    min-height:190px !important;
+    aspect-ratio:auto !important;
+    object-fit:cover !important;
+    object-position:center !important;
+  }
+  .product-badge{
+    top:9px;left:0;max-width:94%;
+    padding:6px 7px;
+    font-size:8.5px;
+    line-height:1.08;
+  }
+  .product-body{
+    min-width:0;
+    padding:10px 10px 9px !important;
+    display:flex;
+    flex-direction:column;
+  }
+  .product-code{font-size:9px;margin-bottom:3px}
+  .product-body h2{
+    font-size:13px;
+    line-height:1.12;
+    margin:0 0 5px;
+    display:-webkit-box;
+    -webkit-line-clamp:2;
+    -webkit-box-orient:vertical;
+    overflow:hidden;
+  }
+  .product-body p{
+    font-size:9.5px;
+    line-height:1.22;
+    color:#c5cbce;
+    margin:0 0 7px;
+    min-height:0;
+    display:-webkit-box;
+    -webkit-line-clamp:2;
+    -webkit-box-orient:vertical;
+    overflow:hidden;
+  }
+  .specs{
+    grid-template-columns:1fr 1fr;
+    gap:5px 7px;
+    margin-top:0;
+  }
+  .spec{font-size:8.2px;line-height:1.15;white-space:nowrap;overflow:visible;text-overflow:clip}
+  .spec:nth-child(3){font-size:7.8px;letter-spacing:-.01em}
+  .spec strong{font-size:7.5px;margin-bottom:1px}
+  .product-bottom{
+    margin-top:auto;
+    padding-top:7px;
+    gap:5px;
+  }
+  .price{font-size:16px;line-height:1;letter-spacing:.01em}
+  .product-action{
+    font-size:7.5px;
+    padding:6px 6px;
+    border-radius:4px;
+  }
+
+  /* CTA + footer compact, alignés sur les autres pages mobiles */
+  .inventory-cta{min-height:82px;padding:11px 12px;margin-top:13px}
+  .cta-icon{font-size:24px}
+  .cta-copy h2{font-size:11px;line-height:1.15;margin-bottom:2px}
+  .cta-copy strong{font-size:17px;line-height:1}
+  .inventory-cta .btn{min-height:34px;padding:0 10px;font-size:8px}
+  .footer-main{
+    height:96px;min-height:96px;
+    grid-template-columns:1fr auto;
+    grid-template-rows:50px 38px;
+    gap:2px 10px;
+    padding:6px 0 4px;
+  }
+  .footer-logo{width:88px;max-width:88px;height:45px;max-height:45px}
+  .footer-contact{font-size:7.4px;line-height:11px;grid-template-rows:repeat(3,11px)}
+  .footer-bottom{height:31px;min-height:31px;padding:5px 0;font-size:7px}
+}
+@media(max-width:390px){
+  .product-card{grid-template-columns:40% 60%;min-height:182px}
+  .product-image-wrap,.product-image{min-height:182px !important}
+  .product-body{padding:9px 8px 8px !important}
+  .product-body h2{font-size:12px}
+  .product-body p{font-size:9px}
+  .price{font-size:15px}
+  .product-action{font-size:7px;padding:6px 5px}
+}
+
+
+@media(max-width:900px){
+  .product-card.pc-3 .product-image,.product-card.pc-003 .product-image{object-fit:contain !important;background:#060a0c !important;}
+}
+</style>
+<link href="Assets/footer-shared.css" rel="stylesheet"/>
+<link href="Assets/mobile-approved.css" rel="stylesheet"/>
+<script defer="" src="Assets/mobile-approved.js"></script>
+<link href="Assets/mobile-header-uniform.css?v=1" rel="stylesheet"/>
+<link href="Assets/qa-owner-fixes.css?v=2" rel="stylesheet"/>
+
+
+<link href="Assets/index-shell-copy.css?v=2" rel="stylesheet"/><link rel="stylesheet" href="Assets/index-footer-lock.css?v=10">
+
+<style id="footer-dedup-final-v11">
+@media (min-width:901px){
+  .legacy-footer-mobile-only{display:none !important;}
+  .index-footer-desktop-copy{display:block !important;width:100vw !important;margin:0 calc(50% - 50vw) !important;line-height:0 !important;background:#02090b !important;}
+  .index-footer-desktop-copy img{display:block !important;width:100% !important;height:auto !important;margin:0 !important;padding:0 !important;}
+}
+@media (max-width:900px){
+  .index-footer-desktop-copy{display:none !important;}
+  .legacy-footer-mobile-only{display:block !important;}
+}
+</style>
+
+<style id="inventory-approved-images-pc">
+@media (min-width:901px){
+  .inventory-hero{min-height:0 !important;height:auto !important;padding:0 !important;background:none !important;border-bottom:1px solid #2a3a40 !important;line-height:0 !important;}
+  .inventory-hero-approved-pc{display:block !important;width:100% !important;height:auto !important;margin:0 !important;padding:0 !important;}
+  .inventory-hero .inventory-hero-inner{display:none !important;}
+  .inventory-cta{display:block !important;min-height:0 !important;height:auto !important;padding:0 !important;margin-top:16px !important;border:0 !important;border-radius:7px !important;background:none !important;overflow:hidden !important;line-height:0 !important;}
+  .inventory-cta-approved-pc{display:block !important;width:100% !important;height:auto !important;line-height:0 !important;}
+  .inventory-cta-approved-pc img{display:block !important;width:100% !important;height:auto !important;margin:0 !important;padding:0 !important;}
+  .inventory-cta > .cta-copy,.inventory-cta > .btn{display:none !important;}
+}
+@media (max-width:900px){
+  .inventory-hero-approved-pc,.inventory-cta-approved-pc{display:none !important;}
+}
+</style>
+</head>
+<body class="inventory-page fp-index-shell-copy" data-mobile-page="inventaire"><header class="site-header">
+<div class="container nav">
+<a aria-label="ForgePC Mauricie" class="brand-link" href="index.html">
+<img alt="ForgePC Mauricie" class="logo" src="Assets/forgepc-logo-web.png"/>
+</a>
+<nav aria-label="Navigation principale" class="navlinks">
+<a href="index.html">Accueil</a>
+<a href="services.html">Services</a>
+<a class="active" href="inventaire.html">Inventaire</a>
+<a href="a-propos.html">À propos</a>
+<a href="contact.html">Contact</a>
+</nav>
+<div class="nav-location"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.1 7 13 7 13s7-7.9 7-13a7 7 0 0 0-7-7Zm0 9.6A2.6 2.6 0 1 1 12 6a2.6 2.6 0 0 1 0 5.6Z"></path></svg><span>Shawinigan et<br/>toute la Mauricie</span></div>
+<button aria-expanded="false" aria-label="Ouvrir le menu" class="menu" type="button">☰</button>
+</div>
+</header>
+
+<div class="mobile-location">📍 <span>Shawinigan et toute la Mauricie</span></div>
+<main>
+<section class="inventory-hero">
+<img class="inventory-hero-approved-pc" src="Assets/inventory-hero-desktop-approved.png" alt="Inventaire ForgePC Mauricie">
+<div class="container inventory-hero-inner">
+<div>
+<div class="kicker">Inventaire</div>
+<h1>PC remis <span>à neuf</span></h1>
+<p>Des ordinateurs préparés avec soin, testés et prêts à utiliser. Cliquez sur une unité pour consulter sa fiche détaillée.</p>
+<div class="script">Votre technologie,<br/>notre expertise.</div>
+</div>
+<div class="hero-points">
+<div class="hero-point"><div class="fa"></div><div><strong>Testés et optimisés</strong><span>Chaque PC est vérifié.</span></div></div>
+<div class="hero-point"><div class="fa"></div><div><strong>Windows installé</strong><span>Prêt à démarrer.</span></div></div>
+<div class="hero-point"><div class="fa"></div><div><strong>Garantie 90 jours</strong><span>Selon les conditions.</span></div></div>
+<div class="hero-point"><div class="fa"></div><div><strong>Prêts ici, en Mauricie</strong><span>Service local.</span></div></div>
+</div>
+</div>
+</section>
+<section class="inventory-controls">
+<div class="container">
+<div class="controls-row">
+<div class="search-wrap"><span class="search-icon">⌕</span><input class="control" id="search" placeholder="Rechercher un modèle, une marque, un processeur…" type="search"/></div>
+<select class="control desktop-filter" id="typeFilter"><option value="">Tous les types</option></select>
+<select class="control desktop-filter" id="brandFilter"><option value="">Toutes les marques</option></select>
+<select class="control desktop-filter" id="sortFilter"><option value="">Trier par</option><option value="price-asc">Prix : bas → haut</option><option value="price-desc">Prix : haut → bas</option><option value="name">Nom</option></select>
+</div>
+<div class="filters-mobile">
+<select class="control" id="typeFilterM"><option value="">Tous</option></select>
+<select class="control" id="brandFilterM"><option value="">Marque</option></select>
+<select class="control" id="sortFilterM"><option value="">Trier</option><option value="price-asc">Prix ↑</option><option value="price-desc">Prix ↓</option><option value="name">Nom</option></select>
+</div>
+</div>
+</section>
+<section class="inventory-content">
+<div class="container">
+<div id="inventory-list"><div class="msg">Chargement de l’inventaire…</div></div>
+<div class="empty-filter" id="empty-filter">Aucun PC ne correspond à votre recherche.</div>
+<div class="inventory-cta">
+<a class="inventory-cta-approved-pc" href="contact.html" aria-label="Nous contacter"><img src="Assets/inventory-cta-desktop-approved.png" alt="Vous cherchez un modèle en particulier? Parlons-en."></a>
+<div class="cta-copy"><div class="cta-icon">💬</div><div><h2>Vous cherchez un modèle en particulier ?</h2><strong>Parlons-en.</strong><p>Contactez ForgePC Mauricie pour vérifier les options disponibles ou demander une configuration adaptée à vos besoins.</p></div></div>
+<a class="btn primary" href="contact.html">Nous contacter →</a>
+</div>
+</div>
+</section>
+</main>
+
+<div class="index-footer-desktop-copy" aria-hidden="true"><img src="Assets/index-footer-approved-2x.png?v=2" alt=""></div>
+<div class="legacy-footer-mobile-only"><footer id="forgepc-footer">
+<div class="fp-wrap">
+<div class="fp-main">
+<img alt="ForgePC Mauricie" class="fp-logo" src="Assets/forgepc-logo-web.png"/>
+<div class="fp-tag">Votre technologie, notre expertise.</div>
+<div aria-label="Réseaux sociaux" class="fp-social"><span class="social-circle">f</span><span class="social-circle">◎</span></div>
+<div class="fp-contact"><span><svg viewbox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.1 7 13 7 13s7-7.9 7-13a7 7 0 0 0-7-7Zm0 9.6A2.6 2.6 0 1 1 12 6a2.6 2.6 0 0 1 0 5.6Z"></path></svg>Shawinigan et toute la Mauricie</span><span><svg viewbox="0 0 24 24"><path d="M6.6 2.8 10 8.1 7.8 10c1.6 3.3 3.9 5.6 7.2 7.2l1.9-2.2 5.3 3.4c-.5 2.1-2.1 3.6-4.2 3.6C9.2 22 2 14.8 2 6c0-2.1 1.5-3.7 4.6-3.2Z"></path></svg>819-944-7418</span><span><svg viewbox="0 0 24 24"><path d="M3 5h18v14H3V5Zm2 2 7 5 7-5H5Z"></path></svg>info@forgepcmauricie.ca</span></div>
+</div>
+<div class="fp-bottom"><span>© 2026 ForgePC Mauricie. Tous droits réservés.</span><span>Politique de confidentialité   |   Mentions légales</span></div>
+</div>
+</footer></div><script>
+const SHEET_ID="15llqGhrLL9I6SFxyFrxfbNY2ZuBXDswok_BwxPR7JqU";
+const SHEET_NAME="Inventaire";
+const LIST=document.getElementById("inventory-list");
+const EMPTY=document.getElementById("empty-filter");
+const SEARCH=document.getElementById("search");
+const TYPE=document.getElementById("typeFilter"), BRAND=document.getElementById("brandFilter"), SORT=document.getElementById("sortFilter");
+const TYPEM=document.getElementById("typeFilterM"), BRANDM=document.getElementById("brandFilterM"), SORTM=document.getElementById("sortFilterM");
+let allProducts=[];
+function key(v){return String(v??"").replace(/^\ufeff/,"").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9]/g,"")}
+function cleanId(v){let s=String(v??"").trim().replace(/^pc[-_ ]?/i,"");return /^\d+$/.test(s)?String(parseInt(s,10)):s}
+function esc(v){return String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[c]))}
+function get(row,...names){for(const name of names){const k=key(name);if(row[k]!==undefined&&String(row[k]).trim()!=="")return String(row[k]).trim()}return ""}
+function normalize(row){return {id:cleanId(get(row,"id","id pc","code","code pc")),nom:get(row,"nom","nom du pc","nom pc","produit"),prix:get(row,"prix","prix de vente (cad)","prix de vente","prix cad"),statut:get(row,"statut","disponibilite","disponibilité")||"En stock",cpu:get(row,"cpu","processeur"),gpu:get(row,"gpu","carte graphique"),ram:get(row,"ram","mémoire","memoire"),stockage:get(row,"stockage","disque","ssd"),description:get(row,"description","details","détails"),photo1:get(row,"photo1","photo 1")}}
+function driveUrl(value){const s=String(value||"").trim();if(!s)return "";if(/^https?:\/\//i.test(s)&&!s.includes("drive.google.com"))return s;let m=s.match(/drive\.google\.com\/file\/d\/([^/?#]+)/i)||s.match(/[?&]id=([^&#]+)/i);return m?"https://drive.google.com/thumbnail?id="+encodeURIComponent(m[1])+"&sz=w1600":s}
+function fromGviz(data){const t=data&&data.table;if(!t||!Array.isArray(t.cols)||!Array.isArray(t.rows))return [];const headers=t.cols.map((c,i)=>key(c.label||c.id||("col"+i)));const fallback=["id","nom","prix","statut","cpu","gpu","ram","stockage","description","photo1"];const useFallback=headers.every(h=>!h||/^col\d+$/.test(h));const h=useFallback?headers.map((_,i)=>fallback[i]||("col"+i)):headers;return t.rows.map(r=>{const o={};h.forEach((name,i)=>{const c=(r.c||[])[i];o[name]=c&&c.v!=null?String(c.v):""});return normalize(o)}).filter(p=>p.id||p.nom)}
+function readGviz(params={}){return new Promise((resolve,reject)=>{const cb="forgepc_sheet_"+Date.now()+"_"+Math.random().toString(36).slice(2);const script=document.createElement("script");let finished=false;const timer=setTimeout(()=>finish(false,new Error("Délai Google Sheets dépassé")),9000);function finish(ok,value){if(finished)return;finished=true;clearTimeout(timer);script.remove();try{delete window[cb]}catch(e){window[cb]=undefined}ok?resolve(value):reject(value)}window[cb]=data=>finish(true,data);script.onerror=()=>finish(false,new Error("Google Sheets inaccessible"));const q=new URLSearchParams();q.set("tqx","responseHandler:"+cb);q.set("headers","1");q.set("range",params.range||"Inventaire!A3:X");q.set("_",Date.now());if(params.sheet)q.set("sheet",params.sheet);if(params.gid!==undefined)q.set("gid",String(params.gid));script.src="https://docs.google.com/spreadsheets/d/"+SHEET_ID+"/gviz/tq?"+q.toString();document.head.appendChild(script)})}
+async function loadInventory(){const attempts=[{sheet:SHEET_NAME,range:"Inventaire!A3:X"},{gid:0,range:"Inventaire!A3:X"},{sheet:SHEET_NAME,range:"A3:X"}];let lastError=null;for(const params of attempts){try{const data=await readGviz(params);if(data&&data.status&&data.status!=="ok"){lastError=new Error(data.errors?.[0]?.message||"Google Sheets a refusé la lecture");continue}const rows=fromGviz(data);if(rows.length)return rows;lastError=new Error("La feuille a répondu, mais aucune ligne d’inventaire n'a été trouvée.")}catch(e){lastError=e}}throw lastError||new Error("Google Sheets inaccessible")}
+function isHidden(pc){const s=(pc.statut||"").trim().toLowerCase();return ["vendu","sold","inactif","retiré","retire"].includes(s)}
+function priceNum(v){const n=String(v||"").replace(/[^0-9,.]/g,"").replace(/\.(?=.*\.)/g,"").replace(",",".");const x=parseFloat(n);return Number.isFinite(x)?x:999999}
+function typeOf(pc){const n=(pc.nom||"").toLowerCase();if(/thinkcentre|optiplex|prodesk|elitedesk|tiny|sff|mini/.test(n))return "PC professionnel";if(/gaming|ryzen|rtx|radeon|tour/.test(n))return "PC gaming / tour";return "PC remis à neuf"}
+function brandOf(pc){const n=(pc.nom||"").toLowerCase();if(n.includes("lenovo"))return "Lenovo";if(n.includes("dell"))return "Dell";if(n.includes("hp"))return "HP";if(n.includes("acer"))return "Acer";if(n.includes("asus"))return "ASUS";return "Autre"}
+function populateSelect(select,values,label){const current=select.value;select.innerHTML="<option value=''>"+label+"</option>";[...new Set(values.filter(Boolean))].sort().forEach(v=>{const o=document.createElement("option");o.value=v;o.textContent=v;select.appendChild(o)});if([...select.options].some(o=>o.value===current))select.value=current}
+function badgeClass(s){return /disponible|en stock/i.test(s)&&!/bientôt/i.test(s)?"available":""}
+function shortDescription(v){
+  const fallback="Fiable, compact et idéal pour la maison ou le bureau.";
+  let s=String(v||"").replace(/\s+/g," ").trim();
+  if(!s)return fallback;
+  s=s.split(/(?=✅|☑|🛡|💰|📍|📩)/)[0].trim();
+  const first=s.match(/^.*?[.!?](?:\s|$)/);
+  if(first&&first[0].length>=35)s=first[0].trim();
+  if(s.length>105)s=s.slice(0,102).replace(/\s+\S*$/,"")+"…";
+  return s||fallback;
+}
+function card(pc){const photo=driveUrl(pc.photo1);return `<a class="product-card pc-${esc(pc.id)}" href="pc.html?id=${encodeURIComponent(pc.id)}"><div class="product-image-wrap">${photo?`<img class="product-image" src="${esc(photo)}" alt="${esc(pc.nom||"PC remis à neuf")}" loading="lazy" onerror="this.onerror=null;this.src='Assets/service-pc.jpg';this.alt='Photo à venir';">`:`<div class="product-image" style="display:grid;place-items:center;color:#777">Aucune photo</div>`}<span class="product-badge ${badgeClass(pc.statut)}">${esc(pc.statut)}</span></div><div class="product-body"><div class="product-code">PC-${esc(pc.id)}</div><h2>${esc(pc.nom||"PC remis à neuf")}</h2><p>${esc(shortDescription(pc.description))}</p><div class="specs"><div class="spec"><strong>CPU</strong>${esc(pc.cpu||"—")}</div><div class="spec"><strong>RAM</strong>${esc(pc.ram||"—")}</div><div class="spec"><strong>Stockage</strong>${esc(pc.stockage||"—")}</div><div class="spec"><strong>GPU</strong>${esc(pc.gpu||"—")}</div></div><div class="product-bottom"><div class="price">${esc(pc.prix||"Prix à venir")} ${pc.prix&&!/\$/.test(pc.prix)?"$":""}</div><div class="product-action">Voir la fiche →</div></div></div></a>`}
+function syncMobile(){TYPEM.value=TYPE.value;BRANDM.value=BRAND.value;SORTM.value=SORT.value}
+function syncDesktop(){TYPE.value=TYPEM.value;BRAND.value=BRANDM.value;SORT.value=SORTM.value}
+function render(){let rows=[...allProducts];const q=SEARCH.value.trim().toLowerCase();const tv=TYPE.value,bv=BRAND.value,sv=SORT.value;if(q)rows=rows.filter(p=>[p.id,p.nom,p.cpu,p.gpu,p.ram,p.stockage,p.description].join(" ").toLowerCase().includes(q));if(tv)rows=rows.filter(p=>typeOf(p)===tv);if(bv)rows=rows.filter(p=>brandOf(p)===bv);if(sv==="price-asc")rows.sort((a,b)=>priceNum(a.prix)-priceNum(b.prix));if(sv==="price-desc")rows.sort((a,b)=>priceNum(b.prix)-priceNum(a.prix));if(sv==="name")rows.sort((a,b)=>(a.nom||"").localeCompare(b.nom||"","fr"));LIST.innerHTML=rows.length?`<div class="inventory-list">${rows.map(card).join("")}</div>`:"";EMPTY.style.display=rows.length?"none":"block"}
+function setup(){const visible=allProducts.filter(p=>!isHidden(p));allProducts=visible;const types=visible.map(typeOf),brands=visible.map(brandOf);populateSelect(TYPE,types,"Tous les types");populateSelect(BRAND,brands,"Toutes les marques");populateSelect(TYPEM,types,"Tous");populateSelect(BRANDM,brands,"Marque");SEARCH.addEventListener("input",render);TYPE.addEventListener("change",()=>{render();syncMobile()});BRAND.addEventListener("change",()=>{render();syncMobile()});SORT.addEventListener("change",()=>{render();syncMobile()});TYPEM.addEventListener("change",()=>{syncDesktop();render()});BRANDM.addEventListener("change",()=>{syncDesktop();render()});SORTM.addEventListener("change",()=>{syncDesktop();render()});render()}
+(async()=>{try{allProducts=await loadInventory();setup()}catch(error){console.error("ForgePC — lecture Google Sheets:",error);LIST.innerHTML='<div class="msg"><strong style="color:#fff">Impossible de charger l’inventaire.</strong><br>La connexion à Google Sheets a échoué. Recharge la page; si le problème persiste, vérifie la connexion à la feuille.</div>'}})();
+const menu=document.querySelector('.menu'),mobileNav=document.querySelector('.mobile-nav');if(menu&&mobileNav){menu.addEventListener('click',()=>{const open=mobileNav.classList.toggle('open');menu.setAttribute('aria-expanded',open?'true':'false')});mobileNav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mobileNav.classList.remove('open')))}
+</script>
+</body>
+</html>
