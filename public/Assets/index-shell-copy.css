@@ -1,0 +1,36 @@
+/* ForgePC Mauricie — HEADER + FOOTER COPIÉS DE L'INDEX.
+   Référence verrouillée. Ne pas modifier sans demande explicite. */
+@media (min-width:901px){
+  body.fp-index-shell-copy > header.site-header{
+    display:block!important;height:62px!important;min-height:62px!important;background:#02090b!important;border-bottom:1px solid #24363c!important;
+    position:sticky!important;top:0!important;z-index:10000!important;margin:0!important;padding:0!important;
+    font-family:Arial,Helvetica,sans-serif!important;
+  }
+  body.fp-index-shell-copy > header.site-header .container.nav{
+    width:min(1120px,calc(100% - 32px))!important;max-width:none!important;margin:0 auto!important;height:62px!important;min-height:62px!important;
+    display:grid!important;grid-template-columns:105px 1fr 190px!important;align-items:center!important;padding:0!important;gap:0!important;
+  }
+  body.fp-index-shell-copy > header.site-header .brand-link{display:flex!important;align-items:center!important;justify-self:start!important;text-decoration:none!important}
+  body.fp-index-shell-copy > header.site-header .logo{display:block!important;width:92px!important;height:50px!important;object-fit:contain!important;max-width:none!important}
+  body.fp-index-shell-copy > header.site-header .navlinks{display:flex!important;align-items:center!important;justify-self:center!important;gap:30px!important;margin:0!important;height:62px!important;font-size:10px!important;font-weight:800!important}
+  body.fp-index-shell-copy > header.site-header .navlinks a{height:100%!important;display:flex!important;align-items:center!important;border-bottom:2px solid transparent!important;text-transform:uppercase!important;color:#fff!important;text-decoration:none!important;padding:0!important;white-space:nowrap!important}
+  body.fp-index-shell-copy > header.site-header .navlinks a.active{color:#ff5a00!important;border-bottom-color:#ff5a00!important}
+  body.fp-index-shell-copy > header.site-header .nav-location{margin:0!important;justify-self:end!important;display:flex!important;align-items:center!important;gap:7px!important;font-size:10px!important;font-weight:700!important;line-height:1.08!important;white-space:nowrap!important;color:#fff!important}
+  body.fp-index-shell-copy > header.site-header .nav-location svg{width:22px!important;height:22px!important;fill:#ff5a00!important;flex:0 0 auto!important}
+  body.fp-index-shell-copy > header.site-header .menu{display:none!important}
+
+  body.fp-index-shell-copy > #forgepc-footer{display:block!important;width:100vw!important;margin:0 calc(50% - 50vw)!important;padding:0!important;background:#02090b!important;border-top:1px solid #26373c!important;font-family:Arial,Helvetica,sans-serif!important;color:#f5f5f2!important}
+  body.fp-index-shell-copy > #forgepc-footer .fp-wrap{display:block!important;width:min(calc(100% - 36px),1180px)!important;margin:0 auto!important}
+  body.fp-index-shell-copy > #forgepc-footer .fp-main{display:flex!important;min-height:96px!important;align-items:center!important;gap:26px!important}
+  body.fp-index-shell-copy > #forgepc-footer .fp-logo{display:block!important;width:145px!important;height:70px!important;max-width:100%!important;object-fit:contain!important}
+  body.fp-index-shell-copy > #forgepc-footer .fp-tag{display:block!important;font-size:11px!important;color:#d8dcdb!important}
+  body.fp-index-shell-copy > #forgepc-footer .fp-social{display:block!important;font-size:24px!important;letter-spacing:8px!important;margin:0!important}
+  body.fp-index-shell-copy > #forgepc-footer .fp-social span{font-size:inherit!important;letter-spacing:inherit!important;color:#f5f5f2!important}
+  body.fp-index-shell-copy > #forgepc-footer .fp-contact{display:flex!important;margin-left:auto!important;align-items:center!important;gap:28px!important;font-size:12px!important;font-weight:700!important}
+  body.fp-index-shell-copy > #forgepc-footer .fp-contact span{display:inline-flex!important;align-items:center!important;color:#f5f5f2!important;font-size:inherit!important;font-weight:inherit!important;white-space:nowrap!important}
+  body.fp-index-shell-copy > #forgepc-footer .fp-contact svg{width:16px!important;height:16px!important;fill:#ff5a00!important;margin-right:6px!important}
+  body.fp-index-shell-copy > #forgepc-footer .fp-bottom{display:flex!important;border-top:1px solid #192a30!important;min-height:39px!important;align-items:center!important;justify-content:space-between!important;font-size:10px!important;color:#cdd2d3!important}
+  body.fp-index-shell-copy > #forgepc-footer .fp-bottom span{font-size:inherit!important;color:inherit!important}
+
+  /* aucun ancien shell desktop ne doit survivre */
+}
