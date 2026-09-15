@@ -208,3 +208,94 @@ html,body{margin:0;background:#020b0f;color:#fff;font-family:Arial,Helvetica,san
 @media(min-width:901px){
  .v1-cta{background:#030d10 url("v1-coffee-banner-final.jpg") center/100% 100% no-repeat!important}
 }
+/* V2 — préserver les proportions de la photo tasse (aucun étirement) */
+@media(min-width:901px){
+  .v1-cta{
+    background-image:linear-gradient(90deg,rgba(3,13,16,.96) 0%,rgba(3,13,16,.82) 28%,rgba(3,13,16,.22) 58%,rgba(3,13,16,.08) 100%),url("about-mug-original.jpg")!important;
+    background-size:100% 100%,cover!important;
+    background-position:center,center 55%!important;
+    background-repeat:no-repeat!important;
+  }
+}
+/* V3 — Services: WRX officielle uniquement dans la carte domicile + bandeau café sans voiture */
+@media(min-width:901px){
+  .v1-card:nth-child(5) .photo{
+    content:url("subaru-wrx-officiel-crop.jpg")!important;
+    object-fit:cover!important;
+    object-position:center 58%!important;
+  }
+  .v1-cta{
+    height:112px!important;
+    background-color:#030d10!important;
+    background-image:linear-gradient(90deg,rgba(3,13,16,.28),rgba(3,13,16,.10)),url("about-mug-original.jpg")!important;
+    background-size:100% 100%,auto 168px!important;
+    background-position:center,58% 51%!important;
+    background-repeat:no-repeat!important;
+  }
+}
+
+/* V4 — corrections ciblées approuvées: gaming, WRX officielle, café non déformé */
+@media(min-width:901px){
+  /* PC gaming: utiliser la vraie tour RGB et cadrer la tour entière */
+  .v1-services .card:nth-child(4) .photo{
+    content:url("gaming-rgb-tower-maquette.jpg")!important;
+    object-fit:cover!important;
+    object-position:center 53%!important;
+  }
+  /* Service à domicile: WRX ForgePC officielle, cadrage voiture complète */
+  .v1-services .card:nth-child(5) .photo{
+    content:url("subaru-wrx-officiel-crop.jpg")!important;
+    object-fit:cover!important;
+    object-position:center 55%!important;
+  }
+  /* Parlons-en: bandeau large préparé à partir de la tasse originale, sans étirement */
+  .v1-cta{
+    height:100px!important;
+    background:#030d10 url("services-coffee-banner-v4.jpg") center/cover no-repeat!important;
+  }
+}
+
+/* V5 — corrections ciblées depuis V4 testée : gaming légèrement dézoomé + bandeau café plein format.
+   WRX verrouillée : aucune règle voiture modifiée ici. */
+@media(min-width:901px){
+  .v1-services .card:nth-child(4) .photo{
+    content:url("gaming-rgb-tower-maquette.jpg")!important;
+    object-fit:contain!important;
+    object-position:center center!important;
+    transform:scale(.90)!important;
+    transform-origin:center center!important;
+    background:#02090b!important;
+  }
+  .v1-cta{
+    height:100px!important;
+    background-color:#030d10!important;
+    background-image:linear-gradient(90deg,rgba(3,13,16,.74) 0%,rgba(3,13,16,.18) 40%,rgba(3,13,16,.10) 100%),url("about-mug-original.jpg")!important;
+    background-size:100% 100%,cover!important;
+    background-position:center,center 54%!important;
+    background-repeat:no-repeat!important;
+  }
+}
+
+/* V9 FINAL PASS — ONLY the two user-approved visual zones. */
+@media (min-width:901px){
+  .v1-services .card:nth-child(4) .photo{
+    content:url("services-gaming-reference-exact.png")!important;
+    width:100%!important;
+    height:184px!important;
+    object-fit:cover!important;
+    object-position:center!important;
+    transform:none!important;
+    background:transparent!important;
+  }
+  .v1-cta{
+    height:100px!important;
+    background:#030d10 url("services-cta-reference-exact.png") center/100% 100% no-repeat!important;
+  }
+  .v1-cta>div{visibility:hidden!important;}
+  .v1-cta>a{
+    opacity:0!important;
+    width:250px!important;
+    height:58px!important;
+    margin-right:36px!important;
+  }
+}

@@ -925,3 +925,13 @@
   .services-page .mobile-info-panel .faq-answer{display:none!important;font-size:9px!important;line-height:1.3!important;padding:5px 0!important;}
   .services-page .mobile-info-panel .faq-row.open + .faq-answer{display:block!important;}
 }
+/* V3 — bandeau café mobile: aucune voiture, proportions conservées */
+@media(max-width:900px){
+  .services-page .services-cta{
+    background-color:#02090b!important;
+    background-image:linear-gradient(90deg,rgba(2,9,11,.70),rgba(2,9,11,.34)),url('about-mug-original.jpg')!important;
+    background-size:100% 100%,auto 150px!important;
+    background-position:center,center!important;
+    background-repeat:no-repeat!important;
+  }
+}
