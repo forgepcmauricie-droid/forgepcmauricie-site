@@ -1,0 +1,74 @@
+/* PC GAMING SUR MESURE — PC V1 TECHNIQUE
+   Base desktop consolidée. Le mobile sera repris séparément. */
+*{box-sizing:border-box}
+body.gaming-page{margin:0;background:#020b0f;color:#fff;font-family:Arial,Helvetica,sans-serif;overflow-x:hidden}
+body.gaming-page .shell{width:min(1180px,calc(100% - 56px));margin:auto}
+
+/* HERO */
+body.gaming-page .hero{height:470px;position:relative;overflow:hidden;background:#020b0f;border-bottom:1px solid #40535b}
+body.gaming-page .hero-media{position:absolute;inset:0;z-index:0;overflow:hidden}
+body.gaming-page .hero-media img{position:absolute;right:0;top:0;width:auto;height:100%;max-width:none;display:block;object-fit:contain;object-position:right center}
+body.gaming-page .hero-media:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#020b0f 0%,rgba(2,11,15,.98) 27%,rgba(2,11,15,.70) 42%,rgba(2,11,15,.15) 57%,rgba(2,11,15,0) 68%);pointer-events:none}
+body.gaming-page .hero-in{height:100%;position:relative;z-index:1}
+body.gaming-page .copy{position:absolute;left:0;top:62px;width:39%;z-index:3}
+body.gaming-page .copy>b{color:#ff5a00;font-size:17px;font-weight:900}
+body.gaming-page .copy h1{font-size:49px;line-height:.94;margin:10px 0 17px;letter-spacing:-1px}
+body.gaming-page .copy h1 span{display:block;color:#ff5a00}
+body.gaming-page .copy>p{font-size:18px;line-height:1.35;margin:0 0 15px;max-width:430px}
+body.gaming-page .copy em{font-size:22px;display:inline-block;transform:rotate(-4deg);font-style:italic}
+body.gaming-page .hero-services{position:absolute;right:0;top:72px;width:315px;z-index:3;list-style:none;margin:0;padding:0;display:grid;gap:17px}
+body.gaming-page .hero-services li{display:flex;align-items:center;gap:12px;font-size:14px;font-weight:800;text-shadow:0 1px 3px #000}
+body.gaming-page .hero-services svg{width:28px;height:28px;flex:0 0 28px;fill:#ff5a00}
+body.gaming-page .benefits{position:absolute;left:0;right:0;bottom:25px;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;width:72%;z-index:3}
+body.gaming-page .benefit{min-width:0;display:flex;align-items:center;gap:9px;color:#fff;font-size:11px;font-weight:900;white-space:nowrap}
+body.gaming-page .benefit svg{width:31px;height:31px;flex:0 0 31px;fill:#ff5a00}
+body.gaming-page .herocta{position:absolute;right:0;bottom:19px;z-index:4;background:#ff5a00;color:#fff;text-decoration:none;font-weight:900;padding:17px 28px;border-radius:3px;min-width:260px;text-align:center}
+
+/* CONTENU */
+body.gaming-page .section{padding:14px 0 16px}
+body.gaming-page .sectitle{display:flex;align-items:center;justify-content:center;gap:18px}
+body.gaming-page .sectitle i{width:90px;height:3px;background:#ff5a00}
+body.gaming-page .sectitle h2{font-size:26px;margin:0}
+body.gaming-page .sub{text-align:center;margin:3px 0 12px}
+body.gaming-page .cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+body.gaming-page .cards article,body.gaming-page .box{min-width:0;border:1px solid #3b515a;background:#06161b;border-radius:4px;overflow:hidden}
+body.gaming-page .cards img{width:100%;height:135px;display:block;object-fit:cover}
+body.gaming-page .cards h3{font-size:14px;margin:9px 11px 5px}
+body.gaming-page .cards h3 b{display:inline-grid;place-items:center;background:#ff5a00;color:#071014;border-radius:50%;width:31px;height:31px;font-size:18px;margin-right:7px}
+body.gaming-page .cards p{font-size:12px;line-height:1.4;margin:0 12px 13px}
+body.gaming-page .lower{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:12px;margin-top:12px;align-items:stretch}
+body.gaming-page .box{padding:12px}
+body.gaming-page .small h2{font-size:19px}
+body.gaming-page .small i{width:70px}
+body.gaming-page .formbox form{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px 14px}
+body.gaming-page .formbox label{min-width:0;font-size:11px;font-weight:700}
+body.gaming-page .formbox label b{color:#ff5a00}
+body.gaming-page .formbox input,body.gaming-page .formbox select,body.gaming-page .formbox textarea{display:block;width:100%;min-width:0;margin-top:4px;padding:10px;background:#13272e;border:1px solid #59717b;color:#fff;border-radius:3px}
+body.gaming-page .formbox textarea{height:84px;resize:vertical}
+body.gaming-page .formbox .full,body.gaming-page .formbox button{grid-column:1/-1}
+body.gaming-page .formbox button{width:100%;border:0;background:#ff5a00;color:#fff;padding:14px;font-weight:900;font-size:14px;border-radius:3px;cursor:pointer}
+body.gaming-page .feature{display:grid;grid-template-columns:155px minmax(0,1fr);gap:13px}
+body.gaming-page .feature img{width:155px;height:180px;object-fit:cover}
+body.gaming-page .feature h2{font-size:20px;margin:0 0 8px}
+body.gaming-page .feature h2 span{display:block;color:#ff5a00}
+body.gaming-page .feature p{font-size:12px;line-height:1.35}
+body.gaming-page .feature em{font-size:18px}
+body.gaming-page .faqtitle{margin-top:7px}
+body.gaming-page .faqtitle h2{font-size:14px;white-space:nowrap}
+body.gaming-page .faqtitle i{height:2px;flex:1}
+body.gaming-page .faq>div{border-bottom:1px solid #2c4149}
+body.gaming-page .faq button{width:100%;background:none;border:0;color:#fff;text-align:left;padding:8px 0;font-size:11px;cursor:pointer}
+body.gaming-page .faq button b{float:right;color:#ff5a00;font-size:18px}
+body.gaming-page .faq p{display:none;margin:0 0 8px;font-size:11px;line-height:1.35;color:#dce4e7}
+body.gaming-page .faq .open p{display:block}
+body.gaming-page .more{display:block;border:1px solid #ff5a00;color:#ff5a00;text-align:center;text-decoration:none;font-size:10px;font-weight:900;padding:7px;margin-top:7px}
+
+/* PARLONS-EN — visuel café approuvé */
+body.gaming-page .work{height:126px;background:linear-gradient(90deg,rgba(2,9,11,.80) 0%,rgba(2,9,11,.45) 45%,rgba(2,9,11,.12) 72%),url('services-coffee-banner-v4.jpg') center 52%/cover no-repeat;border-top:1px solid #40535b;border-bottom:1px solid #40535b}
+body.gaming-page .workin{height:100%;display:flex;align-items:center}
+body.gaming-page .work h2{font-size:20px;margin:0}
+body.gaming-page .work h2 span{display:block;color:#ff5a00;font-size:31px}
+body.gaming-page .work p{font-size:12px;line-height:1.35;margin:3px 0}
+body.gaming-page .work .cta{margin-left:auto;background:#ff5a00;color:#fff;text-decoration:none;font-weight:900;padding:16px 30px;border-radius:3px}
+
+.formbox form button .send-icon{width:20px;height:20px;fill:currentColor;flex:0 0 20px}.formbox form button{display:flex;align-items:center;justify-content:center;gap:10px}
