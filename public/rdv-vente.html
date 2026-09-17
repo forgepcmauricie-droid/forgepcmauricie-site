@@ -256,46 +256,6 @@ img { max-width:100%; }
 <link href="Assets/mobile-approved.css" rel="stylesheet"/>
 <script defer="" src="Assets/mobile-approved.js"></script>
 <link href="Assets/mobile-header-uniform.css?v=1" rel="stylesheet"/>
-<style>
-/* RDV VENTE — ajustements desktop selon maquette finale. Mobile inchangé. */
-@media (min-width:901px){
-  body[data-mobile-page="rdv-vente"] .site-header{height:68px!important;background:#03090c!important}
-  body[data-mobile-page="rdv-vente"] .nav{min-height:68px!important;height:68px!important;max-width:1180px!important}
-  body[data-mobile-page="rdv-vente"] .brand-link{width:175px!important}
-  body[data-mobile-page="rdv-vente"] .logo{width:165px!important;height:64px!important;object-fit:contain!important}
-  body[data-mobile-page="rdv-vente"] .navlinks{gap:36px!important}
-  body[data-mobile-page="rdv-vente"] .navlinks a{font-size:12px!important}
-  body[data-mobile-page="rdv-vente"] .hero{min-height:282px!important;background:linear-gradient(90deg,rgba(3,8,10,.96) 0%,rgba(3,8,10,.78) 42%,rgba(3,8,10,.18) 68%,rgba(3,8,10,.38) 100%),url('Assets/gaming-rgb-tower-maquette.jpg') 76% 53%/cover no-repeat!important}
-  body[data-mobile-page="rdv-vente"] .hero-inner{min-height:282px!important;align-items:flex-start!important;padding-top:28px!important}
-  body[data-mobile-page="rdv-vente"] .hero-inner>div{max-width:600px!important}
-  body[data-mobile-page="rdv-vente"] .crumb{font-size:12px!important;margin-bottom:10px!important}
-  body[data-mobile-page="rdv-vente"] .kicker{display:none!important}
-  body[data-mobile-page="rdv-vente"] h1{font-size:43px!important;line-height:1.02!important;margin:4px 0 9px!important}
-  body[data-mobile-page="rdv-vente"] .hero p{font-size:15px!important;line-height:1.35!important;max-width:520px!important}
-  body[data-mobile-page="rdv-vente"] .benefits{position:absolute!important;left:0!important;right:0!important;bottom:10px!important;display:grid!important;grid-template-columns:repeat(4,1fr)!important;gap:0!important;max-width:1120px!important}
-  body[data-mobile-page="rdv-vente"] .benefit{font-size:13px!important;justify-content:center!important}
-  body[data-mobile-page="rdv-vente"] .benefit b{font-size:24px!important}
-  body[data-mobile-page="rdv-vente"] .benefits:after{content:'🍃  Informatique plus responsable';display:flex;align-items:center;justify-content:center;color:#f1f3f4;font-weight:700;font-size:13px}
-  body[data-mobile-page="rdv-vente"] .page{padding-top:12px!important}
-  body[data-mobile-page="rdv-vente"] .layout{grid-template-columns:380px 1fr!important;gap:12px!important}
-  body[data-mobile-page="rdv-vente"] .card{padding:14px 16px!important}
-  body[data-mobile-page="rdv-vente"] .card h2{font-size:20px!important;margin:0 0 12px!important}
-  body[data-mobile-page="rdv-vente"] .product-photo,body[data-mobile-page="rdv-vente"] .no-photo{height:175px!important}
-  body[data-mobile-page="rdv-vente"] .form-grid{gap:8px 12px!important}
-  body[data-mobile-page="rdv-vente"] .field label{font-size:12px!important;margin-bottom:4px!important}
-  body[data-mobile-page="rdv-vente"] input,body[data-mobile-page="rdv-vente"] textarea{padding:9px 11px!important;font-size:13px!important}
-  body[data-mobile-page="rdv-vente"] textarea{min-height:82px!important}
-  body[data-mobile-page="rdv-vente"] .privacy{margin-top:10px!important;padding:10px 12px!important;font-size:12px!important}
-  body[data-mobile-page="rdv-vente"] .submit{margin-top:10px!important;padding:10px 14px!important;font-size:15px!important}
-  body[data-mobile-page="rdv-vente"] .features{margin-top:10px!important}
-  body[data-mobile-page="rdv-vente"] .feature{padding:13px 8px!important}
-  body[data-mobile-page="rdv-vente"] .feature strong{font-size:13px!important}
-  body[data-mobile-page="rdv-vente"] .feature p{font-size:10px!important}
-  body[data-mobile-page="rdv-vente"] #forgepc-footer .fp-main{min-height:82px!important}
-  body[data-mobile-page="rdv-vente"] #forgepc-footer .fp-logo{width:125px!important;height:60px!important}
-  body[data-mobile-page="rdv-vente"] #forgepc-footer .fp-bottom{min-height:32px!important;font-size:9px!important}
-}
-</style>
 <link href="Assets/qa-owner-fixes.css?v=2" rel="stylesheet"/>
 
 
@@ -313,45 +273,64 @@ img { max-width:100%; }
 }
 </style>
 
-<style id="rdv-sale-pixel-approved-v25">
-@media (min-width:901px){
-  /* Header et footer verrouillés : aucune règle ne les cible. */
-  body > .rdv-sale-pixel-page{
-    display:block!important;
-    width:100vw!important;
-    max-width:none!important;
-    margin:0!important;
-    padding:0!important;
-    background:#03151b!important;
-    line-height:0!important;
-  }
-  .rdv-sale-pixel-stage{
-    position:relative!important;
-    width:100%!important;
-    margin:0!important;
-    padding:0!important;
-    line-height:0!important;
-  }
-  .rdv-sale-pixel-stage>img{
-    display:block!important;
-    width:100%!important;
-    height:auto!important;
-    margin:0!important;
-    padding:0!important;
-  }
-  /* Masquer uniquement l'ancien contenu desktop. */
-  body > .rdv-sale-pixel-page ~ main,
-  body > .rdv-sale-pixel-page ~ .page-main,
-  body > .rdv-sale-pixel-page ~ .hero,
-  body > .rdv-sale-pixel-page ~ section:not(.legacy-footer-mobile-only){
-    display:none!important;
-  }
-}
-@media (max-width:900px){
-  .rdv-sale-pixel-page{display:none!important}
-}
-</style>
 
+<style id="rdv-sale-desktop-v2">
+@media (min-width:901px){
+body[data-mobile-page="rdv-vente"]{--max:1170px}
+body[data-mobile-page="rdv-vente"]>.site-header{height:74px!important;position:relative!important;background:#02090b!important}
+body[data-mobile-page="rdv-vente"]>.site-header .container.nav{width:min(calc(100% - 40px),1170px)!important;height:74px!important;min-height:74px!important;display:grid!important;grid-template-columns:150px 1fr 250px 195px!important;gap:16px!important;align-items:center!important}
+body[data-mobile-page="rdv-vente"]>.site-header .brand-link{width:150px!important;height:68px!important}
+body[data-mobile-page="rdv-vente"]>.site-header .logo{width:145px!important;height:66px!important;object-fit:contain!important}
+body[data-mobile-page="rdv-vente"]>.site-header .navlinks{display:flex!important;justify-content:center!important;gap:25px!important;height:74px!important;margin:0!important}
+body[data-mobile-page="rdv-vente"]>.site-header .navlinks a{font:800 13px 'Barlow Condensed',Arial,sans-serif!important;height:74px!important;display:flex!important;align-items:center!important;border-bottom:3px solid transparent!important}
+body[data-mobile-page="rdv-vente"]>.site-header .navlinks a.active{color:#fff!important;border-bottom-color:var(--orange)!important}
+body[data-mobile-page="rdv-vente"]>.site-header .nav-location{display:none!important}
+body[data-mobile-page="rdv-vente"] .sale-header-cta{height:46px;border-radius:5px;background:linear-gradient(135deg,#ff6900,#ff3d00);display:flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;font:800 13px 'Barlow Condensed',Arial,sans-serif;white-space:nowrap}
+body[data-mobile-page="rdv-vente"] .sale-header-cta svg{width:18px;height:18px;fill:#fff}
+body[data-mobile-page="rdv-vente"] .sale-header-slogan{font:italic 600 18px/1.05 'Barlow Condensed',Arial,sans-serif;text-align:center;transform:rotate(-4deg);position:relative}
+body[data-mobile-page="rdv-vente"] .sale-header-slogan:after{content:"";display:block;width:105px;height:4px;background:var(--orange);border-radius:99px;margin:7px auto 0;transform:rotate(-5deg)}
+body[data-mobile-page="rdv-vente"] .hero{display:block;height:308px;min-height:308px;background:#03090c;border-bottom:1px solid #26343a}
+body[data-mobile-page="rdv-vente"] .hero:before{content:"";position:absolute;inset:0;background:url('Assets/v1-hero-services.jpg') 65% 49%/auto 425px no-repeat;opacity:.98;pointer-events:none}
+body[data-mobile-page="rdv-vente"] .hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#03090c 0%,rgba(3,9,12,.98) 34%,rgba(3,9,12,.72) 48%,rgba(3,9,12,.12) 67%,rgba(3,9,12,.82) 100%);pointer-events:none}
+body[data-mobile-page="rdv-vente"] .hero-inner{height:308px;min-height:308px;align-items:flex-start;padding-top:15px;position:relative;z-index:2}
+body[data-mobile-page="rdv-vente"] .hero-inner>div{width:100%;position:relative}
+body[data-mobile-page="rdv-vente"] .crumb{font-size:12px;margin:0 0 12px;color:#fff}.crumb span{color:var(--orange)}
+body[data-mobile-page="rdv-vente"] .kicker{display:none!important}
+body[data-mobile-page="rdv-vente"] h1{font-size:53px;line-height:.91;margin:0 0 12px;max-width:535px;letter-spacing:-.5px}
+body[data-mobile-page="rdv-vente"] .hero p{font-size:15px;line-height:1.38;max-width:520px;margin:0;color:#fff}
+body[data-mobile-page="rdv-vente"] .hero-handwritten{position:absolute;right:16px;top:46px;width:205px;font:italic 600 25px/1.05 'Barlow Condensed',Arial,sans-serif;transform:rotate(-7deg);text-align:center;color:#fff}
+body[data-mobile-page="rdv-vente"] .hero-handwritten::after{content:"";display:block;width:112px;height:5px;margin:9px auto 0;background:var(--orange);border-radius:999px;transform:rotate(-5deg)}
+body[data-mobile-page="rdv-vente"] .benefits{position:absolute;left:0;right:0;top:226px;display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:0;padding:13px 0 0;border-top:0}
+body[data-mobile-page="rdv-vente"] .benefit{justify-content:flex-start;gap:11px;font-size:14px;white-space:nowrap}
+body[data-mobile-page="rdv-vente"] .benefit:nth-child(2),body[data-mobile-page="rdv-vente"] .benefit:nth-child(3){justify-content:center}body[data-mobile-page="rdv-vente"] .benefit:last-child{justify-content:flex-end;padding-right:8px}
+body[data-mobile-page="rdv-vente"] .benefit svg{width:36px;height:36px;fill:var(--orange);flex:0 0 36px}
+body[data-mobile-page="rdv-vente"] .page{display:block;padding:12px 0 0}
+body[data-mobile-page="rdv-vente"] .layout{grid-template-columns:340px 1fr;gap:14px;align-items:stretch}
+body[data-mobile-page="rdv-vente"] .layout>aside,body[data-mobile-page="rdv-vente"] .layout>section{height:100%}
+body[data-mobile-page="rdv-vente"] .card{padding:15px 17px;border-radius:5px;height:100%}
+body[data-mobile-page="rdv-vente"] .card h2{font-size:20px;margin:0 0 12px;display:flex;align-items:center;gap:10px}
+body[data-mobile-page="rdv-vente"] .card h2:before{width:27px;height:27px;margin:0;background:var(--orange);mask:center/contain no-repeat;content:"";flex:none}
+body[data-mobile-page="rdv-vente"] aside .card{display:grid;grid-template-columns:128px 1fr;grid-template-rows:auto auto auto 1fr;gap:0 14px;align-content:start}
+body[data-mobile-page="rdv-vente"] aside .card h2{grid-column:1/-1}body[data-mobile-page="rdv-vente"] aside .card h2:before{mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M3 3h18v14H3V3Zm2 2v10h14V5H5Zm4 14h6v2H9z'/%3E%3C/svg%3E")}
+body[data-mobile-page="rdv-vente"] .layout>section.card>h2:before{mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='m3 17 4 4 14-14-4-4L3 17Zm2.8.2L17 6l1 1L6.8 18.2 5.8 17.2ZM2 22l5-1-4-4-1 5Z'/%3E%3C/svg%3E")}
+body[data-mobile-page="rdv-vente"] #productVisual{grid-column:1;grid-row:2/4}body[data-mobile-page="rdv-vente"] .product-photo,body[data-mobile-page="rdv-vente"] .no-photo{width:128px;height:160px;object-fit:contain;background:#05090b;border:1px solid #334149;border-radius:5px}
+body[data-mobile-page="rdv-vente"] .pc-meta{grid-column:2;grid-row:2;margin:0;gap:6px;align-self:start}.meta-label{font-size:11px}.meta-value{font-size:15px}.stock{font-size:24px;line-height:1}.price{font-size:28px;line-height:1}
+body[data-mobile-page="rdv-vente"] .back{grid-column:2;grid-row:3;margin-top:8px;font-size:13px}
+body[data-mobile-page="rdv-vente"] .note{grid-column:1/-1;grid-row:4;margin-top:12px;padding:11px 12px 11px 49px;font-size:11px;line-height:1.38;position:relative;min-height:102px}.note strong{font-size:15px;margin-bottom:4px}.note:before{content:"i";position:absolute;left:13px;top:13px;width:25px;height:25px;border-radius:50%;background:var(--orange);color:#071013;font:bold 20px/25px Arial;text-align:center}
+body[data-mobile-page="rdv-vente"] form{gap:8px}.form-grid{gap:7px 10px}body[data-mobile-page="rdv-vente"] .field{gap:4px}body[data-mobile-page="rdv-vente"] label{font-size:12px}body[data-mobile-page="rdv-vente"] input,body[data-mobile-page="rdv-vente"] textarea{padding:9px 11px;font-size:12px;border-radius:4px;min-height:38px}body[data-mobile-page="rdv-vente"] textarea{min-height:84px}.choice-grid{gap:8px 18px}.choice{font-size:12px;line-height:1.2}.choice input{accent-color:var(--orange)}
+body[data-mobile-page="rdv-vente"] .char-count{text-align:right;color:#c8d0d3;font-size:10px;margin-top:2px}
+body[data-mobile-page="rdv-vente"] .form-bottom{display:grid;grid-template-columns:1.02fr .98fr;gap:10px;align-items:stretch;margin-top:1px}
+body[data-mobile-page="rdv-vente"] .privacy{display:flex;align-items:center;justify-content:center;gap:11px;margin:0;padding:11px;font-size:11px}.privacy svg{width:22px;height:22px;fill:#b9b3df!important;flex:none}
+body[data-mobile-page="rdv-vente"] .submit{display:flex;align-items:center;justify-content:center;gap:13px;margin:0 7px;padding:8px 14px;font-size:16px;line-height:1.08;min-height:58px;text-transform:none}.submit svg{width:33px!important;height:33px!important;fill:#fff;flex:none}.submit small{font-size:10px;margin-top:4px;text-transform:none}
+body[data-mobile-page="rdv-vente"] .sales-banner{width:100vw;margin:10px calc(50% - 50vw) 0;min-height:96px;display:grid;grid-template-columns:36% 64%;background:#071013;border-top:1px solid #26343a;border-bottom:0;overflow:hidden}
+body[data-mobile-page="rdv-vente"] .sales-banner-photo{background-image:linear-gradient(90deg,rgba(5,10,12,.02),rgba(7,16,19,.15)),url('Assets/gaming-workshop-banner-approved.jpg');background-repeat:no-repeat;background-size:100% 100%,auto 270%;background-position:center,50% 71%;position:relative}
+body[data-mobile-page="rdv-vente"] .sales-banner-content{padding:12px 24px 10px 0;display:grid;grid-template-columns:0 repeat(4,1fr);align-items:center}
+body[data-mobile-page="rdv-vente"] .sales-banner-title{position:absolute;left:9.2%;width:205px;font:italic 600 21px/1.05 'Barlow Condensed',Arial,sans-serif;text-transform:none;transform:rotate(-5deg);z-index:2}.sales-banner-title span{color:#fff;display:block}.sales-banner-title:after{content:"";display:block;width:105px;height:4px;background:var(--orange);border-radius:99px;margin:6px auto 0;transform:rotate(-4deg)}
+body[data-mobile-page="rdv-vente"] .sales-banner-items{grid-column:2/-1;display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:0}.sales-banner-items>div{display:flex;align-items:center;gap:8px;font:700 11px 'Barlow Condensed',Arial,sans-serif}.sales-banner-items svg{width:27px;height:27px;fill:var(--orange);flex:none}
+body[data-mobile-page="rdv-vente"]+.index-footer-desktop-copy,body[data-mobile-page="rdv-vente"]~.index-footer-desktop-copy{margin-top:0!important}
+}
+@media(max-width:900px){.sale-header-cta,.sale-header-slogan{display:none!important}}
+</style>
 </head>
 <body class="rdv-sale-page fp-index-shell-copy" data-mobile-page="rdv-vente"><header class="site-header">
 <div class="container nav">
@@ -365,30 +344,25 @@ img { max-width:100%; }
 <a href="a-propos.html">À propos</a>
 <a href="contact.html">Contact</a>
 </nav>
+<a class="sale-header-cta" href="rendez-vous.html"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7 2h2v2h6V2h2v2h3a2 2 0 0 1 2 2v14H2V6a2 2 0 0 1 2-2h3V2Zm13 8H4v8h16v-8ZM4 8h16V6H4v2Z"/></svg><span>DEMANDER UN RENDEZ-VOUS →</span></a><div class="sale-header-slogan">Votre technologie,<br>notre expertise.</div>
 <div class="nav-location"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.1 7 13 7 13s7-7.9 7-13a7 7 0 0 0-7-7Zm0 9.6A2.6 2.6 0 1 1 12 6a2.6 2.6 0 0 1 0 5.6Z"></path></svg><span>Shawinigan et<br/>toute la Mauricie</span></div>
 <button aria-expanded="false" aria-label="Ouvrir le menu" class="menu" type="button">☰</button>
 </div>
 </header>
 
-<div class="rdv-sale-pixel-page" aria-label="Rendez-vous vente — ForgePC Mauricie">
-  <div class="rdv-sale-pixel-stage">
-    <img src="Assets/rdv-vente-content-approved.png" alt="Prendre rendez-vous pour l'achat de ce PC — ForgePC Mauricie">
-  </div>
-</div>
-
-
-
 <section class="hero">
 <div class="container hero-inner">
 <div>
-<div class="crumb">Accueil  ›  Inventaire  ›  <span>Rendez-vous vente</span></div>
+<div class="crumb">Accueil  ›  Inventaire  ›  <span id="heroStockCrumb">PC</span>  ›  <span>Prise de rendez-vous vente</span></div>
 <div class="kicker">Vente de PC • ForgePC Mauricie</div>
 <h1>Prendre rendez-vous<br/>pour l'achat de <span>ce PC</span></h1>
-<p>Réservez, posez vos questions ou planifiez une visite pour le PC qui vous intéresse. Nous vous contacterons rapidement.</p>
+<p>Réservez, posez vos questions ou planifiez une visite pour le PC qui vous intéresse. Nous vous contacterons rapidement !</p>
+<div class="hero-handwritten">Des ordinateurs prêts pour aujourd’hui et demain.</div>
 <div class="benefits">
-<div class="benefit"><b>●</b> Réponse rapide</div>
-<div class="benefit"><b>♟</b> Approche humaine</div>
-<div class="benefit"><b>✓</b> Achat en confiance</div>
+<div class="benefit"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Zm1 11h-5v-2h3V6h2Z"/></svg><span>Réponse rapide</span></div>
+<div class="benefit"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M8 11a4 4 0 1 0-4-4 4 4 0 0 0 4 4Zm8 0a4 4 0 1 0-4-4 4 4 0 0 0 4 4ZM8 13c-4 0-7 2-7 5v2h10v-2a6 6 0 0 1 2-4.5A12 12 0 0 0 8 13Zm8 0c-3.3 0-6 1.8-6 5v2h12v-2c0-3.2-2.7-5-6-5Z"/></svg><span>Approche humaine</span></div>
+<div class="benefit"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5.2 3.4 9.7 8 11 4.6-1.3 8-5.8 8-11V5Zm-1 14-4-4 1.4-1.4 2.6 2.6 5-5 1.4 1.4Z"/></svg><span>Achat en confiance</span></div>
+<div class="benefit"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20.8 3.2C14 3.4 8.2 5.2 5.1 9.5 3 12.4 3.2 15.6 5 18c2-4.7 5.3-7.7 10.2-9.7-4 2.6-6.7 5.8-8.2 9.7 4.2.8 7.8-.5 10.1-3.4 2.6-3.2 3.4-7.5 3.7-11.4Z"/></svg><span>Informatique plus responsable</span></div>
 </div>
 </div>
 </div>
@@ -431,19 +405,14 @@ img { max-width:100%; }
 </div>
 </div>
 <div class="field full"><label for="message">Message (optionnel)</label><textarea id="message" maxlength="1000" name="Message" placeholder="Écrivez votre message ici...
-Ex. : disponibilité, accessoires inclus, possibilité d'essai, etc."></textarea></div>
+Ex. : disponibilité, accessoires inclus, possibilité d'essai, etc."></textarea><div class="char-count" id="messageCount">0 / 1000</div></div>
 </div>
-<div class="privacy">🔒 Vos informations sont confidentielles.</div>
-<button class="submit" type="submit">✈ ENVOYER MA DEMANDE →<small>à ventes@forgepcmauricie.ca</small></button>
+<div class="form-bottom"><div class="privacy"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M17 9h-1V7a4 4 0 0 0-8 0v2H7a2 2 0 0 0-2 2v9h14v-9a2 2 0 0 0-2-2Zm-7-2a2 2 0 0 1 4 0v2h-4Z"/></svg><span>Vos informations sont confidentielles.</span></div>
+<button class="submit" type="submit"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m2 3 20 9-20 9 3-8 10-1-10-1Z"/></svg><span>Envoyer ma demande<small>à ventes@forgepcmauricie.ca</small></span></button></div>
 </form>
 </section>
 </div>
-<div class="container features">
-<div class="feature"><b>●</b><strong>Service personnalisé</strong><p>On prend le temps de vous conseiller.</p></div>
-<div class="feature"><b>✓</b><strong>Achat en confiance</strong><p>Un PC testé et prêt à utiliser.</p></div>
-<div class="feature"><b>⌖</b><strong>Visite ou rendez-vous</strong><p>À Shawinigan et environs.</p></div>
-<div class="feature"><b>◉</b><strong>Réponse rapide</strong><p>Nous vous contactons rapidement.</p></div>
-</div>
+<section class="sales-banner" aria-label="Les engagements ForgePC"><div class="sales-banner-photo" aria-hidden="true"></div><div class="sales-banner-content"><div class="sales-banner-title">Plus que des ordinateurs. <span>Des solutions.</span></div><div class="sales-banner-items"><div><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"/></svg><span>Shawinigan et environs</span></div><div><svg viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5.2 3.4 9.7 8 11 4.6-1.3 8-5.8 8-11V5Zm-1 14-4-4 1.4-1.4 2.6 2.6 5-5 1.4 1.4Z"/></svg><span>Achat en confiance</span></div><div><svg viewBox="0 0 24 24"><path d="M8 11a4 4 0 1 0-4-4 4 4 0 0 0 4 4Zm8 0a4 4 0 1 0-4-4 4 4 0 0 0 4 4ZM8 13c-4 0-7 2-7 5v2h10v-2a6 6 0 0 1 2-4.5A12 12 0 0 0 8 13Zm8 0c-3.3 0-6 1.8-6 5v2h12v-2c0-3.2-2.7-5-6-5Z"/></svg><span>Approche humaine</span></div><div><svg viewBox="0 0 24 24"><path d="M20.8 3.2C14 3.4 8.2 5.2 5.1 9.5 3 12.4 3.2 15.6 5 18c2-4.7 5.3-7.7 10.2-9.7-4 2.6-6.7 5.8-8.2 9.7 4.2.8 7.8-.5 10.1-3.4 2.6-3.2 3.4-7.5 3.7-11.4Z"/></svg><span>Informatique plus responsable</span></div></div></div></section>
 </main>
 
 <div class="index-footer-desktop-copy" aria-hidden="true"><img src="Assets/index-footer-approved-2x.png?v=2" alt=""></div>
@@ -518,6 +487,7 @@ function render(pc){
     '<div><div class="meta-label">Prix</div><div class="price">'+(pc.prix||"À confirmer")+'</div></div>';
   document.getElementById("productLink").href="pc.html?id="+encodeURIComponent(pc.id);
   document.title="Rendez-vous vente PC-"+pc.id+" | ForgePC Mauricie";
+  const crumb=document.getElementById("heroStockCrumb");if(crumb)crumb.textContent="PC-"+pc.id;
   updateSalesHiddenFields();
 }
 function showError(msg){document.getElementById("productVisual").innerHTML='<div class="no-photo">'+msg+'</div>'}
@@ -527,6 +497,9 @@ function updateSalesHiddenFields(){
   document.getElementById("salesStock").value=stock;
   document.getElementById("salesSubject").value="Demande de rendez-vous vente - "+stock;
 }
+const messageField=document.getElementById("message");
+const messageCount=document.getElementById("messageCount");
+if(messageField&&messageCount){const updateCount=()=>messageCount.textContent=messageField.value.length+" / 1000";messageField.addEventListener("input",updateCount);updateCount();}
 load();
 updateSalesHiddenFields();
 </script>
