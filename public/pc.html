@@ -474,7 +474,9 @@ function normalize(row){
 
 function driveId(value){
   const s=String(value||"");
-  let m=s.match(/drive\.google\.com\/file\/d\/([^/?#]+)/i);
+  let m=s.match(/lh3\.googleusercontent\.com\/d\/([^=?&#/]+)/i);
+  if(m) return m[1];
+  m=s.match(/drive\.google\.com\/file\/d\/([^/?#]+)/i);
   if(m) return m[1];
   m=s.match(/[?&]id=([^&#]+)/i);
   if(m) return m[1];
@@ -488,7 +490,7 @@ function normalizeDriveUrl(value){
   if(s.startsWith("data:")||s.startsWith("blob:")) return s;
   const id=driveId(s);
   return id
-    ? "https://drive.google.com/thumbnail?id="+encodeURIComponent(id)+"&sz=w1600"
+    ? "https://lh3.googleusercontent.com/d/"+encodeURIComponent(id)+"=w1600"
     : s;
 }
 
