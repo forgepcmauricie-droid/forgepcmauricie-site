@@ -26,3 +26,5 @@
  #forgepc-footer .fp-bottom{width:100%!important;min-height:0!important;height:auto!important;padding:10px 0 12px!important;display:flex!important;flex-direction:column!important;flex-wrap:nowrap!important;align-items:center!important;justify-content:center!important;gap:5px!important;text-align:center!important;font-size:9px!important;line-height:1.3!important;}
  #forgepc-footer .fp-bottom span{width:100%!important;max-width:100%!important;white-space:normal!important;line-height:1.3!important;}
 }
+
+#forgepc-footer .instagram{font-size:0!important} #forgepc-footer .instagram .ig-icon{width:18px!important;height:18px!important;display:block!important;color:#fff!important}
