@@ -360,58 +360,41 @@ img { max-width:100%; }
 </style>
 <link href="Assets/forgepc-unified-shell.css?v=78" rel="stylesheet"/>
 <script defer="" src="Assets/forgepc-unified-shell.js?v=78"></script>
-<style id="pc-mobile-index-shell-v1">
-@media(max-width:900px){
-  body.pc-page .forgepc-unified-header{
-    height:84px!important;min-height:84px!important;max-height:84px!important;
-  }
-  body.pc-page .forgepc-unified-header .shell-nav{
-    height:84px!important;max-width:none!important;padding:0 14px!important;
-  }
-  body.pc-page .forgepc-unified-header .brand-link{height:80px!important}
-  body.pc-page .forgepc-unified-header .logo{
-    width:144px!important;height:76px!important;min-width:144px!important;max-width:144px!important;
-  }
-  body.pc-page .forgepc-unified-header .menu::before,
-  body.pc-page .forgepc-unified-header .menu::after{
-    content:none!important;display:none!important;
-  }
-  body.pc-page .forgepc-unified-header .menu-bar{
-    display:block!important;position:static!important;transform:none!important;
-    width:28px!important;height:3px!important;min-width:28px!important;min-height:3px!important;
-    margin:0!important;padding:0!important;border:0!important;flex:0 0 3px!important;
-  }
-  body.pc-page .forgepc-unified-mobile-nav{top:84px!important;max-height:calc(100vh - 94px)!important;overflow-y:auto!important}
 
-  body.pc-page #forgepc-footer .fp-wrap{
-    width:100%!important;max-width:100%!important;padding:0 18px!important;
-  }
-  body.pc-page #forgepc-footer .fp-main{
-    display:flex!important;min-height:0!important;height:auto!important;padding:16px 0 13px!important;
-    flex-direction:column!important;align-items:center!important;justify-content:flex-start!important;
-    gap:9px!important;text-align:center!important;
-  }
-  body.pc-page #forgepc-footer .fp-logo{
-    width:145px!important;height:62px!important;max-width:145px!important;margin:0 auto!important;
-  }
-  body.pc-page #forgepc-footer .fp-social{
-    display:flex!important;justify-content:center!important;align-items:center!important;
-    gap:14px!important;margin:0!important;letter-spacing:0!important;
-  }
-  body.pc-page #forgepc-footer .fp-contact{
-    width:100%!important;margin:2px 0 0!important;display:flex!important;flex-direction:column!important;
-    align-items:center!important;justify-content:center!important;gap:7px!important;text-align:center!important;
-  }
-  body.pc-page #forgepc-footer .fp-contact span{
-    width:auto!important;justify-content:center!important;text-align:center!important;
-  }
-  body.pc-page #forgepc-footer .fp-bottom{
-    width:100%!important;padding:10px 0 12px!important;display:flex!important;flex-direction:column!important;
-    align-items:center!important;justify-content:center!important;gap:5px!important;text-align:center!important;
-  }
+<link href="Assets/header-footer-uniform-final.css?v=1" rel="stylesheet"/>
+<style id="fp-header-final-uniform-v266">
+/* ForgePC — header commun final. Scope strict: header seulement. */
+.fp-common-header{position:relative!important;top:auto!important;z-index:1000!important;width:100%!important;background:#020d10!important;border-bottom:1px solid #23353b!important;box-sizing:border-box!important}
+.fp-common-header .nav{box-sizing:border-box!important}
+.fp-common-header .brand-link{display:flex!important;align-items:center!important;text-decoration:none!important}
+.fp-common-header .logo{display:block!important;object-fit:contain!important}
+.fp-common-header .menu{box-sizing:border-box!important;border:1px solid #31434b!important;border-radius:10px!important;background:#071419!important;align-items:center!important;justify-content:center!important;flex-direction:column!important;gap:6px!important;padding:0!important;overflow:hidden!important;font-size:0!important;line-height:0!important}
+.fp-common-header .menu::before,.fp-common-header .menu::after{content:none!important;display:none!important}
+.fp-common-header .menu .menu-bar{display:block!important;position:static!important;width:26px!important;height:3px!important;min-height:3px!important;background:#fff!important;border:0!important;border-radius:3px!important;margin:0!important;padding:0!important;transform:none!important}
+@media(max-width:900px){
+ .fp-common-header{height:122px!important;min-height:122px!important}
+ .fp-common-header .nav{height:122px!important;min-height:122px!important;width:100%!important;max-width:none!important;margin:0!important;padding:0 30px!important;display:flex!important;align-items:center!important;justify-content:space-between!important}
+ .fp-common-header .brand-link{height:100%!important}
+ .fp-common-header .logo{width:170px!important;height:auto!important;max-height:94px!important;margin:0!important}
+ .fp-common-header .navlinks,.fp-common-header .nav-location{display:none!important}
+ .fp-common-header .menu{display:flex!important;width:48px!important;height:48px!important;min-width:48px!important;min-height:48px!important;max-width:48px!important;max-height:48px!important}
 }
 </style>
-<link href="Assets/header-footer-uniform-final.css?v=1" rel="stylesheet"/></head>
+
+<style id="fp-index-header-exact-final">
+@media(max-width:900px){
+  .forgepc-unified-header{height:67px!important;min-height:67px!important;max-height:67px!important;background:#020b0e!important;border-bottom:1px solid #2a3d43!important}
+  .forgepc-unified-header .shell-nav{width:100%!important;max-width:520px!important;height:67px!important;margin:0 auto!important;padding:0 17px!important;justify-content:space-between!important}
+  .forgepc-unified-header .brand-link{height:67px!important}
+  .forgepc-unified-header .logo{width:122px!important;height:56px!important;min-width:122px!important;max-width:122px!important}
+  .forgepc-unified-header .desktop-nav,.forgepc-unified-header .nav-location{display:none!important}
+  .forgepc-unified-header .menu{display:flex!important;width:42px!important;height:42px!important;min-width:42px!important;min-height:42px!important;max-width:42px!important;max-height:42px!important;margin-left:auto!important;padding:0!important;border:1px solid #42545b!important;border-radius:8px!important;background:#071216!important;align-items:center!important;justify-content:center!important;flex-direction:column!important;gap:5px!important;appearance:none!important}
+  .forgepc-unified-header .menu::before,.forgepc-unified-header .menu::after{content:none!important;display:none!important}
+  .forgepc-unified-header .menu-bar{display:block!important;position:static!important;width:28px!important;height:3px!important;min-width:28px!important;min-height:3px!important;max-width:28px!important;max-height:3px!important;margin:0!important;padding:0!important;border:0!important;border-radius:2px!important;background:#fff!important;transform:none!important}
+  .forgepc-unified-mobile-nav{top:67px!important;max-height:calc(100vh - 77px)!important}
+}
+</style>
+</head>
 <body class="fp-index-shell-copy pc-page" data-mobile-page="pc"><header class="site-header fp-common-header"><div class="container nav"><a aria-label="ForgePC Mauricie" class="brand-link" href="index.html"><img alt="ForgePC Mauricie" class="logo" src="Assets/forgepc-logo-web.png"/></a><nav aria-label="Navigation principale" class="navlinks"><a href="index.html">Accueil</a><a href="services.html">Services</a><a href="inventaire.html">Inventaire</a><a href="a-propos.html">À propos</a><a href="contact.html">Contact</a></nav><div class="nav-location"><span>Shawinigan et<br/>toute la Mauricie</span></div><button aria-expanded="false" aria-label="Ouvrir le menu" class="menu" type="button"><span class="menu-bar"></span><span class="menu-bar"></span><span class="menu-bar"></span></button></div></header>
 <main class="page">
 <div class="container" id="app">
