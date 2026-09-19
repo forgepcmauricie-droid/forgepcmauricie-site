@@ -25,6 +25,115 @@
   body.home-page > .pc-pixel-page{display:block !important;}
 }
 </style>
+
+<style id="index-mobile-final-v1">
+@media (max-width:900px){
+  /* Accueil mobile — correctifs confirmés seulement */
+  .home-page .site-header .menu{
+    width:42px!important;height:42px!important;min-width:42px!important;min-height:42px!important;
+    max-width:42px!important;max-height:42px!important;font-size:0!important;border-radius:8px!important;
+    display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:5px!important;
+  }
+  .home-page .site-header .menu::before,
+  .home-page .site-header .menu::after{content:none!important;display:none!important;}
+  .home-page .site-header .menu .menu-bar{
+    display:block!important;width:28px!important;height:3px!important;min-width:28px!important;min-height:3px!important;
+    max-width:28px!important;max-height:3px!important;margin:0!important;padding:0!important;
+    border:0!important;border-radius:2px!important;background:#fff!important;transform:none!important;position:static!important;
+  }
+
+  /* Pourquoi choisir ForgePC — mobile V2 : neutralise les règles desktop !important
+     et les anciennes règles mobiles qui masquaient les descriptions. */
+  .home-page .home-why .why-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    width:100%!important;max-width:100%!important;overflow:hidden!important;
+  }
+  .home-page .home-why .why-grid article{
+    height:auto!important;min-height:124px!important;max-height:none!important;
+    padding:12px 8px 11px!important;overflow:visible!important;
+    display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:flex-start!important;
+    color:#f5f5f2!important;text-align:center!important;
+  }
+  .home-page .home-why .why-grid article:nth-child(2){border-right:0!important;}
+  .home-page .home-why .why-grid article:nth-child(-n+2){border-bottom:1px solid #2b3c42!important;}
+  .home-page .home-why .why-grid article:nth-child(3){border-right:1px solid #2b3c42!important;}
+  .home-page .home-why .why-grid .why-icon{
+    width:32px!important;height:32px!important;min-width:32px!important;min-height:32px!important;
+    max-width:32px!important;max-height:32px!important;display:grid!important;place-items:center!important;overflow:visible!important;
+  }
+  .home-page .home-why .why-grid .why-icon svg{
+    display:block!important;width:30px!important;height:30px!important;max-width:30px!important;max-height:30px!important;
+    fill:#ff5a00!important;color:#ff5a00!important;
+  }
+  .home-page .home-why .why-grid .why-icon svg .cut{fill:none!important;stroke:#071116!important;}
+  .home-page .home-why .why-grid h3{
+    display:block!important;visibility:visible!important;opacity:1!important;position:static!important;
+    height:auto!important;max-height:none!important;overflow:visible!important;
+    color:#fff!important;font-size:13px!important;line-height:1.15!important;margin:7px 0 4px!important;
+  }
+  .home-page .home-why .why-grid p{
+    display:block!important;visibility:visible!important;opacity:1!important;position:static!important;
+    height:auto!important;max-height:none!important;overflow:visible!important;
+    color:#d4d8d9!important;font-size:10px!important;line-height:1.25!important;margin:0!important;
+  }
+
+  /* CTA secondaire Services — mobile seulement */
+  .home-page .mobile-services-cta{
+    display:flex!important;justify-content:center!important;align-items:center!important;
+    width:100%!important;margin:18px 0 20px!important;padding:0 16px!important;box-sizing:border-box!important;
+  }
+  .home-page .mobile-services-cta a{
+    display:inline-flex!important;align-items:center!important;justify-content:center!important;
+    width:auto!important;max-width:100%!important;min-height:42px!important;padding:0 20px!important;
+    border:1px solid #ff5a00!important;border-radius:4px!important;background:#071116!important;
+    color:#fff!important;text-decoration:none!important;font-size:12px!important;font-weight:800!important;
+    line-height:1!important;letter-spacing:.35px!important;white-space:nowrap!important;box-sizing:border-box!important;
+  }
+
+  body.home-page > #forgepc-footer{
+    width:100%!important;margin:0!important;overflow:hidden!important;
+  }
+  body.home-page > #forgepc-footer .fp-wrap{
+    width:100%!important;max-width:100%!important;margin:0!important;padding:0 18px!important;
+  }
+  body.home-page > #forgepc-footer .fp-main{
+    min-height:0!important;height:auto!important;padding:16px 0 13px!important;
+    display:flex!important;flex-direction:column!important;flex-wrap:nowrap!important;
+    align-items:center!important;justify-content:flex-start!important;gap:9px!important;text-align:center!important;
+  }
+  body.home-page > #forgepc-footer .fp-logo{
+    width:145px!important;height:62px!important;max-width:145px!important;margin:0 auto!important;flex:none!important;
+  }
+  body.home-page > #forgepc-footer .fp-social{
+    display:flex!important;align-items:center!important;justify-content:center!important;gap:14px!important;
+    margin:0!important;font-size:19px!important;letter-spacing:0!important;white-space:nowrap!important;
+  }
+  body.home-page > #forgepc-footer .social-circle{
+    width:28px!important;height:28px!important;display:grid!important;place-items:center!important;
+    border:2px solid #fff!important;border-radius:50%!important;font-size:17px!important;line-height:1!important;letter-spacing:0!important;
+  }
+  body.home-page > #forgepc-footer .fp-contact{
+    width:100%!important;max-width:100%!important;margin:2px 0 0!important;display:flex!important;
+    flex-direction:column!important;flex-wrap:nowrap!important;align-items:center!important;justify-content:center!important;
+    gap:7px!important;text-align:center!important;font-size:11px!important;line-height:1.3!important;
+  }
+  body.home-page > #forgepc-footer .fp-contact span{
+    width:auto!important;max-width:100%!important;display:flex!important;align-items:center!important;justify-content:center!important;
+    gap:7px!important;white-space:normal!important;overflow-wrap:anywhere!important;line-height:1.3!important;
+  }
+  body.home-page > #forgepc-footer .fp-contact svg{
+    width:16px!important;height:16px!important;min-width:16px!important;fill:#ff5a00!important;
+  }
+  body.home-page > #forgepc-footer .fp-bottom{
+    width:100%!important;min-height:0!important;height:auto!important;padding:10px 0 12px!important;
+    display:flex!important;flex-direction:column!important;flex-wrap:nowrap!important;align-items:center!important;justify-content:center!important;
+    gap:5px!important;text-align:center!important;font-size:9px!important;line-height:1.3!important;
+  }
+  body.home-page > #forgepc-footer .fp-bottom span{
+    width:100%!important;max-width:100%!important;white-space:normal!important;line-height:1.3!important;
+  }
+}
+</style>
 </head>
 <body data-mobile-page="index" class="home-page">
 <div class="pc-pixel-page" aria-label="ForgePC Mauricie — Accueil">
@@ -56,7 +165,7 @@
       <a href="contact.html">Contact</a>
     </nav>
     <div class="nav-location"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.1 7 13 7 13s7-7.9 7-13a7 7 0 0 0-7-7Zm0 9.6A2.6 2.6 0 1 1 12 6a2.6 2.6 0 0 1 0 5.6Z"/></svg><span>Shawinigan et<br>toute la Mauricie</span></div>
-    <button class="menu" type="button" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+    <button class="menu" type="button" aria-label="Ouvrir le menu" aria-expanded="false"><span class="menu-bar" aria-hidden="true"></span><span class="menu-bar" aria-hidden="true"></span><span class="menu-bar" aria-hidden="true"></span></button>
   </div>
 </header>
 <nav class="navlinks mobile-only" aria-label="Navigation mobile">
@@ -94,6 +203,10 @@
     </div>
   </div>
 </section>
+
+<div class="mobile-services-cta" style="display:none" aria-label="Accès aux services">
+  <a href="services.html">VOIR NOS SERVICES →</a>
+</div>
 
 <section class="section home-about">
   <div class="container about">

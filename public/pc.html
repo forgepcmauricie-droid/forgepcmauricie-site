@@ -301,8 +301,69 @@ img { max-width:100%; }
   .legacy-footer-mobile-only{display:block !important;}
 }
 </style>
+
+<style id="pc-mobile-product-final-v1">
+@media (min-width:901px){.mobile-assurances,.guarantee-mobile-copy{display:none!important}}
+@media (max-width:900px){.guarantee-desktop-copy{display:none!important}}
+@media (max-width:900px){
+  body.pc-page{overflow-x:hidden!important}
+  body.pc-page .page{padding:16px 0 28px!important}
+  body.pc-page .container{width:calc(100% - 28px)!important;max-width:680px!important}
+
+  /* Header mobile uniforme : structure/fonctionnement conservés */
+  body.pc-page .site-header .logo{width:98px!important;max-width:98px!important;height:52px!important;max-height:52px!important;object-fit:contain!important}
+  body.pc-page .site-header .menu{display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:5px!important;font-size:0!important;width:42px!important;height:42px!important;padding:0!important;margin-left:auto!important;border:1px solid #4a565a!important;border-radius:6px!important;background:transparent!important}
+  body.pc-page .site-header .menu:before,body.pc-page .site-header .menu:after{content:none!important;display:none!important}
+  body.pc-page .site-header .menu span{display:block!important;width:28px!important;height:3px!important;min-height:3px!important;background:#fff!important;border:0!important;border-radius:2px!important;margin:0!important;padding:0!important;position:static!important;transform:none!important}
+
+  /* Fiche produit mobile */
+  body.pc-page .detail-wrap{display:flex!important;flex-direction:column!important;gap:14px!important}
+  body.pc-page .gallery{padding:9px!important;border-radius:7px!important;background:linear-gradient(145deg,#15181b,#0b0d0f)!important}
+  body.pc-page .main-photo{height:auto!important;min-height:0!important;max-height:340px!important;aspect-ratio:4/3!important;object-fit:contain!important;border-radius:5px!important}
+  body.pc-page .no-photo{height:260px!important;min-height:260px!important}
+  body.pc-page .thumbs{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:7px!important;margin-top:8px!important}
+  body.pc-page .thumb{width:100%!important;height:auto!important;aspect-ratio:1/1!important;object-fit:cover!important;border-radius:4px!important}
+  body.pc-page .status{margin:0 0 8px!important;padding:7px 10px!important;font-size:11px!important;line-height:1!important}
+  body.pc-page .kicker{margin-top:0!important;font-size:11px!important;line-height:1.2!important;letter-spacing:.11em!important}
+  body.pc-page h1{font-size:27px!important;line-height:1.02!important;margin:7px 0 8px!important;letter-spacing:-.025em!important}
+  body.pc-page .intro{font-size:13px!important;line-height:1.4!important;margin:0!important;color:#c9ced2!important}
+  body.pc-page .mobile-assurances{display:grid!important;gap:5px!important;margin:11px 0 0!important;padding:10px 11px!important;border-left:3px solid #ff6500!important;background:#0d1012!important;font-size:12px!important;line-height:1.25!important;color:#f3f3f3!important}
+
+  body.pc-page .box{margin-top:10px!important;padding:13px 14px!important;border-radius:7px!important}
+  body.pc-page .box h2{font-size:12px!important;line-height:1.2!important;margin:0 0 9px!important;letter-spacing:.04em!important}
+  body.pc-page .specs{display:grid!important;grid-template-columns:1fr!important;gap:6px!important;font-size:12px!important;line-height:1.3!important}
+  body.pc-page .box p{margin:0!important;font-size:12px!important;line-height:1.4!important;color:#d4d7da!important}
+  body.pc-page .price-box{padding:14px!important;border-color:#ff6500!important}
+  body.pc-page .price-box h2{margin-bottom:4px!important;color:#c8cdd1!important}
+  body.pc-page .price{font-size:27px!important;line-height:1.05!important;color:#ff6500!important}
+  body.pc-page .pc-navigation{display:flex!important;flex-direction:column!important;gap:8px!important;margin-top:12px!important}
+  body.pc-page .pc-navigation a{width:100%!important;min-height:46px!important;padding:11px 12px!important;font-size:11px!important;border-radius:5px!important}
+  body.pc-page .pc-navigation .rdv{order:1!important;background:#ff6500!important;color:#08090a!important;border-color:#ff6500!important}
+  body.pc-page .pc-navigation .back{order:2!important;background:#101214!important;color:#fff!important}
+
+  /* Footer mobile standard Inventaire */
+  body.pc-page .legacy-footer-mobile-only{display:block!important}
+  body.pc-page .index-footer-desktop-copy{display:none!important}
+  body.pc-page #forgepc-footer{margin-top:0!important;overflow:hidden!important}
+  body.pc-page #forgepc-footer .fp-wrap{width:calc(100% - 28px)!important;max-width:680px!important;margin:0 auto!important}
+  body.pc-page #forgepc-footer .fp-main{display:grid!important;grid-template-columns:1fr auto!important;grid-template-areas:'logo social' 'contact contact'!important;gap:8px 12px!important;padding:15px 0 13px!important;text-align:left!important;position:static!important;min-height:0!important}
+  body.pc-page #forgepc-footer .fp-logo{grid-area:logo!important;width:118px!important;height:56px!important;margin:0!important;justify-self:start!important;object-fit:contain!important;position:static!important}
+  body.pc-page #forgepc-footer .fp-tag{display:none!important}
+  body.pc-page #forgepc-footer .fp-social{grid-area:social!important;justify-self:end!important;align-self:center!important;position:static!important;margin:0!important;font-size:20px!important;letter-spacing:7px!important;white-space:nowrap!important}
+  body.pc-page #forgepc-footer .fp-contact{grid-area:contact!important;display:flex!important;flex-direction:column!important;align-items:flex-start!important;justify-content:flex-start!important;gap:7px!important;width:100%!important;margin:0!important;font-size:11px!important;line-height:1.3!important;text-align:left!important;position:static!important}
+  body.pc-page #forgepc-footer .fp-contact span{display:flex!important;align-items:center!important;justify-content:flex-start!important;white-space:normal!important;width:100%!important;position:static!important;margin:0!important}
+  body.pc-page #forgepc-footer .fp-contact svg{width:15px!important;height:15px!important;flex:0 0 15px!important;margin-right:7px!important;fill:#ff5a00!important}
+  body.pc-page #forgepc-footer .fp-bottom{display:flex!important;flex-direction:column!important;align-items:flex-start!important;justify-content:center!important;width:100%!important;min-height:0!important;padding:10px 0 12px!important;gap:6px!important;text-align:left!important;font-size:9px!important;line-height:1.3!important;position:static!important}
+  body.pc-page #forgepc-footer .fp-bottom span{flex-basis:auto!important;width:100%!important;position:static!important}
+}
+@media(max-width:390px){
+  body.pc-page .main-photo{max-height:310px!important}
+  body.pc-page .thumbs{gap:5px!important}
+  body.pc-page h1{font-size:25px!important}
+}
+</style>
 </head>
-<body class="fp-index-shell-copy" data-mobile-page="pc"><header class="site-header">
+<body class="fp-index-shell-copy pc-page" data-mobile-page="pc"><header class="site-header">
 <div class="container nav">
 <a aria-label="ForgePC Mauricie" class="brand-link" href="index.html">
 <img alt="ForgePC Mauricie" class="logo" src="Assets/forgepc-logo-web.png"/>
@@ -315,7 +376,7 @@ img { max-width:100%; }
 <a href="contact.html">Contact</a>
 </nav>
 <div class="nav-location"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.1 7 13 7 13s7-7.9 7-13a7 7 0 0 0-7-7Zm0 9.6A2.6 2.6 0 1 1 12 6a2.6 2.6 0 0 1 0 5.6Z"></path></svg><span>Shawinigan et<br/>toute la Mauricie</span></div>
-<button aria-expanded="false" aria-label="Ouvrir le menu" class="menu" type="button">☰</button>
+<button aria-expanded="false" aria-label="Ouvrir le menu" class="menu" type="button"><span></span><span></span><span></span></button>
 </div>
 </header>
 
@@ -558,6 +619,15 @@ function photoList(pc){
   ].filter(Boolean);
 }
 
+function mobileGuaranteeText(value){
+  const text=String(value||"");
+  const firstDuplicate=text.search(/(?:✓\s*)?(?:Windows installé et configuré|PC nettoyé et testé|Prêt à utiliser dès maintenant)/i);
+  return (firstDuplicate>=0 ? text.slice(0,firstDuplicate) : text)
+    .replace(/\s*[•|\n\r]+\s*/g, " ")
+    .replace(/\s{2,}/g, " ")
+    .trim();
+}
+
 function render(pc){
   const photos=photoList(pc);
 
@@ -594,6 +664,7 @@ function render(pc){
         <div class="kicker" style="margin-top:18px">PC remis à neuf · ${esc(formatStockId(pc.id))}</div>
         <h1>${esc(pc.nom||"Ordinateur")}</h1>
         ${pc.description?`<p class="intro">${esc(pc.description)}</p>`:""}
+        ${pc.garantie?`<div class="box"><h2>Garantie</h2><p class="guarantee-desktop-copy">${esc(pc.garantie)}</p><p class="guarantee-mobile-copy">${esc(mobileGuaranteeText(pc.garantie))}</p></div>`:""}
 
         <div class="box">
           <h2>Caractéristiques</h2>
@@ -608,7 +679,6 @@ function render(pc){
         </div>
 
         ${pc.etat?`<div class="box"><h2>État</h2><p>${esc(pc.etat)}</p></div>`:""}
-        ${pc.garantie?`<div class="box"><h2>Garantie</h2><p>${esc(pc.garantie)}</p></div>`:""}
 
         <div class="box price-box">
           <h2>Prix</h2>
@@ -622,6 +692,21 @@ function render(pc){
       </div>
     </div>
   `;
+
+  if(window.matchMedia("(max-width: 900px)").matches){
+    const prepText=["Windows installé et configuré","PC nettoyé et testé","Prêt à utiliser dès maintenant"];
+    const guaranteeBox=[...app.querySelectorAll(".box")].find(box=>box.querySelector("h2")?.textContent.trim().toLowerCase()==="garantie");
+    const specsBox=[...app.querySelectorAll(".box")].find(box=>box.querySelector("h2")?.textContent.trim().toLowerCase()==="caractéristiques");
+    if(guaranteeBox && specsBox){
+      let node=guaranteeBox.nextElementSibling;
+      while(node && node!==specsBox){
+        const next=node.nextElementSibling;
+        const t=node.textContent||"";
+        if(prepText.every(label=>t.includes(label))) node.remove();
+        node=next;
+      }
+    }
+  }
 
   const main=document.getElementById("mainPhoto");
   if(main){

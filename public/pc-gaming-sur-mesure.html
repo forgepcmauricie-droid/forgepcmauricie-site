@@ -1,6 +1,105 @@
 <!DOCTYPE html>
-<html lang="fr-CA"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>PC Gaming sur mesure | ForgePC Mauricie</title><link href="Assets/forgepc.css" rel="stylesheet"/><link href="Assets/index-shell-copy.css" rel="stylesheet"/><link href="Assets/pc-gaming-clean.css?v=1pc" rel="stylesheet"/></head>
-<body class="fp-index-shell-copy gaming-page"><header class="site-header">
+
+<html lang="fr-CA"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>PC Gaming sur mesure | ForgePC Mauricie</title><link href="Assets/forgepc.css" rel="stylesheet"/><link href="Assets/footer-shared.css" rel="stylesheet"/><link href="Assets/index-shell-copy.css" rel="stylesheet"/><link href="Assets/mobile-approved.css" rel="stylesheet"/><link href="Assets/mobile-header-uniform.css?v=1" rel="stylesheet"/><link href="Assets/pc-gaming-clean.css?v=1pc" rel="stylesheet"/><style id="pc-gaming-mobile-common-header">
+@media (max-width:800px){
+  /* Composant header mobile commun ForgePC — mêmes règles que la page Accueil validée. */
+  body.gaming-page .site-header .menu{
+    width:42px!important;height:42px!important;min-width:42px!important;min-height:42px!important;
+    max-width:42px!important;max-height:42px!important;font-size:0!important;border-radius:8px!important;
+    display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:5px!important;
+    position:relative!important;z-index:10002!important;pointer-events:auto!important;cursor:pointer!important;
+  }
+  body.gaming-page .site-header .menu::before,
+  body.gaming-page .site-header .menu::after{content:none!important;display:none!important;}
+  body.gaming-page .site-header .menu .menu-bar{
+    display:block!important;width:28px!important;height:3px!important;min-width:28px!important;min-height:3px!important;
+    max-width:28px!important;max-height:3px!important;margin:0!important;padding:0!important;
+    border:0!important;border-radius:2px!important;background:#fff!important;transform:none!important;position:static!important;
+  }
+  body.gaming-page > header.site-header{position:relative!important;z-index:10000!important;pointer-events:auto!important;}
+  body.gaming-page > .navlinks.mobile-only.open{z-index:10001!important;pointer-events:auto!important;}
+}
+</style><style>
+@media (max-width:800px){
+  /* Cause réelle de l'espace vide : min-height desktop/mobile forcée sur le héros. */
+  body.gaming-page .hero{height:auto!important;min-height:0!important;}
+  body.gaming-page .hero-in{height:auto!important;min-height:0!important;padding-bottom:18px!important;}
+
+  /* CTA mobile : asset photo propre sans texte incrusté. Desktop inchangé. */
+  body.gaming-page .work{
+    background-image:linear-gradient(90deg,rgba(2,9,11,.80) 0%,rgba(2,9,11,.45) 45%,rgba(2,9,11,.12) 72%),url('Assets/v1-coffee-banner-final.jpg')!important;
+    background-size:cover!important;
+    background-repeat:no-repeat!important;
+    background-position:43% center!important;
+  }
+}
+</style><style id="pc-gaming-final-targeted-fixes">
+@media (min-width:901px){
+  /* SERVICES desktop — indicateur attaché au lien, entièrement dans le header. */
+  body.gaming-page > header.site-header .navlinks a.active{
+    position:relative!important;
+    border-bottom-color:transparent!important;
+    color:#ff5a00!important;
+  }
+  body.gaming-page > header.site-header .navlinks a.active::before{content:none!important;display:none!important;}
+  body.gaming-page > header.site-header .navlinks a.active::after{
+    content:""!important;display:block!important;position:absolute!important;
+    left:0!important;right:0!important;bottom:6px!important;height:2px!important;
+    background:#ff5a00!important;border:0!important;border-radius:2px!important;
+  }
+}
+#forgepc-footer .social-instagram{width:30px!important;height:30px!important;display:grid!important;place-items:center!important;color:#fff!important;}
+#forgepc-footer .social-instagram svg{display:block!important;width:25px!important;height:25px!important;color:#fff!important;}
+@media(max-width:800px){
+  #forgepc-footer .social-instagram{width:28px!important;height:28px!important;}
+  #forgepc-footer .social-instagram svg{width:24px!important;height:24px!important;}
+}
+</style>
+<style id="v29-images-only">
+/* V29 — strictement les 3 images demandées. */
+@media (min-width:801px){
+  body.gaming-page .hero-media img{
+    width:58%!important;height:100%!important;right:0!important;top:0!important;
+    object-fit:cover!important;object-position:48% 48%!important;
+  }
+  body.gaming-page .work{
+    background-image:linear-gradient(90deg,rgba(2,9,11,.82),rgba(2,9,11,.35)),url('Assets/gaming-cta-photo-clean.jpg')!important;
+    background-size:cover!important;background-position:50% 63%!important;background-repeat:no-repeat!important;
+  }
+}
+@media (max-width:800px){
+  body.gaming-page .hero-media img{
+    width:62%!important;height:282px!important;right:0!important;top:0!important;
+    object-fit:cover!important;object-position:44% 50%!important;
+  }
+  body.gaming-page .work{
+    background-image:linear-gradient(90deg,rgba(2,9,11,.82),rgba(2,9,11,.38)),url('Assets/gaming-cta-photo-clean.jpg')!important;
+    background-size:cover!important;background-position:58% 62%!important;background-repeat:no-repeat!important;
+  }
+}
+</style>
+
+<style id="v38-restored-desktop-hero-framing">
+/* Restore: V33 functional desktop + V35 validated hero framing. Desktop only. */
+@media (min-width:901px){
+  body.gaming-page .hero-media img{
+    content:url('Assets/gaming-hero-photo-clean.jpg')!important;
+    width:auto!important;
+    height:82%!important;
+    max-width:none!important;
+    top:4%!important;
+    right:31%!important;
+    object-fit:contain!important;
+    object-position:center center!important;
+    filter:none!important;
+    transform:none!important;
+  }
+}
+</style>
+
+
+</head>
+<body class="fp-index-shell-copy gaming-page" data-mobile-page="pc-gaming-sur-mesure"><header class="site-header">
 <div class="container nav">
 <a aria-label="ForgePC Mauricie" class="brand-link" href="index.html">
 <img alt="ForgePC Mauricie" class="logo" src="Assets/forgepc-logo-web.png"/>
@@ -13,18 +112,16 @@
 <a class="" href="contact.html">Contact</a>
 </nav>
 <div class="nav-location"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.1 7 13 7 13s7-7.9 7-13a7 7 0 0 0-7-7Zm0 9.6A2.6 2.6 0 1 1 12 6a2.6 2.6 0 0 1 0 5.6Z"></path></svg><span>Shawinigan et<br/>toute la Mauricie</span></div>
-<button aria-expanded="false" aria-label="Ouvrir le menu" class="menu" type="button">☰</button>
+<button aria-expanded="false" aria-label="Ouvrir le menu" class="menu" type="button"><span aria-hidden="true" class="menu-bar"></span><span aria-hidden="true" class="menu-bar"></span><span aria-hidden="true" class="menu-bar"></span></button>
 </div>
-</header><nav aria-label="Navigation mobile" class="navlinks mobile-only">
-<a class="active" href="index.html">Accueil</a><a href="inventaire.html">Inventaire</a><a href="services.html">Services</a><a href="a-propos.html">À propos</a><a href="rendez-vous.html">Rendez-vous</a><a href="contact.html">Contact</a>
-</nav>
-<main><section class="hero"><div aria-hidden="true" class="hero-media"><img alt="" src="Assets/service-gaming-maquette.jpg" width="1036" height="631"/></div><div class="shell hero-in"><div class="copy"><b>+ DEMANDE DE PROJET</b><h1>PC GAMING <span>SUR MESURE</span></h1><p>Des performances adaptées à vos jeux, à vos besoins et à votre budget.</p><em>Votre technologie,<br/>notre expertise.</em></div><ul class="hero-services"><li><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M21.7 5.3a6 6 0 0 1-7.8 7.7L7 19.9a2.8 2.8 0 1 1-4-4l6.9-6.9a6 6 0 0 1 7.7-7.8l-3.5 3.5.7 2.5 2.5.7 3.5-3.5c.5.6.8 1.2.9 1.9Z"/></svg><span>Conception personnalisée</span></li><li><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 8.2a3.8 3.8 0 1 0 0 7.6 3.8 3.8 0 0 0 0-7.6Zm9 4.8-2.2.8a7 7 0 0 1-.7 1.8l1 2.1-2.4 2.4-2.1-1a7 7 0 0 1-1.8.7L12 22H8.6l-.8-2.2a7 7 0 0 1-1.8-.7l-2.1 1-2.4-2.4 1-2.1a7 7 0 0 1-.7-1.8L0 13V9.6l2.2-.8A7 7 0 0 1 3 7L2 4.9l2.4-2.4 2.1 1a7 7 0 0 1 1.8-.7L9.1.6h3.4l.8 2.2a7 7 0 0 1 1.8.7l2.1-1 2.4 2.4-1 2.1a7 7 0 0 1 .7 1.8l2.2.8V13Z"/></svg><span>Assemblage professionnel</span></li><li><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5.1 3.4 9.7 8 11 4.6-1.3 8-5.9 8-11V5l-8-3Zm0 3.2 5 1.9V11c0 3.6-2.1 6.9-5 8-2.9-1.1-5-4.4-5-8V7.1l5-1.9Z"/></svg><span>Tests complets et optimisation</span></li><li><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm10 0a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM0 21v-2c0-3.3 2.7-6 6-6h2c1.4 0 2.7.5 3.7 1.3A7 7 0 0 0 10 19v2H0Zm12 0v-2c0-2-.7-3.8-1.9-5.2.9-.5 1.9-.8 2.9-.8h2c3.3 0 6 2.7 6 6v2h-9Z"/></svg><span>Soutien local après-vente</span></li></ul><div class="benefits"><div class="benefit"><svg class="" aria-hidden="true" viewBox="0 0 24 24"><path d="M7 8h10a5 5 0 0 1 4.7 6.7l-1.1 3.2a2.2 2.2 0 0 1-3.6.9l-2.1-1.8H9.1L7 18.8a2.2 2.2 0 0 1-3.6-.9l-1.1-3.2A5 5 0 0 1 7 8Zm1 3H6v2H4v2h2v2h2v-2h2v-2H8v-2Zm8.5 1.2a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4Zm2.5 2.3a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4Z"></path></svg><span>JEUX VIDÉO</span></div><div class="benefit"><svg class="" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 8.2a3.8 3.8 0 1 0 0 7.6 3.8 3.8 0 0 0 0-7.6Zm9 4.8-2.2.8a7 7 0 0 1-.7 1.8l1 2.1-2.4 2.4-2.1-1a7 7 0 0 1-1.8.7L12 22H8.6l-.8-2.2a7 7 0 0 1-1.8-.7l-2.1 1-2.4-2.4 1-2.1a7 7 0 0 1-.7-1.8L0 13V9.6l2.2-.8A7 7 0 0 1 3 7L2 4.9l2.4-2.4 2.1 1a7 7 0 0 1 1.8-.7L9.1.6h3.4l.8 2.2a7 7 0 0 1 1.8.7l2.1-1 2.4 2.4-1 2.1a7 7 0 0 1 .7 1.8l2.2.8V13Z"></path></svg><span>PERFORMANCE</span></div><div class="benefit"><svg class="" aria-hidden="true" viewBox="0 0 24 24"><path d="M21.7 5.3a6 6 0 0 1-7.8 7.7L7 19.9a2.8 2.8 0 1 1-4-4l6.9-6.9a6 6 0 0 1 7.7-7.8l-3.5 3.5.7 2.5 2.5.7 3.5-3.5c.5.6.8 1.2.9 1.9Z"></path></svg><span>FIABILITÉ</span></div><div class="benefit"><svg class="" aria-hidden="true" viewBox="0 0 24 24"><path d="M13 2v2.1c2.8.4 4.6 2 4.6 4.3h-3c0-1.1-.9-1.8-2.6-1.8-1.5 0-2.5.6-2.5 1.5 0 .8.7 1.2 3.2 1.8 3.8.9 5.4 2.2 5.4 5 0 2.5-1.9 4.2-5.1 4.5V22h-2v-2.2c-3.2-.4-5.2-2.2-5.2-4.8h3c0 1.3 1.1 2.2 3 2.2 1.7 0 2.8-.7 2.8-1.7 0-.9-.7-1.4-3.4-2-3.5-.8-5.1-2.1-5.1-4.7 0-2.4 1.8-4 4.9-4.4V2h2Z"></path></svg><span>QUALITÉ/PRIX</span></div><div class="benefit"><svg class="" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 2 2 10v12h7v-7h6v7h7V10L12 2Z"></path></svg><span>SERVICE LOCAL</span></div></div><a class="cta herocta" href="#projet">PRÉSENTER MON PROJET →</a></div></section>
-<section class="section shell"><div class="sectitle"><i></i><h2>NOTRE APPROCHE</h2><i></i></div><p class="sub">Un PC conçu pour vous, sans compromis.</p><div class="cards">
+</header><nav aria-label="Navigation mobile" class="navlinks mobile-only"><a href="index.html">Accueil</a><a href="inventaire.html">Inventaire</a><a class="active" href="services.html">Services</a><a href="a-propos.html">À propos</a><a href="rendez-vous.html">Rendez-vous</a><a href="contact.html">Contact</a></nav>
+<main><section class="hero"><div aria-hidden="true" class="hero-media"><img alt="" height="631" src="Assets/service-gaming-maquette.jpg" width="1036"/></div><div class="shell hero-in"><div class="copy"><b>+ DEMANDE DE PROJET</b><h1>PC GAMING <span>SUR MESURE</span></h1><p>Des performances adaptées à vos jeux, à vos besoins et à votre budget.</p><em>Votre technologie,<br/>notre expertise.</em></div><ul class="hero-services"><li><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M21.7 5.3a6 6 0 0 1-7.8 7.7L7 19.9a2.8 2.8 0 1 1-4-4l6.9-6.9a6 6 0 0 1 7.7-7.8l-3.5 3.5.7 2.5 2.5.7 3.5-3.5c.5.6.8 1.2.9 1.9Z"></path></svg><span>Conception personnalisée</span></li><li><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M12 8.2a3.8 3.8 0 1 0 0 7.6 3.8 3.8 0 0 0 0-7.6Zm9 4.8-2.2.8a7 7 0 0 1-.7 1.8l1 2.1-2.4 2.4-2.1-1a7 7 0 0 1-1.8.7L12 22H8.6l-.8-2.2a7 7 0 0 1-1.8-.7l-2.1 1-2.4-2.4 1-2.1a7 7 0 0 1-.7-1.8L0 13V9.6l2.2-.8A7 7 0 0 1 3 7L2 4.9l2.4-2.4 2.1 1a7 7 0 0 1 1.8-.7L9.1.6h3.4l.8 2.2a7 7 0 0 1 1.8.7l2.1-1 2.4 2.4-1 2.1a7 7 0 0 1 .7 1.8l2.2.8V13Z"></path></svg><span>Assemblage professionnel</span></li><li><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M12 2 4 5v6c0 5.1 3.4 9.7 8 11 4.6-1.3 8-5.9 8-11V5l-8-3Zm0 3.2 5 1.9V11c0 3.6-2.1 6.9-5 8-2.9-1.1-5-4.4-5-8V7.1l5-1.9Z"></path></svg><span>Tests complets et optimisation</span></li><li><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M7 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm10 0a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM0 21v-2c0-3.3 2.7-6 6-6h2c1.4 0 2.7.5 3.7 1.3A7 7 0 0 0 10 19v2H0Zm12 0v-2c0-2-.7-3.8-1.9-5.2.9-.5 1.9-.8 2.9-.8h2c3.3 0 6 2.7 6 6v2h-9Z"></path></svg><span>Soutien local après-vente</span></li></ul><div class="benefits"><div class="benefit"><svg aria-hidden="true" class="" viewbox="0 0 24 24"><path d="M7 8h10a5 5 0 0 1 4.7 6.7l-1.1 3.2a2.2 2.2 0 0 1-3.6.9l-2.1-1.8H9.1L7 18.8a2.2 2.2 0 0 1-3.6-.9l-1.1-3.2A5 5 0 0 1 7 8Zm1 3H6v2H4v2h2v2h2v-2h2v-2H8v-2Zm8.5 1.2a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4Zm2.5 2.3a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4Z"></path></svg><span>JEUX VIDÉO</span></div><div class="benefit"><svg aria-hidden="true" class="" viewbox="0 0 24 24"><path d="M12 8.2a3.8 3.8 0 1 0 0 7.6 3.8 3.8 0 0 0 0-7.6Zm9 4.8-2.2.8a7 7 0 0 1-.7 1.8l1 2.1-2.4 2.4-2.1-1a7 7 0 0 1-1.8.7L12 22H8.6l-.8-2.2a7 7 0 0 1-1.8-.7l-2.1 1-2.4-2.4 1-2.1a7 7 0 0 1-.7-1.8L0 13V9.6l2.2-.8A7 7 0 0 1 3 7L2 4.9l2.4-2.4 2.1 1a7 7 0 0 1 1.8-.7L9.1.6h3.4l.8 2.2a7 7 0 0 1 1.8.7l2.1-1 2.4 2.4-1 2.1a7 7 0 0 1 .7 1.8l2.2.8V13Z"></path></svg><span>PERFORMANCE</span></div><div class="benefit"><svg aria-hidden="true" class="" viewbox="0 0 24 24"><path d="M21.7 5.3a6 6 0 0 1-7.8 7.7L7 19.9a2.8 2.8 0 1 1-4-4l6.9-6.9a6 6 0 0 1 7.7-7.8l-3.5 3.5.7 2.5 2.5.7 3.5-3.5c.5.6.8 1.2.9 1.9Z"></path></svg><span>FIABILITÉ</span></div><div class="benefit"><svg aria-hidden="true" class="" viewbox="0 0 24 24"><path d="M13 2v2.1c2.8.4 4.6 2 4.6 4.3h-3c0-1.1-.9-1.8-2.6-1.8-1.5 0-2.5.6-2.5 1.5 0 .8.7 1.2 3.2 1.8 3.8.9 5.4 2.2 5.4 5 0 2.5-1.9 4.2-5.1 4.5V22h-2v-2.2c-3.2-.4-5.2-2.2-5.2-4.8h3c0 1.3 1.1 2.2 3 2.2 1.7 0 2.8-.7 2.8-1.7 0-.9-.7-1.4-3.4-2-3.5-.8-5.1-2.1-5.1-4.7 0-2.4 1.8-4 4.9-4.4V2h2Z"></path></svg><span>QUALITÉ/PRIX</span></div><div class="benefit"><svg aria-hidden="true" class="" viewbox="0 0 24 24"><path d="M12 2 2 10v12h7v-7h6v7h7V10L12 2Z"></path></svg><span>SERVICE LOCAL</span></div></div><a class="cta herocta" href="#projet">PRÉSENTER MON PROJET →</a></div></section>
+<section class="section shell"><div class="sectitle"><i></i><h2>NOTRE APPROCHE</h2><i></i></div><p class="sub">Un PC conçu pour vous, sans compromis.</p><div class="cards approach-accordion" id="approach-accordion">
 <article><img src="Assets/gaming-approche-discussion.jpg"/><h3><b>1</b> DISCUSSION</h3><p>On discute de vos besoins, de vos jeux, de votre budget et de vos préférences.</p></article>
 <article><img src="Assets/gaming-approche-configuration.jpg"/><h3><b>2</b> CONFIGURATION</h3><p>On vous propose une configuration adaptée où chaque composant est bien choisi.</p></article>
 <article><img src="Assets/gaming-approche-assemblage.jpg"/><h3><b>3</b> ASSEMBLAGE</h3><p>Montage professionnel, gestion des câbles et vérification complète.</p></article>
 <article><img src="Assets/gaming-tests-approved-exact.jpg"/><h3><b>4</b> TESTS ET SUIVI</h3><p>On teste la stabilité, les performances et on vous offre un soutien après la vente.</p></article></div>
-<div class="lower"><section class="box formbox" id="projet"><div class="sectitle small"><i></i><h2>DEMANDEZ VOTRE PROJET DE PC GAMING</h2><i></i></div><p class="sub">Remplissez le formulaire et on vous contactera rapidement.</p><form action="https://formsubmit.co/ventes@forgepcmauricie.ca" method="POST"><label>Nom complet <b>*</b><input name="nom" placeholder="Votre nom" required=""/></label><label>Courriel <b>*</b><input name="courriel" placeholder="votre@courriel.com" required="" type="email"/></label><label>Téléphone <b>*</b><input name="telephone" placeholder="(819) 555-0123" required=""/></label><label>Budget approximatif <b>*</b><select name="budget" required=""><option value="">Sélectionnez une plage</option><option>Moins de 1 000 $</option><option>1 000 $ à 1 500 $</option><option>1 500 $ à 2 000 $</option><option>2 000 $ et plus</option></select></label><label class="full">Vos jeux principaux <b>*</b><input name="jeux" placeholder="Ex. : Fortnite, Call of Duty, CS2, etc." required=""/></label><label class="full">Autres besoins ou questions<textarea name="message" placeholder="Écrivez votre message ici..."></textarea></label><button><svg class="send-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M2 5h20v14H2V5Zm2 2v.4l8 5.3 8-5.3V7H4Zm16 10V9.8l-8 5.2-8-5.2V17h16Z"/></svg><span>ENVOYER MA DEMANDE →</span></button></form></section>
+<div class="lower"><section class="box formbox" id="projet"><div class="sectitle small"><i></i><h2>DEMANDEZ VOTRE PROJET DE PC GAMING</h2><i></i></div><p class="sub">Remplissez le formulaire et on vous contactera rapidement.</p><form action="https://formsubmit.co/ventes@forgepcmauricie.ca" method="POST"><label>Nom complet <b>*</b><input name="nom" placeholder="Votre nom" required=""/></label><label>Courriel <b>*</b><input name="courriel" placeholder="votre@courriel.com" required="" type="email"/></label><label>Téléphone <b>*</b><input name="telephone" placeholder="(819) 555-0123" required=""/></label><label>Budget approximatif <b>*</b><select name="budget" required=""><option value="">Sélectionnez une plage</option><option>Moins de 1 000 $</option><option>1 000 $ à 1 500 $</option><option>1 500 $ à 2 000 $</option><option>2 000 $ et plus</option></select></label><label class="full">Vos jeux principaux <b>*</b><input name="jeux" placeholder="Ex. : Fortnite, Call of Duty, CS2, etc." required=""/></label><label class="full">Autres besoins ou questions<textarea name="message" placeholder="Écrivez votre message ici..."></textarea></label><button><svg aria-hidden="true" class="send-icon" viewbox="0 0 24 24"><path d="M2 5h20v14H2V5Zm2 2v.4l8 5.3 8-5.3V7H4Zm16 10V9.8l-8 5.2-8-5.2V17h16Z"></path></svg><span>ENVOYER MA DEMANDE →</span></button></form></section>
 <aside class="box side"><div class="feature"><img src="Assets/gaming-project-feature.jpg"/><div><h2>UN PC QUI <span>VOUS RESSEMBLE</span></h2><p>Que ce soit pour le jeu compétitif, le simracing, la création de contenu ou un usage polyvalent, on vous aide à obtenir un PC performant, stable et durable.</p><em>Votre technologie,<br/>notre expertise.</em></div></div><div class="sectitle faqtitle"><i></i><h2>FOIRE AUX QUESTIONS (FAQ)</h2><i></i></div><div class="faq">
 <div><button>Quel budget faut-il pour un bon PC gaming ? <b>+</b></button><p>Le budget dépend des jeux, de la résolution et des performances visées. On bâtit la configuration selon vos besoins réels et votre budget.</p></div>
 <div><button>Combien de temps prend l'assemblage ? <b>+</b></button><p>Le délai dépend surtout de la disponibilité des pièces. On confirme l’échéancier avant de lancer le projet.</p></div>
@@ -37,10 +134,316 @@
 <div class="fp-main">
 <img alt="ForgePC Mauricie" class="fp-logo" src="Assets/forgepc-logo-web.png"/>
 <div class="fp-tag">Votre technologie, notre expertise.</div>
-<div aria-label="Réseaux sociaux" class="fp-social"><span class="social-circle">f</span><span class="social-circle">◎</span></div>
+<div aria-label="Réseaux sociaux" class="fp-social"><span class="social-circle">f</span><span class="social-instagram" aria-label="Instagram"><svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.4" cy="6.7" r="1.15" fill="currentColor"/></svg></span></div>
 <div class="fp-contact"><span><svg viewbox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.1 7 13 7 13s7-7.9 7-13a7 7 0 0 0-7-7Zm0 9.6A2.6 2.6 0 1 1 12 6a2.6 2.6 0 0 1 0 5.6Z"></path></svg>Shawinigan et toute la Mauricie</span><span><svg viewbox="0 0 24 24"><path d="M6.6 2.8 10 8.1 7.8 10c1.6 3.3 3.9 5.6 7.2 7.2l1.9-2.2 5.3 3.4c-.5 2.1-2.1 3.6-4.2 3.6C9.2 22 2 14.8 2 6c0-2.1 1.5-3.7 4.6-3.2Z"></path></svg>819-944-7418</span><span><svg viewbox="0 0 24 24"><path d="M3 5h18v14H3V5Zm2 2 7 5 7-5H5Z"></path></svg>info@forgepcmauricie.ca</span></div>
 </div>
 <div class="fp-bottom"><span>© 2026 ForgePC Mauricie. Tous droits réservés.</span><span>Politique de confidentialité   |   Mentions légales</span></div>
 </div>
 </footer>
-<script>document.querySelectorAll('.faq button').forEach(b=>b.addEventListener('click',()=>{let d=b.parentElement,o=d.classList.toggle('open');b.querySelector('b').textContent=o?'−':'+';}));const mb=document.getElementById('menub'),mn=document.getElementById('mnav');if(mb && mn){mb.addEventListener('click',()=>{let o=mn.classList.toggle('open');mb.setAttribute('aria-expanded',o)});}</script></body></html>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  const button=document.querySelector('.menu');
+  const nav=document.querySelector('.mobile-only');
+  if(button&&nav){
+    button.addEventListener('click',function(){const open=nav.classList.toggle('open');button.setAttribute('aria-expanded',open?'true':'false');});
+    nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');button.setAttribute('aria-expanded','false');}));
+  }
+
+  /* Notre approche : groupe dédié, mobile seulement, maximum un panneau ouvert. */
+  const approach=document.getElementById('approach-accordion');
+  if(approach){
+    const cards=Array.from(approach.children).filter(el=>el.tagName==='ARTICLE');
+    cards.forEach(card=>card.classList.remove('open'));
+    approach.addEventListener('click',function(e){
+      if(window.innerWidth>800)return;
+      const trigger=e.target.closest('h3');
+      if(!trigger || !approach.contains(trigger))return;
+      const card=trigger.closest('article');
+      if(!card || card.parentElement!==approach)return;
+      e.preventDefault();
+      const wasOpen=card.classList.contains('open');
+      cards.forEach(other=>other.classList.remove('open'));
+      if(!wasOpen)card.classList.add('open');
+    });
+  }
+
+  /* FAQ : groupe séparé et exclusif sur desktop + mobile. */
+  const faq=document.querySelector('.faq');
+  if(faq){
+    const rows=Array.from(faq.children).filter(el=>el.querySelector(':scope > button'));
+    rows.forEach(row=>{row.classList.remove('open');const icon=row.querySelector(':scope > button b');if(icon)icon.textContent='+';});
+    faq.addEventListener('click',function(e){
+      const trigger=e.target.closest('button');
+      if(!trigger || !faq.contains(trigger))return;
+      const row=trigger.parentElement;
+      if(!rows.includes(row))return;
+      e.preventDefault();
+      const wasOpen=row.classList.contains('open');
+      rows.forEach(other=>{other.classList.remove('open');const icon=other.querySelector(':scope > button b');if(icon)icon.textContent='+';});
+      if(!wasOpen){row.classList.add('open');const icon=trigger.querySelector('b');if(icon)icon.textContent='−';}
+    });
+  }
+});
+</script></body></html><style id="v30-images-only-final">
+/* V30 — uniquement les quatre corrections d'images demandées. */
+@media (min-width:801px){
+  /* Héros desktop : source propre à sa résolution utile, sans agrandissement horizontal. */
+  body.gaming-page .hero-media img{
+    width:auto!important;height:100%!important;max-width:none!important;
+    right:0!important;top:0!important;object-fit:contain!important;object-position:right center!important;
+    filter:none!important;transform:none!important;
+  }
+  /* CTA desktop : source panoramique originale, ratio naturel, aucun stretch/blur. */
+  body.gaming-page .work{
+    background-image:linear-gradient(90deg,rgba(2,9,11,.80),rgba(2,9,11,.32)),url('Assets/services-cta-reference-exact.png')!important;
+    background-size:cover!important;background-position:center center!important;background-repeat:no-repeat!important;
+    filter:none!important;
+  }
+}
+@media (max-width:800px){
+  /* PC de la carte : même asset, complet et intégré à la largeur sans carré flottant. */
+  body.gaming-page .feature img{
+    width:100%!important;height:auto!important;max-height:320px!important;
+    object-fit:contain!important;object-position:center center!important;
+    display:block!important;filter:none!important;transform:none!important;
+  }
+  /* CTA mobile : photo verticale propre, cadrée sur l'atelier plutôt que sur le logo de la tasse. */
+  body.gaming-page .work{
+    background-image:linear-gradient(90deg,rgba(2,9,11,.82),rgba(2,9,11,.40)),url('Assets/gaming-cta-photo-clean.jpg')!important;
+    background-size:cover!important;background-position:78% 42%!important;background-repeat:no-repeat!important;
+    filter:none!important;
+  }
+}
+</style>
+<style id="v32-regressions-only">
+/* V32 — strictement restauration mobile du héros + masquage du contenu incrusté du CTA desktop. */
+@media (max-width:800px){
+  /* Restaure exactement l'asset héros de la V30; toutes les règles de cadrage V30 restent inchangées. */
+  body.gaming-page .hero-media img{content:url('Assets/gaming-hero-photo-clean.jpg')!important;}
+}
+@media (min-width:801px){
+  /* L'asset CTA V31 contient l'ancien texte/bouton directement dans les pixels.
+     On conserve exactement l'image et son cadrage, et on masque uniquement ces zones incrustées. */
+  body.gaming-page .work{position:relative!important;}
+  body.gaming-page .work::before{
+    content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+    background:linear-gradient(90deg,
+      rgba(2,9,11,.96) 0%,rgba(2,9,11,.96) 31%,rgba(2,9,11,.22) 42%,
+      rgba(2,9,11,.08) 70%,rgba(2,9,11,.88) 80%,rgba(2,9,11,.96) 100%);
+  }
+  body.gaming-page .work .workin{position:relative!important;z-index:1!important;}
+}
+</style>
+
+<style id="v33-desktop-hero-only">
+/* V33 — DERNIÈRE CORRECTION : image du héros desktop uniquement.
+   Source propre correspondant au visuel orange de la maquette; dimensions/layout inchangés. */
+@media (min-width:901px){
+  body.gaming-page .hero-media img{
+    content:url('Assets/gaming-hero-photo-clean.jpg')!important;
+  }
+}
+</style>
+
+<style id="v39-desktop-maquette-alignment">
+/* V39 — PC Gaming desktop seulement. Portée locale, aucun composant commun/mobile. */
+@media (min-width:901px){
+  body.gaming-page .shell{width:min(1180px,calc(100% - 56px));}
+
+  /* Héros : composition de la maquette. */
+  body.gaming-page .hero-media img{
+    content:url('Assets/gaming-hero-photo-clean.jpg')!important;
+    width:auto!important;height:92%!important;max-width:none!important;
+    top:3%!important;right:19%!important;object-fit:contain!important;object-position:center center!important;
+    filter:none!important;transform:none!important;
+  }
+  body.gaming-page .hero-media:after{
+    background:linear-gradient(90deg,#020b0f 0%,rgba(2,11,15,.98) 25%,rgba(2,11,15,.72) 39%,rgba(2,11,15,.18) 54%,rgba(2,11,15,0) 67%)!important;
+  }
+  body.gaming-page .copy{left:0!important;top:55px!important;width:39%!important;}
+  body.gaming-page .hero-services{right:0!important;top:62px!important;width:255px!important;gap:18px!important;}
+  body.gaming-page .hero-services li{font-size:13px!important;line-height:1.18!important;}
+  body.gaming-page .hero-services svg{width:27px!important;height:27px!important;flex:0 0 27px!important;}
+  body.gaming-page .benefits{left:0!important;right:auto!important;bottom:24px!important;width:72%!important;grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:12px!important;}
+  body.gaming-page .benefit{font-size:11px!important;}
+  body.gaming-page .benefit svg{width:31px!important;height:31px!important;flex:0 0 31px!important;}
+  body.gaming-page .herocta{right:0!important;bottom:18px!important;min-width:285px!important;padding:17px 26px!important;}
+
+  /* Notre approche : 4 cartes régulières sur une rangée. */
+  body.gaming-page .section{padding:16px 0 18px!important;}
+  body.gaming-page .sectitle h2{font-size:27px!important;}
+  body.gaming-page .sub{font-size:14px!important;margin:4px 0 13px!important;}
+  body.gaming-page .cards{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:14px!important;}
+  body.gaming-page .cards article{min-height:245px!important;}
+  body.gaming-page .cards img{width:100%!important;height:135px!important;object-fit:cover!important;}
+  body.gaming-page .cards h3{font-size:14px!important;margin:9px 12px 6px!important;}
+  body.gaming-page .cards p{font-size:12px!important;line-height:1.4!important;margin:0 12px 14px!important;}
+
+  /* Formulaire 55 % / colonne droite 45 %, comme la maquette. */
+  body.gaming-page .lower{grid-template-columns:minmax(0,1.22fr) minmax(0,.88fr)!important;gap:14px!important;margin-top:14px!important;align-items:stretch!important;}
+  body.gaming-page .box{padding:13px!important;}
+  body.gaming-page .formbox form{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:11px 15px!important;}
+  body.gaming-page .formbox label{font-size:12px!important;}
+  body.gaming-page .formbox input,body.gaming-page .formbox select{height:42px!important;padding:9px 10px!important;font-size:13px!important;}
+  body.gaming-page .formbox textarea{height:88px!important;padding:10px!important;font-size:13px!important;}
+  body.gaming-page .formbox button{height:48px!important;padding:0 14px!important;font-size:14px!important;}
+  body.gaming-page .feature{grid-template-columns:185px minmax(0,1fr)!important;gap:14px!important;}
+  body.gaming-page .feature img{width:185px!important;height:188px!important;object-fit:cover!important;object-position:50% 44%!important;}
+  body.gaming-page .feature h2{font-size:21px!important;}
+  body.gaming-page .feature p{font-size:12px!important;line-height:1.4!important;}
+  body.gaming-page .feature em{font-size:18px!important;}
+  body.gaming-page .faqtitle{margin-top:9px!important;}
+  body.gaming-page .faqtitle h2{font-size:15px!important;}
+  body.gaming-page .faq button{font-size:12px!important;padding:7px 0!important;}
+  body.gaming-page .faq p{font-size:11px!important;}
+  body.gaming-page .more{font-size:10px!important;padding:7px!important;}
+
+  /* CTA de la maquette : image propre sans texte incrusté; contenu demeure HTML. */
+  body.gaming-page .work{
+    height:126px!important;
+    background-image:linear-gradient(90deg,rgba(2,9,11,.76) 0%,rgba(2,9,11,.36) 48%,rgba(2,9,11,.12) 76%),url('Assets/v1-coffee-banner-final.jpg')!important;
+    background-size:cover!important;background-position:center center!important;background-repeat:no-repeat!important;
+  }
+  body.gaming-page .work::before{content:none!important;display:none!important;}
+  body.gaming-page .work .workin{position:relative!important;z-index:1!important;}
+}
+</style>
+
+<style id="v52-render-target-fix">
+@media (min-width:901px){
+  /* HERO — fondre physiquement le bord gauche de la photo, pas seulement l'overlay du héros. */
+  body.gaming-page .hero-media img{
+    -webkit-mask-image:linear-gradient(to right,transparent 0%,rgba(0,0,0,.18) 7%,#000 27%,#000 100%)!important;
+    mask-image:linear-gradient(to right,transparent 0%,rgba(0,0,0,.18) 7%,#000 27%,#000 100%)!important;
+    -webkit-mask-repeat:no-repeat!important;
+    mask-repeat:no-repeat!important;
+  }
+  /* HERO — avantages à droite : taille réellement lisible sur desktop. */
+  body.gaming-page .hero-services{width:315px!important;gap:19px!important;}
+  body.gaming-page .hero-services li{
+    font-size:18px!important;line-height:1.22!important;font-weight:900!important;
+    color:#fff!important;text-shadow:0 2px 5px #000,0 0 12px rgba(0,0,0,.95)!important;
+  }
+  body.gaming-page .hero-services svg{width:31px!important;height:31px!important;flex:0 0 31px!important;}
+
+  /* CTA — vraie photo verticale de la tasse, ratio conservé; aucune bannière pré-écrasée. */
+  body.gaming-page .work{
+    background-color:#02090b!important;
+    background-image:linear-gradient(90deg,#02090b 0%,rgba(2,9,11,.96) 34%,rgba(2,9,11,.52) 58%,rgba(2,9,11,.10) 78%),url('Assets/gaming-cta-photo-clean.jpg')!important;
+    background-size:100% 100%,auto 390px!important;
+    background-position:center center,76% 57%!important;
+    background-repeat:no-repeat,no-repeat!important;
+  }
+}
+</style>
+
+<style id="v53-three-targeted-fixes">
+@media (min-width:901px){
+  /* Icônes originales du héros: rendre les SVG existants visibles, sans les remplacer. */
+  body.gaming-page .hero-services svg{
+    display:block!important;width:34px!important;height:34px!important;flex:0 0 34px!important;
+    fill:#ff6a00!important;stroke:#ff6a00!important;color:#ff6a00!important;opacity:1!important;visibility:visible!important;
+    filter:drop-shadow(0 2px 3px rgba(0,0,0,.9))!important;
+  }
+  body.gaming-page .hero-services svg path{fill:#ff6a00!important;stroke:#ff6a00!important;opacity:1!important;}
+
+  /* Fondu: étendre la transition sur presque la moitié gauche de la photo. */
+  body.gaming-page .hero-media img{
+    -webkit-mask-image:linear-gradient(to right,transparent 0%,rgba(0,0,0,.05) 12%,rgba(0,0,0,.28) 27%,rgba(0,0,0,.72) 43%,#000 56%,#000 100%)!important;
+    mask-image:linear-gradient(to right,transparent 0%,rgba(0,0,0,.05) 12%,rgba(0,0,0,.28) 27%,rgba(0,0,0,.72) 43%,#000 56%,#000 100%)!important;
+  }
+
+  /* CTA: utiliser le vrai bandeau café panoramique existant, pleine largeur. */
+  body.gaming-page .work{
+    background-color:#02090b!important;
+    background-image:linear-gradient(90deg,rgba(2,9,11,.78) 0%,rgba(2,9,11,.42) 46%,rgba(2,9,11,.08) 78%),url('Assets/services-coffee-banner-v4.jpg')!important;
+    background-size:100% 100%,cover!important;
+    background-position:center center,center center!important;
+    background-repeat:no-repeat,no-repeat!important;
+  }
+}
+</style>
+
+<style id="v54-cta-desktop-coffee-final">
+/* Correction demandée : CTA desktop PC Gaming = bandeau complet tasse de café. */
+@media (min-width:901px){
+  body.gaming-page .work{
+    background-color:#02090b!important;
+    background-image:url('Assets/services-coffee-banner-v4.jpg')!important;
+    background-size:cover!important;
+    background-position:center center!important;
+    background-repeat:no-repeat!important;
+  }
+  body.gaming-page .work::before{content:none!important;display:none!important;}
+  body.gaming-page .work .workin{position:relative!important;z-index:1!important;}
+}
+</style>
+<style id="v55-hero-final-only">
+/* V55 — HERO PC Gaming uniquement. Rapproche le rendu de la maquette approuvée. */
+@media (min-width:901px){
+  body.gaming-page .hero-media img{
+    content:url('Assets/gaming-hero-photo-clean.jpg')!important;
+    height:100%!important;width:auto!important;max-width:none!important;
+    top:0!important;right:17%!important;object-fit:contain!important;
+  }
+  body.gaming-page .hero-media:after{
+    background:linear-gradient(90deg,
+      #020b0f 0%,rgba(2,11,15,.99) 27%,rgba(2,11,15,.84) 36%,
+      rgba(2,11,15,.28) 49%,rgba(2,11,15,.03) 61%,
+      rgba(2,11,15,.18) 72%,rgba(2,11,15,.78) 82%,rgba(2,11,15,.96) 100%)!important;
+  }
+  body.gaming-page .hero-services{
+    right:0!important;z-index:5!important;width:255px!important;
+    padding:8px 10px!important;border-radius:4px!important;
+    background:linear-gradient(90deg,rgba(2,11,15,.18),rgba(2,11,15,.76))!important;
+  }
+  body.gaming-page .hero-services li{color:#fff!important;text-shadow:0 2px 4px #000,0 0 5px #000!important;}
+  body.gaming-page .hero-services svg{fill:#ff5a00!important;filter:drop-shadow(0 1px 2px #000)!important;}
+}
+@media (max-width:800px){
+  body.gaming-page .hero-media img{
+    content:url('Assets/gaming-hero-photo-clean.jpg')!important;
+    height:270px!important;right:-36px!important;top:0!important;
+  }
+  body.gaming-page .hero-media:after{
+    background:linear-gradient(90deg,#020b0f 0%,rgba(2,11,15,.96) 39%,rgba(2,11,15,.50) 61%,rgba(2,11,15,.08) 82%)!important;
+  }
+}
+</style>
+
+<style id="v57-cta-only-uncrushed">
+/* V57 — CTA SEULEMENT. HERO V55 verrouillé.
+   Le bandeau garde ses proportions : aucune hauteur fixe qui écrase la photo. */
+@media (min-width:901px){
+  body.gaming-page .work{
+    height:auto!important;
+    min-height:clamp(150px,9.9vw,190px)!important;
+    background-color:#02090b!important;
+    background-image:linear-gradient(90deg,rgba(2,9,11,.86) 0%,rgba(2,9,11,.58) 35%,rgba(2,9,11,.16) 64%,rgba(2,9,11,.06) 100%),url('Assets/services-coffee-banner-v4.jpg')!important;
+    background-size:100% 100%,cover!important;
+    background-position:center center,center center!important;
+    background-repeat:no-repeat,no-repeat!important;
+  }
+  body.gaming-page .work::before{content:none!important;display:none!important;}
+  body.gaming-page .work .workin{position:relative!important;z-index:2!important;min-height:inherit!important;}
+  body.gaming-page .work h2,body.gaming-page .work p{text-shadow:0 2px 5px rgba(0,0,0,.95)!important;}
+}
+</style>
+<style id="v60-cta-cafe-panorama-final">
+/* CTA seulement — HERO V55 verrouillé. Photo café panoramique nette,
+   cadrée proportionnellement sans étirement. */
+@media (min-width:901px){
+ body.gaming-page .work{
+   height:210px!important;min-height:210px!important;
+   background-image:url('Assets/gaming-cta-cafe-panorama.png')!important;
+   background-size:cover!important;background-position:center 46%!important;background-repeat:no-repeat!important;
+ }
+ body.gaming-page .workin{height:210px!important;min-height:210px!important;}
+}
+@media (max-width:900px){
+ body.gaming-page .work{
+   background-image:url('Assets/gaming-cta-cafe-panorama.png')!important;
+   background-size:cover!important;background-position:center center!important;background-repeat:no-repeat!important;
+ }
+}
+</style>

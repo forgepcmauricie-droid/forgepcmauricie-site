@@ -52,7 +52,7 @@
  .footer-main{min-height:0;padding:12px 0;display:grid!important;grid-template-columns:1fr auto;grid-template-areas:'logo social' 'contact contact';gap:7px 12px;text-align:left}.footer-logo{grid-area:logo;width:116px;height:52px;margin:0}.footer-tag{display:none}.footer-social{grid-area:social;align-self:center;justify-self:end;letter-spacing:8px;font-size:21px}.footer-contact{grid-area:contact;margin:0;display:flex;justify-content:flex-start;gap:5px 10px;flex-wrap:wrap;font-size:9px}.footer-bottom{min-height:42px;padding:6px 0;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;text-align:left;font-size:8.5px}
 }
 @media(max-width:480px){.mobile-location{padding:0 48px;font-size:17px}.about-hero h1{font-size:27px}.story-image{height:166px}.story-copy{padding-left:20px;padding-right:20px}.footer-bottom{justify-content:center;text-align:center}}
-\n/* PASS 2 — ajustements mobiles selon la maquette finale approuvée */
+/* PASS 2 — ajustements mobiles selon la maquette finale approuvée */
 @media(max-width:800px){
   .about-hero{min-height:158px}
   .about-hero-copy{padding:18px 24px 15px 24px}
@@ -125,10 +125,7 @@
   .philosophy,.quote{height:auto!important;min-height:218px!important}
   .philo-grid{height:132px!important}
   .philo-icon{height:44px!important}
-  .quote{padding:22px 43% 20px 38px!important;background-image:linear-gradient(90deg,rgba(2,9,11,.98) 0%,rgba(2,9,11,.94) 35%,rgba(2,9,11,.66) 55%,rgba(2,9,11,.18) 76%,rgba(2,9,11,.03) 100%),url('Assets/apropos-quote-maquette-2x.jpg')!important;background-repeat:no-repeat!important;background-position:center,right center!important;background-size:100% 100%,auto 100%!important}
-  body.about-page>#forgepc-footer{display:none!important}
-  .about-approved-footer{display:block!important;width:100%!important;margin:0!important;padding:0!important;line-height:0!important;background:#02090b!important}
-  .about-approved-footer img{display:block!important;width:100%!important;height:auto!important;margin:0!important;padding:0!important}
+  .quote{padding:22px 43% 20px 38px!important;background-image:linear-gradient(90deg,rgba(2,9,11,.98) 0%,rgba(2,9,11,.94) 35%,rgba(2,9,11,.66) 55%,rgba(2,9,11,.18) 76%,rgba(2,9,11,.03) 100%),url('Assets/apropos-quote-photo-clean-crop.jpg')!important;background-repeat:no-repeat!important;background-position:center,right center!important;background-size:100% 100%,auto 100%!important}
 }
 </style>
 <link href="Assets/footer-shared.css" rel="stylesheet"/>
@@ -164,19 +161,9 @@
 <link href="Assets/qa-owner-fixes.css?v=2" rel="stylesheet"/>
 
 
-<link href="Assets/index-shell-copy.css?v=2" rel="stylesheet"/><link rel="stylesheet" href="Assets/index-footer-lock.css?v=10">
+<link href="Assets/index-shell-copy.css?v=2" rel="stylesheet"/>
 
-<style id="footer-dedup-final-v11">
-@media (min-width:901px){
-  .legacy-footer-mobile-only{display:none !important;}
-  .index-footer-desktop-copy{display:block !important;width:100vw !important;margin:0 calc(50% - 50vw) !important;line-height:0 !important;background:#02090b !important;}
-  .index-footer-desktop-copy img{display:block !important;width:100% !important;height:auto !important;margin:0 !important;padding:0 !important;}
-}
-@media (max-width:900px){
-  .index-footer-desktop-copy{display:none !important;}
-  .legacy-footer-mobile-only{display:block !important;}
-}
-</style>
+
 
 
 <style id="about-desktop-v14-final">
@@ -230,8 +217,6 @@ body.about-page>main.about-main{display:block!important}
   .quote{background:linear-gradient(90deg,rgba(2,9,11,.97),rgba(2,9,11,.82)),url('Assets/apropos-quote-photo-clean-crop.jpg') right center/cover no-repeat!important}
 }
 </style>
-\n
-\n
 <style id="about-v10-canonical-fixes">
 /* À PROPOS V13 — correction ciblée V12 → V13 : fondu porté par le conteneur hero uniquement */
 
@@ -300,16 +285,6 @@ body.about-page>main.about-main{display:block!important}
 @media (min-width:901px){
   body.about-page{background:#02090b!important}
   body.about-page .mobile-only,body.about-page .mobile-location{display:none!important}
-  body.about-page>.site-header{height:78px!important;background:#02090b!important;border-bottom:1px solid #24353a!important}
-  body.about-page>.site-header .container.nav{width:min(calc(100% - 70px),1420px)!important;max-width:1420px!important;height:78px!important;display:flex!important;align-items:center!important;gap:30px!important;margin:auto!important}
-  body.about-page>.site-header .brand-link{display:flex!important;align-items:center!important;flex:0 0 190px!important;height:78px!important}
-  body.about-page>.site-header .logo{width:168px!important;height:72px!important;object-fit:contain!important}
-  body.about-page>.site-header .navlinks{display:flex!important;align-items:center!important;justify-content:center!important;gap:42px!important;flex:1!important;height:100%!important}
-  body.about-page>.site-header .navlinks a{height:100%!important;display:flex!important;align-items:center!important;position:relative!important;font-size:14px!important;font-weight:800!important;text-transform:uppercase!important;white-space:nowrap!important}
-  body.about-page>.site-header .navlinks a.active:after{content:""!important;position:absolute!important;left:0!important;right:0!important;bottom:15px!important;height:4px!important;border-radius:4px!important;background:#ff5a00!important}
-  .about-desktop-actions{display:flex!important;align-items:center!important;gap:28px!important;flex:0 0 auto!important}
-  .about-contact-cta{height:48px!important;min-width:190px!important;padding:0 24px!important;display:flex!important;align-items:center!important;justify-content:center!important;gap:14px!important;border-radius:4px!important;background:#ff5a00!important;color:#fff!important;font-size:14px!important;font-weight:900!important;text-transform:uppercase!important}
-  body.about-page>.site-header .menu{display:none!important}
 
   body.about-page>main.about-main{display:block!important;width:100%!important;max-width:none!important;margin:0!important;padding:0!important}
   .about-hero{height:260px!important;min-height:260px!important;position:relative!important;overflow:hidden!important;border-bottom:1px solid #4b2a1b!important;background:#02090b!important}
@@ -354,15 +329,51 @@ body.about-page>main.about-main{display:block!important}
   .philo-icon{height:42px!important;padding:4px!important;margin-bottom:4px!important}
   .philo strong{font-size:16px!important;line-height:1.05!important;margin:3px 0!important}
   .philo small{font-size:12px!important;line-height:1.22!important;color:#c9ced0!important}
-  .quote{padding:22px 46% 18px 38px!important;display:flex!important;flex-direction:column!important;justify-content:center!important;background-image:linear-gradient(90deg,rgba(2,9,11,.98) 0%,rgba(2,9,11,.92) 40%,rgba(2,9,11,.55) 62%,rgba(2,9,11,.08) 100%),url('Assets/apropos-quote-maquette-2x.jpg')!important;background-repeat:no-repeat!important;background-position:center,right center!important;background-size:100% 100%,auto 100%!important}
+  .quote{padding:22px 46% 18px 38px!important;display:flex!important;flex-direction:column!important;justify-content:center!important;background-image:linear-gradient(90deg,rgba(2,9,11,.98) 0%,rgba(2,9,11,.92) 40%,rgba(2,9,11,.55) 62%,rgba(2,9,11,.08) 100%),url('Assets/apropos-quote-photo-clean-crop.jpg')!important;background-repeat:no-repeat!important;background-position:center,right center!important;background-size:100% 100%,auto 100%!important}
   .quote-mark{font-size:50px!important;line-height:.6!important;color:#ff5a00!important}
   .quote p{font-size:13px!important;line-height:1.42!important;margin:10px 0 7px!important;color:#f0f1f1!important}
   .signature{font-size:18px!important;line-height:1.05!important;text-align:center!important;margin-left:20px!important}
   .signature:after{width:125px!important;height:3px!important;margin-top:5px!important}
 
-  body.about-page>#forgepc-footer{display:none!important;margin:0!important;width:100%!important}
-  .about-approved-footer{display:block!important;width:100%!important;margin:0!important;padding:0!important;line-height:0!important;background:#02090b!important}
-  .about-approved-footer img{display:block!important;width:100%!important;height:auto!important;margin:0!important;padding:0!important}
+}</style>
+
+<style id="about-mobile-common-v1">
+@media (max-width:900px){
+html,body{max-width:100%!important;overflow-x:hidden!important}
+body.about-page>nav.mobile-only{display:none!important;position:relative!important;z-index:999!important;width:100%!important;background:#06171d!important;border-bottom:1px solid #2b454e!important;padding:8px 14px 12px!important}
+body.about-page>nav.mobile-only.open{display:flex!important;flex-direction:column!important}
+body.about-page>nav.mobile-only a{display:block!important;padding:11px 8px!important;border-bottom:1px solid rgba(255,255,255,.08)!important;font-size:13px!important;font-weight:700!important}
+body.about-page>nav.mobile-only a:last-child{border-bottom:0!important}
+}
+@media (min-width:901px){body.about-page>nav.mobile-only{display:none!important}}</style>
+
+<style id="about-mobile-philosophy-row-fix">
+@media (max-width:900px){
+  body.about-page .philosophy > summary.philosophy-head{
+    display:flex!important;
+    align-items:center!important;
+  }
+  body.about-page .philosophy > summary.philosophy-head > h2{
+    display:flex!important;
+    align-items:center!important;
+    gap:10px!important;
+    margin:0!important;
+    line-height:1.1!important;
+    white-space:nowrap!important;
+  }
+  body.about-page .philosophy > summary.philosophy-head:after{
+    margin-left:auto!important;
+    align-self:center!important;
+    flex:0 0 auto!important;
+  }
+}
+</style>
+
+<style id="about-desktop-global-size-v7">
+@media (min-width:901px){
+  html,body,body.about-page{width:100%!important;max-width:none!important;margin:0!important;padding:0!important;zoom:1!important;}
+  body.about-page>main.about-main{width:100%!important;max-width:none!important;margin:0!important;padding:0!important;transform:none!important;}
+  body.about-page>main.about-main>section{width:100%!important;max-width:none!important;margin-left:0!important;margin-right:0!important;transform:none!important;}
 }
 </style>
 </head>
@@ -376,13 +387,12 @@ body.about-page>main.about-main{display:block!important}
     <nav class="navlinks" aria-label="Navigation principale">
       <a href="index.html">Accueil</a>
       <a href="services.html">Services</a>
+      <a href="inventaire.html">Inventaire</a>
       <a class="active" href="a-propos.html">À propos</a>
       <a href="contact.html">Contact</a>
     </nav>
-    <div class="about-desktop-actions">
-      <a class="about-contact-cta" href="contact.html">NOUS CONTACTER <span aria-hidden="true">→</span></a>
-    </div>
-    <button class="menu" type="button" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+    <div class="nav-location"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.1 7 13 7 13s7-7.9 7-13a7 7 0 0 0-7-7Zm0 9.6A2.6 2.6 0 1 1 12 6a2.6 2.6 0 0 1 0 5.6Z"/></svg><span>Shawinigan et<br>toute la Mauricie</span></div>
+    <button class="menu" type="button" aria-label="Ouvrir le menu" aria-expanded="false"><span class="menu-bar" aria-hidden="true"></span><span class="menu-bar" aria-hidden="true"></span><span class="menu-bar" aria-hidden="true"></span></button>
   </div>
 </header>
 
@@ -436,7 +446,6 @@ body.about-page>main.about-main{display:block!important}
 </section>
 </main>
 
-<div class="about-approved-footer" style="display:none"><img src="Assets/index-footer-approved-2x.png" alt="ForgePC Mauricie — pied de page"></div>
 <footer id="forgepc-footer">
   <div class="fp-wrap">
     <div class="fp-main">
@@ -450,5 +459,21 @@ body.about-page>main.about-main{display:block!important}
 </footer><script>
 document.addEventListener('DOMContentLoaded',()=>{const b=document.querySelector('.menu'),n=document.querySelector('.mobile-only');if(b&&n){b.addEventListener('click',()=>{const o=n.classList.toggle('open');b.setAttribute('aria-expanded',o?'true':'false')});n.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>n.classList.remove('open')))}});
 </script>
-<script>if(innerWidth<=800){document.querySelectorAll('details.value,details.philosophy').forEach(d=>d.removeAttribute('open'));}</script></body>
+<script>
+if(innerWidth<=900){
+  const aboutAccordions=[...document.querySelectorAll('details.value, details.philosophy')];
+  aboutAccordions.forEach(d=>d.removeAttribute('open'));
+  aboutAccordions.forEach(d=>d.addEventListener('toggle',()=>{
+    if(d.open){
+      aboutAccordions.forEach(other=>{if(other!==d&&other.open)other.removeAttribute('open');});
+    }
+  }));
+}
+</script>
+<style id="about-mobile-philosophy-initial-state-fix">
+@media (max-width:900px){
+  body.about-page .philosophy:not([open]) + .quote{display:none!important;}
+  body.about-page .philosophy[open] + .quote{display:flex!important;}
+}
+</style></body>
 </html>
