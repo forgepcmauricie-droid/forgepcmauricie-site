@@ -34,3 +34,12 @@
 
   /* aucun ancien shell desktop ne doit survivre */
 }
+
+/* HEADER COMMUN — état actif canonique : une seule ligne orange (la bordure basse). */
+@media (min-width:901px){
+  body.fp-index-shell-copy > header.site-header .navlinks a.active::before,
+  body.fp-index-shell-copy > header.site-header .navlinks a.active::after{
+    content:none!important;
+    display:none!important;
+  }
+}

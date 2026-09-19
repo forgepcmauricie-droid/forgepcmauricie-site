@@ -64,7 +64,7 @@ body.gaming-page .faq .open p{display:block}
 body.gaming-page .more{display:block;border:1px solid #ff5a00;color:#ff5a00;text-align:center;text-decoration:none;font-size:10px;font-weight:900;padding:7px;margin-top:7px}
 
 /* PARLONS-EN — visuel café approuvé */
-body.gaming-page .work{height:126px;background:linear-gradient(90deg,rgba(2,9,11,.80) 0%,rgba(2,9,11,.45) 45%,rgba(2,9,11,.12) 72%),url('services-coffee-banner-v4.jpg') center 52%/cover no-repeat;border-top:1px solid #40535b;border-bottom:1px solid #40535b}
+body.gaming-page .work{height:126px;background:linear-gradient(90deg,rgba(2,9,11,.80) 0%,rgba(2,9,11,.45) 45%,rgba(2,9,11,.12) 72%),url('v1-coffee-banner-final.jpg') center center/cover no-repeat;border-top:1px solid #40535b;border-bottom:1px solid #40535b}
 body.gaming-page .workin{height:100%;display:flex;align-items:center}
 body.gaming-page .work h2{font-size:20px;margin:0}
 body.gaming-page .work h2 span{display:block;color:#ff5a00;font-size:31px}
@@ -72,3 +72,171 @@ body.gaming-page .work p{font-size:12px;line-height:1.35;margin:3px 0}
 body.gaming-page .work .cta{margin-left:auto;background:#ff5a00;color:#fff;text-decoration:none;font-weight:900;padding:16px 30px;border-radius:3px}
 
 .formbox form button .send-icon{width:20px;height:20px;fill:currentColor;flex:0 0 20px}.formbox form button{display:flex;align-items:center;justify-content:center;gap:10px}
+
+/* MOBILE V15 — uniquement <= 800px; desktop inchangé */
+@media (max-width:800px){
+ body.gaming-page .shell{width:calc(100% - 28px);max-width:none}
+ body.gaming-page .hero{height:auto;min-height:590px;overflow:hidden}
+ body.gaming-page .hero-media img{right:-52px;top:0;height:270px;width:auto;object-fit:contain}
+ body.gaming-page .hero-media:after{background:linear-gradient(90deg,#020b0f 0%,rgba(2,11,15,.88) 48%,rgba(2,11,15,.12) 78%)}
+ body.gaming-page .hero-in{min-height:590px;padding-top:1px}
+ body.gaming-page .copy{position:relative;left:auto;top:auto;width:62%;padding-top:28px}
+ body.gaming-page .copy>b{font-size:13px}
+ body.gaming-page .copy h1{font-size:31px;line-height:1;margin:8px 0 13px;letter-spacing:-.5px}
+ body.gaming-page .copy>p{font-size:14px;line-height:1.3;margin-bottom:12px}
+ body.gaming-page .copy em{font-size:18px}
+ body.gaming-page .hero-services{position:relative;right:auto;top:auto;width:100%;margin-top:38px;display:grid;grid-template-columns:1fr 1fr;gap:11px 16px}
+ body.gaming-page .hero-services li{font-size:11px;line-height:1.2;gap:8px;text-shadow:none}
+ body.gaming-page .hero-services svg{width:23px;height:23px;flex-basis:23px}
+ body.gaming-page .benefits{position:relative;left:auto;right:auto;bottom:auto;width:100%;margin:20px 0 12px;grid-template-columns:repeat(3,1fr);gap:12px 8px}
+ body.gaming-page .benefit{white-space:normal;justify-content:center;flex-direction:column;text-align:center;gap:4px;font-size:10px}
+ body.gaming-page .benefit svg{width:27px;height:27px;flex-basis:27px}
+ body.gaming-page .herocta{position:relative;right:auto;bottom:auto;display:block;width:100%;min-width:0;padding:13px 10px;font-size:13px}
+ body.gaming-page .section{padding:18px 0}
+ body.gaming-page .sectitle{gap:10px}.gaming-page .sectitle i{width:38px}
+ body.gaming-page .sectitle h2{font-size:20px}.gaming-page .sub{font-size:13px;margin:5px 0 12px}
+ body.gaming-page .cards{display:block}
+ body.gaming-page .cards article{position:relative;margin:0 0 7px;border-radius:3px;min-height:62px;padding:0 42px 0 0;overflow:hidden}
+ body.gaming-page .cards article img{display:none}
+ body.gaming-page .cards h3{display:flex;align-items:center;margin:0;padding:11px 10px;font-size:13px;min-height:60px;cursor:pointer}
+ body.gaming-page .cards h3:after{content:'⌄';position:absolute;right:14px;top:18px;color:#ff5a00;font-size:22px;line-height:1}
+ body.gaming-page .cards h3 b{width:34px;height:34px;flex:0 0 34px}
+ body.gaming-page .cards p{display:none;margin:0;padding:0 12px 13px 54px;font-size:12px;line-height:1.4}
+ body.gaming-page .cards article.open p{display:block}
+ body.gaming-page .cards article.open h3:after{content:'⌃'}
+ body.gaming-page .lower{display:flex;flex-direction:column;gap:10px;margin-top:12px}
+ body.gaming-page .box{padding:12px}
+ body.gaming-page .small h2{font-size:16px;text-align:center}.gaming-page .small i{width:24px}
+ body.gaming-page .formbox form{display:block}
+ body.gaming-page .formbox label{display:block;font-size:12px;margin-bottom:10px}
+ body.gaming-page .formbox input,body.gaming-page .formbox select,body.gaming-page .formbox textarea{font-size:13px;padding:10px;margin-top:5px}
+ body.gaming-page .formbox textarea{height:95px}
+ body.gaming-page .formbox button{margin-top:4px;padding:13px;font-size:13px}
+ body.gaming-page .feature{display:block}
+ body.gaming-page .feature img{width:100%;height:180px;object-fit:cover;margin-bottom:12px}
+ body.gaming-page .feature h2{font-size:21px}.gaming-page .feature p{font-size:13px;line-height:1.4}.gaming-page .feature em{font-size:18px}
+ body.gaming-page .faqtitle{margin-top:16px}.gaming-page .faqtitle h2{font-size:15px;white-space:normal;text-align:center}
+ body.gaming-page .faq button{font-size:12px;padding:11px 0}.gaming-page .faq p{font-size:12px}
+ body.gaming-page .work{height:auto;min-height:180px;background-position:center}
+ body.gaming-page .workin{min-height:180px;display:flex;align-items:center;gap:12px}
+ body.gaming-page .work h2{font-size:17px}.gaming-page .work h2 span{font-size:27px}.gaming-page .work p{font-size:11px}
+ body.gaming-page .work .cta{margin-left:auto;padding:12px 10px;font-size:11px;white-space:nowrap}
+}
+
+/* PC GAMING — QA MOBILE V20 — portée strictement <= 800 px */
+@media (max-width:800px){
+  body.gaming-page .shell{width:calc(100% - 32px)!important;}
+
+  /* Hero : composition mobile stable à 400 px */
+  body.gaming-page .hero{min-height:620px!important;height:auto!important;}
+  body.gaming-page .hero-media img{height:282px!important;right:-58px!important;top:0!important;object-position:right top!important;}
+  body.gaming-page .hero-media:after{background:linear-gradient(90deg,#020b0f 0%,rgba(2,11,15,.94) 43%,rgba(2,11,15,.48) 64%,rgba(2,11,15,.08) 82%)!important;}
+  body.gaming-page .hero-in{min-height:620px!important;}
+  body.gaming-page .copy{width:59%!important;padding-top:30px!important;}
+  body.gaming-page .copy>b{font-size:12px!important;line-height:1.15!important;}
+  body.gaming-page .copy h1{font-size:30px!important;line-height:.98!important;margin:8px 0 12px!important;letter-spacing:-.7px!important;}
+  body.gaming-page .copy>p{font-size:13px!important;line-height:1.34!important;margin:0 0 12px!important;}
+  body.gaming-page .copy em{font-size:17px!important;line-height:1.15!important;}
+  body.gaming-page .hero-services{margin-top:42px!important;grid-template-columns:1fr 1fr!important;gap:12px 14px!important;}
+  body.gaming-page .hero-services li{font-size:10.5px!important;line-height:1.2!important;gap:7px!important;align-items:center!important;}
+  body.gaming-page .hero-services svg{width:22px!important;height:22px!important;flex:0 0 22px!important;}
+  body.gaming-page .benefits{margin:19px 0 14px!important;grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:5px!important;}
+  body.gaming-page .benefit{font-size:8px!important;line-height:1.1!important;gap:4px!important;min-width:0!important;}
+  body.gaming-page .benefit svg{width:24px!important;height:24px!important;flex:0 0 24px!important;}
+  body.gaming-page .herocta{width:100%!important;height:46px!important;padding:0 12px!important;display:flex!important;align-items:center!important;justify-content:center!important;font-size:12px!important;margin:0!important;}
+
+  /* Titres de section */
+  body.gaming-page .section{padding:20px 0 18px!important;}
+  body.gaming-page .sectitle{gap:10px!important;}
+  body.gaming-page .sectitle i{width:38px!important;height:2px!important;flex:0 0 38px!important;}
+  body.gaming-page .sectitle h2{font-size:20px!important;line-height:1.05!important;text-align:center!important;}
+  body.gaming-page .sub{font-size:12px!important;line-height:1.3!important;margin:5px 0 13px!important;}
+
+  /* Notre approche : quatre états réellement indépendants */
+  body.gaming-page .cards article{margin-bottom:8px!important;min-height:58px!important;padding-right:40px!important;}
+  body.gaming-page .cards h3{min-height:58px!important;padding:10px!important;font-size:12.5px!important;line-height:1.15!important;}
+  body.gaming-page .cards h3 b{width:32px!important;height:32px!important;flex:0 0 32px!important;font-size:16px!important;margin-right:8px!important;}
+  body.gaming-page .cards h3:after{right:13px!important;top:17px!important;font-size:20px!important;}
+  body.gaming-page .cards p{padding:0 12px 13px 50px!important;font-size:12px!important;line-height:1.4!important;}
+
+  /* Formulaire */
+  body.gaming-page .lower{gap:12px!important;margin-top:14px!important;}
+  body.gaming-page .box{padding:13px!important;}
+  body.gaming-page .small{gap:8px!important;}
+  body.gaming-page .small h2{font-size:15px!important;line-height:1.1!important;}
+  body.gaming-page .small i{width:22px!important;flex-basis:22px!important;}
+  body.gaming-page .formbox .sub{margin:5px 0 14px!important;}
+  body.gaming-page .formbox label{font-size:11.5px!important;margin-bottom:10px!important;}
+  body.gaming-page .formbox input,body.gaming-page .formbox select{height:42px!important;padding:9px 10px!important;font-size:12.5px!important;}
+  body.gaming-page .formbox textarea{height:100px!important;padding:10px!important;font-size:12.5px!important;}
+  body.gaming-page .formbox button{height:48px!important;padding:0 12px!important;margin-top:3px!important;font-size:12.5px!important;}
+
+  /* Un PC qui vous ressemble */
+  body.gaming-page .feature img{height:190px!important;margin-bottom:14px!important;object-fit:cover!important;object-position:50% 42%!important;}
+  body.gaming-page .feature h2{font-size:21px!important;line-height:1.05!important;margin:0 0 13px!important;}
+  body.gaming-page .feature p{font-size:12.5px!important;line-height:1.45!important;margin:0 0 13px!important;}
+  body.gaming-page .feature em{font-size:18px!important;line-height:1.2!important;display:block!important;margin-bottom:4px!important;}
+
+  /* FAQ : visuel seulement, logique JS inchangée */
+  body.gaming-page .faqtitle{margin-top:20px!important;gap:9px!important;}
+  body.gaming-page .faqtitle i{min-width:24px!important;flex:1 1 auto!important;}
+  body.gaming-page .faqtitle h2{font-size:16px!important;line-height:1.1!important;white-space:nowrap!important;}
+  body.gaming-page .faq button{font-size:12px!important;line-height:1.25!important;padding:12px 0!important;}
+  body.gaming-page .faq button b{font-size:18px!important;line-height:1!important;}
+  body.gaming-page .faq p{font-size:12px!important;line-height:1.42!important;margin:0 0 12px!important;}
+  body.gaming-page .more{font-size:10px!important;padding:9px 8px!important;margin-top:8px!important;}
+
+  /* Parlons-en : conserver l'asset approuvé, composition mobile */
+  body.gaming-page .work{min-height:205px!important;height:205px!important;background-position:54% center!important;background-size:cover!important;}
+  body.gaming-page .workin{min-height:205px!important;height:205px!important;display:grid!important;grid-template-columns:minmax(0,1fr) auto!important;align-content:center!important;align-items:center!important;column-gap:12px!important;}
+  body.gaming-page .work h2{font-size:16px!important;line-height:1.1!important;}
+  body.gaming-page .work h2 span{font-size:29px!important;line-height:1!important;margin-top:3px!important;}
+  body.gaming-page .work p{font-size:11px!important;line-height:1.35!important;margin:7px 0 0!important;max-width:185px!important;}
+  body.gaming-page .work .cta{padding:13px 12px!important;font-size:10.5px!important;line-height:1.1!important;white-space:nowrap!important;}
+}
+
+/* V28 — CORRECTIONS STRICTEMENT LIMITÉES AUX IMAGES / CADRAGES */
+@media (min-width:801px){
+  /* Héros desktop : ratio naturel, tour complète plutôt qu'un zoom/crop. */
+  body.gaming-page .hero-media img{
+    height:92%!important;
+    width:auto!important;
+    max-width:none!important;
+    top:4%!important;
+    right:3%!important;
+    object-fit:contain!important;
+    object-position:center center!important;
+  }
+  /* CTA desktop : aucune déformation, crop proportionnel seulement. */
+  body.gaming-page .work{
+    background-size:cover!important;
+    background-position:center center!important;
+    background-repeat:no-repeat!important;
+  }
+}
+@media (max-width:800px){
+  /* Héros mobile : même source nette, cadrage indépendant et ratio intact. */
+  body.gaming-page .hero-media img{
+    height:250px!important;
+    width:auto!important;
+    max-width:none!important;
+    top:10px!important;
+    right:-6px!important;
+    object-fit:contain!important;
+    object-position:center center!important;
+  }
+  /* Carte PC : priorité absolue à la tour complète. */
+  body.gaming-page .feature img{
+    width:100%!important;
+    height:250px!important;
+    object-fit:contain!important;
+    object-position:center center!important;
+    background:#06161b!important;
+  }
+  /* CTA mobile : ratio naturel; aucun étirement ni filtre. */
+  body.gaming-page .work{
+    background-size:cover!important;
+    background-position:50% center!important;
+    background-repeat:no-repeat!important;
+  }
+}
