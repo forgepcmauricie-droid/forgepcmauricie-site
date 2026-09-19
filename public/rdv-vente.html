@@ -621,6 +621,7 @@ const SHEET_NAME="Inventaire";
 const SHEET_CSV_URL="https://docs.google.com/spreadsheets/d/"+SHEET_ID+"/gviz/tq?tqx=out:csv&sheet="+encodeURIComponent(SHEET_NAME)+"&range=Inventaire!A3:X";
 const params=new URLSearchParams(location.search);
 const stockRaw=(params.get("stock")||params.get("pcid")||params.get("id")||"").trim();
+const photoFromPc=(params.get("photo")||"").trim();
 
 function cleanId(v){
   let s=String(v||"").trim().replace(/^pc[-_ ]?/i,"");
@@ -669,7 +670,8 @@ async function load(){
   }catch(e){showError("Impossible de charger les informations du PC pour le moment. Vous pouvez tout de même remplir le formulaire et préciser le numéro de stock : "+stockRaw+".")}
 }
 function render(pc){
-  document.getElementById("productVisual").innerHTML=pc.photo?'<img class="product-photo" src="'+pc.photo+'" alt="'+(pc.nom||"PC ForgePC")+'">':'<div class="no-photo">Photo non disponible</div>';
+  const displayPhoto=imageUrl(photoFromPc)||pc.photo;
+  document.getElementById("productVisual").innerHTML=displayPhoto?'<img class="product-photo" src="'+displayPhoto+'" alt="'+(pc.nom||"PC ForgePC")+'">':'<div class="no-photo">Photo non disponible</div>';
   document.getElementById("productMeta").innerHTML=
     '<div><div class="meta-label">Numéro de stock</div><div class="stock">PC-'+pc.id+'</div></div>'+
     '<div><div class="meta-label">Modèle</div><div class="meta-value">'+(pc.nom||"PC remis à neuf")+'</div></div>'+
