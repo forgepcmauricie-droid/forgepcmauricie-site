@@ -1,5 +1,6 @@
-<!doctype html><html lang="fr-CA"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ForgePC Mauricie — Rendez-vous diagnostic</title>
-<link rel="stylesheet" href="Assets/forgepc.css"><link rel="stylesheet" href="Assets/footer-shared.css"><link rel="stylesheet" href="Assets/mobile-approved.css"><link rel="stylesheet" href="Assets/mobile-header-uniform.css?v=1"><link rel="stylesheet" href="Assets/desktop-final.css?v=1"><link rel="stylesheet" href="Assets/demande-diagnostic-v2.css?v=2">
+<!DOCTYPE html>
+<html lang="fr-CA"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>ForgePC Mauricie — Rendez-vous diagnostic</title>
+<link href="Assets/forgepc.css" rel="stylesheet"/><link href="Assets/footer-shared.css" rel="stylesheet"/><link href="Assets/mobile-approved.css" rel="stylesheet"/><link href="Assets/mobile-header-uniform.css?v=1" rel="stylesheet"/><link href="Assets/desktop-final.css?v=1" rel="stylesheet"/><link href="Assets/demande-diagnostic-v2.css?v=2" rel="stylesheet"/>
 <style id="rdv-diagnostic-desktop-final">
 @media(min-width:901px){
   .rd-approved-footer{display:block;width:100%;line-height:0;background:#02090b;margin:0;padding:0;overflow:hidden}
@@ -11,9 +12,9 @@
   .dd-grid{grid-template-columns:294px 338px 1fr}
 }
 @media(max-width:900px){.dd-desktop{display:none!important}}
-</style><link rel="stylesheet" href="Assets/forgepc-unified-shell.css?v=78">
-<script src="Assets/forgepc-unified-shell.js?v=78" defer></script>
-</head><body><div class="dd-desktop">
+</style><style>@media(max-width:900px){.dd-mobile .m-hero-approved{padding:0;background:none;line-height:0}.dd-mobile .m-hero-approved img{display:block;width:100%;height:auto}}</style><link href="Assets/forgepc-unified-shell.css?v=78" rel="stylesheet"/>
+<script defer="" src="Assets/forgepc-unified-shell.js?v=78"></script>
+<link href="Assets/header-footer-uniform-final.css?v=1" rel="stylesheet"/></head><body data-mobile-page="rendezvous"><div class="dd-desktop">
 <header class="dd-index-crop dd-index-header-crop">
 <img alt="" src="Assets/v1-header-index.png"/>
 <a aria-label="ForgePC Mauricie" class="hs logo" href="index.html"></a>
@@ -35,4 +36,9 @@ Ex. : l'ordinateur est lent, ne démarre plus,
 <div class="dd-bottom"><section class="dd-card"><h2><i aria-hidden="true" class="dd-icon dd-icon-paperclip"></i>Pièces jointes <small>(facultatif)</small></h2><p>Vous pouvez ajouter des photos, captures d'écran ou documents<br/>pour nous aider à mieux comprendre le problème.</p><div class="dd-upload"><i aria-hidden="true" class="dd-icon dd-icon-upload"></i><br/>Glissez vos fichiers ici<br/>ou cliquez pour parcourir<br/><small>Images (JPG, PNG) ou documents (PDF) — Max 10 Mo</small><input accept=".jpg,.jpeg,.png,.pdf" multiple="" name="pieces" type="file"/></div></section><section class="dd-card dd-notice"><h2><i aria-hidden="true" class="dd-icon dd-icon-info"></i>Bon à savoir</h2><ul><li>Nous analysons votre demande rapidement.</li><li>Nous vous contactons généralement sous 24 à 48 h.</li><li>Un diagnostic est toujours effectué avant de proposer une réparation.</li><li>Aucun engagement de votre part.</li></ul></section><section class="dd-card dd-send"><button type="submit">Envoyer ma demande  →</button><div class="dd-privacy"><i aria-hidden="true" class="dd-icon dd-icon-lock"></i>Vos informations sont confidentielles.</div></section></div></form></main>
 </div>
 <div class="rd-approved-footer"><img alt="" src="Assets/index-footer-approved-2x.png"/></div>
-</div></body></html>
+</div>
+<div class="dd-mobile"><main><section class="m-hero m-hero-approved"><img alt="Réparations — Demande de diagnostic" src="Assets/rendezvous-diagnostic-hero-mobile.jpg"/></section><section class="m-steps"><div class="m-step"><div class="dd-num" style="background:#ff5a00">1</div>Vos infos</div><div class="m-step"><div class="dd-num">2</div>Problème</div><div class="m-step"><div class="dd-num">3</div>Confirmation</div></section><form action="https://formsubmit.co/service@forgepcmauricie.ca" class="m-form" enctype="multipart/form-data" method="POST"><input name="_subject" type="hidden" value="Demande de diagnostic — ForgePC Mauricie"/><input name="_captcha" type="hidden" value="false"/><section class="dd-card"><h2>👤 Vos coordonnées</h2><label>Nom complet <span class="req">*</span></label><input name="nom" placeholder="Votre nom" required=""/><label>Téléphone <span class="req">*</span></label><input name="telephone" placeholder="(XXX) XXX-XXXX" required=""/><label>Courriel <span class="req">*</span></label><input name="courriel" placeholder="votre@courriel.com" required="" type="email"/></section>
+<section class="dd-card"><h2>🖥 Votre ordinateur</h2><label>Type d'ordinateur <span class="req">*</span></label><select name="type" required=""><option value="">Sélectionnez</option><option>Ordinateur de bureau (tour)</option><option>Ordinateur portable (laptop)</option><option>Je ne suis pas certain(e)</option></select><div class="dd-info" style="margin-top:9px"><b>i</b><span>Vous ne connaissez pas la marque ou le modèle ? Aucun problème. Nous vous aiderons.</span></div></section>
+<section class="dd-card"><h2>💬 Le problème</h2><label>Quel est le problème ? <span class="req">*</span></label><textarea name="probleme" placeholder="Décrivez le problème avec vos mots." required=""></textarea><label>Symptômes courants</label><div class="dd-checks"><label class="dd-check"><input name="symptomes" type="checkbox" value="lent"/> Lent ou qui bloque</label><label class="dd-check"><input name="symptomes" type="checkbox" value="demarrage"/> Ne démarre pas</label><label class="dd-check"><input name="symptomes" type="checkbox" value="ecran"/> Écran noir ou sans image</label><label class="dd-check"><input name="symptomes" type="checkbox" value="virus"/> Virus ou logiciels malveillants</label></div></section>
+<section class="dd-card"><h2>📎 Pièces jointes <small>(facultatif)</small></h2><div class="dd-upload">Glissez vos fichiers ici<br/>ou cliquez pour parcourir<input accept=".jpg,.jpeg,.png,.pdf" name="pieces" type="file"/></div></section><section class="dd-card dd-send"><button type="submit">Envoyer ma demande →</button><div class="dd-privacy">🔒 Vos informations sont confidentielles.</div></section></form></main></div>
+</body></html>
