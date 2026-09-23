@@ -134,7 +134,18 @@
 
   /* Contact : cadrage complet de la tasse et du slogan. */
   body.contact-page .hero{background-image:url('contact-hero-approved-2x.jpg')!important;background-size:cover!important;background-position:center!important;background-repeat:no-repeat!important}
-  body.contact-page .hero .benefits{font-family:Arial,Helvetica,sans-serif!important}
+ body.contact-page .hero .benefits{font-family:Arial,Helvetica,sans-serif!important}
+
+  /* Service à domicile : la maquette JPG contient encore son ancien header.
+     Le retirer visuellement pour ne garder que le shell commun du site. */
+  body.home-service-page>main.desktop-page{overflow:hidden!important}
+  body.home-service-page>main.desktop-page>.mockup{margin-top:-6.75vw!important}
+  body.home-service-page>main.desktop-page>.desktop-hotspots .hs-home,
+  body.home-service-page>main.desktop-page>.desktop-hotspots .hs-services,
+  body.home-service-page>main.desktop-page>.desktop-hotspots .hs-inventory,
+  body.home-service-page>main.desktop-page>.desktop-hotspots .hs-about,
+  body.home-service-page>main.desktop-page>.desktop-hotspots .hs-contact,
+  body.home-service-page>main.desktop-page>.desktop-hotspots .hs-contact-top{display:none!important}
 
   /* Formulaires RDV : images/cadrages proches des maquettes et pictos non-emoji. */
   body.rdv-sale-page .hero{background-image:linear-gradient(90deg,rgba(3,8,10,.96) 0%,rgba(3,8,10,.70) 43%,rgba(3,8,10,.10) 70%),url('pc-gaming-hero-approved-clean-2x.jpg')!important;background-size:100% 100%,auto 100%!important;background-position:center,right center!important;background-repeat:no-repeat!important}
