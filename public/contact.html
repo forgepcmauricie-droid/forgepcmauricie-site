@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Contactez ForgePC Mauricie pour une question générale ou une demande d'information." name="description"/>
+<title>Contactez-nous | ForgePC Mauricie</title>
+<style>
+:root{--orange:#ff4b00;--orange2:#ff6a00;--bg:#050b0e;--panel:#091419;--panel2:#101f26;--line:#26363d;--white:#f5f5f5;--muted:#b9c3c8}
+*{box-sizing:border-box} body{margin:0;background:#020609;color:var(--white);font-family:Arial,Helvetica,sans-serif}
+a{color:inherit;text-decoration:none}.wrap{max-width:1180px;margin:auto}
+header{height:76px;position:relative;background:#03090c;border-bottom:1px solid #263238;display:flex;align-items:center;padding:0 28px;gap:34px}
+.logo{width:150px;max-height:64px;object-fit:contain}.menu{display:none;background:transparent;color:#fff;border:1px solid #4a565a;border-radius:5px;width:45px;height:42px;font-size:24px;margin-left:auto;cursor:pointer}.nav{display:flex;gap:28px;align-items:center;margin-left:auto;font-weight:700;font-size:13px}.nav a{padding:28px 0}.nav a.active{color:var(--orange);border-bottom:3px solid var(--orange)}
+.cta{background:linear-gradient(90deg,var(--orange),var(--orange2));padding:15px 24px;border-radius:5px;font-weight:800;font-size:13px}
+.footer{border-top:1px solid #263238;margin-top:0;padding:25px 30px;background:#03090c;display:flex;justify-content:space-between;align-items:center;gap:20px}.footer .logo{width:130px}.tag{color:#ff6a00;font-weight:800}
+
+
+/* ForgePC — navigation mobile uniforme */
+
+
+</style>
+<style id="forgepc-mobile-menu-fix">
+</style>
+<style id="forgepc-final-fixes">
+
+/* ===== ForgePC — correctifs uniformes mobile / images / footer ===== */
+html, body { overflow-x:hidden; }
+header { position:sticky !important; top:0 !important; z-index:1000 !important; }
+header .container, header .nav { position:relative !important; }
+header .logo, header .brand { width:150px !important; height:auto !important; max-height:none !important; object-fit:contain !important; object-position:center !important; display:block !important; }
+
+/* Menu mobile fiable et identique sur toutes les pages */
+header .menu {
+  display:none;
+  appearance:none;
+  -webkit-appearance:none;
+  align-items:center !important;
+  justify-content:center !important;
+  width:46px !important;
+  height:44px !important;
+  min-width:46px !important;
+  padding:0 !important;
+  margin-left:auto !important;
+  border:1px solid #4a565a !important;
+  border-radius:7px !important;
+  background:#02090b !important;
+  color:#fff !important;
+  font-size:26px !important;
+  line-height:1 !important;
+  cursor:pointer !important;
+  position:relative !important;
+  z-index:1002 !important;
+}
+
+
+/* Images : éviter les recadrages agressifs et les débordements */
+img { max-width:100%; }
+.story-image {
+  background-position:center !important;
+  background-size:cover !important;
+  background-repeat:no-repeat !important;
+}
+.card img, .services .card img, .service-card img {
+  object-position:center !important;
+}
+.map {
+  background-size:contain !important;
+  background-repeat:no-repeat !important;
+  background-position:center !important;
+}
+
+/* Footer unique sur toutes les pages */
+.site-footer {
+  width:100%;
+  box-sizing:border-box;
+  margin-top:0;
+  padding:34px 20px 26px;
+  background:#02090b;
+  border-top:1px solid #27363a;
+  text-align:center;
+  color:#f2f3f3;
+}
+.site-footer .footer-logo {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-bottom:18px;
+}
+.site-footer .footer-logo img {
+  width:170px !important;
+  height:auto !important;
+  max-height:none !important;
+  object-fit:contain !important;
+  display:block !important;
+}
+.site-footer .footer-location {
+  font-size:17px;
+  line-height:1.35;
+  margin-bottom:4px;
+}
+.site-footer .footer-slogan {
+  color:#ff5a00;
+  font-size:18px;
+  line-height:1.35;
+  font-weight:800;
+}
+.site-footer .footer-copy {
+  margin-top:8px;
+  font-size:14px;
+  color:#d4d8d7;
+}
+
+
+/* Empêche certains calques décoratifs de doubler visuellement le texte */
+.hero, .story, .values, .bottom, main, section { isolation:isolate; }
+</style>
+<link href="/Assets/global-fixes.css" rel="stylesheet"/>
+<style id="contact-logo-final-clean">
+</style>
+<style id="contact-logo-match-apropos-visual">
+</style>
+<style id="contact-approved-about-logos">
+header.site-header .brand-link img.logo,
+.site-footer .footer-logo img{content:normal!important;filter:none!important;object-fit:contain!important;object-position:center!important;}
+header.site-header .brand-link img.logo{width:158px!important;height:66px!important;max-width:none!important;max-height:none!important;}
+.site-footer .footer-logo img{width:130px!important;height:58px!important;max-width:none!important;max-height:none!important;}
+
+</style>
+<link href="Assets/footer-shared.css" rel="stylesheet"/>
+<link href="Assets/mobile-approved.css" rel="stylesheet"/>
+<script defer="" src="Assets/mobile-approved.js"></script>
+<link href="Assets/mobile-header-uniform.css?v=1" rel="stylesheet"/>
+<link href="Assets/qa-owner-fixes.css?v=2" rel="stylesheet"/>
+<link href="Assets/forgepc.css" rel="stylesheet"/><link href="Assets/index-shell-copy.css?v=2" rel="stylesheet"/><link href="Assets/index-footer-lock.css?v=10" rel="stylesheet"/>
+<style id="footer-dedup-final-v11">
+/* Contact PC: affichage desktop du footer verrouillé, sans media query. */
+.legacy-footer-mobile-only{display:none !important;}
+.index-footer-desktop-copy{display:block !important;width:100vw !important;margin:0 calc(50% - 50vw) !important;line-height:0 !important;background:#02090b !important;}
+.index-footer-desktop-copy img{display:block !important;width:100% !important;height:auto !important;margin:0 !important;padding:0 !important;}
+</style>
+<style id="contact-desktop-pc-v16-stable">
+/* CONTACT PC V16 — base desktop directe, sans media queries. */
+body.contact-page > .contact-pixel-page{display:none!important;}
+body.contact-page{background:#03151b!important;overflow-x:hidden!important;}
+
+/* HERO */
+body.contact-page > section.hero{display:block!important;position:relative!important;height:258px!important;min-height:258px!important;padding:22px 0 14px!important;border-bottom:1px solid #26363d!important;overflow:hidden!important;background:#02090b url('Assets/contact-hero-approved-2x.jpg') right center/auto 100% no-repeat!important;box-sizing:border-box!important;}
+body.contact-page > section.hero::before{content:""!important;position:absolute!important;inset:0!important;z-index:1!important;pointer-events:none!important;background:linear-gradient(90deg,#02090b 0%,#02090b 31%,rgba(2,9,11,.98) 38%,rgba(2,9,11,.82) 45%,rgba(2,9,11,.38) 53%,rgba(2,9,11,.08) 60%,transparent 67%)!important;}
+body.contact-page > section.hero::after{content:""!important;position:absolute!important;left:0!important;right:0!important;bottom:0!important;height:70px!important;z-index:2!important;pointer-events:none!important;background:linear-gradient(180deg,rgba(2,9,11,.74),#02090b 30%,#02090b 100%)!important;}
+body.contact-page > section.hero .wrap{position:relative!important;z-index:3!important;width:calc(100% - 72px)!important;max-width:1460px!important;height:100%!important;margin:0 auto!important;padding:0!important;display:flex!important;flex-direction:column!important;box-sizing:border-box!important;}
+body.contact-page .hero .kicker{color:#ff4b0b!important;font-weight:800!important;letter-spacing:1px!important;font-size:15px!important;line-height:1.1!important;margin:0!important;max-width:330px!important;}
+body.contact-page .hero h1{font-size:26px!important;line-height:1.03!important;margin:6px 0 9px!important;max-width:330px!important;padding:0!important;letter-spacing:.1px!important;}
+body.contact-page .hero h1 span{color:#ff4b0b!important;}
+body.contact-page .hero p{font-size:14px!important;line-height:1.38!important;max-width:335px!important;margin:0!important;padding:0!important;color:#e4e8ea!important;}
+body.contact-page .hero .points{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:24px!important;width:100%!important;max-width:100%!important;margin:auto 0 0!important;padding:0 16px!important;align-items:center!important;box-sizing:border-box!important;position:relative!important;z-index:4!important;}
+body.contact-page .hero .point{display:flex!important;position:static!important;align-items:center!important;justify-content:center!important;gap:10px!important;min-width:0!important;width:100%!important;max-width:100%!important;font-size:12px!important;line-height:1.15!important;white-space:nowrap!important;text-align:center!important;margin:0!important;padding:0 4px!important;box-sizing:border-box!important;overflow:visible!important;}
+body.contact-page .hero .point .ico{display:inline-block!important;position:static!important;flex:0 0 auto!important;color:#ff4b0b!important;font-size:27px!important;line-height:1!important;margin:0!important;padding:0!important;}
+
+/* GRILLE PRINCIPALE 35 / 65 */
+body.contact-page > main.wrap.content{display:flex!important;flex-flow:row nowrap!important;align-items:stretch!important;gap:16px!important;width:calc(100% - 72px)!important;max-width:1460px!important;margin:0 auto!important;padding:14px 0 16px!important;background:#03151b!important;box-sizing:border-box!important;overflow:visible!important;}
+body.contact-page > main.wrap.content > aside.card{flex:0 0 calc(35% - 6px)!important;min-width:0!important;}
+body.contact-page > main.wrap.content > section.card{flex:1 1 calc(65% - 10px)!important;min-width:0!important;}
+body.contact-page > main.wrap.content > aside.card,body.contact-page > main.wrap.content > section.card{min-width:0!important;width:100%!important;max-width:100%!important;box-sizing:border-box!important;background:linear-gradient(145deg,#06151a,#031116)!important;border:1px solid #294047!important;border-radius:7px!important;box-shadow:none!important;overflow:hidden!important;}
+body.contact-page > main.wrap.content > aside.card{padding:20px 22px 0!important;}
+body.contact-page > main.wrap.content > section.card{padding:22px 24px!important;}
+body.contact-page .contact-item{position:relative!important;padding:0 0 16px 58px!important;margin:0 0 16px!important;min-height:82px!important;border-bottom:1px solid #294047!important;box-sizing:border-box!important;}
+body.contact-page .contact-item:last-of-type{border-bottom:0!important;margin-bottom:4px!important;}
+body.contact-page .contact-label{font-size:14px!important;line-height:1.2!important;margin:0 0 5px!important;color:#f5f5f5!important;font-weight:700!important;}
+body.contact-page .contact-value{font-size:17px!important;line-height:1.12!important;color:#ff4b0b!important;font-weight:800!important;white-space:nowrap!important;overflow:visible!important;overflow-wrap:normal!important;word-break:normal!important;}
+body.contact-page .contact-note{font-size:13px!important;line-height:1.35!important;margin-top:7px!important;color:#c8d1d5!important;}
+body.contact-page .contact-ico{position:absolute!important;left:0!important;top:3px!important;width:40px!important;text-align:center!important;color:#ff4b0b!important;font-size:34px!important;line-height:1!important;margin:0!important;}
+body.contact-page .actions{display:flex!important;position:static!important;align-items:stretch!important;gap:10px!important;margin-top:10px!important;flex-wrap:nowrap!important;width:100%!important;max-width:100%!important;box-sizing:border-box!important;}
+body.contact-page .actions .btn{display:flex!important;position:static!important;flex:1 1 0!important;align-items:center!important;justify-content:center!important;gap:6px!important;min-width:0!important;width:auto!important;max-width:100%!important;min-height:40px!important;padding:0 8px!important;border:1px solid #e7ecee!important;border-radius:5px!important;font-size:11px!important;font-weight:800!important;white-space:nowrap!important;box-sizing:border-box!important;}
+body.contact-page .actions .btn.primary{background:linear-gradient(90deg,#ff3b00,#ff6500)!important;border-color:#ff4b0b!important;}
+body.contact-page .desktop-contact-promo{display:block!important;position:relative!important;width:100%!important;max-width:100%!important;height:132px!important;margin:8px 0 0!important;padding:0!important;border:1px solid #294047!important;border-radius:6px!important;overflow:hidden!important;background:url('Assets/contact-content-approved.png') -24px bottom/293.25% auto no-repeat!important;box-sizing:border-box!important;}
+body.contact-page .desktop-contact-promo span{display:none!important;}
+
+/* FORMULAIRE */
+body.contact-page main h2{font-size:22px!important;line-height:1.1!important;margin:0 0 18px!important;color:#f5f5f5!important;}
+body.contact-page main h2 .form-ico{color:#ff4b0b!important;font-size:28px!important;margin-right:10px!important;vertical-align:-2px!important;}
+body.contact-page form{display:block!important;width:100%!important;max-width:100%!important;min-width:0!important;box-sizing:border-box!important;}
+body.contact-page form input[type="hidden"],body.contact-page form [hidden]{display:none!important;visibility:hidden!important;width:0!important;height:0!important;padding:0!important;margin:0!important;border:0!important;position:absolute!important;}
+body.contact-page .row{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;gap:18px!important;width:100%!important;max-width:100%!important;min-width:0!important;box-sizing:border-box!important;}
+body.contact-page .row>.field,body.contact-page .field{min-width:0!important;width:100%!important;max-width:100%!important;box-sizing:border-box!important;margin-bottom:13px!important;}
+body.contact-page label{display:block!important;font-size:14px!important;font-weight:700!important;margin:0 0 6px!important;}
+body.contact-page .req{color:#ff4b0b!important;}
+body.contact-page input:not([type=hidden]),body.contact-page select,body.contact-page textarea{display:block!important;width:100%!important;max-width:100%!important;min-width:0!important;box-sizing:border-box!important;background:#132b35!important;border:1px solid #3c5964!important;color:#fff!important;border-radius:5px!important;padding:10px 12px!important;font-size:14px!important;outline:none!important;box-shadow:inset 0 0 18px rgba(0,0,0,.12)!important;}
+body.contact-page input:not([type=hidden]),body.contact-page select{height:44px!important;}
+body.contact-page textarea{height:128px!important;min-height:128px!important;resize:vertical!important;line-height:1.45!important;}
+body.contact-page .counter{text-align:right!important;font-size:12px!important;margin-top:3px!important;color:#c1cbd0!important;}
+body.contact-page .notice{position:relative!important;margin:8px 0 14px!important;padding:10px 14px 10px 50px!important;min-height:58px!important;border:1px solid #344a53!important;background:#061319!important;border-radius:5px!important;font-size:12px!important;line-height:1.4!important;color:#d7dfe2!important;box-sizing:border-box!important;}
+body.contact-page .notice::before{content:'ⓘ'!important;position:absolute!important;left:13px!important;top:11px!important;color:#ff4b0b!important;font-size:27px!important;line-height:1!important;}
+body.contact-page .send{display:flex!important;position:static!important;flex-flow:row nowrap!important;align-items:center!important;justify-content:space-between!important;gap:20px!important;width:100%!important;max-width:100%!important;min-width:0!important;box-sizing:border-box!important;}
+body.contact-page .privacy{flex:1 1 auto!important;min-width:0!important;position:static!important;min-width:0!important;font-size:13px!important;color:#e0e5e7!important;white-space:nowrap!important;}
+body.contact-page .send button.cta{display:flex!important;position:static!important;flex:0 0 260px!important;align-items:center!important;justify-content:center!important;width:100%!important;max-width:260px!important;min-width:0!important;height:56px!important;padding:0 16px!important;margin:0 0 0 auto!important;border:0!important;border-radius:5px!important;background:linear-gradient(90deg,#ff3b00,#ff6500)!important;color:#fff!important;font-size:16px!important;font-weight:700!important;white-space:nowrap!important;box-sizing:border-box!important;cursor:pointer!important;}
+</style>
+<style id="contact-visual-fix-v17">
+@font-face{font-family:"FontAwesome";src:url("Assets/fontawesome-webfont.ttf") format("truetype");font-weight:normal;font-style:normal;font-display:block}
+body.contact-page .fa{font-family:"FontAwesome"!important;font-style:normal!important;font-weight:normal!important;speak:none}
+
+@media (min-width:769px){
+  body.contact-page > section.hero{
+    background-position:right center!important;
+    background-size:auto 100%!important;
+  }
+  body.contact-page > section.hero::before{
+    background:linear-gradient(90deg,#02090b 0%,#02090b 55%,rgba(2,9,11,.99) 60%,rgba(2,9,11,.88) 64%,rgba(2,9,11,.38) 68%,transparent 72%)!important;
+  }
+  body.contact-page > section.hero::after{
+    height:72px!important;
+    background:linear-gradient(180deg,rgba(2,9,11,.20) 0%,#02090b 28%,#02090b 100%)!important;
+  }
+  body.contact-page .desktop-contact-promo{
+    background-position:left bottom!important;
+  }
+}
+
+@media (max-width:768px){
+  body.contact-page{background:#03151b!important;overflow-x:hidden!important;}
+  body.contact-page .site-header .menu{
+    width:42px!important;height:42px!important;min-width:42px!important;min-height:42px!important;
+    max-width:42px!important;max-height:42px!important;font-size:0!important;border-radius:8px!important;
+    display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:5px!important;
+  }
+  body.contact-page .site-header .menu::before,
+  body.contact-page .site-header .menu::after{content:none!important;display:none!important;}
+  body.contact-page .site-header .menu .menu-bar{
+    display:block!important;width:28px!important;height:3px!important;min-width:28px!important;min-height:3px!important;
+    max-width:28px!important;max-height:3px!important;margin:0!important;padding:0!important;
+    border:0!important;border-radius:2px!important;background:#fff!important;transform:none!important;position:static!important;
+  }
+  body.contact-page > section.hero{
+    height:auto!important;min-height:0!important;padding:18px 16px 12px!important;
+    background:#02090b!important;border-bottom:1px solid #26363d!important;overflow:visible!important;
+  }
+  body.contact-page > section.hero::before,
+  body.contact-page > section.hero::after{display:none!important;content:none!important;}
+  body.contact-page > section.hero .wrap{
+    display:block!important;width:100%!important;height:auto!important;max-width:none!important;margin:0!important;padding:0!important;
+  }
+  body.contact-page .hero .kicker{font-size:15px!important;line-height:1.1!important;margin:0!important;padding-left:48px!important;min-height:37px!important;display:flex!important;align-items:center!important;}
+  body.contact-page .hero .kicker .fa{left:0!important;top:0!important;font-size:38px!important;line-height:1!important;}
+  body.contact-page .hero h1{font-size:23px!important;line-height:1.05!important;margin:2px 0 12px!important;padding-left:48px!important;max-width:none!important;}
+  body.contact-page .hero p{font-size:14px!important;line-height:1.3!important;max-width:none!important;margin:0!important;}
+  body.contact-page .hero .points{
+    display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:5px!important;
+    width:100%!important;margin:14px 0 0!important;padding:0!important;
+  }
+  body.contact-page .hero .point{
+    display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:flex-start!important;
+    gap:4px!important;width:auto!important;min-width:0!important;padding:0 1px!important;
+    font-size:9px!important;line-height:1.08!important;white-space:normal!important;text-align:center!important;
+  }
+  body.contact-page .hero .point .ico{font-size:27px!important;line-height:1!important;}
+
+  body.contact-page > main.wrap.content{
+    display:block!important;width:100%!important;max-width:none!important;margin:0!important;padding:8px 10px 10px!important;background:#03151b!important;
+  }
+  body.contact-page > main.wrap.content > aside.card,
+  body.contact-page > main.wrap.content > section.card{
+    display:block!important;width:100%!important;max-width:none!important;min-width:0!important;margin:0 0 8px!important;padding:12px!important;
+    border:1px solid #294047!important;border-radius:7px!important;overflow:hidden!important;
+  }
+  body.contact-page .contact-item{min-height:0!important;margin:0!important;padding:12px 4px 12px 54px!important;}
+  body.contact-page .contact-item + .contact-item{border-top:1px solid #294047!important;}
+  body.contact-page .contact-label{font-size:13px!important;margin:0 0 4px!important;}
+  body.contact-page .contact-value{font-size:16px!important;line-height:1.25!important;white-space:normal!important;overflow-wrap:anywhere!important;}
+  body.contact-page .contact-note{display:none!important;}
+  body.contact-page .contact-ico{left:4px!important;top:15px!important;width:38px!important;font-size:32px!important;}
+  body.contact-page .actions{display:flex!important;gap:8px!important;margin-top:9px!important;}
+  body.contact-page .actions .btn{min-height:38px!important;font-size:11px!important;padding:0 7px!important;}
+  body.contact-page .desktop-contact-promo{display:none!important;}
+
+  body.contact-page main h2{font-size:18px!important;line-height:1.15!important;margin:0 0 14px!important;}
+  body.contact-page main h2 .form-ico{font-size:23px!important;margin-right:7px!important;}
+  body.contact-page .row{display:block!important;width:100%!important;}
+  body.contact-page .row>.field,body.contact-page .field{width:100%!important;margin-bottom:11px!important;}
+  body.contact-page label{font-size:13px!important;margin-bottom:5px!important;}
+  body.contact-page input:not([type=hidden]),body.contact-page select{height:38px!important;font-size:13px!important;padding:8px 10px!important;}
+  body.contact-page textarea{height:96px!important;min-height:96px!important;font-size:13px!important;padding:9px 10px!important;}
+  body.contact-page .notice{min-height:0!important;margin:8px 0 12px!important;padding:9px 10px 9px 40px!important;font-size:11px!important;line-height:1.35!important;}
+  body.contact-page .notice::before{left:10px!important;top:10px!important;font-size:23px!important;}
+  body.contact-page .send{display:flex!important;flex-direction:column-reverse!important;align-items:stretch!important;gap:9px!important;}
+  body.contact-page .privacy{font-size:11px!important;white-space:normal!important;text-align:center!important;}
+  body.contact-page .send button.cta{flex:none!important;width:100%!important;max-width:none!important;height:44px!important;margin:0!important;font-size:15px!important;}
+
+  body.contact-page .index-footer-desktop-copy{display:none!important;}
+  body.contact-page .legacy-footer-mobile-only{display:block!important;}
+}
+</style>
+
+
+<link href="Assets/header-footer-uniform-final.css?v=1" rel="stylesheet"/>
+<style id="fp-header-final-uniform-v266">
+/* ForgePC — header commun final. Scope strict: header seulement. */
+.fp-common-header{position:relative!important;top:auto!important;z-index:1000!important;width:100%!important;background:#020d10!important;border-bottom:1px solid #23353b!important;box-sizing:border-box!important}
+.fp-common-header .nav{box-sizing:border-box!important}
+.fp-common-header .brand-link{display:flex!important;align-items:center!important;text-decoration:none!important}
+.fp-common-header .logo{display:block!important;object-fit:contain!important}
+.fp-common-header .menu{box-sizing:border-box!important;border:1px solid #31434b!important;border-radius:10px!important;background:#071419!important;align-items:center!important;justify-content:center!important;flex-direction:column!important;gap:6px!important;padding:0!important;overflow:hidden!important;font-size:0!important;line-height:0!important}
+.fp-common-header .menu::before,.fp-common-header .menu::after{content:none!important;display:none!important}
+.fp-common-header .menu .menu-bar{display:block!important;position:static!important;width:26px!important;height:3px!important;min-height:3px!important;background:#fff!important;border:0!important;border-radius:3px!important;margin:0!important;padding:0!important;transform:none!important}
+@media(max-width:900px){
+ .fp-common-header{height:122px!important;min-height:122px!important}
+ .fp-common-header .nav{height:122px!important;min-height:122px!important;width:100%!important;max-width:none!important;margin:0!important;padding:0 30px!important;display:flex!important;align-items:center!important;justify-content:space-between!important}
+ .fp-common-header .brand-link{height:100%!important}
+ .fp-common-header .logo{width:170px!important;height:auto!important;max-height:94px!important;margin:0!important}
+ .fp-common-header .navlinks,.fp-common-header .nav-location{display:none!important}
+ .fp-common-header .menu{display:flex!important;width:48px!important;height:48px!important;min-width:48px!important;min-height:48px!important;max-width:48px!important;max-height:48px!important}
+}
+</style>
+
+<style id="fp-contact-header-match-validated-v2618">
+@media (max-width:700px){
+ body.contact-page .fp-common-header{position:relative!important;top:auto!important;height:67px!important;min-height:67px!important;max-height:67px!important;padding:0!important}
+ body.contact-page .fp-common-header .nav{height:67px!important;min-height:67px!important;max-height:67px!important;width:100%!important;max-width:none!important;margin:0!important;padding:0 16px!important;display:flex!important;align-items:center!important;justify-content:space-between!important}
+ body.contact-page .fp-common-header .brand-link{height:67px!important;min-height:67px!important;max-height:67px!important;padding:0!important;margin:0!important}
+ body.contact-page .fp-common-header .logo{width:122px!important;min-width:122px!important;max-width:122px!important;height:56px!important;max-height:56px!important;margin:0!important;padding:0!important;object-fit:contain!important}
+ body.contact-page .fp-common-header .menu{display:flex!important;width:42px!important;height:42px!important;min-width:42px!important;min-height:42px!important;max-width:42px!important;max-height:42px!important;margin:0!important;padding:0!important;gap:5px!important}
+ body.contact-page .fp-common-header .menu .menu-bar{width:24px!important;height:3px!important;min-height:3px!important}
+}
+</style>
+<style id="fp-index-header-exact-final">
+@media(max-width:900px){
+  .forgepc-unified-header{height:67px!important;min-height:67px!important;max-height:67px!important;background:#020b0e!important;border-bottom:1px solid #2a3d43!important}
+  .forgepc-unified-header .shell-nav{width:100%!important;max-width:520px!important;height:67px!important;margin:0 auto!important;padding:0 17px!important;justify-content:space-between!important}
+  .forgepc-unified-header .brand-link{height:67px!important}
+  .forgepc-unified-header .logo{width:122px!important;height:56px!important;min-width:122px!important;max-width:122px!important}
+  .forgepc-unified-header .desktop-nav,.forgepc-unified-header .nav-location{display:none!important}
+  .forgepc-unified-header .menu{display:flex!important;width:42px!important;height:42px!important;min-width:42px!important;min-height:42px!important;max-width:42px!important;max-height:42px!important;margin-left:auto!important;padding:0!important;border:1px solid #42545b!important;border-radius:8px!important;background:#071216!important;align-items:center!important;justify-content:center!important;flex-direction:column!important;gap:5px!important;appearance:none!important}
+  .forgepc-unified-header .menu::before,.forgepc-unified-header .menu::after{content:none!important;display:none!important}
+  .forgepc-unified-header .menu-bar{display:block!important;position:static!important;width:28px!important;height:3px!important;min-width:28px!important;min-height:3px!important;max-width:28px!important;max-height:3px!important;margin:0!important;padding:0!important;border:0!important;border-radius:2px!important;background:#fff!important;transform:none!important}
+  .forgepc-unified-mobile-nav{top:67px!important;max-height:calc(100vh - 77px)!important}
+}
+</style>
+
+<style id="fp-contact-header-exact-pc-validated-v2621">
+@media (max-width:900px){
+ body.contact-page .site-header .logo{width:98px!important;max-width:98px!important;min-width:0!important;height:52px!important;max-height:52px!important;object-fit:contain!important}
+ body.contact-page .site-header .menu{display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:5px!important;font-size:0!important;width:42px!important;height:42px!important;min-width:42px!important;min-height:42px!important;max-width:42px!important;max-height:42px!important;padding:0!important;margin-left:auto!important;border:1px solid #4a565a!important;border-radius:6px!important;background:transparent!important}
+ body.contact-page .site-header .menu:before,body.contact-page .site-header .menu:after{content:none!important;display:none!important}
+ body.contact-page .site-header .menu span{display:block!important;width:28px!important;height:3px!important;min-height:3px!important;background:#fff!important;border:0!important;border-radius:2px!important;margin:0!important;padding:0!important;position:static!important;transform:none!important}
+}
+</style>
+
+<style id="fp-contact-header-final-from-pc-v2622">
+@media(max-width:700px){
+ body.contact-page .site-header.fp-common-header, body.contact-page .forgepc-unified-header{height:67px!important;min-height:67px!important;max-height:67px!important;padding:0!important}
+ body.contact-page .site-header.fp-common-header .nav, body.contact-page .forgepc-unified-header .shell-nav{height:67px!important;min-height:67px!important;max-height:67px!important;width:100%!important;max-width:520px!important;margin:0 auto!important;padding:0 17px!important;display:flex!important;align-items:center!important;justify-content:space-between!important}
+ body.contact-page .site-header.fp-common-header .brand-link, body.contact-page .forgepc-unified-header .brand-link{height:67px!important;min-height:67px!important;max-height:67px!important;margin:0!important;padding:0!important}
+ body.contact-page .site-header.fp-common-header .logo, body.contact-page .forgepc-unified-header .logo{width:122px!important;min-width:122px!important;max-width:122px!important;height:56px!important;max-height:56px!important;margin:0!important;padding:0!important;object-fit:contain!important}
+ body.contact-page .site-header.fp-common-header .menu, body.contact-page .forgepc-unified-header .menu{display:flex!important;width:42px!important;height:42px!important;min-width:42px!important;min-height:42px!important;max-width:42px!important;max-height:42px!important;margin-left:auto!important;padding:0!important;gap:5px!important;border:1px solid #42545b!important;border-radius:8px!important;background:#071419!important;align-items:center!important;justify-content:center!important;flex-direction:column!important}
+ body.contact-page .site-header.fp-common-header .menu::before,body.contact-page .site-header.fp-common-header .menu::after,body.contact-page .forgepc-unified-header .menu::before,body.contact-page .forgepc-unified-header .menu::after{content:none!important;display:none!important}
+ body.contact-page .site-header.fp-common-header .menu-bar,body.contact-page .forgepc-unified-header .menu-bar{display:block!important;position:static!important;width:28px!important;height:3px!important;min-width:28px!important;min-height:3px!important;max-width:28px!important;max-height:3px!important;margin:0!important;padding:0!important;border:0!important;border-radius:3px!important;background:#fff!important;transform:none!important}
+}
+</style>
+<link href="Assets/forgepc-unified-shell.css?v=87" rel="stylesheet"/>
+<script defer src="Assets/forgepc-unified-shell.js?v=87"></script>
+</head>
+<body class="contact-page fp-index-shell-copy" data-mobile-page="contact"><header class="site-header fp-common-header"><div class="container nav"><a aria-label="ForgePC Mauricie" class="brand-link" href="index.html"><img alt="ForgePC Mauricie" class="logo" src="Assets/forgepc-logo-web.png"/></a><nav aria-label="Navigation principale" class="navlinks"><a href="index.html">Accueil</a><a href="services.html">Services</a><a href="inventaire.html">Inventaire</a><a href="a-propos.html">À propos</a><a href="contact.html">Contact</a></nav><div class="nav-location"><span>Shawinigan et<br/>toute la Mauricie</span></div><button aria-expanded="false" aria-label="Ouvrir le menu" class="menu" type="button"><span class="menu-bar"></span><span class="menu-bar"></span><span class="menu-bar"></span></button></div></header>
+<section class="hero">
+<div class="wrap">
+<div class="kicker"><span class="fa"></span> NOUS CONTACTER</div>
+<h1>UNE QUESTION ?<br/>ON EST LÀ <span>POUR VOUS.</span></h1>
+<p>Que ce soit pour une question générale, une demande d'information ou tout autre sujet, n'hésitez pas à nous écrire. Nous vous répondrons dans les plus brefs délais.</p>
+<div class="points">
+<div class="point"><span class="ico fa"></span>Réponse rapide</div>
+<div class="point"><span class="ico fa"></span>Approche humaine</div>
+<div class="point"><span class="ico fa"></span>Service fiable</div>
+<div class="point"><span class="ico fa"></span>Informatique plus responsable</div>
+</div>
+</div>
+</section>
+<main class="wrap content">
+<aside class="card">
+<div class="contact-item">
+<div class="contact-label"><span class="contact-ico fa"></span> Par courriel</div>
+<div class="contact-value">info@forgepcmauricie.ca</div>
+<div class="contact-note">Pour toute question générale, demande d'information ou autre sujet.</div>
+</div>
+<div class="contact-item">
+<div class="contact-label"><span class="contact-ico fa"></span> Par téléphone / SMS</div>
+<div class="contact-value">819-944-7418</div>
+<div class="contact-note">Appelez-nous ou envoyez-nous un SMS. Nous vous répondrons rapidement.</div>
+<div class="actions">
+<a class="btn primary" href="tel:+18199447418"><span class="fa"></span> Appeler</a>
+<a class="btn" href="sms:+18199447418"><span class="fa"></span> Envoyer un SMS</a>
+</div>
+</div>
+<div class="contact-item">
+<div class="contact-label"><span class="contact-ico fa"></span> Notre région</div>
+<div class="contact-value">Shawinigan et toute la Mauricie</div>
+<div class="contact-note">Une entreprise locale, proche de vous.</div>
+</div>
+<div aria-hidden="true" class="desktop-contact-promo"><span>Plus que des ordinateurs.<br/>Des solutions.</span></div>
+</aside>
+<section class="card">
+<h2><span class="form-ico fa"></span> Formulaire de contact</h2>
+<form action="https://formsubmit.co/info@forgepcmauricie.ca" enctype="multipart/form-data" method="POST">
+<input aria-hidden="true" hidden="" name="_subject" style="display:none!important" type="hidden" value="Demande de contact — ForgePC Mauricie"/>
+<input aria-hidden="true" hidden="" name="_captcha" style="display:none!important" type="hidden" value="false"/>
+<div class="row">
+<div class="field">
+<label for="nom">Nom complet <span class="req">*</span></label>
+<input id="nom" name="Nom" placeholder="Votre nom" required="" type="text"/>
+</div>
+<div class="field">
+<label for="courriel">Courriel <span class="req">*</span></label>
+<input id="courriel" name="Courriel" placeholder="votre@courriel.com" required="" type="email"/>
+</div>
+</div>
+<div class="field">
+<label for="sujet">Sujet <span class="req">*</span></label>
+<select id="sujet" name="Sujet" required="">
+<option value="">Sélectionnez un sujet</option>
+<option>Question générale</option>
+<option>Information sur un PC</option>
+<option>Question sur un service</option>
+<option>Demande d'information</option>
+<option>Partenariat / entreprise</option>
+<option>Autre</option>
+</select>
+</div>
+<div class="field">
+<label for="message">Message <span class="req">*</span></label>
+<textarea id="message" maxlength="1000" name="Message" placeholder="Écrivez votre message ici..." required=""></textarea>
+<div class="counter"><span id="count">0</span> / 1000</div>
+</div>
+<div class="notice">ⓘ Nous vous répondrons dans les plus brefs délais.<br/>Pour un rendez-vous (réparation, mise à niveau ou service à domicile), utilisez plutôt la fiche de rendez-vous appropriée.</div>
+<div class="send">
+<div class="privacy">🔒 Vos informations sont confidentielles.</div>
+<button class="cta" style="border:0;color:white;cursor:pointer" type="submit">Envoyer mon message →</button>
+</div>
+</form>
+</section>
+</main>
+<div aria-hidden="true" class="index-footer-desktop-copy"><img alt="" src="Assets/index-footer-approved-2x.png?v=2"/></div>
+<div class="legacy-footer-mobile-only"><footer class="fp-common-footer" id="forgepc-footer"><div class="fp-wrap"><div class="fp-main"><img alt="ForgePC Mauricie" class="fp-logo" src="Assets/forgepc-logo-web.png"/><div class="fp-tag">Votre technologie, notre expertise.</div><div aria-label="Réseaux sociaux" class="fp-social"><span class="social-circle">f</span><span class="social-circle instagram"><svg aria-hidden="true" class="ig-icon" viewbox="0 0 24 24"><rect fill="none" height="17.6" rx="5" ry="5" stroke="currentColor" stroke-width="2" width="17.6" x="3.2" y="3.2"></rect><circle cx="12" cy="12" fill="none" r="4.1" stroke="currentColor" stroke-width="2"></circle><circle cx="17.4" cy="6.7" fill="currentColor" r="1.15"></circle></svg></span></div><div class="fp-contact"><span>📍 Shawinigan et toute la Mauricie</span><span>☎ 819-944-7418</span><span>✉ info@forgepcmauricie.ca</span></div></div><div class="fp-bottom"><span>© 2026 ForgePC Mauricie. Tous droits réservés.</span><span>Politique de confidentialité   |   Mentions légales</span></div></div></footer></div><script>
+const message=document.getElementById('message'), count=document.getElementById('count');
+message.addEventListener('input',()=>count.textContent=message.value.length);
+</script>
+<script src="/Assets/site.js"></script>
+</body>
+</html>
+<style id="fp-contact-desktop-fullscale-v2623">
+@media (min-width:901px){
+ body.contact-page > section.hero{height:420px!important;min-height:420px!important;padding:42px 0 24px!important}
+ body.contact-page > section.hero .wrap{width:calc(100% - 120px)!important;max-width:1440px!important}
+ body.contact-page .hero .kicker{font-size:22px!important;max-width:560px!important}
+ body.contact-page .hero h1{font-size:48px!important;max-width:610px!important;margin:12px 0 18px!important}
+ body.contact-page .hero p{font-size:20px!important;line-height:1.45!important;max-width:610px!important}
+ body.contact-page .hero .points{gap:32px!important;padding:0 28px!important}
+ body.contact-page .hero .point{font-size:16px!important;gap:12px!important}
+ body.contact-page .hero .point .ico{font-size:38px!important}
+ body.contact-page > main.wrap.content{width:calc(100% - 120px)!important;max-width:1440px!important;gap:24px!important;padding:24px 0 30px!important}
+ body.contact-page > main.wrap.content > aside.card{padding:30px 30px 0!important}
+ body.contact-page > main.wrap.content > section.card{padding:32px 36px!important}
+ body.contact-page .contact-item{padding:0 0 24px 76px!important;margin:0 0 24px!important;min-height:108px!important}
+ body.contact-page .contact-label{font-size:20px!important;margin-bottom:7px!important}
+ body.contact-page .contact-value{font-size:23px!important}
+ body.contact-page .contact-note{font-size:17px!important;line-height:1.4!important;margin-top:9px!important}
+ body.contact-page .contact-ico{width:52px!important;font-size:44px!important}
+ body.contact-page .actions{gap:12px!important;margin-top:14px!important}
+ body.contact-page .actions .btn{min-height:52px!important;font-size:15px!important;padding:0 12px!important}
+ body.contact-page .desktop-contact-promo{height:180px!important;margin-top:12px!important}
+ body.contact-page main h2{font-size:30px!important;margin-bottom:25px!important}
+ body.contact-page main h2 .form-ico{font-size:31px!important}
+ body.contact-page label{font-size:17px!important;margin-bottom:8px!important}
+ body.contact-page input:not([type=hidden]),body.contact-page select{height:52px!important;font-size:17px!important;padding:10px 14px!important}
+ body.contact-page textarea{height:150px!important;min-height:150px!important;font-size:17px!important;padding:13px 14px!important}
+ body.contact-page .field{margin-bottom:17px!important}
+ body.contact-page .notice{font-size:14px!important;line-height:1.4!important;padding:14px 16px 14px 52px!important}
+ body.contact-page .privacy{font-size:14px!important}
+ body.contact-page .send button.cta{min-height:54px!important;font-size:16px!important;padding:0 26px!important}
+}
+</style>
