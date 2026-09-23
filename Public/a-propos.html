@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+
+<html lang="fr-CA">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>À propos | ForgePC Mauricie</title>
+<meta content="L'histoire, les valeurs et la philosophie de ForgePC Mauricie." name="description"/>
+<link href="Assets/forgepc.css" rel="stylesheet"/>
+<style>
+:root{--black:#02090b;--panel:#061114;--line:#26373c;--orange:#ff5a00;--white:#f5f5f2;--muted:#cfd4d2;--max:1180px}
+*{box-sizing:border-box}html,body{margin:0;overflow-x:hidden;background:var(--black);color:var(--white);font-family:Arial,Helvetica,sans-serif}a{color:inherit;text-decoration:none}.container{width:min(calc(100% - 36px),var(--max));margin:auto}
+.about-main{background:var(--black)}
+.mobile-location{display:none}
+.about-hero{border-bottom:1px solid #5b260d;background:#02090b}
+.about-hero-inner{min-height:225px;display:grid;grid-template-columns:42% 58%;align-items:stretch}
+.about-hero-copy{padding:42px 28px 30px 12px;align-self:center}
+.about-kicker{color:var(--orange);font-size:14px;font-weight:900;text-transform:uppercase;margin-bottom:10px}
+.about-hero h1{margin:0;font-size:34px;line-height:1.02;letter-spacing:.7px;text-transform:uppercase}.about-hero h1 span{color:var(--orange)}
+.about-rule{width:56px;height:3px;background:var(--orange);margin:14px 0 14px}
+.about-hero-sub{margin:0;font-size:16px;color:#ecefee}
+.about-hero-image{background:linear-gradient(90deg,rgba(2,9,11,.05),rgba(2,9,11,.12)),url('Assets/apropos-hero-maquette-2x.jpg') center/cover no-repeat;min-height:225px}
+.about-story{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--line)}
+.story-copy{padding:24px 44px 24px 48px}.eyebrow{color:var(--orange);font-size:13px;font-weight:900;text-transform:uppercase}.story-copy h2{font-size:31px;line-height:1.1;margin:8px 0 14px}.story-copy h2 span{color:var(--orange)}.story-copy p{font-size:14px;line-height:1.5;color:var(--muted);margin:0 0 12px}
+.story-image{min-height:340px;background:url('Assets/apropos-famille-maquette.jpg') center/cover no-repeat}
+.values{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--line)}.value{padding:22px 46px;min-height:215px}.value+.value{border-left:1px solid var(--line)}.value-head{display:flex;align-items:center;gap:18px}.value-icon{font-size:38px;color:var(--orange);line-height:1}.value h3{margin:0;font-size:20px}.value h3 span{color:var(--orange)}.value p{font-size:13px;line-height:1.48;color:var(--muted);margin:12px 0 0}
+.about-bottom{display:grid;grid-template-columns:1.05fr .95fr;gap:12px;padding:14px 12px}.philosophy,.quote{border:1px solid var(--line);background:#030d10}.philosophy{padding:18px 22px}.philosophy h2{font-size:28px;margin:0 0 16px}.philosophy h2 span{color:var(--orange)}.philo-grid{display:grid;grid-template-columns:repeat(3,1fr)}.philo{text-align:center;padding:8px 12px;border-right:1px solid var(--line)}.philo:last-child{border-right:0}.philo-icon{font-size:34px}.philo strong{display:block;margin:8px 0 4px;font-size:16px}.philo small{font-size:13px;line-height:1.3;color:var(--muted)}
+.quote{position:relative;overflow:hidden;padding:28px 52px 24px 58px;display:flex;flex-direction:column;justify-content:center;background:linear-gradient(90deg,rgba(2,9,11,.96),rgba(2,9,11,.82)),none right center/48% 100% no-repeat}.quote-mark{color:var(--orange);font-size:54px;font-weight:900;line-height:.7}.quote p{font-size:14px;line-height:1.55;font-style:italic;color:#eee;margin:12px 0 10px}.signature{font-size:19px;font-style:italic;text-align:center}.signature:after{content:"";display:block;width:135px;height:3px;background:var(--orange);margin:5px auto 0;transform:rotate(-4deg)}
+.site-footer{background:#02090b;border-top:1px solid var(--line)}
+@media(max-width:800px){
+ .container{width:min(calc(100% - 20px),680px)}
+ .site-header{height:70px}.site-header .logo{width:132px;height:64px}.navlinks,.nav-location{display:none!important}.menu{display:flex!important;align-items:center;justify-content:center}
+ .navlinks.mobile-only{display:none}.navlinks.mobile-only.open{display:flex;position:fixed;left:10px;right:10px;top:70px;width:auto;height:auto;z-index:5000;flex-direction:column;align-items:stretch;gap:0;margin:0;padding:6px;background:#02090b;border:1px solid #2d4147;border-radius:6px;box-shadow:0 10px 30px rgba(0,0,0,.55)}.navlinks.mobile-only.open a{height:auto;min-height:43px;padding:10px;border-bottom:1px solid #293a40}.navlinks.mobile-only.open a:last-child{border-bottom:0}
+ .mobile-location{display:flex;height:54px;align-items:center;padding:0 48px;border-bottom:1px solid #24353a;background:#02090b;font-size:18px;gap:8px}
+ .about-hero-inner{min-height:0;display:grid;grid-template-columns:1fr;position:relative}
+ .about-hero-copy{padding:22px 28px 18px 24px;z-index:2;background:linear-gradient(90deg,rgba(2,9,11,.96),rgba(2,9,11,.58) 75%,rgba(2,9,11,.12));}
+ .about-kicker{font-size:13px;margin-bottom:7px}.about-hero h1{font-size:28px;max-width:290px}.about-rule{margin:10px 0 10px;width:46px}.about-hero-sub{font-size:13px;line-height:1.35;max-width:280px}
+ .about-hero-image{position:absolute;inset:0 0 0 35%;min-height:0;background-position:center right;opacity:.92}
+ .about-hero{min-height:170px}
+ .about-story{display:flex;flex-direction:column}
+ .story-image{order:-1;min-height:0;height:174px;background-size:cover;background-position:center 47%}
+ .story-copy{padding:16px 24px 18px}.eyebrow{font-size:12px}.story-copy h2{font-size:26px;line-height:1.08;margin:7px 0 11px}.story-copy p{font-size:13px;line-height:1.42;margin-bottom:10px}
+ .values{display:block;border-bottom:1px solid var(--line)}
+ .value{min-height:0;padding:0;border-top:1px solid var(--line)!important}.value+.value{border-left:0}
+ .value summary{list-style:none;display:flex;align-items:center;gap:12px;padding:14px 18px;cursor:pointer;font-weight:900}.value summary::-webkit-details-marker{display:none}.value summary:after{content:'⌄';margin-left:auto;color:#f5f5f2;font-size:20px;transform:translateY(-2px)}.value[open] summary:after{content:'⌃'}
+ .value-icon{font-size:29px;min-width:34px;text-align:center}.value h3{font-size:16px}.value .value-body{padding:0 18px 16px 64px}.value p{font-size:12px;line-height:1.42;margin:0 0 10px}
+ .about-bottom{display:block;padding:0}
+ .philosophy{border-left:0;border-right:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:0}
+ .philosophy summary{list-style:none;display:flex;align-items:center;gap:10px;padding:14px 18px;font-weight:900;font-size:16px;cursor:pointer}.philosophy summary::-webkit-details-marker{display:none}.philosophy summary:after{content:'⌄';margin-left:auto;font-size:20px}.philosophy[open] summary:after{content:'⌃'}
+ .philosophy h2{font-size:16px;margin:0}.philo-grid{padding:8px 12px 16px;grid-template-columns:repeat(3,1fr)}.philo{padding:6px 8px}.philo-icon{font-size:27px}.philo strong{font-size:13px}.philo small{font-size:10px}
+ .quote{margin:0;border-left:0;border-right:0;padding:18px 24px 20px 26px;min-height:180px;background:linear-gradient(90deg,rgba(2,9,11,.97),rgba(2,9,11,.88)),none right center/42% 100% no-repeat}.quote-mark{font-size:44px}.quote p{font-size:12px;line-height:1.5;margin:8px 0 8px}.signature{font-size:17px}.signature:after{width:115px}
+ .footer-main{min-height:0;padding:12px 0;display:grid!important;grid-template-columns:1fr auto;grid-template-areas:'logo social' 'contact contact';gap:7px 12px;text-align:left}.footer-logo{grid-area:logo;width:116px;height:52px;margin:0}.footer-tag{display:none}.footer-social{grid-area:social;align-self:center;justify-self:end;letter-spacing:8px;font-size:21px}.footer-contact{grid-area:contact;margin:0;display:flex;justify-content:flex-start;gap:5px 10px;flex-wrap:wrap;font-size:9px}.footer-bottom{min-height:42px;padding:6px 0;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;text-align:left;font-size:8.5px}
+}
+@media(max-width:480px){.mobile-location{padding:0 48px;font-size:17px}.about-hero h1{font-size:27px}.story-image{height:166px}.story-copy{padding-left:20px;padding-right:20px}.footer-bottom{justify-content:center;text-align:center}}
+/* PASS 2 — ajustements mobiles selon la maquette finale approuvée */
+@media(max-width:800px){
+  .about-hero{min-height:158px}
+  .about-hero-copy{padding:18px 24px 15px 24px}
+  .about-kicker{font-size:12px;margin-bottom:6px}
+  .about-hero h1{font-size:26px;line-height:1.01;max-width:270px}
+  .about-rule{width:44px;height:2px;margin:9px 0}
+  .about-hero-sub{font-size:12px;max-width:265px}
+  .story-image{height:160px;background-position:center 24%}
+  .story-copy{padding:14px 20px 16px}
+  .eyebrow{font-size:11px}
+  .story-copy h2{font-size:24px;margin:6px 0 10px}
+  .story-copy p{font-size:12px;line-height:1.4;margin:0 0 9px}
+  .value summary{padding:12px 16px;gap:10px}
+  .value-icon{font-size:25px;min-width:32px}
+  .value h3{font-size:15px}
+  .philosophy summary{padding:12px 16px;font-size:15px}
+  .philosophy h2{font-size:15px}
+  .quote{min-height:166px;padding:16px 22px 18px 24px}
+  .quote p{font-size:11.5px;line-height:1.48;max-width:330px}
+  .footer-logo{width:112px;height:50px}
+  .footer-social{font-size:24px;letter-spacing:10px}
+  .footer-contact{font-size:8.7px}
+}
+@media(max-width:480px){
+  .about-hero h1{font-size:25px}
+  .story-image{height:154px;background-position:center 22%}
+}
+
+
+/* CORRECTION FINALE MOBILE — cadrage photo familiale selon maquette */
+@media(max-width:800px){
+  .story-image{height:210px!important;background-size:cover!important;background-position:center 32%!important;}
+}
+@media(max-width:480px){
+  .story-image{height:205px!important;background-position:center 32%!important;}
+}
+
+/* FINAL — photo famille sans recadrage mobile */
+@media(max-width:800px){
+  .story-image{
+    width:100%!important;
+    height:auto!important;
+    aspect-ratio:550 / 395!important;
+    background-image:url('Assets/apropos-famille-maquette.jpg')!important;
+    background-size:100% auto!important;
+    background-repeat:no-repeat!important;
+    background-position:center!important;
+  }
+}
+
+/* V21 — netteté hero + pictogrammes conformes à la maquette */
+.about-hero-image{image-rendering:auto;background-image:linear-gradient(90deg,rgba(2,9,11,.02),rgba(2,9,11,.06)),url('Assets/apropos-hero-maquette-2x.jpg')!important}
+.about-svg-icon{stroke-width:4!important;overflow:visible}
+.value-icon,.philo-icon,.philo-title-icon{font-family:Arial,Helvetica,sans-serif!important}
+.value-icon::before,.philo-icon::before,.philo-title-icon::before{content:none!important}
+@media(min-width:801px){.value-icon .about-svg-icon{width:42px;height:42px}.philo-title-icon .about-svg-icon{width:35px;height:35px}.philo-icon .about-svg-icon{width:32px;height:32px}}
+
+@media (min-width:901px){
+  /* À propos V2 — finitions desktop ciblées */
+  .about-hero-image{background-position:right center!important;background-size:auto 100%!important}
+  .about-hero-copy{width:43%!important}
+  .about-hero:before{background:linear-gradient(90deg,#02090b 0%,#02090b 30%,rgba(2,9,11,.95) 38%,rgba(2,9,11,.58) 47%,rgba(2,9,11,.10) 57%,rgba(2,9,11,0) 66%)!important}
+  .story-copy{padding-top:27px!important;padding-bottom:22px!important}
+  .story-copy h2{font-size:33px!important;line-height:1.05!important;margin-bottom:13px!important}
+  .story-copy p{line-height:1.43!important;margin-bottom:9px!important}
+  .story-image{height:382px!important;min-height:382px!important;background-size:contain!important;background-position:center center!important;background-color:#02090b!important}
+  .values{align-items:stretch!important}
+  .value{height:100%!important;min-height:210px!important}
+  .value-icon{width:52px!important;height:52px!important;min-width:52px!important}
+  .philosophy,.quote{height:auto!important;min-height:218px!important}
+  .philo-grid{height:132px!important}
+  .philo-icon{height:44px!important}
+  .quote{padding:22px 43% 20px 38px!important;background-image:linear-gradient(90deg,rgba(2,9,11,.98) 0%,rgba(2,9,11,.94) 35%,rgba(2,9,11,.66) 55%,rgba(2,9,11,.18) 76%,rgba(2,9,11,.03) 100%),url('Assets/apropos-quote-photo-clean-crop.jpg')!important;background-repeat:no-repeat!important;background-position:center,right center!important;background-size:100% 100%,auto 100%!important}
+}
+</style>
+<link href="Assets/footer-shared.css" rel="stylesheet"/>
+<link href="Assets/mobile-approved.css" rel="stylesheet"/>
+<script defer="" src="Assets/mobile-approved.js"></script>
+<link href="Assets/mobile-header-uniform.css?v=1" rel="stylesheet"/>
+<style>
+/* DESKTOP FINAL — alignement sur la maquette, sans toucher au mobile */
+@media (min-width:801px){
+  :root{--max:1220px}
+  .site-header .container{width:min(calc(100% - 36px),1220px)}
+  .about-hero-inner{min-height:265px;grid-template-columns:40% 60%}
+  .about-hero-copy{padding:46px 34px 34px 48px}
+  .about-kicker{font-size:15px}.about-hero h1{font-size:40px;line-height:1.02}
+  .about-hero-sub{font-size:17px}.about-hero-image{min-height:265px}
+  .about-story{grid-template-columns:52% 48%}
+  .story-copy{padding:25px 42px 20px 66px}
+  .story-copy h2{font-size:31px}.story-copy p{font-size:14px;line-height:1.42}
+  .story-image{min-height:330px}
+  .values{grid-template-columns:1fr 1fr}
+  .value{display:block!important;min-height:210px;padding:22px 48px}
+  .value summary{list-style:none;pointer-events:none}.value summary::-webkit-details-marker{display:none}
+  .value .value-body{display:block!important}
+  .value-head{gap:14px}.value summary{display:flex;align-items:center;gap:18px}
+  .value-icon{font-size:38px}.value h3{font-size:20px}.value p{font-size:13px;line-height:1.48}
+  .about-bottom{grid-template-columns:1.05fr .95fr;gap:12px;padding:14px 18px}
+  .philosophy{display:block!important;padding:18px 22px}
+  .philosophy summary{list-style:none;pointer-events:none}.philosophy summary::-webkit-details-marker{display:none}
+  .philosophy .philo-grid{display:grid!important}
+  .philosophy h2{font-size:28px}.quote{min-height:190px}
+}
+</style>
+<link href="Assets/qa-owner-fixes.css?v=2" rel="stylesheet"/>
+<link href="Assets/index-shell-copy.css?v=2" rel="stylesheet"/>
+<style id="about-desktop-v14-final">
+@media (min-width:801px){
+  .about-main .story-copy,.about-main .story-copy *,.about-main .values,.about-main .values *,.about-main .about-bottom,.about-main .about-bottom *{visibility:visible!important;opacity:1!important;}
+  .about-main .values{display:grid!important;grid-template-columns:1fr 1fr!important;}
+  .about-main .value{display:block!important;min-height:210px!important;padding:22px 48px!important;}
+  .about-main .value-head{display:flex!important;align-items:center!important;gap:18px!important;}
+  .about-main .value-body{display:block!important;padding:8px 0 0 0!important;}
+  .about-main .value-body p{display:block!important;color:#b9c1c3!important;font-size:13px!important;line-height:1.48!important;}
+  .about-main .philosophy{display:block!important;}
+  .about-main .philosophy-head{display:block!important;}
+  .about-main .philo-grid{display:grid!important;grid-template-columns:repeat(3,1fr)!important;}
+  .about-main .quote{background:#030d10!important;min-height:190px!important;}
+  .about-main .quote p{display:block!important;color:#eee!important;}
+}
+</style>
+<style id="about-html-final-v20">
+.about-pixel-page,.index-footer-desktop-copy,.legacy-footer-mobile-only{display:none!important}
+body.about-page>main.about-main{display:block!important}
+@media(min-width:901px){
+  .about-main{width:100%;max-width:none;margin:0}
+  .about-hero .container{width:100%;max-width:none}
+  .about-hero-inner{min-height:265px;grid-template-columns:40% 60%}
+  .about-hero-copy{padding-left:max(66px,calc((100vw - 1220px)/2 + 48px))}
+  .about-story{grid-template-columns:52% 48%}
+  .story-copy{padding-left:max(66px,calc((100vw - 1220px)/2 + 48px));padding-right:42px}
+  .story-image{min-height:420px;background-image:url('Assets/apropos-famille-maquette-2x.jpg');background-size:cover;background-position:center}
+  .values{grid-template-columns:1fr 1fr}
+  .value{padding-left:max(48px,calc((100vw - 1220px)/2 + 48px));padding-right:48px}
+  .value:nth-child(2){padding-left:48px;padding-right:max(48px,calc((100vw - 1220px)/2 + 48px))}
+  .about-bottom{padding:14px max(18px,calc((100vw - 1220px)/2 + 18px));grid-template-columns:1.05fr .95fr}
+  details.value>summary,details.philosophy>summary{pointer-events:none}
+  details.value>summary:after,details.philosophy>summary:after{display:none!important}
+  .quote{background:linear-gradient(90deg,rgba(2,9,11,.98) 0%,rgba(2,9,11,.90) 58%,rgba(2,9,11,.30) 100%),url('Assets/apropos-quote-photo-clean-crop.jpg') right center/42% 100% no-repeat!important}
+}
+@media(max-width:900px){
+  .mobile-location{display:none!important}
+  .about-main{padding-top:0}
+  .about-story{display:flex;flex-direction:column}
+  .story-image{order:-1}
+  details.value,details.philosophy{display:block}
+  details.value>summary,details.philosophy>summary{list-style:none}
+  details.value>summary::-webkit-details-marker,details.philosophy>summary::-webkit-details-marker{display:none}
+  .quote{background:linear-gradient(90deg,rgba(2,9,11,.97),rgba(2,9,11,.82)),url('Assets/apropos-quote-photo-clean-crop.jpg') right center/cover no-repeat!important}
+}
+</style>
+<style id="about-v10-canonical-fixes">
+/* À PROPOS V13 — correction ciblée V12 → V13 : fondu porté par le conteneur hero uniquement */
+
+/* HERO : une seule couche photo sur toute la largeur; fondu standard superposé, sans mask-image. */
+.about-hero{position:relative;overflow:hidden;background:#02090b;}
+.about-hero-inner{position:relative;}
+.about-hero-copy{position:relative;z-index:3;background:transparent!important;}
+.about-hero-image{
+  position:absolute!important;
+  inset:0!important;
+  width:auto!important;height:auto!important;min-height:0!important;
+  background-image:url('Assets/apropos-hero-maquette-2x.jpg')!important;
+  background-repeat:no-repeat!important;
+  background-position:right center!important;
+  background-size:86% auto!important;
+  opacity:1!important;z-index:0!important;
+  -webkit-mask-image:none!important;mask-image:none!important;
+}
+.about-hero-image::before,.about-hero-image::after{content:none!important;display:none!important;}
+.about-hero::before{
+  content:""!important;
+  display:block!important;
+  position:absolute!important;
+  left:10%!important;top:0!important;bottom:0!important;
+  width:70%!important;
+  z-index:2!important;
+  pointer-events:none!important;
+  background:linear-gradient(90deg,#02090b 0%,#02090b 24%,rgba(2,9,11,.995) 32%,rgba(2,9,11,.98) 40%,rgba(2,9,11,.93) 49%,rgba(2,9,11,.82) 59%,rgba(2,9,11,.64) 69%,rgba(2,9,11,.42) 79%,rgba(2,9,11,.22) 88%,rgba(2,9,11,.08) 95%,rgba(2,9,11,0) 100%)!important;
+}
+
+/* Photo père-fille : montrer davantage de la composition originale, sans étirement. */
+.story-image{
+  background-image:url('Assets/apropos-famille-maquette-2x.jpg')!important;
+  background-repeat:no-repeat!important;
+  background-size:100% auto!important;
+  background-position:center center!important;
+}
+
+/* Pictogrammes approuvés : conserver les fichiers et une zone de sécurité intérieure. */
+.value-icon,.philo-icon,.philo-title-icon{overflow:visible!important;box-sizing:border-box!important;display:flex!important;align-items:center!important;justify-content:center!important;}
+.value-icon{width:62px!important;height:62px!important;min-width:62px!important;padding:11px!important;color:var(--orange)!important;}
+.philo-icon{height:50px!important;padding:10px!important;color:#f4f6f7!important;}
+.philo-title-icon{width:50px!important;height:50px!important;padding:10px!important;color:#f4f6f7!important;}
+.value-icon img,.philo-icon img,.philo-title-icon img{display:block!important;width:100%!important;height:100%!important;max-width:100%!important;max-height:100%!important;object-fit:contain!important;object-position:center!important;margin:0!important;padding:0!important;box-sizing:border-box!important;}
+
+/* Citation : photo propre unique; citation et signature uniquement en HTML. */
+.quote{position:relative!important;overflow:hidden!important;background-color:#030d10!important;background-image:linear-gradient(90deg,rgba(2,9,11,.98) 0%,rgba(2,9,11,.92) 38%,rgba(2,9,11,.68) 58%,rgba(2,9,11,.25) 78%,rgba(2,9,11,.08) 100%),url('Assets/apropos-quote-photo-clean-crop.jpg')!important;background-repeat:no-repeat,no-repeat!important;background-position:center,right center!important;background-size:100% 100%,cover!important;}
+.quote::before,.quote::after{content:none!important;background:none!important;}
+.quote>img{display:none!important;}
+.quote .quote-mark,.quote p,.quote .signature{position:relative!important;z-index:2!important;}
+
+@media(max-width:900px){
+  .story-image{background-image:url('Assets/apropos-famille-maquette.jpg')!important;background-size:100% auto!important;background-position:center center!important;}
+}
+@media(max-width:800px){
+  .about-hero-image{inset:0!important;background-position:right center!important;background-size:auto 100%!important;-webkit-mask-image:none!important;mask-image:none!important;}
+  .about-hero::before{left:0!important;width:78%!important;background:linear-gradient(90deg,#02090b 0%,#02090b 28%,rgba(2,9,11,.96) 38%,rgba(2,9,11,.78) 50%,rgba(2,9,11,.52) 62%,rgba(2,9,11,.28) 73%,rgba(2,9,11,.10) 86%,rgba(2,9,11,0) 100%)!important;}
+  .story-image{background-size:100% auto!important;background-position:center center!important;}
+  .value-icon{width:50px!important;height:50px!important;min-width:50px!important;padding:9px!important;}
+  .philo-icon{height:42px!important;padding:8px!important;}.philo-title-icon{width:42px!important;height:42px!important;padding:8px!important;}
+}
+</style>
+<style id="about-desktop-rebuild-v1">
+@media (min-width:901px){
+  body.about-page{background:#02090b!important}
+  body.about-page .mobile-only,body.about-page .mobile-location{display:none!important}
+
+  body.about-page>main.about-main{display:block!important;width:100%!important;max-width:none!important;margin:0!important;padding:0!important}
+  .about-hero{height:260px!important;min-height:260px!important;position:relative!important;overflow:hidden!important;border-bottom:1px solid #4b2a1b!important;background:#02090b!important}
+  .about-hero .container.about-hero-inner{width:100%!important;max-width:none!important;height:260px!important;min-height:260px!important;display:block!important;position:relative!important;margin:0!important}
+  .about-hero-copy{position:relative!important;z-index:4!important;width:45%!important;height:100%!important;padding:38px 24px 24px max(66px,calc((100vw - 1420px)/2 + 36px))!important;display:flex!important;flex-direction:column!important;justify-content:center!important;background:transparent!important}
+  .about-kicker{font-size:17px!important;letter-spacing:.6px!important;margin:0 0 8px!important;color:#ff5a00!important;font-weight:900!important}
+  .about-hero h1{font-size:42px!important;line-height:.98!important;letter-spacing:.5px!important;margin:0!important;max-width:420px!important}
+  .about-rule{width:62px!important;height:4px!important;margin:13px 0 12px!important;background:#ff5a00!important}
+  .about-hero-sub{font-size:17px!important;line-height:1.25!important;color:#f1f2f1!important;margin:0!important}
+  .about-hero-image{position:absolute!important;inset:0!important;z-index:1!important;width:100%!important;height:100%!important;background-image:url('Assets/apropos-hero-maquette-2x.jpg')!important;background-repeat:no-repeat!important;background-position:right center!important;background-size:auto 100%!important;opacity:1!important}
+  .about-hero:before{content:""!important;position:absolute!important;z-index:2!important;inset:0!important;background:linear-gradient(90deg,#02090b 0%,#02090b 31%,rgba(2,9,11,.96) 39%,rgba(2,9,11,.66) 48%,rgba(2,9,11,.16) 58%,rgba(2,9,11,0) 68%)!important;pointer-events:none!important}
+
+  .about-story{display:grid!important;grid-template-columns:50% 50%!important;min-height:382px!important;border-bottom:1px solid #26373c!important;background:#030d10!important}
+  .story-copy{padding:30px 48px 24px max(66px,calc((100vw - 1420px)/2 + 36px))!important;display:flex!important;flex-direction:column!important;justify-content:center!important}
+  .eyebrow{font-size:14px!important;letter-spacing:.4px!important;margin-bottom:6px!important}
+  .story-copy h2{font-size:34px!important;line-height:1.06!important;margin:4px 0 15px!important}
+  .story-copy p{font-size:13.5px!important;line-height:1.46!important;margin:0 0 10px!important;color:#c8cdcf!important;max-width:660px!important}
+  .story-image{min-height:382px!important;height:382px!important;background-color:#02090b!important;background-image:url('Assets/apropos-famille-maquette-2x.jpg')!important;background-repeat:no-repeat!important;background-size:contain!important;background-position:center center!important}
+
+  .values{display:grid!important;grid-template-columns:1fr 1fr!important;border-bottom:1px solid #26373c!important;background:#02090b!important}
+  .value{display:block!important;min-height:210px!important;padding:24px 48px 22px!important}
+  .value:first-child{padding-left:max(66px,calc((100vw - 1420px)/2 + 36px))!important}
+  .value:last-child{padding-right:max(66px,calc((100vw - 1420px)/2 + 36px))!important;border-left:1px solid #26373c!important}
+  .value summary{display:flex!important;align-items:center!important;gap:15px!important;pointer-events:none!important;list-style:none!important}
+  .value summary:after{display:none!important}
+  .value-icon{width:54px!important;height:54px!important;min-width:54px!important;padding:5px!important;display:flex!important;align-items:center!important;justify-content:center!important}
+  .value-icon img{width:100%!important;height:100%!important;object-fit:contain!important}
+  .value h3{font-size:21px!important;line-height:1.08!important}
+  .value-body{display:block!important;padding:5px 0 0!important}
+  .value-body p{font-size:13px!important;line-height:1.48!important;margin:9px 0 0!important;color:#c1c7c9!important}
+
+  .about-bottom{display:grid!important;grid-template-columns:1fr 1fr!important;gap:12px!important;padding:14px max(18px,calc((100vw - 1420px)/2 + 18px)) 16px!important;background:#02090b!important}
+  .philosophy,.quote{min-height:218px!important;height:auto!important;border:1px solid #26373c!important;background-color:#030d10!important}
+  .philosophy{display:block!important;padding:18px 22px!important}
+  .philosophy summary{display:block!important;pointer-events:none!important;list-style:none!important}
+  .philosophy summary:after{display:none!important}
+  .philosophy h2{display:flex!important;align-items:center!important;gap:8px!important;font-size:26px!important;line-height:1!important;margin:0 0 18px!important}
+  .philo-title-icon{width:38px!important;height:38px!important;padding:2px!important}
+  .philo-grid{display:grid!important;grid-template-columns:repeat(3,1fr)!important;height:120px!important}
+  .philo{display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;text-align:center!important;padding:4px 10px!important;border-right:1px solid #26373c!important}
+  .philo:last-child{border-right:0!important}
+  .philo-icon{height:42px!important;padding:4px!important;margin-bottom:4px!important}
+  .philo strong{font-size:16px!important;line-height:1.05!important;margin:3px 0!important}
+  .philo small{font-size:12px!important;line-height:1.22!important;color:#c9ced0!important}
+  .quote{padding:22px 46% 18px 38px!important;display:flex!important;flex-direction:column!important;justify-content:center!important;background-image:linear-gradient(90deg,rgba(2,9,11,.98) 0%,rgba(2,9,11,.92) 40%,rgba(2,9,11,.55) 62%,rgba(2,9,11,.08) 100%),url('Assets/apropos-quote-photo-clean-crop.jpg')!important;background-repeat:no-repeat!important;background-position:center,right center!important;background-size:100% 100%,auto 100%!important}
+  .quote-mark{font-size:50px!important;line-height:.6!important;color:#ff5a00!important}
+  .quote p{font-size:13px!important;line-height:1.42!important;margin:10px 0 7px!important;color:#f0f1f1!important}
+  .signature{font-size:18px!important;line-height:1.05!important;text-align:center!important;margin-left:20px!important}
+  .signature:after{width:125px!important;height:3px!important;margin-top:5px!important}
+
+}</style>
+<style id="about-mobile-common-v1">
+@media (max-width:900px){
+html,body{max-width:100%!important;overflow-x:hidden!important}
+body.about-page>nav.mobile-only{display:none!important;position:relative!important;z-index:999!important;width:100%!important;background:#06171d!important;border-bottom:1px solid #2b454e!important;padding:8px 14px 12px!important}
+body.about-page>nav.mobile-only.open{display:flex!important;flex-direction:column!important}
+body.about-page>nav.mobile-only a{display:block!important;padding:11px 8px!important;border-bottom:1px solid rgba(255,255,255,.08)!important;font-size:13px!important;font-weight:700!important}
+body.about-page>nav.mobile-only a:last-child{border-bottom:0!important}
+}
+@media (min-width:901px){body.about-page>nav.mobile-only{display:none!important}}</style>
+<style id="about-mobile-philosophy-row-fix">
+@media (max-width:900px){
+  body.about-page .philosophy > summary.philosophy-head{
+    display:flex!important;
+    align-items:center!important;
+  }
+  body.about-page .philosophy > summary.philosophy-head > h2{
+    display:flex!important;
+    align-items:center!important;
+    gap:10px!important;
+    margin:0!important;
+    line-height:1.1!important;
+    white-space:nowrap!important;
+  }
+  body.about-page .philosophy > summary.philosophy-head:after{
+    margin-left:auto!important;
+    align-self:center!important;
+    flex:0 0 auto!important;
+  }
+}
+</style>
+<style id="about-desktop-global-size-v7">
+@media (min-width:901px){
+  html,body,body.about-page{width:100%!important;max-width:none!important;margin:0!important;padding:0!important;zoom:1!important;}
+  body.about-page>main.about-main{width:100%!important;max-width:none!important;margin:0!important;padding:0!important;transform:none!important;}
+  body.about-page>main.about-main>section{width:100%!important;max-width:none!important;margin-left:0!important;margin-right:0!important;transform:none!important;}
+}
+</style>
+
+
+<style id="about-mobile-final-cleanup">
+@media (max-width:800px){
+  /* Hero mobile complet fourni : composition et textes déjà intégrés. */
+  body.about-page .about-hero{
+    height:auto!important;min-height:0!important;
+    aspect-ratio:1536/554!important;
+  }
+  body.about-page .about-hero .about-hero-inner{
+    width:100%!important;height:100%!important;min-height:0!important;
+  }
+  body.about-page .about-hero-copy{display:none!important;}
+  body.about-page .about-hero::before{content:none!important;display:none!important;}
+  body.about-page .about-hero-image{
+    inset:0!important;width:100%!important;height:100%!important;
+    background-image:url('Assets/apropos-hero-mobile-complet.png')!important;
+    background-position:center center!important;
+    background-size:100% 100%!important;
+    background-repeat:no-repeat!important;
+  }
+  body.about-page .about-hero-image::before{
+    content:none!important;display:none!important;
+  }
+  body.about-page .about-hero-image::after{
+    content:none!important;display:none!important;
+  }
+  /* Hamburger identique au composant mobile verrouillé. */
+  body.about-page .site-header .menu{
+    width:42px!important;height:42px!important;min-width:42px!important;min-height:42px!important;
+    padding:0!important;border:1px solid #42545b!important;border-radius:8px!important;
+    background:#071216!important;display:flex!important;flex-direction:column!important;
+    align-items:center!important;justify-content:center!important;gap:5px!important;font-size:0!important;
+  }
+  body.about-page .site-header .menu::before,
+  body.about-page .site-header .menu::after{content:none!important;display:none!important;}
+  body.about-page .site-header .menu .menu-bar{
+    display:block!important;width:28px!important;height:3px!important;min-width:28px!important;min-height:3px!important;
+    margin:0!important;padding:0!important;border:0!important;border-radius:2px!important;
+    background:#fff!important;position:static!important;transform:none!important;
+  }
+  /* Le header commun est injecté au chargement : grille fixe pour que les
+     trois traits gardent exactement la même largeur et le même axe. */
+  body.about-page .forgepc-unified-header .menu{
+    display:flex!important;flex-direction:column!important;
+    align-items:center!important;justify-content:center!important;gap:5px!important;
+    padding:0!important;box-sizing:border-box!important;
+  }
+  body.about-page .forgepc-unified-header .menu::before,
+  body.about-page .forgepc-unified-header .menu::after{
+    content:none!important;display:none!important;box-shadow:none!important;
+  }
+  body.about-page .forgepc-unified-header .menu .menu-bar{
+    display:block!important;width:28px!important;height:3px!important;
+    min-width:28px!important;max-width:28px!important;
+    min-height:3px!important;max-height:3px!important;
+    margin:0!important;padding:0!important;border:0!important;
+    border-radius:2px!important;background:#fff!important;
+    position:static!important;transform:none!important;
+    box-sizing:border-box!important;flex:0 0 3px!important;
+  }
+}
+</style>
+<link href="Assets/header-footer-uniform-final.css?v=1" rel="stylesheet"/>
+<style id="fp-header-final-uniform-v266">
+/* ForgePC — header commun final. Scope strict: header seulement. */
+.fp-common-header{position:relative!important;top:auto!important;z-index:1000!important;width:100%!important;background:#020d10!important;border-bottom:1px solid #23353b!important;box-sizing:border-box!important}
+.fp-common-header .nav{box-sizing:border-box!important}
+.fp-common-header .brand-link{display:flex!important;align-items:center!important;text-decoration:none!important}
+.fp-common-header .logo{display:block!important;object-fit:contain!important}
+.fp-common-header .menu{box-sizing:border-box!important;border:1px solid #31434b!important;border-radius:10px!important;background:#071419!important;align-items:center!important;justify-content:center!important;flex-direction:column!important;gap:6px!important;padding:0!important;overflow:hidden!important;font-size:0!important;line-height:0!important}
+.fp-common-header .menu::before,.fp-common-header .menu::after{content:none!important;display:none!important}
+.fp-common-header .menu .menu-bar{display:block!important;position:static!important;width:26px!important;height:3px!important;min-height:3px!important;background:#fff!important;border:0!important;border-radius:3px!important;margin:0!important;padding:0!important;transform:none!important}
+@media(max-width:900px){
+ .fp-common-header{height:122px!important;min-height:122px!important}
+ .fp-common-header .nav{height:122px!important;min-height:122px!important;width:100%!important;max-width:none!important;margin:0!important;padding:0 30px!important;display:flex!important;align-items:center!important;justify-content:space-between!important}
+ .fp-common-header .brand-link{height:100%!important}
+ .fp-common-header .logo{width:170px!important;height:auto!important;max-height:94px!important;margin:0!important}
+ .fp-common-header .navlinks,.fp-common-header .nav-location{display:none!important}
+ .fp-common-header .menu{display:flex!important;width:48px!important;height:48px!important;min-width:48px!important;min-height:48px!important;max-width:48px!important;max-height:48px!important}
+}
+</style>
+<link href="Assets/forgepc-unified-shell.css?v=87" rel="stylesheet"/>
+<script defer src="Assets/forgepc-unified-shell.js?v=87"></script>
+</head>
+<body class="about-page fp-index-shell-copy" data-mobile-page="a-propos">
+<header class="site-header fp-common-header"><div class="container nav"><a aria-label="ForgePC Mauricie" class="brand-link" href="index.html"><img alt="ForgePC Mauricie" class="logo" src="Assets/forgepc-logo-web.png"/></a><nav aria-label="Navigation principale" class="navlinks"><a href="index.html">Accueil</a><a href="services.html">Services</a><a href="inventaire.html">Inventaire</a><a href="a-propos.html">À propos</a><a href="contact.html">Contact</a></nav><div class="nav-location"><span>Shawinigan et<br/>toute la Mauricie</span></div><button aria-expanded="false" aria-label="Ouvrir le menu" class="menu" type="button"><span class="menu-bar"></span><span class="menu-bar"></span><span class="menu-bar"></span></button></div></header>
+<nav aria-label="Navigation mobile" class="navlinks mobile-only">
+<a href="index.html">Accueil</a><a href="inventaire.html">Inventaire</a><a href="services.html">Services</a><a class="active" href="a-propos.html">À propos</a><a href="contact.html">Contact</a>
+</nav>
+<div class="mobile-location">📍 <span>Shawinigan et toute la Mauricie</span></div>
+<main class="about-main">
+<section class="about-hero">
+<div class="container about-hero-inner">
+<div class="about-hero-copy">
+<div class="about-kicker">À PROPOS</div>
+<h1>UNE HISTOIRE<br/>BIEN <span>RÉELLE.</span></h1>
+<div class="about-rule"></div>
+<p class="about-hero-sub">Des ordinateurs. Des solutions. Des gens d’ici.</p>
+</div>
+<div aria-hidden="true" class="about-hero-image"></div>
+</div>
+</section>
+<section class="about-story">
+<div class="story-copy">
+<div class="eyebrow">POURQUOI FORGEPC MAURICIE ?</div>
+<h2>Rendre l’informatique<br/>plus <span>accessible.</span></h2>
+<p>ForgePC Mauricie est née d'une idée simple : offrir une alternative abordable, fiable et durable aux gens d'ici.</p>
+<p>On voyait trop souvent des ordinateurs encore parfaitement capables d'être utiles être remplacés simplement parce qu'ils avaient quelques années ou qu'une pièce avait rendu l'âme. Avec les bonnes pièces, un bon entretien et quelques améliorations, une machine peut souvent retrouver une deuxième vie.</p>
+<p>C’est exactement ce qui nous a donné l’idée de créer ForgePC Mauricie : récupérer, remettre à neuf, améliorer et réparer des ordinateurs pour offrir des solutions qui font réellement du sens.</p>
+</div>
+<div aria-label="Moment familial ForgePC" class="story-image" role="img"></div>
+</section>
+<section class="values">
+<details class="value" open="">
+<summary class="value-head"><span class="value-icon"><img alt="" aria-hidden="true" src="Assets/icon-family.png"/></span><h3>Conciliation <span>travail et famille</span></h3></summary>
+<div class="value-body"><p>ForgePC, c’est aussi un projet personnel. Le désir de bâtir quelque chose qui me ressemble, tout en étant capable de concilier le travail, la famille et la vie de tous les jours.</p><p>Comme beaucoup de gens, je voulais trouver un équilibre entre travailler fort pour faire vivre ma famille et avoir le temps d’être présent pour elle. ForgePC représente donc plus qu’une entreprise informatique : c’est un projet que je construis progressivement, ici en Mauricie, avec l’objectif d’en faire quelque chose de durable.</p></div>
+</details>
+<details class="value" open="">
+<summary class="value-head"><span class="value-icon"><img alt="" aria-hidden="true" src="Assets/icon-leaf.png"/></span><h3>Une approche <span>plus responsable</span></h3></summary>
+<div class="value-body"><p>En plus d’être économique, remettre à neuf et prolonger la vie des ordinateurs, c’est aussi un geste plus responsable pour l’environnement. Chaque ordinateur réutilisé, c’est un peu moins de déchets électroniques et un peu plus de matériel positif dans notre communauté.</p><p><strong>Pourquoi jeter quand on peut réparer ?<br/>Pourquoi remplacer quand on peut améliorer ?</strong></p></div>
+</details>
+</section>
+<section class="about-bottom">
+<details class="philosophy" open="">
+<summary class="philosophy-head"><h2><span class="philo-title-icon"><img alt="" aria-hidden="true" src="Assets/icon-gear-title.png"/></span> Notre <span style="color:var(--orange)">philosophie</span></h2></summary>
+<div class="philo-grid">
+<div class="philo"><div class="philo-icon"><img alt="" aria-hidden="true" src="Assets/icon-wrench.png"/></div><strong>Réparer</strong> <small>quand ça vaut<br/>la peine.</small></div>
+<div class="philo"><div class="philo-icon"><img alt="" aria-hidden="true" src="Assets/icon-gear.png"/></div><strong>Améliorer</strong> <small>quand c'est<br/>possible.</small></div>
+<div class="philo"><div class="philo-icon"><img alt="" aria-hidden="true" src="Assets/icon-recycle.png"/></div><strong>Remplacer</strong> <small>seulement quand<br/>c’est nécessaire.</small></div>
+</div>
+</details>
+<article class="quote"><div class="quote-mark">“</div><p>ForgePC, c’est une petite entreprise d’ici, bâtie avec une volonté de faire les choses correctement — pour nos clients, pour ma famille et pour l’avenir du projet.</p><div class="signature">Votre technologie,<br/>notre expertise.</div></article>
+</section>
+</main>
+<footer class="fp-common-footer" id="forgepc-footer"><div class="fp-wrap"><div class="fp-main"><img alt="ForgePC Mauricie" class="fp-logo" src="Assets/forgepc-logo-web.png"/><div class="fp-tag">Votre technologie, notre expertise.</div><div aria-label="Réseaux sociaux" class="fp-social"><span class="social-circle">f</span><span class="social-circle instagram"><svg aria-hidden="true" class="ig-icon" viewbox="0 0 24 24"><rect fill="none" height="17.6" rx="5" ry="5" stroke="currentColor" stroke-width="2" width="17.6" x="3.2" y="3.2"></rect><circle cx="12" cy="12" fill="none" r="4.1" stroke="currentColor" stroke-width="2"></circle><circle cx="17.4" cy="6.7" fill="currentColor" r="1.15"></circle></svg></span></div><div class="fp-contact"><span>📍 Shawinigan et toute la Mauricie</span><span>☎ 819-944-7418</span><span>✉ info@forgepcmauricie.ca</span></div></div><div class="fp-bottom"><span>© 2026 ForgePC Mauricie. Tous droits réservés.</span><span>Politique de confidentialité   |   Mentions légales</span></div></div></footer><script>
+document.addEventListener('DOMContentLoaded',()=>{const b=document.querySelector('.menu'),n=document.querySelector('.mobile-only');if(b&&n){b.addEventListener('click',()=>{const o=n.classList.toggle('open');b.setAttribute('aria-expanded',o?'true':'false')});n.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>n.classList.remove('open')))}});
+</script>
+<script>
+/* À propos mobile : garantit l'ouverture du menu injecté par le header commun. */
+document.addEventListener('click',event=>{
+  const button=event.target.closest('.forgepc-unified-header .menu');
+  if(!button)return;
+  const nav=document.querySelector('.forgepc-unified-mobile-nav');
+  if(!nav)return;
+  event.preventDefault();
+  event.stopImmediatePropagation();
+  const open=nav.classList.toggle('open');
+  button.setAttribute('aria-expanded',open?'true':'false');
+},true);
+</script>
+<script>
+if(innerWidth<=900){
+  const aboutAccordions=[...document.querySelectorAll('details.value, details.philosophy')];
+  aboutAccordions.forEach(d=>d.removeAttribute('open'));
+  aboutAccordions.forEach(d=>d.addEventListener('toggle',()=>{
+    if(d.open){
+      aboutAccordions.forEach(other=>{if(other!==d&&other.open)other.removeAttribute('open');});
+    }
+  }));
+}
+</script>
+<style id="about-mobile-philosophy-initial-state-fix">
+@media (max-width:900px){
+  body.about-page .philosophy:not([open]) + .quote{display:none!important;}
+  body.about-page .philosophy[open] + .quote{display:flex!important;}
+}
+</style></body>
+</html>
