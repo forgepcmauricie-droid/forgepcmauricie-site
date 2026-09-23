@@ -36,9 +36,12 @@
 /* Pages PC basées sur une maquette pleine page : couper précisément l'ancien footer intégré. */
 @media (min-width:901px){
   body.diagnostic-page > main.desktop-page,
-  body.upgrade-page > main.desktop-page,
-  body.home-service-page > main.desktop-page{
+  body.upgrade-page > main.desktop-page{
     height:111.55vw!important;
+    overflow:hidden!important;
+  }
+  body.home-service-page > main.desktop-page{
+    height:104.4vw!important;
     overflow:hidden!important;
   }
 }
