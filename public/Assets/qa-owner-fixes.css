@@ -138,8 +138,8 @@
 
   /* Service à domicile : la maquette JPG contient encore son ancien header.
      Le retirer visuellement pour ne garder que le shell commun du site. */
-  body.home-service-page>main.desktop-page{overflow:hidden!important}
-  body.home-service-page>main.desktop-page>.mockup{margin-top:-6.75vw!important;margin-bottom:-15vw!important}
+  body.home-service-page>main.desktop-page{height:105.25vw!important;overflow:hidden!important}
+  body.home-service-page>main.desktop-page>.mockup{margin-top:-6.75vw!important;margin-bottom:0!important}
   body.home-service-page>main.desktop-page>.desktop-hotspots .hs-home,
   body.home-service-page>main.desktop-page>.desktop-hotspots .hs-services,
   body.home-service-page>main.desktop-page>.desktop-hotspots .hs-inventory,
