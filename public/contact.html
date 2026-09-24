@@ -427,10 +427,11 @@ body.contact-page .fa{font-family:"FontAwesome"!important;font-style:normal!impo
 <textarea id="message" maxlength="1000" name="Message" placeholder="Écrivez votre message ici..." required=""></textarea>
 <div class="counter"><span id="count">0</span> / 1000</div>
 </div>
-<div class="notice">ⓘ Nous vous répondrons dans les plus brefs délais.<br/>Pour un rendez-vous (réparation, mise à niveau ou service à domicile), utilisez plutôt la fiche de rendez-vous appropriée.</div>
+<div class="contact-form-bottom-v21"><div class="notice">ⓘ Nous vous répondrons dans les plus brefs délais.<br/>Pour un rendez-vous (réparation, mise à niveau ou service à domicile), utilisez plutôt la fiche de rendez-vous appropriée.</div>
 <div class="send">
 <div class="privacy">🔒 Vos informations sont confidentielles.</div>
 <button class="cta" style="border:0;color:white;cursor:pointer" type="submit">Envoyer mon message →</button>
+</div>
 </div>
 </form>
 </section>
@@ -442,7 +443,7 @@ message.addEventListener('input',()=>count.textContent=message.value.length);
 </script>
 <script src="/Assets/site.js"></script>
 <style id="contact-banner-clean-v17">@media(min-width:901px){html body.contact-page .desktop-contact-promo{height:110px!important}}</style>
-</body>
+<style id="qa-targeted-v21">@media(min-width:801px){body.contact-page main.wrap.content>section.card{display:flex!important;flex-direction:column!important}body.contact-page main.wrap.content>section.card form{display:flex!important;flex-direction:column!important;flex:1 1 auto!important;min-height:0!important}body.contact-page .contact-form-bottom-v21{display:flex!important;flex-direction:column!important;justify-content:center!important;flex:1 1 auto!important;padding:18px 0!important}body.contact-page .contact-form-bottom-v21 .notice{margin:0 0 18px!important}body.contact-page .contact-form-bottom-v21 .send{margin:0!important}}@media(max-width:800px){.contact-form-bottom-v21{display:contents}}</style></body>
 </html>
 <style id="fp-contact-desktop-fullscale-v2623">
 @media (min-width:901px){
