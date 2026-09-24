@@ -67,18 +67,19 @@
 @media(min-width:901px){
  .upgrade-pc .up-hero-new{background:#020c10!important;isolation:isolate!important}
  .upgrade-pc .up-hero-new::before{
-  inset:0!important;
+  inset:auto!important;top:0!important;bottom:0!important;left:44.3%!important;
+  height:100%!important;width:auto!important;aspect-ratio:10/11!important;
   background-image:url('Assets/upgrade-hero-clean.jpg')!important;
-  background-size:auto 100%!important;
-  background-position:67% center!important;
+  background-size:100% 100%!important;
+  background-position:center!important;
   background-repeat:no-repeat!important;
-  -webkit-mask-image:linear-gradient(90deg,transparent 18%,#000 42%,#000 82%,transparent 100%)!important;
-  mask-image:linear-gradient(90deg,transparent 18%,#000 42%,#000 82%,transparent 100%)!important;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 20%,#000 80%,transparent 100%)!important;
+  mask-image:linear-gradient(90deg,transparent 0%,#000 20%,#000 80%,transparent 100%)!important;
   z-index:0!important;
  }
  .upgrade-pc .up-hero-new::after{
   content:""!important;position:absolute!important;inset:0!important;pointer-events:none!important;z-index:1!important;
-  background:linear-gradient(90deg,rgba(2,12,16,.96) 0%,rgba(2,12,16,.72) 29%,transparent 49%,transparent 79%,rgba(2,12,16,.42) 100%)!important;
+  background:linear-gradient(90deg,rgba(2,12,16,.96) 0%,rgba(2,12,16,.66) 30%,transparent 48%,transparent 78%,rgba(2,12,16,.28) 100%)!important;
  }
  .upgrade-pc .up-hero-left,.upgrade-pc .up-benefits-new{position:relative!important;z-index:2!important}
  .upgrade-pc .up-step-photo{overflow:hidden!important;position:relative!important}
