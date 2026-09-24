@@ -505,8 +505,8 @@ body[data-mobile-page="rdv-vente"] .legacy-footer-mobile-only #forgepc-footer .f
  .fp-common-header .menu{display:flex!important;width:48px!important;height:48px!important;min-width:48px!important;min-height:48px!important;max-width:48px!important;max-height:48px!important}
 }
 </style>
-<link href="Assets/forgepc-unified-shell.css?v=91" rel="stylesheet"/>
-<script defer src="Assets/forgepc-unified-shell.js?v=91"></script>
+<link href="Assets/forgepc-unified-shell.css?v=93" rel="stylesheet"/>
+<script defer src="Assets/forgepc-unified-shell.js?v=93"></script>
 </head>
 <style id="forgepc-rdv-vente-maquette-v6">
 /* RDV Vente V6 — correction locale selon maquette. Header/footer communs verrouillés. */
@@ -730,6 +730,13 @@ background-repeat:no-repeat!important;clip-path:inset(0 0 18% 8%)!important;opac
 }
 body[data-mobile-page="rdv-vente"] .hero:after{display:block!important;background:linear-gradient(90deg,#03090c 0%,rgba(3,9,12,.99) 28%,rgba(3,9,12,.9) 43%,rgba(3,9,12,0) 65%)!important}
 body[data-mobile-page="rdv-vente"] .hero-inner{opacity:1!important}
+}
+</style><style id="qa-sale-desktop-cta-maquette-v27">
+/* Bandeau desktop prélevé dans la maquette approuvée. Le mobile reste intact. */
+@media(min-width:901px){
+ body[data-mobile-page="rdv-vente"] .sales-banner{display:block!important;position:relative!important;width:100%!important;height:clamp(85px,8vw,120px)!important;min-height:0!important;margin:0!important;padding:0!important;border:0!important;background:#071013 url("Assets/rdv-vente-content-approved.png") center bottom/100% auto no-repeat!important;overflow:hidden!important}
+ body[data-mobile-page="rdv-vente"] .sales-banner-photo,
+ body[data-mobile-page="rdv-vente"] .sales-banner-content{display:none!important}
 }
 </style></body>
 </html>
