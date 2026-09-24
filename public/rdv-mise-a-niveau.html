@@ -183,6 +183,8 @@ main.desktop-rdv .bottom>div:last-child{display:flex!important;align-items:cente
 </style>
 <link href="Assets/forgepc-unified-shell.css?v=79" rel="stylesheet"/>
 <script defer src="Assets/forgepc-unified-shell.js?v=79"></script>
+<style id="upgrade-file-confirm-v15">.upgrade-file-confirm{display:none;margin-top:8px;padding:8px 10px;border:1px solid #28b36c;border-radius:5px;background:#0d3029;color:#e8fff1;font-size:12px;font-weight:700;line-height:1.4;overflow-wrap:anywhere}.upgrade-file-confirm.is-visible{display:block}</style>
+<script id="upgrade-file-confirm-script-v15">document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('main.desktop-rdv .upload-zone input[type="file"]').forEach(input=>{const status=document.createElement('div');status.className='upgrade-file-confirm';status.setAttribute('role','status');status.setAttribute('aria-live','polite');input.closest('.upload-zone').insertAdjacentElement('afterend',status);input.addEventListener('change',()=>{const files=[...input.files];status.textContent=files.length===1?'✓ Fichier sélectionné : '+files[0].name:files.length>1?'✓ '+files.length+' fichiers sélectionnés : '+files.map(file=>file.name).join(', '):'';status.classList.toggle('is-visible',files.length>0)})})});</script>
 <style id="desktop-upgrade-upload-unclip-v14">
 @media(min-width:901px){body.rdv-upgrade-page main.desktop-rdv .bottom{height:auto!important;min-height:188px!important}body.rdv-upgrade-page main.desktop-rdv .bottom>div{min-height:188px!important;overflow:visible!important}body.rdv-upgrade-page main.desktop-rdv .upload-zone{height:104px!important;min-height:104px!important}}
 </style>
