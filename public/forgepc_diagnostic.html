@@ -181,8 +181,8 @@
   body.diagnostic-page .mobile-page .faq-row.open > button::before{content:""!important;display:block!important;width:14px!important;height:2px!important;background:var(--orange)!important;border-radius:2px!important;position:absolute!important;left:50%!important;top:50%!important;transform:translate(-50%,-50%)!important;}
 }
 </style>
-<link href="Assets/forgepc-unified-shell.css?v=79" rel="stylesheet"/>
-<script defer src="Assets/forgepc-unified-shell.js?v=79"></script>
+<link href="Assets/forgepc-unified-shell.css?v=87" rel="stylesheet"/>
+<script defer src="Assets/forgepc-unified-shell.js?v=87"></script>
 </head>
 <body class="diagnostic-page">
 <div class="desktop-diagnostic">
@@ -248,4 +248,8 @@
 function closeDiagMobile(r){r.classList.remove('open');const b=r.querySelector('button');if(b){b.textContent='+';b.setAttribute('aria-expanded','false')}}
 document.querySelectorAll('.faq-row button').forEach(b=>b.addEventListener('click',()=>{const r=b.closest('.faq-row'),willOpen=!r.classList.contains('open');document.querySelectorAll('.faq-row').forEach(closeDiagMobile);if(willOpen){r.classList.add('open');b.textContent='−';b.setAttribute('aria-expanded','true')}}));
 function closeDiagPc(r){r.classList.remove('open');const b=r.querySelector('.faq-question-pc');if(b){b.setAttribute('aria-expanded','false');const i=b.querySelector('b');if(i)i.textContent='+'}}
-document.querySelectorAll('.faq-question-pc').forEach(b=>b.addEventListener('click',()=>{const r=b.closest('.faq-row-pc'),willOpen=!r.classList.contains('open');document.querySelectorAll('.faq-row-pc').forEach(closeDiagPc);if(willOpen){r.classList.add('open');b.setAttribute('aria-expanded','true');const i=b.querySelector('b');if(i)i.textContent='−'}}));</script></body></html>
+document.querySelectorAll('.faq-question-pc').forEach(b=>b.addEventListener('click',()=>{const r=b.closest('.faq-row-pc'),willOpen=!r.classList.contains('open');document.querySelectorAll('.faq-row-pc').forEach(closeDiagPc);if(willOpen){r.classList.add('open');b.setAttribute('aria-expanded','true');const i=b.querySelector('b');if(i)i.textContent='−'}}));</script>
+<style id="fp-diagnostic-minus-v34">
+@media(max-width:700px){body.diagnostic-page .mobile-page .faq-row.open>button::before{width:8px!important;height:2px!important}}
+</style>
+</body></html>
