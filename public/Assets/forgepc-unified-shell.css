@@ -65,12 +65,50 @@
 
 /* Desktop verrouille sur le rendu approuve de index.html. */
 @media(min-width:901px){
+  /* Index desktop: retire le vieux shell integre a la maquette et utilise
+     le meme shell HTML que toutes les autres pages. */
+  html body.home-page.fp-shell-index-reference > header.forgepc-unified-header,
+  html body.home-page.fp-shell-index-reference > footer#forgepc-footer{
+    display:block!important;
+    position:relative!important;
+    left:auto!important;
+    right:auto!important;
+    top:auto!important;
+    bottom:auto!important;
+    z-index:20!important;
+  }
+  html body.home-page.fp-shell-index-reference > .pc-pixel-page{
+    width:100%!important;
+    overflow:hidden!important;
+  }
+  html body.home-page.fp-shell-index-reference .pc-pixel-stage{
+    width:100%!important;
+    height:68.1234vw!important;
+    overflow:hidden!important;
+  }
+  html body.home-page.fp-shell-index-reference .pc-pixel-stage > img{
+    width:100%!important;
+    height:auto!important;
+    transform:translateY(-5.9983vw)!important;
+  }
+  html body.home-page.fp-shell-index-reference .pc-pixel-stage > .pc-hotspot:nth-of-type(-n+6),
+  html body.home-page.fp-shell-index-reference .pc-pixel-stage > .pc-hotspot:nth-of-type(n+9){
+    display:none!important;
+  }
+  html body.home-page.fp-shell-index-reference .pc-pixel-stage > .pc-hotspot:nth-of-type(7){
+    top:82.95%!important;
+    height:5.59%!important;
+  }
+  html body.home-page.fp-shell-index-reference .pc-pixel-stage > .pc-hotspot:nth-of-type(8){
+    top:89.50%!important;
+    height:7.88%!important;
+  }
   html body.fp-shell-index-reference > header.forgepc-unified-header{
     display:block!important;
     width:100%!important;
-    height:70px!important;
-    min-height:70px!important;
-    max-height:70px!important;
+    height:72px!important;
+    min-height:72px!important;
+    max-height:72px!important;
     margin:0!important;
     padding:0!important;
     background:#02090b!important;
@@ -80,8 +118,8 @@
   html body.fp-shell-index-reference > header.forgepc-unified-header .shell-nav{
     display:flex!important;
     width:min(calc(100% - 40px),1180px)!important;
-    height:70px!important;
-    min-height:70px!important;
+    height:72px!important;
+    min-height:72px!important;
     margin:0 auto!important;
     padding:0!important;
     align-items:center!important;
@@ -89,27 +127,29 @@
   html body.fp-shell-index-reference > header.forgepc-unified-header .brand-link{
     display:flex!important;
     width:auto!important;
-    height:70px!important;
+    height:72px!important;
     margin:0!important;
     padding:0!important;
     align-items:center!important;
   }
   html body.fp-shell-index-reference > header.forgepc-unified-header .logo{
     display:block!important;
-    width:145px!important;
-    min-width:145px!important;
-    max-width:145px!important;
-    height:62px!important;
-    max-height:62px!important;
+    width:148px!important;
+    min-width:148px!important;
+    max-width:148px!important;
+    height:63px!important;
+    max-height:63px!important;
     margin:0!important;
     padding:0!important;
     object-fit:contain!important;
+    transform:scale(1.25)!important;
+    transform-origin:left center!important;
   }
   html body.fp-shell-index-reference > header.forgepc-unified-header .desktop-nav{
     display:flex!important;
     height:100%!important;
     margin-left:auto!important;
-    gap:36px!important;
+    gap:31px!important;
     align-items:stretch!important;
   }
   html body.fp-shell-index-reference > header.forgepc-unified-header .desktop-nav a{
@@ -121,7 +161,7 @@
     border:0!important;
     border-bottom:3px solid transparent!important;
     color:#f3f4f4!important;
-    font:800 13px/1.2 Arial,Helvetica,sans-serif!important;
+    font:800 11px/1.2 Arial,Helvetica,sans-serif!important;
     text-transform:uppercase!important;
   }
   html body.fp-shell-index-reference > header.forgepc-unified-header .desktop-nav a.active,
@@ -132,19 +172,19 @@
   html body.fp-shell-index-reference > header.forgepc-unified-header .nav-location{
     display:flex!important;
     width:auto!important;
-    max-width:180px!important;
+    max-width:153px!important;
     margin-left:auto!important;
-    padding-left:42px!important;
+    padding-left:36px!important;
     align-items:center!important;
     gap:7px!important;
     color:#f1f2f2!important;
-    font:400 12px/1.25 Arial,Helvetica,sans-serif!important;
+    font:400 10px/1.25 Arial,Helvetica,sans-serif!important;
   }
   html body.fp-shell-index-reference > header.forgepc-unified-header .nav-location svg{
     display:block!important;
-    width:22px!important;
-    min-width:22px!important;
-    height:22px!important;
+    width:19px!important;
+    min-width:19px!important;
+    height:19px!important;
     margin:0!important;
     fill:#ff5a00!important;
   }
@@ -171,19 +211,19 @@
   }
   html body.fp-shell-index-reference > footer#forgepc-footer .fp-main{
     display:flex!important;
-    min-height:96px!important;
+    min-height:98px!important;
     height:auto!important;
     margin:0!important;
     padding:0!important;
     align-items:center!important;
-    gap:26px!important;
+    gap:22px!important;
   }
   html body.fp-shell-index-reference > footer#forgepc-footer .fp-logo{
     display:block!important;
-    width:145px!important;
-    min-width:145px!important;
-    max-width:145px!important;
-    height:70px!important;
+    width:148px!important;
+    min-width:148px!important;
+    max-width:148px!important;
+    height:71px!important;
     margin:0!important;
     object-fit:contain!important;
   }
@@ -191,14 +231,23 @@
     display:block!important;
     margin:0!important;
     color:#d8dcdb!important;
-    font:400 11px/1.2 Arial,Helvetica,sans-serif!important;
+    font:400 9px/1.2 Arial,Helvetica,sans-serif!important;
   }
   html body.fp-shell-index-reference > footer#forgepc-footer .fp-social{
     display:flex!important;
     width:auto!important;
     margin:0!important;
     align-items:center!important;
-    gap:10px!important;
+    gap:9px!important;
+  }
+  html body.fp-shell-index-reference > footer#forgepc-footer .social-circle{
+    width:26px!important;
+    height:26px!important;
+    font-size:15px!important;
+  }
+  html body.fp-shell-index-reference > footer#forgepc-footer .social-circle.instagram svg{
+    width:14px!important;
+    height:14px!important;
   }
   html body.fp-shell-index-reference > footer#forgepc-footer .fp-contact{
     display:flex!important;
@@ -206,9 +255,9 @@
     margin-left:auto!important;
     flex-direction:row!important;
     align-items:center!important;
-    gap:28px!important;
+    gap:24px!important;
     color:#f5f5f2!important;
-    font:700 12px/1.2 Arial,Helvetica,sans-serif!important;
+    font:700 10px/1.2 Arial,Helvetica,sans-serif!important;
     text-align:left!important;
   }
   html body.fp-shell-index-reference > footer#forgepc-footer .fp-contact span{
@@ -218,10 +267,16 @@
     justify-content:flex-start!important;
     white-space:nowrap!important;
   }
+  html body.fp-shell-index-reference > footer#forgepc-footer .fp-contact svg{
+    width:14px!important;
+    min-width:14px!important;
+    height:14px!important;
+    margin-right:5px!important;
+  }
   html body.fp-shell-index-reference > footer#forgepc-footer .fp-bottom{
     display:flex!important;
     width:100%!important;
-    min-height:39px!important;
+    min-height:40px!important;
     height:auto!important;
     margin:0!important;
     padding:0!important;
@@ -231,7 +286,7 @@
     gap:0!important;
     border-top:1px solid #192a30!important;
     color:#cdd2d3!important;
-    font:400 10px/1.2 Arial,Helvetica,sans-serif!important;
+    font:400 8.5px/1.2 Arial,Helvetica,sans-serif!important;
     text-align:left!important;
   }
 }
@@ -282,3 +337,5 @@
     margin:0!important;
   }
 }
+
+.forge-social-header{display:flex;align-items:center;gap:8px;margin-left:18px;flex:none}.forge-social-header .social-circle,#forgepc-footer .social-circle{display:grid!important;place-items:center!important;width:26px!important;height:26px!important;min-width:26px!important;border:1.5px solid #ff5a00!important;border-radius:50%!important;color:#ff5a00!important}.forge-social-header .social-circle svg,#forgepc-footer .social-circle svg,#forgepc-footer .social-circle.instagram svg{display:block!important;width:16px!important;height:16px!important;fill:currentColor!important;color:#ff5a00!important}.forge-social-header .social-circle.instagram svg,#forgepc-footer .social-circle.instagram svg{fill:none!important}.forge-social-header .social-circle.instagram circle:last-child,#forgepc-footer .social-circle.instagram circle:last-child{fill:#ff5a00!important}@media(max-width:900px){.forge-social-header{margin-left:auto!important;margin-right:9px!important;gap:6px!important}.forge-social-header .social-circle{width:24px!important;height:24px!important;min-width:24px!important}.forgepc-unified-header .menu{margin-left:0!important}}@media(min-width:901px) and (max-width:1100px){.forge-social-header{gap:5px;margin-left:9px}.forgepc-unified-header .nav-location{padding-left:10px!important}}
