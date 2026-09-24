@@ -109,7 +109,7 @@
 </style>
 <link href="Assets/forgepc-unified-shell.css?v=85" rel="stylesheet"/>
 <script defer src="Assets/forgepc-unified-shell.js?v=85"></script>
-<style id="services-canvas-height-v16">@media(min-width:901px){.v1-desktop-viewport{height:106.4317vw!important}}</style>
+<style id="services-canvas-height-v16">@media(min-width:901px){.v1-desktop-viewport{min-height:106.4317vw}}</style>
 </head>
 <body class="services-v1-reset">
 <div class="v1-desktop-viewport">
@@ -324,5 +324,5 @@ document.querySelectorAll('.mobile-info-toggle').forEach(toggle=>{
 document.querySelectorAll('.mobile-info-item').forEach(item=>item.classList.remove('is-open'));
 </script>
 </div>
-</body>
+<style id="services-desktop-qa-v19">@media(min-width:901px){.v1-services .card:nth-child(4) .photo{height:130px!important;object-fit:cover!important}.v1-services .card h3 img{mix-blend-mode:screen!important}}</style><script id="services-desktop-qa-v19-js">document.addEventListener('DOMContentLoaded',()=>{const viewport=document.querySelector('.v1-desktop-viewport');const canvas=document.querySelector('.v1-canvas');function fit(){if(!viewport||!canvas||innerWidth<901)return;const scale=innerWidth/1135;canvas.style.transform=`scale(${scale})`;viewport.style.height=`${canvas.offsetHeight*scale}px`;}document.querySelectorAll('.v1-desktop-viewport .faq-item button').forEach(button=>button.addEventListener('click',()=>{document.querySelectorAll('.v1-desktop-viewport .faq-item.open').forEach(item=>{if(item!==button.closest('.faq-item')){item.classList.remove('open');const other=item.querySelector('button');other.setAttribute('aria-expanded','false');other.querySelector('b').textContent='+';}});requestAnimationFrame(fit);}));addEventListener('load',fit);addEventListener('resize',fit);if(document.fonts)document.fonts.ready.then(fit);});</script></body>
 </html>
