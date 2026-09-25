@@ -327,8 +327,8 @@
 </style>
 <link href="Assets/forgepc-unified-shell.css?v=87" rel="stylesheet"/>
 <script defer src="Assets/forgepc-unified-shell.js?v=87"></script>
-</head>
 <style id="inventory-mobile-location-fix">@media(max-width:900px){body.inventory-page>.mobile-location{display:none!important}}</style>
+</head>
 <body class="inventory-page fp-index-shell-copy" data-mobile-page="inventaire"><header class="site-header fp-common-header"><div class="container nav"><a aria-label="ForgePC Mauricie" class="brand-link" href="index.html"><img alt="ForgePC Mauricie" class="logo" src="Assets/forgepc-logo-web.png"/></a><nav aria-label="Navigation principale" class="navlinks"><a href="index.html">Accueil</a><a href="services.html">Services</a><a href="inventaire.html">Inventaire</a><a href="a-propos.html">À propos</a><a href="contact.html">Contact</a></nav><div class="nav-location"><span>Shawinigan et<br/>toute la Mauricie</span></div><button aria-expanded="false" aria-label="Ouvrir le menu" class="menu" type="button"><span class="menu-bar"></span><span class="menu-bar"></span><span class="menu-bar"></span></button></div></header>
 <nav aria-label="Navigation mobile" class="navlinks mobile-nav">
 <a href="index.html">Accueil</a><a class="active" href="inventaire.html">Inventaire</a><a href="services.html">Services</a><a href="a-propos.html">À propos</a><a href="contact.html">Contact</a>
@@ -430,5 +430,13 @@ function setup(){const visible=allProducts.filter(p=>!isHidden(p));allProducts=v
 (async()=>{try{allProducts=await loadInventory();setup()}catch(error){console.error("ForgePC — lecture Google Sheets:",error);LIST.innerHTML='<div class="msg"><strong style="color:#fff">Impossible de charger l’inventaire.</strong><br>La connexion à Google Sheets a échoué. Recharge la page; si le problème persiste, vérifie la connexion à la feuille.</div>'}})();
 const menu=document.querySelector('.menu'),mobileNav=document.querySelector('.mobile-nav');if(menu&&mobileNav){menu.addEventListener('click',()=>{const open=mobileNav.classList.toggle('open');menu.setAttribute('aria-expanded',open?'true':'false')});mobileNav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mobileNav.classList.remove('open')))}
 </script>
+<style id="inventory-final-hero-repair">
+@media(max-width:900px){body.inventory-page .inventory-hero .script{font-family:"Segoe Print","Comic Sans MS",cursive!important;font-style:normal!important;font-weight:600!important}}
+@media(min-width:901px){
+ body.inventory-page .inventory-hero{background-color:#02090b!important;background-image:linear-gradient(90deg,#02090b 0%,rgba(2,9,11,.98) 28%,rgba(2,9,11,.56) 45%,rgba(2,9,11,.05) 61%,rgba(2,9,11,.78) 78%,#02090b 100%),url('Assets/inventory-hero-photo-clean.jpg')!important;background-repeat:no-repeat!important;background-size:100% 100%,auto 100%!important;background-position:center,66% center!important}
+ body.inventory-page .inventory-hero .script{font-family:"Segoe Print","Comic Sans MS",cursive!important;font-style:normal!important;font-weight:600!important}
+ body.inventory-page .hero-points{position:relative!important;z-index:2!important}
+}
+</style>
 </body>
 </html>
