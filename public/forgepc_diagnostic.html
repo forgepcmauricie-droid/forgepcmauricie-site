@@ -248,8 +248,4 @@
 function closeDiagMobile(r){r.classList.remove('open');const b=r.querySelector('button');if(b){b.textContent='+';b.setAttribute('aria-expanded','false')}}
 document.querySelectorAll('.faq-row button').forEach(b=>b.addEventListener('click',()=>{const r=b.closest('.faq-row'),willOpen=!r.classList.contains('open');document.querySelectorAll('.faq-row').forEach(closeDiagMobile);if(willOpen){r.classList.add('open');b.textContent='−';b.setAttribute('aria-expanded','true')}}));
 function closeDiagPc(r){r.classList.remove('open');const b=r.querySelector('.faq-question-pc');if(b){b.setAttribute('aria-expanded','false');const i=b.querySelector('b');if(i)i.textContent='+'}}
-document.querySelectorAll('.faq-question-pc').forEach(b=>b.addEventListener('click',()=>{const r=b.closest('.faq-row-pc'),willOpen=!r.classList.contains('open');document.querySelectorAll('.faq-row-pc').forEach(closeDiagPc);if(willOpen){r.classList.add('open');b.setAttribute('aria-expanded','true');const i=b.querySelector('b');if(i)i.textContent='−'}}));</script>
-<style id="fp-diagnostic-minus-v34">
-@media(max-width:700px){body.diagnostic-page .mobile-page .faq-row.open>button::before{width:8px!important;height:2px!important}}
-</style>
-</body></html>
+document.querySelectorAll('.faq-question-pc').forEach(b=>b.addEventListener('click',()=>{const r=b.closest('.faq-row-pc'),willOpen=!r.classList.contains('open');document.querySelectorAll('.faq-row-pc').forEach(closeDiagPc);if(willOpen){r.classList.add('open');b.setAttribute('aria-expanded','true');const i=b.querySelector('b');if(i)i.textContent='−'}}));</script><style id="diagnostic-mobile-script-font-fix">@media(max-width:900px){body.diagnostic-page .mobile-page .diagnostic-hero .script{font-family:"Segoe Print","Comic Sans MS",cursive!important;font-style:normal!important;font-weight:600!important;letter-spacing:0!important}}</style></body></html>

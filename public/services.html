@@ -298,9 +298,28 @@
 const b=document.querySelector('.menu'),m=document.querySelector('.mobile-only');
 b.addEventListener('click',()=>{const o=m.classList.toggle('open');b.setAttribute('aria-expanded',o)});
 
-document.querySelectorAll('.faq-row').forEach(x=>x.addEventListener('click',e=>{
+document.querySelectorAll('.mobile-info-panel.faq-panel .faq-row').forEach(row=>row.addEventListener('click',e=>{
   e.stopPropagation();
-  x.classList.toggle('open');
+  const panel=row.closest('.faq-panel');
+  const willOpen=!row.classList.contains('open');
+  panel.querySelectorAll('.faq-row').forEach(other=>{
+    other.classList.remove('open');
+    const icon=other.querySelector('b');
+    if(icon) icon.textContent='+';
+  });
+  if(willOpen){row.classList.add('open');const icon=row.querySelector('b');if(icon) icon.textContent='−';}
+}));
+
+document.querySelectorAll('.v1-desktop-viewport .faq-row').forEach(row=>row.addEventListener('click',e=>{
+  e.stopPropagation();
+  const scope=row.closest('.info-box')||document;
+  const willOpen=!row.classList.contains('open');
+  scope.querySelectorAll('.faq-row').forEach(other=>{
+    other.classList.remove('open');
+    const icon=other.querySelector('b');
+    if(icon) icon.textContent='+';
+  });
+  if(willOpen){row.classList.add('open');const icon=row.querySelector('b');if(icon) icon.textContent='−';}
 }));
 
 document.querySelectorAll('.mobile-info-toggle').forEach(toggle=>{
@@ -323,55 +342,6 @@ document.querySelectorAll('.mobile-info-toggle').forEach(toggle=>{
 document.querySelectorAll('.mobile-info-item').forEach(item=>item.classList.remove('is-open'));
 </script>
 </div>
-<style id="fp-services-desktop-maquette-v28">
-/* Maquette Services : trois lignes dans le héros et paysage réel au bandeau. */
-@media(min-width:901px){
- body.services-page .services-hero .container{align-items:center!important}
- body.services-page .services-copy{width:600px!important;max-width:46%!important;flex:0 0 46%!important}
- body.services-page .services-copy h1{font-size:clamp(44px,4.2vw,61px)!important;line-height:.94!important;letter-spacing:-.02em!important;max-width:none!important}
- body.services-page .services-copy h1 span{display:block!important}
- body.services-page .services-cta{height:120px!important;min-height:120px!important;margin:0!important;background-image:linear-gradient(90deg,rgba(2,11,15,.6),rgba(2,11,15,.12)),url('Assets/mauricie-landscape-approved.jpg')!important;background-size:100% 100%,cover!important;background-position:center,center 43%!important;background-repeat:no-repeat!important}
- body.services-page .services-cta .container{height:120px!important;min-height:120px!important}
- body.services-page .services-cta:after{display:none!important}
-}
-</style>
-<style id="fp-services-targeted-v34">
-@media(max-width:900px){
- .v1-mobile-original .mobile-info-item.is-open>.mobile-info-toggle>b{font-size:0!important;position:relative!important;width:18px!important;height:18px!important}
- .v1-mobile-original .mobile-info-item.is-open>.mobile-info-toggle>b::before{content:"−"!important;font-size:20px!important;line-height:18px!important;position:absolute!important;inset:0!important;text-align:center!important}
-}
-@media(min-width:901px){
- .v1-main,.v1-cta,.v1-index-footer{margin-top:0!important;margin-bottom:0!important}
- .v1-index-footer{top:auto!important}
-}
-</style>
-<script id="fp-services-behavior-v34">
-(()=>{
- const syncMobileSigns=()=>document.querySelectorAll('.v1-mobile-original .mobile-info-item').forEach(item=>{const sign=item.querySelector('.mobile-info-toggle>b');if(sign)sign.textContent=item.classList.contains('is-open')?'−':'+'});
- document.querySelectorAll('.v1-mobile-original .mobile-info-toggle').forEach(btn=>btn.addEventListener('click',()=>requestAnimationFrame(syncMobileSigns)));
- syncMobileSigns();
- document.querySelectorAll('.v1-desktop-viewport .faq-item>button').forEach(btn=>btn.addEventListener('click',()=>setTimeout(()=>{
-   const current=btn.closest('.faq-item');
-   if(!current.classList.contains('open'))return;
-   document.querySelectorAll('.v1-desktop-viewport .faq-item.open').forEach(other=>{if(other!==current){other.classList.remove('open');const b=other.querySelector('button');if(b)b.setAttribute('aria-expanded','false');const sign=other.querySelector('button b');if(sign)sign.textContent='+';}});
- },0)));
- const viewport=document.querySelector('.v1-desktop-viewport'),canvas=document.querySelector('.v1-canvas');
- const syncHeight=()=>{if(!viewport||!canvas||innerWidth<901)return;viewport.style.height=(canvas.offsetHeight*(innerWidth/1135))+'px'};
- if(viewport&&canvas){new ResizeObserver(syncHeight).observe(canvas);window.addEventListener('load',syncHeight);window.addEventListener('resize',syncHeight);syncHeight();}
-})();
-</script>
-<style id="fp-services-gaming-card-desktop-v35">
-@media(min-width:901px){
- .v1-desktop-viewport .v1-services .card:nth-child(4) .photo{
-  width:100%!important;
-  height:184px!important;
-  object-fit:contain!important;
-  object-position:center!important;
-  transform:scale(.88)!important;
-  transform-origin:center!important;
-  background:#031014!important;
- }
-}
-</style>
+<style id="services-requested-fixes">@media(min-width:901px){.v1-hero{display:block!important;background:#020d11 url('Assets/services-hero-reference.png') center/100% 100% no-repeat!important}.v1-hero>.hero-copy,.v1-hero>.hero-img{display:none!important}.v1-desktop-viewport .card:nth-child(4) .photo{content:url('Assets/services-gaming-reference-exact.png')!important;object-fit:cover!important;object-position:center!important;background:none!important}}</style>
 </body>
 </html>
