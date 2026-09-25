@@ -431,10 +431,17 @@ function setup(){const visible=allProducts.filter(p=>!isHidden(p));allProducts=v
 const menu=document.querySelector('.menu'),mobileNav=document.querySelector('.mobile-nav');if(menu&&mobileNav){menu.addEventListener('click',()=>{const open=mobileNav.classList.toggle('open');menu.setAttribute('aria-expanded',open?'true':'false')});mobileNav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mobileNav.classList.remove('open')))}
 </script>
 <style id="inventory-final-hero-repair">
-@media(max-width:900px){body.inventory-page .inventory-hero .script{font-family:"Segoe Print","Comic Sans MS",cursive!important;font-style:normal!important;font-weight:600!important}}
+@media(max-width:900px){
+ body.inventory-page .inventory-hero-approved-pc{display:none!important}
+ body.inventory-page .inventory-hero{display:block!important;min-height:224px!important;background:#02090b!important}
+ body.inventory-page .inventory-hero-inner{display:block!important;min-height:224px!important;padding:21px 18px 16px!important;background-image:linear-gradient(90deg,#02090b 0%,rgba(2,9,11,.97) 48%,rgba(2,9,11,.34) 74%,rgba(2,9,11,.12) 100%),url('Assets/inventory-hero-photo-clean.jpg')!important;background-repeat:no-repeat!important;background-size:100% 100%,auto 100%!important;background-position:center,right center!important}
+ body.inventory-page .inventory-hero .script{font:italic 600 18px/1.08 "Segoe Print",cursive!important;transform:rotate(-4deg)!important}
+}
 @media(min-width:901px){
+ body.inventory-page .inventory-hero-approved-pc{display:none!important}
+ body.inventory-page .inventory-hero-inner{display:grid!important;position:relative!important;z-index:2!important}
  body.inventory-page .inventory-hero{background-color:#02090b!important;background-image:linear-gradient(90deg,#02090b 0%,rgba(2,9,11,.98) 28%,rgba(2,9,11,.56) 45%,rgba(2,9,11,.05) 61%,rgba(2,9,11,.78) 78%,#02090b 100%),url('Assets/inventory-hero-photo-clean.jpg')!important;background-repeat:no-repeat!important;background-size:100% 100%,auto 100%!important;background-position:center,66% center!important}
- body.inventory-page .inventory-hero .script{font-family:"Segoe Print","Comic Sans MS",cursive!important;font-style:normal!important;font-weight:600!important}
+ body.inventory-page .inventory-hero .script{font:italic 600 19px/1.08 "Segoe Print",cursive!important;transform:rotate(-4deg)!important}
  body.inventory-page .hero-points{position:relative!important;z-index:2!important}
 }
 </style>
