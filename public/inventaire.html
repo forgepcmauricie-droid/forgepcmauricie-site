@@ -435,14 +435,17 @@ const menu=document.querySelector('.menu'),mobileNav=document.querySelector('.mo
  body.inventory-page .inventory-hero-approved-pc{display:none!important}
  body.inventory-page .inventory-hero{display:block!important;min-height:224px!important;background:#02090b!important}
  body.inventory-page .inventory-hero-inner{display:block!important;min-height:224px!important;padding:21px 18px 16px!important;background-image:linear-gradient(90deg,#02090b 0%,rgba(2,9,11,.97) 48%,rgba(2,9,11,.34) 74%,rgba(2,9,11,.12) 100%),url('Assets/inventory-hero-photo-clean.jpg')!important;background-repeat:no-repeat!important;background-size:100% 100%,auto 100%!important;background-position:center,right center!important}
- body.inventory-page .inventory-hero .script{font:italic 600 18px/1.08 "Segoe Print",cursive!important;transform:rotate(-4deg)!important}
+ body.inventory-page .inventory-hero .script{font:italic 400 18px/1.08 "Brush Script MT","Segoe Print","Comic Sans MS",cursive!important;transform:rotate(-4deg)!important}
 }
 @media(min-width:901px){
  body.inventory-page .inventory-hero-approved-pc{display:none!important}
  body.inventory-page .inventory-hero-inner{display:grid!important;position:relative!important;z-index:2!important}
- body.inventory-page .inventory-hero{background-color:#02090b!important;background-image:linear-gradient(90deg,#02090b 0%,rgba(2,9,11,.98) 28%,rgba(2,9,11,.56) 45%,rgba(2,9,11,.05) 61%,rgba(2,9,11,.78) 78%,#02090b 100%),url('Assets/inventory-hero-photo-clean.jpg')!important;background-repeat:no-repeat!important;background-size:100% 100%,auto 100%!important;background-position:center,66% center!important}
- body.inventory-page .inventory-hero .script{font:italic 600 19px/1.08 "Segoe Print",cursive!important;transform:rotate(-4deg)!important}
- body.inventory-page .hero-points{position:relative!important;z-index:2!important}
+ body.inventory-page .inventory-hero{height:246px!important;min-height:246px!important;background-color:#02090b!important;background-image:linear-gradient(90deg,#02090b 0%,rgba(2,9,11,.98) 30%,rgba(2,9,11,.64) 47%,rgba(2,9,11,.08) 63%,rgba(2,9,11,.38) 76%,#02090b 100%),url('Assets/inventory-hero-photo-clean.jpg')!important;background-repeat:no-repeat!important;background-size:100% 100%,auto 100%!important;background-position:center,64% center!important}
+ body.inventory-page .inventory-hero-inner{height:246px!important;min-height:246px!important;grid-template-columns:minmax(0,1fr) 265px!important;gap:28px!important;padding:24px 0!important;background:none!important}
+ body.inventory-page .inventory-hero .script{font:italic 400 19px/1.08 "Brush Script MT","Segoe Print","Comic Sans MS",cursive!important;transform:rotate(-4deg)!important}
+ body.inventory-page .hero-points{position:relative!important;z-index:2!important;display:grid!important;grid-template-columns:1fr!important;gap:10px!important;align-content:center!important}
+ body.inventory-page .hero-point{display:grid!important;grid-template-columns:30px 1fr!important;gap:9px!important;align-items:center!important;min-height:38px!important}
+ body.inventory-page .hero-point .fa{font-size:25px!important}.inventory-page .hero-point strong{font-size:12px!important;line-height:1.05!important}.inventory-page .hero-point span{font-size:10px!important;line-height:1.1!important;margin-top:2px!important}
 }
 </style>
 </body>

@@ -281,7 +281,25 @@ document.addEventListener('DOMContentLoaded', function(){
 </script>
 <style id="index-locked-mobile-repair">
 @media(max-width:900px){
-  body.home-page .home-project{background-repeat:no-repeat!important;background-size:cover!important}
+  body.home-page .home-copy .script{font-family:"Brush Script MT","Segoe Print","Comic Sans MS",cursive!important;font-style:italic!important;font-weight:400!important;letter-spacing:.2px!important}
+  body.home-page .home-about img{display:block!important;width:100%!important;height:116px!important;object-fit:cover!important;object-position:center 58%!important;content:url('Assets/gaming-cta-photo-clean.jpg')!important}
+  body.home-page .home-project{background-image:linear-gradient(90deg,rgba(3,10,13,.80),rgba(3,10,13,.18)),url('Assets/gaming-cta-cafe-panorama.png')!important;background-repeat:no-repeat!important;background-size:100% 100%,cover!important;background-position:center,center 56%!important}
+}
+@media(min-width:901px){
+  body.home-page>.pc-pixel-page{display:none!important}
+  body.home-page>header.site-header,body.home-page>main,body.home-page>footer#forgepc-footer{display:block!important}
+  body.home-page>header.site-header{display:flex!important}
+  body.home-page .home-hero{height:338px!important;min-height:338px!important;background-image:linear-gradient(90deg,#050d10 0%,rgba(5,13,16,.98) 31%,rgba(5,13,16,.55) 48%,rgba(5,13,16,.06) 68%,rgba(5,13,16,.28) 100%),url('Assets/hero-workstation-crop.jpg')!important;background-size:100% 100%,auto 100%!important;background-position:center,66% center!important;background-repeat:no-repeat!important}
+  body.home-page .home-hero-inner{height:338px!important;min-height:338px!important;position:relative!important}
+  body.home-page .home-copy{position:relative!important;z-index:2!important}
+  body.home-page .home-copy .script{font-family:"Brush Script MT","Segoe Print","Comic Sans MS",cursive!important;font-style:italic!important;font-weight:400!important}
+  body.home-page .home-points-desktop{display:grid!important;position:absolute!important;right:28px!important;top:50%!important;transform:translateY(-50%)!important;width:255px!important;gap:14px!important;z-index:3!important}
+  body.home-page .home-point{display:grid!important;grid-template-columns:38px 1fr!important;gap:10px!important;align-items:center!important}
+  body.home-page .home-point .icon{font-size:28px!important}
+  body.home-page .home-point strong{font-size:13px!important}.home-page .home-point small{font-size:11px!important}
+  body.home-page .home-about img{content:url('Assets/gaming-cta-photo-clean.jpg')!important;object-fit:cover!important;object-position:center 58%!important}
+  body.home-page .home-project{background-image:linear-gradient(90deg,rgba(3,10,13,.75),rgba(3,10,13,.12)),url('Assets/gaming-cta-cafe-panorama.png')!important;background-size:100% 100%,cover!important;background-position:center,center 56%!important;background-repeat:no-repeat!important}
+  body.home-page .home-project-copy{display:flex!important}
 }
 </style>
 </body>
