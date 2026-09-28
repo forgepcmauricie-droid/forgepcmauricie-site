@@ -401,6 +401,14 @@ document.addEventListener('DOMContentLoaded',function(){
   }
 }
 </style>
+<style id="finish-gaming-desktop-hero">
+@media(min-width:901px){
+ body.gaming-page .hero-media img{height:90%!important;top:5%!important;right:19%!important}
+ body.gaming-page .gaming-project-link{position:absolute;z-index:6;right:0;bottom:17px;min-width:290px;padding:18px 25px;text-align:center;background:#ff4b0b;color:#fff;font-size:15px;font-weight:800;border-radius:4px;text-transform:uppercase}
+}
+@media(max-width:900px){body.gaming-page .gaming-project-link{display:none}}
+</style>
+<script>document.addEventListener('DOMContentLoaded',function(){var hero=document.querySelector('body.gaming-page .hero-in');if(hero&&!hero.querySelector('.gaming-project-link')){var a=document.createElement('a');a.className='gaming-project-link';a.href='#projet';a.textContent='Présenter mon projet →';hero.appendChild(a)}})</script>
 <style id="v57-cta-only-uncrushed">
 /* V57 — CTA SEULEMENT. HERO V55 verrouillé.
    Le bandeau garde ses proportions : aucune hauteur fixe qui écrase la photo. */
