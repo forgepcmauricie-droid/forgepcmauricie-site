@@ -46,12 +46,18 @@
 /* Diagnostic mobile — Passe 1 : hero seulement. Desktop et sections suivantes inchangés. */
 @media (max-width:700px){
   .mobile-page .hero.diagnostic-hero{
-    background-image:url('Assets/diagnostic-hero-clean-v8.jpg') !important;
+    background-image:url('Assets/diagnostic-hero-photo-2x.jpg') !important;
     background-size:cover !important;
-    background-position:61% center !important;
+    background-position:68% center !important;
     background-repeat:no-repeat !important;
     background-color:#02090b !important;
   }
+}
+
+@media(max-width:700px){
+ body.diagnostic-page .mobile-page .diagnostic-hero h1{max-width:370px!important;width:100%!important;font-size:clamp(30px,8.2vw,36px)!important;line-height:1.02!important}
+ body.diagnostic-page .mobile-page .diagnostic-hero .hero-copy{max-width:350px!important;width:100%!important;font-size:14px!important;line-height:1.4!important}
+ body.diagnostic-page .mobile-page .diagnostic-hero:before{background:linear-gradient(90deg,rgba(1,8,10,.96),rgba(1,8,10,.76) 48%,rgba(1,8,10,.2))!important}
 }
 
 
