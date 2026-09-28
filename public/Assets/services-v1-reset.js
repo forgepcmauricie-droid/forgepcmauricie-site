@@ -20,10 +20,15 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".v1-desktop-viewport .faq-item button").forEach(btn => {
     btn.addEventListener("click", () => {
       const item = btn.closest(".faq-item");
-      const open = item.classList.toggle("open");
-      btn.setAttribute("aria-expanded", open ? "true" : "false");
-      const sign = btn.querySelector("b");
-      if(sign) sign.textContent = open ? "−" : "+";
+      const open = !item.classList.contains("open");
+      document.querySelectorAll(".v1-desktop-viewport .faq-item").forEach(other => {
+        const selected = other === item && open;
+        other.classList.toggle("open", selected);
+        const button = other.querySelector("button");
+        if(button) button.setAttribute("aria-expanded", selected ? "true" : "false");
+        const sign = button && button.querySelector("b");
+        if(sign) sign.textContent = selected ? "−" : "+";
+      });
       requestAnimationFrame(fitDesktop);
     });
   });
