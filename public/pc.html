@@ -627,6 +627,13 @@ function mobileGuaranteeText(value){
     .trim();
 }
 
+function displayDescription(pc){
+  const text=String(pc.description||"");
+  return /bient[oô]t disponible/i.test(pc.statut||"")
+    ? text.replace(/^\s*✅\s*Prêt à utiliser dès maintenant\s*$/gmi,"").replace(/\n{3,}/g,"\n\n").trim()
+    : text;
+}
+
 function render(pc){
   const photos=photoList(pc);
 
@@ -662,7 +669,7 @@ function render(pc){
         ${pc.statut?`<div class="status">${esc(pc.statut)}</div>`:""}
         <div class="kicker" style="margin-top:18px">PC remis à neuf · ${esc(formatStockId(pc.id))}</div>
         <h1>${esc(pc.nom||"Ordinateur")}</h1>
-        ${pc.description?`<p class="intro">${esc(pc.description)}</p>`:""}
+        ${pc.description?`<p class="intro">${esc(displayDescription(pc))}</p>`:""}
         ${pc.garantie?`<div class="box"><h2>Garantie</h2><p class="guarantee-desktop-copy">${esc(pc.garantie)}</p><p class="guarantee-mobile-copy">${esc(mobileGuaranteeText(pc.garantie))}</p></div>`:""}
 
         <div class="box">
