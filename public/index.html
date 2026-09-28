@@ -248,7 +248,7 @@ html body.home-page>.pc-pixel-page{display:block!important}
 </div>
 <section class="section home-about">
 <div class="container about">
-<img alt="ForgePC Mauricie — atelier" src="Assets/about-mug-original.jpg"/>
+<img alt="ForgePC Mauricie — atelier" src="Assets/about-mug-original.jpg"/><span aria-hidden="true" class="mug-official-logo"><img alt="" src="Assets/forgepc-logo-web.png"/></span>
 <div class="about-copy">
 <div class="title-line"><h2>À PROPOS DE FORGEPC</h2></div>
 <p>ForgePC Mauricie est née d’une idée simple : offrir une alternative aux ordinateurs neufs souvent coûteux et aux réparations compliquées. Notre objectif est de remettre en circulation de bonnes machines, de réparer lorsque ça en vaut la peine et de proposer des solutions adaptées aux besoins réels de chaque client.</p>
@@ -301,6 +301,14 @@ document.addEventListener('DOMContentLoaded', function(){
   body.home-page .home-about img{content:url('Assets/gaming-cta-photo-clean.jpg')!important;object-fit:cover!important;object-position:center 58%!important}
   body.home-page .home-project{background-image:linear-gradient(90deg,rgba(3,10,13,.75),rgba(3,10,13,.12)),url('Assets/gaming-cta-cafe-panorama.png')!important;background-size:100% 100%,cover!important;background-position:center,center 56%!important;background-repeat:no-repeat!important}
   body.home-page .home-project-copy{display:flex!important}
+}
+</style>
+<style id="mug-logo-correction">
+.home-about .mug-official-logo{display:none}
+@media(max-width:900px){
+ body.home-page .home-about .about{position:relative!important}
+ body.home-page .home-about .mug-official-logo{display:block;position:absolute;z-index:2;left:25%;top:50%;width:23%;height:24%;border-radius:12px;background:radial-gradient(ellipse,#080b0b 68%,transparent 100%);pointer-events:none}
+ body.home-page .home-about .mug-official-logo img{display:block!important;width:100%!important;height:100%!important;object-fit:contain!important;content:url('Assets/forgepc-logo-web.png')!important}
 }
 </style>
 </body>
