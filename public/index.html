@@ -248,7 +248,7 @@ html body.home-page>.pc-pixel-page{display:block!important}
 </div>
 <section class="section home-about">
 <div class="container about">
-<img alt="ForgePC Mauricie — atelier" src="Assets/about-mug-original.jpg"/><span aria-hidden="true" class="mug-official-logo"><img alt="" src="Assets/forgepc-logo-web.png"/></span>
+<img alt="Tasse ForgePC Mauricie dans l’atelier" src="Assets/about-mug-original.jpg"/>
 <div class="about-copy">
 <div class="title-line"><h2>À PROPOS DE FORGEPC</h2></div>
 <p>ForgePC Mauricie est née d’une idée simple : offrir une alternative aux ordinateurs neufs souvent coûteux et aux réparations compliquées. Notre objectif est de remettre en circulation de bonnes machines, de réparer lorsque ça en vaut la peine et de proposer des solutions adaptées aux besoins réels de chaque client.</p>
@@ -303,12 +303,11 @@ document.addEventListener('DOMContentLoaded', function(){
   body.home-page .home-project-copy{display:flex!important}
 }
 </style>
-<style id="mug-logo-correction">
-.home-about .mug-official-logo{display:none}
+<style id="mug-photo-mobile-maquette">
 @media(max-width:900px){
+ body.home-page .home-about .about>img{content:url('Assets/gaming-cta-photo-clean.jpg')!important;width:100%!important;height:auto!important;aspect-ratio:371/206!important;object-fit:cover!important;object-position:center 77%!important}
  body.home-page .home-about .about{position:relative!important}
- body.home-page .home-about .mug-official-logo{display:block;position:absolute;z-index:2;left:24%;top:43%;width:25%;height:33%;border-radius:12px;background:radial-gradient(ellipse,#080b0b 68%,transparent 100%);pointer-events:none}
- body.home-page .home-about .mug-official-logo img{display:block!important;width:100%!important;height:100%!important;object-fit:contain!important;content:url('Assets/forgepc-logo-web.png')!important}
+ body.home-page .home-about .about:after{content:"Une entreprise\A de chez nous.";white-space:pre;position:absolute;right:6%;top:8%;color:#fff;font:italic 22px/1.05 "Segoe Print",cursive;text-align:center;text-shadow:0 2px 5px #000;transform:rotate(-7deg);pointer-events:none}
 }
 </style>
 </body>
