@@ -12,6 +12,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   fitDesktop();
   window.addEventListener("resize", fitDesktop);
+  window.addEventListener("load", fitDesktop);
+  if (window.ResizeObserver && canvas) {
+    new ResizeObserver(fitDesktop).observe(canvas);
+  }
 
   document.querySelectorAll(".v1-desktop-viewport .faq-item button").forEach(btn => {
     btn.addEventListener("click", () => {
