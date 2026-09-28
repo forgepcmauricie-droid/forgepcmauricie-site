@@ -53,3 +53,10 @@
 <div class="legacy-footer-mobile-only"><footer class="m-footer"><div class="foot-top"><img alt="ForgePC Mauricie" class="foot-logo" src="Assets/forgepc-logo-web.png"/><div class="socials"><span class="social">f</span><span class="social ig">◎</span></div></div><div class="location">●  Shawinigan et toute la Mauricie</div><div class="foot-bottom"><div>© 2026 ForgePC Mauricie.<br/>Tous droits réservés.</div><div class="legal">Politique de confidentialité<br/>Mentions légales</div></div></footer></div>
 </section>
 <script>document.querySelectorAll('.m-menu-btn').forEach(b=>{const m=b.parentElement.querySelector('.m-menu');b.addEventListener('click',()=>{const o=m.classList.toggle('open');b.setAttribute('aria-expanded',o)})});document.querySelectorAll('.faq-row button').forEach(b=>b.addEventListener('click',()=>{const row=b.closest('.faq-row'),opening=!row.classList.contains('open');document.querySelectorAll('.faq-row.open').forEach(r=>{r.classList.remove('open');const x=r.querySelector('button');if(x)x.textContent='+'});if(opening){row.classList.add('open');b.textContent='−'}else{b.textContent='+'}}));</script></div><script>document.querySelectorAll('.faq-q').forEach(b=>b.addEventListener('click',()=>b.closest('.faq-row2').classList.toggle('open')));</script><script>document.querySelectorAll('.up-faq-q').forEach(b=>b.addEventListener('click',()=>{const row=b.closest('.up-faq-row'),opening=!row.classList.contains('open');document.querySelectorAll('.up-faq-row.open').forEach(r=>{r.classList.remove('open');const x=r.querySelector('.up-faq-q b');if(x)x.textContent='+'});const icon=b.querySelector('b');if(opening){row.classList.add('open');if(icon)icon.textContent='−'}else if(icon)icon.textContent='+'}));</script></body></html>
+
+<style id="release-desktop-upgrade-photos">
+@media(min-width:901px){
+ .upgrade-pc .up-step-photo{height:clamp(110px,10vw,160px)!important;overflow:hidden!important}
+ .upgrade-pc .up-step-photo img{object-position:center top!important}
+}
+</style>
