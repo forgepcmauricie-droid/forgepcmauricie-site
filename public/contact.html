@@ -489,3 +489,10 @@ message.addEventListener('input',()=>count.textContent=message.value.length);
  body.contact-page .send button.cta{min-height:54px!important;font-size:16px!important;padding:0 26px!important}
 }
 </style>
+
+<style id="release-desktop-contact-hero">
+@media(min-width:901px){
+ body.contact-page > section.hero{height:auto!important;min-height:0!important;aspect-ratio:1173/255!important;padding:0!important;background:#02090b url('Assets/contact-content-approved.png') center top/100% auto no-repeat!important}
+ body.contact-page > section.hero::before,body.contact-page > section.hero::after,body.contact-page > section.hero > .wrap{display:none!important}
+}
+</style>
