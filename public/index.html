@@ -305,10 +305,9 @@ document.addEventListener('DOMContentLoaded', function(){
 </style>
 <style id="mug-photo-mobile-maquette">
 @media(max-width:900px){
- body.home-page .home-about .about>img{content:url('Assets/gaming-cta-cafe-panorama.png')!important;width:100%!important;height:auto!important;aspect-ratio:371/206!important;object-fit:cover!important;object-position:right center!important;transform:scale(1.12)!important;transform-origin:left bottom!important}
+ body.home-page .home-about .about>img{content:url('Assets/about-mug-original.jpg')!important;width:100%!important;height:auto!important;aspect-ratio:371/206!important;object-fit:cover!important;object-position:center!important;transform:none!important}
  body.home-page .home-about .about{position:relative!important;overflow:hidden!important}
- body.home-page .home-about .about:after{content:"Une entreprise\A de chez nous.";white-space:pre;position:absolute;right:6%;top:10%;z-index:3;color:#fff;font:italic 19px/1.08 "Segoe Print",cursive;text-align:center;text-shadow:0 2px 5px #000;transform:rotate(-7deg);pointer-events:none}
- body.home-page .home-about .about:before{content:"";position:absolute;right:7%;top:34%;width:108px;height:18px;background:transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 18'%3E%3Cpath d='M3 15 C31 12 76 5 117 3' fill='none' stroke='%23ff5a00' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E") center/100% 100% no-repeat;transform:none;pointer-events:none;z-index:4}
+ body.home-page .home-about .about:after,body.home-page .home-about .about:before{content:none!important;display:none!important}
 }
 </style>
 <style id="home-project-mobile-readable">
@@ -319,8 +318,8 @@ document.addEventListener('DOMContentLoaded', function(){
  body.home-page .home-project h2{max-width:100%!important;margin:0!important;color:#fff!important;font-size:17px!important;line-height:1.14!important;text-align:left!important}
  body.home-page .home-project h2 span{display:block!important;color:#ff5a00!important}
  body.home-page .home-project .btn{width:auto!important;min-width:0!important;height:38px!important;min-height:38px!important;padding:0 17px!important;margin:0 0 0 auto!important;align-self:flex-end!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;font-size:10px!important}
- body.home-page .home-copy .script{width:190px!important;margin:12px 0 0 5px!important;font-size:19px!important;line-height:1.08!important;transform:rotate(-4deg)!important;text-shadow:0 2px 7px #000,0 0 13px #000!important}
- body.home-page .home-copy .script:after{width:128px!important;height:18px!important;margin:2px 0 0 14px!important;background:transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 18'%3E%3Cpath d='M3 15 C31 12 76 5 117 3' fill='none' stroke='%23ff5a00' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E") center/100% 100% no-repeat!important;clip-path:none!important;transform:none!important}
+ body.home-page .home-copy .script{width:190px!important;margin:18px 0 0 5px!important;font-size:18px!important;line-height:1.05!important;transform:rotate(-5deg)!important;text-shadow:0 2px 7px #000,0 0 13px #000!important}
+ body.home-page .home-copy .script:after{width:92px!important;height:4px!important;margin:7px 0 0 18px!important;background:#ff5a00!important;clip-path:polygon(0 45%,100% 0,100% 70%,0 100%)!important;transform:rotate(-4deg)!important}
  body.home-page .home-hero{background-image:linear-gradient(rgba(2,9,11,.85),rgba(2,9,11,.85)),url('Assets/hero-workstation-crop.jpg')!important;background-size:100% 100%,cover!important;background-position:center!important}
  body.home-page .home-hero:after{content:"";position:absolute;inset:30% 0 0;z-index:0;pointer-events:none;background:url('Assets/hero-workstation-crop.jpg') center top/cover no-repeat;-webkit-mask-image:linear-gradient(to bottom,transparent,#000 16%);mask-image:linear-gradient(to bottom,transparent,#000 16%)}
 }
