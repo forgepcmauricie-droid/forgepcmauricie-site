@@ -322,6 +322,13 @@ document.addEventListener('DOMContentLoaded', function(){
 </style>
 <style id="home-mobile-signatures-and-mug">
 @media(max-width:900px){
+ body.home-page .home-hero{
+  background-color:#020b0f!important;
+  background-image:linear-gradient(180deg,rgba(2,9,11,.22),rgba(2,9,11,.08)),url('Assets/hero-workstation-crop.jpg')!important;
+  background-size:100% 100%,auto 60%!important;
+  background-position:center,right bottom!important;
+  background-repeat:no-repeat!important;
+ }
  body.home-page .home-copy .script{
   display:inline-block!important;width:auto!important;max-width:220px!important;
   margin:16px 0 0 6px!important;text-align:left!important;
@@ -333,8 +340,9 @@ document.addEventListener('DOMContentLoaded', function(){
   transform:rotate(-6deg)!important;
  }
  body.home-page .home-about .about>img{
-  aspect-ratio:371/250!important;object-fit:cover!important;
-  object-position:center 50%!important;
+  aspect-ratio:371/206!important;object-fit:contain!important;
+  object-position:left center!important;
+  background:#071116 url('Assets/gaming-cta-cafe-panorama.png') center 55%/cover no-repeat!important;
  }
  body.home-page .home-about .about:after{
   right:5%!important;top:8%!important;
