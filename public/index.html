@@ -320,5 +320,33 @@ document.addEventListener('DOMContentLoaded', function(){
  body.home-page .home-project .btn{width:auto!important;min-width:0!important;height:38px!important;min-height:38px!important;padding:0 17px!important;margin:0 0 0 auto!important;align-self:flex-end!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;font-size:10px!important}
 }
 </style>
+<style id="home-mobile-signatures-and-mug">
+@media(max-width:900px){
+ body.home-page .home-copy .script{
+  display:inline-block!important;width:auto!important;max-width:220px!important;
+  margin:16px 0 0 6px!important;text-align:left!important;
+  font:italic 19px/1.12 "Segoe Print",cursive!important;
+  transform:rotate(-4deg)!important;
+ }
+ body.home-page .home-copy .script:after{
+  width:108px!important;height:4px!important;margin:6px 0 0 18px!important;
+  transform:rotate(-6deg)!important;
+ }
+ body.home-page .home-about .about>img{
+  aspect-ratio:371/250!important;object-fit:cover!important;
+  object-position:center 50%!important;
+ }
+ body.home-page .home-about .about:after{
+  right:5%!important;top:8%!important;
+  font:italic 18px/1.08 "Segoe Print",cursive!important;
+  transform:rotate(-6deg)!important;
+ }
+ body.home-page .home-about .about:before{
+  content:"";position:absolute;z-index:2;right:7%;top:25%;
+  width:105px;height:3px;background:#ff5a00;
+  transform:rotate(-11deg);pointer-events:none;
+ }
+}
+</style>
 </body>
 </html>
