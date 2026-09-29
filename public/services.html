@@ -329,11 +329,20 @@ document.querySelectorAll('.mobile-info-toggle').forEach(toggle=>{
     document.querySelectorAll('.mobile-info-item.is-open').forEach(other=>{
       other.classList.remove('is-open');
       const btn=other.querySelector('.mobile-info-toggle');
-      if(btn) btn.setAttribute('aria-expanded','false');
+      if(btn){
+        btn.setAttribute('aria-expanded','false');
+        const icon=btn.querySelector('b');
+        if(icon) icon.textContent='+';
+      }
     });
     if(!wasOpen){
       item.classList.add('is-open');
       toggle.setAttribute('aria-expanded','true');
+      const icon=toggle.querySelector('b');
+      if(icon) icon.textContent='−';
+    }else{
+      const icon=toggle.querySelector('b');
+      if(icon) icon.textContent='+';
     }
   });
 });
@@ -376,6 +385,12 @@ document.querySelectorAll('.mobile-info-item').forEach(item=>item.classList.remo
  .v1-desktop-viewport .v1-info p{font-size:12.5px!important;line-height:1.45!important;margin-bottom:12px!important}
  .v1-desktop-viewport .v1-info .sector{height:105px!important;object-position:center 53%!important}
  .v1-desktop-viewport .v1-info .info>a{font-size:10.5px!important}
+}
+</style>
+<style id="services-mobile-slogan-approved">
+@media(max-width:900px){
+ .v1-mobile-original .services-copy .script{display:block!important;width:190px!important;height:80px!important;max-width:none!important;margin:7px 0 0!important;background:transparent url('Assets/home-hero-slogan-desktop.png') left top/contain no-repeat!important;color:transparent!important;font-size:0!important;line-height:0!important;transform:none!important;text-shadow:none!important;filter:drop-shadow(0 2px 2px rgba(0,0,0,.95)) drop-shadow(0 0 6px rgba(0,0,0,.9))!important;overflow:hidden!important}
+ .v1-mobile-original .services-copy .script:after{content:none!important;display:none!important}
 }
 </style></body>
 </html>
