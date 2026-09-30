@@ -16,8 +16,7 @@ body.rdv-pc-gaming #projet{margin-top:0!important}
 }
 </style>
 <link href="Assets/qa-owner-fixes.css?v=7" rel="stylesheet"/>
-<link href="Assets/index-shell-copy.css?v=2" rel="stylesheet"/><link rel="stylesheet" href="Assets/index-footer-lock.css?v=10">
-
+<link href="Assets/index-shell-copy.css?v=2" rel="stylesheet"/><link href="Assets/index-footer-lock.css?v=10" rel="stylesheet"/>
 <style id="footer-dedup-final-v11">
 @media (min-width:901px){
   .legacy-footer-mobile-only{display:none !important;}
@@ -29,9 +28,16 @@ body.rdv-pc-gaming #projet{margin-top:0!important}
   .legacy-footer-mobile-only{display:block !important;}
 }
 </style>
-<link href="Assets/forgepc-unified-shell.css?v=87" rel="stylesheet"/>
-<script defer src="Assets/forgepc-unified-shell.js?v=87"></script>
-</head>
+<link href="Assets/forgepc-unified-shell.css?v=87" rel="stylesheet">
+<script defer="" src="Assets/forgepc-unified-shell.js?v=87"></script>
+<style id="rdv-gaming-v45-exact-maquette-icons">
+@media (max-width:800px){
+ body.rdv-pc-gaming[data-mobile-page="pc-gaming-sur-mesure"] .gaming-benefits b:before{content:none!important;display:none!important;}
+ body.rdv-pc-gaming[data-mobile-page="pc-gaming-sur-mesure"] .gaming-benefits b{font-size:0!important;width:auto!important;height:40px!important;display:flex!important;align-items:center!important;justify-content:center!important;}
+ body.rdv-pc-gaming[data-mobile-page="pc-gaming-sur-mesure"] .gaming-benefits b img{display:block!important;width:auto!important;height:40px!important;max-width:45px!important;object-fit:contain!important;}
+}
+</style>
+</link></head>
 <body class="rdv-pc-gaming pc-gaming-page fp-index-shell-copy" data-mobile-page="pc-gaming-sur-mesure"><header class="site-header">
 <div class="container nav">
 <a aria-label="ForgePC Mauricie" class="brand-link" href="index.html">
@@ -48,10 +54,9 @@ body.rdv-pc-gaming #projet{margin-top:0!important}
 <button aria-expanded="false" aria-label="Ouvrir le menu" class="menu" type="button">☰</button>
 </div>
 </header>
-
 <nav class="navlinks mobile-only"><a href="index.html">Accueil</a><a class="active" href="services.html">Services</a><a href="inventaire.html">Inventaire</a><a href="a-propos.html">À propos</a><a href="contact.html">Contact</a></nav>
 <main>
-<section class="gaming-hero"><div class="container"><div class="gaming-copy"><div class="gaming-eyebrow">+ DEMANDE DE PROJET</div><h1>PC GAMING <span>SUR MESURE</span></h1><p>Des performances adaptées à vos jeux, à vos besoins et à votre budget.</p><div class="gaming-tagline">Votre technologie,<br/>notre expertise.</div><div class="gaming-benefits"><span><b>🎮</b>Jeux vidéo</span><span><b>⚙</b>Performance</span><span><b>🛠️</b>Fiabilité</span><span><b>$</b>Qualité/prix</span><span><b>🏠</b>Service local</span></div></div><div class="gaming-side-benefits" aria-label="Avantages"><span>Conception<br/>personnalisée</span><span>Assemblage<br/>professionnel</span><span>Tests complets et<br/>optimisation</span><span>Soutien local<br/>après-vente</span></div><a class="btn primary hero-cta desktop-hero-cta" href="#projet">Présenter mon projet →</a><a class="btn primary hero-cta mobile-hero-cta" href="#projet">Présenter mon projet →</a></div></section>
+<section class="gaming-hero"><div class="container"><div class="gaming-copy"><div class="gaming-eyebrow">+ DEMANDE DE PROJET</div><h1>PC GAMING <span>SUR MESURE</span></h1><p>Des performances adaptées à vos jeux, à vos besoins et à votre budget.</p><div class="gaming-tagline">Votre technologie,<br/>notre expertise.</div><div class="gaming-benefits"><span><b><img alt="" class="benefit-svg" src="Assets/gaming-benefit-exact-1.svg"/></b>Jeux vidéo</span><span><b><img alt="" class="benefit-svg" src="Assets/gaming-benefit-exact-2.svg"/></b>Performance</span><span><b><img alt="" class="benefit-svg" src="Assets/gaming-benefit-exact-3.svg"/></b>Fiabilité</span><span><b><img alt="" class="benefit-svg" src="Assets/gaming-benefit-exact-4.svg"/></b>Qualité/prix</span><span><b><img alt="" class="benefit-svg" src="Assets/gaming-benefit-exact-5.svg"/></b>Service local</span></div></div><div aria-label="Avantages" class="gaming-side-benefits"><span>Conception<br/>personnalisée</span><span>Assemblage<br/>professionnel</span><span>Tests complets et<br/>optimisation</span><span>Soutien local<br/>après-vente</span></div><a class="btn primary hero-cta desktop-hero-cta" href="#projet">Présenter mon projet →</a><a class="btn primary hero-cta mobile-hero-cta" href="#projet">Présenter mon projet →</a></div></section>
 <section class="section"><div class="container"><div class="title-line"><h2 class="section-title">Notre approche</h2></div><div class="section-sub">Un PC conçu pour vous, sans compromis.</div><div class="approach">
 <article class="approach-card"><img alt="Discussion autour d'un PC gaming" src="Assets/gaming-approche-discussion.jpg"/><div class="approach-body"><h3><span class="num">1</span>Discussion</h3><p>On discute de vos besoins, de vos jeux, de votre budget et de vos préférences.</p></div></article>
 <article class="approach-card"><img alt="Configuration de composants PC" src="Assets/gaming-approche-configuration.jpg"/><div class="approach-body"><h3><span class="num">2</span>Configuration</h3><p>On vous propose une configuration adaptée où chaque composant est bien choisi.</p></div></article>
@@ -64,16 +69,15 @@ body.rdv-pc-gaming #projet{margin-top:0!important}
 </div></section>
 <section class="gaming-cta"><div class="container"><h2>Un projet de PC gaming ?<span>Parlons-en.</span></h2><a class="btn" href="contact.html">Nous contacter →</a></div></section>
 </main>
-
-<div class="index-footer-desktop-copy" aria-hidden="true"><img src="Assets/index-footer-approved-2x.png?v=2" alt=""></div>
+<div aria-hidden="true" class="index-footer-desktop-copy"><img alt="" src="Assets/index-footer-approved-2x.jpg?v=2"/></div>
 <div class="legacy-footer-mobile-only"><footer id="forgepc-footer">
 <div class="fp-wrap">
 <div class="fp-main">
-<img alt="ForgePC Mauricie" class="fp-logo" src="Assets/forgepc-logo-web.png"/>
+<img alt="ForgePC Mauricie" class="fp-logo" src="Assets/forgepc-logo-web.png">
 <div class="fp-tag">Votre technologie, notre expertise.</div>
 <div aria-label="Réseaux sociaux" class="fp-social"><span class="social-circle">f</span><span class="social-circle">◎</span></div>
 <div class="fp-contact"><span><svg viewbox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.1 7 13 7 13s7-7.9 7-13a7 7 0 0 0-7-7Zm0 9.6A2.6 2.6 0 1 1 12 6a2.6 2.6 0 0 1 0 5.6Z"></path></svg>Shawinigan et toute la Mauricie</span><span><svg viewbox="0 0 24 24"><path d="M6.6 2.8 10 8.1 7.8 10c1.6 3.3 3.9 5.6 7.2 7.2l1.9-2.2 5.3 3.4c-.5 2.1-2.1 3.6-4.2 3.6C9.2 22 2 14.8 2 6c0-2.1 1.5-3.7 4.6-3.2Z"></path></svg>819-944-7418</span><span><svg viewbox="0 0 24 24"><path d="M3 5h18v14H3V5Zm2 2 7 5 7-5H5Z"></path></svg>info@forgepcmauricie.ca</span></div>
-</div>
+</img></div>
 <div class="fp-bottom"><span>© 2026 ForgePC Mauricie. Tous droits réservés.</span><span>Politique de confidentialité   |   Mentions légales</span></div>
 </div>
 </footer></div><script>const b=document.querySelector('.menu'),m=document.querySelector('.mobile-only');b.addEventListener('click',()=>{const o=m.classList.toggle('open');b.setAttribute('aria-expanded',o)});</script>

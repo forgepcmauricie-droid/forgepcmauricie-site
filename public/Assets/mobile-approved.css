@@ -243,3 +243,66 @@ body.fp-wizard .fp-type-select{display:block!important;width:100%!important;}
     margin:8px 0 0 12px!important;
   }
 }
+
+/* PC Gaming mobile V44 — alignement strict sur la maquette : uniquement ces 2 corrections */
+@media(max-width:800px){
+  /* Les 4 avantages latéraux appartiennent au desktop seulement. */
+  body[data-mobile-page="pc-gaming-sur-mesure"] .hero-services{
+    display:none!important;
+  }
+
+  /* 5 pictos du hero : 3 en haut + 2 centrés en dessous, comme la maquette. */
+  body[data-mobile-page="pc-gaming-sur-mesure"] .hero .benefits{
+    display:grid!important;
+    grid-template-columns:repeat(6,minmax(0,1fr))!important;
+    width:100%!important;
+    gap:14px 4px!important;
+    justify-items:center!important;
+    align-items:start!important;
+  }
+  body[data-mobile-page="pc-gaming-sur-mesure"] .hero .benefit{
+    width:100%!important;
+    min-width:0!important;
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:center!important;
+    justify-content:flex-start!important;
+    text-align:center!important;
+    gap:5px!important;
+  }
+  body[data-mobile-page="pc-gaming-sur-mesure"] .hero .benefit:nth-child(1),
+  body[data-mobile-page="pc-gaming-sur-mesure"] .hero .benefit:nth-child(2),
+  body[data-mobile-page="pc-gaming-sur-mesure"] .hero .benefit:nth-child(3){grid-column:span 2!important;}
+  body[data-mobile-page="pc-gaming-sur-mesure"] .hero .benefit:nth-child(4){grid-column:2 / span 2!important;}
+  body[data-mobile-page="pc-gaming-sur-mesure"] .hero .benefit:nth-child(5){grid-column:4 / span 2!important;}
+}
+
+/* V47 — icônes héros PC Gaming en SVG vectoriel net, mêmes emplacements */
+@media(max-width:760px){
+ body[data-mobile-page="pc-gaming-sur-mesure"] .benefit .benefit-svg,
+ body[data-mobile-page="pc-gaming-sur-mesure"] .gaming-benefits .benefit-svg{
+   display:block!important;width:auto!important;height:61px!important;max-width:76px!important;overflow:visible!important;
+   fill:none!important;stroke:#ff5a00!important;stroke-width:4!important;stroke-linecap:round!important;stroke-linejoin:round!important;vector-effect:non-scaling-stroke!important;
+ }
+ body[data-mobile-page="pc-gaming-sur-mesure"] .gaming-benefits b .benefit-svg{height:61px!important;max-width:76px!important;}
+}
+
+/* V50 — icônes de la maquette: crops raster originaux, aucune réinterprétation */
+@media (max-width:700px){
+body.rdv-pc-gaming[data-mobile-page="pc-gaming-sur-mesure"] .gaming-benefits b{height:61px!important;width:76px!important;}
+body.rdv-pc-gaming[data-mobile-page="pc-gaming-sur-mesure"] .gaming-benefits b img{width:auto!important;height:auto!important;max-width:none!important;max-height:none!important;object-fit:none!important;}
+body.rdv-pc-gaming[data-mobile-page="pc-gaming-sur-mesure"] .gaming-benefits span:nth-child(1) b img{width:76px!important;height:58px!important;}
+body.rdv-pc-gaming[data-mobile-page="pc-gaming-sur-mesure"] .gaming-benefits span:nth-child(2) b img{width:57px!important;height:61px!important;}
+body.rdv-pc-gaming[data-mobile-page="pc-gaming-sur-mesure"] .gaming-benefits span:nth-child(3) b img{width:62px!important;height:61px!important;}
+body.rdv-pc-gaming[data-mobile-page="pc-gaming-sur-mesure"] .gaming-benefits span:nth-child(4) b img{width:55px!important;height:55px!important;}
+body.rdv-pc-gaming[data-mobile-page="pc-gaming-sur-mesure"] .gaming-benefits span:nth-child(5) b img{width:58px!important;height:58px!important;}
+}
+/* V54 — 5 icônes du hero recréées en SVG vectoriel, sans découpage raster */
+@media (max-width:760px){
+ body.rdv-pc-gaming[data-mobile-page="pc-gaming-sur-mesure"] .gaming-benefits b{height:58px!important;width:76px!important;background:none!important;overflow:visible!important;}
+ body.rdv-pc-gaming[data-mobile-page="pc-gaming-sur-mesure"] .gaming-benefits b:before{content:none!important;display:none!important;}
+ body.rdv-pc-gaming[data-mobile-page="pc-gaming-sur-mesure"] .gaming-benefits b img.benefit-svg{display:block!important;width:76px!important;height:58px!important;max-width:76px!important;max-height:58px!important;object-fit:contain!important;background:transparent!important;image-rendering:auto!important;}
+ body.rdv-pc-gaming[data-mobile-page="pc-gaming-sur-mesure"] .gaming-benefits span:nth-child(2) b img.benefit-svg,
+ body.rdv-pc-gaming[data-mobile-page="pc-gaming-sur-mesure"] .gaming-benefits span:nth-child(4) b img.benefit-svg,
+ body.rdv-pc-gaming[data-mobile-page="pc-gaming-sur-mesure"] .gaming-benefits span:nth-child(5) b img.benefit-svg{width:62px!important;}
+}
