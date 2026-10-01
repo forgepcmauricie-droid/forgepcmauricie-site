@@ -30,7 +30,7 @@
   html body.rdv-home-page .forgepc-unified-header .desktop-nav a[href="services.html"] {box-shadow:inset 0 -4px #ff5a00!important}
 
   /* Visuels photo autonomes, sans découpe ni texte de maquette intégré. */
-  html body.services-v1-reset .v1-hero {display:grid!important;grid-template-columns:315px minmax(0,1fr)!important;background:#020d11!important}
+  html body.services-v1-reset .v1-hero {display:grid!important;grid-template-columns:41% minmax(0,1fr)!important;background:#020d11!important}
   html body.services-v1-reset .v1-hero>.hero-copy {display:block!important;position:relative!important;z-index:2!important}
   html body.services-v1-reset .v1-hero>.hero-img {display:block!important;background:linear-gradient(90deg,#020d11,transparent 24%),url('services-hero-v102.jpg') center/cover no-repeat!important}
   html body.inventory-page .inventory-hero {background:#02090b url('inventory-hero-v102.jpg') center/cover no-repeat!important}
