@@ -12,7 +12,6 @@
   html body.fp-shell-index-reference>header.forgepc-unified-header .brand-link .logo {width:148px!important;min-width:148px!important;max-width:148px!important;height:63px!important;max-height:63px!important;object-fit:contain!important;object-position:center!important;transform:none!important;filter:none!important}
 
   /* Photo propre du héros Inventaire, sans texte intégré ni recadrage serré. */
-  html body.inventory-page .inventory-hero::before {left:35%!important;width:50%!important;background-image:url('inventory-hero-photo-clean.jpg')!important;background-size:cover!important;background-position:center center!important}
   html body.inventory-page .inventory-hero .inventory-hero-approved-pc {display:none!important}
 
   /* Caractéristiques puis état, sous la galerie ; prix dans la colonne de droite. */
