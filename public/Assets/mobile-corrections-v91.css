@@ -1,0 +1,42 @@
+/* Ajustements mobiles validés visuellement, bureau inchangé. */
+@media (max-width:900px){
+  body.home-page .home-why .why-grid article{justify-content:center!important;align-items:center!important}
+  body.home-page .home-why .why-grid .why-icon{width:48px!important;height:48px!important;min-width:48px!important;min-height:48px!important;max-width:48px!important;max-height:48px!important;margin:0 auto!important;align-self:center!important;display:grid!important;place-items:center!important}
+  body.home-page .home-why .why-grid .why-icon svg{width:42px!important;height:42px!important;max-width:42px!important;max-height:42px!important;margin:auto!important}
+
+  body.diagnostic-page .mobile-page .diagnostic-hero .feature .ico svg{stroke-width:2.25!important;stroke-linecap:round!important;stroke-linejoin:round!important}
+  body.diagnostic-page .mobile-page .diagnostic-hero .feature:nth-child(2) .ico svg,
+  body.diagnostic-page .mobile-page .diagnostic-hero .feature:nth-child(6) .ico svg{stroke-width:2.1!important}
+
+  body:has(.dd-mobile) .dd-mobile .m-steps{display:none!important}
+
+  body.upgrade-rebuild .upgrade-mobile-preserve .steps .step:nth-child(4){position:relative!important}
+  body.upgrade-rebuild .upgrade-mobile-preserve .steps .step:nth-child(4)::before{content:""!important;position:absolute!important;z-index:2!important;left:0!important;top:0!important;width:96px!important;height:96px!important;background:url('upgrade-step-4.jpg') right top / auto 175px no-repeat!important;pointer-events:none!important}
+
+  html body.rdv-upgrade-page main.desktop-rdv section.hero>div.features{order:5!important;position:relative!important;left:auto!important;right:auto!important;top:auto!important;bottom:auto!important;width:100%!important;height:auto!important;min-height:0!important;margin:12px 0 0!important;padding:0!important;background:transparent!important;z-index:4!important}
+  html body.rdv-upgrade-page main.desktop-rdv section.hero>div.hero-visual-tower{order:7!important;position:relative!important;inset:auto!important;width:calc(100% + 36px)!important;height:265px!important;min-height:265px!important;margin:8px -18px 0!important;background:url('rdv-upgrade-hero-mobile-clean-v4.jpg') center bottom/cover no-repeat!important;z-index:0!important}
+  html body.rdv-upgrade-page main.desktop-rdv section.hero>div.hero-note{bottom:24px!important}
+
+  body.gaming-page aside.side .feature{display:grid!important;grid-template-columns:38% minmax(0,1fr)!important;align-items:start!important;gap:12px!important}
+  body.gaming-page aside.side .feature img{width:100%!important;height:210px!important;margin:0!important;object-fit:cover!important;object-position:center!important}
+  body.gaming-page aside.side .feature>div{min-width:0!important}
+  body.gaming-page aside.side .feature h2{font-size:18px!important;margin:2px 0 9px!important}
+  body.gaming-page aside.side .feature p{font-size:12px!important;line-height:1.34!important}
+  body.gaming-page aside.side .feature em{font-size:17px!important}
+
+  body.home-service-page .mobile-page .hero .home-service-more{display:none!important}
+  body.home-service-page .mobile-page .hero .hero-copy{margin-bottom:3px!important}
+  body.home-service-page .mobile-page .hero .approved-slogan{margin-top:4px!important}
+
+  body.rdv-home-page main.desktop-rdv>.steps{display:none!important}
+  body.rdv-home-page .forgepc-unified-mobile-nav a[href="services.html"],
+  body.rdv-upgrade-page .forgepc-unified-mobile-nav a[href="services.html"]{color:#ff5a00!important}
+
+  html body.about-page section.about-hero{height:205px!important;min-height:205px!important;aspect-ratio:auto!important;background:#02090b url('apropos-hero-maquette-2x.jpg') right center/auto 100% no-repeat!important}
+  html body.about-page section.about-hero::after{display:none!important}
+  html body.about-page section.about-hero>.about-hero-inner{display:block!important;visibility:visible!important;position:relative!important;z-index:3!important;height:100%!important;min-height:0!important;width:100%!important}
+  html body.about-page section.about-hero .about-hero-copy{display:flex!important;visibility:visible!important;flex-direction:column!important;justify-content:center!important;width:48%!important;height:100%!important;padding:12px 0 12px 18px!important;background:linear-gradient(90deg,#02090b 0%,rgba(2,9,11,.87) 70%,transparent 100%)!important}
+  html body.about-page section.about-hero .about-hero-image,html body.about-page section.about-hero .about-hero-slogan{display:none!important}
+  html body.about-page section.about-hero h1{font-size:25px!important;line-height:1.02!important;max-width:180px!important}
+  html body.about-page section.about-hero .about-hero-sub{font-size:11px!important;line-height:1.25!important;max-width:165px!important;white-space:normal!important}
+}
