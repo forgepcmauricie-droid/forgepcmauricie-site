@@ -328,7 +328,15 @@
 <link href="Assets/forgepc-unified-shell.css?v=87" rel="stylesheet"/>
 <script defer src="Assets/forgepc-unified-shell-v96.js?v=96"></script>
 <style id="inventory-mobile-location-fix">@media(max-width:900px){body.inventory-page>.mobile-location{display:none!important}}</style>
-<link href="Assets/desktop-corrections-v98.css?v=98" rel="stylesheet"/></head>
+<link href="Assets/desktop-corrections-v98.css?v=98" rel="stylesheet"/>
+<style id="inventory-desktop-fade-v99">
+@media(min-width:901px){
+ html body.inventory-page .inventory-hero{height:310px!important;min-height:310px!important;background-color:#02090b!important;background-image:linear-gradient(90deg,#02090b 0%,#02090b 38%,rgba(2,9,11,.86) 47%,rgba(2,9,11,.24) 64%,rgba(2,9,11,.24) 75%,#02090b 95%),url('Assets/inventory-hero-photo-clean.jpg')!important;background-repeat:no-repeat!important;background-size:100% 100%,auto 100%!important;background-position:center,64% center!important}
+ html body.inventory-page .inventory-hero::before{content:none!important;display:none!important}
+ html body.inventory-page .inventory-hero .inventory-hero-inner{height:310px!important;min-height:310px!important}
+ html body.inventory-page .inventory-hero p{max-width:420px!important}
+}
+</style></head>
 <body class="inventory-page fp-index-shell-copy" data-mobile-page="inventaire"><header class="site-header fp-common-header"><div class="container nav"><a aria-label="ForgePC Mauricie" class="brand-link" href="index.html"><img alt="ForgePC Mauricie" class="logo" src="Assets/forgepc-logo-web.png"/></a><nav aria-label="Navigation principale" class="navlinks"><a href="index.html">Accueil</a><a href="services.html">Services</a><a href="inventaire.html">Inventaire</a><a href="a-propos.html">À propos</a><a href="contact.html">Contact</a></nav><div class="nav-location"><span>Shawinigan et<br/>toute la Mauricie</span></div><button aria-expanded="false" aria-label="Ouvrir le menu" class="menu" type="button"><span class="menu-bar"></span><span class="menu-bar"></span><span class="menu-bar"></span></button></div></header>
 <nav aria-label="Navigation mobile" class="navlinks mobile-nav">
 <a href="index.html">Accueil</a><a class="active" href="inventaire.html">Inventaire</a><a href="services.html">Services</a><a href="a-propos.html">À propos</a><a href="contact.html">Contact</a>
