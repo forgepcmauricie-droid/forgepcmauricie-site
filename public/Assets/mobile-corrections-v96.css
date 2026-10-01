@@ -1,0 +1,8 @@
+@media(max-width:900px){
+  body.home-service-page .mobile-page>.hero .feature-grid .feature .ico{display:flex!important;align-items:center!important;justify-content:center!important;height:64px!important;line-height:1!important;overflow:visible!important}
+  body.home-service-page .mobile-page>.hero .feature-grid .feature .ico img{display:none!important}
+  body.home-service-page .mobile-page>.hero .feature-grid .feature .ico::before{display:block!important;width:auto!important;height:auto!important;margin:0!important;background:none!important;color:#ff5a00!important;font:normal 47px/1 'ForgePC Mobile Icons'!important;text-rendering:geometricPrecision!important}
+  body.home-service-page .mobile-page>.hero .feature-grid .feature:nth-child(1) .ico::before{content:'\f015'!important}
+  body.home-service-page .mobile-page>.hero .feature-grid .feature:nth-child(2) .ico::before{content:'\f013'!important}
+  body.home-service-page .mobile-page>.hero .feature-grid .feature:nth-child(3) .ico::before{content:'\f041'!important}
+}
