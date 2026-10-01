@@ -27,7 +27,7 @@
 .about-bottom{display:grid;grid-template-columns:1.05fr .95fr;gap:12px;padding:14px 12px}.philosophy,.quote{border:1px solid var(--line);background:#030d10}.philosophy{padding:18px 22px}.philosophy h2{font-size:28px;margin:0 0 16px}.philosophy h2 span{color:var(--orange)}.philo-grid{display:grid;grid-template-columns:repeat(3,1fr)}.philo{text-align:center;padding:8px 12px;border-right:1px solid var(--line)}.philo:last-child{border-right:0}.philo-icon{font-size:34px}.philo strong{display:block;margin:8px 0 4px;font-size:16px}.philo small{font-size:13px;line-height:1.3;color:var(--muted)}
 .quote{position:relative;overflow:hidden;padding:28px 52px 24px 58px;display:flex;flex-direction:column;justify-content:center;background:linear-gradient(90deg,rgba(2,9,11,.96),rgba(2,9,11,.82)),none right center/48% 100% no-repeat}.quote-mark{color:var(--orange);font-size:54px;font-weight:900;line-height:.7}.quote p{font-size:14px;line-height:1.55;font-style:italic;color:#eee;margin:12px 0 10px}.signature{font-size:19px;font-style:italic;text-align:center}.signature:after{content:"";display:block;width:135px;height:3px;background:var(--orange);margin:5px auto 0;transform:rotate(-4deg)}
 .site-footer{background:#02090b;border-top:1px solid var(--line)}
-@media(max-width:800px){
+@media(max-width:900px){
  .container{width:min(calc(100% - 20px),680px)}
  .site-header{height:70px}.site-header .logo{width:132px;height:64px}.navlinks,.nav-location{display:none!important}.menu{display:flex!important;align-items:center;justify-content:center}
  .navlinks.mobile-only{display:none}.navlinks.mobile-only.open{display:flex;position:fixed;left:10px;right:10px;top:70px;width:auto;height:auto;z-index:5000;flex-direction:column;align-items:stretch;gap:0;margin:0;padding:6px;background:#02090b;border:1px solid #2d4147;border-radius:6px;box-shadow:0 10px 30px rgba(0,0,0,.55)}.navlinks.mobile-only.open a{height:auto;min-height:43px;padding:10px;border-bottom:1px solid #293a40}.navlinks.mobile-only.open a:last-child{border-bottom:0}
@@ -53,7 +53,7 @@
 }
 @media(max-width:480px){.mobile-location{padding:0 48px;font-size:17px}.about-hero h1{font-size:27px}.story-image{height:166px}.story-copy{padding-left:20px;padding-right:20px}.footer-bottom{justify-content:center;text-align:center}}
 /* PASS 2 — ajustements mobiles selon la maquette finale approuvée */
-@media(max-width:800px){
+@media(max-width:900px){
   .about-hero{min-height:158px}
   .about-hero-copy{padding:18px 24px 15px 24px}
   .about-kicker{font-size:12px;margin-bottom:6px}
@@ -83,7 +83,7 @@
 
 
 /* CORRECTION FINALE MOBILE — cadrage photo familiale selon maquette */
-@media(max-width:800px){
+@media(max-width:900px){
   .story-image{height:210px!important;background-size:cover!important;background-position:center 32%!important;}
 }
 @media(max-width:480px){
@@ -91,7 +91,7 @@
 }
 
 /* FINAL — photo famille sans recadrage mobile */
-@media(max-width:800px){
+@media(max-width:900px){
   .story-image{
     width:100%!important;
     height:auto!important;
@@ -108,7 +108,7 @@
 .about-svg-icon{stroke-width:4!important;overflow:visible}
 .value-icon,.philo-icon,.philo-title-icon{font-family:Arial,Helvetica,sans-serif!important}
 .value-icon::before,.philo-icon::before,.philo-title-icon::before{content:none!important}
-@media(min-width:801px){.value-icon .about-svg-icon{width:42px;height:42px}.philo-title-icon .about-svg-icon{width:35px;height:35px}.philo-icon .about-svg-icon{width:32px;height:32px}}
+@media(min-width:901px){.value-icon .about-svg-icon{width:42px;height:42px}.philo-title-icon .about-svg-icon{width:35px;height:35px}.philo-icon .about-svg-icon{width:32px;height:32px}}
 
 @media (min-width:901px){
   /* À propos V2 — finitions desktop ciblées */
@@ -129,12 +129,12 @@
 }
 </style>
 <link href="Assets/footer-shared.css" rel="stylesheet"/>
-<link href="Assets/mobile-approved.css" rel="stylesheet"/>
+<link href="Assets/mobile-approved-tablet-v86.css?v=86" rel="stylesheet"/>
 <script defer="" src="Assets/mobile-approved.js"></script>
-<link href="Assets/mobile-header-uniform.css?v=1" rel="stylesheet"/>
+<link href="Assets/mobile-header-uniform-tablet-v86.css?v=86" rel="stylesheet"/>
 <style>
 /* DESKTOP FINAL — alignement sur la maquette, sans toucher au mobile */
-@media (min-width:801px){
+@media (min-width:901px){
   :root{--max:1220px}
   .site-header .container{width:min(calc(100% - 36px),1220px)}
   .about-hero-inner{min-height:265px;grid-template-columns:40% 60%}
@@ -158,10 +158,10 @@
   .philosophy h2{font-size:28px}.quote{min-height:190px}
 }
 </style>
-<link href="Assets/qa-owner-fixes.css?v=2" rel="stylesheet"/>
+<link href="Assets/qa-owner-fixes-tablet-v86.css?v=86" rel="stylesheet"/>
 <link href="Assets/index-shell-copy.css?v=2" rel="stylesheet"/>
 <style id="about-desktop-v14-final">
-@media (min-width:801px){
+@media (min-width:901px){
   .about-main .story-copy,.about-main .story-copy *,.about-main .values,.about-main .values *,.about-main .about-bottom,.about-main .about-bottom *{visibility:visible!important;opacity:1!important;}
   .about-main .values{display:grid!important;grid-template-columns:1fr 1fr!important;}
   .about-main .value{display:block!important;min-height:210px!important;padding:22px 48px!important;}
@@ -259,7 +259,7 @@ body.about-page>main.about-main{display:block!important}
 @media(max-width:900px){
   .story-image{background-image:url('Assets/apropos-famille-maquette.jpg')!important;background-size:100% auto!important;background-position:center center!important;}
 }
-@media(max-width:800px){
+@media(max-width:900px){
   .about-hero-image{inset:0!important;background-position:right center!important;background-size:auto 100%!important;-webkit-mask-image:none!important;mask-image:none!important;}
   .about-hero::before{left:0!important;width:78%!important;background:linear-gradient(90deg,#02090b 0%,#02090b 28%,rgba(2,9,11,.96) 38%,rgba(2,9,11,.78) 50%,rgba(2,9,11,.52) 62%,rgba(2,9,11,.28) 73%,rgba(2,9,11,.10) 86%,rgba(2,9,11,0) 100%)!important;}
   .story-image{background-size:100% auto!important;background-position:center center!important;}
@@ -362,7 +362,7 @@ body.about-page>nav.mobile-only a:last-child{border-bottom:0!important}
 
 
 <style id="about-mobile-final-cleanup">
-@media (max-width:800px){
+@media (max-width:900px){
   /* Hero mobile complet fourni : composition et textes déjà intégrés. */
   body.about-page .about-hero{
     height:auto!important;min-height:0!important;

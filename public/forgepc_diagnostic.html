@@ -7,8 +7,8 @@
 <meta content="#071418" name="theme-color"/>
 <title>Réparation et diagnostic | ForgePC Mauricie</title>
 <meta content="Diagnostic précis, réparations fiables et service professionnel pour remettre votre ordinateur en pleine forme." name="description"/>
-<link href="Assets/service-mobile-html.css" rel="stylesheet"/>
-<link href="Assets/mobile-header-uniform.css?v=1" rel="stylesheet"/>
+<link href="Assets/service-mobile-html-tablet-v86.css?v=86" rel="stylesheet"/>
+<link href="Assets/mobile-header-uniform-tablet-v86.css?v=86" rel="stylesheet"/>
 <style>
 :root{--o:#ff4b12;--bg:#031014;--panel:#06161b;--line:#36515a;--white:#f5f7f7}
 *{box-sizing:border-box}html,body{margin:0;background:#06151a;color:var(--white);font-family:Arial,Helvetica,sans-serif;overflow-x:hidden}
@@ -44,7 +44,7 @@
 @media (max-width:900px){.desktop-diagnostic{display:none!important}.mobile-page{display:block!important}}
 
 /* Diagnostic mobile — Passe 1 : hero seulement. Desktop et sections suivantes inchangés. */
-@media (max-width:700px){
+@media (max-width:900px){
   .mobile-page .hero.diagnostic-hero{
     background-image:url('Assets/diagnostic-hero-photo-2x.jpg') !important;
     background-size:cover !important;
@@ -54,7 +54,7 @@
   }
 }
 
-@media(max-width:700px){
+@media(max-width:900px){
  body.diagnostic-page .mobile-page .diagnostic-hero h1{max-width:370px!important;width:100%!important;font-size:clamp(30px,8.2vw,36px)!important;line-height:1.02!important}
  body.diagnostic-page .mobile-page .diagnostic-hero .hero-copy{max-width:350px!important;width:100%!important;font-size:14px!important;line-height:1.4!important}
  body.diagnostic-page .mobile-page .diagnostic-hero:before{background:linear-gradient(90deg,rgba(1,8,10,.96),rgba(1,8,10,.76) 48%,rgba(1,8,10,.2))!important}
@@ -62,7 +62,7 @@
 
 
 /* Diagnostic mobile — Passe 2 : processus compact seulement. */
-@media (max-width:700px){
+@media (max-width:900px){
   .diagnostic-page .mobile-page .section-title{
     height:auto;
     min-height:60px;
@@ -136,7 +136,7 @@
 
 
 /* Diagnostic mobile — passe finale : lisibilité FAQ + footer seulement. */
-@media (max-width:700px){
+@media (max-width:900px){
   .diagnostic-page .mobile-page .faq-row{
     font-size:11px;
     line-height:1.28;
@@ -182,7 +182,7 @@
 </style>
 
 <style id="fp-diagnostic-faq-horizontal-minus-v2620">
-@media (max-width:700px){
+@media (max-width:900px){
   body.diagnostic-page .mobile-page .faq-row.open > button{font-size:0!important;position:relative!important;transform:none!important;}
   body.diagnostic-page .mobile-page .faq-row.open > button::before{content:""!important;display:block!important;width:9px!important;height:2px!important;background:var(--orange)!important;border-radius:2px!important;position:absolute!important;left:50%!important;top:50%!important;transform:translate(-50%,-50%)!important;}
 }
@@ -190,7 +190,7 @@
 <link href="Assets/forgepc-unified-shell.css?v=87" rel="stylesheet"/>
 <script defer src="Assets/forgepc-unified-shell.js?v=85-final"></script>
 <style id="diagnostic-mobile-maquette-text-icons">
-@media(max-width:700px){
+@media(max-width:900px){
  body.diagnostic-page .mobile-page .diagnostic-hero h1{max-width:none!important;width:100%!important;font-size:clamp(31px,8vw,35px)!important;line-height:1.01!important;letter-spacing:-.65px!important}
  body.diagnostic-page .mobile-page .diagnostic-hero h1 br{display:none!important}
  body.diagnostic-page .mobile-page .diagnostic-hero .hero-copy{max-width:365px!important;font-size:15px!important;line-height:1.45!important}
