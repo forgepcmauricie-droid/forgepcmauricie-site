@@ -1,0 +1,18 @@
+@font-face{font-family:'ForgePC Mobile Icons';src:url('fontawesome-webfont.ttf') format('truetype');font-weight:normal;font-style:normal;font-display:block}
+@media(max-width:900px){
+  body.home-page .home-why .why-grid article:first-child .why-icon svg .cut{stroke-width:7!important;stroke-linecap:round!important;stroke-linejoin:round!important}
+  body.home-page .home-why .why-grid article:nth-child(3) .why-icon svg text{font-family:Arial,Helvetica,sans-serif!important;font-size:43px!important;font-weight:900!important;fill:#071116!important}
+  body.services-v1-reset .services-card h3 svg.mobile-service-icon{width:29px!important;height:29px!important;min-width:29px!important;min-height:29px!important;stroke-width:1.9!important}
+
+  body.upgrade-rebuild .upgrade-mobile-preserve .upgrade-hero .feature-grid.five .ico{height:46px!important;line-height:46px!important;display:flex!important;align-items:center!important;justify-content:center!important;margin-bottom:3px!important;overflow:visible!important}
+  body.upgrade-rebuild .upgrade-mobile-preserve .upgrade-hero .feature-grid.five .ico svg{display:none!important}
+  body.upgrade-rebuild .upgrade-mobile-preserve .upgrade-hero .feature-grid.five .ico::before{display:block!important;width:auto!important;height:auto!important;margin:0!important;background:none!important;color:#ff5a00!important;font:normal 39px/1 'ForgePC Mobile Icons'!important;text-rendering:geometricPrecision!important}
+  body.upgrade-rebuild .upgrade-mobile-preserve .upgrade-hero .feature:nth-child(1) .ico::before{content:'\f0e4'!important}
+  body.upgrade-rebuild .upgrade-mobile-preserve .upgrade-hero .feature:nth-child(2) .ico::before{content:'\f11b'!important}
+  body.upgrade-rebuild .upgrade-mobile-preserve .upgrade-hero .feature:nth-child(3) .ico::before{content:'\f017'!important}
+  body.upgrade-rebuild .upgrade-mobile-preserve .upgrade-hero .feature:nth-child(4) .ico::before{content:'$'!important;display:flex!important;align-items:center!important;justify-content:center!important;width:38px!important;height:38px!important;border-radius:50%!important;background:#ff5a00!important;color:#071116!important;font:900 29px/1 Arial,Helvetica,sans-serif!important}
+  body.upgrade-rebuild .upgrade-mobile-preserve .upgrade-hero .feature:nth-child(5) .ico::before{content:'\f1b8'!important}
+
+  html body.about-page section.about-hero .about-hero-slogan{font-size:25px!important;line-height:1.02!important;width:126px!important;right:8px!important;top:48%!important}
+  html body.about-page section.about-hero .about-hero-slogan::after{width:96px!important;height:12px!important}
+}
