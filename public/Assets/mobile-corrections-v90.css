@@ -1,0 +1,26 @@
+/* Corrections mobiles du 1 octobre 2026, sans effet sur le bureau. */
+@media (max-width:900px){
+  body.home-page .home-why .why-grid p{display:none!important}
+
+  body[data-mobile-page="rdv-vente"] .hero .benefits{border-top:0!important;padding-top:0!important;margin-top:11px!important}
+
+  body.services-v1-reset .how .step:last-child{display:grid!important;visibility:visible!important}
+
+  body.diagnostic-page .mobile-page .diagnostic-hero .feature .ico{height:47px!important}
+  body.diagnostic-page .mobile-page .diagnostic-hero .feature .ico svg{width:44px!important;height:44px!important}
+
+  body[data-mobile-page="rendezvous"] .dd-mobile .m-steps{display:none!important}
+
+  body.upgrade-rebuild .upgrade-mobile-preserve .upgrade-hero .feature-grid.five .ico{height:46px!important;line-height:46px!important}
+  body.upgrade-rebuild .upgrade-mobile-preserve .upgrade-hero .feature-grid.five .ico::before{height:46px!important}
+
+  body.rdv-upgrade-page main.desktop-rdv>.steps{display:none!important}
+  body.rdv-upgrade-page main.desktop-rdv section.hero{height:auto!important;min-height:0!important;padding:18px 18px 0!important;display:flex!important;flex-direction:column!important}
+  body.rdv-upgrade-page main.desktop-rdv section.hero>.hero-visual-tower{position:relative!important;order:7!important;inset:auto!important;left:auto!important;right:auto!important;top:auto!important;width:calc(100% + 36px)!important;height:270px!important;min-height:270px!important;margin:16px -18px 0!important;background-position:center bottom!important;background-size:cover!important}
+  body.rdv-upgrade-page main.desktop-rdv section.hero>.hero-note{bottom:115px!important}
+  body.rdv-upgrade-page main.desktop-rdv section.hero>.features{position:relative!important;order:8!important;left:auto!important;right:auto!important;bottom:auto!important;width:calc(100% + 36px)!important;height:auto!important;min-height:76px!important;margin:0 -18px!important;padding:12px 18px!important;background:#03151b!important;box-sizing:border-box!important;align-items:center!important}
+
+  body.gaming-page .hero .copy p br{display:none!important}
+
+  html body.about-page section.about-hero::after{content:""!important;display:block!important;position:absolute!important;z-index:3!important;top:0!important;right:0!important;width:48%!important;height:100%!important;background:#02090b url('apropos-hero-maquette-2x.jpg') right center / auto 180% no-repeat!important;pointer-events:none!important}
+}
