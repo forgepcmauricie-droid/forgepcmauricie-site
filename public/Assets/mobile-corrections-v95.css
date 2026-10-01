@@ -1,0 +1,12 @@
+@media(max-width:900px){
+  body.upgrade-rebuild .upgrade-mobile-preserve .upgrade-hero .feature:nth-child(-n+2) .ico::before{content:none!important;display:none!important}
+  body.upgrade-rebuild .upgrade-mobile-preserve .upgrade-hero .feature:nth-child(-n+2) .ico svg{display:block!important;width:40px!important;height:40px!important;max-width:40px!important;max-height:40px!important;margin:0 auto!important;overflow:visible!important}
+
+  html body.about-page section.about-hero{height:210px!important;min-height:210px!important}
+  html body.about-page section.about-hero .about-kicker{font-size:12px!important;margin-bottom:8px!important}
+  html body.about-page section.about-hero h1{font-size:28px!important;line-height:1.03!important;max-width:260px!important}
+  html body.about-page section.about-hero .about-hero-sub{font-size:12px!important;line-height:1.25!important;max-width:190px!important}
+  html body.about-page section.about-hero .about-hero-copy{width:65%!important}
+  html body.about-page section.about-hero .about-hero-slogan{font-family:'ForgePC Handwriting V85',cursive!important;font-size:21px!important;line-height:1.02!important;font-weight:300!important;width:105px!important;right:10px!important;top:49%!important;transform:translateY(-50%) rotate(-5deg)!important}
+  html body.about-page section.about-hero .about-hero-slogan::after{content:""!important;display:block!important;width:81px!important;height:10px!important;margin:5px auto 0!important;background:transparent url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 12"%3E%3Cpath d="M3 10 Q52 1 97 5" fill="none" stroke="%23ff5a00" stroke-width="3" stroke-linecap="round"/%3E%3C/svg%3E') center/100% 100% no-repeat!important;border:0!important;transform:rotate(-3deg)!important}
+}
