@@ -10,9 +10,17 @@
 
   document.addEventListener('DOMContentLoaded',()=>{
     document.body.classList.add('fp-shell-index-reference');
-    document.querySelectorAll('header, footer, nav.mobile-only, nav.mobile-nav, .m-menu, .index-footer-desktop-copy, .legacy-footer-mobile-only').forEach(el=>el.remove());
+    const approved=document.createElement('link');approved.rel='stylesheet';approved.href='Assets/qa-approved-v85.css?v=85';document.head.appendChild(approved);
+    document.querySelectorAll('header, footer, nav.mobile-only, nav.mobile-nav, .m-menu, .index-footer-desktop-copy, .legacy-footer-mobile-only, .rd-approved-footer').forEach(el=>el.remove());
     document.body.insertAdjacentHTML('afterbegin',header);
     document.body.insertAdjacentHTML('beforeend',footer);
+    // Apply the approved font to text slogans after the shared shell is ready.
+    document.querySelectorAll('.approved-slogan,.signature,.about-hero-slogan,.gaming-tagline,.hero-note,.dd-hero-note,.m-hero-note-final,.fp-tag,.up-script-new,.up-fast-script,.upgrade-mobile-preserve .upgrade-hero .script').forEach(el=>{
+      el.style.setProperty('font-family','ForgePC Handwriting V85','important');
+      el.style.setProperty('font-weight','300','important');
+      el.style.setProperty('font-style','normal','important');
+      el.style.setProperty('letter-spacing','0','important');
+    });
     const button=document.querySelector('.forgepc-unified-header .menu');
     const nav=document.querySelector('.forgepc-unified-mobile-nav');
     button.addEventListener('click',()=>{const open=nav.classList.toggle('open');button.setAttribute('aria-expanded',open?'true':'false')});
