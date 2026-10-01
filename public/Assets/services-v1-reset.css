@@ -220,9 +220,9 @@ html,body{margin:0;background:#020b0f;color:#fff;font-family:Arial,Helvetica,san
 /* V3 — Services: WRX officielle uniquement dans la carte domicile + bandeau café sans voiture */
 @media(min-width:901px){
   .v1-card:nth-child(5) .photo{
-    content:url("subaru-wrx-officiel-crop.jpg")!important;
+    content:url("service-domicile-services-forest-square-v73.png")!important;
     object-fit:cover!important;
-    object-position:center 58%!important;
+    object-position:center 75%!important;
   }
   .v1-cta{
     height:112px!important;
@@ -244,9 +244,9 @@ html,body{margin:0;background:#020b0f;color:#fff;font-family:Arial,Helvetica,san
   }
   /* Service à domicile: WRX ForgePC officielle, cadrage voiture complète */
   .v1-services .card:nth-child(5) .photo{
-    content:url("subaru-wrx-officiel-crop.jpg")!important;
+    content:url("service-domicile-services-forest-square-v73.png")!important;
     object-fit:cover!important;
-    object-position:center 55%!important;
+    object-position:center 75%!important;
   }
   /* Parlons-en: bandeau large préparé à partir de la tasse originale, sans étirement */
   .v1-cta{
