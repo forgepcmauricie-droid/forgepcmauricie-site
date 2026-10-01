@@ -1,0 +1,20 @@
+/* Derniers ajustements de cadrage et pictogrammes mobiles. */
+@media (max-width:900px){
+  body.home-page .home-why .why-grid article:nth-child(2) .why-icon svg{overflow:visible!important;width:39px!important;height:39px!important;max-width:39px!important;max-height:39px!important}
+  body.home-page .home-why .why-grid article:nth-child(3) .why-icon{position:relative!important}
+  body.home-page .home-why .why-grid article:nth-child(3) .why-icon svg .cut{display:none!important}
+  body.home-page .home-why .why-grid article:nth-child(3) .why-icon::after{content:"✓"!important;position:absolute!important;left:50%!important;top:50%!important;transform:translate(-50%,-51%)!important;color:#071116!important;font:900 23px/1 Arial,sans-serif!important}
+
+  body[data-mobile-page="rdv-vente"] .hero .benefit svg{width:30px!important;height:30px!important;min-width:30px!important;max-width:30px!important;flex:0 0 30px!important;overflow:visible!important}
+
+  body.services-v1-reset .services-card h3 a{display:flex!important;align-items:center!important;gap:4px!important}
+  body.services-v1-reset .services-card h3 svg.mobile-service-icon{display:block!important;width:23px!important;height:23px!important;min-width:23px!important;min-height:23px!important;flex:0 0 23px!important;fill:none!important;stroke:#ff5a00!important;stroke-width:2.1!important;overflow:visible!important}
+
+  body.gaming-page aside.side .feature img{width:100%!important;height:auto!important;aspect-ratio:800/860!important;object-fit:contain!important;object-position:center top!important;background:transparent!important}
+
+  html body.about-page section.about-hero{height:195px!important;min-height:195px!important;aspect-ratio:auto!important;background:#02090b url('apropos-hero-reference.png') center center/100% 100% no-repeat!important}
+  html body.about-page section.about-hero>.about-hero-inner{display:none!important;visibility:hidden!important}
+  html body.about-page section.about-hero::after{display:none!important}
+ html body.about-page section.about-hero .about-hero-slogan{display:none!important}
+
+}
