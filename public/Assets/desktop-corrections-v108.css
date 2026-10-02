@@ -1,0 +1,11 @@
+@media (min-width:901px) {
+  html body.services-v1-reset .v1-hero::after {
+    left:40.4%!important;top:7.5%!important;width:21.2%!important;height:53%!important;
+    background:#090d12 url('forgepc-logo-web.png') center/82% auto no-repeat!important;
+    box-shadow:inset 0 0 14px #05090e,0 0 3px #05090e!important;
+  }
+  html body.services-v1-reset .v1-desktop-viewport .v1-services .card:nth-child(4) .photo {
+    content:url('services-gaming-square-v108.png')!important;
+    object-fit:cover!important;object-position:center 44%!important;
+  }
+}
