@@ -1,0 +1,45 @@
+/* Dernières retouches de la maquette, desktop seulement. */
+@media (min-width:901px) {
+  html body.services-v1-reset .v1-hero {
+    background:#020b0e url('services-hero-v104.jpg') center center/cover no-repeat!important;
+    position:relative!important;
+    grid-template-columns:41% 59%!important;
+  }
+  html body.services-v1-reset .v1-hero>.hero-img {display:none!important}
+  html body.services-v1-reset .v1-hero>.hero-copy {background:linear-gradient(90deg,#020b0e 58%,rgba(2,11,14,.78) 80%,transparent)!important}
+  html body.services-v1-reset .v1-hero::after {
+    content:""!important;display:block!important;position:absolute!important;
+    left:41.3%!important;top:28%!important;width:15.8%!important;height:38%!important;
+    background:#080d12 url('forgepc-logo-web.png') center/93% auto no-repeat!important;
+    box-shadow:0 0 8px 4px #080d12!important;z-index:1!important;
+  }
+  html body.services-v1-reset .v1-hero>.hero-benefits-v104 {top:20%!important;right:3.3%!important;gap:20px!important}
+  html body.services-v1-reset .v1-desktop-viewport .v1-services .card:nth-child(4) .photo {
+    object-fit:contain!important;object-position:center center!important;background:#071219!important;
+  }
+  html body.services-v1-reset .v1-desktop-viewport .v1-info .info {position:relative!important;padding-bottom:36px!important}
+  html body.services-v1-reset .v1-desktop-viewport .v1-info .info>a {
+    position:absolute!important;bottom:14px!important;left:12px!important;right:12px!important;
+    padding:0!important;margin:0!important;line-height:1.1!important;
+  }
+  html body.contact-page>section.hero {position:relative!important}
+  html body.contact-page>section.hero::after {
+    content:""!important;display:block!important;position:absolute!important;
+    left:65.5%!important;top:33%!important;width:12.2%!important;height:37%!important;
+    background:url('forgepc-logo-web.png') center/contain no-repeat!important;
+    transform:perspective(350px) rotateY(-5deg) rotate(-2deg)!important;
+    filter:drop-shadow(0 2px 2px #000)!important;z-index:1!important;
+  }
+  html body .dd-desktop .dd-hero {
+    background-size:100% 100%,100% auto!important;
+    background-position:center,center 58%!important;
+  }
+  html body.upgrade-rebuild .upgrade-pc .up-benefit-new b.recycle-symbol {
+    width:48px!important;height:48px!important;
+    background:url('recycle-solid-v107.svg') center/contain no-repeat!important;
+  }
+  html body.gaming-page .hero-media img {
+    width:auto!important;height:100%!important;right:3%!important;top:0!important;
+    object-fit:contain!important;object-position:center center!important;
+  }
+}
