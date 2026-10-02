@@ -1,0 +1,90 @@
+/* Retouches desktop V104 : photos autonomes et contenu HTML. */
+@media (min-width:901px) {
+ html body.services-v1-reset .v1-hero {display:grid!important;grid-template-columns:41% 59%!important;background:#020b0e!important;position:relative!important;overflow:hidden!important}
+ html body.services-v1-reset .v1-hero>.hero-copy {display:block!important;z-index:2!important;background:linear-gradient(90deg,#020b0e 72%,transparent)!important}
+ html body.services-v1-reset .v1-hero>.hero-img {display:block!important;background:linear-gradient(90deg,#020b0e,transparent 22%),url('services-hero-v104.jpg') 57% center/cover no-repeat!important}
+ html body.services-v1-reset .v1-hero>.hero-benefits-v104 {position:absolute!important;right:2.5%!important;top:20%!important;z-index:3!important;display:grid!important;gap:20px!important;width:16%!important;color:#fff!important;text-transform:uppercase!important;font-size:13px!important;font-weight:800!important;text-shadow:0 2px 5px #000!important}
+ html body.services-v1-reset .v1-hero>.hero-benefits-v104 span {display:flex!important;align-items:center!important;gap:8px!important}
+ html body.services-v1-reset .v1-hero>.hero-benefits-v104 b {color:#ff5a00!important;font-size:29px!important;line-height:1!important}
+ html body.services-v1-reset .v1-desktop-viewport .v1-services .card:nth-child(1) .photo {content:url('services-pc-v104.jpg')!important}
+ html body.services-v1-reset .v1-desktop-viewport .v1-services .card:nth-child(2) .photo {content:url('services-repair-v104.jpg')!important}
+ html body.services-v1-reset .v1-desktop-viewport .v1-services .card:nth-child(3) .photo {content:url('services-upgrade-v104.jpg')!important}
+ html body.services-v1-reset .v1-desktop-viewport .v1-services .card:nth-child(5) .photo {content:url('services-home-v104.jpg')!important}
+ html body.services-v1-reset .v1-desktop-viewport .v1-services .card .photo {object-fit:cover!important;image-rendering:auto!important}
+ html body.services-v1-reset .v1-desktop-viewport .v1-services .card:nth-child(3) h3 svg {padding:5px!important;stroke-width:2!important;overflow:visible!important}
+ html body.services-v1-reset .v1-desktop-viewport .v1-services .card:nth-child(3) h3 svg>circle:first-child {display:none!important}
+ html body.services-v1-reset .v1-desktop-viewport .v1-info .info {display:flex!important;flex-direction:column!important;min-height:0!important}
+ html body.services-v1-reset .v1-desktop-viewport .v1-info .info>a {position:static!important;display:inline-block!important;margin-top:auto!important;padding-top:8px!important;align-self:flex-start!important;white-space:nowrap!important}
+ html body.pc-page .detail-extras {align-items:stretch!important;grid-template-rows:auto minmax(98px,auto) auto!important}
+ html body.pc-page .detail-extras>.box:nth-child(2),html body.pc-page .detail-extras>.price-box {grid-row:2!important;height:100%!important;min-height:98px!important;box-sizing:border-box!important;align-self:stretch!important;margin:0!important}
+ html body[data-mobile-page="rdv-vente"] .hero {min-height:370px!important;padding-top:35px!important;padding-bottom:35px!important}
+ html body[data-mobile-page="rdv-vente"] .hero .benefits {gap:28px!important;margin-top:35px!important;align-items:center!important;flex-wrap:nowrap!important}
+ html body[data-mobile-page="rdv-vente"] .hero .benefit {font-size:16px!important;gap:10px!important}
+ html body[data-mobile-page="rdv-vente"] .hero .benefit svg {width:45px!important;height:45px!important;min-width:45px!important;flex:0 0 45px!important}
+ html body.diagnostic-page .desktop-diagnostic .hero-left .script-pc {width:300px!important;height:120px!important;max-width:none!important;background-size:contain!important;margin-top:12px!important}
+ html body.diagnostic-page .desktop-diagnostic .bottom-cta-diagnostic {background-image:linear-gradient(90deg,#020b0ee8 0%,#020b0e88 50%,transparent),url('diagnostic-cta-v104.jpg')!important;background-size:cover!important;background-position:center!important}
+ html body.upgrade-rebuild .upgrade-pc .up-benefit-new b.recycle-symbol {background:none!important;width:44px!important;height:44px!important;color:#ff5a00!important;display:grid!important;place-items:center!important}
+ html body.upgrade-rebuild .upgrade-pc .up-benefit-new b.recycle-symbol::before {content:'♻'!important;display:block!important;font:700 44px/1 Arial,sans-serif!important;color:#ff5a00!important}
+ html body.gaming-page .hero-media img {content:url('gaming-hero-v104.jpg')!important;object-fit:cover!important;object-position:center!important}
+ html body.home-service-page .hero .approved-slogan {margin-top:34px!important}
+ html body.home-service-page .service-lower-desktop .service-trust-photo img {object-position:52% center!important}
+ html body.home-service-page .service-lower-desktop .service-trust-script {background:none!important;background-image:none!important;padding:0 2px 8px!important;text-shadow:0 2px 5px #000,0 0 10px #000!important}
+ html body.home-service-page .bottom-cta {background-image:linear-gradient(90deg,#020b0edb,transparent),url('home-cta-v104.jpg')!important;background-size:cover!important;background-position:center!important;min-height:150px!important}
+ html body.home-service-page .bottom-cta:before {display:none!important}
+ html body.home-service-page .bottom-cta>p,html body.home-service-page .bottom-cta>h3 {display:block!important;position:relative!important}
+ html body.home-service-page .bottom-cta>a.cta {display:inline-flex!important;position:relative!important}
+ html body.about-page .forgepc-unified-header .desktop-nav a[href="a-propos.html"] {box-shadow:inset 0 -2px #ff5a00!important}
+ html body.about-page .about-main .quote {display:flex!important;visibility:visible!important;min-height:218px!important;aspect-ratio:auto!important;padding:18px 42% 16px 30px!important;background:linear-gradient(90deg,#030d10 0%,#030d10df 51%,transparent 100%),url('about-quote-v104.jpg') right center/cover no-repeat!important}
+ html body.about-page .about-main .quote>* {visibility:visible!important}
+ html body.about-page .about-main .quote .signature {font-family:ForgePC Handwriting V85,'Segoe Print',cursive!important;font-size:19px!important;line-height:1.1!important}
+ html body.contact-page .desktop-contact-promo {background:linear-gradient(90deg,#020b0ecf,transparent 75%),url('contact-promo-v104.jpg') center/cover no-repeat!important;height:145px!important;padding:20px 26px!important;display:flex!important;align-items:center!important}
+ html body.contact-page .desktop-contact-promo span {display:block!important;color:#fff!important;font:italic 25px/1.15 ForgePC Handwriting V85,'Segoe Print',cursive!important;text-shadow:0 2px 5px #000!important;transform:rotate(-3deg)!important}
+}
+
+@font-face{font-family:ForgeIconsV105;src:url('fontawesome-webfont.ttf') format('truetype');font-display:block}
+@font-face{font-family:ForgeScriptV105;src:url('forgepc-script-rdv.otf') format('opentype');font-display:swap}
+@media(min-width:901px){
+ /* The released V104 inline stylesheet used URLs relative to the HTML; this external sheet resolves them from Assets/. */
+ html body.services-v1-reset .v1-hero>.hero-benefits-v104 .fa-icon{display:inline-flex!important;align-items:center!important;justify-content:center!important;width:30px!important;min-width:30px!important;font-size:27px!important;font-family:ForgeIconsV105!important;font-weight:normal!important}
+ html body.services-v1-reset .v1-hero>.hero-benefits-v104 .shield::before{content:'\f132'!important}
+ html body.services-v1-reset .v1-hero>.hero-benefits-v104 .bars::before{content:'\f012'!important}
+ html body.services-v1-reset .v1-hero>.hero-benefits-v104 .dollar::before{content:'\f155'!important}
+ html body.services-v1-reset .v1-hero>.hero-benefits-v104 .people::before{content:'\f0c0'!important}
+ html body.services-v1-reset .v1-hero>.hero-benefits-v104 span{font-size:13px!important;line-height:1.2!important}
+ html body.services-v1-reset .v1-desktop-viewport .v1-info .info {position:relative!important;box-sizing:border-box!important;padding-bottom:24px!important;overflow:hidden!important}
+ html body.services-v1-reset .v1-desktop-viewport .v1-info .info>a {position:static!important;margin-top:auto!important;line-height:1.3!important;white-space:normal!important}
+ html body.services-v1-reset .v1-desktop-viewport .v1-services .card:nth-child(3) h3 svg {stroke-width:2.6!important}
+ html body.services-v1-reset .v1-desktop-viewport .v1-services .card:nth-child(3) h3 svg>circle:first-child {display:block!important}
+ html body.inventory-page .inventory-cta {background-position:center,center 78%!important}
+ html body[data-mobile-page="rdv-vente"] .hero .benefits {display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:18px!important;width:min(100%,1000px)!important;margin-top:34px!important}
+ html body[data-mobile-page="rdv-vente"] .hero .benefit {font-size:18px!important;line-height:1.15!important;white-space:normal!important}
+ html body[data-mobile-page="rdv-vente"] .hero .benefit svg {width:50px!important;height:50px!important;min-width:50px!important;flex-basis:50px!important}
+ html body.about-page .site-header .navlinks a.active[href="a-propos.html"] {border-bottom:2px solid #ff5a00!important;box-shadow:none!important}
+ html body.contact-page > section.hero {height:340px!important;min-height:340px!important;aspect-ratio:auto!important;padding:26px 0 20px!important;background:linear-gradient(90deg,#02090bea 0%,#02090bd6 36%,transparent 80%),url('contact-hero-v105.jpg') center/cover no-repeat!important}
+ html body.contact-page > section.hero::before,html body.contact-page > section.hero::after {display:none!important;content:none!important}
+ html body.contact-page > section.hero > .wrap {display:flex!important;visibility:visible!important;position:relative!important;height:100%!important;z-index:2!important}
+ html body.contact-page > section.hero .points {margin-top:auto!important}
+ html body.diagnostic-page .desktop-diagnostic .step-card-pc:nth-child(1) img {content:url('diagnostic-step-1-v105.jpg')!important}
+ html body.diagnostic-page .desktop-diagnostic .step-card-pc:nth-child(2) img {content:url('diagnostic-step-2-v105.jpg')!important}
+ html body.diagnostic-page .desktop-diagnostic .step-card-pc:nth-child(3) img {content:url('diagnostic-step-3-v105.jpg')!important}
+ html body.diagnostic-page .desktop-diagnostic .step-card-pc:nth-child(4) img {content:url('diagnostic-step-4-v105.jpg')!important}
+ html body.diagnostic-page .desktop-diagnostic .bottom-cta-pc {background-image:linear-gradient(90deg,#020b0eed 0%,#020b0e99 35%,transparent 80%),url('diagnostic-cta-v104.jpg')!important;background-size:cover!important;background-position:center 60%!important}
+ html body .dd-desktop .dd-hero {background-position:center,62% center!important;background-size:100% 100%,auto 138%!important}
+ html body.upgrade-rebuild .upgrade-pc .up-benefit-new b.recycle-symbol {background:none!important;color:#ff5a00!important;width:46px!important;height:46px!important}
+ html body.upgrade-rebuild .upgrade-pc .up-benefit-new b.recycle-symbol::before {content:'\f1b8'!important;font:normal 43px/1 ForgeIconsV105!important;color:#ff5a00!important}
+ html body.home-service-page .hero .approved-slogan {position:relative!important;top:14px!important}
+ html body.home-service-page .service-list-panel li {padding-left:56px!important;box-sizing:border-box!important}
+ html body.home-service-page .service-list-panel li::before {left:10px!important;width:34px!important;text-align:center!important}
+ html body.home-service-page .service-why-slogan-img {display:none!important}
+ html body.home-service-page .service-why-slogan-html {position:absolute!important;left:10px!important;right:10px!important;bottom:35px!important;font:normal 25px/1.08 ForgeScriptV105,'Segoe Print',cursive!important;color:#fff!important;text-align:center!important;transform:rotate(-4deg)!important;text-shadow:0 2px 5px #000!important}
+ html body.home-service-page .service-why-slogan-html::after {content:'';display:block;width:70%;height:3px;margin:6px auto 0;background:#ff5a00;transform:rotate(-5deg)}
+ html body.home-service-page .bottom-cta {height:150px!important;min-height:150px!important;aspect-ratio:auto!important;padding:16px 3%!important;display:flex!important;align-items:center!important;gap:10px!important;background-image:linear-gradient(90deg,#020b0ee8 0%,#020b0e80 42%,transparent 90%),url('home-cta-v104.jpg')!important;background-size:cover!important;background-position:center!important}
+ html body.home-service-page .bottom-cta>p {display:block!important;position:absolute!important;left:3%!important;top:27px!important;margin:0!important;font-size:19px!important}
+ html body.home-service-page .bottom-cta>h3 {display:block!important;position:absolute!important;left:3%!important;top:54px!important;margin:0!important;font-size:30px!important;color:#ff5a00!important}
+ html body.home-service-page .bottom-cta>a.cta {position:relative!important;left:auto!important;top:auto!important;width:auto!important;height:auto!important;min-height:50px!important;margin:0 0 0 auto!important;padding:0 24px!important;opacity:1!important;display:inline-flex!important;background:#ff5a00!important;color:#fff!important}
+}
+@media(min-width:901px){
+ html body.services-v1-reset .v1-desktop-viewport .v1-services .card:nth-child(3) h3 svg {display:none!important}
+ html body.services-v1-reset .v1-desktop-viewport .v1-services .card:nth-child(3) h3::before {content:'\f013'!important;display:inline-grid!important;place-items:center!important;width:32px!important;height:32px!important;min-width:32px!important;margin-right:5px!important;box-sizing:border-box!important;border:2px solid #ff5a00!important;border-radius:50%!important;color:#ff5a00!important;font:normal 18px/1 ForgeIconsV105!important}
+ html body.services-v1-reset .v1-desktop-viewport .v1-info .info:nth-child(2) {min-height:270px!important}
+}
