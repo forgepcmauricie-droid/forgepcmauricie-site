@@ -1,0 +1,6 @@
+@media (min-width:901px) {
+  html body.services-v1-reset .v1-desktop-viewport .v1-services .card:nth-child(4) .photo {
+    content:url('services-gaming-square-v109.jpg')!important;
+    object-fit:cover!important;object-position:center 42%!important;
+  }
+}
