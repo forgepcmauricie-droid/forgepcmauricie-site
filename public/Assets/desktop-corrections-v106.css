@@ -1,0 +1,11 @@
+@media(min-width:901px){
+ html body[data-mobile-page="rdv-vente"] .hero>.hero-inner{max-width:none!important;width:100%!important}
+ html body[data-mobile-page="rdv-vente"] .hero .benefits{width:100%!important;max-width:1250px!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:20px!important;margin-top:38px!important}
+ html body[data-mobile-page="rdv-vente"] .hero .benefit{gap:13px!important;font-size:18px!important;line-height:1.16!important}
+ html body[data-mobile-page="rdv-vente"] .hero .benefit span{font-size:18px!important;line-height:1.16!important;max-width:210px!important}
+ html body[data-mobile-page="rdv-vente"] .hero .benefit svg{width:53px!important;height:53px!important;min-width:53px!important;max-width:53px!important;flex:0 0 53px!important}
+ html body.upgrade-rebuild .upgrade-pc .up-benefit-new b.recycle-symbol{display:block!important;width:46px!important;height:46px!important;background:url('recycle-outline-v106.svg') center/contain no-repeat!important}
+ html body.upgrade-rebuild .upgrade-pc .up-benefit-new b.recycle-symbol::before{content:none!important;display:none!important}
+ html body.about-page .site-header .navlinks a.active[href="a-propos.html"]{border-bottom:1px solid #ff5a00!important;box-shadow:none!important}
+ html body.inventory-page .inventory-cta{background-position:center,center 88%!important}
+}
