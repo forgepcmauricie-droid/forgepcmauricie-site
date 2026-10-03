@@ -18,7 +18,7 @@
  html body.services-v1-reset .v1-hero .hero-copy .signature{position:relative!important;top:18px!important;margin-top:14px!important;font:300 29px/1.04 ForgeHandV113,cursive!important;width:255px!important;max-width:none!important;transform:rotate(-5deg)!important}
  html body.services-v1-reset .v1-hero .hero-copy .signature::after{height:5px!important;width:145px!important}
 
- html body.home-service-page .hero .approved-slogan{top:66px!important;margin-top:34px!important}
+ html body.home-service-page .hero .approved-slogan{top:442px!important;margin-top:0!important}
  html body.home-service-page .service-list-panel li{padding-left:50px!important;min-height:34px!important}
  html body.home-service-page .service-list-panel li::before{content:""!important;left:6px!important;top:5px!important;width:28px!important;height:28px!important;background-position:center!important;background-size:contain!important;background-repeat:no-repeat!important;font-size:0!important}
  html body.home-service-page .service-list-panel li:nth-child(1)::before{background-image:url('home-service-monitor-v113.svg')!important}
