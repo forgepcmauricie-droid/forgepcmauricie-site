@@ -1,0 +1,60 @@
+/* Retouches ciblées des maquettes desktop, V110. */
+@media (min-width:901px) {
+  html body.inventory-page .inventory-hero {
+    background-image:linear-gradient(90deg,#02090b 0%,rgba(2,9,11,.96) 25%,rgba(2,9,11,.25) 46%,rgba(2,9,11,.08) 69%,rgba(2,9,11,.75) 88%,#02090b 100%),url('inventory-hero-v110.jpg')!important;
+    background-size:100% 100%,cover!important;background-position:center,center!important;
+  }
+  html body.inventory-page .inventory-hero::before {content:none!important;display:none!important}
+  html body.inventory-page .hero-points {margin-left:12px!important;max-width:230px!important;justify-self:end!important;text-shadow:0 2px 5px #000!important}
+  html body[data-mobile-page="rdv-vente"] .hero-handwritten {
+    display:block!important;visibility:visible!important;position:absolute!important;
+    right:4.5%!important;top:39px!important;width:190px!important;
+    font:normal 24px/1.05 ForgeScriptV105,'Segoe Print',cursive!important;
+    text-align:center!important;transform:rotate(-6deg)!important;z-index:4!important;
+  }
+  html body[data-mobile-page="rdv-vente"] .hero .benefits {top:226px!important;width:100%!important;gap:14px!important}
+  html body[data-mobile-page="rdv-vente"] .hero .benefit {font-size:19px!important;gap:13px!important}
+  html body[data-mobile-page="rdv-vente"] .hero .benefit svg {width:59px!important;height:59px!important;min-width:59px!important;flex:0 0 59px!important}
+  html body.about-page .about-main .quote {
+    background:linear-gradient(90deg,#030d10 0%,rgba(3,13,16,.94) 49%,transparent 78%),url('about-quote-v110.jpg') right center/cover no-repeat!important;
+  }
+  html body.contact-page>section.hero {
+    background-image:linear-gradient(90deg,#02090bea 0%,#02090bd6 36%,transparent 80%),url('contact-hero-v110.jpg')!important;
+  }
+  html body.contact-page>section.hero::after {content:none!important;display:none!important}
+  html body.contact-page .desktop-contact-promo {
+    background:linear-gradient(90deg,#020b0ecf,transparent 75%),url('contact-promo-v110.jpg') 70% center/cover no-repeat!important;
+  }
+  html body.contact-page .desktop-contact-promo span {display:block!important}
+  html body.gaming-page .hero-media img {content:url('gaming-hero-v110.jpg')!important;right:0!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important}
+  html body.gaming-page .hero .hero-in .hero-services {right:-58px!important;top:93px!important;width:255px!important;gap:17px!important}
+  html body.gaming-page .hero .hero-in .hero-services li {font-size:15px!important;line-height:1.12!important}
+  html body.gaming-page .hero .hero-in .hero-services svg {width:36px!important;height:36px!important;flex:0 0 36px!important}
+  html body.gaming-page .hero .benefits .benefit img.benefit-svg {width:47px!important;height:47px!important}
+  html body.gaming-page .hero .benefits .benefit {font-size:13px!important}
+  html body .dd-desktop .dd-hero {
+    background-image:linear-gradient(90deg,#02090b 0%,rgba(2,9,11,.95) 30%,rgba(2,9,11,.14) 48%,rgba(2,9,11,.15) 72%,rgba(2,9,11,.76) 100%),url('rdv-diagnostic-hero-desktop-v2.jpg')!important;
+    background-size:100% 100%,calc(100% + 340px) auto!important;
+    background-position:center,calc(50% - 190px) center!important;
+  }
+  html body .dd-desktop .dd-hero-note {right:2%!important;z-index:3!important}
+  html body.home-service-page .hero .approved-slogan {top:31px!important;margin-top:34px!important}
+  html body.home-service-page .service-list-panel li {padding:7px 0 7px 51px!important;min-height:34px!important}
+  html body.home-service-page .service-list-panel li::before {
+    left:6px!important;top:5px!important;width:32px!important;height:30px!important;
+    display:grid!important;place-items:center!important;background:none!important;
+    font:normal 24px/30px ForgeIconsV105!important;color:#ff5a00!important;
+    overflow:visible!important;text-align:center!important;
+  }
+  html body.home-service-page .service-list-panel li:nth-child(1)::before {content:'\f108'!important}
+  html body.home-service-page .service-list-panel li:nth-child(2)::before {content:'\f085'!important}
+  html body.home-service-page .service-list-panel li:nth-child(3)::before {content:'\f013'!important}
+  html body.home-service-page .service-list-panel li:nth-child(4)::before {content:'\f1c0'!important}
+  html body.home-service-page .service-list-panel li:nth-child(5)::before {content:'\f02f'!important}
+  html body.home-service-page .service-list-panel li:nth-child(6)::before {content:'\f1eb'!important}
+  html body.home-service-page .service-list-panel li:nth-child(7)::before {content:'\f019'!important}
+  html body.home-service-page .service-list-panel li:nth-child(8)::before {content:'\f0ad'!important}
+  html body.home-service-page .service-list-panel li:nth-child(9)::before {content:'\f0e6'!important}
+  html body.home-service-page .service-why-slogan-html {font:normal 27px/1.05 ForgeScriptV105,'Segoe Print',cursive!important;bottom:25px!important;white-space:normal!important}
+  html body.home-service-page .bottom-cta {background-image:linear-gradient(90deg,#020b0ee8 0%,#020b0e75 37%,transparent 76%),url('home-cta-v110.jpg')!important}
+}
