@@ -1,0 +1,35 @@
+/* Retouches ciblées des quatre pages, écran large uniquement. */
+@font-face{font-family:ForgeHandV113;src:url('forgepc-slogan-kalam-light.ttf') format('truetype');font-weight:300;font-display:swap}
+@media(min-width:901px){
+ html body[data-mobile-page="rdv-vente"] .sales-banner-items{gap:22px!important}
+ html body[data-mobile-page="rdv-vente"] .sales-banner-items>div{gap:11px!important;font-size:14px!important;line-height:1.14!important;white-space:normal!important}
+ html body[data-mobile-page="rdv-vente"] .sales-banner-items svg{width:37px!important;height:37px!important;min-width:37px!important;flex:0 0 37px!important}
+ html body[data-mobile-page="rdv-vente"] .sales-banner{min-height:116px!important}
+ html body[data-mobile-page="rdv-vente"] .sales-banner-content{min-height:116px!important}
+
+ html body.about-page .site-header .navlinks a[href="a-propos.html"]{border-bottom:1px solid #ff5a00!important;box-shadow:none!important}
+ html body.about-page .site-header .navlinks a[href="a-propos.html"]::after{height:1px!important;box-shadow:none!important}
+ html body.about-page .about-main .quote{padding:18px 43% 18px 30px!important;background-color:#030d10!important;background-image:linear-gradient(90deg,rgba(2,9,11,.92),rgba(2,9,11,.35) 74%,transparent),url('about-quote-v110.jpg')!important;background-position:center,right center!important;background-size:100% 100%,cover!important}
+ html body.about-page .about-main .quote>*{visibility:visible!important}
+ html body.about-page .about-main .quote .quote-mark{font-size:48px!important;line-height:.65!important}
+ html body.about-page .about-main .quote p{font-size:13px!important;line-height:1.38!important;margin:9px 0 4px!important}
+ html body.about-page .about-main .quote .signature{font:300 22px/1.02 ForgeHandV113,cursive!important;margin:0!important}
+
+ html body.services-v1-reset .v1-hero .hero-copy .signature{position:relative!important;top:18px!important;margin-top:14px!important;font:300 29px/1.04 ForgeHandV113,cursive!important;width:255px!important;max-width:none!important;transform:rotate(-5deg)!important}
+ html body.services-v1-reset .v1-hero .hero-copy .signature::after{height:5px!important;width:145px!important}
+
+ html body.home-service-page .hero .approved-slogan{top:66px!important;margin-top:34px!important}
+ html body.home-service-page .service-list-panel li{padding-left:50px!important;min-height:34px!important}
+ html body.home-service-page .service-list-panel li::before{content:""!important;left:6px!important;top:5px!important;width:28px!important;height:28px!important;background-position:center!important;background-size:contain!important;background-repeat:no-repeat!important;font-size:0!important}
+ html body.home-service-page .service-list-panel li:nth-child(1)::before{background-image:url('home-service-monitor-v113.svg')!important}
+ html body.home-service-page .service-list-panel li:nth-child(2)::before{background-image:url('home-service-settings-v113.svg')!important}
+ html body.home-service-page .service-list-panel li:nth-child(3)::before{background-image:url('home-service-chip-v113.svg')!important}
+ html body.home-service-page .service-list-panel li:nth-child(4)::before{background-image:url('home-service-database-v113.svg')!important}
+ html body.home-service-page .service-list-panel li:nth-child(5)::before{background-image:url('home-service-printer-v113.svg')!important}
+ html body.home-service-page .service-list-panel li:nth-child(6)::before{background-image:url('home-service-wifi-v113.svg')!important}
+ html body.home-service-page .service-list-panel li:nth-child(7)::before{background-image:url('home-service-download-v113.svg')!important}
+ html body.home-service-page .service-list-panel li:nth-child(8)::before{background-image:url('home-service-wrench-v113.svg')!important}
+ html body.home-service-page .service-list-panel li:nth-child(9)::before{background-image:url('home-service-chat-v113.svg')!important}
+ html body.home-service-page .service-why-slogan-html{font:300 27px/1.08 ForgeHandV113,cursive!important;bottom:25px!important;transform:rotate(-5deg)!important}
+ html body.home-service-page .service-why-slogan-html::after{height:5px!important;width:76%!important}
+}
