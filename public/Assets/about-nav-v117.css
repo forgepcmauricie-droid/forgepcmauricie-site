@@ -1,0 +1,6 @@
+@media (min-width:901px) {
+  html body.about-page .forgepc-unified-header .desktop-nav a.active[href="a-propos.html"] {
+    border-bottom:3px solid #ff5a00!important;
+    box-shadow:none!important;
+  }
+}
