@@ -9,7 +9,7 @@
 
  html body.about-page .site-header .navlinks a[href="a-propos.html"]{border-bottom:1px solid #ff5a00!important;box-shadow:none!important}
  html body.about-page .site-header .navlinks a[href="a-propos.html"]::after{height:1px!important;box-shadow:none!important}
- html body.about-page .about-main .quote{padding:18px 43% 18px 30px!important;background-color:#030d10!important;background-image:linear-gradient(90deg,rgba(2,9,11,.92),rgba(2,9,11,.35) 74%,transparent),url('about-quote-v110.jpg')!important;background-position:center,right center!important;background-size:100% 100%,cover!important}
+ html body.about-page .about-main .quote{padding:18px 43% 18px 30px!important;background-color:#030d10!important;background-image:linear-gradient(90deg,rgba(2,9,11,.94),rgba(2,9,11,.2) 74%,transparent),url('about-quote-v115.jpg')!important;background-position:center,right center!important;background-size:100% 100%,cover!important}
  html body.about-page .about-main .quote>*{visibility:visible!important}
  html body.about-page .about-main .quote .quote-mark{font-size:48px!important;line-height:.65!important}
  html body.about-page .about-main .quote p{font-size:13px!important;line-height:1.38!important;margin:9px 0 4px!important}
@@ -18,7 +18,7 @@
  html body.services-v1-reset .v1-hero .hero-copy .signature{position:relative!important;top:18px!important;margin-top:14px!important;font:300 29px/1.04 ForgeHandV113,cursive!important;width:255px!important;max-width:none!important;transform:rotate(-5deg)!important}
  html body.services-v1-reset .v1-hero .hero-copy .signature::after{height:5px!important;width:145px!important}
 
- html body.home-service-page .hero .approved-slogan{top:442px!important;margin-top:0!important}
+ html body.home-service-page .mobile-page>.hero .approved-slogan.script{top:442px!important;margin-top:0!important}
  html body.home-service-page .service-list-panel li{padding-left:50px!important;min-height:34px!important}
  html body.home-service-page .service-list-panel li::before{content:""!important;left:6px!important;top:5px!important;width:28px!important;height:28px!important;background-position:center!important;background-size:contain!important;background-repeat:no-repeat!important;font-size:0!important}
  html body.home-service-page .service-list-panel li:nth-child(1)::before{background-image:url('home-service-monitor-v113.svg')!important}
@@ -30,6 +30,6 @@
  html body.home-service-page .service-list-panel li:nth-child(7)::before{background-image:url('home-service-download-v113.svg')!important}
  html body.home-service-page .service-list-panel li:nth-child(8)::before{background-image:url('home-service-wrench-v113.svg')!important}
  html body.home-service-page .service-list-panel li:nth-child(9)::before{background-image:url('home-service-chat-v113.svg')!important}
- html body.home-service-page .service-why-slogan-html{font:300 27px/1.08 ForgeHandV113,cursive!important;bottom:25px!important;transform:rotate(-5deg)!important}
- html body.home-service-page .service-why-slogan-html::after{height:5px!important;width:76%!important}
+ html body.home-service-page .service-why-slogan-html{font-family:"ForgePC Handwriting V85",cursive!important;font-size:28px!important;font-weight:300!important;font-style:normal!important;line-height:1.02!important;letter-spacing:0!important;bottom:25px!important;transform:rotate(-4deg)!important}
+ html body.home-service-page .service-why-slogan-html::after{height:14px!important;width:75%!important;background:transparent url('home-slogan-underline-crop.png') center/100% 100% no-repeat!important;transform:rotate(-1deg)!important;margin:8px auto 0!important}
 }
