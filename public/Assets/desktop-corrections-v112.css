@@ -1,0 +1,16 @@
+@font-face{font-family:ForgeSaleHandwritingV112;src:url('forgepc-slogan-kalam-light.ttf') format('truetype');font-weight:300;font-style:normal;font-display:swap}
+@media(min-width:901px){
+ html body[data-mobile-page="rdv-vente"] .hero .hero-handwritten{
+  display:block!important;right:1.8%!important;top:49px!important;width:166px!important;
+  font-family:ForgeSaleHandwritingV112,'Segoe Print',cursive!important;
+  font-size:24px!important;font-weight:300!important;font-style:normal!important;
+  line-height:1.06!important;letter-spacing:0!important;text-align:center!important;
+  transform:rotate(-7deg)!important;text-shadow:0 2px 4px #000!important;
+ }
+ html body[data-mobile-page="rdv-vente"] .hero .hero-handwritten::after{
+  content:''!important;display:block!important;width:132px!important;height:20px!important;
+  margin:-2px 0 0 22px!important;border:0!important;border-radius:0!important;
+  background:transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 132 20'%3E%3Cpath d='M5 17 C33 6 81 3 127 3' fill='none' stroke='%23ff5a00' stroke-width='8' stroke-linecap='round'/%3E%3C/svg%3E") center/100% 100% no-repeat!important;
+  transform:rotate(-4deg)!important;
+ }
+}
