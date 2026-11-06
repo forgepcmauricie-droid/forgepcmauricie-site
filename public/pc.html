@@ -634,6 +634,7 @@ function displayDescription(pc){
     : text;
 }
 
+function displayPrice(value){const s=String(value??"").trim();if(!s)return "Prix à venir";if(/^\d+(?:[.,]\d{1,2})?$/.test(s))return Number(s.replace(",",".")).toLocaleString("fr-CA",{minimumFractionDigits:2,maximumFractionDigits:2})+" $ CAD";return s}
 function render(pc){
   const photos=photoList(pc);
 
@@ -688,7 +689,7 @@ function render(pc){
 
         <div class="box price-box">
           <h2>Prix</h2>
-          <div class="price">${esc(pc.prix||"Prix à venir")}</div>
+          <div class="price">${esc(displayPrice(pc.prix))}</div>
         </div>
 
         <div class="pc-navigation">
